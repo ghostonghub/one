@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Snakes</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Snakes</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org866b232">1. General</a></li>
+<li><a href="#orga6db59c">2. STEMM</a>
+<ul>
+<li><a href="#orgd3b74e2">2.1. Biology</a>
+<ul>
+<li><a href="#org7b59cf2">2.1.1. Hearing</a></li>
+</ul>
+</li>
+<li><a href="#org6ed44d3">2.2. Environment</a></li>
+<li><a href="#org4741c4a">2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org94798d0">3. Variants</a>
+<ul>
+<li><a href="#org246b1c3">3.1. Cobra</a></li>
+<li><a href="#org4dabcfe">3.2. Python</a></li>
+</ul>
+</li>
+<li><a href="#org2a8a1d5">4. World</a>
+<ul>
+<li><a href="#orgc106508">4.1. Nation States</a>
+<ul>
+<li><a href="#org5db23a7">4.1.1. India</a></li>
+</ul>
+</li>
+<li><a href="#org94b2d39">4.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org23d8396">5. Arts</a>
+<ul>
+<li><a href="#orgf5fe98d">5.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orge6f85b1">6. Special Topics</a>
+<ul>
+<li><a href="#org0e5699e">6.1. Sex</a></li>
+</ul>
+</li>
+<li><a href="#orgff86891">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org866b232" class="outline-2">
+<h2 id="org866b232"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Snake,” Wikipedia. Feb. 10, 2023. Accessed: Feb. 18, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Snake&amp;oldid=1138645443">https://en.wikipedia.org/w/index.php?title=Snake&amp;oldid=1138645443</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga6db59c" class="outline-2">
+<h2 id="orga6db59c"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgd3b74e2" class="outline-3">
+<h3 id="orgd3b74e2"><span class="section-number-3">2.1.</span> Biology</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org7b59cf2" class="outline-4">
+<h4 id="org7b59cf2"><span class="section-number-4">2.1.1.</span> Hearing</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>C. N. Z. US The Conversation, “Snakes Can Hear You Scream, New Research Reveals,” Scientific American. <a href="https://www.scientificamerican.com/article/snakes-can-hear-you-scream-new-research-reveals/">https://www.scientificamerican.com/article/snakes-can-hear-you-scream-new-research-reveals/</a> (accessed Feb. 18, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6ed44d3" class="outline-3">
+<h3 id="org6ed44d3"><span class="section-number-3">2.2.</span> Environment</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>“Venomous snakes could start migrating in large numbers if we hit 5°C warming.” Accessed: Mar. 29, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/climate-change/venomous-snakes-could-start-migrating-in-large-numbers-if-we-hit-5-c-warming-95263">https://www.downtoearth.org.in/blog/climate-change/venomous-snakes-could-start-migrating-in-large-numbers-if-we-hit-5-c-warming-95263</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4741c4a" class="outline-3">
+<h3 id="org4741c4a"><span class="section-number-3">2.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>M. Basu, “Single antivenom protects against 17 different snakebites,” Nature, Oct. 2025, doi: 10.1038/d41586-025-03541-3.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org94798d0" class="outline-2">
+<h2 id="org94798d0"><span class="section-number-2">3.</span> Variants</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org246b1c3" class="outline-3">
+<h3 id="org246b1c3"><span class="section-number-3">3.1.</span> Cobra</h3>
+</div>
+<div id="outline-container-org4dabcfe" class="outline-3">
+<h3 id="org4dabcfe"><span class="section-number-3">3.2.</span> Python</h3>
+</div>
+</div>
+<div id="outline-container-org2a8a1d5" class="outline-2">
+<h2 id="org2a8a1d5"><span class="section-number-2">4.</span> World</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgc106508" class="outline-3">
+<h3 id="orgc106508"><span class="section-number-3">4.1.</span> Nation States</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org5db23a7" class="outline-4">
+<h4 id="org5db23a7"><span class="section-number-4">4.1.1.</span> India</h4>
+<div class="outline-text-4" id="text-4-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgbfa98e2"></a>General<br /></li>
+<li><a id="orgafa4273"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="org88eb16d"></a>Systems Sciences, Misc<br />
+<ul class="org-ul">
+<li><a id="orgb474b60"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org1bfa5d4"></a>Misc<br />
+<div class="outline-text-6" id="text-4-1-1-2-2">
+<ul class="org-ul">
+<li>arathimenon, “India’s snakes changing range, thanks to climate change,” Mongabay-India. Accessed: Oct. 17, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/10/indias-snakes-changing-range-thanks-to-climate-change/">https://india.mongabay.com/2025/10/indias-snakes-changing-range-thanks-to-climate-change/</a></li>
+<li>B. Das, “Climate affects venom toxicity of deadly snakes,” Nature India, Jun. 2025, doi: 10.1038/d44151-025-00100-7.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org1af4524"></a>Worldly Matters<br />
+<ol class="org-ol">
+<li><a id="org63352c6"></a>Misc<br />
+<div class="outline-text-6" id="text-4-1-1-3-1">
+<ul class="org-ul">
+<li>“Snakes on a train? Deadly reptiles may be hopping railcars in India.” Accessed: Jan. 30, 2026. [Online]. Available: <a href="https://www.science.org/content/article/snakes-train-deadly-reptiles-may-be-hopping-railcars-india">https://www.science.org/content/article/snakes-train-deadly-reptiles-may-be-hopping-railcars-india</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Paul, “King cobras take the train in India,” Popular Science. Accessed: Jan. 31, 2026. [Online]. Available: <a href="https://www.popsci.com/environment/snakes-train-india/">https://www.popsci.com/environment/snakes-train-india/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org81b9405"></a>Arts<br />
+<ol class="org-ol">
+<li><a id="org079b0df"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org49834c3"></a>Special Topics<br /></li>
+<li><a id="org4370f57"></a>Misc<br />
+<div class="outline-text-5" id="text-4-1-1-6">
+<ul class="org-ul">
+<li>D. Sasidharan, “The infinite naga in Indian art | Behind Bvlgari’s Serpenti Infinito exhibition in Mumbai,” The Hindu, Oct. 04, 2025. Accessed: Oct. 04, 2025. [Online]. Available: <a href="https://www.thehindu.com/entertainment/art/mumbai-naga-indian-art-bvlgaris-serpenti-infinito-exhibition-priyanka-chopra/article70121139.ece">https://www.thehindu.com/entertainment/art/mumbai-naga-indian-art-bvlgaris-serpenti-infinito-exhibition-priyanka-chopra/article70121139.ece</a></li>
+
+<li>R. Ghai, “India’s ‘Big Four’ snake species will migrate towards northern, Northeastern areas due to climate change: Study,” Down To Earth. Accessed: Sep. 03, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/wildlife-biodiversity/indias-big-four-snake-species-will-migrate-towards-northern-northeastern-areas-due-to-climate-change-study">https://www.downtoearth.org.in/wildlife-biodiversity/indias-big-four-snake-species-will-migrate-towards-northern-northeastern-areas-due-to-climate-change-study</a></li>
+
+<li>S. Manocha, “Hamirpur Man Arrested for Killing Two Cobras Following PETA India’s Intervention - Blog,” PETA India. Accessed: Aug. 22, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/hamirpur-man-arrested-for-killing-two-cobras-following-peta-indias-intervention/">https://www.petaindia.com/blog/hamirpur-man-arrested-for-killing-two-cobras-following-peta-indias-intervention/</a></li>
+
+<li>D. Varma, “Proposed handover of Auroville farm land for IIT-M campus reignites sustainability debate,” The Hindu, Aug. 20, 2025. Accessed: Aug. 21, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/cities/puducherry/proposed-handover-of-auroville-farm-land-for-iit-m-campus-reignites-sustainability-debate/article69955894.ece">https://www.thehindu.com/news/cities/puducherry/proposed-handover-of-auroville-farm-land-for-iit-m-campus-reignites-sustainability-debate/article69955894.ece</a></li>
+<li>D. Varma, “A 14-minute animated film traces Sri Aurobindo’s journey from revolutionary to seer for today’s youth,” The Hindu, Aug. 19, 2025. Accessed: Aug. 21, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/cities/puducherry/a-14-minute-animated-film-traces-sri-aurobindos-journey-from-revolutionary-to-seer-for-todays-youth/article69951795.ece">https://www.thehindu.com/news/cities/puducherry/a-14-minute-animated-film-traces-sri-aurobindos-journey-from-revolutionary-to-seer-for-todays-youth/article69951795.ece</a></li>
+<li>PTI, “10-ft-long Indian Rock Python rescued from residential society in Mumbai,” The Hindu, Aug. 20, 2025. Accessed: Aug. 21, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/cities/mumbai/10-ft-long-indian-rock-python-rescued-from-residential-society-in-mumbai/article69954992.ece">https://www.thehindu.com/news/cities/mumbai/10-ft-long-indian-rock-python-rescued-from-residential-society-in-mumbai/article69954992.ece</a></li>
+
+<li>S. Manocha, “Raipur Forest Division Books Snake Charmers, Seizes Three Snakes, Following PETA India Complaint - Blog,” PETA India. Accessed: Aug. 12, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/raipur-forest-division-books-snake-charmers-seizes-three-snakes-following-peta-india-complaint/">https://www.petaindia.com/blog/raipur-forest-division-books-snake-charmers-seizes-three-snakes-following-peta-india-complaint/</a></li>
+<li>S. Manocha, “Kanker Forest Division Books Man Over Viral Video of Python Abuse Following PETA India Complaint - Blog,” PETA India. Accessed: Aug. 12, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/kanker-forest-division-books-man-over-viral-video-of-python-abuse-following-peta-india-complaint/">https://www.petaindia.com/blog/kanker-forest-division-books-man-over-viral-video-of-python-abuse-following-peta-india-complaint/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>K. H. Kumar, “Dakkebali, Sarpam Thullal, Jaagar: How these Indian folk dance rituals worship serpent deities,” Scroll.in. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://scroll.in/article/1084842/dakkebali-sarpam-thullal-jaagar-how-these-indian-folk-dance-rituals-worship-serpent-deities">https://scroll.in/article/1084842/dakkebali-sarpam-thullal-jaagar-how-these-indian-folk-dance-rituals-worship-serpent-deities</a></li>
+
+<li>H. Nitnaware, “On World Snake Day, here is a painful fact: ‘Rescuers’ are technically hunting and abusing the reptiles, all for monetary gains,” Down To Earth. Accessed: Jul. 17, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/wildlife-biodiversity/on-world-snake-day-here-is-a-painful-fact-rescuers-are-technically-hunting-and-abusing-the-reptiles-all-for-monetary-gains">https://www.downtoearth.org.in/wildlife-biodiversity/on-world-snake-day-here-is-a-painful-fact-rescuers-are-technically-hunting-and-abusing-the-reptiles-all-for-monetary-gains</a></li>
+
+<li>S. Manocha, “Kharagpur Forest Division Registers Another POR Over Cobra Abuse Following PETA India Complaint - Blog,” PETA India. Accessed: Jun. 06, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/kharagpur-forest-division-registers-another-por-over-cobra-abuse-following-peta-india-complaint/">https://www.petaindia.com/blog/kharagpur-forest-division-registers-another-por-over-cobra-abuse-following-peta-india-complaint/</a></li>
+
+<li>MONGABAY.COM, “Superstitions fuel trafficking of India’s red sand boa,” Mongabay Environmental News. Accessed: Mar. 28, 2025. [Online]. Available: <a href="https://news.mongabay.com/short-article/2025/03/superstitions-fuel-trafficking-of-indias-red-sand-boa/">https://news.mongabay.com/short-article/2025/03/superstitions-fuel-trafficking-of-indias-red-sand-boa/</a></li>
+
+<li>R. Kulkarni, “[Book review] A frank and fearless autobiography of India’s snakeman,” Mongabay-India. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/02/book-review-a-frank-and-fearless-autobiography-of-indias-snakeman/">https://india.mongabay.com/2024/02/book-review-a-frank-and-fearless-autobiography-of-indias-snakeman/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org94b2d39" class="outline-3">
+<h3 id="org94b2d39"><span class="section-number-3">4.2.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org23d8396" class="outline-2">
+<h2 id="org23d8396"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgf5fe98d" class="outline-3">
+<h3 id="orgf5fe98d"><span class="section-number-3">5.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orge6f85b1" class="outline-2">
+<h2 id="orge6f85b1"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org0e5699e" class="outline-3">
+<h3 id="org0e5699e"><span class="section-number-3">6.1.</span> Sex</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>L. G. US The Conversation, “Why Snakes Have Two Clitorises and Other Mysteries of Female Animal Genitalia,” Scientific American. <a href="https://www.scientificamerican.com/article/why-snakes-have-two-clitorises-and-other-mysteries-of-female-animal-genitalia/">https://www.scientificamerican.com/article/why-snakes-have-two-clitorises-and-other-mysteries-of-female-animal-genitalia/</a> (accessed Feb. 18, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgff86891" class="outline-2">
+<h2 id="orgff86891"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>R. Dabas, “Nanobodies from alpacas and llamas could hold the key to a universal antivenom,” Chemistry World. Accessed: Nov. 08, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/nanobodies-from-alpacas-and-llamas-could-hold-the-key-to-a-universal-antivenom/4022457.article">https://www.chemistryworld.com/news/nanobodies-from-alpacas-and-llamas-could-hold-the-key-to-a-universal-antivenom/4022457.article</a></li>
+
+<li>A. Tandon, “Dead snakes can still inject venom,” Mongabay-India. Accessed: Sep. 23, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/09/dead-snakes-can-still-inject-venom/">https://india.mongabay.com/2025/09/dead-snakes-can-still-inject-venom/</a></li>
+
+<li>M. Wills, “Actual American Rattlesnakes,” JSTOR Daily. Accessed: Aug. 04, 2025. [Online]. Available: <a href="https://daily.jstor.org/actual-american-rattlesnakes/">https://daily.jstor.org/actual-american-rattlesnakes/</a></li>
+
+<li>C. via W. C. C. A. E. TopicsReptilesResearchIndia, “A single pill to fight the fang,” Mongabay-India. Accessed: Jul. 04, 2025. [Online]. Available: <a href="https://india.mongabay.com/short-article/a-single-pill-to-fight-the-fang/">https://india.mongabay.com/short-article/a-single-pill-to-fight-the-fang/</a></li>
+
+<li>“Slithering Snakes: The Science Behind the Motion of a Young Anaconda.” Accessed: Jun. 29, 2025. [Online]. Available: <a href="https://seas.harvard.edu/news/2025/06/slithering-snakes-science-behind-motion-young-anaconda">https://seas.harvard.edu/news/2025/06/slithering-snakes-science-behind-motion-young-anaconda</a></li>
+
+<li>C. on January 27 and 2025, “Snake Facts That’ll Blow Your Mind,” peta2. Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://www.peta2.com/learn/snake-facts/">https://www.peta2.com/learn/snake-facts/</a></li>
+
+<li>“Bungarus,” Wikipedia. Jan. 08, 2025. Accessed: Jan. 10, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Bungarus&amp;oldid=1268073467">https://en.wikipedia.org/w/index.php?title=Bungarus&amp;oldid=1268073467</a></li>
+
+<li>A. Tandon, “New king cobra study makes hisss…tory,” Mongabay-India. Accessed: Nov. 21, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/11/new-king-cobra-study-makes-hissstory/">https://india.mongabay.com/2024/11/new-king-cobra-study-makes-hissstory/</a></li>
+
+<li>adititandon, “Baby snakes with toxic traits,” Mongabay-India. Accessed: Aug. 31, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/08/baby-snakes-with-toxic-traits/">https://india.mongabay.com/2024/08/baby-snakes-with-toxic-traits/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Paul, “Breakthrough cobra venom antidote discovered,” Popular Science. Accessed: Jul. 18, 2024. [Online]. Available: <a href="https://www.popsci.com/science/cobra-venom-antidote/">https://www.popsci.com/science/cobra-venom-antidote/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>I. S. Khalek et al., “Synthetic development of a broadly neutralizing antibody against snake venom long-chain α-neurotoxins,” Science Translational Medicine, Feb. 2024, Accessed: Feb. 23, 2024. [Online]. Available: <a href="https://www.science.org/doi/10.1126/scitranslmed.adk1867">https://www.science.org/doi/10.1126/scitranslmed.adk1867</a>
+<ul class="org-ul">
+<li>“Indian Institute of Science.” Accessed: Feb. 23, 2024. [Online]. Available: <a href="https://iisc.ac.in/events/synthetic-antibody-neutralises-deadly-snakebite-toxin/">https://iisc.ac.in/events/synthetic-antibody-neutralises-deadly-snakebite-toxin/</a></li>
+</ul></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Elvish Yadav Arrest: Why does snake venom give a ‘kick’ to ‘psychonauts’?” Accessed: Mar. 19, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/health/elvish-yadav-arrest-why-does-snake-venom-give-a-kick-to-psychonauts--95064">https://www.downtoearth.org.in/news/health/elvish-yadav-arrest-why-does-snake-venom-give-a-kick-to-psychonauts--95064</a></li>
+</ul>
+
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:56</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

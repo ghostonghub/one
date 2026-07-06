@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:58 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nicotine</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Nicotine</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org77fc29e">1. General</a></li>
+<li><a href="#org2ed7816">2. STEMM</a>
+<ul>
+<li><a href="#orgfdcc379">2.1. Computer Science and Engineering</a>
+<ul>
+<li><a href="#org1373c80">2.1.1. Data</a></li>
+</ul>
+</li>
+<li><a href="#org22ccd22">2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org0a7a506">3. Worldly Matters</a>
+<ul>
+<li><a href="#orga12a981">3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgaa9add2">4. Core</a>
+<ul>
+<li><a href="#org3454150">4.1. Texts</a></li>
+<li><a href="#orgcd562a1">4.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org71692ad">5. Arts</a>
+<ul>
+<li><a href="#org51e5c7b">5.1. Music</a></li>
+<li><a href="#orge50d536">5.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org3e5c498">6. Special Topics</a>
+<ul>
+<li><a href="#orge03c7f5">6.1. Cancer</a></li>
+</ul>
+</li>
+<li><a href="#orga2087a2">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org77fc29e" class="outline-2">
+<h2 id="org77fc29e"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Tobacco,” Wikipedia. Apr. 02, 2024. Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Tobacco&amp;oldid=1216792835">https://en.wikipedia.org/w/index.php?title=Tobacco&amp;oldid=1216792835</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2ed7816" class="outline-2">
+<h2 id="org2ed7816"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgfdcc379" class="outline-3">
+<h3 id="orgfdcc379"><span class="section-number-3">2.1.</span> Computer Science and Engineering</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org1373c80" class="outline-4">
+<h4 id="org1373c80"><span class="section-number-4">2.1.1.</span> Data</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>H. Ritchie and M. Roser, “Smoking,” Our World in Data, May 2013, Accessed: Aug. 12, 2022. [Online]. Available: <a href="https://ourworldindata.org/smoking">https://ourworldindata.org/smoking</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org22ccd22" class="outline-3">
+<h3 id="org22ccd22"><span class="section-number-3">2.2.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org0a7a506" class="outline-2">
+<h2 id="org0a7a506"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orga12a981" class="outline-3">
+<h3 id="orga12a981"><span class="section-number-3">3.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>P. Ferdinand, “Big Tobacco promotes e-cigarettes, undermines health protections through U.S. business groups worldwide,” U.S. Right to Know. Accessed: Jul. 01, 2026. [Online]. Available: <a href="https://usrtk.org/healthwire/big-tobacco-promotes-e-cigarettes-undermines-health-protections-through-u-s-business-groups-worldwide/">https://usrtk.org/healthwire/big-tobacco-promotes-e-cigarettes-undermines-health-protections-through-u-s-business-groups-worldwide/</a></li>
+
+<li>“Mothers Against Vaping writes to health ministry, seeks ban on nicotine pouches and other tobacco devices,” The Indian Express. Accessed: Aug. 01, 2025. [Online]. Available: <a href="https://indianexpress.com/article/cities/pune/mothers-against-vaping-seeks-ban-nicotine-pouches-tobacco-devices-10159555/">https://indianexpress.com/article/cities/pune/mothers-against-vaping-seeks-ban-nicotine-pouches-tobacco-devices-10159555/</a></li>
+
+<li>P. Banerjee, “Tobacco epidemic still claims millions of lives annually, research focus needed on women’s health,” Down To Earth. Accessed: Jul. 26, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/health/tobacco-epidemic-still-claims-millions-of-lives-annually-research-focus-needed-on-womens-health">https://www.downtoearth.org.in/health/tobacco-epidemic-still-claims-millions-of-lives-annually-research-focus-needed-on-womens-health</a></li>
+
+<li>“‘Big decisions are made over hookah.’” Accessed: Jun. 24, 2025. [Online]. Available: <a href="https://beta.ruralindiaonline.org/article/big-decisions-are-made-over-hookah">https://beta.ruralindiaonline.org/article/big-decisions-are-made-over-hookah</a></li>
+
+<li>M. Wills, “The Ever-Lengthening History of Tobacco,” JSTOR Daily. Accessed: Jun. 20, 2025. [Online]. Available: <a href="https://daily.jstor.org/the-ever-lengthening-history-of-tobacco/">https://daily.jstor.org/the-ever-lengthening-history-of-tobacco/</a></li>
+
+<li>T. H. Bureau, “Cancer screening camp on World No Tobacco Day,” The Hindu, Jun. 02, 2025. Accessed: Jun. 03, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/cities/Delhi/cancer-screening-camp-on-world-no-tobacco-day/article69650342.ece">https://www.thehindu.com/news/cities/Delhi/cancer-screening-camp-on-world-no-tobacco-day/article69650342.ece</a></li>
+
+<li>P. K. S. Singh Shalini, “Hiding in plain sight: Global tobacco industry has not disappeared — it has simply rebranded,” Down To Earth. Accessed: May 31, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/health/hiding-in-plain-sight-global-tobacco-industry-has-not-disappeared-it-has-simply-rebranded">https://www.downtoearth.org.in/health/hiding-in-plain-sight-global-tobacco-industry-has-not-disappeared-it-has-simply-rebranded</a></li>
+
+<li>C. Moore, “Tobacco’s hidden friendly side: how the controversial plant could be used for good,” Down To Earth. Accessed: Mar. 15, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/agriculture/tobaccos-hidden-friendly-side-how-the-controversial-plant-could-be-used-for-good">https://www.downtoearth.org.in/agriculture/tobaccos-hidden-friendly-side-how-the-controversial-plant-could-be-used-for-good</a></li>
+
+<li>S. Roy, J. Tabassum, and S. Roy, “Trump administration withdraws FDA plan to ban menthol cigarettes,” Reuters, Jan. 24, 2025. Accessed: Jan. 25, 2025. [Online]. Available: <a href="https://www.reuters.com/business/healthcare-pharmaceuticals/trump-administration-withdraws-fda-plan-ban-menthol-cigarettes-2025-01-24/">https://www.reuters.com/business/healthcare-pharmaceuticals/trump-administration-withdraws-fda-plan-ban-menthol-cigarettes-2025-01-24/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaa9add2" class="outline-2">
+<h2 id="orgaa9add2"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org3454150" class="outline-3">
+<h3 id="org3454150"><span class="section-number-3">4.1.</span> Texts</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>N. Oreskes and E. M. Conway, <b>Merchants of Doubt: How a Handful of Scientists Obscured the Truth on Issues from Tobacco Smoke to Global Warming.</b> A&amp;C Black, 2011.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcd562a1" class="outline-3">
+<h3 id="orgcd562a1"><span class="section-number-3">4.2.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org71692ad" class="outline-2">
+<h2 id="org71692ad"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org51e5c7b" class="outline-3">
+<h3 id="org51e5c7b"><span class="section-number-3">5.1.</span> Music</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Eros Now Music, <i>Kash Laga</i> (Video Song) | No Smoking | John Abraham &amp; Ayesha Takia, (Jul. 20, 2010). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=amU3dJ4Tk3U">https://www.youtube.com/watch?v=amU3dJ4Tk3U</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>YRF, Kajra Re | Full Song | Bunty Aur Babli | Aishwarya, Abhishek, Amitabh Bachchan | Shankar-Ehsaan-Loy, (Feb. 02, 2015). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=4dsFQFCvVGU">https://www.youtube.com/watch?v=4dsFQFCvVGU</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge50d536" class="outline-3">
+<h3 id="orge50d536"><span class="section-number-3">5.2.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org3e5c498" class="outline-2">
+<h2 id="org3e5c498"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orge03c7f5" class="outline-3">
+<h3 id="orge03c7f5"><span class="section-number-3">6.1.</span> Cancer</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>Cancer: <a href="https://tinyurl.com/3x298xwz">https://tinyurl.com/3x298xwz</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga2087a2" class="outline-2">
+<h2 id="orga2087a2"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>“Massive Illegal Cigarette Factory Dismantled in Italy,” OCCRP. Accessed: Mar. 20, 2026. [Online]. Available: <a href="https://www.occrp.org/en/news/massive-illegal-cigarette-factory-dismantled-in-italy">https://www.occrp.org/en/news/massive-illegal-cigarette-factory-dismantled-in-italy</a></li>
+
+<li>P. Ferdinand, “Smoking tobacco from early childhood can cause premature heart damage, new study shows,” U.S. Right to Know. Accessed: Dec. 13, 2024. [Online]. Available: <a href="https://usrtk.org/healthwire/smoking-tobacco-from-early-childhood-can-cause-premature-heart-damage/">https://usrtk.org/healthwire/smoking-tobacco-from-early-childhood-can-cause-premature-heart-damage/</a></li>
+
+<li>J.-P. A. Conversation The, “How tobacco companies use old tricks to draw younger users to smoking,” Scroll.in. Accessed: Jun. 09, 2024. [Online]. Available: <a href="https://scroll.in/article/1068719/how-tobacco-companies-use-old-tricks-to-draw-younger-users-to-smoking">https://scroll.in/article/1068719/how-tobacco-companies-use-old-tricks-to-draw-younger-users-to-smoking</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Smoking: long term damage to immune system.” Accessed: May 18, 2024. [Online]. Available: <a href="https://theecologist.org/2024/may/17/smoking-long-term-damage-immune-system">https://theecologist.org/2024/may/17/smoking-long-term-damage-immune-system</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“How Tobacco Companies Created the Disinformation Playbook,” The Equation. Accessed: Apr. 07, 2024. [Online]. Available: <a href="https://blog.ucsusa.org/anita-desikan/how-tobacco-companies-created-the-disinformation-playbook/">https://blog.ucsusa.org/anita-desikan/how-tobacco-companies-created-the-disinformation-playbook/</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:58</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

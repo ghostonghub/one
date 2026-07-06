@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:57 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Meats</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Meats</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org9ceb15b">1. General</a></li>
+<li><a href="#orga5e0efa">2. Philosophy</a>
+<ul>
+<li><a href="#org25b745a">2.1. Ethics</a></li>
+</ul>
+</li>
+<li><a href="#orga1951c3">3. STEMM</a>
+<ul>
+<li><a href="#org2c70e05">3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orged2f559">4. Worldly Matters</a>
+<ul>
+<li><a href="#org1ff4c79">4.1. Orgs</a></li>
+<li><a href="#org3de27ef">4.2. Products</a></li>
+<li><a href="#org94be35b">4.3. Nation States</a>
+<ul>
+<li><a href="#org5e11122">4.3.1. India</a></li>
+</ul>
+</li>
+<li><a href="#org2d0db55">4.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org1b33498">5. Core</a>
+<ul>
+<li><a href="#org6bf605f">5.1. Pork</a></li>
+<li><a href="#org32d0993">5.2. Beef</a></li>
+<li><a href="#org53080f7">5.3. Seafood</a></li>
+<li><a href="#orga272a7b">5.4. Chicken, Poultry</a></li>
+<li><a href="#orgde674fd">5.5. Mutton</a></li>
+<li><a href="#org38a7ca6">5.6. Lab-Grown Meat</a>
+<ul>
+<li><a href="#org36e3770">5.6.1. Environment</a></li>
+<li><a href="#orgf201504">5.6.2. Health</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgcc91ca6">6. Arts</a>
+<ul>
+<li><a href="#org403a0f6">6.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org52b3ac8">7. Special Topics</a>
+<ul>
+<li><a href="#orgcf1f2f4">7.1. Documentaries</a>
+<ul>
+<li><a href="#orgd08d80a">7.1.1. Animal Well Being Documentaries</a></li>
+<li><a href="#org37ff4c8">7.1.2. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgd3a8895">8. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org9ceb15b" class="outline-2">
+<h2 id="org9ceb15b"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orga5e0efa" class="outline-2">
+<h2 id="orga5e0efa"><span class="section-number-2">2.</span> Philosophy</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org25b745a" class="outline-3">
+<h3 id="org25b745a"><span class="section-number-3">2.1.</span> Ethics</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>T. C. &amp; M. Z. Sarah Gradidge, “How animal lovers get around the moral dilemma of eating meat,” Scroll.in. <a href="https://scroll.in/article/1017290/how-animal-lovers-get-around-the-moral-dilemma-of-eating-meat">https://scroll.in/article/1017290/how-animal-lovers-get-around-the-moral-dilemma-of-eating-meat</a> (accessed Feb. 17, 2022).</li>
+
+<li>“If you care about animals, it is your moral duty to eat them | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/if-you-care-about-animals-it-is-your-moral-duty-to-eat-them">https://aeon.co/essays/if-you-care-about-animals-it-is-your-moral-duty-to-eat-them</a> (accessed Feb. 17, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga1951c3" class="outline-2">
+<h2 id="orga1951c3"><span class="section-number-2">3.</span> STEMM</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org2c70e05" class="outline-3">
+<h3 id="org2c70e05"><span class="section-number-3">3.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>J. D’Silva and J. Webster, Eds., The Meat Crisis: Developing more Sustainable and Ethical Production and Consumption, 2nd edition. London ; New York, NY: Routledge, 2017.</li>
+
+<li>OCA, “Lab Grown ‘Meats’ Should Be Regulated,” Organic Consumers. Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://organicconsumers.org/lab-grown-meat-isnt-safe/">https://organicconsumers.org/lab-grown-meat-isnt-safe/</a></li>
+
+<li>L. Elmer, “Existential risks and global challenges: migrant workers and interspecies exploitation - CSER,” CSER - Centre for the Study of Existential Risk. Accessed: Jul. 26, 2025. [Online]. Available: <a href="https://www.cser.ac.uk/work/existential-risks-and-global-challenges-migrant-workers-and-interspecies-exploitation/">https://www.cser.ac.uk/work/existential-risks-and-global-challenges-migrant-workers-and-interspecies-exploitation/</a></li>
+
+<li>T. M. P. Reader, “The ‘We Evolved to Eat Meat’ Argument Doesn’t Hold Up,” The MIT Press Reader. Accessed: Jul. 18, 2025. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/the-we-evolved-to-eat-meat-argument-doesnt-hold-up/">https://thereader.mitpress.mit.edu/the-we-evolved-to-eat-meat-argument-doesnt-hold-up/</a></li>
+
+<li>“Meat-eating creates risk of new pandemic that ‘would make Covid look like a dress rehearsal,’” The Independent. Accessed: Mar. 22, 2025. [Online]. Available: <a href="https://www.independent.co.uk/climate-change/news/meat-coronavirus-pandemic-science-animals-b1794996.html">https://www.independent.co.uk/climate-change/news/meat-coronavirus-pandemic-science-animals-b1794996.html</a></li>
+
+<li>N. Gilbert, “Blood, body parts and bacteria pollute wastewater from meatpacking plants. New rules could help clean it up,” U.S. Right to Know. Accessed: Mar. 04, 2025. [Online]. Available: <a href="https://usrtk.org/factory-farming/wastewater-from-meatpacking-plants/">https://usrtk.org/factory-farming/wastewater-from-meatpacking-plants/</a></li>
+
+<li>“Eating Our Way to Extinction,” Wikipedia. Jan. 06, 2025. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Eating_Our_Way_to_Extinction&amp;oldid=1267824865">https://en.wikipedia.org/w/index.php?title=Eating_Our_Way_to_Extinction&amp;oldid=1267824865</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orged2f559" class="outline-2">
+<h2 id="orged2f559"><span class="section-number-2">4.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org1ff4c79" class="outline-3">
+<h3 id="org1ff4c79"><span class="section-number-3">4.1.</span> Orgs</h3>
+</div>
+<div id="outline-container-org3de27ef" class="outline-3">
+<h3 id="org3de27ef"><span class="section-number-3">4.2.</span> Products</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li><a href="https://www.licious.in/">Licious</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org94be35b" class="outline-3">
+<h3 id="org94be35b"><span class="section-number-3">4.3.</span> Nation States</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-org5e11122" class="outline-4">
+<h4 id="org5e11122"><span class="section-number-4">4.3.1.</span> India</h4>
+<div class="outline-text-4" id="text-4-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgc3216a5"></a>General<br /></li>
+<li><a id="orgb9a54ba"></a>Worldly Matters<br />
+<ol class="org-ol">
+<li><a id="orgbdcbee0"></a>Misc<br />
+<div class="outline-text-6" id="text-4-3-1-2-1">
+<ul class="org-ul">
+<li>V. Kaul, “Halal Ban Politics in UP 2025: Rhetoric, Trade and Contradictions,” Frontline. Accessed: Nov. 15, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/news/uttar-pradesh-halal-ban-contradictions-bjp-yogi-adityanath/article70278965.ece">https://frontline.thehindu.com/news/uttar-pradesh-halal-ban-contradictions-bjp-yogi-adityanath/article70278965.ece</a></li>
+
+<li>N. Deuskar, “The illogic of meat bans,” Scroll.in. Accessed: Aug. 17, 2025. [Online]. Available: <a href="https://scroll.in/article/1085590/the-illogic-of-meat-bans">https://scroll.in/article/1085590/the-illogic-of-meat-bans</a></li>
+
+<li>N. Kumar, “India’s apex drug regulator to monitor antibiotic use in livestock for combating AMR,” Down To Earth. Accessed: Jun. 24, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/health/indias-apex-drug-regulator-to-monitor-antibiotic-use-in-livestock-for-combating-amr">https://www.downtoearth.org.in/health/indias-apex-drug-regulator-to-monitor-antibiotic-use-in-livestock-for-combating-amr</a></li>
+
+<li>H. Mander, “Harsh Mander: The assault of four Muslims and the two sides of India’s meat economy,” Scroll.in. Accessed: Jun. 11, 2025. [Online]. Available: <a href="https://scroll.in/article/1083313/harsh-mander-the-assault-of-four-muslims-and-the-two-sides-of-indias-meat-economy">https://scroll.in/article/1083313/harsh-mander-the-assault-of-four-muslims-and-the-two-sides-of-indias-meat-economy</a></li>
+
+<li>“BJP MLA demands closure of meat shops during Navratri in Delhi,” The Times of India, Mar. 25, 2025. Accessed: Mar. 26, 2025. [Online]. Available: <a href="https://timesofindia.indiatimes.com/city/delhi/bjp-mla-ravinder-singh-negi-demands-closure-of-meat-shops-during-navratri-in-delhi/articleshow/119453554.cms">https://timesofindia.indiatimes.com/city/delhi/bjp-mla-ravinder-singh-negi-demands-closure-of-meat-shops-during-navratri-in-delhi/articleshow/119453554.cms</a></li>
+
+<li>“‘Non-veg food should be banned in India’: TMC MP Shatrughan Sinha,” The Indian Express. Accessed: Feb. 08, 2025. [Online]. Available: <a href="https://indianexpress.com/article/cities/kolkata/non-veg-food-banned-india-tmc-mp-shatrughan-sinha-9820720/">https://indianexpress.com/article/cities/kolkata/non-veg-food-banned-india-tmc-mp-shatrughan-sinha-9820720/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org1bb6686"></a>Misc<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org2d0db55" class="outline-3">
+<h3 id="org2d0db55"><span class="section-number-3">4.4.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li>“‘Border breaches risk meat disaster.’” Accessed: Mar. 18, 2026. [Online]. Available: <a href="https://theecologist.org/2026/mar/16/border-breaches-risk-meat-disaster">https://theecologist.org/2026/mar/16/border-breaches-risk-meat-disaster</a></li>
+
+<li>B. Bienkowski, “USDA seeks higher slaughterhouse line speeds; critics say workers will pay the price,” The New Lede. Accessed: Feb. 19, 2026. [Online]. Available: <a href="https://www.thenewlede.org/2026/02/usda-slaughterhouse-line-speeds/">https://www.thenewlede.org/2026/02/usda-slaughterhouse-line-speeds/</a></li>
+
+<li>T. Perkins, “Antibiotic use in US meat production jumped 16% in 2024, report shows,” The Guardian, Jan. 27, 2026. Accessed: Feb. 04, 2026. [Online]. Available: <a href="https://www.theguardian.com/us-news/2026/jan/27/antibiotic-meat-production">https://www.theguardian.com/us-news/2026/jan/27/antibiotic-meat-production</a></li>
+
+<li>“Full value added tax on meat: a first step towards pricing the environmental damages caused by diets,” Potsdam Institute for Climate Impact Research. Accessed: Feb. 04, 2026. [Online]. Available: <a href="https://www.pik-potsdam.de/en/news/latest-news/full-value-added-tax-on-meat-a-first-step-towards-pricing-the-environmental-damages-caused-by-diets">https://www.pik-potsdam.de/en/news/latest-news/full-value-added-tax-on-meat-a-first-step-towards-pricing-the-environmental-damages-caused-by-diets</a></li>
+
+<li>I. F. I. courtesy of I. F. C. S. D. E. T. proteinsAnimal W. Change and F. I. securityGreenLivestockMeatGlobal, “Reimagining meat: The Good Food Institute’s bid to redesign the global food system,” Mongabay Environmental News. Accessed: Oct. 25, 2025. [Online]. Available: <a href="https://news.mongabay.com/short-article/2025/10/reimagining-meat-the-good-food-institutes-bid-to-redesign-the-global-food-system/">https://news.mongabay.com/short-article/2025/10/reimagining-meat-the-good-food-institutes-bid-to-redesign-the-global-food-system/</a></li>
+
+<li>A. Prosser and T. Conversation, “Is meat masculine? How men really talk about being carnivores.” Accessed: Sep. 25, 2025. [Online]. Available: <a href="https://phys.org/news/2025-09-meat-masculine-men-carnivores.html">https://phys.org/news/2025-09-meat-masculine-men-carnivores.html</a></li>
+
+<li>“Pig and poultry farming pollution scandal.” Accessed: Sep. 10, 2025. [Online]. Available: <a href="https://theecologist.org/2025/sep/08/pig-and-poultry-farming-pollution-scandal">https://theecologist.org/2025/sep/08/pig-and-poultry-farming-pollution-scandal</a></li>
+
+<li>A. Elwin, D. Assou, and N. D’Cruze, “TikTok’s online wild meat sellers – study finds endangered species on offer in west Africa,” The Conversation. Accessed: Aug. 20, 2025. [Online]. Available: <a href="http://theconversation.com/tiktoks-online-wild-meat-sellers-study-finds-endangered-species-on-offer-in-west-africa-262807">http://theconversation.com/tiktoks-online-wild-meat-sellers-study-finds-endangered-species-on-offer-in-west-africa-262807</a></li>
+
+<li>T. Kingston, “Meat Country,” Granta. Accessed: Aug. 13, 2025. [Online]. Available: <a href="https://granta.com/meat-country/">https://granta.com/meat-country/</a></li>
+
+<li>M. Beasley, “Neanderthals likely ate fermented meat with a side of maggots,” The Conversation. Accessed: Jul. 26, 2025. [Online]. Available: <a href="http://theconversation.com/neanderthals-likely-ate-fermented-meat-with-a-side-of-maggots-261628">http://theconversation.com/neanderthals-likely-ate-fermented-meat-with-a-side-of-maggots-261628</a></li>
+
+<li>one full of reports of greenwashing and corruption The world’s largest meatpacker had a long journey to the U. S. stock market,  the company plans to use its new access to W. S. capital to expand operations in the U. S. After debuting on the NYSE,  it’s broadening its global footprint Recently, and C. warn of environmental risks with J. expansion and say the new listing could lead to more scrutiny from the U. S. C. and courts, “Now on Wall Street, JBS eyes growth amid scrutiny on deforestation &amp; graft,” Mongabay Environmental News. Accessed: Jul. 20, 2025. [Online]. Available: <a href="https://news.mongabay.com/2025/07/now-on-wall-street-jbs-eyes-growth-amid-scrutiny-on-deforestation-graft/">https://news.mongabay.com/2025/07/now-on-wall-street-jbs-eyes-growth-amid-scrutiny-on-deforestation-graft/</a></li>
+
+<li>“USDA Drops Plan to Tighten Salmonella Rules in Raw Chicken and Turkey,” Consumer Reports. Accessed: May 09, 2025. [Online]. Available: <a href="https://www.consumerreports.org/health/salmonella/usda-drops-plan-to-tighten-salmonella-regulations-in-poultry-a4541543748/">https://www.consumerreports.org/health/salmonella/usda-drops-plan-to-tighten-salmonella-regulations-in-poultry-a4541543748/</a></li>
+
+<li>“The Labor Abuses Behind Your Chicken Nuggets.” Accessed: May 03, 2025. [Online]. Available: <a href="https://jacobin.com/2025/05/labor-abuse-chicken-nuggets-fast-food">https://jacobin.com/2025/05/labor-abuse-chicken-nuggets-fast-food</a></li>
+
+<li>N. Gilbert, “FDA layoffs will hamper efforts to cut antimicrobial overuse in farm animals,” U.S. Right to Know. Accessed: Apr. 30, 2025. [Online]. Available: <a href="https://usrtk.org/antimicrobial-resistance/fda-layoffs-antimicrobial-overuse-in-farm-animals/">https://usrtk.org/antimicrobial-resistance/fda-layoffs-antimicrobial-overuse-in-farm-animals/</a></li>
+
+<li>“Animal rights activists flock to KFC protests.” Accessed: Mar. 13, 2025. [Online]. Available: <a href="https://theecologist.org/2025/mar/11/animal-rights-activists-flock-kfc-protests">https://theecologist.org/2025/mar/11/animal-rights-activists-flock-kfc-protests</a></li>
+
+<li>“Greenpeace challenges JBS&amp;#8217; New York Stock Exchange listing and Netherlands move over links to corruption, deforestation and emissions,” Greenpeace International. Accessed: Feb. 12, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/72773/greenpeace-challenges-jbs-new-york-stock-exchange-listing-and-netherlands-move-over-links-to-corruption-deforestation-and-emissions/">https://www.greenpeace.org/international/press-release/72773/greenpeace-challenges-jbs-new-york-stock-exchange-listing-and-netherlands-move-over-links-to-corruption-deforestation-and-emissions/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Eating Our Way to Extinction,” Wikipedia. Jan. 06, 2025. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Eating_Our_Way_to_Extinction&amp;oldid=1267824865">https://en.wikipedia.org/w/index.php?title=Eating_Our_Way_to_Extinction&amp;oldid=1267824865</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>U. Sinclair and K. Gehrmann, The Jungle: California: Ten Speed Press, 2019.</li>
+<li>U. Sinclair and M. Dickstein, The Jungle. Westminster: Bantam Classics, 1981.</li>
+<li>C. Voigt, L. Hundscheid, C. Plank, and M. Pichler, “Meat politics. Analysing actors, strategies and power relations governing the meat regime in Austria,” Geoforum, vol. 154, p. 104048, Aug. 2024, doi: 10.1016/j.geoforum.2024.104048.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1b33498" class="outline-2">
+<h2 id="org1b33498"><span class="section-number-2">5.</span> Core</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org6bf605f" class="outline-3">
+<h3 id="org6bf605f"><span class="section-number-3">5.1.</span> Pork</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Pork: <a href="https://tinyurl.com/2a5cac99">https://tinyurl.com/2a5cac99</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org32d0993" class="outline-3">
+<h3 id="org32d0993"><span class="section-number-3">5.2.</span> Beef</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>Beef: <a href="https://tinyurl.com/4aa42atd">https://tinyurl.com/4aa42atd</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org53080f7" class="outline-3">
+<h3 id="org53080f7"><span class="section-number-3">5.3.</span> Seafood</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>Seafood: <a href="https://tinyurl.com/4dbf2xcy">https://tinyurl.com/4dbf2xcy</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga272a7b" class="outline-3">
+<h3 id="orga272a7b"><span class="section-number-3">5.4.</span> Chicken, Poultry</h3>
+<div class="outline-text-3" id="text-5-4">
+<ul class="org-ul">
+<li>Poultry: <a href="https://tinyurl.com/2tybf5t5">https://tinyurl.com/2tybf5t5</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgde674fd" class="outline-3">
+<h3 id="orgde674fd"><span class="section-number-3">5.5.</span> Mutton</h3>
+<div class="outline-text-3" id="text-5-5">
+<ul class="org-ul">
+<li>Mutton: <a href="https://tinyurl.com/2c7tnh77">https://tinyurl.com/2c7tnh77</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org38a7ca6" class="outline-3">
+<h3 id="org38a7ca6"><span class="section-number-3">5.6.</span> Lab-Grown Meat</h3>
+<div class="outline-text-3" id="text-5-6">
+</div>
+<div id="outline-container-org36e3770" class="outline-4">
+<h4 id="org36e3770"><span class="section-number-4">5.6.1.</span> Environment</h4>
+<div class="outline-text-4" id="text-5-6-1">
+<ul class="org-ul">
+<li>D. Risner, Y. Kim, C. Nguyen, J. B. Siegel, and E. S. Spang, “Environmental impacts of cultured meat: A cradle-to-gate life cycle assessment,” Apr. 21, 2023, bioRxiv. doi: 10.1101/2023.04.21.537778.</li>
+<li>A. M. Quinton, “Lab-Grown Meat’s Carbon Footprint Potentially Worse Than Retail Beef,” UC Davis. Accessed: Oct. 27, 2024. [Online]. Available: <a href="https://www.ucdavis.edu/food/news/lab-grown-meat-carbon-footprint-worse-beef">https://www.ucdavis.edu/food/news/lab-grown-meat-carbon-footprint-worse-beef</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf201504" class="outline-4">
+<h4 id="orgf201504"><span class="section-number-4">5.6.2.</span> Health</h4>
+<div class="outline-text-4" id="text-5-6-2">
+<ul class="org-ul">
+<li>“Is Lab-Grown Meat Healthy and Safe to Consume?,” Center for Food Safety. Accessed: Oct. 27, 2024. [Online]. Available: <a href="https://www.centerforfoodsafety.org/blog/6458/is-lab-grown-meat-healthy-and-safe-to-consume">https://www.centerforfoodsafety.org/blog/6458/is-lab-grown-meat-healthy-and-safe-to-consume</a></li>
+<li>N. Thieme, “The Gruesome Truth About Lab-Grown Meat,” Slate, Jul. 11, 2017. Accessed: Oct. 27, 2024. [Online]. Available: <a href="https://slate.com/technology/2017/07/the-gruesome-truth-about-lab-grown-meat.html">https://slate.com/technology/2017/07/the-gruesome-truth-about-lab-grown-meat.html</a></li>
+<li>T. Philpott, “The bloody secret behind lab-grown meat,” Mother Jones. Accessed: Oct. 27, 2024. [Online]. Available: <a href="https://www.motherjones.com/environment/2022/03/lab-meat-fetal-bovine-serum-blood-slaughter-cultured/">https://www.motherjones.com/environment/2022/03/lab-meat-fetal-bovine-serum-blood-slaughter-cultured/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>OCA, “Organic Bytes Newsletter #891: Quorn, Inflammation &amp; Depression,” Organic Consumers. Accessed: Apr. 27, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-891-quorn-inflammation-and-depression/">https://organicconsumers.org/organic-bytes-newsletter-891-quorn-inflammation-and-depression/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcc91ca6" class="outline-2">
+<h2 id="orgcc91ca6"><span class="section-number-2">6.</span> Arts</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org403a0f6" class="outline-3">
+<h3 id="org403a0f6"><span class="section-number-3">6.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>Soylent Green ( 1973) : Free Download, Borrow, and Streaming : Internet Archive. Accessed: Oct. 02, 2025. [Online Video]. Available: <a href="https://archive.org/details/soylent-green-1973_20210310">https://archive.org/details/soylent-green-1973_20210310</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org52b3ac8" class="outline-2">
+<h2 id="org52b3ac8"><span class="section-number-2">7.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-orgcf1f2f4" class="outline-3">
+<h3 id="orgcf1f2f4"><span class="section-number-3">7.1.</span> Documentaries</h3>
+<div class="outline-text-3" id="text-7-1">
+</div>
+<div id="outline-container-orgd08d80a" class="outline-4">
+<h4 id="orgd08d80a"><span class="section-number-4">7.1.1.</span> Animal Well Being Documentaries</h4>
+<div class="outline-text-4" id="text-7-1-1">
+<ul class="org-ul">
+<li>“Earthlings (film),” Wikipedia. Feb. 03, 2025. Accessed: Mar. 18, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Earthlings_(film)&amp;oldid=1273772960">https://en.wikipedia.org/w/index.php?title=Earthlings_(film)&amp;oldid=1273772960</a>
+<ul class="org-ul">
+<li>Earthlings. Accessed: Mar. 18, 2025. [Online Video]. Available: <a href="http://archive.org/details/earthlings-704x-528">http://archive.org/details/earthlings-704x-528</a></li>
+</ul></li>
+
+<li>“Eating Our Way to Extinction,” Wikipedia. Jan. 06, 2025. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Eating_Our_Way_to_Extinction&amp;oldid=1267824865">https://en.wikipedia.org/w/index.php?title=Eating_Our_Way_to_Extinction&amp;oldid=1267824865</a>
+<ul class="org-ul">
+<li>EATING OUR WAY TO EXTINCTION, Eating Our Way to Extinction | Film (ENGLISH) - Documentary, (Jul. 16, 2022). Accessed: Jan. 26, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=LaPge01NQTQ">https://www.youtube.com/watch?v=LaPge01NQTQ</a></li>
+</ul></li>
+
+<li>“Seaspiracy,” Wikipedia. Dec. 21, 2024. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Seaspiracy&amp;oldid=1264316428">https://en.wikipedia.org/w/index.php?title=Seaspiracy&amp;oldid=1264316428</a></li>
+<li>“Cowspiracy,” Wikipedia. Nov. 03, 2024. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Cowspiracy&amp;oldid=1255194122">https://en.wikipedia.org/w/index.php?title=Cowspiracy&amp;oldid=1255194122</a></li>
+<li>“What the Health,” Wikipedia. Nov. 21, 2024. Accessed: Jan. 28, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=What_the_Health&amp;oldid=1258679753">https://en.wikipedia.org/w/index.php?title=What_the_Health&amp;oldid=1258679753</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org37ff4c8" class="outline-4">
+<h4 id="org37ff4c8"><span class="section-number-4">7.1.2.</span> Misc</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd3a8895" class="outline-2">
+<h2 id="orgd3a8895"><span class="section-number-2">8.</span> Misc</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>“Food brands break Frankenchickens promise.” Accessed: Feb. 20, 2026. [Online]. Available: <a href="https://theecologist.org/2026/feb/19/food-brands-break-frankenchickens-promise">https://theecologist.org/2026/feb/19/food-brands-break-frankenchickens-promise</a></li>
+
+<li>B. Friedrich and C. Welsh, Meat: How the Next Agricultural Revolution Will Transform Humanity’s Favorite Food―and Our Future. BenBella Books.</li>
+<li>J. Mecklin, “The ick factor won’t stop alt meat, if Bruce Friedrich has anything to say about it,” Bulletin of the Atomic Scientists. Accessed: Feb. 13, 2026. [Online]. Available: <a href="https://thebulletin.org/2026/02/the-ick-factor-wont-stop-alt-meat-if-bruce-friedrich-has-anything-to-say-about-it/">https://thebulletin.org/2026/02/the-ick-factor-wont-stop-alt-meat-if-bruce-friedrich-has-anything-to-say-about-it/</a></li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>J. D’Silva and J. Webster, Eds., The Meat Crisis: Developing more Sustainable and Ethical Production and Consumption, 2nd edition. London ; New York, NY: Routledge, 2017.</li>
+
+<li>“Meat Atlas 2021 | Heinrich Böll Stiftung | Brussels office - European Union.” Accessed: Nov. 06, 2025. [Online]. Available: <a href="https://eu.boell.org/en/MeatAtlas2021-PDF">https://eu.boell.org/en/MeatAtlas2021-PDF</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Antiquity, “Horsemeat on the table: Medieval Hungarians defied religious norms for centuries.” Accessed: Jul. 14, 2025. [Online]. Available: <a href="https://phys.org/news/2025-07-horsemeat-table-medieval-hungarians-defied.html">https://phys.org/news/2025-07-horsemeat-table-medieval-hungarians-defied.html</a></li>
+
+<li>G. Francaviglia, “Fighting meat with emotions, not facts,” 360. Accessed: Jul. 05, 2025. [Online]. Available: <a href="https://360info.org/fighting-meat-with-emotions-not-facts/">https://360info.org/fighting-meat-with-emotions-not-facts/</a></li>
+
+<li>D. Grace, H. Nguyen-Viet, S. Staal, and T. Conversation, “Wild meat is eaten by millions, but puts billions at risk. How to manage the trade?” Accessed: Apr. 10, 2025. [Online]. Available: <a href="https://phys.org/news/2025-04-wild-meat-eaten-millions-billions.html">https://phys.org/news/2025-04-wild-meat-eaten-millions-billions.html</a></li>
+
+<li>Elena, “Cysts in Meat? How to Avoid Pus in Your Food,” PETA. Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://www.peta.org/blog/video-cysts-in-meat/">https://www.peta.org/blog/video-cysts-in-meat/</a></li>
+
+<li>S. Baker, Carnivore Diet. Victory Belt Publishing, 2019.</li>
+
+<li>S. Hussain, “Food history: How nihari went from being the humble food of the poor to a dish for the high table,” Scroll.in. Accessed: Jan. 14, 2025. [Online]. Available: <a href="https://scroll.in/article/1077553/food-history-how-nihari-went-from-being-the-humble-food-of-the-poor-to-a-dish-for-the-high-table">https://scroll.in/article/1077553/food-history-how-nihari-went-from-being-the-humble-food-of-the-poor-to-a-dish-for-the-high-table</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>OCA, “Organic Bytes Newsletter #882: Fake Meat Linked to Depression,” Organic Consumers. Accessed: Feb. 08, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-882-fake-meat-linked-to-depression/">https://organicconsumers.org/organic-bytes-newsletter-882-fake-meat-linked-to-depression/</a></li>
+<li>U. of Surrey, “Processed plant-based meat alternatives linked to depression risk in vegetarians.” Accessed: Dec. 19, 2024. [Online]. Available: <a href="https://medicalxpress.com/news/2024-12-based-meat-alternatives-linked-depression.html">https://medicalxpress.com/news/2024-12-based-meat-alternatives-linked-depression.html</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:57</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

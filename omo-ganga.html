@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ganga</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Ganga</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb01191c">1. General</a></li>
+<li><a href="#org0ffe380">2. STEMM</a>
+<ul>
+<li><a href="#org03677e6">2.1. Environment</a>
+<ul>
+<li><a href="#orgd41814a">2.1.1. Misc</a></li>
+<li><a href="#org9e550d6">2.1.2. History</a></li>
+<li><a href="#org51d7bd9">2.1.3. Pollution</a></li>
+<li><a href="#orge868fcb">2.1.4. Religions, Spirituality, Misc</a></li>
+<li><a href="#orga804cbb">2.1.5. SocioPolitical Studies, Law, Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc9cf654">2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc041f22">3. World</a>
+<ul>
+<li><a href="#orgee265d4">3.1. Events</a>
+<ul>
+<li><a href="#org0e0cd42">3.1.1. Kumbh Mela</a></li>
+</ul>
+</li>
+<li><a href="#org53d1316">3.2. Religions, Spirituality, Misc</a></li>
+<li><a href="#org7aa015f">3.3. SocioPolitical Studies, Law, Misc</a></li>
+<li><a href="#org5b20217">3.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orge361d63">4. Core</a>
+<ul>
+<li><a href="#org66e60c8">4.1. Documentaries</a></li>
+</ul>
+</li>
+<li><a href="#orgb3f83ff">5. Arts</a>
+<ul>
+<li><a href="#org16834a4">5.1. Music</a>
+<ul>
+<li><a href="#org4cc9a93">5.1.1. Hindustani Classical Music</a></li>
+<li><a href="#org23737cc">5.1.2. Pop</a></li>
+<li><a href="#org9162a42">5.1.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgbea1bfc">5.2. Films</a></li>
+<li><a href="#org4786338">5.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org5c7cc24">6. Special Topics</a>
+<ul>
+<li><a href="#orgaf2860f">6.1. Vandana Shiva</a></li>
+<li><a href="#org3e6f284">6.2. Texts</a></li>
+<li><a href="#orgb4a5d4b">6.3. Articles, Essays</a></li>
+<li><a href="#orgb73d3db">6.4. Google Gemini</a></li>
+</ul>
+</li>
+<li><a href="#org1911e57">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgb01191c" class="outline-2">
+<h2 id="orgb01191c"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Ganges,” Wikipedia. Jan. 15, 2025. Accessed: Jan. 19, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ganges&amp;oldid=1269506705">https://en.wikipedia.org/w/index.php?title=Ganges&amp;oldid=1269506705</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0ffe380" class="outline-2">
+<h2 id="org0ffe380"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org03677e6" class="outline-3">
+<h3 id="org03677e6"><span class="section-number-3">2.1.</span> Environment</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgd41814a" class="outline-4">
+<h4 id="orgd41814a"><span class="section-number-4">2.1.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>P. Shankar, “Tracking critically endangered turtles in the Ganges,” Mongabay-India. Accessed: Jun. 25, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/06/tracking-critically-endangered-turtles-in-the-ganges/">https://india.mongabay.com/2025/06/tracking-critically-endangered-turtles-in-the-ganges/</a></li>
+
+<li>V. Mishra, “Protests erupt over garbage incinerator in eco-sensitive Gangotri zone,” Down To Earth. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/pollution/protests-erupt-over-garbage-incinerator-in-eco-sensitive-gangotri-zone">https://www.downtoearth.org.in/pollution/protests-erupt-over-garbage-incinerator-in-eco-sensitive-gangotri-zone</a></li>
+
+<li>P. Lal, “Is Ganga really self-cleaning? Here’s what science says,” ThePrint. Accessed: Mar. 02, 2025. [Online]. Available: <a href="https://theprint.in/opinion/is-ganga-self-cleaning-what-science-says/2510541/">https://theprint.in/opinion/is-ganga-self-cleaning-what-science-says/2510541/</a></li>
+
+<li>J. Basu, “Gangasagar: Several ghats swallowed by sea due to climate change, state decries lack of central support,” Down To Earth. Accessed: Jan. 17, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/climate-change/gangasagar-several-ghats-swallowed-by-sea-due-to-climate-change-state-decries-lack-of-central-support">https://www.downtoearth.org.in/climate-change/gangasagar-several-ghats-swallowed-by-sea-due-to-climate-change-state-decries-lack-of-central-support</a></li>
+
+<li>“Is Ganga losing its resilience?” <a href="https://www.downtoearth.org.in/news/is-ganga-losing-its-resilience-33045">https://www.downtoearth.org.in/news/is-ganga-losing-its-resilience-33045</a> (accessed Apr. 20, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9e550d6" class="outline-4">
+<h4 id="org9e550d6"><span class="section-number-4">2.1.2.</span> History</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>“Powerful ancient earthquake likely rerouted the Ganga 2,500 years ago — and there are risks of another such event in future.” Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/natural-disasters/powerful-ancient-earthquake-likely-rerouted-the-ganga-2-500-years-ago-and-there-are-risks-of-another-such-event-in-future-96740">https://www.downtoearth.org.in/news/natural-disasters/powerful-ancient-earthquake-likely-rerouted-the-ganga-2-500-years-ago-and-there-are-risks-of-another-such-event-in-future-96740</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org51d7bd9" class="outline-4">
+<h4 id="org51d7bd9"><span class="section-number-4">2.1.3.</span> Pollution</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<ul class="org-ul">
+<li>R. Kochhar, “The virus in the rivers: histories and antibiotic afterlives of the bacteriophage at the sangam in Allahabad,” Notes and Records: the Royal Society Journal of the History of Science, vol. 74, no. 4, pp. 625–651, Dec. 2020, doi: 10.1098/rsnr.2020.0019.</li>
+<li>“Water pollution in rivers: A long pathway to a better tomorrow.” Accessed: May 07, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/pollution/water-pollution-in-rivers-a-long-pathway-to-a-better-tomorrow-95987">https://www.downtoearth.org.in/blog/pollution/water-pollution-in-rivers-a-long-pathway-to-a-better-tomorrow-95987</a></li>
+<li>“Namami Gange: Ten Years On, The Ganga Still Runs Dirty, Its Water Undrinkable,” The Wire. Accessed: May 19, 2024. [Online]. Available: <a href="https://thewire.in/environment/ten-years-and-nearly-rs-40000-crore-later-the-ganga-still-runs-dirty-its-water-undrinkable">https://thewire.in/environment/ten-years-and-nearly-rs-40000-crore-later-the-ganga-still-runs-dirty-its-water-undrinkable</a></li>
+
+<li>“Is Ganga losing its resilience?” <a href="https://www.downtoearth.org.in/news/is-ganga-losing-its-resilience-33045">https://www.downtoearth.org.in/news/is-ganga-losing-its-resilience-33045</a> (accessed Apr. 20, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge868fcb" class="outline-4">
+<h4 id="orge868fcb"><span class="section-number-4">2.1.4.</span> Religions, Spirituality, Misc</h4>
+<div class="outline-text-4" id="text-2-1-4">
+</div>
+<ol class="org-ol">
+<li><a id="org77ce757"></a>Mythical Powers<br />
+<div class="outline-text-5" id="text-2-1-4-1">
+<ul class="org-ul">
+<li>K. Khairnar, “Ganges: special at its origin,” J Biol Res (Thessalon), vol. 23, p. 16, Jul. 2016, doi: 10.1186/s40709-016-0055-6.</li>
+<li>“A British scientist’s quest to scientifically explain the ‘mythical powers of the Ganges,’” ThePrint, Nov. 03, 2021. <a href="https://theprint.in/pageturner/excerpt/a-british-scientists-quest-to-scientifically-explain-the-mythical-powers-of-the-ganges/760822/">https://theprint.in/pageturner/excerpt/a-british-scientists-quest-to-scientifically-explain-the-mythical-powers-of-the-ganges/760822/</a> (accessed Apr. 20, 2022).</li>
+
+<li>V. Shiva, <b>Water Wars: Privatization, Pollution and Profit.</b> Pluto Press, 2002.</li>
+</ul>
+</div>
+</li>
+<li><a id="org85ae050"></a>MahaKumbh<br />
+<div class="outline-text-5" id="text-2-1-4-2">
+<ul class="org-ul">
+<li>V. Mishra, “Mahakumbh 2025: Unaware of water quality at Prayagraj, 25 million devotees took holy dip in Ganga,” Down To Earth. Accessed: Jan. 17, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/water/mahakumbh-2025-unaware-of-water-quality-at-prayagraj-25-million-devotees-took-holy-dip-in-ganga">https://www.downtoearth.org.in/water/mahakumbh-2025-unaware-of-water-quality-at-prayagraj-25-million-devotees-took-holy-dip-in-ganga</a></li>
+<li>V. Mishra, “Approaching Mahakumbh raises an important question: How would pilgrims take holy dip in sewage-infused Ganga river,” Down To Earth. Accessed: Nov. 15, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/water/approaching-mahakumbh-raises-an-important-question-how-would-pilgrims-take-holy-dip-in-sewage-infused-ganga-river">https://www.downtoearth.org.in/water/approaching-mahakumbh-raises-an-important-question-how-would-pilgrims-take-holy-dip-in-sewage-infused-ganga-river</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orga804cbb" class="outline-4">
+<h4 id="orga804cbb"><span class="section-number-4">2.1.5.</span> SocioPolitical Studies, Law, Misc</h4>
+<div class="outline-text-4" id="text-2-1-5">
+<ul class="org-ul">
+<li>M. B. &amp; C. P. Rajendran, “The Ganga’s Last Stand: How Bureaucracy and Hydropower are Choking India’s Sacred River,” Frontline. Accessed: Jan. 14, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/environment/ganga-basin-dams-hydro-electric-power-biodiversity-himalayas-joshimath-climate-change/article69067642.ece">https://frontline.thehindu.com/environment/ganga-basin-dams-hydro-electric-power-biodiversity-himalayas-joshimath-climate-change/article69067642.ece</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc9cf654" class="outline-3">
+<h3 id="orgc9cf654"><span class="section-number-3">2.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>S. Ghosh, “Ganga’s worst dry spell in 1300 years,” Nature India, Sep. 2025, doi: 10.1038/d44151-025-00180-5.</li>
+
+<li>P. Arnold and Phys.org, “The Ganges River is drying at an unprecedented rate, new study finds.” Accessed: Sep. 25, 2025. [Online]. Available: <a href="https://phys.org/news/2025-09-ganges-river-drying-unprecedented.html">https://phys.org/news/2025-09-ganges-river-drying-unprecedented.html</a></li>
+
+<li>M. B. &amp; C. P. Rajendran, “The Ganga’s Last Stand: How Bureaucracy and Hydropower are Choking India’s Sacred River,” Frontline. Accessed: Aug. 15, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/environment/ganga-basin-dams-hydro-electric-power-biodiversity-himalayas-joshimath-climate-change/article69067642.ece">https://frontline.thehindu.com/environment/ganga-basin-dams-hydro-electric-power-biodiversity-himalayas-joshimath-climate-change/article69067642.ece</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc041f22" class="outline-2">
+<h2 id="orgc041f22"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgee265d4" class="outline-3">
+<h3 id="orgee265d4"><span class="section-number-3">3.1.</span> Events</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org0e0cd42" class="outline-4">
+<h4 id="org0e0cd42"><span class="section-number-4">3.1.1.</span> Kumbh Mela</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgd30066b"></a>General<br />
+<div class="outline-text-5" id="text-3-1-1-1">
+<ul class="org-ul">
+<li>“Kumbh Mela,” Wikipedia. Jan. 19, 2025. Accessed: Jan. 19, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Kumbh_Mela&amp;oldid=1270380279">https://en.wikipedia.org/w/index.php?title=Kumbh_Mela&amp;oldid=1270380279</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgaf21402"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="orgd713a54"></a>Environment<br /></li>
+<li><a id="org7a4fe10"></a>Misc<br />
+<ul class="org-ul">
+<li><a id="org30e6df4"></a>Down To Earth<br />
+<div class="outline-text-7" id="text-org30e6df4">
+<ul class="org-ul">
+<li>H. Nitnaware, “GBS outbreaks across India may have been caused by large-scale water contamination as seen at Kumbh Mela: Expert,” Down To Earth. Accessed: Feb. 08, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/health/gbs-outbreaks-across-india-may-have-been-caused-by-large-scale-water-contamination-as-seen-at-kumbh-mela">https://www.downtoearth.org.in/health/gbs-outbreaks-across-india-may-have-been-caused-by-large-scale-water-contamination-as-seen-at-kumbh-mela</a></li>
+<li>D. T. E. Staff, “GBS outbreak and Mahakumbh: Is there a connection?,” Down To Earth. Accessed: Feb. 16, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/health/gbs-outbreak-and-mahakumbh-is-there-a-connection">https://www.downtoearth.org.in/health/gbs-outbreak-and-mahakumbh-is-there-a-connection</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. T. E. Staff, “Mahakumbh Mela 2025: Is it safe to take a dip in the Ganga?,” Down To Earth. Accessed: Jan. 24, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/environment/mahakumbh-mela-2025-is-it-safe-to-take-a-dip-in-the-ganga">https://www.downtoearth.org.in/environment/mahakumbh-mela-2025-is-it-safe-to-take-a-dip-in-the-ganga</a></li>
+<li>V. Mishra, “Mahakumbh 2024: NGT curious about sudden disapperance of 1400,000 tonnes of Prayagraj’s legacy waste,” Down To Earth. Accessed: Jan. 24, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/mahakumbh-2024-ngt-curious-about-sudden-disapperance-of-1400000-tonnes-of-prayagrajs-legacy-waste">https://www.downtoearth.org.in/waste/mahakumbh-2024-ngt-curious-about-sudden-disapperance-of-1400000-tonnes-of-prayagrajs-legacy-waste</a></li>
+<li>D. T. E. Staff, “Mahakumbh Mela 2025: Is it safe to take a dip in the Ganga?,” Down To Earth. Accessed: Jan. 24, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/environment/mahakumbh-mela-2025-is-it-safe-to-take-a-dip-in-the-ganga">https://www.downtoearth.org.in/environment/mahakumbh-mela-2025-is-it-safe-to-take-a-dip-in-the-ganga</a></li>
+<li>V. Mishra, “Mahakumbh 2025: Unaware of water quality at Prayagraj, 25 million devotees took holy dip in Ganga,” Down To Earth. Accessed: Jan. 17, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/water/mahakumbh-2025-unaware-of-water-quality-at-prayagraj-25-million-devotees-took-holy-dip-in-ganga">https://www.downtoearth.org.in/water/mahakumbh-2025-unaware-of-water-quality-at-prayagraj-25-million-devotees-took-holy-dip-in-ganga</a></li>
+<li>V. Mishra, “Approaching Mahakumbh raises an important question: How would pilgrims take holy dip in sewage-infused Ganga river,” Down To Earth. Accessed: Nov. 15, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/water/approaching-mahakumbh-raises-an-important-question-how-would-pilgrims-take-holy-dip-in-sewage-infused-ganga-river">https://www.downtoearth.org.in/water/approaching-mahakumbh-raises-an-important-question-how-would-pilgrims-take-holy-dip-in-sewage-infused-ganga-river</a></li>
+<li>T. Chatterjee, “How Kumbh Mela &amp; global mega events can be decarbonised,” Down To Earth. Accessed: Jan. 09, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/environment/how-kumbh-mela-global-mega-events-can-be-decarbonised">https://www.downtoearth.org.in/environment/how-kumbh-mela-global-mega-events-can-be-decarbonised</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6be3195"></a>The Wire, The Reporters-Collective<br />
+<div class="outline-text-7" id="text-org6be3195">
+<ul class="org-ul">
+<li>“The Outcast Toilet Cleaners Keeping the Kumbh Mela Going,” The Wire. Accessed: Jan. 20, 2025. [Online]. Available: <a href="https://thewire.in/health/outcast-toilet-cleaners-keeping-kumbh-mela-running">https://thewire.in/health/outcast-toilet-cleaners-keeping-kumbh-mela-running</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="orgde5573a"></a>Worldly Matters<br />
+<ol class="org-ol">
+<li><a id="org8ac4963"></a>Misc<br />
+<ul class="org-ul">
+<li><a id="org1250901"></a>Misc<br />
+<div class="outline-text-7" id="text-org1250901">
+<ul class="org-ul">
+<li>“The ‘Spectacle’ of the ‘Mahakumbh,’” The India Forum. Accessed: Apr. 18, 2025. [Online]. Available: <a href="https://www.theindiaforum.in/politics/spectacle-mahakumbh">https://www.theindiaforum.in/politics/spectacle-mahakumbh</a></li>
+
+<li>“Ritual inclusion at the Kumbh does not wash away Modi’s contempt for Dalit rights.” Accessed: Apr. 02, 2025. [Online]. Available: <a href="https://caravanmagazine.in/caste/ritual-inclusion-kumbh-modi-contempt-dalit-rights">https://caravanmagazine.in/caste/ritual-inclusion-kumbh-modi-contempt-dalit-rights</a></li>
+
+<li>S. Gatade, “Should Faith be Used to Brush Away Filth?,” KAFILA - COLLECTIVE EXPLORATIONS SINCE 2006. Accessed: Mar. 19, 2025. [Online]. Available: <a href="https://kafila.online/2025/02/22/should-faith-be-used-to-brush-away-filth/">https://kafila.online/2025/02/22/should-faith-be-used-to-brush-away-filth/</a></li>
+<li>S. Gatade, “‘पवित्र स्नान’ का दूसरा पहलू : क्या महाकुंभ में सरकारी लापरवाही से लोग बेहद गंदे पानी में नहाते रहे?,” KAFILA - COLLECTIVE EXPLORATIONS SINCE 2006. Accessed: Mar. 19, 2025. [Online]. Available: <a href="https://kafila.online/2025/02/25/%e0%a4%aa%e0%a4%b5%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%b0-%e0%a4%b8%e0%a5%8d%e0%a4%a8%e0%a4%be%e0%a4%a8-%e0%a4%95%e0%a4%be-%e0%a4%a6%e0%a5%82%e0%a4%b8%e0%a4%b0%e0%a4%be-%e0%a4%aa/">https://kafila.online/2025/02/25/%e0%a4%aa%e0%a4%b5%e0%a4%bf%e0%a4%a4%e0%a5%8d%e0%a4%b0-%e0%a4%b8%e0%a5%8d%e0%a4%a8%e0%a4%be%e0%a4%a8-%e0%a4%95%e0%a4%be-%e0%a4%a6%e0%a5%82%e0%a4%b8%e0%a4%b0%e0%a4%be-%e0%a4%aa/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Puri, “Gobar Times: The Maha Kumbh message,” Down To Earth. Accessed: Mar. 03, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/water/gobar-times-the-maha-kumbh-message">https://www.downtoearth.org.in/water/gobar-times-the-maha-kumbh-message</a></li>
+
+<li>Lallantop UP, रात 12 बजे बड़ा खुलासा,Mahakumbh में हुई दूसरी भगदड़ का भयंकर ‘सच’ JCB,ट्रैक्टर से ऐसे हटाया गया!, (Jan. 30, 2025). Accessed: Mar. 02, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=48VsDGCVXWc">https://www.youtube.com/watch?v=48VsDGCVXWc</a></li>
+
+<li>“Theft, Snatching, Digital Fraud: Tales of Crime From the Maha Kumbh,” The Wire. Accessed: Feb. 24, 2025. [Online]. Available: <a href="https://thewire.in/government/maha-crime-mela-theft-snatching-and-digital-fraud-at-kumbh">https://thewire.in/government/maha-crime-mela-theft-snatching-and-digital-fraud-at-kumbh</a></li>
+
+<li>“The World’s Largest Pilgrimage Is a Stage for India’s Hindu Right,” Bloomberg.com, Jan. 10, 2025. Accessed: Feb. 08, 2025. [Online]. Available: <a href="https://www.bloomberg.com/news/articles/2025-01-10/india-s-kumbh-mela-is-a-political-opportunity-for-narendra-modi">https://www.bloomberg.com/news/articles/2025-01-10/india-s-kumbh-mela-is-a-political-opportunity-for-narendra-modi</a></li>
+
+<li>T. H. Bureau, “In pictures | Maha Kumbh Mela draws sea of devotees at Triveni Sangam,” The Hindu, Jan. 15, 2025. Accessed: Jan. 18, 2025. [Online]. Available: <a href="https://www.thehindu.com/photos/in-pictures-maha-kumbh-mela-draws-sea-of-devotees-at-triveni-sangam/article69099317.ece">https://www.thehindu.com/photos/in-pictures-maha-kumbh-mela-draws-sea-of-devotees-at-triveni-sangam/article69099317.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“‘Hindu–Buddhist Bhai Bhai’? The Politics Behind the RSS-Buddhist Alliance at the Kumbh Mela,” The Wire. Accessed: Feb. 22, 2025. [Online]. Available: <a href="https://thewire.in/religion/hindu-buddhist-bhai-bhai-the-politics-behind-the-rss-buddhist-alliance-at-the-kumbh-mela">https://thewire.in/religion/hindu-buddhist-bhai-bhai-the-politics-behind-the-rss-buddhist-alliance-at-the-kumbh-mela</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd157761"></a>The Caravan Magazine<br />
+<div class="outline-text-7" id="text-orgd157761">
+<ul class="org-ul">
+<li>“How the UP government abandoned well laid norms for the Kumbh.” Accessed: Mar. 03, 2025. [Online]. Available: <a href="https://caravanmagazine.in/religion/kumbh-stampede-after-government-abandons-1954-norms">https://caravanmagazine.in/religion/kumbh-stampede-after-government-abandons-1954-norms</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org79b3c29"></a>Religions, Spirituality, Misc<br />
+<div class="outline-text-7" id="text-org79b3c29">
+<ul class="org-ul">
+<li>V. Today, “A Tale of Prayagraj pilgrimage to Vrindavan,” Vrindavan Today. Accessed: Jan. 15, 2025. [Online]. Available: <a href="https://vrindavantoday.in/a-tale-of-prayagraj-pilgrimage-to-vrindavan/">https://vrindavantoday.in/a-tale-of-prayagraj-pilgrimage-to-vrindavan/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Why Naga Sadhus Always Look Angry and Other Questions at the Kumbh,” The Wire. Accessed: Jan. 20, 2025. [Online]. Available: <a href="https://thewire.in/religion/kumbh-mela-naga-sadhus-prayagraj">https://thewire.in/religion/kumbh-mela-naga-sadhus-prayagraj</a></li>
+<li>PTI, “Adani-ISKCON to start ‘Mahaprasad Seva’ in Maha Kumbh,” The Hindu, Jan. 10, 2025. Accessed: Jan. 10, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/national/uttar-pradesh/adani-iskcon-to-start-mahaprasad-seva-in-maha-kumbh/article69083384.ece">https://www.thehindu.com/news/national/uttar-pradesh/adani-iskcon-to-start-mahaprasad-seva-in-maha-kumbh/article69083384.ece</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org542227f"></a>Politics: Right<br />
+<div class="outline-text-7" id="text-org542227f">
+<ul class="org-ul">
+<li>W. DESK, “Digital Mahakumbh 2025: Indian Railways introduces QR-enabled jackets for ticket booking,” Organiser. Accessed: Jan. 05, 2025. [Online]. Available: <a href="https://organiser.org/2025/01/05/272126/bharat/digital-mahakumbh-2025-indian-railways-introduces-qr-enabled-jackets-for-ticket-booking/">https://organiser.org/2025/01/05/272126/bharat/digital-mahakumbh-2025-indian-railways-introduces-qr-enabled-jackets-for-ticket-booking/</a></li>
+<li>W. DESK, “Mahakumbh 2025: Gitanand Giri shares his 12-year journey of spiritual dedication and national welfare,” Organiser. Accessed: Dec. 17, 2024. [Online]. Available: <a href="https://organiser.org/2024/12/17/269565/bharat/mahakumbh-2025-gitanand-giri-shares-his-12-year-journey-of-spiritual-dedication-and-national-welfare/">https://organiser.org/2024/12/17/269565/bharat/mahakumbh-2025-gitanand-giri-shares-his-12-year-journey-of-spiritual-dedication-and-national-welfare/</a></li>
+<li>W. DESK, “Mahakumbh 2025: PM Modi offers prayers at Akshayavat, seeks blessings for public welfare,” Organiser. Accessed: Dec. 14, 2024. [Online]. Available: <a href="https://organiser.org/2024/12/13/269199/bharat/mahakumbh-2025-pm-modi-offers-prayers-at-akshayavat-seeks-blessings-for-public-welfare/">https://organiser.org/2024/12/13/269199/bharat/mahakumbh-2025-pm-modi-offers-prayers-at-akshayavat-seeks-blessings-for-public-welfare/</a></li>
+<li>W. DESK, “Mahakumbh 2025: Helicopters to shower flowers over Sangam, elevating the spiritual ambiance,” Organiser. Accessed: Dec. 07, 2024. [Online]. Available: <a href="https://organiser.org/2024/12/07/268325/bharat/mahakumbh-2025-helicopters-to-shower-flowers-over-sangam-elevating-the-spiritual-ambiance/">https://organiser.org/2024/12/07/268325/bharat/mahakumbh-2025-helicopters-to-shower-flowers-over-sangam-elevating-the-spiritual-ambiance/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org4b8d964"></a>NewsClick<br />
+<div class="outline-text-7" id="text-org4b8d964">
+<ul class="org-ul">
+<li>“Should Faith be Used to Brush Away Filth?,” NewsClick. Accessed: Feb. 23, 2025. [Online]. Available: <a href="https://www.newsclick.in/should-faith-be-used-brush-away-filth">https://www.newsclick.in/should-faith-be-used-brush-away-filth</a></li>
+
+<li>“Kumbh Tragedy: Sikhs, Muslims Offer Pilgrims Shelter, Food,” NewsClick. Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://www.newsclick.in/kumbh-tragedy-sikhs-muslims-offer-pilgrims-shelter-food">https://www.newsclick.in/kumbh-tragedy-sikhs-muslims-offer-pilgrims-shelter-food</a></li>
+<li>“When Faith Turns Fatal: The Mahakumbh Stampede,” NewsClick. Accessed: Feb. 01, 2025. [Online]. Available: <a href="https://www.newsclick.in/when-faith-turns-fatal-mahakumbh-stampede">https://www.newsclick.in/when-faith-turns-fatal-mahakumbh-stampede</a></li>
+<li>“Road to Kumbh: Paved With Hindu Rashtra Intentions?,” NewsClick. Accessed: Feb. 01, 2025. [Online]. Available: <a href="https://www.newsclick.in/road-kumbh-paved-hindu-rashtra-intentions">https://www.newsclick.in/road-kumbh-paved-hindu-rashtra-intentions</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Casualties Feared After Stampede Breaks Out at Kumbh Mela on Mauni Amavasya,” The Wire. Accessed: Jan. 29, 2025. [Online]. Available: <a href="https://thewire.in/religion/casualties-feared-after-stampede-breaks-out-at-kumbh-mela-on-mauni-amavasya">https://thewire.in/religion/casualties-feared-after-stampede-breaks-out-at-kumbh-mela-on-mauni-amavasya</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>PTI, “Maha Kumbh: Actor Mamta Kulkarni becomes Mai Mamta Nand Giri,” The Hindu, Jan. 24, 2025. Accessed: Jan. 25, 2025. [Online]. Available: <a href="https://www.thehindu.com/entertainment/maha-kumbh-actor-mamta-kulkarni-becomes-mai-mamta-nand-giri/article69137668.ece">https://www.thehindu.com/entertainment/maha-kumbh-actor-mamta-kulkarni-becomes-mai-mamta-nand-giri/article69137668.ece</a></li>
+<li>I. Mishra, “Kumbh Mela: Gods, gurus, and glass turtles,” The Hindu, Jan. 24, 2025. Accessed: Jan. 25, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/national/kumbh-mela-gods-gurus-and-glass-turtles/article69137195.ece">https://www.thehindu.com/news/national/kumbh-mela-gods-gurus-and-glass-turtles/article69137195.ece</a></li>
+<li>A. Mishra, “A Dip in Politics at the Mahakumbh | Power Play by Anand Mishra,” Frontline. Accessed: Jan. 25, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/newsletter/poll-vault-anand-mishra/mahakumbh-2025-politics-uttar-pradesh-prayagraj-yogi-adityanath-bjp-hindu-muslim-waqf-land-controversy/article69135499.ece">https://frontline.thehindu.com/newsletter/poll-vault-anand-mishra/mahakumbh-2025-politics-uttar-pradesh-prayagraj-yogi-adityanath-bjp-hindu-muslim-waqf-land-controversy/article69135499.ece</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8f0bdb9"></a>Economics<br />
+<div class="outline-text-7" id="text-org8f0bdb9">
+<ul class="org-ul">
+<li>G. Singh, “India hopes Mahakumbh will bring in investors, but economists are sceptical,” Al Jazeera. Accessed: Jan. 30, 2025. [Online]. Available: <a href="https://www.aljazeera.com/economy/2025/1/29/india-hopes-mahakumbh-will-bring-in-investors-but-economists-are-sceptical">https://www.aljazeera.com/economy/2025/1/29/india-hopes-mahakumbh-will-bring-in-investors-but-economists-are-sceptical</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="orgc13f6bc"></a>Arts<br />
+<ol class="org-ol">
+<li><a id="org2e6cbbc"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-1-4-1">
+<ul class="org-ul">
+<li>“Prayagraj,” Google Arts &amp; Culture. Accessed: Jan. 31, 2025. [Online]. Available: <a href="https://artsandculture.google.com/entity/prayagraj/m020skc">https://artsandculture.google.com/entity/prayagraj/m020skc</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgb936c47"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org7ad4e08"></a>Texts<br />
+<ul class="org-ul">
+<li><a id="orga48bba1"></a>D. L. Eck<br />
+<div class="outline-text-7" id="text-orga48bba1">
+<ul class="org-ul">
+<li>D. L. Eck, Kumbh Mela: Mapping the Ephemeral Megacity. Hatje Cantz, 2015.</li>
+</ul>
+</div>
+</li>
+<li><a id="orged76e29"></a>Hindi<br />
+<div class="outline-text-7" id="text-orged76e29">
+<ul class="org-ul">
+<li>मिश्र A. M., Vihangam/विहंगम: Gangapath Ke Bhagirath Aakhyan / गंगापथ के भगीरथ आख्यान. Penguin Swadesh, 2025.</li>
+</ul>
+</div>
+</li>
+<li><a id="org13843ec"></a>Misc<br />
+<div class="outline-text-7" id="text-org13843ec">
+<ul class="org-ul">
+<li>U. Agarwal, A For Prayagraj: A Short Biography Of Allahabad. New Delhi: Aleph Book Company, 2021.</li>
+<li>R. Mehrotra, Kumbh Mela: Mapping the Ephemeral Megacity. New Delhi: Niyogi Books, 2017.</li>
+
+<li>“The Divine Kumbh - Niyogi Books.” Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://niyogibooksindia.com/books/the-divine-kumbh/">https://niyogibooksindia.com/books/the-divine-kumbh/</a></li>
+
+<li>T. Hindu, Soul Of The Kumbh - Prayagraj 2019. Thg Publishing Private Limited, 2019.</li>
+
+<li>R. K. Dilip and D. Indira, Kumbha: India’s Ageless Festival. Bharatiya Vidya Bhavan, 2009.</li>
+
+<li>J. Nandan, Mahakumbh:A Spiritual Journey. New Delhi: Rupa &amp; Co., 2002.</li>
+
+<li>N. Misra, Kumbha (Revised and Updated): The Traditionally Modern Mela. Bloomsbury India, 2025.</li>
+
+<li>M. Tully, R. Lannoy, and A. Mahendra, The Kumbh Mela. Varanasi: Indica Books, 2002.</li>
+</ul>
+</div>
+</li>
+<li><a id="org4479148"></a>Politics: Right<br />
+<div class="outline-text-7" id="text-org4479148">
+<ul class="org-ul">
+<li>S. Gupta, Masterclass with Yogi Adityanath on Kumbh Mela. BLUONE INK PVT. LTD., 2025.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="org2458fa8"></a>Misc<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org53d1316" class="outline-3">
+<h3 id="org53d1316"><span class="section-number-3">3.2.</span> Religions, Spirituality, Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“Slowly Along the Ganges, on an Exploration of Personal Faith,” The Wire. Accessed: Oct. 29, 2024. [Online]. Available: <a href="https://thewire.in/books/slowly-along-the-ganges-on-an-exploration-of-personal-faith">https://thewire.in/books/slowly-along-the-ganges-on-an-exploration-of-personal-faith</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7aa015f" class="outline-3">
+<h3 id="org7aa015f"><span class="section-number-3">3.3.</span> SocioPolitical Studies, Law, Misc</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>M. B. &amp; C. P. Rajendran, “The Ganga’s Last Stand: How Bureaucracy and Hydropower are Choking India’s Sacred River,” Frontline. Accessed: Jan. 14, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/environment/ganga-basin-dams-hydro-electric-power-biodiversity-himalayas-joshimath-climate-change/article69067642.ece">https://frontline.thehindu.com/environment/ganga-basin-dams-hydro-electric-power-biodiversity-himalayas-joshimath-climate-change/article69067642.ece</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5b20217" class="outline-3">
+<h3 id="org5b20217"><span class="section-number-3">3.4.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li>M. S. Conversation The, “India’s lifeline the Ganga is drying up fast,” Scroll.in. Accessed: Oct. 01, 2025. [Online]. Available: <a href="https://scroll.in/article/1086999/indias-lifeline-the-ganga-is-drying-up-fast">https://scroll.in/article/1086999/indias-lifeline-the-ganga-is-drying-up-fast</a></li>
+
+<li>“What Bangladesh wants from the Ganga Water Treaty,” The India Forum. Accessed: Apr. 14, 2025. [Online]. Available: <a href="https://www.theindiaforum.in/forum/what-bangladesh-wants-ganga-water-treaty">https://www.theindiaforum.in/forum/what-bangladesh-wants-ganga-water-treaty</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. B. &amp; C. P. Rajendran, “The Ganga’s Last Stand: How Bureaucracy and Hydropower are Choking India’s Sacred River,” Frontline. Accessed: Jan. 14, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/environment/ganga-basin-dams-hydro-electric-power-biodiversity-himalayas-joshimath-climate-change/article69067642.ece">https://frontline.thehindu.com/environment/ganga-basin-dams-hydro-electric-power-biodiversity-himalayas-joshimath-climate-change/article69067642.ece</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge361d63" class="outline-2">
+<h2 id="orge361d63"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org66e60c8" class="outline-3">
+<h3 id="org66e60c8"><span class="section-number-3">4.1.</span> Documentaries</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>National Geographic India, The Mighty River | Ganga: River From The Skies | National Geographic, (Apr. 29, 2022). Accessed: Jan. 19, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=Q0gYQrebGwY">https://www.youtube.com/watch?v=Q0gYQrebGwY</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb3f83ff" class="outline-2">
+<h2 id="orgb3f83ff"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org16834a4" class="outline-3">
+<h3 id="org16834a4"><span class="section-number-3">5.1.</span> Music</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org4cc9a93" class="outline-4">
+<h4 id="org4cc9a93"><span class="section-number-4">5.1.1.</span> Hindustani Classical Music</h4>
+<div class="outline-text-4" id="text-5-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org5b9acf6"></a>Jasraj<br />
+<div class="outline-text-5" id="text-5-1-1-1">
+<ul class="org-ul">
+<li>Music Today, Maa Ganga | Audio Jukebox | Vocal | Devotional | Pandit Jasraj | Music Today, (Aug. 28, 2015). Accessed: Jan. 19, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=EnJqJHKlm5Y">https://www.youtube.com/watch?v=EnJqJHKlm5Y</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6cfee04"></a>D. V. Paluskar<br />
+<div class="outline-text-5" id="text-5-1-1-2">
+<ul class="org-ul">
+<li><i>Chalo Man Ganga Jumuna Teer</i>, Pt. D. V. Paluskar, SaReGaMa</li>
+</ul>
+</div>
+</li>
+<li><a id="org9e74d52"></a>Easy Listening<br />
+<div class="outline-text-5" id="text-5-1-1-3">
+<ul class="org-ul">
+<li>Music Today, Ode To Ganga I Audio Jukebox I Instrumental I World Music | Hariprasad Chaurasia | Music Today, (Aug. 31, 2015). Accessed: Jan. 19, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=MwqcHuPbezg">https://www.youtube.com/watch?v=MwqcHuPbezg</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Music Today, Water Poems | Hariprasad Chaurasia | ( Album: Sound Scapes - Music of the Rivers ) | Music Today, (Feb. 26, 2016). Accessed: Jan. 19, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=Y-9ZcxOZON4">https://www.youtube.com/watch?v=Y-9ZcxOZON4</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org23737cc" class="outline-4">
+<h4 id="org23737cc"><span class="section-number-4">5.1.2.</span> Pop</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<ul class="org-ul">
+<li>Saregama Bhakti, Ganga Mata Bhajan | Lata Mangeshkar | Ganga Maiya Men Jab Tak | Ganga Maiya Sunlo Ye Fariyad, (Feb. 09, 2024). Accessed: Jan. 19, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=yd0VjsSONMY">https://www.youtube.com/watch?v=yd0VjsSONMY</a></li>
+
+<li>“Play The Holy Ganga by Anuradha Paudwal &amp; Pandit Sanjeev Abhyankar on Prime Music.” Accessed: Jan. 19, 2025. [Online]. Available: <a href="https://music.amazon.com/albums/B074XNT9CH">https://music.amazon.com/albums/B074XNT9CH</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9162a42" class="outline-4">
+<h4 id="org9162a42"><span class="section-number-4">5.1.3.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orgbea1bfc" class="outline-3">
+<h3 id="orgbea1bfc"><span class="section-number-3">5.2.</span> Films</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>“Ram Teri Ganga Maili,” Wikipedia. Jan. 02, 2025. Accessed: Jan. 19, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ram_Teri_Ganga_Maili&amp;oldid=1266836921">https://en.wikipedia.org/w/index.php?title=Ram_Teri_Ganga_Maili&amp;oldid=1266836921</a></li>
+<li>“Jis Desh Mein Ganga Behti Hai,” Wikipedia. Aug. 22, 2024. Accessed: Jan. 19, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Jis_Desh_Mein_Ganga_Behti_Hai&amp;oldid=1241599367">https://en.wikipedia.org/w/index.php?title=Jis_Desh_Mein_Ganga_Behti_Hai&amp;oldid=1241599367</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4786338" class="outline-3">
+<h3 id="org4786338"><span class="section-number-3">5.3.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org5c7cc24" class="outline-2">
+<h2 id="org5c7cc24"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgaf2860f" class="outline-3">
+<h3 id="orgaf2860f"><span class="section-number-3">6.1.</span> Vandana Shiva</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>V. Shiva, <b>Water Wars: Privatization, Pollution and Profit.</b> Pluto Press, 2002.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3e6f284" class="outline-3">
+<h3 id="org3e6f284"><span class="section-number-3">6.2.</span> Texts</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>R. Sanghi, Ed., Our National River Ganga: Lifeline of Millions, Softcover reprint of the original 1st ed. 2014 edition. Springer, 2016.</li>
+
+<li>B. Banerjee, Superhuman River: Stories of the Ganga. New Delhi: Aleph Book Company, 2020.</li>
+
+<li>V. Mallet, River of Life, River of Death: The Ganges and India’s Future. OUP UK, 2017.
+<ul class="org-ul">
+<li>V. Mallet, “How the Ganga Is Contributing to Increasing Antibiotic Resistance Worldwide,” The Caravan. <a href="https://caravanmagazine.in/vantage/river-ganga-contributing-increasing-antibiotic-resistance-worldwide">https://caravanmagazine.in/vantage/river-ganga-contributing-increasing-antibiotic-resistance-worldwide</a> (accessed Apr. 20, 2022).</li>
+</ul></li>
+
+<li>S. Sen, Ganga: The Many Pasts of a River. Gurgaon, Haryana, India: Penguin Viking, 2019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb4a5d4b" class="outline-3">
+<h3 id="orgb4a5d4b"><span class="section-number-3">6.3.</span> Articles, Essays</h3>
+<div class="outline-text-3" id="text-6-3">
+<ul class="org-ul">
+<li>J. Basu, “Gangasagar: Several ghats swallowed by sea due to climate change, state decries lack of central support,” Down To Earth. Accessed: Jan. 17, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/climate-change/gangasagar-several-ghats-swallowed-by-sea-due-to-climate-change-state-decries-lack-of-central-support">https://www.downtoearth.org.in/climate-change/gangasagar-several-ghats-swallowed-by-sea-due-to-climate-change-state-decries-lack-of-central-support</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb73d3db" class="outline-3">
+<h3 id="orgb73d3db"><span class="section-number-3">6.4.</span> Google Gemini</h3>
+<div class="outline-text-3" id="text-6-4">
+<ul class="org-ul">
+<li>“Ganga River Cleanup Research,” Google Docs. Accessed: Feb. 23, 2025. [Online]. Available: <a href="https://docs.google.com/document/d/1pVj9fUPAZKVPoErXMQE5oF0z54PZD6fBs_hSSaFmvdw/edit?usp=embed_facebook">https://docs.google.com/document/d/1pVj9fUPAZKVPoErXMQE5oF0z54PZD6fBs_hSSaFmvdw/edit?usp=embed_facebook</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1911e57" class="outline-2">
+<h2 id="org1911e57"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>“Ganges Delta Under a Winter Shroud of Fog - NASA Science.” Accessed: Jan. 10, 2026. [Online]. Available: <a href="https://science.nasa.gov/earth/earth-observatory/ganges-delta-under-a-winter-shroud-of-fog/">https://science.nasa.gov/earth/earth-observatory/ganges-delta-under-a-winter-shroud-of-fog/</a></li>
+
+<li>“Bengal: How Adi Ganga River Was Turned into a Drain &amp; Why a New Barrage Could End Job,” NewsClick. Accessed: Jan. 10, 2026. [Online]. Available: <a href="https://www.newsclick.in/bengal-how-adi-ganga-river-was-turned-drain-why-new-barrage-could-end-job">https://www.newsclick.in/bengal-how-adi-ganga-river-was-turned-drain-why-new-barrage-could-end-job</a></li>
+
+<li>M. Paul, “Ganga Basin ‘highly water stressed’, India must act as nearly half its GDP dependent on river: Report,” Down To Earth. Accessed: Oct. 30, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/rivers/ganga-basin-highly-water-stressed-india-must-act-report">https://www.downtoearth.org.in/rivers/ganga-basin-highly-water-stressed-india-must-act-report</a></li>
+
+<li>A. Tandon, “Human activity is causing the Ganga to dry at levels never seen before,” Mongabay-India. Accessed: Oct. 22, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/10/human-activity-is-causing-the-ganga-to-dry-at-levels-never-seen-before/">https://india.mongabay.com/2025/10/human-activity-is-causing-the-ganga-to-dry-at-levels-never-seen-before/</a></li>
+
+<li>“The Ganga is Drying Faster Than Ever,” The India Forum. Accessed: Oct. 09, 2025. [Online]. Available: <a href="https://www.theindiaforum.in/environment/ganga-drying-faster-ever">https://www.theindiaforum.in/environment/ganga-drying-faster-ever</a></li>
+
+<li>S. Priyadarshini, “Episode 70: Ganga’s vanishing flow threatens food and water security for millions,” Nature India, Oct. 2025, doi: 10.1038/d44151-025-00182-3.</li>
+
+<li>M. Sahana, “The Ganges River is drying faster than ever – here’s what it means for the region and the world,” The Conversation. Accessed: Sep. 25, 2025. [Online]. Available: <a href="http://theconversation.com/the-ganges-river-is-drying-faster-than-ever-heres-what-it-means-for-the-region-and-the-world-265891">http://theconversation.com/the-ganges-river-is-drying-faster-than-ever-heres-what-it-means-for-the-region-and-the-world-265891</a></li>
+
+<li>V. Vineet, “Varanasi Floods: Smart City or Engineered Catastrophe?,” Frontline. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/the-nation/varanasi-floods-ganga-smart-city-crisis/article69897822.ece">https://frontline.thehindu.com/the-nation/varanasi-floods-ganga-smart-city-crisis/article69897822.ece</a></li>
+</ul>
+
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:56</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

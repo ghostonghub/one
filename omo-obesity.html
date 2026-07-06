@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Obesity</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Obesity</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgc6927c8">1. General</a></li>
+<li><a href="#orga3179c9">2. STEMM</a>
+<ul>
+<li><a href="#orgf5fb006">2.1. Systems Sciences</a>
+<ul>
+<li><a href="#org94effd5">2.1.1. Complexity Science</a></li>
+<li><a href="#org91ac921">2.1.2. Systems Biology</a></li>
+</ul>
+</li>
+<li><a href="#org1dfc160">2.2. Chemistry</a></li>
+<li><a href="#orgae21af0">2.3. Medicine</a>
+<ul>
+<li><a href="#org014daae">2.3.1. CAM</a></li>
+<li><a href="#orgb6e7dae">2.3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org9c64491">2.4. European Society of Preventive Medicine</a></li>
+<li><a href="#orgc805a92">2.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org34a4fad">3. Worldly Matters</a>
+<ul>
+<li><a href="#org0b59101">3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgfd972a9">4. Arts</a></li>
+<li><a href="#org8aca4c2">5. Special Topics</a>
+<ul>
+<li><a href="#orgcb182ad">5.1. Possibly MisInfo/DisInfo</a>
+<ul>
+<li><a href="#orgc0f2e10">5.1.1. CHD</a></li>
+</ul>
+</li>
+<li><a href="#orgbc1f1bd">5.2. Diet</a>
+<ul>
+<li><a href="#org170b4a4">5.2.1. Unconventional Resources</a></li>
+<li><a href="#orge80dabc">5.2.2. Humour</a></li>
+<li><a href="#org9ea93d1">5.2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org7164e67">5.3. Unconventional Resources</a></li>
+</ul>
+</li>
+<li><a href="#org8cc17f0">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgc6927c8" class="outline-2">
+<h2 id="orgc6927c8"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orga3179c9" class="outline-2">
+<h2 id="orga3179c9"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgf5fb006" class="outline-3">
+<h3 id="orgf5fb006"><span class="section-number-3">2.1.</span> Systems Sciences</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org94effd5" class="outline-4">
+<h4 id="org94effd5"><span class="section-number-4">2.1.1.</span> Complexity Science</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>Y. Wang, H. Xue, L. Esposito, M. J. Joyner, Y. Bar-Yam, and T. T.-K. Huang, <b>Applications of Complex Systems Science in Obesity and Noncommunicable Chronic Disease Research</b>, Advances in Nutrition, vol. 5, no. 5, pp. 574&#x2013;577, Sep. 2014, doi: 10.3945/an.114.006650.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org91ac921" class="outline-4">
+<h4 id="org91ac921"><span class="section-number-4">2.1.2.</span> Systems Biology</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>A. Bar, O. Karin, A. Mayo, D. Ben-Zvi, and U. Alon, “Rules for body fat interventions based on an operating point mechanism,” iScience, vol. 26, no. 2, p. 106047, Feb. 2023, doi: 10.1016/j.isci.2023.106047.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1dfc160" class="outline-3">
+<h3 id="org1dfc160"><span class="section-number-3">2.2.</span> Chemistry</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>C. S. Allardyce, Fat Chemistry: The Science behind Obesity. La Vergne: Royal Society of Chemistry, 2012.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgae21af0" class="outline-3">
+<h3 id="orgae21af0"><span class="section-number-3">2.3.</span> Medicine</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org014daae" class="outline-4">
+<h4 id="org014daae"><span class="section-number-4">2.3.1.</span> CAM</h4>
+<div class="outline-text-4" id="text-2-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="org83744fa"></a>Ayurveda<br />
+<div class="outline-text-5" id="text-2-3-1-1">
+<ul class="org-ul">
+<li>“Buy Himalaya Wellness Pure Herbs Vrikshamla Weight Wellness | Manages weight |-Pack of 60 Tablets Online at Low Prices in India - Amazon.in.” Accessed: Dec. 07, 2024. [Online]. Available: <a href="https://www.amazon.in/Himalaya-Wellness-Herbs-Vrikshamla-Weight/dp/B006WXG0M6/262-1020188-3441011?psc=1">https://www.amazon.in/Himalaya-Wellness-Herbs-Vrikshamla-Weight/dp/B006WXG0M6/262-1020188-3441011?psc=1</a></li>
+<li>“Buy Himalaya Wellness AyurSlim Capsules - Pack of 60 Pieces (Weight Management) Online at Low Prices in India - Amazon.in.” Accessed: Dec. 07, 2024. [Online]. Available: <a href="https://www.amazon.in/Himalaya-Wellness-AyurSlim-Capsules-Management/dp/B003LEB0CE">https://www.amazon.in/Himalaya-Wellness-AyurSlim-Capsules-Management/dp/B003LEB0CE</a></li>
+
+<li>“ORGANIC INDIA Garcinia Cambogia 60 Capsule | Improve Fat Metabolism | Weight-Loss Supplement | Immunity Booster - 60 Caps : Amazon.in: Health &amp; Personal Care.” Accessed: Dec. 07, 2024. [Online]. Available: <a href="https://www.amazon.in/ORGANIC-INDIA-Metabolism-Weight-Loss-Supplement/dp/B09T6WT88B?nsdOptOutParam=true">https://www.amazon.in/ORGANIC-INDIA-Metabolism-Weight-Loss-Supplement/dp/B09T6WT88B?nsdOptOutParam=true</a></li>
+<li>“Organic India Weight Balance Improves Metabolism And Elimination - 180 Capsules : Amazon.in: Health &amp; Personal Care.” Accessed: Dec. 07, 2024. [Online]. Available: <a href="https://www.amazon.in/Organic-Balance-Improves-Metabolism-Elimination/dp/B081RDYJ98?nsdOptOutParam=true">https://www.amazon.in/Organic-Balance-Improves-Metabolism-Elimination/dp/B081RDYJ98?nsdOptOutParam=true</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org30d26ec"></a>Homeopathy<br />
+<div class="outline-text-5" id="text-2-3-1-2">
+<ul class="org-ul">
+<li>“Buy Dr. Reckeweg R59 Obesity and Slimming Drop 1 Pack ($7.45) Online at Low Prices in India - Amazon.in.” Accessed: Dec. 07, 2024. [Online]. Available: <a href="https://www.amazon.in/Reckeweg-Obesity-Slimming-Drop-Pack/dp/B0DKJVFGWW?nsdOptOutParam=true">https://www.amazon.in/Reckeweg-Obesity-Slimming-Drop-Pack/dp/B0DKJVFGWW?nsdOptOutParam=true</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgb6e7dae" class="outline-4">
+<h4 id="orgb6e7dae"><span class="section-number-4">2.3.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<ul class="org-ul">
+<li>P. B. March 2025, “Weight loss drug supply races,” Chemistry World. Accessed: Mar. 19, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/opinion/weight-loss-drug-supply-races/4021153.article">https://www.chemistryworld.com/opinion/weight-loss-drug-supply-races/4021153.article</a></li>
+
+<li>E. Dolgin, “Weight-loss-drug pioneer: this biochemist finally gained recognition for her work,” Nature, Dec. 2023, doi: 10.1038/d41586-023-03927-1.</li>
+<li>“Science’s 2023 Breakthrough of the Year: Weight loss drugs with a real shot at fighting obesity.” Accessed: Dec. 15, 2023. [Online]. Available: <a href="https://www.science.org/content/article/breakthrough-of-the-year-2023">https://www.science.org/content/article/breakthrough-of-the-year-2023</a></li>
+<li>“Her work paved the way for blockbuster obesity drugs. Now, she’s fighting for recognition.” Accessed: Nov. 15, 2023. [Online]. Available: <a href="https://www.science.org/content/article/her-work-paved-way-blockbuster-obesity-drugs-now-she-s-fighting-recognition">https://www.science.org/content/article/her-work-paved-way-blockbuster-obesity-drugs-now-she-s-fighting-recognition</a></li>
+
+<li>Editor, “Marion Nestle on the Rise of Obesity Drugs,” Corporate Crime Reporter. Accessed: Sep. 14, 2023. [Online]. Available: <a href="https://www.corporatecrimereporter.com/news/200/marion-nestle-on-the-rise-of-obesity-drugs/">https://www.corporatecrimereporter.com/news/200/marion-nestle-on-the-rise-of-obesity-drugs/</a></li>
+
+<li>“The Benefit of Low-Dose Niacinamide on Obesity,” Mercola.com. <a href="http://articles.mercola.com/sites/articles/archive/2022/07/07/low-dose-niacinamide-antiobesity-effects.aspx">http://articles.mercola.com/sites/articles/archive/2022/07/07/low-dose-niacinamide-antiobesity-effects.aspx</a> (accessed Jul. 08, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9c64491" class="outline-3">
+<h3 id="org9c64491"><span class="section-number-3">2.4.</span> European Society of Preventive Medicine</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>admin, “Obesity,” European Society of Preventive Medicine. Accessed: Jan. 30, 2024. [Online]. Available: <a href="https://espm.co/diseases-conditions/obesity/">https://espm.co/diseases-conditions/obesity/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc805a92" class="outline-3">
+<h3 id="orgc805a92"><span class="section-number-3">2.5.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org34a4fad" class="outline-2">
+<h2 id="org34a4fad"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org0b59101" class="outline-3">
+<h3 id="org0b59101"><span class="section-number-3">3.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>L. Gershon, “Weight in the Sociology Classroom,” JSTOR Daily. Accessed: Aug. 23, 2025. [Online]. Available: <a href="https://daily.jstor.org/weight-in-the-sociology-classroom/">https://daily.jstor.org/weight-in-the-sociology-classroom/</a></li>
+
+<li>S. Priyadarshini, “The couple that lives together gains together,” Nature India, Aug. 2025, doi: 10.1038/d44151-025-00149-4.</li>
+
+<li>L. Clawson, “Weight Discrimination Is a Health Problem,” JSTOR Daily. Accessed: Aug. 06, 2025. [Online]. Available: <a href="https://daily.jstor.org/weight-discrimination-is-a-health-problem/">https://daily.jstor.org/weight-discrimination-is-a-health-problem/</a></li>
+
+<li>A. K. August 2024, “Weight-loss drugmakers bet billions on boosting supplies,” Chemistry World. Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/news/weight-loss-drugmakers-bet-billions-on-boosting-supplies/4019895.article">https://www.chemistryworld.com/news/weight-loss-drugmakers-bet-billions-on-boosting-supplies/4019895.article</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfd972a9" class="outline-2">
+<h2 id="orgfd972a9"><span class="section-number-2">4.</span> Arts</h2>
+</div>
+<div id="outline-container-org8aca4c2" class="outline-2">
+<h2 id="org8aca4c2"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgcb182ad" class="outline-3">
+<h3 id="orgcb182ad"><span class="section-number-3">5.1.</span> Possibly MisInfo/DisInfo</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orgc0f2e10" class="outline-4">
+<h4 id="orgc0f2e10"><span class="section-number-4">5.1.1.</span> CHD</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ul class="org-ul">
+<li>“Obesity Archives,” Children’s Health Defense. Accessed: Mar. 30, 2024. [Online]. Available: <a href="https://childrenshealthdefense.org/research_category/obesity/">https://childrenshealthdefense.org/research_category/obesity/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbc1f1bd" class="outline-3">
+<h3 id="orgbc1f1bd"><span class="section-number-3">5.2.</span> Diet</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-org170b4a4" class="outline-4">
+<h4 id="org170b4a4"><span class="section-number-4">5.2.1.</span> Unconventional Resources</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<ul class="org-ul">
+<li>J. Fung, <b>The Obesity Code Cookbook: recipes to help you manage your insulin, lose weight, and improve your health.</b> Scribe Publications, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge80dabc" class="outline-4">
+<h4 id="orge80dabc"><span class="section-number-4">5.2.2.</span> Humour</h4>
+<div class="outline-text-4" id="text-5-2-2">
+<ul class="org-ul">
+<li>“Diet Book Author Advocates New ‘No Food Diet’ - YouTube.” Accessed: May 30, 2024. [Online]. Available: <a href="https://www.youtube.com/watch?v=CxIr_otUmo4&amp;list=WL&amp;index=19">https://www.youtube.com/watch?v=CxIr_otUmo4&amp;list=WL&amp;index=19</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9ea93d1" class="outline-4">
+<h4 id="org9ea93d1"><span class="section-number-4">5.2.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-2-3">
+<ul class="org-ul">
+<li>U. of N. S. Wales, “Scientists uncover key protein in cellular fat storage.” Accessed: Aug. 30, 2025. [Online]. Available: <a href="https://phys.org/news/2025-08-scientists-uncover-key-protein-cellular.html">https://phys.org/news/2025-08-scientists-uncover-key-protein-cellular.html</a></li>
+
+<li>A. K. December 2022, “Are everyday chemicals contributing to global obesity?,” Chemistry World. Accessed: Dec. 26, 2022. [Online]. Available: <a href="https://www.chemistryworld.com/features/are-everyday-chemicals-contributing-to-global-obesity/4016664.article">https://www.chemistryworld.com/features/are-everyday-chemicals-contributing-to-global-obesity/4016664.article</a></li>
+
+<li>S. Cienfuegos et al., “Effects of 4- and 6-h Time-Restricted Feeding on Weight and Cardiometabolic Health: A Randomized Controlled Trial in Adults with Obesity,” Cell Metabolism, vol. 32, no. 3, pp. 366-378.e3, Sep. 2020, doi: 10.1016/j.cmet.2020.06.018.</li>
+
+<li>S. Malkan, “Is the ‘Diet’ Coke Chemical Making You Fat?,” U.S. Right to Know. Accessed: Jun. 30, 2023. [Online]. Available: <a href="https://usrtk.org/sweeteners/aspartame-weight-gain/">https://usrtk.org/sweeteners/aspartame-weight-gain/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>J. Volek and A. Campbell, <i>Men’s Health TNT Diet: The Explosive New Plan to Blast Fat, Build Muscle, and Get Healthy in 12 Weeks.</i> Potter/Ten Speed/Harmony/Rodale, 2008.</li>
+
+<li>D. P. Dukan and P. Dukan, <i>The Dukan Diet.</i> Hachette UK, 2010.</li>
+
+<li>L. Vaccariello and D. M. Stokes, <i>Flat Belly Diet! for Men.</i> Potter/Ten Speed/Harmony/Rodale, 2010.</li>
+
+<li>P. Holford and K. Staples, <i>Burn Fat Fast: The alternate-day low-GL diet plan.</i> Hachette UK, 2013.</li>
+
+<li>P. Makhija, <i>Eat Delete : The Anti-Quick Fix Approach.</i> Harper Collins, 2012.</li>
+
+<li>R. Diwekar, <i>Don't Lose Your Mind, Lose Your Weight.</i> Random House India, 2011.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7164e67" class="outline-3">
+<h3 id="org7164e67"><span class="section-number-3">5.3.</span> Unconventional Resources</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>J. Fung, <b>The Obesity Code: Unlocking the Secrets of Weight Loss.</b> Greystone Books, 2016.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8cc17f0" class="outline-2">
+<h2 id="org8cc17f0"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>P. Broadwith, “Slimming down competition over weight-loss drugs,” Chemistry World. Accessed: Feb. 14, 2026. [Online]. Available: <a href="https://www.chemistryworld.com/opinion/slimming-down-competition-over-weight-loss-drugs/4022959.article">https://www.chemistryworld.com/opinion/slimming-down-competition-over-weight-loss-drugs/4022959.article</a></li>
+
+<li>M. Paul, “WHO releases first guideline on use of GLP-1 therapies for treating obesity,” Down To Earth. Accessed: Dec. 05, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/health/who-releases-first-guideline-on-use-of-glp-1-therapies-for-treating-obesity">https://www.downtoearth.org.in/health/who-releases-first-guideline-on-use-of-glp-1-therapies-for-treating-obesity</a></li>
+
+<li>M. Lenharo, “How obesity drugs quiet ‘food noise’ in the brain,” Nature, Nov. 2025, doi: 10.1038/d41586-025-03766-2.</li>
+
+<li>“A blueprint to halve obesity in the UK,” Blueprint. Accessed: Nov. 07, 2025. [Online]. Available: <a href="https://blueprint.nesta.org.uk/">https://blueprint.nesta.org.uk/</a></li>
+<li>“We are Nesta,” nesta. Accessed: Nov. 07, 2025. [Online]. Available: <a href="https://www.nesta.org.uk/">https://www.nesta.org.uk/</a></li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>D. Hubbell, “Does eating spicy food help you lose weight? Science has a clear answer.,” Popular Science. Accessed: Sep. 11, 2025. [Online]. Available: <a href="https://www.popsci.com/health/does-eating-spicy-food-help-lose-weight/">https://www.popsci.com/health/does-eating-spicy-food-help-lose-weight/</a></li>
+
+<li>P. Broadwith, “Will oral weight loss drugs challenge injectables?,” Chemistry World. Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/opinion/will-oral-weight-loss-drugs-challenge-injectables/4022013.article">https://www.chemistryworld.com/opinion/will-oral-weight-loss-drugs-challenge-injectables/4022013.article</a></li>
+
+<li>“The challenge of developing oral alternatives to peptide weight loss drugs,” Chemistry World. Accessed: Aug. 18, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/the-challenge-of-developing-oral-alternatives-to-peptide-weight-loss-drugs/4021995.article">https://www.chemistryworld.com/news/the-challenge-of-developing-oral-alternatives-to-peptide-weight-loss-drugs/4021995.article</a></li>
+
+<li>C. S. Allardyce, Fat Chemistry: The Science behind Obesity. La Vergne: Royal Society of Chemistry, 2012.</li>
+
+<li>N. Gilbert, “Ultra-processed food leads to obesity: The science explained,” U.S. Right to Know. Accessed: Aug. 17, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/ultra-processed-food-leads-to-obesity-explained/">https://usrtk.org/healthwire/ultra-processed-food-leads-to-obesity-explained/</a></li>
+
+<li>“The challenge of developing oral alternatives to peptide weight loss drugs,” Chemistry World. Accessed: Aug. 15, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/the-challenge-of-developing-oral-alternatives-to-peptide-weight-loss-drugs/4021995.article">https://www.chemistryworld.com/news/the-challenge-of-developing-oral-alternatives-to-peptide-weight-loss-drugs/4021995.article</a></li>
+
+<li>“Living with anorexia, I lost myself. Until a stranger saw me | Psyche Stories of Change.” Accessed: Aug. 13, 2025. [Online]. Available: <a href="https://psyche.co/stories-of-change/living-with-anorexia-i-lost-myself-until-a-stranger-saw-me">https://psyche.co/stories-of-change/living-with-anorexia-i-lost-myself-until-a-stranger-saw-me</a></li>
+
+<li>Paco, “‘Nature’s Ozempic’ Triggers Weight-Loss Pathway Without the Side Effects,” Organic Consumers. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://organicconsumers.org/natures-ozempic-triggers-weight-loss-pathway-without-the-side-effects/">https://organicconsumers.org/natures-ozempic-triggers-weight-loss-pathway-without-the-side-effects/</a></li>
+
+<li>K. Kavanagh, “Eating ultra-processed foods could make it harder to lose weight,” Nature, Aug. 2025, doi: 10.1038/d41586-025-02451-8.</li>
+
+<li>N. Gilbert, “Ultra-processed food leads to obesity: The science explained,” U.S. Right to Know. Accessed: Jul. 29, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/ultra-processed-food-leads-to-obesity-explained/">https://usrtk.org/healthwire/ultra-processed-food-leads-to-obesity-explained/</a></li>
+
+<li>F. Juul, E. Martinez-Steele, N. Parekh, and C. A. Monteiro, “The role of ultra-processed food in obesity,” Nat Rev Endocrinol, pp. 1–14, Jul. 2025, doi: 10.1038/s41574-025-01143-7.</li>
+
+<li>“South Park: The End of Obesity,” Wikipedia. Apr. 24, 2025. Accessed: May 03, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=South_Park:_The_End_of_Obesity&amp;oldid=1287196323">https://en.wikipedia.org/w/index.php?title=South_Park:_The_End_of_Obesity&amp;oldid=1287196323</a></li>
+<li>“South Park is genius,” mathbabe. Accessed: May 03, 2025. [Online]. Available: <a href="https://mathbabe.org/2025/05/02/south-park-is-genius/">https://mathbabe.org/2025/05/02/south-park-is-genius/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Unlocking molecular insights into obesity,” eLife. Accessed: Apr. 15, 2025. [Online]. Available: <a href="https://elifesciences.org/digests/85293/unlocking-molecular-insights-into-obesity">https://elifesciences.org/digests/85293/unlocking-molecular-insights-into-obesity</a></li>
+<li>“Obesity and grey matter,” eLife. Accessed: Apr. 15, 2025. [Online]. Available: <a href="https://elifesciences.org/digests/85175/obesity-and-grey-matter">https://elifesciences.org/digests/85175/obesity-and-grey-matter</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. Fung, The Obesity Code Cookbook: recipes to help you manage your insulin, lose weight, and improve your health. Scribe, 2020.</li>
+
+<li>P. Ferdinand, “Pollution may promote stress, leading to obesity, study says,” U.S. Right to Know. Accessed: Jan. 23, 2025. [Online]. Available: <a href="https://usrtk.org/chemicals/pollution-stress-obesity/">https://usrtk.org/chemicals/pollution-stress-obesity/</a></li>
+
+<li>A. Jayedi, S. Soltani, A. Emadi, M.-S. Zargar, and A. Najafi, “Aerobic Exercise and Weight Loss in Adults: A Systematic Review and Dose-Response Meta-Analysis,” JAMA Network Open, vol. 7, no. 12, p. e2452185, Dec. 2024, doi: 10.1001/jamanetworkopen.2024.52185.</li>
+
+<li>L. C. Hinte et al., “Adipose tissue retains an epigenetic memory of obesity after weight loss,” Nature, pp. 1–9, Nov. 2024, doi: 10.1038/s41586-024-08165-7.</li>
+
+<li>“Eli Lilly’s Weight Loss Drug Contributed to Nurse’s Death,” Children’s Health Defense. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://childrenshealthdefense.org/defender/weight-loss-drug-mounjaro-contributed-nurses-death/">https://childrenshealthdefense.org/defender/weight-loss-drug-mounjaro-contributed-nurses-death/</a></li>
+
+<li>K. A. Gudzune and R. F. Kushner, “Medications for Obesity: A Review,” JAMA, vol. 332, no. 7, pp. 571–584, Aug. 2024, doi: 10.1001/jama.2024.10816.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. B. August 2024, “The GLP-1 weight loss revolution,” Chemistry World. Accessed: Aug. 29, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/features/the-glp-1-weight-loss-revolution/4019901.article">https://www.chemistryworld.com/features/the-glp-1-weight-loss-revolution/4019901.article</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Krishnamurthy, “Popular weight loss and diabetes drugs Ozempic, Wegovy linked to increased risk of blinding eye condition,” Down To Earth. Accessed: Jul. 05, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/health/popular-weight-loss-and-diabetes-drugs-ozempic-wegovy-linked-to-increased-risk-of-blinding-eye-condition">https://www.downtoearth.org.in/health/popular-weight-loss-and-diabetes-drugs-ozempic-wegovy-linked-to-increased-risk-of-blinding-eye-condition</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“What is the secret weapon of weight-loss drugs like Ozempic: Brain cells controlling hunger &amp; satiation.” Accessed: Jun. 29, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/science-technology/what-is-the-secret-weapon-of-weight-loss-drugs-like-ozempic-brain-cells-controlling-hunger-satiation-96900">https://www.downtoearth.org.in/news/science-technology/what-is-the-secret-weapon-of-weight-loss-drugs-like-ozempic-brain-cells-controlling-hunger-satiation-96900</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Homepage,” World Obesity Federation. Accessed: Jun. 20, 2024. [Online]. Available: <a href="https://www.worldobesity.org">https://www.worldobesity.org</a></li>
+<li>C. M. Bulik and J. A. Hardaway, “Turning the tide on obesity?,” Science, vol. 381, no. 6657, pp. 463–463, Aug. 2023, doi: 10.1126/science.adj9953.</li>
+<li>A. Gregory and A. G. H. editor, “Alarming lack of access to green space fuelling UK child obesity crisis, doctors warn,” The Guardian, Jun. 18, 2024. Accessed: Jun. 20, 2024. [Online]. Available: <a href="https://www.theguardian.com/environment/article/2024/jun/18/alarming-lack-of-access-to-green-space-fuelling-uk-child-obesity-crisis-doctors-warn">https://www.theguardian.com/environment/article/2024/jun/18/alarming-lack-of-access-to-green-space-fuelling-uk-child-obesity-crisis-doctors-warn</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Benton, Tackling the Obesity Crisis: Beyond Failed Approaches to Lasting Solutions. Cham: Springer International Publishing, 2024. doi: 10.1007/978-3-031-48197-0.</li>
+
+<li>A. K. December 2022, “Are everyday chemicals contributing to global obesity?,” Chemistry World. Accessed: Dec. 26, 2022. [Online]. Available: <a href="https://www.chemistryworld.com/features/are-everyday-chemicals-contributing-to-global-obesity/4016664.article">https://www.chemistryworld.com/features/are-everyday-chemicals-contributing-to-global-obesity/4016664.article</a></li>
+
+<li>“The origins of the obesity epidemic may be further back than we thought.” Accessed: Sep. 14, 2023. [Online]. Available: <a href="https://www.science.org/content/article/origins-obesity-epidemic-may-be-further-back-we-thought">https://www.science.org/content/article/origins-obesity-epidemic-may-be-further-back-we-thought</a></li>
+
+<li>P. W. Smith, <i>Why You Can't Lose Weight: Why It's So Hard to Shed Pounds and What You Can Do about It.</i> Square One Publishers, 2011.</li>
+
+<li>D. S. Ludwig et al., “Competing paradigms of obesity pathogenesis: energy balance versus carbohydrate-insulin models,” Eur J Clin Nutr, pp. 1–13, Jul. 2022, doi: 10.1038/s41430-022-01179-2.</li>
+
+<li>J. E. Donnelly, N. P. Pronk, D. J. Jacobsen, S. J. Pronk, and J. M. Jakicic, “Effects of a very-low-calorie diet and physical-training regimens on body composition and resting metabolic rate in obese females,” Am J Clin Nutr, vol. 54, no. 1, pp. 56–61, Jul. 1991, doi: 10.1093/ajcn/54.1.56.</li>
+
+<li>“Consider drugs and surgery early for obesity in kids, new guidelines say: ‘Waiting doesn’t work.’” Accessed: Jan. 10, 2023. [Online]. Available: <a href="https://www.cbsnews.com/news/obesity-kids-teens-drugs-surgery-early-new-guidelines/">https://www.cbsnews.com/news/obesity-kids-teens-drugs-surgery-early-new-guidelines/</a></li>
+
+<li>E. Robinson and D. Stensel, “Does physical activity cause weight loss?,” Int J Obes, pp. 1–2, Dec. 2022, doi: 10.1038/s41366-022-01247-4.</li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:56</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

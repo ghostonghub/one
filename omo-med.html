@@ -1,0 +1,1526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:58 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Medicine</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Medicine</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org0a9072d">1. General</a></li>
+<li><a href="#org6921912">2. Philosophy</a>
+<ul>
+<li><a href="#org7e5dee6">2.1. Ethics</a>
+<ul>
+<li><a href="#orgf493a82">2.1.1. General</a></li>
+<li><a href="#org6c127b1">2.1.2. STEMM</a></li>
+<li><a href="#org901ad68">2.1.3. Worldly Matters</a></li>
+<li><a href="#org3b548e5">2.1.4. Arts</a></li>
+<li><a href="#org3145ce4">2.1.5. Special Topics</a></li>
+<li><a href="#orgb8c4e5c">2.1.6. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org6db7a80">2.2. <b>Logic</b></a></li>
+<li><a href="#orgdc724f4">2.3. <b>Theory Of Knowledge</b></a></li>
+<li><a href="#org304dd5d">2.4. Philosophy Of Mind</a></li>
+<li><a href="#org0c13a30">2.5. Aesthetics</a></li>
+<li><a href="#orgba72e8b">2.6. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgae0cfd3">3. STEMM</a>
+<ul>
+<li><a href="#org33969a4">3.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#orga7e3b9f">3.1.1. Wolfram: A New Kind of Science</a></li>
+<li><a href="#org0c897c2">3.1.2. Complexity Science</a></li>
+<li><a href="#org9286615">3.1.3. Network Science</a></li>
+<li><a href="#org14c12a6">3.1.4. Uri Alon</a></li>
+<li><a href="#org7ff9fc4">3.1.5. N. N. Taleb</a></li>
+<li><a href="#orge30a13c">3.1.6. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org989f357">3.2. Biological Sciences, Misc</a></li>
+<li><a href="#orgcdac601">3.3. Basic Sciences, Misc</a>
+<ul>
+<li><a href="#org77a1034">3.3.1. Physics</a></li>
+</ul>
+</li>
+<li><a href="#orgd907206">3.4. Mathematical, Computational Sciences, Misc</a>
+<ul>
+<li><a href="#org0643270">3.4.1. CSE</a></li>
+<li><a href="#orgbd1eb92">3.4.2. Mathematics</a></li>
+</ul>
+</li>
+<li><a href="#orgd89de69">3.5. Advanced Sciences, Misc</a></li>
+<li><a href="#orgc1ce1e8">3.6. Technology, Misc</a></li>
+<li><a href="#org0d0e58f">3.7. Special Topics</a></li>
+<li><a href="#orgf204b12">3.8. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgb88a220">4. Worldly Matters</a>
+<ul>
+<li><a href="#orgcc071c6">4.1. Space and Time</a></li>
+<li><a href="#orgb120f04">4.2. Space, Earth, Life Sciences, Environment, Health, Misc</a></li>
+<li><a href="#orga7b7179">4.3. Religions, Spirituality, Misc</a></li>
+<li><a href="#org8aae08f">4.4. Humanities, Misc</a>
+<ul>
+<li><a href="#org2ea0429">4.4.1. Prizes</a></li>
+</ul>
+</li>
+<li><a href="#orgf6f829d">4.5. SocioPolitical Studies, Law, Misc</a>
+<ul>
+<li><a href="#orgc5bbbd6">4.5.1. Orgs</a></li>
+<li><a href="#orgbd1422f">4.5.2. Feminism</a></li>
+<li><a href="#orgd00d4aa">4.5.3. Politics</a></li>
+<li><a href="#orgd608bb8">4.5.4. Nation States</a></li>
+</ul>
+</li>
+<li><a href="#orgeafa95a">4.6. Business Studies, Misc</a>
+<ul>
+<li><a href="#org33feb52">4.6.1. Pharmacies</a></li>
+<li><a href="#org2ccf39a">4.6.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orge7b26aa">4.7. Security Studies, Misc</a></li>
+<li><a href="#org06aa852">4.8. Communication, Misc</a>
+<ul>
+<li><a href="#orgadfa286">4.8.1. Journalism</a></li>
+</ul>
+</li>
+<li><a href="#org8e142f9">4.9. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org992c313">5. Core</a>
+<ul>
+<li><a href="#org00070e8">5.1. Pharmacology</a></li>
+</ul>
+</li>
+<li><a href="#orgb3cf0ca">6. Arts</a>
+<ul>
+<li><a href="#org51bdf3f">6.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org6775ef8">7. Special Topics</a>
+<ul>
+<li><a href="#org376df0a">7.1. Complementary and Alternative Medicine</a></li>
+<li><a href="#org29b3b4b">7.2. Taurine</a></li>
+<li><a href="#org415a515">7.3. Possibly MisInfo/DisInfo</a>
+<ul>
+<li><a href="#orga93d555">7.3.1. CHD</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org187ade3">8. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org0a9072d" class="outline-2">
+<h2 id="org0a9072d"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org6921912" class="outline-2">
+<h2 id="org6921912"><span class="section-number-2">2.</span> Philosophy</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org7e5dee6" class="outline-3">
+<h3 id="org7e5dee6"><span class="section-number-3">2.1.</span> Ethics</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgf493a82" class="outline-4">
+<h4 id="orgf493a82"><span class="section-number-4">2.1.1.</span> General</h4>
+</div>
+<div id="outline-container-org6c127b1" class="outline-4">
+<h4 id="org6c127b1"><span class="section-number-4">2.1.2.</span> STEMM</h4>
+<div class="outline-text-4" id="text-2-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgc44ab07"></a>Systems Sciences, Misc<br />
+<ol class="org-ol">
+<li><a id="org75ca9e5"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org03b92da"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org901ad68" class="outline-4">
+<h4 id="org901ad68"><span class="section-number-4">2.1.3.</span> Worldly Matters</h4>
+<div class="outline-text-4" id="text-2-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org92ec3dc"></a>Orgs<br />
+<div class="outline-text-5" id="text-2-1-3-1">
+<ul class="org-ul">
+<li>“ABOUT | transparimed.” Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://www.transparimed.org/about">https://www.transparimed.org/about</a></li>
+
+<li>“Physicians for Human Rights,” PHR. Accessed: Oct. 23, 2023. [Online]. Available: <a href="https://phr.org/">https://phr.org/</a></li>
+
+<li>B. I. für G.-C. und Max-Delbrück-Centrum, “Mission &amp; Approaches - BIH at Charité.” Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://www.bihealth.org/en/translation/innovation-enabler/quest-center/mission-approaches">https://www.bihealth.org/en/translation/innovation-enabler/quest-center/mission-approaches</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb14d85f"></a>Nation States<br />
+<ol class="org-ol">
+<li><a id="orgc6a9667"></a>India<br />
+<ul class="org-ul">
+<li><a id="orgc95966f"></a>General<br /></li>
+<li><a id="orge74b23f"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org5487590"></a>Systems Sciences, Misc<br />
+<ul class="org-ul">
+<li><a id="orgb3a7c0d"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orgfa11d2d"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org96e6aff"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="orgea97507"></a>Orgs<br />
+<div class="outline-text-8" id="text-orgea97507">
+<ul class="org-ul">
+<li>“ICMR - Bioethics Unit.” Accessed: Aug. 19, 2025. [Online]. Available: <a href="https://ethics.ncdirindia.org/">https://ethics.ncdirindia.org/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdbf0c90"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orgd3e9307"></a>Core<br />
+<ul class="org-ul">
+<li><a id="org8e863d5"></a>Texts<br />
+<ul class="org-ul">
+<li><a id="orgf904094"></a>General<br />
+<div class="outline-text-9" id="text-orgf904094">
+<ul class="org-ul">
+<li>A. Gadre and A. Shukla, <b>Dissenting Diagnosis, Latest edition.</b> Gurugram, Haryana, India: Random House, 2016.</li>
+<li>S. Nundy, K. Desiraju, and S. Nagral, <b>Healers or Predators?: Healthcare Corruption in India.</b> Oxford University Press, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="org49013c2"></a>Pharma<br />
+<div class="outline-text-9" id="text-org49013c2">
+<ul class="org-ul">
+<li>D. S. Thakur and P. R. Thikkavarapu, <b>The Truth Pill: The Myth of Drug Regulation in India.</b> Simon and Schuster, 2022.</li>
+<li>K. Eban, <i>Bottle of Lies : Ranbaxy and the Dark Side of Indian Pharma.</i> Juggernaut, 2019.</li>
+<li>K. L. Sharma, Healing the Pharmacy of the World : An Inside Story of Medical Products Manufacturing and Regulation in India, 1st edition. Notion Press, 2021.</li>
+<li>B. G. Blogs, “Book review: How rotten is drug regulation in India?,” BMJ Global Health blog. Accessed: Oct. 02, 2023. [Online]. Available: <a href="https://blogs.bmj.com/bmjgh/2023/02/01/book-review-how-rotten-is-drug-regulation-in-india/">https://blogs.bmj.com/bmjgh/2023/02/01/book-review-how-rotten-is-drug-regulation-in-india/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org35ad69e"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="orged1e9ec"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org4074f54"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orga3aad30"></a>Popular Resources<br />
+<ul class="org-ul">
+<li><a id="org31bcff9"></a>Videos<br />
+<div class="outline-text-9" id="text-org31bcff9">
+<ul class="org-ul">
+<li>How to be an Intelligent Patient or Caregiver | Arun Gadre &amp; Abhay Shukla | TEDxIISERPune, (Mar. 17, 2020). Accessed: Nov. 15, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=IGN8ejUu4ko">https://www.youtube.com/watch?v=IGN8ejUu4ko</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org7cf8048"></a>Articles, Essays<br />
+<div class="outline-text-8" id="text-org7cf8048">
+<ul class="org-ul">
+<li>D. Berger, “Corruption ruins the doctor-patient relationship in India,” BMJ, vol. 348, p. g3169, May 2014, doi: 10.1136/bmj.g3169.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org027f14d"></a>Misc<br />
+<div class="outline-text-7" id="text-org027f14d">
+<ul class="org-ul">
+<li>S. Parvatam, “India races to raise animal-free drug testing standards,” Nature India, Aug. 2025, doi: 10.1038/d44151-025-00151-w.</li>
+<li>D. Thakur, “Uncovering India’s Medical Device Crisis: The Truth Behind the Johnson &amp; Johnson Hip Implant Scandal,” Frontline. Accessed: Dec. 09, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/books/johnson-and-johnson-hip-implant-india-scandal-regulatory-failures/article70345526.ece">https://frontline.thehindu.com/books/johnson-and-johnson-hip-implant-india-scandal-regulatory-failures/article70345526.ece</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="org3eb85b6"></a>Misc<br />
+<div class="outline-text-5" id="text-2-1-3-3">
+<ul class="org-ul">
+<li>D. Thakur, “Uncovering India’s Medical Device Crisis: The Truth Behind the Johnson &amp; Johnson Hip Implant Scandal,” Frontline. Accessed: Dec. 09, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/books/johnson-and-johnson-hip-implant-india-scandal-regulatory-failures/article70345526.ece">https://frontline.thehindu.com/books/johnson-and-johnson-hip-implant-india-scandal-regulatory-failures/article70345526.ece</a></li>
+
+<li>“‘Bad Practice’: How We Built a Database of Delicensed Doctors,” OCCRP. Accessed: Oct. 22, 2025. [Online]. Available: <a href="https://www.occrp.org/en/project/bad-practice/bad-practice-how-we-built-a-database-of-delicensed-doctors">https://www.occrp.org/en/project/bad-practice/bad-practice-how-we-built-a-database-of-delicensed-doctors</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Surgeon Barred in UK Suspended in Spain After OCCRP Revelations,” OCCRP. Accessed: Oct. 29, 2025. [Online]. Available: <a href="https://www.occrp.org/en/news/surgeon-barred-in-uk-suspended-in-spain-after-occrp-revelations">https://www.occrp.org/en/news/surgeon-barred-in-uk-suspended-in-spain-after-occrp-revelations</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org3b548e5" class="outline-4">
+<h4 id="org3b548e5"><span class="section-number-4">2.1.4.</span> Arts</h4>
+<div class="outline-text-4" id="text-2-1-4">
+</div>
+<ol class="org-ol">
+<li><a id="org4fd7d4d"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org3145ce4" class="outline-4">
+<h4 id="org3145ce4"><span class="section-number-4">2.1.5.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-2-1-5">
+</div>
+<ol class="org-ol">
+<li><a id="org208ec42"></a>Big Pharma<br />
+<ol class="org-ol">
+<li><a id="orgf6dc414"></a>Misc<br />
+<div class="outline-text-6" id="text-2-1-5-1-1">
+<ul class="org-ul">
+<li>B. Goldacre, <i>Bad Pharma: How Drug Companies Mislead Doctors and Harm Patients.</i> Farrar, Straus and Giroux, /2014.</li>
+<li>M. Angell, The Truth About the Drug Companies: How They Deceive Us and What to Do About It. Random House Publishing Group, 2005.</li>
+</ul>
+</div>
+</li>
+<li><a id="org2b0a8f4"></a>Possibly MisInfo/DisInfo<br />
+<div class="outline-text-6" id="text-2-1-5-1-2">
+<ul class="org-ul">
+<li>“Big Pharma Archives,” Children’s Health Defense. <a href="https://childrenshealthdefense.org/defender_category/big-pharma/">https://childrenshealthdefense.org/defender_category/big-pharma/</a> (accessed Jul. 24, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org0b75875"></a>Corruption<br />
+<div class="outline-text-5" id="text-2-1-5-2">
+<ul class="org-ul">
+<li>“Corruption in healthcare | The BMJ.” Accessed: Oct. 21, 2023. [Online]. Available: <a href="https://www.bmj.com/campaign/corruption-healthcare">https://www.bmj.com/campaign/corruption-healthcare</a></li>
+
+<li>A. Jain, S. Nundy, and K. Abbasi, “Corruption: medicine’s dirty open secret,” BMJ, vol. 348, p. g4184, Jun. 2014, doi: 10.1136/bmj.g4184.</li>
+
+<li>T. Vian, “Anti-corruption, transparency and accountability in health: concepts, frameworks, and approaches,” Glob Health Action, vol. 13, no. sup1, p. 1694744, 2020, doi: 10.1080/16549716.2019.1694744.</li>
+
+<li>T. Vian, “Review of corruption in the health sector: theory, methods and interventions,” Health Policy Plan, vol. 23, no. 2, pp. 83–94, Mar. 2008, doi: 10.1093/heapol/czm048.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgb8c4e5c" class="outline-4">
+<h4 id="orgb8c4e5c"><span class="section-number-4">2.1.6.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-6">
+<ul class="org-ul">
+<li>J. Jureidini and L. B. McHenry, <b>“The illusion of evidence based medicine,”</b> BMJ, vol. 376, p. o702, Mar. 2022, doi: 10.1136/bmj.o702.</li>
+
+<li>“Quackery,” Wikipedia. Jul. 11, 2022. Accessed: Jul. 25, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Quackery&amp;oldid=1097494245">https://en.wikipedia.org/w/index.php?title=Quackery&amp;oldid=1097494245</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Everything You Need to Know About the ‘Bad Practice’ Investigation,” OCCRP. Accessed: Oct. 06, 2025. [Online]. Available: <a href="https://www.occrp.org/en/project/bad-practice/everything-you-need-to-know-about-the-bad-practice-investigation">https://www.occrp.org/en/project/bad-practice/everything-you-need-to-know-about-the-bad-practice-investigation</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6db7a80" class="outline-3">
+<h3 id="org6db7a80"><span class="section-number-3">2.2.</span> <b>Logic</b></h3>
+</div>
+<div id="outline-container-orgdc724f4" class="outline-3">
+<h3 id="orgdc724f4"><span class="section-number-3">2.3.</span> <b>Theory Of Knowledge</b></h3>
+</div>
+<div id="outline-container-org304dd5d" class="outline-3">
+<h3 id="org304dd5d"><span class="section-number-3">2.4.</span> Philosophy Of Mind</h3>
+</div>
+<div id="outline-container-org0c13a30" class="outline-3">
+<h3 id="org0c13a30"><span class="section-number-3">2.5.</span> Aesthetics</h3>
+</div>
+<div id="outline-container-orgba72e8b" class="outline-3">
+<h3 id="orgba72e8b"><span class="section-number-3">2.6.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgae0cfd3" class="outline-2">
+<h2 id="orgae0cfd3"><span class="section-number-2">3.</span> STEMM</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org33969a4" class="outline-3">
+<h3 id="org33969a4"><span class="section-number-3">3.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orga7e3b9f" class="outline-4">
+<h4 id="orga7e3b9f"><span class="section-number-4">3.1.1.</span> Wolfram: A New Kind of Science</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>S. Wolfram, “Towards a Computational Formalization for Foundations of Medicine,” Stephen Wolfram Writings, Feb. 2025, Accessed: Mar. 09, 2025. [Online]. Available: <a href="https://writings.stephenwolfram.com/2025/02/towards-a-computational-formalization-for-foundations-of-medicine/">https://writings.stephenwolfram.com/2025/02/towards-a-computational-formalization-for-foundations-of-medicine/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0c897c2" class="outline-4">
+<h4 id="org0c897c2"><span class="section-number-4">3.1.2.</span> Complexity Science</h4>
+<div class="outline-text-4" id="text-3-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org52c3948"></a>New England Complex Systems Institute<br />
+<div class="outline-text-5" id="text-3-1-2-1">
+<ul class="org-ul">
+<li><b>Dynamic Medicine</b>, New England Complex Systems Institute. [Online]. Available: <a href="https://necsi.edu/dynamic-medicine">https://necsi.edu/dynamic-medicine</a>. [Accessed: 08-Aug-2019].</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org9286615" class="outline-4">
+<h4 id="org9286615"><span class="section-number-4">3.1.3.</span> Network Science</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ul class="org-ul">
+<li>J. Loscalzo, <b>Network Medicine.</b> Harvard University Press, 2017.</li>
+<li>K. Vasan, D. M. Gysi, and A.-L. Barabási, <b>“The clinical trials puzzle: How network effects limit drug discovery,”</b> iScience, vol. 26, no. 12, Dec. 2023, doi: 10.1016/j.isci.2023.108361.</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>A. Aldana et al., “NetMedPy: A Python package for Large-Scale Network Medicine Screening,” Sep. 08, 2024, bioRxiv. doi: 10.1101/2024.09.05.611537.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org14c12a6" class="outline-4">
+<h4 id="org14c12a6"><span class="section-number-4">3.1.4.</span> Uri Alon</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<ul class="org-ul">
+<li>U. Alon, Systems Medicine: Physiological Circuits and the Dynamics of Disease, 1st edition. Boca Raton: Chapman and Hall/CRC, 2023.
+<ul class="org-ul">
+<li>“System Medicine 2019 - YouTube.” Accessed: Dec. 15, 2023. [Online]. Available: <a href="https://www.youtube.com/playlist?list=PLLbr-B8cNbo7qigzS2ZDbDVpvjX26tGJ4">https://www.youtube.com/playlist?list=PLLbr-B8cNbo7qigzS2ZDbDVpvjX26tGJ4</a></li>
+<li>cxdig, “Systems Medicine: Physiological Circuits and the Dynamics of Disease, by Uri Alon,” Complexity Digest. Accessed: Dec. 24, 2023. [Online]. Available: <a href="https://comdig.unam.mx/2023/12/23/systems-medicine-physiological-circuits-and-the-dynamics-of-disease-by-uri-alon/">https://comdig.unam.mx/2023/12/23/systems-medicine-physiological-circuits-and-the-dynamics-of-disease-by-uri-alon/</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7ff9fc4" class="outline-4">
+<h4 id="org7ff9fc4"><span class="section-number-4">3.1.5.</span> N. N. Taleb</h4>
+<div class="outline-text-4" id="text-3-1-5">
+<ul class="org-ul">
+<li>N. N. Taleb, <b>“(Anti)Fragility and Convex Responses in Medicine,”</b> arXiv:1808.00065 [physics, q-bio], Jul. 2018, Accessed: Nov. 22, 2021. [Online]. Available: <a href="http://arxiv.org/abs/1808.00065">http://arxiv.org/abs/1808.00065</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge30a13c" class="outline-4">
+<h4 id="orge30a13c"><span class="section-number-4">3.1.6.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-1-6">
+<ul class="org-ul">
+<li>“Is a key to longevity sitting in your medicine cabinet?,” Northeastern Global News. Accessed: Jul. 01, 2026. [Online]. Available: <a href="https://news.northeastern.edu/2026/06/26/longevity-research-drugs/">https://news.northeastern.edu/2026/06/26/longevity-research-drugs/</a></li>
+
+<li>I. Fiebrig, Medicinal Agroecology: Reviews, Case Studies and Research Methodologies. Boca Raton, FL: CRC Pr I Llc, 2023.</li>
+
+<li>“From MRI to Model: In Silico Medicine with Wolfram Language—Wolfram Blog.” Accessed: Oct. 09, 2025. [Online]. Available: <a href="https://blog.wolfram.com/2025/10/07/from-mri-to-model-in-silico-medicine-with-wolfram-language/">https://blog.wolfram.com/2025/10/07/from-mri-to-model-in-silico-medicine-with-wolfram-language/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org989f357" class="outline-3">
+<h3 id="org989f357"><span class="section-number-3">3.2.</span> Biological Sciences, Misc</h3>
+</div>
+<div id="outline-container-orgcdac601" class="outline-3">
+<h3 id="orgcdac601"><span class="section-number-3">3.3.</span> Basic Sciences, Misc</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org77a1034" class="outline-4">
+<h4 id="org77a1034"><span class="section-number-4">3.3.1.</span> Physics</h4>
+<div class="outline-text-4" id="text-3-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="orge4dd4cd"></a>Misc<br /></li>
+
+
+<li><a id="orgf2b8e43"></a>Articles, Essays<br />
+<ol class="org-ol">
+<li><a id="orga72328f"></a>Collections<br />
+<div class="outline-text-6" id="text-3-3-1-2-1">
+<ul class="org-ul">
+<li>“Medical physics Archives,” Physics World. Accessed: Sep. 11, 2025. [Online]. Available: <a href="https://physicsworld.com/c/medical-physics/">https://physicsworld.com/c/medical-physics/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb00f710"></a>Misc<br />
+<div class="outline-text-6" id="text-3-3-1-2-2">
+<ul class="org-ul">
+<li>T. Freeman, “RFID-tagged drug capsule lets doctors know when it has been swallowed,” Physics World. Accessed: Jan. 16, 2026. [Online]. Available: <a href="https://physicsworld.com/rfid-tagged-drug-capsule-lets-doctors-know-when-it-has-been-swallowed/">https://physicsworld.com/rfid-tagged-drug-capsule-lets-doctors-know-when-it-has-been-swallowed/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgd907206" class="outline-3">
+<h3 id="orgd907206"><span class="section-number-3">3.4.</span> Mathematical, Computational Sciences, Misc</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org0643270" class="outline-4">
+<h4 id="org0643270"><span class="section-number-4">3.4.1.</span> CSE</h4>
+<div class="outline-text-4" id="text-3-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="org876f90f"></a>AI<br />
+<ol class="org-ol">
+<li><a id="org75d1a71"></a>Misc<br />
+<div class="outline-text-6" id="text-3-4-1-1-1">
+<ul class="org-ul">
+<li>E. Callaway, “‘An AlphaFold 4’ – scientists marvel at DeepMind drug spin-off’s exclusive new AI,” Nature, Feb. 2026, doi: 10.1038/d41586-026-00365-7.</li>
+
+<li>K. Roy and A. Banerjee, Eds., Machine Learning and Deep Learning in Drug Design. Royal Society of Chemistry.</li>
+
+<li>“How is AI Changing Your Doctor Visit? | Stanford HAI.” Accessed: Nov. 06, 2025. [Online]. Available: <a href="https://hai.stanford.edu/news/how-is-ai-changing-your-doctor-visit">https://hai.stanford.edu/news/how-is-ai-changing-your-doctor-visit</a></li>
+
+<li>“New AI Model for Drug Design Brings More Physics to Bear in Predictions,” California Institute of Technology. Accessed: Oct. 23, 2025. [Online]. Available: <a href="https://www.caltech.edu/about/news/new-ai-model-for-drug-design-brings-more-physics-to-bear-in-predictions">https://www.caltech.edu/about/news/new-ai-model-for-drug-design-brings-more-physics-to-bear-in-predictions</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“AI’s Benefits Can Be Marginal in Medicine – Communications of the ACM.” Accessed: Sep. 10, 2025. [Online]. Available: <a href="https://cacm.acm.org/news/ais-benefits-can-be-marginal-in-medicine/">https://cacm.acm.org/news/ais-benefits-can-be-marginal-in-medicine/</a></li>
+
+<li>B. Team, “Biomni - A General-Purpose Biomedical AI Agent.” Accessed: Sep. 04, 2025. [Online]. Available: <a href="https://biomni.stanford.edu">https://biomni.stanford.edu</a></li>
+
+<li>T. E. page, “The AI Hype Index: AI-designed antibiotics show promise,” MIT Technology Review. Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://www.technologyreview.com/2025/08/27/1122356/the-ai-hype-index-ai-designed-antibiotics-show-promise/">https://www.technologyreview.com/2025/08/27/1122356/the-ai-hype-index-ai-designed-antibiotics-show-promise/</a></li>
+
+<li>“As AI-designed drug looks to pass final hurdle, will this tech change drug discovery forever?,” Chemistry World. Accessed: Aug. 13, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/as-ai-designed-drug-looks-to-pass-final-hurdle-will-this-tech-change-drug-discovery-forever/4021894.article">https://www.chemistryworld.com/news/as-ai-designed-drug-looks-to-pass-final-hurdle-will-this-tech-change-drug-discovery-forever/4021894.article</a></li>
+
+<li>L. Liang, “China’s AI drug discovery companies land huge deals with Big Pharma,” Rest of World. Accessed: Aug. 08, 2025. [Online]. Available: <a href="https://restofworld.org/2025/ai-drug-discovery-startups-big-pharma-china/">https://restofworld.org/2025/ai-drug-discovery-startups-big-pharma-china/</a></li>
+
+<li>A. Vaid, “Medical AI can transform medicine — but only if we carefully track the data it touches,” Nature, vol. 642, no. 8069, pp. 864–866, Jun. 2025, doi: 10.1038/d41586-025-01946-8.</li>
+
+<li>T. Freeman, “Generative AI speeds medical image analysis without impacting accuracy,” Physics World. Accessed: Jun. 11, 2025. [Online]. Available: <a href="https://physicsworld.com/a/generative-ai-speeds-medical-image-analysis-without-impacting-accuracy/">https://physicsworld.com/a/generative-ai-speeds-medical-image-analysis-without-impacting-accuracy/</a></li>
+
+<li>M. Lenharo, “Medicine’s rapid adoption of AI has researchers concerned,” Nature, Jun. 2025, doi: 10.1038/d41586-025-01748-y.</li>
+
+<li>H. Armitage, “AI in science and medicine: A deep dive from the AI Index Report,” News Center. Accessed: Apr. 16, 2025. [Online]. Available: <a href="https://med.stanford.edu/news/all-news/2025/04/ai-index-report-science-medicine.html">https://med.stanford.edu/news/all-news/2025/04/ai-index-report-science-medicine.html</a></li>
+
+<li>“RAISE Health inaugural seed grant recipients announced.” Accessed: Mar. 19, 2025. [Online]. Available: <a href="https://med.stanford.edu/news/all-news/2025/03/raise-health-grantees.html">https://med.stanford.edu/news/all-news/2025/03/raise-health-grantees.html</a></li>
+
+<li>L. M. Modise et al., “Introducing the Team Card: Enhancing governance for medical Artificial Intelligence (AI) systems in the age of complexity,” PLOS Digital Health, vol. 4, no. 3, p. e0000495, Mar. 2025, doi: 10.1371/journal.pdig.0000495.</li>
+
+<li>J. Zou and E. J. Topol, “The rise of agentic AI teammates in medicine,” The Lancet, vol. 405, no. 10477, p. 457, Feb. 2025, doi: 10.1016/S0140-6736(25)00202-8.</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>R. S. of N. America, “Experts outline considerations to deploy AI in radiology.” Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://medicalxpress.com/news/2024-07-experts-outline-considerations-deploy-ai.html">https://medicalxpress.com/news/2024-07-experts-outline-considerations-deploy-ai.html</a></li>
+
+<li>“Revolutionizing antibiotic discovery with generative AI – McMaster University,” PSNow. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://www.hpe.com/psnow/doc/a50010513enw">https://www.hpe.com/psnow/doc/a50010513enw</a></li>
+
+<li>“Fellow Detail Page | Royal Society.” Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://royalsociety.org/people/mihaela-van-der-schaar-36800/">https://royalsociety.org/people/mihaela-van-der-schaar-36800/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org23f152d"></a>General<br /></li>
+<li><a id="orge2eb32e"></a>STEMM<br /></li>
+<li><a id="org2b6a13f"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="orga06638f"></a>Orgs<br />
+<div class="outline-text-7" id="text-orga06638f">
+<ul class="org-ul">
+<li>“New Cambridge Centre for AI in Medicine (CCAIM) | Department of Applied Mathematics and Theoretical Physics.” Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.damtp.cam.ac.uk/new-cambridge-centre-ai-medicine-ccaim-0">https://www.damtp.cam.ac.uk/new-cambridge-centre-ai-medicine-ccaim-0</a>
+<ul class="org-ul">
+<li>“Cambridge Centre for AI in Medicine - YouTube.” Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.youtube.com/channel/UCTM_lOgGecRWRPoGZFD6CbA">https://www.youtube.com/channel/UCTM_lOgGecRWRPoGZFD6CbA</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd0ab8c2"></a>Business Studies, Misc<br />
+<div class="outline-text-7" id="text-orgd0ab8c2">
+<ul class="org-ul">
+<li>“If AI discovers a drug, who gets the money?” Accessed: Feb. 18, 2026. [Online]. Available: <a href="https://www.science.org/content/article/if-ai-discovers-drug-who-gets-money">https://www.science.org/content/article/if-ai-discovers-drug-who-gets-money</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgd3cfea8"></a>Arts<br /></li>
+<li><a id="orgfdaa76d"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orgf5ed866"></a>Microsoft<br />
+<div class="outline-text-7" id="text-orgf5ed866">
+<ul class="org-ul">
+<li>B. Potts, “Navigating medical education in the era of generative AI,” Microsoft Research. Accessed: Jul. 25, 2025. [Online]. Available: <a href="https://www.microsoft.com/en-us/research/podcast/navigating-medical-education-in-the-era-of-generative-ai/">https://www.microsoft.com/en-us/research/podcast/navigating-medical-education-in-the-era-of-generative-ai/</a></li>
+<li>“The Path to Medical Superintelligence,” Microsoft AI. Accessed: Jul. 01, 2025. [Online]. Available: <a href="https://microsoft.ai/new/the-path-to-medical-superintelligence/">https://microsoft.ai/new/the-path-to-medical-superintelligence/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org7dd9f98"></a>Texts<br />
+<div class="outline-text-7" id="text-org7dd9f98">
+<ul class="org-ul">
+<li>P. Lee, C. Goldberg, and I. Kohane, The AI Revolution in Medicine: GPT-4 and Beyond, 1st edition. Hoboken: Pearson, 2023.</li>
+</ul>
+</div>
+</li>
+<li><a id="org43a056e"></a>Articles, Essays<br /></li>
+<li><a id="org25fa9dc"></a>Fair Tech<br />
+<div class="outline-text-7" id="text-org25fa9dc">
+<ul class="org-ul">
+<li>J. L. Cross, M. A. Choma, and J. A. Onofrey, “Bias in medical AI: Implications for clinical decision-making,” PLOS Digital Health, vol. 3, no. 11, p. e0000651, Nov. 2024, doi: 10.1371/journal.pdig.0000651.</li>
+<li>A. Extance, “AI-generated medical data can sidestep usual ethics review, universities say,” Nature, Sep. 2025, doi: 10.1038/d41586-025-02911-1.</li>
+</ul>
+</div>
+</li>
+<li><a id="org6f61123"></a>Safe Tech<br />
+<div class="outline-text-7" id="text-org6f61123">
+<ul class="org-ul">
+<li>“How To Build a Safe, Secure Medical AI Platform | Stanford HAI.” Accessed: Nov. 06, 2025. [Online]. Available: <a href="https://hai.stanford.edu/news/how-to-build-a-safe-secure-medical-ai-platform">https://hai.stanford.edu/news/how-to-build-a-safe-secure-medical-ai-platform</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="org3060761"></a>Misc<br />
+<div class="outline-text-5" id="text-3-4-1-2">
+<ul class="org-ul">
+<li>“Engineering Agentic Context for Trustworthy Clinical Autonomy – Communications of the ACM.” Accessed: Jan. 09, 2026. [Online]. Available: <a href="https://cacm.acm.org/blogcacm/engineering-agentic-context-for-trustworthy-clinical-autonomy/">https://cacm.acm.org/blogcacm/engineering-agentic-context-for-trustworthy-clinical-autonomy/</a></li>
+
+<li>“Synthetic data can benefit medical research — but risks must be recognized,” Nature, vol. 645, no. 8080, pp. 283–283, Sep. 2025, doi: 10.1038/d41586-025-02869-0.</li>
+
+<li>J. J. L. Jacobs et al., “A data management system for precision medicine,” PLOS Digital Health, vol. 4, no. 1, p. e0000464, Jan. 2025, doi: 10.1371/journal.pdig.0000464.</li>
+
+<li>W. DESK, “India poised to capture 10-12 per cent of global MedTech market in 25 years: EY report,” Organiser. Accessed: Dec. 06, 2024. [Online]. Available: <a href="https://organiser.org/2024/12/05/268136/bharat/india-poised-to-capture-10-12-per-cent-of-global-medtech-market-in-25-years-ey-report/">https://organiser.org/2024/12/05/268136/bharat/india-poised-to-capture-10-12-per-cent-of-global-medtech-market-in-25-years-ey-report/</a></li>
+
+<li>D. Nield, “How to prep your iPhone for unexpected medical emergencies,” Popular Science. Accessed: Dec. 02, 2024. [Online]. Available: <a href="https://www.popsci.com/diy/how-to-set-up-medical-id-911-iphone/">https://www.popsci.com/diy/how-to-set-up-medical-id-911-iphone/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgbd1eb92" class="outline-4">
+<h4 id="orgbd1eb92"><span class="section-number-4">3.4.2.</span> Mathematics</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<ul class="org-ul">
+<li>N. Borman, “When math meets medicine: How a mathematician turned grief into a mission,” WUFT | News and public media for north central Florida. Accessed: May 31, 2025. [Online]. Available: <a href="https://www.wuft.org/florida-good/2025-05-07/when-math-meets-medicine-how-a-mathematician-turned-grief-into-a-mission">https://www.wuft.org/florida-good/2025-05-07/when-math-meets-medicine-how-a-mathematician-turned-grief-into-a-mission</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd89de69" class="outline-3">
+<h3 id="orgd89de69"><span class="section-number-3">3.5.</span> Advanced Sciences, Misc</h3>
+</div>
+<div id="outline-container-orgc1ce1e8" class="outline-3">
+<h3 id="orgc1ce1e8"><span class="section-number-3">3.6.</span> Technology, Misc</h3>
+</div>
+<div id="outline-container-org0d0e58f" class="outline-3">
+<h3 id="org0d0e58f"><span class="section-number-3">3.7.</span> Special Topics</h3>
+</div>
+<div id="outline-container-orgf204b12" class="outline-3">
+<h3 id="orgf204b12"><span class="section-number-3">3.8.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-8">
+<ul class="org-ul">
+<li>“Medical students are using a popular research tool to pump out misleading studies.” Accessed: Jun. 26, 2026. [Online]. Available: <a href="https://www.science.org/content/article/medical-students-are-using-popular-research-tool-pump-out-misleading-studies">https://www.science.org/content/article/medical-students-are-using-popular-research-tool-pump-out-misleading-studies</a></li>
+
+<li>R. Sinha, “Waste prevention central to UNEP’s latest report on safe disposal of unused medicines,” Down To Earth. Accessed: Mar. 18, 2026. [Online]. Available: <a href="https://www.downtoearth.org.in/health/waste-prevention-central-to-uneps-latest-report-on-safe-disposal-of-unused-medicines">https://www.downtoearth.org.in/health/waste-prevention-central-to-uneps-latest-report-on-safe-disposal-of-unused-medicines</a></li>
+
+<li>M. Johnston, S. Dissanayake-Perera, J. J. Collins, M. M. Stevens, and C. Dincer, “Convergence of nanotechnology and CRISPR-based diagnostics,” Nat. Nanotechnol., pp. 1–9, Oct. 2025, doi: 10.1038/s41565-025-02018-8.</li>
+<li>“Engineers develop a better way to deliver long-lasting drugs,” MIT News | Massachusetts Institute of Technology. Accessed: Aug. 29, 2025. [Online]. Available: <a href="https://news.mit.edu/2025/engineers-develop-better-way-to-deliver-long-lasting-drugs-0324">https://news.mit.edu/2025/engineers-develop-better-way-to-deliver-long-lasting-drugs-0324</a></li>
+
+<li>K. Giles, “IOP Publishing and the Institute of Physics and Engineering in Medicine strengthen biomedical publishing collaboration,” IOP Publishing. Accessed: Jul. 23, 2025. [Online]. Available: <a href="https://ioppublishing.org/news/iop-publishing-and-the-institute-of-physics-and-engineering-in-medicine/">https://ioppublishing.org/news/iop-publishing-and-the-institute-of-physics-and-engineering-in-medicine/</a></li>
+
+<li>“A Causal Approach to the Early, Heterogeneous Stopping of Clinical Trials | SIAM,” Society for Industrial and Applied Mathematics. Accessed: May 09, 2025. [Online]. Available: <a href="https://www.siam.org/publications/siam-news/articles/a-causal-approach-to-the-early-heterogeneous-stopping-of-clinical-trials/">https://www.siam.org/publications/siam-news/articles/a-causal-approach-to-the-early-heterogeneous-stopping-of-clinical-trials/</a></li>
+
+<li>“Gloria Choi earns Samsung Ho-Am Prize for Medicine | Picower Institute.” Accessed: Apr. 03, 2025. [Online]. Available: <a href="https://picower.mit.edu/news/gloria-choi-earns-samsung-ho-am-prize-medicine">https://picower.mit.edu/news/gloria-choi-earns-samsung-ho-am-prize-medicine</a></li>
+
+<li>“In bid to expand, bioRxiv and medRxiv preprint servers move to newly formed nonprofit.” Accessed: Mar. 12, 2025. [Online]. Available: <a href="https://www.science.org/content/article/bid-expand-biorxiv-and-medrxiv-preprint-servers-move-newly-formed-nonprofit">https://www.science.org/content/article/bid-expand-biorxiv-and-medrxiv-preprint-servers-move-newly-formed-nonprofit</a></li>
+
+<li>S. Wolfram, “Towards a Computational Formalization for Foundations of Medicine,” Stephen Wolfram Writings, Feb. 2025, Accessed: Mar. 09, 2025. [Online]. Available: <a href="https://writings.stephenwolfram.com/2025/02/towards-a-computational-formalization-for-foundations-of-medicine/">https://writings.stephenwolfram.com/2025/02/towards-a-computational-formalization-for-foundations-of-medicine/</a></li>
+
+<li>R. B. February 2025, “Putting the F in pharma,” Chemistry World. Accessed: Feb. 11, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/features/putting-the-f-in-pharma/4020911.article">https://www.chemistryworld.com/features/putting-the-f-in-pharma/4020911.article</a></li>
+
+<li>T. Freeman, “Medical physics and biotechnology: highlights of 2024,” Physics World. Accessed: Dec. 28, 2024. [Online]. Available: <a href="https://physicsworld.com/a/medical-physics-and-biotechnology-highlights-of-2024/">https://physicsworld.com/a/medical-physics-and-biotechnology-highlights-of-2024/</a></li>
+
+<li>cxdig, “Network Science in Medicine: A White Paper,” Complexity Digest. Accessed: Jan. 12, 2025. [Online]. Available: <a href="https://comdig.unam.mx/2025/01/11/network-science-in-medicine-a-white-paper/">https://comdig.unam.mx/2025/01/11/network-science-in-medicine-a-white-paper/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>hayley.liddle@ioppublishing.org, “Automated checks build confidence in treatment verification,” Physics World. Accessed: Dec. 13, 2024. [Online]. Available: <a href="https://physicsworld.com/automated-checks-build-confidence-in-treatment-verification/">https://physicsworld.com/automated-checks-build-confidence-in-treatment-verification/</a></li>
+
+<li>W. C. October 2024, “Revolutionising pharmaceutical quality control with System Monitoring – a case study,” Chemistry World. Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/industry/revolutionising-pharmaceutical-quality-control-with-system-monitoring-a-case-study/4020120.article">https://www.chemistryworld.com/industry/revolutionising-pharmaceutical-quality-control-with-system-monitoring-a-case-study/4020120.article</a></li>
+
+<li>A. Aldana et al., “NetMedPy: A Python package for Large-Scale Network Medicine Screening,” Sep. 08, 2024, bioRxiv. doi: 10.1101/2024.09.05.611537.</li>
+
+<li>“Mathematics for Medicine: Changing Patients’ Lives with Systems Modeling | SIAM,” Society for Industrial and Applied Mathematics. Accessed: Nov. 02, 2024. [Online]. Available: <a href="https://www.siam.org/publications/siam-news/articles/mathematics-for-medicine-changing-patients-lives-with-systems-modeling/">https://www.siam.org/publications/siam-news/articles/mathematics-for-medicine-changing-patients-lives-with-systems-modeling/</a></li>
+
+<li>D. L. August 2024, “Medicinal chemistry’s biological blind spots,” Chemistry World. Accessed: Aug. 09, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/opinion/medicinal-chemistrys-biological-blind-spots/4019853.article">https://www.chemistryworld.com/opinion/medicinal-chemistrys-biological-blind-spots/4019853.article</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb88a220" class="outline-2">
+<h2 id="orgb88a220"><span class="section-number-2">4.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgcc071c6" class="outline-3">
+<h3 id="orgcc071c6"><span class="section-number-3">4.1.</span> Space and Time</h3>
+</div>
+<div id="outline-container-orgb120f04" class="outline-3">
+<h3 id="orgb120f04"><span class="section-number-3">4.2.</span> Space, Earth, Life Sciences, Environment, Health, Misc</h3>
+</div>
+<div id="outline-container-orga7b7179" class="outline-3">
+<h3 id="orga7b7179"><span class="section-number-3">4.3.</span> Religions, Spirituality, Misc</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>C. P. Salguero, Buddhism and Medicine: An Anthology of Premodern Sources. Columbia University Press, 2017.</li>
+
+<li>C. P. Salguero, Buddhism and Medicine: An Anthology of Modern and Contemporary Sources. Columbia University Press, 2019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8aae08f" class="outline-3">
+<h3 id="org8aae08f"><span class="section-number-3">4.4.</span> Humanities, Misc</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-org2ea0429" class="outline-4">
+<h4 id="org2ea0429"><span class="section-number-4">4.4.1.</span> Prizes</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<ul class="org-ul">
+<li>“Nobel Prize in Physiology or Medicine,” Wikipedia. Oct. 03, 2023. Accessed: Oct. 03, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Nobel_Prize_in_Physiology_or_Medicine&amp;oldid=1178343787">https://en.wikipedia.org/w/index.php?title=Nobel_Prize_in_Physiology_or_Medicine&amp;oldid=1178343787</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf6f829d" class="outline-3">
+<h3 id="orgf6f829d"><span class="section-number-3">4.5.</span> SocioPolitical Studies, Law, Misc</h3>
+<div class="outline-text-3" id="text-4-5">
+</div>
+<div id="outline-container-orgc5bbbd6" class="outline-4">
+<h4 id="orgc5bbbd6"><span class="section-number-4">4.5.1.</span> Orgs</h4>
+<div class="outline-text-4" id="text-4-5-1">
+<ul class="org-ul">
+<li>“Home | Doctors Without Borders - USA.” Accessed: Sep. 27, 2025. [Online]. Available: <a href="https://www.doctorswithoutborders.org/">https://www.doctorswithoutborders.org/</a></li>
+
+<li>admin, <b>“Preventive Medicine,” European Society of Preventive Medicine.</b> <a href="https://espm.co/">https://espm.co/</a> (accessed Aug. 29, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Governance,” FIND. Accessed: Sep. 21, 2024. [Online]. Available: <a href="https://www.finddx.org/about-us/governance-and-policies/governance/">https://www.finddx.org/about-us/governance-and-policies/governance/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbd1422f" class="outline-4">
+<h4 id="orgbd1422f"><span class="section-number-4">4.5.2.</span> Feminism</h4>
+</div>
+<div id="outline-container-orgd00d4aa" class="outline-4">
+<h4 id="orgd00d4aa"><span class="section-number-4">4.5.3.</span> Politics</h4>
+<div class="outline-text-4" id="text-4-5-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgc9e1de5"></a>Politics: Left<br />
+<div class="outline-text-5" id="text-4-5-3-1">
+<ul class="org-ul">
+<li>“Medical science,” World Socialist Web Site. Accessed: Feb. 15, 2024. [Online]. Available: <a href="https://www.wsws.org/en/topics/healthCategory/health">https://www.wsws.org/en/topics/healthCategory/health</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgd608bb8" class="outline-4">
+<h4 id="orgd608bb8"><span class="section-number-4">4.5.4.</span> Nation States</h4>
+<div class="outline-text-4" id="text-4-5-4">
+</div>
+<ol class="org-ol">
+<li><a id="org139f8f3"></a>India<br />
+<ol class="org-ol">
+<li><a id="org8ce391e"></a>General<br /></li>
+<li><a id="orga4f248f"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org9723e6f"></a>Tech<br />
+<div class="outline-text-7" id="text-org9723e6f">
+<ul class="org-ul">
+<li>“Home,” MedTech Incubator. <a href="https://htic.iitm.ac.in/mti/">https://htic.iitm.ac.in/mti/</a> (accessed Sep. 23, 2023).</li>
+<li>“Koita Centre for Digital Health.” <a href="https://www.kcdh.iitb.ac.in/">https://www.kcdh.iitb.ac.in/</a> (accessed Sep. 23, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgae29106"></a>Misc<br />
+<div class="outline-text-7" id="text-orgae29106">
+<ul class="org-ul">
+<li>W. DESK, “India poised to capture 10-12 per cent of global MedTech market in 25 years: EY report,” Organiser. Accessed: Dec. 06, 2024. [Online]. Available: <a href="https://organiser.org/2024/12/05/268136/bharat/india-poised-to-capture-10-12-per-cent-of-global-medtech-market-in-25-years-ey-report/">https://organiser.org/2024/12/05/268136/bharat/india-poised-to-capture-10-12-per-cent-of-global-medtech-market-in-25-years-ey-report/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org86f7f90"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org3ecba02"></a>Orgs<br />
+<ul class="org-ul">
+<li><a id="org59130ff"></a>GoI Official<br />
+<div class="outline-text-8" id="text-org59130ff">
+<ul class="org-ul">
+<li>“Indian Council of Medical Research,” Wikipedia. Apr. 26, 2024. Accessed: May 10, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Indian_Council_of_Medical_Research&amp;oldid=1220871258">https://en.wikipedia.org/w/index.php?title=Indian_Council_of_Medical_Research&amp;oldid=1220871258</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org67d7181"></a>Misc<br />
+<div class="outline-text-8" id="text-org67d7181">
+<ul class="org-ul">
+<li>“Home,” Médecins Sans Frontières(MSF). Accessed: Oct. 23, 2024. [Online]. Available: <a href="https://msfinindia.in/">https://msfinindia.in/</a>
+<ul class="org-ul">
+<li>“India | Our Work &amp; How to Help | Doctors Without Borders - USA.” Accessed: Oct. 23, 2024. [Online]. Available: <a href="https://www.doctorswithoutborders.org/what-we-do/where-we-work/india">https://www.doctorswithoutborders.org/what-we-do/where-we-work/india</a></li>
+<li>“India | MSF medical and humanitarian aid.” Accessed: Oct. 23, 2024. [Online]. Available: <a href="https://www.msf.org/india">https://www.msf.org/india</a></li>
+</ul></li>
+
+<li>“Home,” Pallium India. Accessed: Oct. 23, 2023. [Online]. Available: <a href="https://palliumindia.org/">https://palliumindia.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Shaheed Hospital, Created And Nurtured By Workers, Is An Inspiration For People’s Movement For Health For All| Countercurrents.” Accessed: Oct. 23, 2023. [Online]. Available: <a href="https://countercurrents.org/2022/09/shaheed-hospital-created-and-nurtured-by-workers-is-an-inspiration-for-peoples-movement-for-health-for-all/">https://countercurrents.org/2022/09/shaheed-hospital-created-and-nurtured-by-workers-is-an-inspiration-for-peoples-movement-for-health-for-all/</a></li>
+<li>“Home,” Shaheed Hospital. Accessed: Oct. 23, 2023. [Online]. Available: <a href="https://www.shaheedhospital.org">https://www.shaheedhospital.org</a></li>
+<li>“Shaheed Hospital,” Vikalp Sangam. Accessed: Oct. 23, 2023. [Online]. Available: <a href="https://vikalpsangam.org/article/shaheed-hospital/">https://vikalpsangam.org/article/shaheed-hospital/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“St John’s Medical College Hospital, Bengaluru, Karnataka, South India:” Accessed: Oct. 23, 2023. [Online]. Available: <a href="https://www.stjohns.in/">https://www.stjohns.in/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“CMC Vellore.” Accessed: Oct. 23, 2023. [Online]. Available: <a href="https://www.cmch-vellore.edu/">https://www.cmch-vellore.edu/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Home,” The Banyan. Accessed: Oct. 23, 2023. [Online]. Available: <a href="https://thebanyan.org/">https://thebanyan.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“New Delhi, India,” FIND. Accessed: Sep. 21, 2024. [Online]. Available: <a href="https://www.finddx.org/about-us/locations/new-delhi-india/">https://www.finddx.org/about-us/locations/new-delhi-india/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org39c6ef8"></a>People<br />
+<div class="outline-text-7" id="text-org39c6ef8">
+<ul class="org-ul">
+<li>“Balram Bhargava,” Wikipedia. Mar. 28, 2024. Accessed: May 10, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Balram_Bhargava&amp;oldid=1215984406">https://en.wikipedia.org/w/index.php?title=Balram_Bhargava&amp;oldid=1215984406</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfbdccde"></a>Education<br />
+<ul class="org-ul">
+<li><a id="org5cb50df"></a>General<br />
+<div class="outline-text-8" id="text-org5cb50df">
+<ul class="org-ul">
+<li>“Medical education in India,” Wikipedia. Oct. 16, 2023. Accessed: Oct. 23, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Medical_education_in_India&amp;oldid=1180404212#Research">https://en.wikipedia.org/w/index.php?title=Medical_education_in_India&amp;oldid=1180404212#Research</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf673b41"></a>Ethics<br />
+<div class="outline-text-8" id="text-orgf673b41">
+<ul class="org-ul">
+<li>D. C. Sharma, “Corruption scandal engulfs Indian medical education,” The Lancet, vol. 406, no. 10500, p. 220, Jul. 2025, doi: 10.1016/S0140-6736(25)01487-4.</li>
+<li>“The rot in medical education runs deep,” The Tribune. Accessed: Aug. 04, 2025. [Online]. Available: <a href="https://www.tribuneindia.com/news/comment/the-rot-in-medical-education-runs-deep/">https://www.tribuneindia.com/news/comment/the-rot-in-medical-education-runs-deep/</a></li>
+
+<li>A. Sethi, “The mystery of India’s deadly exam scam,” The Guardian, Dec. 17, 2015. Accessed: Oct. 23, 2023. [Online]. Available: <a href="https://www.theguardian.com/world/2015/dec/17/the-mystery-of-indias-deadly-exam-scam">https://www.theguardian.com/world/2015/dec/17/the-mystery-of-indias-deadly-exam-scam</a></li>
+<li>“Vyapam scam,” Wikipedia. Oct. 10, 2023. Accessed: Oct. 23, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Vyapam_scam&amp;oldid=1179469164">https://en.wikipedia.org/w/index.php?title=Vyapam_scam&amp;oldid=1179469164</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org19d7d2b"></a>Misc<br />
+<div class="outline-text-8" id="text-org19d7d2b">
+<ul class="org-ul">
+<li>“Pakistani medical degrees leave Kashmir graduates without practice rights in India,” Global Voices. Accessed: Aug. 21, 2025. [Online]. Available: <a href="https://globalvoices.org/2025/08/21/pakistani-medical-degrees-leave-kashmir-graduates-without-practice-rights-in-india/">https://globalvoices.org/2025/08/21/pakistani-medical-degrees-leave-kashmir-graduates-without-practice-rights-in-india/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org3a55124"></a>Business<br />
+<div class="outline-text-7" id="text-org3a55124">
+<ul class="org-ul">
+<li>V. Krishnan, “How Naresh Trehan became one of India’s most influential doctor-businessmen,” The Caravan. <a href="https://caravanmagazine.in/reportage/naresh-trehan-medanta-private-practice">https://caravanmagazine.in/reportage/naresh-trehan-medanta-private-practice</a> (accessed Mar. 07, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgff401f2"></a>Misc<br />
+<div class="outline-text-7" id="text-orgff401f2">
+<ul class="org-ul">
+<li>C. M. W. Conversation The, “Why a US distributor has recalled a generic drug made by an Indian pharma company,” Scroll.in. Accessed: Nov. 08, 2025. [Online]. Available: <a href="https://scroll.in/article/1088207/why-a-us-distributor-has-recalled-a-generic-drug-made-by-an-indian-pharma-company">https://scroll.in/article/1088207/why-a-us-distributor-has-recalled-a-generic-drug-made-by-an-indian-pharma-company</a></li>
+
+<li>A. M. Kakkar Tabassum Barnagarwala &amp;. Raghav, “Inside the hidden epidemic of killer infections in Indian hospitals,” Scroll.in. Accessed: Nov. 01, 2025. [Online]. Available: <a href="https://scroll.in/video/1088200/inside-the-hidden-epidemic-of-killer-infections-in-indian-hospitals">https://scroll.in/video/1088200/inside-the-hidden-epidemic-of-killer-infections-in-indian-hospitals</a></li>
+
+<li>“Weak Regulations, Fatal Syrups | Economic and Political Weekly.” Accessed: Nov. 01, 2025. [Online]. Available: <a href="https://www.epw.in/journal/2025/43-44/comment/weak-regulations-fatal-syrups.html">https://www.epw.in/journal/2025/43-44/comment/weak-regulations-fatal-syrups.html</a></li>
+
+<li>T. Barnagarwala, “Silent killers are stalking Indian hospitals. Who is responsible?,” Scroll.in. Accessed: Oct. 31, 2025. [Online]. Available: <a href="https://scroll.in/article/1087935/silent-killers-are-stalking-indian-hospitals-who-is-responsible">https://scroll.in/article/1087935/silent-killers-are-stalking-indian-hospitals-who-is-responsible</a></li>
+<li>T. Barnagarwala, “What hospitals are not telling you about killer bugs in their wards,” Scroll.in. Accessed: Oct. 31, 2025. [Online]. Available: <a href="https://scroll.in/article/1088088/what-hospitals-are-not-telling-you-about-killer-bugs-in-their-wards">https://scroll.in/article/1088088/what-hospitals-are-not-telling-you-about-killer-bugs-in-their-wards</a></li>
+<li>T. Barnagarwala, “Why hospitals get away with poor infection control,” Scroll.in. Accessed: Oct. 31, 2025. [Online]. Available: <a href="https://scroll.in/article/1088175/why-hospitals-get-away-with-poor-infection-control">https://scroll.in/article/1088175/why-hospitals-get-away-with-poor-infection-control</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Vymada Patent Struck Down! Another Blow to Novartis’ Patent Monopolies,” NewsClick. Accessed: Sep. 27, 2025. [Online]. Available: <a href="https://www.newsclick.in/vymada-patent-struck-down-another-blow-novartis-patent-monopolies">https://www.newsclick.in/vymada-patent-struck-down-another-blow-novartis-patent-monopolies</a></li>
+
+<li>P. Chatterjee, “Dev 360 | Medicine and frontiers: The challenge that China poses | Dev 360 | Medicine and frontiers: The challenge that China poses.” Accessed: Sep. 06, 2025. [Online]. Available: <a href="https://www.deccanchronicle.com/opinion/columnists/260620/dev-360-medicine-and-frontiers-the-challenge-that-china-poses.html">https://www.deccanchronicle.com/opinion/columnists/260620/dev-360-medicine-and-frontiers-the-challenge-that-china-poses.html</a></li>
+
+<li>D. C. Dailey Megan Rose,Katherine, “The FDA Let Substandard Factories Ship These Medications to the U.S.,” ProPublica. Accessed: Aug. 13, 2025. [Online]. Available: <a href="https://www.propublica.org/article/fda-drugs-banned-foreign-factories-list">https://www.propublica.org/article/fda-drugs-banned-foreign-factories-list</a></li>
+<li>M. R. Cenziper Debbie, “A Giant Indian Drugmaker Failed to Fix Safety Breaches. The FDA Let It Off the Hook Again and Again.,” ProPublica. Accessed: Aug. 13, 2025. [Online]. Available: <a href="https://www.propublica.org/article/fda-inspections-sun-pharma-drug-exemptions">https://www.propublica.org/article/fda-inspections-sun-pharma-drug-exemptions</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Antibiotics, Diabetes and BP Drugs, Vitamin Supplements Found to Be Not of Standard Quality,” The Wire. Accessed: Jul. 19, 2025. [Online]. Available: <a href="https://thewire.in/health/antibiotics-diabetes-bp-drugs-supplements-nsq-list-june">https://thewire.in/health/antibiotics-diabetes-bp-drugs-supplements-nsq-list-june</a></li>
+
+<li>“Indian pharmaceutical factory explosion leaves 42 dead,” World Socialist Web Site. Accessed: Jul. 08, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/07/08/xygm-j08.html">https://www.wsws.org/en/articles/2025/07/08/xygm-j08.html</a></li>
+
+<li>S. Kumar, “Fatal explosion and fire at Indian pharmaceutical ingredients plant,” Chemistry World. Accessed: Jul. 03, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/fatal-explosion-and-fire-at-indian-pharmaceutical-ingredients-plant/4021795.article">https://www.chemistryworld.com/news/fatal-explosion-and-fire-at-indian-pharmaceutical-ingredients-plant/4021795.article</a></li>
+
+<li>“Interview | When You Are AIIMS Director and on Day One, PM Indira Gandhi is Shot Dead and Brought to You,” The Wire. Accessed: Jun. 22, 2025. [Online]. Available: <a href="https://thewire.in/health/sneh-bhargava-aiims-director-interview-indira-gandhi">https://thewire.in/health/sneh-bhargava-aiims-director-interview-indira-gandhi</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Sinha, “Indian drug regulator issues guidelines on disposal of expired and unused medicines,” Down To Earth. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/health/indian-drug-regulator-issues-guidelines-on-disposal-of-expired-and-unused-medicines">https://www.downtoearth.org.in/health/indian-drug-regulator-issues-guidelines-on-disposal-of-expired-and-unused-medicines</a></li>
+
+<li>Mongabay India, Drugging the environment with pharmaceuticals | Lesser-known pollutants, (Sep. 29, 2023). Accessed: Apr. 19, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=vfDqDEv9wQM">https://www.youtube.com/watch?v=vfDqDEv9wQM</a></li>
+
+<li>“Rare Diseases: Opportunity for SC to Enable Access to Medicines,” NewsClick. Accessed: Apr. 17, 2025. [Online]. Available: <a href="https://www.newsclick.in/rare-diseases-opportunity-sc-enable-access-medicines">https://www.newsclick.in/rare-diseases-opportunity-sc-enable-access-medicines</a></li>
+
+<li>P. Callahan, “An Indian Drugmaker, Investigated by ProPublica Last Year, Has Recalled Two Dozen Medications Sold to U.S. Patients,” ProPublica. Accessed: Apr. 17, 2025. [Online]. Available: <a href="https://www.propublica.org/article/glenmark-recalls-two-dozen-drugs">https://www.propublica.org/article/glenmark-recalls-two-dozen-drugs</a></li>
+
+<li>“Affordable Medicine: Has Indian Patents Act Succeeded?,” NewsClick. Accessed: Apr. 17, 2025. [Online]. Available: <a href="https://www.newsclick.in/affordable-medicine-has-indian-patents-act-succeeded">https://www.newsclick.in/affordable-medicine-has-indian-patents-act-succeeded</a></li>
+
+<li>“Is the Pandemic the Wake-up Call We Need on the Drug Regulatory Process?,” The India Forum. Accessed: Dec. 24, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/article/pandemic-wakeup-call-we-need-drug-regulatory-process">https://www.theindiaforum.in/article/pandemic-wakeup-call-we-need-drug-regulatory-process</a></li>
+
+<li>“How Coaching Classes are Undermining Medical Education in India,” The Wire. Accessed: Dec. 18, 2024. [Online]. Available: <a href="https://thewire.in/education/how-coaching-classes-are-undermining-medical-education-in-india">https://thewire.in/education/how-coaching-classes-are-undermining-medical-education-in-india</a></li>
+
+<li>“‘Threat Culture’ is Killing Bengal’s Medical Education,” NewsClick. Accessed: Sep. 22, 2024. [Online]. Available: <a href="https://www.newsclick.in/threat-culture-killing-bengals-medical-education">https://www.newsclick.in/threat-culture-killing-bengals-medical-education</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org45e12b1"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="org152616b"></a>Films<br />
+<div class="outline-text-7" id="text-org152616b">
+<ul class="org-ul">
+<li>“Munna Bhai M.B.B.S.,” Wikipedia. May 11, 2024. Accessed: May 19, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Munna_Bhai_M.B.B.S.&amp;oldid=1223352231">https://en.wikipedia.org/w/index.php?title=Munna_Bhai_M.B.B.S.&amp;oldid=1223352231</a></li>
+<li>Ek Doctor Ki Maut</li>
+</ul>
+</div>
+</li>
+<li><a id="org6adc80e"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org766ecb2"></a>Misc<br />
+<div class="outline-text-6" id="text-4-5-4-1-5">
+<ul class="org-ul">
+<li>“‘MBBS’: The History of a Unique Indian Medical Degree,” The Wire. Accessed: Feb. 07, 2026. [Online]. Available: <a href="https://thewire.in/history/mbbs-the-history-of-a-unique-indian-medical-degree">https://thewire.in/history/mbbs-the-history-of-a-unique-indian-medical-degree</a></li>
+
+<li>“Did a ‘nasty’ publishing scheme help an Indian dental school win high rankings?” Accessed: Nov. 01, 2024. [Online]. Available: <a href="https://www.science.org/content/article/did-nasty-publishing-scheme-help-indian-dental-school-win-high-rankings">https://www.science.org/content/article/did-nasty-publishing-scheme-help-indian-dental-school-win-high-rankings</a></li>
+
+<li>“Nobel Prize in Physiology or Medicine awarded to discoverers of microRNA,” World Socialist Web Site. Accessed: Oct. 21, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/10/09/heeh-o09.html">https://www.wsws.org/en/articles/2024/10/09/heeh-o09.html</a></li>
+
+<li>S. K. August 2024, “Latest effort to crack down on combination drugs launched by Indian government,” Chemistry World. Accessed: Aug. 31, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/news/latest-effort-to-crack-down-on-combination-drugs-launched-by-indian-government/4020078.article">https://www.chemistryworld.com/news/latest-effort-to-crack-down-on-combination-drugs-launched-by-indian-government/4020078.article</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>T. K. Rajalakshmi, “NTA’s heavy reliance on multiple-choice questions for entrance exams is affecting the quality, fairness of assessments in higher education,” Frontline. Accessed: Jul. 11, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/the-nation/education/mcq-entrance-exams-limitations-in-evaluating-candidate-critical-analytical-abilities/article68366342.ece">https://frontline.thehindu.com/the-nation/education/mcq-entrance-exams-limitations-in-evaluating-candidate-critical-analytical-abilities/article68366342.ece</a></li>
+<li>F. Qamar, “National Testing Agency’s blunders, including NEET paper leaks and scoring errors, have shaken faith in India’s centralised exam system,” Frontline. Accessed: Jul. 11, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/the-nation/education/neet-controversy-nta-national-testing-agency-exam-paper-leaks-students-crisis/article68369752.ece">https://frontline.thehindu.com/the-nation/education/neet-controversy-nta-national-testing-agency-exam-paper-leaks-students-crisis/article68369752.ece</a></li>
+<li>M. S. Babu, “Is NEET designed for exclusion? Dilution of Entry Standards and Economic Barriers Suggest So.,” Frontline. Accessed: Jul. 11, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/the-nation/education/neet-jee-examination-medical-and-engineering-entrance-tests-admission-fees/article68367417.ece">https://frontline.thehindu.com/the-nation/education/neet-jee-examination-medical-and-engineering-entrance-tests-admission-fees/article68367417.ece</a></li>
+<li>V. Roy, “Editor’s Note | Vaishna Roy Writes: Dirty Skeletons In The NEET Closet,” Frontline. Accessed: Jul. 11, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/the-nation/education/editors-note-vaishna-roy-neet-fiasco-nta-one-nation-one-examination-need-to-discuss-education-scandal/article68365997.ece">https://frontline.thehindu.com/the-nation/education/editors-note-vaishna-roy-neet-fiasco-nta-one-nation-one-examination-need-to-discuss-education-scandal/article68365997.ece</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Meritocracy to Moneyocracy: Unseen Costs of Exam Fraud,” NewsClick. Accessed: Jun. 24, 2024. [Online]. Available: <a href="https://www.newsclick.in/meritocracy-moneyocracy-unseen-costs-exam-fraud">https://www.newsclick.in/meritocracy-moneyocracy-unseen-costs-exam-fraud</a></li>
+
+<li>“Massive Mismanagement of NEET and NET | Economic and Political Weekly.” Accessed: Jun. 24, 2024. [Online]. Available: <a href="https://www.epw.in/journal/2024/25/comment/massive-mismanagement-neet-and-net.html">https://www.epw.in/journal/2024/25/comment/massive-mismanagement-neet-and-net.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“CCTVs missing, unguarded strong-rooms: Review of NEET 2024 found glaring gaps in exam centres,” The Indian Express. Accessed: Jun. 21, 2024. [Online]. Available: <a href="https://indianexpress.com/article/education/cctvs-missing-unguarded-strong-rooms-review-of-neet-2024-found-glaring-gaps-in-exam-centres-9405443/">https://indianexpress.com/article/education/cctvs-missing-unguarded-strong-rooms-review-of-neet-2024-found-glaring-gaps-in-exam-centres-9405443/</a></li>
+<li>“Education Minister Dharmendra Pradhan takes ‘moral responsibility’ for NEET ‘errors’, sets up high-level panel,” The Indian Express. Accessed: Jun. 21, 2024. [Online]. Available: <a href="https://indianexpress.com/article/education/education-minister-dharmendra-pradhan-takes-moral-responsibility-for-neet-errors-sets-up-high-level-panel-9405459/">https://indianexpress.com/article/education/education-minister-dharmendra-pradhan-takes-moral-responsibility-for-neet-errors-sets-up-high-level-panel-9405459/</a></li>
+<li>“Centre’s testing agency fails test: Questions on NTA’s composition and competence.” Accessed: Jun. 21, 2024. [Online]. Available: <a href="https://www.telegraphindia.com/india/centres-testing-agency-fails-test-questions-on-ntas-composition-and-competence/cid/2028566">https://www.telegraphindia.com/india/centres-testing-agency-fails-test-questions-on-ntas-composition-and-competence/cid/2028566</a></li>
+<li>M. Rajshekhar, “Vyapam’s hidden costs: Broken dreams and a health system staffed by dodgy doctors,” Scroll.in. Accessed: Jun. 21, 2024. [Online]. Available: <a href="http://scroll.in/article/739826/vyapams-hidden-costs-broken-dreams-and-a-health-system-staffed-by-dodgy-doctors">http://scroll.in/article/739826/vyapams-hidden-costs-broken-dreams-and-a-health-system-staffed-by-dodgy-doctors</a></li>
+</ul>
+
+
+
+
+
+
+
+<ul class="org-ul">
+<li>Protests Against NEET Irregularities to be Intensified! | NewsClick, (Jun. 18, 2024). Accessed: Jun. 20, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=R7eMQ6giyHs">https://www.youtube.com/watch?v=R7eMQ6giyHs</a></li>
+<li>K. Gupta, “NEET 2024 controversy: Would the retest for a handful of students be of any help?,” Frontline. Accessed: Jun. 20, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/news/neet-2024-exam-paper-leak-grace-marks-merit-supreme-court-retest-doctors-india/article68303865.ece">https://frontline.thehindu.com/news/neet-2024-exam-paper-leak-grace-marks-merit-supreme-court-retest-doctors-india/article68303865.ece</a></li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>“NEET: Why an exam has sparked national outrage in India.” Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://www.bbc.com/news/articles/cv22wl82yldo">https://www.bbc.com/news/articles/cv22wl82yldo</a></li>
+<li>“What a College Exam Scandal Says About Modi’s India,” Bloomberg.com, Jun. 18, 2024. Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://www.bloomberg.com/opinion/articles/2024-06-18/what-a-medical-exam-scandal-says-about-modi-s-india">https://www.bloomberg.com/opinion/articles/2024-06-18/what-a-medical-exam-scandal-says-about-modi-s-india</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>S. Barik, “NTA officials to face action if found involved in NEET irregularities, says Dharmendra Pradhan,” The Hindu, Jun. 16, 2024. Accessed: Jun. 17, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/nta-officials-to-face-action-if-found-involved-in-neet-irregularities-says-dharmendra-pradhan/article68297473.ece">https://www.thehindu.com/news/national/nta-officials-to-face-action-if-found-involved-in-neet-irregularities-says-dharmendra-pradhan/article68297473.ece</a></li>
+<li>T. H. Bureau, “Support students’ demand for NEET retest, Bharadwaj appeals to public,” The Hindu, Jun. 16, 2024. Accessed: Jun. 17, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/Delhi/support-students-demand-for-neet-retest-bharadwaj-appeals-to-public/article68297081.ece">https://www.thehindu.com/news/cities/Delhi/support-students-demand-for-neet-retest-bharadwaj-appeals-to-public/article68297081.ece</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+<ul class="org-ul">
+<li>“Delhi: Hundreds of Students Protest, Demand Scrapping of NTA After NEET, CUET ‘Irregularities,’” NewsClick. Accessed: Jun. 17, 2024. [Online]. Available: <a href="https://www.newsclick.in/delhi-hundreds-students-protest-demand-scrapping-nta-after-neet-cuet-irregularities">https://www.newsclick.in/delhi-hundreds-students-protest-demand-scrapping-nta-after-neet-cuet-irregularities</a></li>
+<li>Questions Cloud NEET, Modi Govt: Is Opp Gearing up to Challenge? | NewsClick, (Jun. 14, 2024). Accessed: Jun. 17, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=KrU0rxID9nk">https://www.youtube.com/watch?v=KrU0rxID9nk</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>M. Stone and A. M. Association, “How an Indian government policy backfired: The unintended consequences of price regulation of prescription drugs.” Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://medicalxpress.com/news/2024-06-indian-policy-backfired-unintended-consequences.html">https://medicalxpress.com/news/2024-06-indian-policy-backfired-unintended-consequences.html</a></li>
+
+<li>PTI, “Will return Padma award, says traditional medicine practitioner Hemchand Manjhi after threats from Naxalites,” The Hindu, May 27, 2024. Accessed: May 28, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/will-return-padma-award-says-traditional-medicine-practitioner-hemchand-manjhi-after-threats-from-naxalites/article68221140.ece">https://www.thehindu.com/news/national/will-return-padma-award-says-traditional-medicine-practitioner-hemchand-manjhi-after-threats-from-naxalites/article68221140.ece</a></li>
+
+<li>P. B. April 2024, “Six dead in explosion and fire at Indian pharmaceutical plant,” Chemistry World. Accessed: Apr. 05, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/news/six-dead-in-explosion-and-fire-at-indian-pharmaceutical-plant/4019268.article">https://www.chemistryworld.com/news/six-dead-in-explosion-and-fire-at-indian-pharmaceutical-plant/4019268.article</a></li>
+
+<li>“AIIMS Kalyani, to be inaugurated by PM Modi today, lacks environmental clearance: West Bengal Pollution Control Board.” Accessed: Feb. 26, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/environment/aiims-kalyani-to-be-inaugurated-by-pm-modi-today-lacks-environmental-clearance-west-bengal-pollution-control-board-94646">https://www.downtoearth.org.in/news/environment/aiims-kalyani-to-be-inaugurated-by-pm-modi-today-lacks-environmental-clearance-west-bengal-pollution-control-board-94646</a></li>
+
+<li>“Meet S Srinivasan, the activist-entrepreneur who got 329 irrational combination drugs banned,” Moneycontrol. Accessed: Oct. 24, 2023. [Online]. Available: <a href="https://www.moneycontrol.com/news/business/companies/meet-s-srinivasan-the-activist-entrepreneur-who-got-329-irrational-combination-drugs-banned-2953741.html">https://www.moneycontrol.com/news/business/companies/meet-s-srinivasan-the-activist-entrepreneur-who-got-329-irrational-combination-drugs-banned-2953741.html</a></li>
+
+<li>“Physicians for Human Rights - Trial of Dr Binayak Sen in India ends this week,” PHR. Accessed: Oct. 23, 2023. [Online]. Available: <a href="https://phr.org/our-work/resources/trial-of-dr-binayak-sen-in-india-ends-this-week/">https://phr.org/our-work/resources/trial-of-dr-binayak-sen-in-india-ends-this-week/</a></li>
+
+<li>“‘Pauper’s hospital’ doctor arrested in Chhattisgarh,” The Hindu, Mar. 18, 2016. Accessed: Oct. 23, 2023. [Online]. Available: <a href="https://www.thehindu.com/news/national/other-states/paupers-hospital-doctor-arrested-in-chhattisgarh/article8374306.ece">https://www.thehindu.com/news/national/other-states/paupers-hospital-doctor-arrested-in-chhattisgarh/article8374306.ece</a></li>
+
+<li>“India: Arrest of Dr Saibal Jana of Shaheed Hospital (at Dalli Rajhara) Human Rights Defenders Alert - India / E-Petition to Chief Minister of Chhattisgarh - South Asia Citizens Web.” Accessed: Oct. 23, 2023. [Online]. Available: <a href="http://sacw.net/article12515.html">http://sacw.net/article12515.html</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgeafa95a" class="outline-3">
+<h3 id="orgeafa95a"><span class="section-number-3">4.6.</span> Business Studies, Misc</h3>
+<div class="outline-text-3" id="text-4-6">
+</div>
+<div id="outline-container-org33feb52" class="outline-4">
+<h4 id="org33feb52"><span class="section-number-4">4.6.1.</span> Pharmacies</h4>
+<div class="outline-text-4" id="text-4-6-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgf839dde"></a>General<br /></li>
+<li><a id="org6b05b60"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org8071dd3"></a>COVID-19<br />
+<ul class="org-ul">
+<li><a id="orgeabef9b"></a>New England Complex Systems Institute<br />
+<div class="outline-text-7" id="text-orgeabef9b">
+<ul class="org-ul">
+<li>“Coronavirus Guide for Supermarkets, Grocery Stores, and Pharmacies — New England Complex Systems Institute.” Accessed: Mar. 19, 2020. [Online]. Available: <a href="https://necsi.edu/coronavirus-guide-for-supermarkets-grocery-stores-and-pharmacies">https://necsi.edu/coronavirus-guide-for-supermarkets-grocery-stores-and-pharmacies</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="org8187d81"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org2ccf39a" class="outline-4">
+<h4 id="org2ccf39a"><span class="section-number-4">4.6.2.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orge7b26aa" class="outline-3">
+<h3 id="orge7b26aa"><span class="section-number-3">4.7.</span> Security Studies, Misc</h3>
+</div>
+<div id="outline-container-org06aa852" class="outline-3">
+<h3 id="org06aa852"><span class="section-number-3">4.8.</span> Communication, Misc</h3>
+<div class="outline-text-3" id="text-4-8">
+</div>
+<div id="outline-container-orgadfa286" class="outline-4">
+<h4 id="orgadfa286"><span class="section-number-4">4.8.1.</span> Journalism</h4>
+<div class="outline-text-4" id="text-4-8-1">
+<ul class="org-ul">
+<li>“Health and Medicine Guide - Table of Contents,” Global Investigative Journalism Network. <a href="https://gijn.org/health-and-medicine-guide-table-of-contents/">https://gijn.org/health-and-medicine-guide-table-of-contents/</a> (accessed Sep. 06, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8e142f9" class="outline-3">
+<h3 id="org8e142f9"><span class="section-number-3">4.9.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-9">
+<ul class="org-ul">
+<li>“An Allegedly ‘Grossly Negligent’ Surgery Exposes Gaps in Europe’s System to Monitor Medical Licensing,” OCCRP. Accessed: Jan. 14, 2026. [Online]. Available: <a href="https://www.occrp.org/en/news/an-allegedly-grossly-negligent-surgery-exposes-gaps-in-europes-system-to-oversee-doctors">https://www.occrp.org/en/news/an-allegedly-grossly-negligent-surgery-exposes-gaps-in-europes-system-to-oversee-doctors</a></li>
+
+<li>“How to Investigate Pharmaceutical Oligopolies.” Accessed: Nov. 29, 2025. [Online]. Available: <a href="https://gijn.org/stories/gijc25-investigate-pharmaceutical-oligopolies/">https://gijn.org/stories/gijc25-investigate-pharmaceutical-oligopolies/</a></li>
+
+<li>“Doctors Call On EU to Protect Patient Safety After OCCRP Investigation,” OCCRP. Accessed: Nov. 17, 2025. [Online]. Available: <a href="https://www.occrp.org/en/news/doctors-call-on-eu-to-protect-patient-safety-after-occrp-investigation">https://www.occrp.org/en/news/doctors-call-on-eu-to-protect-patient-safety-after-occrp-investigation</a></li>
+
+<li>“As a hospital chaplain, my job was holding hands in the dark | Psyche Turning Points.” Accessed: Nov. 07, 2025. [Online]. Available: <a href="https://psyche.co/turning-points/as-a-hospital-chaplain-my-job-was-holding-hands-in-the-dark">https://psyche.co/turning-points/as-a-hospital-chaplain-my-job-was-holding-hands-in-the-dark</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Pfizer and Novo Nordisk’s battle over Metsera,” Chemistry World. Accessed: Nov. 08, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/pfizer-and-novo-nordisks-battle-over-metsera/4022448.article">https://www.chemistryworld.com/news/pfizer-and-novo-nordisks-battle-over-metsera/4022448.article</a></li>
+
+<li>“Q &amp; A with Liset Cruz, Reporting on US Medical Deportations.” Accessed: Oct. 30, 2025. [Online]. Available: <a href="https://gijn.org/stories/backstory-liset-cruz-us-medical-deportations/">https://gijn.org/stories/backstory-liset-cruz-us-medical-deportations/</a></li>
+
+<li>“Surgeon Barred in UK Suspended in Spain After OCCRP Revelations,” OCCRP. Accessed: Oct. 29, 2025. [Online]. Available: <a href="https://www.occrp.org/en/news/surgeon-barred-in-uk-suspended-in-spain-after-occrp-revelations">https://www.occrp.org/en/news/surgeon-barred-in-uk-suspended-in-spain-after-occrp-revelations</a></li>
+
+<li>L. Parramore, “Drug Price Wars: What Can Really Tame Big Pharma?,” Institute for New Economic Thinking. Accessed: Oct. 15, 2025. [Online]. Available: <a href="https://www.ineteconomics.org/perspectives/blog/drug-price-wars-what-can-really-tame-big-pharma">https://www.ineteconomics.org/perspectives/blog/drug-price-wars-what-can-really-tame-big-pharma</a></li>
+
+<li>“Europe Reviewing Ways to Better Protect Patients in Response to OCCRP Doctors Investigation,” OCCRP. Accessed: Oct. 24, 2025. [Online]. Available: <a href="https://www.occrp.org/en/news/europe-reviewing-ways-to-better-protect-patients-in-response-to-occrp-doctors-investigation">https://www.occrp.org/en/news/europe-reviewing-ways-to-better-protect-patients-in-response-to-occrp-doctors-investigation</a></li>
+
+<li>B. Woods, “The TrumpRx website won’t slash drug prices — but this will,” Nature, vol. 646, no. 8086, pp. 777–777, Oct. 2025, doi: 10.1038/d41586-025-03397-7.</li>
+
+<li>“‘Bad Practice’: How We Built a Database of Delicensed Doctors,” OCCRP. Accessed: Oct. 22, 2025. [Online]. Available: <a href="https://www.occrp.org/en/project/bad-practice/bad-practice-how-we-built-a-database-of-delicensed-doctors">https://www.occrp.org/en/project/bad-practice/bad-practice-how-we-built-a-database-of-delicensed-doctors</a></li>
+
+<li>“2025 Nobel Prize in Physiology or Medicine awarded for the discovery of Peripheral Immune Tolerance,” World Socialist Web Site. Accessed: Oct. 20, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/10/20/kbnh-o20.html">https://www.wsws.org/en/articles/2025/10/20/kbnh-o20.html</a></li>
+
+<li>“Health Officials Call For Action Over Banned Doctors Still Practicing in Europe,” OCCRP. Accessed: Oct. 03, 2025. [Online]. Available: <a href="https://www.occrp.org/en/news/health-officials-call-for-action-over-banned-doctors-still-practicing-in-europe">https://www.occrp.org/en/news/health-officials-call-for-action-over-banned-doctors-still-practicing-in-europe</a></li>
+
+<li>“System Failure: How Banned Doctors Move Across Europe, Leaving Patients Vulnerable,” OCCRP. Accessed: Oct. 02, 2025. [Online]. Available: <a href="https://www.occrp.org/en/project/bad-practice/system-failure-banned-doctors-can-easily-move-across-europe-leaving-patients-vulnerable">https://www.occrp.org/en/project/bad-practice/system-failure-banned-doctors-can-easily-move-across-europe-leaving-patients-vulnerable</a></li>
+
+<li>“How federal research support has helped create life-changing medicines,” MIT News | Massachusetts Institute of Technology. Accessed: Sep. 26, 2025. [Online]. Available: <a href="https://news.mit.edu/2025/how-federal-research-support-has-helped-create-life-changing-medicines-0925">https://news.mit.edu/2025/how-federal-research-support-has-helped-create-life-changing-medicines-0925</a></li>
+
+<li>“Monthly Review | Disease, Disability, and Paternalism in the Fight for Medicare for All,” Monthly Review. Accessed: Sep. 08, 2025. [Online]. Available: <a href="https://monthlyreview.org/2021/12/01/disease-disability-and-paternalism-in-the-fight-for-medicare-for-all/">https://monthlyreview.org/2021/12/01/disease-disability-and-paternalism-in-the-fight-for-medicare-for-all/</a></li>
+
+<li>“Monthly Review | Big Pharma and Monopoly Capital: Four Dynamics in the Decline of Innovation,” Monthly Review. Accessed: Sep. 08, 2025. [Online]. Available: <a href="https://monthlyreview.org/2025/06/01/big-pharma-and-monopoly-capital/">https://monthlyreview.org/2025/06/01/big-pharma-and-monopoly-capital/</a></li>
+
+<li>“Monthly Review | Social Medicine and Collective Health,” Monthly Review. Accessed: Sep. 08, 2025. [Online]. Available: <a href="https://monthlyreview.org/2024/01/01/social-medicine-and-collective-health/">https://monthlyreview.org/2024/01/01/social-medicine-and-collective-health/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Monthly Review | Big Pharma and Monopoly Capital: Four Dynamics in the Decline of Innovation,” Monthly Review. Accessed: Sep. 08, 2025. [Online]. Available: <a href="https://monthlyreview.org/2025/06/01/big-pharma-and-monopoly-capital/">https://monthlyreview.org/2025/06/01/big-pharma-and-monopoly-capital/</a></li>
+
+<li>“Pharma sector jolted by unpredictable US tariffs policy,” Chemistry World. Accessed: Sep. 02, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/industry/pharma-sector-jolted-by-unpredictable-us-tariffs-policy/4022064.article">https://www.chemistryworld.com/industry/pharma-sector-jolted-by-unpredictable-us-tariffs-policy/4022064.article</a></li>
+
+<li>“Pluralistic: Pedophiles for Purdue Pharma (05 Dec 2023) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Aug. 30, 2025. [Online]. Available: <a href="https://pluralistic.net/2023/12/05/third-party-nonconsensual-releases/">https://pluralistic.net/2023/12/05/third-party-nonconsensual-releases/</a></li>
+
+<li>BY, “How the Pharma Industry Botched Alzheimer’s Treatment.” Accessed: Aug. 30, 2025. [Online]. Available: <a href="https://jacobin.com/2025/08/big-pharma-alzheimer-drugs-research">https://jacobin.com/2025/08/big-pharma-alzheimer-drugs-research</a></li>
+
+<li>“Trump’s destruction of Medicare: An update,” World Socialist Web Site. Accessed: Jun. 26, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/06/25/wpch-j25.html">https://www.wsws.org/en/articles/2025/06/25/wpch-j25.html</a></li>
+
+<li>D. C. Hwang Megan Rose,Brandon Roberts,Irena, “Threat in Your Medicine Cabinet: The FDA’s Gamble on America’s Drugs,” ProPublica. Accessed: Jun. 22, 2025. [Online]. Available: <a href="https://www.propublica.org/article/fda-drug-loophole-sun-pharma">https://www.propublica.org/article/fda-drug-loophole-sun-pharma</a></li>
+
+<li>“Pluralistic: Oregon bans the corporate practice of medicine (20 Jun 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Jun. 20, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/06/20/the-doctor-will-gouge-you-now/">https://pluralistic.net/2025/06/20/the-doctor-will-gouge-you-now/</a></li>
+
+<li>“University of California San Francisco medical professor fired for opposing genocide,” World Socialist Web Site. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/06/18/daan-j18.html">https://www.wsws.org/en/articles/2025/06/18/daan-j18.html</a></li>
+
+<li>BY, “The FDA Is Approving Drugs Without Evidence They Work.” Accessed: Jun. 06, 2025. [Online]. Available: <a href="https://jacobin.com/2025/06/fda-approval-drugs-effectiveness-risk">https://jacobin.com/2025/06/fda-approval-drugs-effectiveness-risk</a></li>
+
+<li>C. McGoogan, “Pharmaceutical giants knowingly sold HIV-infected treatment to NHS,” The Telegraph, May 04, 2024. Accessed: Jun. 04, 2025. [Online]. Available: <a href="https://www.telegraph.co.uk/news/2024/05/04/pharmaceutical-giants-sold-hiv-infected-treatment/">https://www.telegraph.co.uk/news/2024/05/04/pharmaceutical-giants-sold-hiv-infected-treatment/</a></li>
+
+<li>J. R. February 2025, “Apothecary inventory offers glimpse into medicines from the 17th century,” Chemistry World. Accessed: Feb. 19, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/apothecary-inventory-offers-glimpse-into-medicines-from-the-17th-century/4020974.article">https://www.chemistryworld.com/news/apothecary-inventory-offers-glimpse-into-medicines-from-the-17th-century/4020974.article</a></li>
+
+<li>P. C. Rose Debbie Cenziper,Megan, “The FDA Hasn’t Inspected This Drug Factory After 7 Recalls for the Same Flaw, 1 Potentially Deadly,” ProPublica. Accessed: Dec. 24, 2024. [Online]. Available: <a href="https://www.propublica.org/article/glenmark-pharmaceuticals-recalls-fda-oversight">https://www.propublica.org/article/glenmark-pharmaceuticals-recalls-fda-oversight</a></li>
+
+<li>“Shooter of UnitedHealthcare CEO Brian Thompson remains at-large,” World Socialist Web Site. Accessed: Dec. 06, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/12/06/tjsz-d06.html">https://www.wsws.org/en/articles/2024/12/06/tjsz-d06.html</a></li>
+
+<li>“Pluralistic: America’s richest Medicare fraudsters are untouchable (13 Nov 2024) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Nov. 14, 2024. [Online]. Available: <a href="https://pluralistic.net/2024/11/13/last-gasp/">https://pluralistic.net/2024/11/13/last-gasp/</a></li>
+
+<li>P. Ferdinand, “Drug and medical device companies target next generation of physicians, put patients at risk, experts say,” U.S. Right to Know. Accessed: Nov. 14, 2024. [Online]. Available: <a href="https://usrtk.org/healthwire/drug-device-companies-target-next-generation-physicians-putting-patients-at-risk/">https://usrtk.org/healthwire/drug-device-companies-target-next-generation-physicians-putting-patients-at-risk/</a></li>
+
+<li>“Big Pharma Is a Big Menace to Global Health.” Accessed: Sep. 06, 2024. [Online]. Available: <a href="https://jacobin.com/2024/09/big-pharma-global-health-patents">https://jacobin.com/2024/09/big-pharma-global-health-patents</a></li>
+
+<li>“Pharmaceutical industry,” Chemistry World. Accessed: Jul. 01, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/pharmaceutical-industry/43.subject">https://www.chemistryworld.com/pharmaceutical-industry/43.subject</a></li>
+
+<li>R. Marya and R. Patel, Inflamed: Deep Medicine and the Anatomy of Injustice. Penguin UK, 2021.</li>
+
+<li>“Rupa Marya, MD | UCSF Hospital Medicine.” <a href="https://ucsfhealthhospitalmedicine.ucsf.edu/people/rupa-marya#Websites">https://ucsfhealthhospitalmedicine.ucsf.edu/people/rupa-marya#Websites</a> (accessed Jul. 28, 2022).</li>
+
+<li>J. R. July 2024, “Explainer: How is the US pharmaceutical patent system being misused?,” Chemistry World. Accessed: Jul. 12, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/news/explainer-how-is-the-us-pharmaceutical-patent-system-being-misused/4019798.article">https://www.chemistryworld.com/news/explainer-how-is-the-us-pharmaceutical-patent-system-being-misused/4019798.article</a></li>
+
+<li>“Pharma Portal - Powerbase.” Accessed: Jun. 24, 2024. [Online]. Available: <a href="https://powerbase.info/index.php/Pharma_Portal">https://powerbase.info/index.php/Pharma_Portal</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>N. Dearden, Pharmanomics: How Big Pharma Destroys Global Health. London ; New York: Verso, 2023.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org992c313" class="outline-2">
+<h2 id="org992c313"><span class="section-number-2">5.</span> Core</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org00070e8" class="outline-3">
+<h3 id="org00070e8"><span class="section-number-3">5.1.</span> Pharmacology</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Pharmacology: <a href="https://tinyurl.com/454eykcp">https://tinyurl.com/454eykcp</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb3cf0ca" class="outline-2">
+<h2 id="orgb3cf0ca"><span class="section-number-2">6.</span> Arts</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org51bdf3f" class="outline-3">
+<h3 id="org51bdf3f"><span class="section-number-3">6.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>T. O. Staff, “American Medical Association Introduces New Highly Effective Placebo Doctors,” The Onion. Accessed: Nov. 06, 2025. [Online]. Available: <a href="https://theonion.com/american-medical-association-introduces-new-highly-effe-1819576542/">https://theonion.com/american-medical-association-introduces-new-highly-effe-1819576542/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6775ef8" class="outline-2">
+<h2 id="org6775ef8"><span class="section-number-2">7.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org376df0a" class="outline-3">
+<h3 id="org376df0a"><span class="section-number-3">7.1.</span> Complementary and Alternative Medicine</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>Complementary and Alternative Medicine: <a href="https://tinyurl.com/3w27s8yu">https://tinyurl.com/3w27s8yu</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org29b3b4b" class="outline-3">
+<h3 id="org29b3b4b"><span class="section-number-3">7.2.</span> Taurine</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>H. Basilio, “Anti-ageing effects of popular supplement taurine challenged,” Nature, Jun. 2025, doi: 10.1038/d41586-025-01747-z.</li>
+
+<li>“Taurine,” Wikipedia. Jun. 18, 2023. Accessed: Jun. 19, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Taurine&amp;oldid=1160813467">https://en.wikipedia.org/w/index.php?title=Taurine&amp;oldid=1160813467</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. McGaunn and J. A. Baur, “Taurine linked with healthy aging,” Science, vol. 380, no. 6649, pp. 1010–1011, Jun. 2023, doi: 10.1126/science.adi3025.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Top Foods High in Taurine,” WebMD. <a href="https://www.webmd.com/diet/foods-high-in-taurine">https://www.webmd.com/diet/foods-high-in-taurine</a> (accessed Jun. 19, 2023).</li>
+<li>“TAURINE: Overview, Uses, Side Effects, Precautions, Interactions, Dosing and Reviews.” <a href="https://www.webmd.com/vitamins/ai/ingredientmono-1024/taurine">https://www.webmd.com/vitamins/ai/ingredientmono-1024/taurine</a> (accessed Jun. 19, 2023).</li>
+<li>“Does your energy drink contain taurine?,” Mayo Clinic. <a href="https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/taurine/faq-20058177">https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/taurine/faq-20058177</a> (accessed Jun. 19, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Taurine May Be a Key to Longer and Healthier Life, (Jun. 08, 2023). Accessed: Jun. 19, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=NNudZlyGpaQ">https://www.youtube.com/watch?v=NNudZlyGpaQ</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org415a515" class="outline-3">
+<h3 id="org415a515"><span class="section-number-3">7.3.</span> Possibly MisInfo/DisInfo</h3>
+<div class="outline-text-3" id="text-7-3">
+</div>
+<div id="outline-container-orga93d555" class="outline-4">
+<h4 id="orga93d555"><span class="section-number-4">7.3.1.</span> CHD</h4>
+<div class="outline-text-4" id="text-7-3-1">
+<ul class="org-ul">
+<li>“Big Pharma Archives,” Children’s Health Defense. Accessed: Mar. 30, 2024. [Online]. Available: <a href="https://childrenshealthdefense.org/defender_category/big-pharma/">https://childrenshealthdefense.org/defender_category/big-pharma/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org187ade3" class="outline-2">
+<h2 id="org187ade3"><span class="section-number-2">8.</span> Misc</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>J. Aprea, “The Medicinal Wood That Turned Water Blue,” JSTOR Daily. Accessed: Jan. 30, 2026. [Online]. Available: <a href="http://daily.jstor.org/the-medicinal-wood-that-turned-water-blue/">http://daily.jstor.org/the-medicinal-wood-that-turned-water-blue/</a></li>
+
+<li>“Medicine is uncertain: embracing that makes doctors better | Aeon Essays,” Aeon. Accessed: Oct. 24, 2025. [Online]. Available: <a href="https://aeon.co/essays/medicine-is-uncertain-embracing-that-makes-doctors-better">https://aeon.co/essays/medicine-is-uncertain-embracing-that-makes-doctors-better</a></li>
+
+<li>J. Robinson, “Medicine Nobel prize recognises discovery of protective ‘security guard’ regulatory T cells,” Chemistry World. Accessed: Oct. 07, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/medicine-nobel-prize-recognises-discovery-of-protective-security-guard-regulatory-t-cells/4022275.article">https://www.chemistryworld.com/news/medicine-nobel-prize-recognises-discovery-of-protective-security-guard-regulatory-t-cells/4022275.article</a></li>
+
+<li>M. Naddaf and E. Gibney, “Medicine Nobel goes to scientists who revealed secrets of immune system ‘regulation,’” Nature, Oct. 2025, doi: 10.1038/d41586-025-03193-3.</li>
+
+<li>J. Haarhuis, “Why the l-carnitine sport supplement is controversial,” The Conversation. Accessed: Jul. 04, 2025. [Online]. Available: <a href="http://theconversation.com/why-the-l-carnitine-sport-supplement-is-controversial-219520">http://theconversation.com/why-the-l-carnitine-sport-supplement-is-controversial-219520</a></li>
+
+<li>G. Writer, “Are Your Supplements Safe To Consume? Watch Out for These Common Fillers - The Non-GMO Project.” Accessed: Jul. 03, 2025. [Online]. Available: <a href="https://www.nongmoproject.org/blog/are-your-supplements-safe-to-consume-watch-out-for-these-common-fillers/">https://www.nongmoproject.org/blog/are-your-supplements-safe-to-consume-watch-out-for-these-common-fillers/</a></li>
+
+<li>“For an anaesthesiologist, intuition stands between life and death | Aeon Essays,” Aeon. Accessed: Mar. 04, 2025. [Online]. Available: <a href="https://aeon.co/essays/for-an-anaesthesiologist-intuition-stands-between-life-and-death">https://aeon.co/essays/for-an-anaesthesiologist-intuition-stands-between-life-and-death</a></li>
+
+<li>S. H. December 2024, “Pharmaceuticals roundup 2024,” Chemistry World. Accessed: Dec. 18, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/news/pharmaceuticals-roundup-2024/4020698.article">https://www.chemistryworld.com/news/pharmaceuticals-roundup-2024/4020698.article</a></li>
+
+<li>C. November 2024, “How long are medicines good for?,” Chemistry World. Accessed: Nov. 28, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/opinion/how-long-are-medicines-good-for/4020553.article">https://www.chemistryworld.com/opinion/how-long-are-medicines-good-for/4020553.article</a></li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>“Nobel Prize in Physiology or Medicine awarded to discoverers of microRNA,” World Socialist Web Site. Accessed: Oct. 20, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/10/09/heeh-o09.html">https://www.wsws.org/en/articles/2024/10/09/heeh-o09.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>H. Johnston, “Precision medicine: meet two medical physicists who are making it possible,” Physics World. Accessed: Jul. 12, 2024. [Online]. Available: <a href="https://physicsworld.com/precision-medicine-meet-two-medical-physicists-who-are-making-it-possible/">https://physicsworld.com/precision-medicine-meet-two-medical-physicists-who-are-making-it-possible/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>R. Lufkin and J. Fung, Lies I Taught in Medical School: How Conventional Medicine Is Making You Sicker and What You Can Do to Save Your Own Life. BenBella Books, 2024.</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>R. Strand, <i>What Your Doctor Doesn't Know About Nutritional Medicine May Be Killing You.</i> Thomas Nelson, 2013.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Medicine,” Cambridge Core. Accessed: Feb. 23, 2024. [Online]. Available: <a href="https://www.cambridge.org/core/elements/subject/Medicine/66FF02B2A4F83D9A645001545197F287">https://www.cambridge.org/core/elements/subject/Medicine/66FF02B2A4F83D9A645001545197F287</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:58</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

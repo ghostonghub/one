@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Waste</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Waste</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org54ec0d7">1. General</a></li>
+<li><a href="#org2f2dd3a">2. STEMM</a>
+<ul>
+<li><a href="#org81d3f92">2.1. Systems Sciences</a>
+<ul>
+<li><a href="#org528e0fc">2.1.1. Complexity Science</a></li>
+<li><a href="#org2f03ad0">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org2c9c156">2.2. CSE</a>
+<ul>
+<li><a href="#org4a573e5">2.2.1. General</a></li>
+<li><a href="#orgd04ea40">2.2.2. World</a></li>
+<li><a href="#org9e8580d">2.2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org497f617">2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org7e775ff">3. Worldly Matters</a>
+<ul>
+<li><a href="#orgb73b6ec">3.1. Nation States</a>
+<ul>
+<li><a href="#org7b78e46">3.1.1. India</a></li>
+</ul>
+</li>
+<li><a href="#org7de6c73">3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org737ac48">4. Core</a>
+<ul>
+<li><a href="#orgd26d529">4.1. Practice</a></li>
+</ul>
+</li>
+<li><a href="#org71e36e9">5. Special Topics</a>
+<ul>
+<li><a href="#org70aa58d">5.1. Excreta</a>
+<ul>
+<li><a href="#orgb8ed477">5.1.1. World</a></li>
+<li><a href="#org34c4fec">5.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orga3ef362">5.2. E-Waste</a></li>
+</ul>
+</li>
+<li><a href="#org0a9179d">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org54ec0d7" class="outline-2">
+<h2 id="org54ec0d7"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org2f2dd3a" class="outline-2">
+<h2 id="org2f2dd3a"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org81d3f92" class="outline-3">
+<h3 id="org81d3f92"><span class="section-number-3">2.1.</span> Systems Sciences</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org528e0fc" class="outline-4">
+<h4 id="org528e0fc"><span class="section-number-4">2.1.1.</span> Complexity Science</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>“The new science of waste | Santa Fe Institute.” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://www.santafe.edu/news-center/news/the-new-science-of-waste">https://www.santafe.edu/news-center/news/the-new-science-of-waste</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2f03ad0" class="outline-4">
+<h4 id="org2f03ad0"><span class="section-number-4">2.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>“Transforming waste into a valuable resource,” IIASA - International Institute for Applied Systems Analysis. Accessed: Mar. 31, 2024. [Online]. Available: <a href="https://iiasa.ac.at/blog/mar-2024/transforming-waste-into-valuable-resource">https://iiasa.ac.at/blog/mar-2024/transforming-waste-into-valuable-resource</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2c9c156" class="outline-3">
+<h3 id="org2c9c156"><span class="section-number-3">2.2.</span> CSE</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org4a573e5" class="outline-4">
+<h4 id="org4a573e5"><span class="section-number-4">2.2.1.</span> General</h4>
+</div>
+<div id="outline-container-orgd04ea40" class="outline-4">
+<h4 id="orgd04ea40"><span class="section-number-4">2.2.2.</span> World</h4>
+<div class="outline-text-4" id="text-2-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgb91238b"></a>Nation States<br />
+<ol class="org-ol">
+<li><a id="org5aac3a0"></a>India<br />
+<div class="outline-text-6" id="text-2-2-2-1-1">
+<ul class="org-ul">
+<li>“Digitalisation is revolutionising faecal sludge and septage management in India.” Accessed: Jun. 25, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/waste/digitalisation-is-revolutionising-faecal-sludge-and-septage-management-in-india-96836">https://www.downtoearth.org.in/news/waste/digitalisation-is-revolutionising-faecal-sludge-and-septage-management-in-india-96836</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org9e8580d" class="outline-4">
+<h4 id="org9e8580d"><span class="section-number-4">2.2.3.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org497f617" class="outline-3">
+<h3 id="org497f617"><span class="section-number-3">2.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>N. Author, “Bury it, don’t burn it: turning biomass waste into a carbon solution,” Physics World. Accessed: Jun. 04, 2025. [Online]. Available: <a href="https://physicsworld.com/bury-it-dont-burn-it-turning-biomass-waste-into-a-carbon-solution/">https://physicsworld.com/bury-it-dont-burn-it-turning-biomass-waste-into-a-carbon-solution/</a></li>
+
+<li>D. L. December 2024, “Extracting treasure from trash,” Chemistry World. Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/opinion/extracting-treasure-from-trash/4020560.article">https://www.chemistryworld.com/opinion/extracting-treasure-from-trash/4020560.article</a></li>
+
+<li>A. Tandon, “Researchers propose algae-based solution for wastewater treatment,” Mongabay-India. Accessed: Dec. 04, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/12/researchers-propose-algae-based-solution-for-wastewater-treatment/">https://india.mongabay.com/2024/12/researchers-propose-algae-based-solution-for-wastewater-treatment/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7e775ff" class="outline-2">
+<h2 id="org7e775ff"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgb73b6ec" class="outline-3">
+<h3 id="orgb73b6ec"><span class="section-number-3">3.1.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org7b78e46" class="outline-4">
+<h4 id="org7b78e46"><span class="section-number-4">3.1.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgf416521"></a>General<br /></li>
+<li><a id="org57b9e4b"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="orgd031498"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-1-2-1">
+<ul class="org-ul">
+<li>D. F. Demaria and J. Martinez-Alier, POLITICAL ECOLOGY OF INFORMAL WASTE RECY: Circular Economy, Green Jobs, and Poverty. Oxford: OUP Oxford, 2023.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org786ee6c"></a>Worldly Matters<br />
+<ol class="org-ol">
+<li><a id="org698b755"></a>People<br />
+<div class="outline-text-6" id="text-3-1-1-3-1">
+<ul class="org-ul">
+<li>“Bezwada Wilson,” Wikipedia. Nov. 17, 2023. Accessed: Feb. 18, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Bezwada_Wilson&amp;oldid=1185497863">https://en.wikipedia.org/w/index.php?title=Bezwada_Wilson&amp;oldid=1185497863</a>  
+<ul class="org-ul">
+<li>“TISS Administration Tried to Stop a Lecture by Bezwada Wilson: Report,” The Wire. Accessed: Feb. 19, 2024. [Online]. Available: <a href="https://thewire.in/education/tiss-administration-tried-to-stop-a-lecture-by-bezwada-wilson-report">https://thewire.in/education/tiss-administration-tried-to-stop-a-lecture-by-bezwada-wilson-report</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd10fda0"></a>Orgs<br />
+<div class="outline-text-6" id="text-3-1-1-3-2">
+<ul class="org-ul">
+<li>“The Story of SWaCH: India’s Largest Cooperative of Waste Pickers - RLS Southasia.” Accessed: Jan. 31, 2024. [Online]. Available: <a href="https://www.rosalux.in/details-resources/1177.html">https://www.rosalux.in/details-resources/1177.html</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga1a896a"></a>Cities<br />
+<ul class="org-ul">
+<li><a id="org0591ae4"></a>Delhi<br />
+<ul class="org-ul">
+<li><a id="org0947811"></a>Down To Earth<br />
+<div class="outline-text-8" id="text-org0947811">
+<ul class="org-ul">
+<li>D. T. E. Staff, “More than half of sewage treatment plants fail to meet standards in Delhi,” Down To Earth. Accessed: Oct. 18, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/water/more-than-half-of-sewage-treatment-plants-fail-to-meet-standards-in-delhi">https://www.downtoearth.org.in/water/more-than-half-of-sewage-treatment-plants-fail-to-meet-standards-in-delhi</a></li>
+
+<li>“Ghazipur landfill fire: Annual choking hazard for Delhi.” Accessed: Apr. 25, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/gallery/environment/ghazipur-landfill-fire-annual-choking-hazard-for-delhi-95720">https://www.downtoearth.org.in/gallery/environment/ghazipur-landfill-fire-annual-choking-hazard-for-delhi-95720</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb2d5c19"></a>Misc<br />
+<div class="outline-text-8" id="text-orgb2d5c19">
+<ul class="org-ul">
+<li>“Delhi’s overfilled landfills catch fire and poison the Indian capital | openDemocracy.” Accessed: Feb. 28, 2024. [Online]. Available: <a href="https://www.opendemocracy.net/en/india-delhi-landfill-fire-methane-ghazipur-climate-crisis/">https://www.opendemocracy.net/en/india-delhi-landfill-fire-methane-ghazipur-climate-crisis/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>P. D. &amp; P. S.V, “Delhi’s mounting waste crisis | Explained,” The Hindu, May 15, 2024. Accessed: May 17, 2024. [Online]. Available: <a href="https://www.thehindu.com/sci-tech/energy-and-environment/delhi-mounting-waste-crisis-solid-waste-management/article68179968.ece">https://www.thehindu.com/sci-tech/energy-and-environment/delhi-mounting-waste-crisis-solid-waste-management/article68179968.ece</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org58516dc"></a>Misc<br />
+<div class="outline-text-7" id="text-org58516dc">
+<ul class="org-ul">
+<li>“Cleanest Cities of India: India’s best waste management models - YouTube.” Accessed: Jan. 20, 2024. [Online]. Available: <a href="https://www.youtube.com/playlist?list=PLmiRlMn-WmosMDvj48-SyCohoatP05XFq">https://www.youtube.com/playlist?list=PLmiRlMn-WmosMDvj48-SyCohoatP05XFq</a></li>
+
+<li>S. Chandra, “How does Indore do it?,” Frontline. Accessed: Jan. 19, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/the-nation/how-does-indore-do-it-india-cleanest-city-7-years-in-a-row-strategy/article67737621.ece">https://frontline.thehindu.com/the-nation/how-does-indore-do-it-india-cleanest-city-7-years-in-a-row-strategy/article67737621.ece</a></li>
+<li>S. Chandra, “Indore’s green revolution: Exploring the city’s cleanliness strategy,” Frontline. Accessed: Jan. 26, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/the-nation/indores-green-revolution-exploring-the-citys-cleanliness-strategy/article67776228.ece">https://frontline.thehindu.com/the-nation/indores-green-revolution-exploring-the-citys-cleanliness-strategy/article67776228.ece</a></li>
+
+<li>“Mumbai: Game theory,” Mid-day. Accessed: Aug. 17, 2024. [Online]. Available: <a href="https://www.mid-day.com/mumbai/mumbai-news/article/mumbai-game-theory-23375638">https://www.mid-day.com/mumbai/mumbai-news/article/mumbai-game-theory-23375638</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgb916d0f"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-1-3-4">
+<ul class="org-ul">
+<li>D. V. Sambath, “Kodungaiyur’s Proposed ‘Waste Solution’: A Recipe for Toxic Air and Disease?,” Centre for Financial Accountability. Accessed: Nov. 19, 2025. [Online]. Available: <a href="https://www.cenfa.org/kodungaiyurs-proposed-waste-solution-a-recipe-for-toxic-air-and-disease/">https://www.cenfa.org/kodungaiyurs-proposed-waste-solution-a-recipe-for-toxic-air-and-disease/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. D. Kulasekaran, “The SWaCH cooperative model of Pune: The ‘Yes In My Back Yard’ model of waste management,” Centre for Financial Accountability. Accessed: Nov. 18, 2025. [Online]. Available: <a href="https://www.cenfa.org/the-swach-cooperative-model-of-pune-the-yes-in-my-back-yard-model-of-waste-management/">https://www.cenfa.org/the-swach-cooperative-model-of-pune-the-yes-in-my-back-yard-model-of-waste-management/</a></li>
+
+<li>D. V. Sambath, “Kodungaiyur’s Proposed ‘Waste Solution’: A Recipe for Toxic Air and Disease?,” Centre for Financial Accountability. Accessed: Nov. 18, 2025. [Online]. Available: <a href="https://www.cenfa.org/kodungaiyurs-proposed-waste-solution-a-recipe-for-toxic-air-and-disease/">https://www.cenfa.org/kodungaiyurs-proposed-waste-solution-a-recipe-for-toxic-air-and-disease/</a></li>
+
+<li>“Tamil Nadu’s DMK government uses police violence to suppress sanitation workers’ anti-privatization protest,” World Socialist Web Site. Accessed: Sep. 09, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/09/09/mkyi-s09.html">https://www.wsws.org/en/articles/2025/09/09/mkyi-s09.html</a></li>
+
+<li>“Reframing the Sanitation Crisis as an Urban Crisis | Economic and Political Weekly.” Accessed: Feb. 03, 2025. [Online]. Available: <a href="https://www.epw.in/journal/2025/5/book-reviews/reframing-sanitation-crisis-urban-crisis.html">https://www.epw.in/journal/2025/5/book-reviews/reframing-sanitation-crisis-urban-crisis.html</a></li>
+
+<li>D. F. Demaria and J. Martinez-Alier, POLITICAL ECOLOGY OF INFORMAL WASTE RECY: Circular Economy, Green Jobs, and Poverty. Oxford: OUP Oxford, 2023.</li>
+
+<li>A. Tandon, “Empowering waste pickers with dignified jobs for environmental change,” Mongabay-India. Accessed: Jan. 02, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/01/empowering-waste-pickers-with-dignified-jobs-for-environmental-change/">https://india.mongabay.com/2025/01/empowering-waste-pickers-with-dignified-jobs-for-environmental-change/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgdbb6215"></a>Core<br />
+<ol class="org-ol">
+<li><a id="org142dea0"></a>Education<br />
+<div class="outline-text-6" id="text-3-1-1-4-1">
+<ul class="org-ul">
+<li>“Ecogram: Waste gurukool in Gurugram.” Accessed: Mar. 06, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/waste/ecogram-waste-gurukool-in-gurugram-94812">https://www.downtoearth.org.in/blog/waste/ecogram-waste-gurukool-in-gurugram-94812</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3aefe19"></a>Practice<br />
+<div class="outline-text-6" id="text-3-1-1-4-2">
+<ul class="org-ul">
+<li>S. Swaminathan, <i>(Im)perfectly Zero Waste: A No-Nonsense Guide to Living Sustainably in India.</i> Hachette UK, 2021.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org4bcc7ce"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="orgb1e3ff3"></a>Texts<br />
+<div class="outline-text-6" id="text-3-1-1-5-1">
+<ul class="org-ul">
+<li>A. Doron and R. Jeffrey, Waste of a Nation: Garbage and Growth in India. Harvard University Press, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="org7438c72"></a>Articles, Essays<br />
+<ul class="org-ul">
+<li><a id="orgc4a6b6d"></a>The India Forum<br />
+<div class="outline-text-7" id="text-orgc4a6b6d">
+<ul class="org-ul">
+<li>“The Default Solution to Waste Disposal is Worsening India’s Garbage Crisis,” The India Forum. Accessed: Aug. 23, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/environment/default-solution-waste-disposal-worsening-indias-garbage-crisis">https://www.theindiaforum.in/environment/default-solution-waste-disposal-worsening-indias-garbage-crisis</a></li>
+<li>“The Mess that is Waste Management in Urban India,” The India Forum. Accessed: Jan. 19, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/public-policy/still-birth-waste-management-india">https://www.theindiaforum.in/public-policy/still-birth-waste-management-india</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5638844"></a>Down To Earth<br />
+<div class="outline-text-7" id="text-org5638844">
+<ul class="org-ul">
+<li>A. Kumari, “A CSE forum discussed India’s battle against manual scavenging — why the fight to end it requires more than policy reform,” Down To Earth. Accessed: Aug. 22, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/water/a-cse-forum-discussed-indias-battle-against-manual-scavenging-why-the-fight-to-end-it-requires-more-than-policy-reform">https://www.downtoearth.org.in/water/a-cse-forum-discussed-indias-battle-against-manual-scavenging-why-the-fight-to-end-it-requires-more-than-policy-reform</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org0df9295"></a>The Caravan Magazine<br />
+<div class="outline-text-7" id="text-org0df9295">
+<ul class="org-ul">
+<li>“Waste and labour in urban South Asia.” Accessed: Aug. 11, 2025. [Online]. Available: <a href="https://caravanmagazine.in/environment/waste-labour-urban-south-asia">https://caravanmagazine.in/environment/waste-labour-urban-south-asia</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="orgec42e40"></a>Arts<br />
+<ol class="org-ol">
+<li><a id="org85b537c"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="orgb6544fd"></a>Misc<br />
+<ol class="org-ol">
+<li><a id="org378cc16"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-1-7-1">
+<ul class="org-ul">
+<li>CFA, “BEYOND BURNING WASTE,” Centre for Financial Accountability. Accessed: Mar. 18, 2026. [Online]. Available: <a href="https://www.cenfa.org/beyond-burning-waste/">https://www.cenfa.org/beyond-burning-waste/</a></li>
+
+<li>“Sign the Petition,” Change.org. Accessed: Sep. 09, 2025. [Online]. Available: <a href="https://www.change.org/p/support-pune-s-real-doorstep-waste-collection">https://www.change.org/p/support-pune-s-real-doorstep-waste-collection</a></li>
+
+<li>P. Shankar, “India set to participate in the World Cup for trash collection,” Mongabay-India. Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/08/india-set-to-participate-in-the-world-cup-for-trash-collection/">https://india.mongabay.com/2025/08/india-set-to-participate-in-the-world-cup-for-trash-collection/</a></li>
+
+<li>T. Hindu, “North Chennai residents pitch a plan to cut waste, scrap Kodungaiyur incinerator project,” Centre for Financial Accountability. Accessed: Aug. 12, 2025. [Online]. Available: <a href="https://www.cenfa.org/north-chennai-residents-pitch-a-plan-to-cut-waste-scrap-kodungaiyur-incinerator-project/">https://www.cenfa.org/north-chennai-residents-pitch-a-plan-to-cut-waste-scrap-kodungaiyur-incinerator-project/</a></li>
+
+<li>“Remembering S R Sankaran, a Leading Light of Safai Karamchari Andolan,” NewsClick. Accessed: Oct. 26, 2024. [Online]. Available: <a href="https://www.newsclick.in/remembering-s-r-sankaran-leading-light-safai-karamchari-andolan">https://www.newsclick.in/remembering-s-r-sankaran-leading-light-safai-karamchari-andolan</a></li>
+
+<li>T. H. Bureau, “IIT Bombay study suggests sustainable waste disposal in the healthcare sector,” The Hindu, Jun. 28, 2024. Accessed: Jun. 28, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/mumbai/iit-bombay-study-suggests-sustainable-waste-disposal-in-the-healthcare-sector/article68339427.ece">https://www.thehindu.com/news/cities/mumbai/iit-bombay-study-suggests-sustainable-waste-disposal-in-the-healthcare-sector/article68339427.ece</a></li>
+
+<li>“1 Worker Dies Every Week, Yet Media Normalise Sewer Deaths,” NewsClick. Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://www.newsclick.in/1-worker-dies-every-week-yet-media-normalise-sewer-deaths">https://www.newsclick.in/1-worker-dies-every-week-yet-media-normalise-sewer-deaths</a></li>
+
+<li>“State of Environment in Figures 2024 on legacy waste in India.” Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/infographics/state-of-environment-in-figures-2024-on-legacy-waste-in-india-96557">https://www.downtoearth.org.in/infographics/state-of-environment-in-figures-2024-on-legacy-waste-in-india-96557</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgded4545"></a>Vikalp Sangam<br />
+<div class="outline-text-6" id="text-3-1-1-7-2">
+<ul class="org-ul">
+<li>“WASTE THAT IS NOT WASTE : The management of solid waste generated by the Ganesh Chaturthi festival - Vikalp Sangam.” Accessed: Mar. 31, 2024. [Online]. Available: <a href="https://vikalpsangam.org/article/waste-that-is-not-waste-the-management-of-solid-waste-generated-by-the-ganesh-chaturthi-festival/">https://vikalpsangam.org/article/waste-that-is-not-waste-the-management-of-solid-waste-generated-by-the-ganesh-chaturthi-festival/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org1d37c4f"></a>The Caravan Magazine<br />
+<div class="outline-text-6" id="text-3-1-1-7-3">
+<ul class="org-ul">
+<li>“Waste and labour in urban South Asia.” Accessed: Aug. 11, 2025. [Online]. Available: <a href="https://caravanmagazine.in/environment/waste-labour-urban-south-asia">https://caravanmagazine.in/environment/waste-labour-urban-south-asia</a></li>
+<li>“Myths around the hazardous waste trade of shipbreaking.” Accessed: Jul. 12, 2025. [Online]. Available: <a href="https://caravanmagazine.in/environment/waste-wars-shipbreaking">https://caravanmagazine.in/environment/waste-wars-shipbreaking</a></li>
+<li>“The many challenges sanitation workers face.” Accessed: Aug. 01, 2024. [Online]. Available: <a href="https://caravanmagazine.in/health/the-many-challenges-sanitation-workers-face">https://caravanmagazine.in/health/the-many-challenges-sanitation-workers-face</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8396c05"></a>Centre for Financial Accountability<br />
+<div class="outline-text-6" id="text-3-1-1-7-4">
+<ul class="org-ul">
+<li>T. P. A. for W. Accountability (PAWA), “Burning Waste,Warming cities?,” Centre for Financial Accountability. Accessed: Jun. 04, 2025. [Online]. Available: <a href="https://www.cenfa.org/burning-wastewarming-cities/">https://www.cenfa.org/burning-wastewarming-cities/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgba7c1b4"></a>Rosa-Luxemburg-Stiftung<br />
+<div class="outline-text-6" id="text-3-1-1-7-5">
+<ul class="org-ul">
+<li>“Mol (Worth) - RLS Southasia.” Accessed: Jan. 31, 2024. [Online]. Available: <a href="https://www.rosalux.in/details-resources/1176.html">https://www.rosalux.in/details-resources/1176.html</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org29770c0"></a>Politics: Right<br />
+<div class="outline-text-6" id="text-3-1-1-7-6">
+<ul class="org-ul">
+<li>W. DESK, “Gorakhpur’s Rs 220 crore recycling plant to revolutionise plastic waste management, empower local entrepreneurs,” Organiser. Accessed: Dec. 09, 2024. [Online]. Available: <a href="https://organiser.org/2024/12/08/268455/bharat/gorakhpurs-rs-220-crore-recycling-plant-to-revolutionise-plastic-waste-management-empower-local-entrepreneurs/">https://organiser.org/2024/12/08/268455/bharat/gorakhpurs-rs-220-crore-recycling-plant-to-revolutionise-plastic-waste-management-empower-local-entrepreneurs/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org63431d7"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-1-7-7">
+<ul class="org-ul">
+<li>A. Tandon, “The hidden menstrual waste crisis in the hills,” Mongabay-India. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/08/the-hidden-menstrual-waste-crisis-in-the-hills/">https://india.mongabay.com/2025/08/the-hidden-menstrual-waste-crisis-in-the-hills/</a></li>
+
+<li>“The Bodies Beneath Swachh Bharat,” NewsClick. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://www.newsclick.in/bodies-beneath-swachh-bharat">https://www.newsclick.in/bodies-beneath-swachh-bharat</a></li>
+
+<li>C. D. Kulasekaran, “Why technicalising India’s waste crisis is not the solution,” Down To Earth. Accessed: Jun. 03, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/why-technicalising-indias-waste-crisis-is-not-the-solution">https://www.downtoearth.org.in/waste/why-technicalising-indias-waste-crisis-is-not-the-solution</a></li>
+<li>H. Yadava, “Making treatment plants work: The power of practical SOPs,” Down To Earth. Accessed: Jun. 03, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/water/making-treatment-plants-work-the-power-of-practical-sops">https://www.downtoearth.org.in/water/making-treatment-plants-work-the-power-of-practical-sops</a></li>
+<li>D. Farrier, “What birds can teach us about repurposing waste,” Down To Earth. Accessed: Jun. 03, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/what-birds-can-teach-us-about-repurposing-waste">https://www.downtoearth.org.in/waste/what-birds-can-teach-us-about-repurposing-waste</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Doron and R. Jeffrey, WASTE OF A NATION: Garbage and Growth in India Doron, Assa and Jeffrey, Robin. Cambridge, Massachusetts: Harvard University Press, 2018.</li>
+
+<li>A. Singh, “Tribal Workers Keep Cities Clean But Have No Social Security, Paid Below The Minimum Wage.” Accessed: Jan. 21, 2025. [Online]. Available: <a href="https://www.indiaspend.com/welfare/tribal-workers-keep-cities-clean-but-have-no-social-security-paid-below-the-minimum-wage-938984">https://www.indiaspend.com/welfare/tribal-workers-keep-cities-clean-but-have-no-social-security-paid-below-the-minimum-wage-938984</a></li>
+
+<li>H. P. H. Mishra Manish, “Review the treatment,” Down To Earth. Accessed: Jan. 11, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/water/review-the-treatment">https://www.downtoearth.org.in/water/review-the-treatment</a></li>
+
+<li>V. Choudhary, “Dystopian or survivalist? Inefficient urban waste management unwittingly nourishes some bird species,” Down To Earth. Accessed: Dec. 24, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/wildlife-biodiversity/dystopian-or-survivalist-inefficient-urban-waste-management-unwittingly-nourishes-some-bird-species">https://www.downtoearth.org.in/wildlife-biodiversity/dystopian-or-survivalist-inefficient-urban-waste-management-unwittingly-nourishes-some-bird-species</a></li>
+
+<li>D. T. E. Staff, “From waste to worth: What is India’s potential for reusing treated wastewater?,” Down To Earth. Accessed: Dec. 23, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/water/from-waste-to-worth-what-is-indias-potential-for-reusing-treated-wastewater">https://www.downtoearth.org.in/water/from-waste-to-worth-what-is-indias-potential-for-reusing-treated-wastewater</a></li>
+
+<li>C. P. Rajendran, “From waste to electricity to pollution,” The Hindu, Dec. 22, 2024. Accessed: Dec. 23, 2024. [Online]. Available: <a href="https://www.thehindu.com/opinion/op-ed/from-waste-to-electricity-to-pollution/article69015892.ece">https://www.thehindu.com/opinion/op-ed/from-waste-to-electricity-to-pollution/article69015892.ece</a></li>
+
+<li>“Best practices in solid waste management | Bangalore Karnataka, Jalandhar Punjab and Mangan Sikkim - YouTube.” Accessed: Dec. 23, 2024. [Online]. Available: <a href="https://www.youtube.com/watch?v=m4JzXt07Wpk">https://www.youtube.com/watch?v=m4JzXt07Wpk</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. T. E. Staff, “How do changemakers implement best practices in solid waste management,” Down To Earth. Accessed: Dec. 22, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/how-do-changemakers-implement-best-practices-in-solid-waste-management">https://www.downtoearth.org.in/waste/how-do-changemakers-implement-best-practices-in-solid-waste-management</a></li>
+
+<li>D. T. E. Staff, “Transformation is evident as India wakes up to its solid waste challenge — CSE DG Sunita Narain at Delhi event to celebrate municipal changemakers,” Down To Earth. Accessed: Dec. 20, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/transformation-is-evident-as-india-wakes-up-to-its-solid-waste-challenge-cse-dg-sunita-narain-at-delhi-event-to-celebrate-municipal-changemakers">https://www.downtoearth.org.in/waste/transformation-is-evident-as-india-wakes-up-to-its-solid-waste-challenge-cse-dg-sunita-narain-at-delhi-event-to-celebrate-municipal-changemakers</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf56a246"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-1-7-8">
+<ul class="org-ul">
+<li>arathimenon, “Trash doesn’t go waste at this ‘broken fair,’” Mongabay-India. Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/02/trash-doesnt-go-waste-at-this-broken-fair/">https://india.mongabay.com/2024/02/trash-doesnt-go-waste-at-this-broken-fair/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga62e90b"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-1-7-9">
+<ul class="org-ul">
+<li>“Single-use plastic ban unfairly targets street vendors — but they have a solution for plastic pollution.” Accessed: Mar. 31, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/pollution/single-use-plastic-ban-unfairly-targets-street-vendors-but-they-have-a-solution-for-plastic-pollution-94611">https://www.downtoearth.org.in/blog/pollution/single-use-plastic-ban-unfairly-targets-street-vendors-but-they-have-a-solution-for-plastic-pollution-94611</a></li>
+
+<li>“Economics of reuse for street vendors in india,” Zero Waste Europe. Accessed: Mar. 31, 2024. [Online]. Available: <a href="https://zerowasteeurope.eu/library/economics-of-reuse-street-vendors-india/">https://zerowasteeurope.eu/library/economics-of-reuse-street-vendors-india/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org7de6c73" class="outline-3">
+<h3 id="org7de6c73"><span class="section-number-3">3.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>P. Broadwith, “Intergovernmental panel on chemicals, waste and pollution needs diverse input,” Chemistry World. Accessed: Aug. 06, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/opinion/intergovernmental-panel-on-chemicals-waste-and-pollution-needs-diverse-input/4021965.article">https://www.chemistryworld.com/opinion/intergovernmental-panel-on-chemicals-waste-and-pollution-needs-diverse-input/4021965.article</a></li>
+
+<li>“Kenya’s invisibilised waste pickers.” Accessed: Jun. 01, 2025. [Online]. Available: <a href="https://caravanmagazine.in/environment/kenya-waste-pickers-climate-change">https://caravanmagazine.in/environment/kenya-waste-pickers-climate-change</a></li>
+
+<li>A. Clapp, Waste Wars: Dirty Deals, International Rivalries and the Scandalous Afterlife of Rubbish. John Murray, 2025.</li>
+
+<li>P. V. Kumar, “Waste Wars: How the Global North’s Garbage Industry Is Poisoning the Global South,” Frontline. Accessed: Apr. 29, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/books/waste-wars-review-global-waste-alexander-crisis-clapp/article69500994.ece">https://frontline.thehindu.com/books/waste-wars-review-global-waste-alexander-crisis-clapp/article69500994.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Krishnamurthy, “Business of dirt,” Down To Earth. Accessed: Aug. 04, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/business-of-dirt">https://www.downtoearth.org.in/waste/business-of-dirt</a></li>
+<li>C. Gillam, “A call for EPA action on climate risks to hazardous waste facilities,” The New Lede. Accessed: Nov. 21, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/11/a-call-for-epa-action-on-climate-risks-to-hazardous-waste-facilities/">https://www.thenewlede.org/2024/11/a-call-for-epa-action-on-climate-risks-to-hazardous-waste-facilities/</a></li>
+
+<li>MONGABAY.COM, “True eco-crime in the U.K., ‘Into the Wasteland,’” Mongabay Environmental News. Accessed: Jul. 29, 2024. [Online]. Available: <a href="https://news.mongabay.com/podcast/2022/12/podcast-true-eco-crime-in-england-into-the-wasteland-part-1/">https://news.mongabay.com/podcast/2022/12/podcast-true-eco-crime-in-england-into-the-wasteland-part-1/</a></li>
+<li>MONGABAY.COM, “Is waste crime ‘the new narcotics’ in the U.K.? Into the Wasteland, part 2,” Mongabay Environmental News. Accessed: Jul. 29, 2024. [Online]. Available: <a href="https://news.mongabay.com/podcast/2022/12/podcast-waste-crime-is-the-new-narcotics-in-the-u-k/">https://news.mongabay.com/podcast/2022/12/podcast-waste-crime-is-the-new-narcotics-in-the-u-k/</a></li>
+<li>MONGABAY.COM, “Into the Wasteland, part 3: Buried in Europe’s recycling,” Mongabay Environmental News. Accessed: Jul. 29, 2024. [Online]. Available: <a href="https://news.mongabay.com/podcast/2022/12/podcast-into-the-wasteland-part-3-buried-in-europes-recycling/">https://news.mongabay.com/podcast/2022/12/podcast-into-the-wasteland-part-3-buried-in-europes-recycling/</a></li>
+<li>G. Baggi, L. Carrer, R. Behi, and V. Kirst, “Takin’ out the trash: How do transnational waste traffickers operate?,” Mongabay Environmental News. Accessed: Jul. 29, 2024. [Online]. Available: <a href="https://news.mongabay.com/2023/08/takin-out-the-trash-how-do-transnational-waste-traffickers-operate/">https://news.mongabay.com/2023/08/takin-out-the-trash-how-do-transnational-waste-traffickers-operate/</a></li>
+
+<li>“How to Reduce Holiday Waste: 50+ Eco-friendly Tips,” Greenpeace Canada. Accessed: Dec. 16, 2023. [Online]. Available: <a href="https://www.greenpeace.org/canada/en/story/61582/how-to-reduce-holiday-waste-50-eco-friendly-tips/">https://www.greenpeace.org/canada/en/story/61582/how-to-reduce-holiday-waste-50-eco-friendly-tips/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org737ac48" class="outline-2">
+<h2 id="org737ac48"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgd26d529" class="outline-3">
+<h3 id="orgd26d529"><span class="section-number-3">4.1.</span> Practice</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>S. Mansoor and T. D. Ridder, <i>Bare Necessities: How To Live A Zero-Waste Life.</i> Penguin Random House India Private Limited, 2021.</li>
+
+<li>S. Swaminathan, <i>(Im)perfectly Zero Waste: A No-Nonsense Guide to Living Sustainably in India.</i> Hachette UK, 2021.</li>
+
+<li>S. Swaminathan, <i>The Everyday Eco-Warrior: 110 Easy Tips for a Zero-Waste Life.</i> Hachette UK, 2021.</li>
+
+<li>M. Dorey, <i>No More Rubbish Excuses: How to reduce your waste and why you must do it now.</i> Random House, 2020.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org71e36e9" class="outline-2">
+<h2 id="org71e36e9"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org70aa58d" class="outline-3">
+<h3 id="org70aa58d"><span class="section-number-3">5.1.</span> Excreta</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orgb8ed477" class="outline-4">
+<h4 id="orgb8ed477"><span class="section-number-4">5.1.1.</span> World</h4>
+<div class="outline-text-4" id="text-5-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orge093cec"></a>Nation States<br />
+<ol class="org-ol">
+<li><a id="orgcf6d667"></a>India<br />
+<ul class="org-ul">
+<li><a id="orgca4e40f"></a>General<br /></li>
+<li><a id="org19b21a9"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org5cb8033"></a>Manual Scavenging<br />
+<ul class="org-ul">
+<li><a id="orgf3d7206"></a>General<br />
+<div class="outline-text-9" id="text-orgf3d7206">
+<ul class="org-ul">
+<li>“Manual scavenging,” Wikipedia. Apr. 01, 2023. Accessed: Apr. 15, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Manual_scavenging&amp;oldid=1147693209">https://en.wikipedia.org/w/index.php?title=Manual_scavenging&amp;oldid=1147693209</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3ed7de0"></a>World<br />
+<ul class="org-ul">
+<li><a id="org2810360"></a>Nation States<br />
+<ul class="org-ul">
+<li><a id="org7ec535c"></a>India<br />
+<div class="outline-text-11" id="text-org7ec535c">
+<ul class="org-ul">
+<li>B. Singh, Unseen: The Truth about India’s Manual Scavengers. Penguin UK, 2014.</li>
+
+<li>G. Rāmasvāmi, India Stinking: Manual Scavengers in Andhra Pradesh and Their Work. Navayana, 2005.</li>
+
+<li>It is Not Humane to Clean Human Shit: Report on the Systematic Prevalence of Forced Labour in the Form of Manual Scavenging in India. 2021. Accessed: May 15, 2024. [Online]. Available: <a href="https://ruralindiaonline.org/en/library/resource/it-is-not-humane-to-clean-human-shit-report-on-the-systematic-prevalence-of-forced-labour-in-the-form-of-manual-scavenging-in-india/">https://ruralindiaonline.org/en/library/resource/it-is-not-humane-to-clean-human-shit-report-on-the-systematic-prevalence-of-forced-labour-in-the-form-of-manual-scavenging-in-india/</a></li>
+
+<li>V. L. &amp; V. Kaul, “Despite laws and court orders, manual scavenging continues to kill workers,” Frontline. Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/society/manual-scavenging-delhi-noida-uttar-pradesh-sanitation-health-death-labour-employment-kill-workers/article68235834.ece">https://frontline.thehindu.com/society/manual-scavenging-delhi-noida-uttar-pradesh-sanitation-health-death-labour-employment-kill-workers/article68235834.ece</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orgb8bce34"></a>Misc<br />
+<div class="outline-text-9" id="text-orgb8bce34">
+<ul class="org-ul">
+<li>“‘There is no such thing as professional grief,’” People’s Archive of Rural India. Accessed: Dec. 18, 2024. [Online]. Available: <a href="https://ruralindiaonline.org/en/articles/there-is-no-such-thing-as-professional-grief/">https://ruralindiaonline.org/en/articles/there-is-no-such-thing-as-professional-grief/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org423f48a"></a>Misc<br />
+<div class="outline-text-7" id="text-org423f48a">
+<ul class="org-ul">
+<li>S. Narain, “Be excreta wise,” Down To Earth. Accessed: Dec. 24, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/water/be-excreta-wise">https://www.downtoearth.org.in/water/be-excreta-wise</a></li>
+
+<li>D. Coffey and D. Spears, <b>Where India Goes: Abandoned Toilets, Stunted Development and the Costs of Caste.</b> HarperLitmus, 2017.</li>
+
+<li>D. Tiwari, “Delhi’s Jan Suvidha Complex Workers Remain Unpaid, Overworked.” Accessed: Feb. 18, 2024. [Online]. Available: <a href="https://www.indiaspend.com/governance/delhis-jan-suvidha-complex-workers-remain-unpaid-overworked-895256">https://www.indiaspend.com/governance/delhis-jan-suvidha-complex-workers-remain-unpaid-overworked-895256</a></li>
+
+<li>S. Tiwari, “Accelerating Change - Inclusive Sanitation For All: Webinar By CREA On World Toilet Day,” Feminism in India. Accessed: Feb. 26, 2024. [Online]. Available: <a href="https://feminisminindia.com/2024/02/26/accelerating-change-inclusive-sanitation-for-all-webinar-by-crea-on-world-toilet-day/">https://feminisminindia.com/2024/02/26/accelerating-change-inclusive-sanitation-for-all-webinar-by-crea-on-world-toilet-day/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org34c4fec" class="outline-4">
+<h4 id="org34c4fec"><span class="section-number-4">5.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org80411dc"></a>Toilet<br />
+<ol class="org-ol">
+<li><a id="orgd39eb20"></a>Toilet Papers<br />
+<div class="outline-text-6" id="text-5-1-2-1-1">
+<ul class="org-ul">
+<li>“VIDEO: To wipe or to wash? The use of toilet papers | Consumed,” Mongabay Environmental News. Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://news.mongabay.com/2024/05/video-to-wipe-or-to-wash-the-use-of-toilet-papers-consumed/">https://news.mongabay.com/2024/05/video-to-wipe-or-to-wash-the-use-of-toilet-papers-consumed/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5d4fc76"></a>Misc<br />
+<div class="outline-text-6" id="text-5-1-2-1-2">
+<ul class="org-ul">
+<li>“Public toilets are vanishing and that’s a civic catastrophe | Psyche Ideas,” Psyche. Accessed: Jul. 20, 2024. [Online]. Available: <a href="https://psyche.co/ideas/public-toilets-are-vanishing-and-thats-a-civic-catastrophe">https://psyche.co/ideas/public-toilets-are-vanishing-and-thats-a-civic-catastrophe</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgc4b492a"></a>Misc<br />
+<div class="outline-text-5" id="text-5-1-2-2">
+<ul class="org-ul">
+<li>S. Narain and S. Dasgupta, <b>Excreta Matters - A Students’ Special Edition.</b> CSE, 2013.</li>
+
+<li>A. L. Kim, Cacaphonies: The Excremental Canon of French Literature. Univ Of Minnesota Press, 2022.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga3ef362" class="outline-3">
+<h3 id="orga3ef362"><span class="section-number-3">5.2.</span> E-Waste</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>E-Waste: <a href="https://tinyurl.com/yukfa8un">https://tinyurl.com/yukfa8un</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0a9179d" class="outline-2">
+<h2 id="org0a9179d"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>R. Sinha, “Waste prevention central to UNEP’s latest report on safe disposal of unused medicines,” Down To Earth. Accessed: Mar. 18, 2026. [Online]. Available: <a href="https://www.downtoearth.org.in/health/waste-prevention-central-to-uneps-latest-report-on-safe-disposal-of-unused-medicines">https://www.downtoearth.org.in/health/waste-prevention-central-to-uneps-latest-report-on-safe-disposal-of-unused-medicines</a></li>
+
+<li>which refers to discarded electrical or electronic devices E-waste,  unskilled scrap workers Because poor countries mostly lack the highly sophisticated equipment and processes needed to dismantle and recycle these complex composite products safely,  the torrent of discarded cell phones and obsolete computers is greatly exacerbated by invisible e-waste: a vast Increasingly, and I. e-waste greatly adds to developing world recycling challenges T. U. N. E. P. warns that “the increasing proliferation of technological devices has skyrocketed the amount of electronic waste worldwide” with nations now facing “an environmental challenge of enormous dimensions.”, “Can two Amazons survive? Invisible e-waste is poisoning the world,” Mongabay Environmental News. Accessed: Dec. 09, 2025. [Online]. Available: <a href="https://news.mongabay.com/2025/12/can-two-amazons-survive-invisible-e-waste-is-poisoning-the-world/">https://news.mongabay.com/2025/12/can-two-amazons-survive-invisible-e-waste-is-poisoning-the-world/</a></li>
+
+<li>D. V. Sambath, “UN Global Plastics Treaty Negotiations Stalemate as Petrostates Push for a Waste Management Treaty,” Centre for Financial Accountability. Accessed: Sep. 30, 2025. [Online]. Available: <a href="https://www.cenfa.org/un-global-plastics-treaty-negotiations-stalemate-as-petrostates-push-for-a-waste-management-treaty/">https://www.cenfa.org/un-global-plastics-treaty-negotiations-stalemate-as-petrostates-push-for-a-waste-management-treaty/</a></li>
+
+<li>saumitrashinde, “Creating value from waste,” Mongabay-India. Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/08/creating-value-from-waste/">https://india.mongabay.com/2025/08/creating-value-from-waste/</a></li>
+
+<li>“Air quality study of East Java waste-to-energy plant sparks dispute, health warnings,” Mongabay Environmental News. Accessed: Aug. 18, 2025. [Online]. Available: <a href="https://news.mongabay.com/2025/08/air-quality-study-of-east-java-waste-to-energy-plant-sparks-dispute-health-warnings/">https://news.mongabay.com/2025/08/air-quality-study-of-east-java-waste-to-energy-plant-sparks-dispute-health-warnings/</a></li>
+
+<li>B. Nakkeeran, “Myth of recycling: A review of Myra Hird’s ‘A Public Sociology of Waste,’” Down To Earth. Accessed: Apr. 14, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/myth-of-recycling-a-review-of-myra-hirds-a-public-sociology-of-waste">https://www.downtoearth.org.in/waste/myth-of-recycling-a-review-of-myra-hirds-a-public-sociology-of-waste</a></li>
+
+<li>CFA, “Waste Incineration-Zero Pollution or Zero Truth?,” Centre for Financial Accountability. Accessed: Apr. 02, 2025. [Online]. Available: <a href="https://www.cenfa.org/waste-incineration-zero-pollution-or-zero-truth/">https://www.cenfa.org/waste-incineration-zero-pollution-or-zero-truth/</a></li>
+
+<li>M. M. Sivadas Akhila, “Integrating community participation crucial for inclusive sanitation,” Down To Earth. Accessed: Jan. 22, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/integrating-community-participation-crucial-for-inclusive-sanitation">https://www.downtoearth.org.in/waste/integrating-community-participation-crucial-for-inclusive-sanitation</a></li>
+<li>A. Lodhi, “What is ‘waste colonialism’ and why has Thailand banned imports of plastic?,” Al Jazeera. Accessed: Jan. 22, 2025. [Online]. Available: <a href="https://www.aljazeera.com/news/2025/1/14/what-is-waste-colonialism-and-why-has-thailand-banned-imports-of-plastic">https://www.aljazeera.com/news/2025/1/14/what-is-waste-colonialism-and-why-has-thailand-banned-imports-of-plastic</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>N. I. of Geography and Limnology, “Sewage secrets: Economic factors shaping our microbiome exposed.” Accessed: Aug. 21, 2024. [Online]. Available: <a href="https://phys.org/news/2024-08-sewage-secrets-economic-factors-microbiome.html">https://phys.org/news/2024-08-sewage-secrets-economic-factors-microbiome.html</a></li>
+
+<li>G. S. | LensCulture, “7 Days of Garbage - Photographs by Gregg Segal | Interview by Justin Herfst,” LensCulture. Accessed: Aug. 12, 2024. [Online]. Available: <a href="https://www.lensculture.com/articles/gregg-segal-7-days-of-garbage">https://www.lensculture.com/articles/gregg-segal-7-days-of-garbage</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Innovative sewage solutions: Tackling the global human waste problem,” Mongabay Environmental News, Jan. 25, 2022. <a href="https://news.mongabay.com/2022/01/innovative-sewage-solutions-tackling-the-global-human-waste-problem/">https://news.mongabay.com/2022/01/innovative-sewage-solutions-tackling-the-global-human-waste-problem/</a> (accessed Jan. 26, 2022).</li>
+
+<li>“UNEA-6: Over a third of global population living with solid waste, reveals report.” Accessed: Feb. 29, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/waste/unea-6-over-a-third-of-global-population-living-with-solid-waste-reveals-report-94725">https://www.downtoearth.org.in/news/waste/unea-6-over-a-third-of-global-population-living-with-solid-waste-reveals-report-94725</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:56</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

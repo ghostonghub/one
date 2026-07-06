@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Plastic</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Plastic</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org3207df8">1. General</a></li>
+<li><a href="#orgfbc87a2">2. STEMM</a>
+<ul>
+<li><a href="#org52c9813">2.1. Systems Sciences</a>
+<ul>
+<li><a href="#orgcc5838c">2.1.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org627d812">2.2. Computer Science and Engineering</a>
+<ul>
+<li><a href="#org1ece769">2.2.1. Misc</a></li>
+<li><a href="#orgf45ec20">2.2.2. AI</a></li>
+</ul>
+</li>
+<li><a href="#org89e5a2b">2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org545e11a">3. Worldly Matters</a>
+<ul>
+<li><a href="#org1ddff2a">3.1. Nation States</a>
+<ul>
+<li><a href="#org4cf965a">3.1.1. India</a></li>
+</ul>
+</li>
+<li><a href="#org6628f0f">3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org0a491ba">4. Core</a>
+<ul>
+<li><a href="#org99cfc90">4.1. Variants</a>
+<ul>
+<li><a href="#orgf9b0d87">4.1.1. Microplastics</a></li>
+<li><a href="#org2118f85">4.1.2. Nanoplastics</a></li>
+<li><a href="#orga4817da">4.1.3. Bioplastics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1ac7b2b">5. Special Topics</a>
+<ul>
+<li><a href="#org571cf09">5.1. Diet</a>
+<ul>
+<li><a href="#orgd589cfa">5.1.1. Consumer Reports</a></li>
+<li><a href="#orge08d4aa">5.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgcdfaa73">5.2. Ecobricks</a></li>
+<li><a href="#org836c7df">5.3. Brain</a></li>
+<li><a href="#orgbdf8d19">5.4. Pollution</a></li>
+<li><a href="#org40f118f">5.5. Popular Resources</a>
+<ul>
+<li><a href="#org3228593">5.5.1. Documentaries</a></li>
+<li><a href="#org4261eab">5.5.2. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orge2474ff">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org3207df8" class="outline-2">
+<h2 id="org3207df8"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Plastic,” Wikipedia. Mar. 29, 2025. Accessed: Apr. 08, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Plastic&amp;oldid=1282847037">https://en.wikipedia.org/w/index.php?title=Plastic&amp;oldid=1282847037</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfbc87a2" class="outline-2">
+<h2 id="orgfbc87a2"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org52c9813" class="outline-3">
+<h3 id="org52c9813"><span class="section-number-3">2.1.</span> Systems Sciences</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgcc5838c" class="outline-4">
+<h4 id="orgcc5838c"><span class="section-number-4">2.1.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>“New study: Plastic pollution worsens the impacts of all planetary boundaries.” Accessed: Nov. 06, 2025. [Online]. Available: <a href="https://www.stockholmresilience.org/research/research-stories/2024-11-08-new-study-plastic-pollution-worsens-the-impacts-of-all-planetary-boundaries.html">https://www.stockholmresilience.org/research/research-stories/2024-11-08-new-study-plastic-pollution-worsens-the-impacts-of-all-planetary-boundaries.html</a></li>
+
+<li>Lea, “On the outcomes of the fifth session of the Intergovernmental Negotiating Committee on a global plastics treaty,” International Science Council. Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://council.science/news/on-the-outcomes-of-inc5/">https://council.science/news/on-the-outcomes-of-inc5/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org627d812" class="outline-3">
+<h3 id="org627d812"><span class="section-number-3">2.2.</span> Computer Science and Engineering</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org1ece769" class="outline-4">
+<h4 id="org1ece769"><span class="section-number-4">2.2.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li>“Data Explorer: Plastic Waste and Pollution,” Our World in Data. <a href="https://ourworldindata.org/explorers/plastic-pollution">https://ourworldindata.org/explorers/plastic-pollution</a> (accessed Oct. 17, 2022).</li>
+<li>K. Bourzac, “First Comprehensive Plastics Database Tallies Staggering 16,000 Chemicals—And It’s Still Incomplete,” Scientific American. Accessed: Mar. 15, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/first-comprehensive-plastics-database-tallies-staggering-16-000-chemicals/">https://www.scientificamerican.com/article/first-comprehensive-plastics-database-tallies-staggering-16-000-chemicals/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf45ec20" class="outline-4">
+<h4 id="orgf45ec20"><span class="section-number-4">2.2.2.</span> AI</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ul class="org-ul">
+<li>S. Priyadarshini, “Episode 65: AI spots toxic plastics,” Nature India, Aug. 2025, doi: 10.1038/d44151-025-00155-6.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org89e5a2b" class="outline-3">
+<h3 id="org89e5a2b"><span class="section-number-3">2.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>S. Z. Kvale Luisa Galgani, Karin, “Measuring Microplastics in Every Ocean Layer,” Eos. Accessed: Jun. 30, 2026. [Online]. Available: <a href="https://eos.org/features/measuring-microplastics-in-every-ocean-layer">https://eos.org/features/measuring-microplastics-in-every-ocean-layer</a></li>
+
+<li>P. Vidossich, M. Manathunga, A. W. Götz, K. M. Merz, and M. De Vivo, “Aliphatic Polyester Recognition and Reactivity at the Active Cleft of a Fungal Cutinase,” J. Chem. Inf. Model., vol. 65, no. 9, pp. 4662–4673, May 2025, doi: 10.1021/acs.jcim.5c00739.</li>
+
+<li>U. of Gothenburg, “Scientists find hundreds of toxic chemicals in recycled plastics.” Accessed: Nov. 11, 2023. [Online]. Available: <a href="https://phys.org/news/2023-11-scientists-hundreds-toxic-chemicals-recycled.html">https://phys.org/news/2023-11-scientists-hundreds-toxic-chemicals-recycled.html</a></li>
+
+<li>J. Schwartz, “Plastics Were Invented to Spare Nature. They Did the Opposite,” Scientific American. Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://www.scientificamerican.com/article/how-plastics-went-from-a-sustainability-solution-to-an-environmental-crisis/">https://www.scientificamerican.com/article/how-plastics-went-from-a-sustainability-solution-to-an-environmental-crisis/</a></li>
+
+<li>S. have measured the amount of nanoplastics in the open ocean for the first time et al., “Scientists find millions of tons of nanoplastics in the North Atlantic Ocean,” Mongabay Environmental News. Accessed: Jul. 26, 2025. [Online]. Available: <a href="https://news.mongabay.com/short-article/2025/07/scientists-find-millions-of-tons-of-nanoplastics-in-the-north-atlantic-ocean/">https://news.mongabay.com/short-article/2025/07/scientists-find-millions-of-tons-of-nanoplastics-in-the-north-atlantic-ocean/</a></li>
+
+<li>P. Dauvergne, R. Ralston, J. Clapp, and J. Taggart, “The petrochemical historical bloc: Exposing the extent and depth of opposition to a high-ambition plastics treaty,” Camb. prisms Plast., pp. 1–9, Jun. 2025, doi: 10.1017/plc.2025.10010.</li>
+
+<li>A. Tandon, “Invisible plastics are changing our oceans [Commentary],” Mongabay-India. Accessed: Jun. 25, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/06/invisible-plastics-are-changing-our-oceans-commentary/">https://india.mongabay.com/2025/06/invisible-plastics-are-changing-our-oceans-commentary/</a></li>
+
+<li>M. Durrani, “Helgoland researchers seek microplastics and microfibres in the sea,” Physics World. Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://physicsworld.com/helgoland-researchers-seek-microplastics-and-microfibres-in-the-sea/">https://physicsworld.com/helgoland-researchers-seek-microplastics-and-microfibres-in-the-sea/</a></li>
+
+<li>W. H. Lee et al., “Polymeric stabilization at the gas–liquid interface for durable solar hydrogen production from plastic waste,” Nat. Nanotechnol., pp. 1–10, Jun. 2025, doi: 10.1038/s41565-025-01957-6.</li>
+
+<li>Lea, “ISC Expert Group publishes Nature Sustainability comment on scientific priorities for plastics treaty,” International Science Council. Accessed: May 27, 2025. [Online]. Available: <a href="https://council.science/news/nature-comment-plastics-treaty/">https://council.science/news/nature-comment-plastics-treaty/</a></li>
+
+<li>H. A. April 2025, “Less than 10% of plastics are produced using recycled materials,” Chemistry World. Accessed: Apr. 29, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/less-than-10-of-plastics-are-produced-using-recycled-materials/4021407.article">https://www.chemistryworld.com/news/less-than-10-of-plastics-are-produced-using-recycled-materials/4021407.article</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>P. Ferdinand, “Plastics may disrupt the body’s clock, raise risk of chronic disease, study finds,” U.S. Right to Know. Accessed: Apr. 14, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/plastics-may-disrupt-circadian-rhythm/">https://usrtk.org/healthwire/plastics-may-disrupt-circadian-rhythm/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org545e11a" class="outline-2">
+<h2 id="org545e11a"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org1ddff2a" class="outline-3">
+<h3 id="org1ddff2a"><span class="section-number-3">3.1.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org4cf965a" class="outline-4">
+<h4 id="org4cf965a"><span class="section-number-4">3.1.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org120789e"></a>General<br /></li>
+<li><a id="org7884d86"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="org4f4b6bc"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-1-2-1">
+<ul class="org-ul">
+<li>S. Ghosh, “Microplastics laden with toxins and pathogens fill India’s marketplace air,” Nature India, Nov. 2025, doi: 10.1038/d44151-025-00207-x.</li>
+
+<li>S. B. Singh Siddharth Ghanshyam, “Can the world beat plastic pollution in 2025?,” Down To Earth. Accessed: Jun. 06, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/can-the-world-beat-plastic-pollution-in-2025">https://www.downtoearth.org.in/waste/can-the-world-beat-plastic-pollution-in-2025</a></li>
+
+<li>“No more plastics please,” Hindustan Times. Accessed: Jun. 06, 2025. [Online]. Available: <a href="https://www.hindustantimes.com/ht-insight/climate-change/no-more-plastics-please-101749110420814.html">https://www.hindustantimes.com/ht-insight/climate-change/no-more-plastics-please-101749110420814.html</a></li>
+</ul>
+
+
+
+
+
+
+<ul class="org-ul">
+<li>K. A. S. Kaplitz Alexander, “Plastic pyrolysis — chemists explain a technique attempting to tackle plastic waste by bringing the heat,” Down To Earth. Accessed: Mar. 19, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/science-technology/plastic-pyrolysis-chemists-explain-a-technique-attempting-to-tackle-plastic-waste-by-bringing-the-heat">https://www.downtoearth.org.in/science-technology/plastic-pyrolysis-chemists-explain-a-technique-attempting-to-tackle-plastic-waste-by-bringing-the-heat</a></li>
+<li>A. Douma, “In the battle against plastic pollution, Asia’s informal workers are critical allies (commentary),” Mongabay Environmental News. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://news.mongabay.com/2024/10/in-the-battle-against-plastic-pollution-asias-informal-workers-are-critical-allies-commentary/">https://news.mongabay.com/2024/10/in-the-battle-against-plastic-pollution-asias-informal-workers-are-critical-allies-commentary/</a></li>
+<li>“Champions of Change: Business leaders call for production cuts in Global Plastics Treaty,” Greenpeace International. Accessed: Oct. 31, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/70908/champions-of-change-business-leaders-call-for-production-cuts-in-global-plastics-treaty/">https://www.greenpeace.org/international/press-release/70908/champions-of-change-business-leaders-call-for-production-cuts-in-global-plastics-treaty/</a></li>
+<li>P. Shankar, “Emissions from India’s macroplastic pollution are the highest, finds study,” Mongabay-India. Accessed: Oct. 29, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/10/emissions-from-indias-macroplastic-pollution-is-the-highest-finds-study/">https://india.mongabay.com/2024/10/emissions-from-indias-macroplastic-pollution-is-the-highest-finds-study/</a></li>
+
+<li>C. Velis, E. Cook, J. Cottom, and T. Conversation, “Plastic pollution hotspots pinpointed in new research—India ranks top due to high levels of uncollected waste.” Accessed: Sep. 08, 2024. [Online]. Available: <a href="https://phys.org/news/2024-09-plastic-pollution-hotspots-india-due.html">https://phys.org/news/2024-09-plastic-pollution-hotspots-india-due.html</a></li>
+
+<li>D. T. E. Staff, “India tops plastic pollution rankings, emitting a fifth of global plastic waste,” Down To Earth. Accessed: Sep. 07, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/pollution/india-tops-plastic-pollution-rankings-emitting-a-fifth-of-global-plastic-waste-2">https://www.downtoearth.org.in/pollution/india-tops-plastic-pollution-rankings-emitting-a-fifth-of-global-plastic-waste-2</a></li>
+<li>“In 2024, India to be among top 4 contributors of microplastics released into waterbodies.” Accessed: Apr. 30, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/waste/in-2024-india-to-be-among-top-4-contributors-of-microplastics-released-into-waterbodies-95883">https://www.downtoearth.org.in/news/waste/in-2024-india-to-be-among-top-4-contributors-of-microplastics-released-into-waterbodies-95883</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Things you need to know about India’s plastic ban 2022,” Greenpeace India. <a href="https://www.greenpeace.org/india/en/story/13891/things-you-need-to-know-about-indias-plastic-ban-2022/">https://www.greenpeace.org/india/en/story/13891/things-you-need-to-know-about-indias-plastic-ban-2022/</a> (accessed Jul. 22, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org692481f"></a>World<br />
+<ol class="org-ol">
+<li><a id="org89b0793"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-1-3-1">
+<ul class="org-ul">
+<li>“As negotiation on Global Plastics Treaty gets underway, India should reconsider contradictory stance – Centre for Financial Accountability.” Accessed: Nov. 11, 2023. [Online]. Available: <a href="https://www.cenfa.org/as-negotiation-on-global-plastics-treaty-gets-underway-india-should-reconsider-contradictory-stance/">https://www.cenfa.org/as-negotiation-on-global-plastics-treaty-gets-underway-india-should-reconsider-contradictory-stance/</a></li>
+<li>“Join Champions of Change to support an end to plastic pollution,” Greenpeace International. Accessed: May 31, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/story/75068/join-champions-of-change-to-support-an-end-to-plastic-pollution/">https://www.greenpeace.org/international/story/75068/join-champions-of-change-to-support-an-end-to-plastic-pollution/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. D. K. &amp; V. S, “‘Lie-cycling’: Only 9% of plastic ever produced has been recycled so far — is this recycling getting undue attention?,” Centre for Financial Accountability. Accessed: Mar. 20, 2025. [Online]. Available: <a href="https://www.cenfa.org/lie-cycling-only-9-of-plastic-ever-produced-has-been-recycled-so-far-is-this-recycling-getting-undue-attention/">https://www.cenfa.org/lie-cycling-only-9-of-plastic-ever-produced-has-been-recycled-so-far-is-this-recycling-getting-undue-attention/</a></li>
+<li>A. Bhattacharya, “Street vendors are the low-hanging fruits in the battle against plastic,” Centre for Financial Accountability. Accessed: Mar. 09, 2025. [Online]. Available: <a href="https://www.cenfa.org/street-vendors-are-the-low-hanging-fruits-in-the-battle-against-plastic/">https://www.cenfa.org/street-vendors-are-the-low-hanging-fruits-in-the-battle-against-plastic/</a></li>
+<li>G. Varma, “Uncollected Waste At The Heart Of India’s Plastic Crisis.” Accessed: Oct. 21, 2024. [Online]. Available: <a href="https://www.indiaspend.com/earthcheckindia/uncollected-waste-at-the-heart-of-indias-plastic-crisis-927619">https://www.indiaspend.com/earthcheckindia/uncollected-waste-at-the-heart-of-indias-plastic-crisis-927619</a></li>
+<li>“Home,” PFI-CENFA. Accessed: Sep. 19, 2024. [Online]. Available: <a href="https://plasticsfuelinfertility.cenfa.org">https://plasticsfuelinfertility.cenfa.org</a></li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>S. Shekhar, “Global Plastics Treaty: India’s alignment with petro-chemical interests undermines crucial pact,” Scroll.in. Accessed: Feb. 19, 2024. [Online]. Available: <a href="https://scroll.in/article/1063576/global-plastics-treaty-indias-alignment-with-petro-chemical-interests-undermines-crucial-pact">https://scroll.in/article/1063576/global-plastics-treaty-indias-alignment-with-petro-chemical-interests-undermines-crucial-pact</a></li>
+<li>S. Seshadri, “As negotiation on Global Plastics Treaty gets underway, India should reconsider contradictory stance,” Scroll.in. Accessed: Feb. 20, 2024. [Online]. Available: <a href="https://scroll.in/article/1049942/as-negotiation-on-global-plastics-treaty-gets-underway-india-should-reconsider-contradictory-stance">https://scroll.in/article/1049942/as-negotiation-on-global-plastics-treaty-gets-underway-india-should-reconsider-contradictory-stance</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The impact of plastic pollution on Mumbai’s fisherwomen.” Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://caravanmagazine.in/communities/impact-plastic-pollution-mumbai-fisherwomen">https://caravanmagazine.in/communities/impact-plastic-pollution-mumbai-fisherwomen</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org33c2c0f"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org36ccf30"></a>Hindi<br />
+<div class="outline-text-6" id="text-3-1-1-4-1">
+<ul class="org-ul">
+<li>R. K. Sinha, “प्लास्टिक प्रदूषण – एक जानलेवा संकट,” Centre for Financial Accountability. Accessed: Mar. 19, 2025. [Online]. Available: <a href="https://www.cenfa.org/plastic-pollution-a-deadly-crisis/">https://www.cenfa.org/plastic-pollution-a-deadly-crisis/</a></li>
+
+<li>“वैश्विक प्लाास्टिक प्रदूषण से संघर्ष | Heinrich Böll Stiftung | India Office.” Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://in.boell.org/en/2024/03/14/vaaiaisavaika-palaaasataika-paradauusana-saee-sangharasa">https://in.boell.org/en/2024/03/14/vaaiaisavaika-palaaasataika-paradauusana-saee-sangharasa</a></li>
+
+<li>“वैश्विक प्लाास्टिक प्रदूषण से संघर्ष | Heinrich Böll Stiftung | Regional Office New Delhi.” Accessed: Nov. 30, 2025. [Online]. Available: <a href="https://in.boell.org/en/2024/03/14/vaaiaisavaika-palaaasataika-paradauusana-saee-sangharasa">https://in.boell.org/en/2024/03/14/vaaiaisavaika-palaaasataika-paradauusana-saee-sangharasa</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgc0be55f"></a>Misc<br />
+<div class="outline-text-5" id="text-3-1-1-5">
+<ul class="org-ul">
+<li>R. Kaur, “‘Microplastics now make up as much as 5% of particulate pollution in India’s cities,’” Down To Earth. Accessed: Dec. 05, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/microplastics-now-make-up-as-much-as-5-of-particulate-pollution-in-indias-cities">https://www.downtoearth.org.in/waste/microplastics-now-make-up-as-much-as-5-of-particulate-pollution-in-indias-cities</a></li>
+
+<li>CFA, “Mobilising Voices for the Global Plastics Treaty,” Centre for Financial Accountability. Accessed: Aug. 15, 2025. [Online]. Available: <a href="https://www.cenfa.org/mobilising-voices-for-the-global-plastics-treaty/">https://www.cenfa.org/mobilising-voices-for-the-global-plastics-treaty/</a></li>
+
+<li>K. Pandey, “Plastics use &amp; waste to soar in Southeast, East Asia without stringent policies, warns OECD,” Down To Earth. Accessed: Aug. 02, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/plastics-use-waste-to-soar-in-asia-without-stringent-policies-warns-oecd">https://www.downtoearth.org.in/waste/plastics-use-waste-to-soar-in-asia-without-stringent-policies-warns-oecd</a></li>
+
+<li>S. G. S. Solanki Minakshi, “How bad is India’s single-use plastic crisis?,” Down To Earth. Accessed: Jul. 19, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/how-bad-is-india-s-single-use-plastic-crisis--94667">https://www.downtoearth.org.in/waste/how-bad-is-india-s-single-use-plastic-crisis--94667</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org6628f0f" class="outline-3">
+<h3 id="org6628f0f"><span class="section-number-3">3.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>B. Bienkowski, “EPA panel warns plastics threaten kids’ health — Bayer says evidence lacking,” The New Lede. Accessed: Nov. 14, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/11/epa-childrens-health-plastic-pollution/">https://www.thenewlede.org/2025/11/epa-childrens-health-plastic-pollution/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Kelleher, “US social costs of plastics may total over $1 trillion annually, report finds,” The New Lede. Accessed: Nov. 07, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/11/us-social-costs-of-plastics-may-total-over-1-trillion-annually-report-finds/">https://www.thenewlede.org/2025/11/us-social-costs-of-plastics-may-total-over-1-trillion-annually-report-finds/</a></li>
+
+<li>N. Ahmed, “Citizen scientists locate plastic pollution hotspots.” Accessed: Sep. 10, 2025. [Online]. Available: <a href="https://theecologist.org/node/2994545">https://theecologist.org/node/2994545</a></li>
+
+<li>“‘Plastics crisis’ endangers humanity and all aspects of the environment, concludes &lt;em&gt;Lancet&lt;/em&gt; study,” World Socialist Web Site. Accessed: Aug. 29, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/08/28/jfxm-a28.html">https://www.wsws.org/en/articles/2025/08/28/jfxm-a28.html</a></li>
+
+<li>readers like you C. here to support T. Tyee, “A Second Life for Pacific-Clogging Plastics,” The Tyee. Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://thetyee.ca/WhatWorks/2025/08/28/Second-Life-Pacific-Clogging-Plastics/">https://thetyee.ca/WhatWorks/2025/08/28/Second-Life-Pacific-Clogging-Plastics/</a></li>
+
+<li>Paco, “Ziploc Faces Class Action Lawsuit Over Microplastics Shedding Concerns,” Organic Consumers. Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://organicconsumers.org/ziploc-faces-class-action-lawsuit-over-microplastics-shedding-concerns/">https://organicconsumers.org/ziploc-faces-class-action-lawsuit-over-microplastics-shedding-concerns/</a></li>
+
+<li>“Still no Plastics Treaty: How the fossil fuel industry keeps polluting negotiations,” Greenpeace International. Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/story/78037/still-no-plastics-treaty-how-the-fossil-fuel-industry-keeps-polluting-negotiations/">https://www.greenpeace.org/international/story/78037/still-no-plastics-treaty-how-the-fossil-fuel-industry-keeps-polluting-negotiations/</a></li>
+
+<li>I. H. via F. C. K. C. E. T. H. NationsSwitzerland, “UN plastic treaty negotiations end in failure, again,” Mongabay Environmental News. Accessed: Aug. 18, 2025. [Online]. Available: <a href="https://news.mongabay.com/short-article/2025/08/un-plastic-treaty-negotiations-end-in-failure-again/">https://news.mongabay.com/short-article/2025/08/un-plastic-treaty-negotiations-end-in-failure-again/</a></li>
+<li>P. Broadwith, “Cheap virgin plastic limits recycling potential,” Chemistry World. Accessed: Aug. 18, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/opinion/cheap-virgin-plastic-limits-recycling-potential/4022001.article">https://www.chemistryworld.com/opinion/cheap-virgin-plastic-limits-recycling-potential/4022001.article</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“INC-5.2 Outcome: Plastics Treaty negotiations extended.” Accessed: Aug. 17, 2025. [Online]. Available: <a href="https://www.foei.org/inc-5-2-outcome-plastics-treaty-negotiations-extended/">https://www.foei.org/inc-5-2-outcome-plastics-treaty-negotiations-extended/</a></li>
+
+<li>S. G. Singh, “INC 5.2: Global plastics treaty talks hit rock bottom on last day over Chair’s new proposed text,” Down To Earth. Accessed: Aug. 15, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/inc-52-global-plastics-treaty-talks-hit-rock-bottom-on-last-day-over-chairs-new-proposed-text">https://www.downtoearth.org.in/waste/inc-52-global-plastics-treaty-talks-hit-rock-bottom-on-last-day-over-chairs-new-proposed-text</a></li>
+
+<li>M. MacGregor, “The global plastics treaty process has fallen flat. Here’s what went wrong, and how you can help,” The Conversation. Accessed: Aug. 15, 2025. [Online]. Available: <a href="http://theconversation.com/the-global-plastics-treaty-process-has-fallen-flat-heres-what-went-wrong-and-how-you-can-help-263189">http://theconversation.com/the-global-plastics-treaty-process-has-fallen-flat-heres-what-went-wrong-and-how-you-can-help-263189</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Plastic treaty negotiations go down to the wire,” Chemistry World. Accessed: Aug. 14, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/plastic-treaty-negotiations-go-down-to-the-wire/4021947.article">https://www.chemistryworld.com/news/plastic-treaty-negotiations-go-down-to-the-wire/4021947.article</a></li>
+
+<li>P. Broadwith, “Cheap virgin plastic limits recycling potential,” Chemistry World. Accessed: Aug. 14, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/opinion/cheap-virgin-plastic-limits-recycling-potential/4022001.article">https://www.chemistryworld.com/opinion/cheap-virgin-plastic-limits-recycling-potential/4022001.article</a></li>
+
+<li>C. for I. E. Law, “Fossil Fuel and Petrochemical Lobbyists Overrun Plastics Treaty Negotiations,” Centre for Financial Accountability. Accessed: Aug. 10, 2025. [Online]. Available: <a href="https://www.cenfa.org/fossil-fuel-and-petrochemical-lobbyists-overrun-plastics-treaty-negotiations/">https://www.cenfa.org/fossil-fuel-and-petrochemical-lobbyists-overrun-plastics-treaty-negotiations/</a></li>
+
+<li>“More businesses join the call for a strong UN Plastics Treaty, support global change,” Greenpeace International. Accessed: Aug. 01, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/story/77553/more-businesses-join-the-call-for-a-strong-un-plastics-treaty-support-global-change/">https://www.greenpeace.org/international/story/77553/more-businesses-join-the-call-for-a-strong-un-plastics-treaty-support-global-change/</a></li>
+
+<li>W. Courtene-Jones, “A global treaty to limit plastic pollution is within reach – will countries seize the moment?,” The Conversation. Accessed: Jul. 23, 2025. [Online]. Available: <a href="http://theconversation.com/a-global-treaty-to-limit-plastic-pollution-is-within-reach-will-countries-seize-the-moment-261331">http://theconversation.com/a-global-treaty-to-limit-plastic-pollution-is-within-reach-will-countries-seize-the-moment-261331</a></li>
+
+<li>C. Gillam, “Postcard from California: Plastics ‘recycling’ – out of sight, out of mind,” The New Lede. Accessed: Jul. 09, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/07/postcard-from-california-plastics-recycling-out-of-sight-out-of-mind/">https://www.thenewlede.org/2025/07/postcard-from-california-plastics-recycling-out-of-sight-out-of-mind/</a></li>
+
+<li>A. Sangomla, “Banning problematic plastics may save the world up to $8 trillion by 2040,” Down To Earth. Accessed: Jul. 09, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/banning-problematic-plastics-may-save-the-world-up-to-8-trillion-by-2040">https://www.downtoearth.org.in/waste/banning-problematic-plastics-may-save-the-world-up-to-8-trillion-by-2040</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>J. Winters, “Science says plastic bag bans really do work,” Grist. Accessed: Jun. 28, 2025. [Online]. Available: <a href="https://grist.org/science/plastic-bag-ban-beach-cleanups-ocean-conservancy-study/">https://grist.org/science/plastic-bag-ban-beach-cleanups-ocean-conservancy-study/</a></li>
+
+<li>Credits Shreya Dasgupta Editor TopicsCoastal EcosystemsMicroplasticsOceansPlasticPollutionRegulationsWaste, “Plastic bag bans linked to sharp decline in coastal litter, study finds,” Mongabay Environmental News. Accessed: Jun. 26, 2025. [Online]. Available: <a href="https://news.mongabay.com/short-article/2025/06/plastic-bag-bans-linked-to-sharp-decline-in-coastal-litter-study-finds/">https://news.mongabay.com/short-article/2025/06/plastic-bag-bans-linked-to-sharp-decline-in-coastal-litter-study-finds/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0a491ba" class="outline-2">
+<h2 id="org0a491ba"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org99cfc90" class="outline-3">
+<h3 id="org99cfc90"><span class="section-number-3">4.1.</span> Variants</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-orgf9b0d87" class="outline-4">
+<h4 id="orgf9b0d87"><span class="section-number-4">4.1.1.</span> Microplastics</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>D. Carrington and D. C. E. editor, “Microplastics found in human blood for first time,” The Guardian, Mar. 24, 2022. Accessed: Mar. 26, 2022. [Online]. Available: <a href="https://www.theguardian.com/environment/2022/mar/24/microplastics-found-in-human-blood-for-first-time">https://www.theguardian.com/environment/2022/mar/24/microplastics-found-in-human-blood-for-first-time</a></li>
+<li>K. Toussaint, “Our fruits and veggies are sucking up microplastics through their roots,” Fast Company, Jun. 25, 2020. <a href="https://www.fastcompany.com/90521397/our-fruits-and-veggies-are-sucking-up-microplastics-through-their-roots">https://www.fastcompany.com/90521397/our-fruits-and-veggies-are-sucking-up-microplastics-through-their-roots</a> (accessed Mar. 28, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2118f85" class="outline-4">
+<h4 id="org2118f85"><span class="section-number-4">4.1.2.</span> Nanoplastics</h4>
+</div>
+<div id="outline-container-orga4817da" class="outline-4">
+<h4 id="orga4817da"><span class="section-number-4">4.1.3.</span> Bioplastics</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<ul class="org-ul">
+<li>“What You Need to Know About Bioplastics,” Gizmodo, Jun. 01, 2022. <a href="https://gizmodo.com/what-is-bioplastic-biodegradable-plant-based-plastic-1848999921">https://gizmodo.com/what-is-bioplastic-biodegradable-plant-based-plastic-1848999921</a> (accessed Jun. 08, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1ac7b2b" class="outline-2">
+<h2 id="org1ac7b2b"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org571cf09" class="outline-3">
+<h3 id="org571cf09"><span class="section-number-3">5.1.</span> Diet</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orgd589cfa" class="outline-4">
+<h4 id="orgd589cfa"><span class="section-number-4">5.1.1.</span> Consumer Reports</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ul class="org-ul">
+<li>K. Loria, <b>“How to Eat Less Plastic,”</b> Consumer Reports. <a href="https://www.consumerreports.org/health-wellness/how-to-eat-less-plastic-microplastics-in-food-water/">https://www.consumerreports.org/health-wellness/how-to-eat-less-plastic-microplastics-in-food-water/</a> (accessed Nov. 02, 2021).</li>
+<li>“The Plastic Chemicals Hiding in Your Food,” Consumer Reports. Accessed: Apr. 09, 2025. [Online]. Available: <a href="https://www.consumerreports.org/health/food-contaminants/the-plastic-chemicals-hiding-in-your-food-a7358224781/">https://www.consumerreports.org/health/food-contaminants/the-plastic-chemicals-hiding-in-your-food-a7358224781/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge08d4aa" class="outline-4">
+<h4 id="orge08d4aa"><span class="section-number-4">5.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<ul class="org-ul">
+<li>H. Nitnaware, “Microplastics in air enter plant leaves, pass to animals &amp; humans: Study,” Down To Earth. Accessed: Apr. 11, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/wildlife-biodiversity/microplastics-in-air-enter-plant-leaves-pass-to-animals-humans-study">https://www.downtoearth.org.in/wildlife-biodiversity/microplastics-in-air-enter-plant-leaves-pass-to-animals-humans-study</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Jones, “Chewing gum is plastic pollution, not a litter problem,” The Conversation. Accessed: Apr. 29, 2025. [Online]. Available: <a href="http://theconversation.com/chewing-gum-is-plastic-pollution-not-a-litter-problem-251662">http://theconversation.com/chewing-gum-is-plastic-pollution-not-a-litter-problem-251662</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcdfaa73" class="outline-3">
+<h3 id="orgcdfaa73"><span class="section-number-3">5.2.</span> Ecobricks</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li><i>“Ecobricks,”</i> Wikipedia. Sep. 10, 2021. Accessed: Sep. 26, 2021. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ecobricks&amp;oldid=1043548053">https://en.wikipedia.org/w/index.php?title=Ecobricks&amp;oldid=1043548053</a></li>
+<li><i>“Ecobricks.org | Plastic Transition.”</i> <a href="https://www.ecobricks.org">https://www.ecobricks.org</a> (accessed Sep. 26, 2021).</li>
+<li>S. Mouton and W. University, <i>“Are ecobricks the answer to plastic pollution?”</i> <a href="https://phys.org/news/2019-07-ecobricks-plastic-pollution.html">https://phys.org/news/2019-07-ecobricks-plastic-pollution.html</a> (accessed Sep. 26, 2021).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org836c7df" class="outline-3">
+<h3 id="org836c7df"><span class="section-number-3">5.3.</span> Brain</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>“Microplastics Found in Human Brains,” Yale E360. Accessed: Sep. 04, 2024. [Online]. Available: <a href="https://e360.yale.edu/digest/microplastics-human-brains">https://e360.yale.edu/digest/microplastics-human-brains</a></li>
+<li>L. F. Amato-Lourenço et al., “Microplastics in the Olfactory Bulb of the Human Brain,” JAMA Network Open, vol. 7, no. 9, p. e2440018, Sep. 2024, doi: 10.1001/jamanetworkopen.2024.40018.</li>
+<li>T. Freeman, “Imaging reveals how microplastics may harm the brain,” Physics World. Accessed: Jan. 30, 2025. [Online]. Available: <a href="https://physicsworld.com/a/imaging-reveals-how-microplastics-may-harm-the-brain/">https://physicsworld.com/a/imaging-reveals-how-microplastics-may-harm-the-brain/</a></li>
+<li>R. Krishnamurthy, “New study reveals how microplastics can potentially affect the brain, cognitive function: Study,” Down To Earth. Accessed: Jan. 24, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/health/new-study-reveals-how-microplastics-can-potentially-affect-the-brain-cognitive-function-study">https://www.downtoearth.org.in/health/new-study-reveals-how-microplastics-can-potentially-affect-the-brain-cognitive-function-study</a></li>
+<li>S. Mallapaty, “Microplastics block blood flow in the brain, mice study reveals,” Nature, Jan. 2025, doi: 10.1038/d41586-025-00178-0.</li>
+<li>H. Huang, J. Hou, M. Li, F. Wei, Y. Liao, and B. Xi, “Microplastics in the bloodstream can induce cerebral thrombosis by causing cell obstruction and lead to neurobehavioral abnormalities,” Science Advances, vol. 11, no. 4, p. eadr8243, Jan. 2025, doi: 10.1126/sciadv.adr8243.</li>
+<li>M. Kozlov, “Your brain is full of microplastics: are they harming you?,” Nature, vol. 638, no. 8050, pp. 311–313, Feb. 2025, doi: 10.1038/d41586-025-00405-8.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbdf8d19" class="outline-3">
+<h3 id="orgbdf8d19"><span class="section-number-3">5.4.</span> Pollution</h3>
+<div class="outline-text-3" id="text-5-4">
+<ul class="org-ul">
+<li>D. Main, “LA County accuses Pepsi and Coca-Cola of lying to consumers, worsening plastic pollution,” The New Lede. Accessed: Nov. 01, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/10/la-county-sues-pepsi-coca-cola-for-plastic-pollution/">https://www.thenewlede.org/2024/10/la-county-sues-pepsi-coca-cola-for-plastic-pollution/</a></li>
+<li>#author.fullName}, “What will it take to solve our planet’s plastic pollution crisis?,” New Scientist. Accessed: Nov. 28, 2024. [Online]. Available: <a href="https://www.newscientist.com/article/2457800-what-will-it-take-to-solve-our-planets-plastic-pollution-crisis/">https://www.newscientist.com/article/2457800-what-will-it-take-to-solve-our-planets-plastic-pollution-crisis/</a></li>
+<li>D. Main, “Can the world agree to a sensible treaty to end plastic pollution?,” The New Lede. Accessed: Nov. 28, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/11/treaty-to-end-plastic-pollution/">https://www.thenewlede.org/2024/11/treaty-to-end-plastic-pollution/</a></li>
+<li>“Policy Brief: Creating a Strong Interface between Science, Policy and Society to Tackle Global Plastic Pollution,” International Science Council. Accessed: Nov. 28, 2024. [Online]. Available: <a href="https://council.science/publications/policy-brief-tackle-global-plastic-pollution/">https://council.science/publications/policy-brief-tackle-global-plastic-pollution/</a></li>
+<li>A. Wicker, “Plastic pollution pushing Earth past all nine planetary boundaries: Report,” Mongabay Environmental News. Accessed: Nov. 26, 2024. [Online]. Available: <a href="https://news.mongabay.com/2024/11/plastic-pollution-pushing-earth-past-all-nine-planetary-boundaries-report/">https://news.mongabay.com/2024/11/plastic-pollution-pushing-earth-past-all-nine-planetary-boundaries-report/</a></li>
+<li>“4 false solutions that won&amp;#8217;t solve the plastic pollution crisis,” Greenpeace International. Accessed: Dec. 22, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/66585/4-false-solutions-that-wont-solve-the-plastic-pollution-crisis/">https://www.greenpeace.org/international/story/66585/4-false-solutions-that-wont-solve-the-plastic-pollution-crisis/</a></li>
+<li>D. Main, “Microplastic pollution found ‘pervasive’ in Antarctic snow,” The New Lede. Accessed: Feb. 17, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/02/microplastic-pollution-found-pervasive-in-antarctic-snow/">https://www.thenewlede.org/2025/02/microplastic-pollution-found-pervasive-in-antarctic-snow/</a></li>
+<li>“4 false solutions that won&amp;#8217;t solve the plastic pollution crisis,” Greenpeace International. Accessed: Apr. 25, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/66585/4-false-solutions-that-wont-solve-the-plastic-pollution-crisis/">https://www.greenpeace.org/international/story/66585/4-false-solutions-that-wont-solve-the-plastic-pollution-crisis/</a></li>
+<li>C. Gillam, “‘It’s scary’- Scientists finding mounting evidence of plastic pollution in human organs,” The New Lede. Accessed: Aug. 21, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/08/its-scary-scientists-finding-mounting-evidence-of-plastic-pollution-in-human-organs/">https://www.thenewlede.org/2024/08/its-scary-scientists-finding-mounting-evidence-of-plastic-pollution-in-human-organs/</a></li>
+<li>“Why We Need a Strong Global Agreement on Plastics Pollution,” Yale E360. Accessed: Oct. 13, 2024. [Online]. Available: <a href="https://e360.yale.edu/features/richard-thompson-interview">https://e360.yale.edu/features/richard-thompson-interview</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org40f118f" class="outline-3">
+<h3 id="org40f118f"><span class="section-number-3">5.5.</span> Popular Resources</h3>
+<div class="outline-text-3" id="text-5-5">
+</div>
+<div id="outline-container-org3228593" class="outline-4">
+<h4 id="org3228593"><span class="section-number-4">5.5.1.</span> Documentaries</h4>
+<div class="outline-text-4" id="text-5-5-1">
+<ul class="org-ul">
+<li>“Microplastic within humans now a health crisis: Interview with ‘Plastic People’ filmmakers,” Mongabay Environmental News. Accessed: Mar. 20, 2025. [Online]. Available: <a href="https://news.mongabay.com/2025/03/microplastic-within-humans-now-a-health-crisis-interview-with-plastic-people-filmmakers/">https://news.mongabay.com/2025/03/microplastic-within-humans-now-a-health-crisis-interview-with-plastic-people-filmmakers/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>MONGABAY.COM, “‘Plastic People’ documentary exposes the human health threats from plastic,” Mongabay Environmental News. Accessed: Apr. 04, 2025. [Online]. Available: <a href="https://news.mongabay.com/short-article/2025/04/plastic-people-documentary-exposes-the-human-health-threats-from-plastic/">https://news.mongabay.com/short-article/2025/04/plastic-people-documentary-exposes-the-human-health-threats-from-plastic/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4261eab" class="outline-4">
+<h4 id="org4261eab"><span class="section-number-4">5.5.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-5-2">
+<ul class="org-ul">
+<li>W. McCallum, <b>How to Give Up Plastic: A Guide to Changing the World, One Plastic Bottle at a Time. From the Head of Oceans at Greenpeace and spokesperson for their anti-plastic campaign.</b> Penguin UK, 2018.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orge2474ff" class="outline-2">
+<h2 id="orge2474ff"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>A. Extance, “Questions over microplastics findings don’t mean we are safe, scientists say,” Chemistry World. Accessed: Feb. 04, 2026. [Online]. Available: <a href="https://www.chemistryworld.com/news/questions-over-microplastics-findings-dont-mean-we-are-safe-scientists-say/4022870.article">https://www.chemistryworld.com/news/questions-over-microplastics-findings-dont-mean-we-are-safe-scientists-say/4022870.article</a></li>
+
+<li>“Beyond Plastics - Working To End Single-Use Plastic Pollution,” Beyond Plastics - Working To End Single-Use Plastic Pollution. Accessed: Dec. 09, 2025. [Online]. Available: <a href="https://www.beyondplastics.org">https://www.beyondplastics.org</a></li>
+<li>“Kitchen Nightmare: How Plastic in Everyday Objects Leaches into Food, Hurting Human Health, Environment,” Democracy Now! Accessed: Dec. 09, 2025. [Online]. Available: <a href="https://www.democracynow.org/2025/12/8/how_why_to_remove_plastic_from">https://www.democracynow.org/2025/12/8/how_why_to_remove_plastic_from</a></li>
+<li>“‘The Problem with Plastic’: Former EPA Official Judith Enck Discusses New Book,” Democracy Now! Accessed: Dec. 09, 2025. [Online]. Available: <a href="https://www.democracynow.org/2025/12/8/the_problem_with_plastic_judith_enck">https://www.democracynow.org/2025/12/8/the_problem_with_plastic_judith_enck</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. D. Kulasekaran, “Beating Plastic Production - Prevention is the best cure!,” Centre for Financial Accountability. Accessed: Sep. 30, 2025. [Online]. Available: <a href="https://www.cenfa.org/beating-plastic-production-prevention-is-the-best-cure/">https://www.cenfa.org/beating-plastic-production-prevention-is-the-best-cure/</a></li>
+
+<li>P. Ferdinand, “Plastics pose ‘urgent threat’ to children’s lifelong health, major review warns,” U.S. Right to Know. Accessed: Sep. 30, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/plastics-pose-urgent-threat-to-childrens-lifelong-health/">https://usrtk.org/healthwire/plastics-pose-urgent-threat-to-childrens-lifelong-health/</a></li>
+
+<li>C. Li et al., “Potential planetary health impacts of the airborne plastisphere,” One Earth, vol. 0, no. 0, Sep. 2025, doi: 10.1016/j.oneear.2025.101446.</li>
+
+<li>“Take Plastic Free July one step further this year: hold the real polluters accountable,” Greenpeace International. <a href="https://www.greenpeace.org/international/story/54627/take-plastic-free-july-one-step-further-this-year-hold-the-real-polluters-accountable">https://www.greenpeace.org/international/story/54627/take-plastic-free-july-one-step-further-this-year-hold-the-real-polluters-accountable</a> (accessed Jul. 24, 2022).</li>
+<li>I. F. Sequeira, J. C. Prata, J. P. da Costa, A. C. Duarte, and T. Rocha-Santos, “Worldwide contamination of fish with microplastics: A brief global overview,” Marine Pollution Bulletin, vol. 160, p. 111681, Nov. 2020, doi: 10.1016/j.marpolbul.2020.111681.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Jansen and R. Busquets, “Plastics: all around us and inside us,” The Conversation. Accessed: Aug. 21, 2025. [Online]. Available: <a href="http://theconversation.com/plastics-all-around-us-and-inside-us-262882">http://theconversation.com/plastics-all-around-us-and-inside-us-262882</a></li>
+
+<li>“INC 5.2: ‘The inability to reach an agreement in Geneva must be a wake up call for the world’, Greenpeace statement,” Greenpeace International. Accessed: Aug. 15, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/77955/inc-5-2-the-inability-to-reach-an-agreement-in-geneva-must-be-a-wakeup-call-for-the-world-greenpeace-statement/">https://www.greenpeace.org/international/press-release/77955/inc-5-2-the-inability-to-reach-an-agreement-in-geneva-must-be-a-wakeup-call-for-the-world-greenpeace-statement/</a></li>
+
+<li>B. Grant, “Is Solving the Plastic Problem a Moral Issue?,” Nautilus. Accessed: Aug. 15, 2025. [Online]. Available: <a href="https://nautil.us/is-solving-the-plastic-problem-a-moral-issue-1231008/">https://nautil.us/is-solving-the-plastic-problem-a-moral-issue-1231008/</a></li>
+
+<li>O. Adetayo, A. P. B. image: A. scavenger sorts out plastic waste at a dumpsite on the outskirts of Lagos, Nigeria, Monday, Aug 11, and 2025 Credits Mongabay Editor Editor TopicsPlasticPollutionNigeria, “One of the world’s most polluted cities has banned single-use plastics. It’s not so easy,” Mongabay Environmental News. Accessed: Aug. 14, 2025. [Online]. Available: <a href="https://news.mongabay.com/short-article/2025/08/one-of-the-worlds-most-polluted-cities-has-banned-single-use-plastics-its-not-so-easy/">https://news.mongabay.com/short-article/2025/08/one-of-the-worlds-most-polluted-cities-has-banned-single-use-plastics-its-not-so-easy/</a></li>
+
+<li>D. Miller and U. of M. Amherst, “How bad are micro- and nanoplastics for our health? It depends on their concentrations and how we measure them.” Accessed: Aug. 13, 2025. [Online]. Available: <a href="https://phys.org/news/2025-08-bad-micro-nanoplastics-health.html">https://phys.org/news/2025-08-bad-micro-nanoplastics-health.html</a></li>
+
+<li>IndiaSpend, “How Dubious Data, Fading Tech Shape India’s Global Plastic Stance,” Centre for Financial Accountability. Accessed: Aug. 12, 2025. [Online]. Available: <a href="https://www.cenfa.org/how-dubious-data-fading-tech-shape-indias-global-plastic-stance/">https://www.cenfa.org/how-dubious-data-fading-tech-shape-indias-global-plastic-stance/</a></li>
+<li>“Greenpeace air sampling in Geneva finds microplastics in urban air,” Greenpeace International. Accessed: Aug. 12, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/77817/greenpeace-air-sampling-in-geneva-finds-microplastics-in-urban-air/">https://www.greenpeace.org/international/press-release/77817/greenpeace-air-sampling-in-geneva-finds-microplastics-in-urban-air/</a></li>
+<li>D. T. E. Staff, “Planet Over Plastic: What does Article 1 of the Global Plastics Treaty say?,” Down To Earth. Accessed: Aug. 12, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/planet-over-plastic-what-does-article-1-of-the-global-plastics-treaty-say">https://www.downtoearth.org.in/waste/planet-over-plastic-what-does-article-1-of-the-global-plastics-treaty-say</a></li>
+<li>D. T. E. Staff, “Planet Over Plastic: What does Article 1 of the Global Plastics Treaty say?,” Down To Earth. Accessed: Aug. 12, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/planet-over-plastic-what-does-article-1-of-the-global-plastics-treaty-say">https://www.downtoearth.org.in/waste/planet-over-plastic-what-does-article-1-of-the-global-plastics-treaty-say</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>I. MALSANG, “Indigenous communities plead for action at plastic pollution talks.” Accessed: Aug. 11, 2025. [Online]. Available: <a href="https://phys.org/news/2025-08-indigenous-communities-action-plastic-pollution.html">https://phys.org/news/2025-08-indigenous-communities-action-plastic-pollution.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Plastics Can Lead to Disease, Disability &amp; Premature Death, Research Finds,” Democracy Now! Accessed: Aug. 08, 2025. [Online]. Available: <a href="https://www.democracynow.org/2025/8/7/lancet_health_impact_of_plastics">https://www.democracynow.org/2025/8/7/lancet_health_impact_of_plastics</a></li>
+
+<li>Paco, “Plastic Causing Disease and Death All Stages of Life, Report Warns,” Organic Consumers. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://organicconsumers.org/plastic-causing-disease-and-death-all-stages-of-life-report-warns/">https://organicconsumers.org/plastic-causing-disease-and-death-all-stages-of-life-report-warns/</a></li>
+<li>“The Problem with Plastic,” The New Press. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://thenewpress.org/books/the-problem-with-plastic/">https://thenewpress.org/books/the-problem-with-plastic/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. Bienkowski, “New report calls plastics a ‘grave’ danger to health as nations negotiate treaty,” The New Lede. Accessed: Aug. 05, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/08/lancet-plastic-health-impacts-global-treaty-geneva/">https://www.thenewlede.org/2025/08/lancet-plastic-health-impacts-global-treaty-geneva/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Wallace-Wells, “Opinion | You Are Contaminated,” The New York Times, Aug. 04, 2025. Accessed: Aug. 06, 2025. [Online]. Available: <a href="https://www.nytimes.com/2025/08/04/opinion/contamination-exposome.html">https://www.nytimes.com/2025/08/04/opinion/contamination-exposome.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>P. J. Landrigan et al., “The Lancet Countdown on health and plastics,” The Lancet, vol. 0, no. 0, Aug. 2025, doi: 10.1016/S0140-6736(25)01447-3.</li>
+
+<li>K. J. Bose Shrotik, “Global Plastic Profiles 2025: Where countries stand on capacity building, technical assistance and technology transfer,” Down To Earth. Accessed: Aug. 06, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/global-plastic-profiles-2025-where-countries-stand-on-capacity-building-technical-assistance-and-technology-transfer">https://www.downtoearth.org.in/waste/global-plastic-profiles-2025-where-countries-stand-on-capacity-building-technical-assistance-and-technology-transfer</a></li>
+<li>D. T. E. Staff, “UNEP chief urges nations to strike ‘historic’ deal to end plastic waste,” Down To Earth. Accessed: Aug. 06, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/unep-chief-urges-nations-to-strike-historic-deal-to-end-plastic-waste">https://www.downtoearth.org.in/waste/unep-chief-urges-nations-to-strike-historic-deal-to-end-plastic-waste</a></li>
+<li>“cseindia.org/page/planet-over-plastic.” Accessed: Aug. 06, 2025. [Online]. Available: <a href="https://www.cseindia.org/page/planet-over-plastic">https://www.cseindia.org/page/planet-over-plastic</a></li>
+<li>B. Bienkowski, “New report calls plastics a ‘grave’ danger to health as nations negotiate treaty,” The New Lede. Accessed: Aug. 06, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/08/lancet-plastic-health-impacts-global-treaty-geneva/">https://www.thenewlede.org/2025/08/lancet-plastic-health-impacts-global-treaty-geneva/</a></li>
+
+<li>N. Ahmed, “Plastics production ‘a global threat.’” Accessed: Aug. 03, 2025. [Online]. Available: <a href="https://theecologist.org/2025/jul/31/plastics-production-global-threat">https://theecologist.org/2025/jul/31/plastics-production-global-threat</a></li>
+
+<li>N. Ahmed, “Plastics production ‘a global threat.’” Accessed: Aug. 01, 2025. [Online]. Available: <a href="https://theecologist.org/2025/jul/31/plastics-production-global-threat">https://theecologist.org/2025/jul/31/plastics-production-global-threat</a></li>
+
+<li>B. S. O. &amp; J. V. C. / T. Conversation, “One of the biggest microplastic pollution sources isn’t straws or grocery bags – it’s your tires,” Popular Science. Accessed: Jul. 26, 2025. [Online]. Available: <a href="https://theconversation.com/one-of-the-biggest-microplastic-pollution-sources-isnt-straws-or-grocery-bags-its-your-tires-259440">https://theconversation.com/one-of-the-biggest-microplastic-pollution-sources-isnt-straws-or-grocery-bags-its-your-tires-259440</a></li>
+
+<li>N. Gilbert, “Microplastics wreaking havoc on human hormones, fertility, a new review says,” U.S. Right to Know. Accessed: Jul. 25, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/microplastics-wreaking-havoc-on-human-hormones-fertility/">https://usrtk.org/healthwire/microplastics-wreaking-havoc-on-human-hormones-fertility/</a></li>
+
+<li>“Every Breath You Take: Air Pollution Risks from Petrochemicals Production for the Plastics Supply Chain,” Greenpeace International. Accessed: Jul. 22, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/publication/77208/every-breath-you-take/">https://www.greenpeace.org/international/publication/77208/every-breath-you-take/</a></li>
+
+<li>“89 billion and counting: Unilever&amp;#8217;s out of control plastic sachet habit,” Greenpeace International. Accessed: Jul. 22, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/story/77194/89-billion-and-counting-unilevers-out-of-control-plastic-sachet-habit/">https://www.greenpeace.org/international/story/77194/89-billion-and-counting-unilevers-out-of-control-plastic-sachet-habit/</a></li>
+
+<li>C. Gillam, “Postcard from California: Plastics ‘recycling’ – out of sight, out of mind,” The New Lede. Accessed: Jul. 18, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/07/postcard-from-california-plastics-recycling-out-of-sight-out-of-mind/">https://www.thenewlede.org/2025/07/postcard-from-california-plastics-recycling-out-of-sight-out-of-mind/</a></li>
+
+<li>“New Report Exposes Formosa Plastics,” Friends of the Earth. Accessed: Jul. 16, 2025. [Online]. Available: <a href="https://foe.org/news/unchecked-and-unaccountable/">https://foe.org/news/unchecked-and-unaccountable/</a></li>
+
+<li>K. Sanderson, “Millions of tonnes of nanoplastics are polluting the ocean,” Nature, Jul. 2025, doi: 10.1038/d41586-025-02162-0.</li>
+
+<li>K. Makoye, “UNOC3: Indigenous voices call for plastics treaty with justice at its core,” Down To Earth. Accessed: Jun. 14, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/environment/unoc3-indigenous-voices-call-for-plastics-treaty-with-justice-at-its-core">https://www.downtoearth.org.in/environment/unoc3-indigenous-voices-call-for-plastics-treaty-with-justice-at-its-core</a></li>
+
+<li>“‘Nice Declaration’ for an ambitious plastics treaty: the wake up call the world needs,” Greenpeace International. Accessed: Jun. 11, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/75351/nice-declaration-ambitious-plastics-treaty-wake-up-call-world-needs/">https://www.greenpeace.org/international/press-release/75351/nice-declaration-ambitious-plastics-treaty-wake-up-call-world-needs/</a></li>
+
+<li>J. Dacey, “The mystery of missing marine plastic,” Physics World. Accessed: Jun. 08, 2025. [Online]. Available: <a href="https://physicsworld.com/a/the-mystery-of-missing-marine-plastic/">https://physicsworld.com/a/the-mystery-of-missing-marine-plastic/</a></li>
+
+<li>“Homepage.” Accessed: Apr. 11, 2025. [Online]. Available: <a href="https://truthaboutplastic.org/">https://truthaboutplastic.org/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>Paco, “PlasticList Report,” Organic Consumers. Accessed: Apr. 09, 2025. [Online]. Available: <a href="https://organicconsumers.org/plasticlist-report/">https://organicconsumers.org/plasticlist-report/</a></li>
+<li>D. Main, “‘Plastics addiction’ is killing us, experts say, but hope remains,” The New Lede. Accessed: Apr. 04, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/04/plastics-addiction-killing-us-but-hope-remains/">https://www.thenewlede.org/2025/04/plastics-addiction-killing-us-but-hope-remains/</a></li>
+<li>“Plastic design changes: a greenwashing tactic,” Greenpeace International. Accessed: Feb. 26, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/story/73083/plastic-design-changes-a-greenwashing-tactic/">https://www.greenpeace.org/international/story/73083/plastic-design-changes-a-greenwashing-tactic/</a></li>
+
+<li>“GMO/Toxin Free USA Connecting the Dots Newsletter January 4, 2025.” Accessed: Jan. 06, 2025. [Online]. Available: <a href="https://gmofreeusa.salsalabs.org/connectthedots20250104_0/index.html">https://gmofreeusa.salsalabs.org/connectthedots20250104_0/index.html</a></li>
+<li>“PlasticList,” PlasticList. Accessed: Jan. 03, 2025. [Online]. Available: <a href="https://plasticlist.org">https://plasticlist.org</a></li>
+
+<li>I. Dumé, “Supramolecular biomass foam removes microplastics from water,” Physics World. Accessed: Dec. 24, 2024. [Online]. Available: <a href="https://physicsworld.com/supramolecular-biomass-foam-removes-microplastics-from-water/">https://physicsworld.com/supramolecular-biomass-foam-removes-microplastics-from-water/</a></li>
+
+<li>“Plastic Makers Have A Big Secret: They’re Experimenting On You - YouTube.” Accessed: Dec. 24, 2024. [Online]. Available: <a href="https://www.youtube.com/watch?v=HuBEr9DjSxA">https://www.youtube.com/watch?v=HuBEr9DjSxA</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>C. Gillam, “Beware the air you breathe - more evidence links microplastics to health problems,” The New Lede. Accessed: Dec. 19, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/12/beware-the-air-you-breathe-more-evidence-links-microplastics-to-health-problems/">https://www.thenewlede.org/2024/12/beware-the-air-you-breathe-more-evidence-links-microplastics-to-health-problems/</a></li>
+
+<li>J. McKenzie, “‘The process is broken’: Major oil producing countries kill UN plastics treaty over cap on production,” Bulletin of the Atomic Scientists. Accessed: Dec. 09, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/12/the-process-is-broken-major-oil-producing-countries-kill-un-plastics-treaty-over-cap-on-production/">https://thebulletin.org/2024/12/the-process-is-broken-major-oil-producing-countries-kill-un-plastics-treaty-over-cap-on-production/</a></li>
+
+<li>L. S. Guther Max, “The Delusion of ‘Advanced’ Plastic Recycling,” ProPublica. Accessed: Dec. 04, 2024. [Online]. Available: <a href="https://www.propublica.org/article/delusion-advanced-chemical-plastic-recycling-pyrolysis">https://www.propublica.org/article/delusion-advanced-chemical-plastic-recycling-pyrolysis</a></li>
+
+<li>S. Kelleher, “Outcry over Texas plastics plant points to broader industry issues,” The New Lede. Accessed: Dec. 02, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/11/outcry-over-texas-plastics-plant-points-to-broader-industry-issues/">https://www.thenewlede.org/2024/11/outcry-over-texas-plastics-plant-points-to-broader-industry-issues/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Wicker, “The plastics crisis is now a global human health crisis, experts say,” Mongabay Environmental News. Accessed: Nov. 20, 2024. [Online]. Available: <a href="https://news.mongabay.com/2024/11/the-plastics-crisis-is-now-a-global-human-health-crisis-experts-say/">https://news.mongabay.com/2024/11/the-plastics-crisis-is-now-a-global-human-health-crisis-experts-say/</a></li>
+
+<li>“The solutions to the climate and plastic crisis are connected,” Greenpeace International. Accessed: Nov. 19, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/71337/solution-climate-plastic-crisis-connected/">https://www.greenpeace.org/international/story/71337/solution-climate-plastic-crisis-connected/</a></li>
+
+<li>A. E. November 2024, “Clearing up the compostable plastic mess,” Chemistry World. Accessed: Nov. 19, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/features/clearing-up-the-compostable-plastic-mess/4020481.article">https://www.chemistryworld.com/features/clearing-up-the-compostable-plastic-mess/4020481.article</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>P. Ferdinand, “Ultra-processed foods and plastics: A marriage made in hell?,” U.S. Right to Know. Accessed: Oct. 29, 2024. [Online]. Available: <a href="https://usrtk.org/healthwire/ultra-processed-foods-and-plastics/">https://usrtk.org/healthwire/ultra-processed-foods-and-plastics/</a></li>
+
+<li>L. Song, “The Plastics Industry’s Wish List for a Second Trump Administration,” ProPublica. Accessed: Oct. 25, 2024. [Online]. Available: <a href="https://www.propublica.org/article/plastics-industry-wish-list-second-trump-administration">https://www.propublica.org/article/plastics-industry-wish-list-second-trump-administration</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>P. Ferdinand, “Microplastic in ‘leave-on’ cosmetics is understudied; research ‘urgently required,’ experts say,” U.S. Right to Know. Accessed: Oct. 13, 2024. [Online]. Available: <a href="https://usrtk.org/healthwire/microplastic-in-leave-on-cosmetic-personal-care-products-is-understudied-research-urgently-required/">https://usrtk.org/healthwire/microplastic-in-leave-on-cosmetic-personal-care-products-is-understudied-research-urgently-required/</a></li>
+
+<li>C. Gillam, “Q&amp;A: 20 years after coining ‘microplastics,’ a researcher reflects on what needs to change,” The New Lede. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/10/qa-20-years-after-coining-microplastics-a-researcher-reflects-on-what-needs-to-change/">https://www.thenewlede.org/2024/10/qa-20-years-after-coining-microplastics-a-researcher-reflects-on-what-needs-to-change/</a></li>
+
+<li>J. Ghosh, “Saving the Planet from Plastics | by Jayati Ghosh,” Project Syndicate. Accessed: Sep. 14, 2024. [Online]. Available: <a href="https://www.project-syndicate.org/commentary/cutting-plastic-production-crucial-to-human-health-climate-change-by-jayati-ghosh-2024-09">https://www.project-syndicate.org/commentary/cutting-plastic-production-crucial-to-human-health-climate-change-by-jayati-ghosh-2024-09</a></li>
+
+<li>“World leaders: Actors, activists and athletes around the world are asking you to cut plastic production,” Greenpeace International. Accessed: Sep. 11, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/69582/world-leaders-actors-activists-and-athletes-around-the-world-are-asking-you-to-cut-plastic-production/">https://www.greenpeace.org/international/story/69582/world-leaders-actors-activists-and-athletes-around-the-world-are-asking-you-to-cut-plastic-production/</a></li>
+
+<li>“Plastic protesters single out Unilever.” Accessed: Sep. 06, 2024. [Online]. Available: <a href="https://theecologist.org/2024/sep/05/plastic-protesters-single-out-unilever">https://theecologist.org/2024/sep/05/plastic-protesters-single-out-unilever</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>L. Song, “When Is ‘Recyclable’ Not Really Recyclable? When the Plastics Industry Gets to Define What the Word Means.,” ProPublica. Accessed: Aug. 16, 2024. [Online]. Available: <a href="https://www.propublica.org/article/plastics-industry-redefine-recyclable-ftc-grocery-bags">https://www.propublica.org/article/plastics-industry-redefine-recyclable-ftc-grocery-bags</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Cardinal, “Mizzou scientists achieve more than 98% efficiency removing nanoplastics from water,” nanotechnologyworld. Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://www.nanotechnologyworld.org/post/mizzou-scientists-achieve-more-than-98-efficiency-removing-nanoplastics-from-water">https://www.nanotechnologyworld.org/post/mizzou-scientists-achieve-more-than-98-efficiency-removing-nanoplastics-from-water</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>O. P. Singh, “PACKAGE: Where has the plastic waste disappeared?,” Centre for Financial Accountability. Accessed: Jul. 31, 2024. [Online]. Available: <a href="https://www.cenfa.org/package-where-has-the-plastic-waste-disappeared/">https://www.cenfa.org/package-where-has-the-plastic-waste-disappeared/</a></li>
+<li>C. D. Kulasekaran, “Burn and Earn: Another facet of Plastic Credits and the false solution that it is,” Centre for Financial Accountability. Accessed: Jul. 31, 2024. [Online]. Available: <a href="https://www.cenfa.org/burn-and-earn-another-facet-of-plastic-credits-and-the-false-solution-that-it-is-2/">https://www.cenfa.org/burn-and-earn-another-facet-of-plastic-credits-and-the-false-solution-that-it-is-2/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>R. F. Mwangi Fonda, “Microplastics Are Everywhere, and the Paris Olympics Face Bacterial Challenges,” Scientific American. Accessed: Jun. 28, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/podcast/episode/the-paris-olympics-faces-bacterial-challenges-and-microplastics-are-found-in/">https://www.scientificamerican.com/podcast/episode/the-paris-olympics-faces-bacterial-challenges-and-microplastics-are-found-in/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Kelleher, “Plastics producers face potential wave of lawsuits, report suggests,” The New Lede. Accessed: Jun. 28, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/06/plastics-producers-face-potential-wave-of-lawsuits-report-suggests/">https://www.thenewlede.org/2024/06/plastics-producers-face-potential-wave-of-lawsuits-report-suggests/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. D. Kulasekaran, “CFA Workshop Explores the ‘Death Cycle’ of Plastics and Calls for Industry Accountability,” Centre for Financial Accountability. Accessed: Jun. 21, 2024. [Online]. Available: <a href="https://www.cenfa.org/cfa-workshop-explores-the-death-cycle-of-plastics-and-calls-for-industry-accountability/">https://www.cenfa.org/cfa-workshop-explores-the-death-cycle-of-plastics-and-calls-for-industry-accountability/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>L. S. Guther Max, “The Delusion of ‘Advanced’ Plastic Recycling,” ProPublica. Accessed: Jun. 21, 2024. [Online]. Available: <a href="https://www.propublica.org/article/delusion-advanced-chemical-plastic-recycling-pyrolysis">https://www.propublica.org/article/delusion-advanced-chemical-plastic-recycling-pyrolysis</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>K. Y. Grist, “How the Recycling Symbol Duped People into Buying More Plastic,” Scientific American. Accessed: Jun. 20, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/how-the-recycling-symbol-duped-people-into-buying-more-plastic/">https://www.scientificamerican.com/article/how-the-recycling-symbol-duped-people-into-buying-more-plastic/</a></li>
+<li>D. Carrington and D. C. E. editor, “Microplastic discovery in penises raises erectile dysfunction questions,” The Guardian, Jun. 19, 2024. Accessed: Jun. 20, 2024. [Online]. Available: <a href="https://www.theguardian.com/environment/article/2024/jun/19/microplastic-discovery-in-penises-raises-erectile-dysfunction-questions">https://www.theguardian.com/environment/article/2024/jun/19/microplastic-discovery-in-penises-raises-erectile-dysfunction-questions</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>C. D. Kulasekaran, “CFA Workshop Explores the ‘Death Cycle’ of Plastics and Calls for Industry Accountability,” Centre for Financial Accountability. Accessed: Jun. 20, 2024. [Online]. Available: <a href="https://www.cenfa.org/cfa-workshop-explores-the-death-cycle-of-plastics-and-calls-for-industry-accountability/">https://www.cenfa.org/cfa-workshop-explores-the-death-cycle-of-plastics-and-calls-for-industry-accountability/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>This is how bioplastics can be made, (Apr. 02, 2024). Accessed: Jun. 09, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=ZG6p0PIkbLE">https://www.youtube.com/watch?v=ZG6p0PIkbLE</a></li>
+<li>How much plastic do we actually recycle?, (Feb. 08, 2024). Accessed: Jun. 09, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=4QWyK6iIkP4">https://www.youtube.com/watch?v=4QWyK6iIkP4</a></li>
+<li>Can bioplastics shape a greener future?, (Jan. 30, 2024). Accessed: Jun. 09, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=IqyHr4ADR4A">https://www.youtube.com/watch?v=IqyHr4ADR4A</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“What does the plastics crisis have to do with desertification?,” Greenpeace International. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/67540/what-does-the-plastics-crisis-have-to-do-with-desertification/">https://www.greenpeace.org/international/story/67540/what-does-the-plastics-crisis-have-to-do-with-desertification/</a></li>
+
+<li>Lea, “The path to a strong Global Plastic Treaty,” International Science Council. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://council.science/current/blog/the-path-to-a-strong-global-plastic-treaty/">https://council.science/current/blog/the-path-to-a-strong-global-plastic-treaty/</a></li>
+
+<li>“Let’s end the age of plastic!,” Greenpeace International. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/act/lets-end-the-age-of-plastic/">https://www.greenpeace.org/international/act/lets-end-the-age-of-plastic/</a></li>
+
+<li>“What does the plastics crisis have to do with desertification?,” Greenpeace International. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/67540/what-does-the-plastics-crisis-have-to-do-with-desertification/">https://www.greenpeace.org/international/story/67540/what-does-the-plastics-crisis-have-to-do-with-desertification/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. M. | cmautner@pennlive.com, “General Mills has too much plastic in its food, Consumer Reports says,” pennlive. Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.pennlive.com/nation-world/2024/02/general-mills-has-too-much-plastic-in-its-food-consumer-reports-says.html">https://www.pennlive.com/nation-world/2024/02/general-mills-has-too-much-plastic-in-its-food-consumer-reports-says.html</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>I. Fadelli and Phys.org, “A machine learning-based approach to discover nanocomposite films for biodegradable plastic alternatives.” Accessed: Apr. 14, 2024. [Online]. Available: <a href="https://phys.org/news/2024-04-machine-based-approach-nanocomposite-biodegradable.html">https://phys.org/news/2024-04-machine-based-approach-nanocomposite-biodegradable.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Noor, “‘They lied’: plastics producers deceived public about recycling, report reveals,” The Guardian, Feb. 15, 2024. Accessed: Feb. 20, 2024. [Online]. Available: <a href="https://www.theguardian.com/us-news/2024/feb/15/recycling-plastics-producers-report">https://www.theguardian.com/us-news/2024/feb/15/recycling-plastics-producers-report</a></li>
+
+<li>P. Bennett, “EU Drafts ‘Polluter Pays’ Rules Requiring Companies to Pay for Microplastics Cleanup,” EcoWatch. Accessed: Feb. 20, 2024. [Online]. Available: <a href="https://www.ecowatch.com/microplastics-cleanup-rules-europe-companies-responsibility.html">https://www.ecowatch.com/microplastics-cleanup-rules-europe-companies-responsibility.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Bribery, fraud and large-scale greenwashing: WHY PLASTIC? exposes the grim reality of plastic ‘recycling,’” Greenpeace International. Accessed: Feb. 17, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/53960/bribery-fraud-greenwashing-why-plastic-documentary-exposes-grim-reality-of-plastic-recycling/">https://www.greenpeace.org/international/story/53960/bribery-fraud-greenwashing-why-plastic-documentary-exposes-grim-reality-of-plastic-recycling/</a></li>
+<li>“Oil and Plastics Industry Duped Consumers and Regulators for Decades in ‘Plastic Recycling Fraud,’” Democracy Now! Accessed: Feb. 17, 2024. [Online]. Available: <a href="https://www.democracynow.org/2024/2/16/headlines/oil_and_plastics_industry_duped_consumers_and_regulators_for_decades_in_plastic_recycling_fraud">https://www.democracynow.org/2024/2/16/headlines/oil_and_plastics_industry_duped_consumers_and_regulators_for_decades_in_plastic_recycling_fraud</a></li>
+<li>“The Fraud of Plastic Recycling.” Accessed: Feb. 17, 2024. [Online]. Available: <a href="https://climateintegrity.org/plastics-fraud">https://climateintegrity.org/plastics-fraud</a></li>
+
+<li>D. Noor, “‘They lied’: plastics producers deceived public about recycling, report reveals,” The Guardian, Feb. 15, 2024. Accessed: Feb. 17, 2024. [Online]. Available: <a href="https://www.theguardian.com/us-news/2024/feb/15/recycling-plastics-producers-report">https://www.theguardian.com/us-news/2024/feb/15/recycling-plastics-producers-report</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Unilever’s Plastic Playbook,” Reuters. Accessed: Jun. 27, 2022. [Online]. Available: <a href="https://www.reuters.com/investigates/special-report/global-plastic-unilever/">https://www.reuters.com/investigates/special-report/global-plastic-unilever/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Dorey, <i>No. More. Plastic.: What you can do to make a difference – the #2minutesolution.</i> Random House, 2018.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Greenpeace, “Greenpeace report exposes how multinationals are pretending to solve the plastic crisis,” Break Free From Plastic, Oct. 09, 2019. <a href="https://www.breakfreefromplastic.org/2019/10/09/greenpeace-report-exposes-how-multinationals-are-pretending-to-solve-the-plastic-crisis/">https://www.breakfreefromplastic.org/2019/10/09/greenpeace-report-exposes-how-multinationals-are-pretending-to-solve-the-plastic-crisis/</a> (accessed Jan. 18, 2022).</li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>D. Seidman, “Plastics Are Fossil Fuel Industry’s Plan B. Fenceline Communities Pay the Price.,” Truthout. Accessed: Feb. 18, 2024. [Online]. Available: <a href="https://truthout.org/articles/plastics-are-fossil-fuel-industrys-plan-b-fenceline-communities-pay-the-price/">https://truthout.org/articles/plastics-are-fossil-fuel-industrys-plan-b-fenceline-communities-pay-the-price/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Plastic’s role in the triple planetary crisis,” Greenpeace International. Accessed: Feb. 28, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/65507/plastics-role-in-the-triple-planetary-crisis/">https://www.greenpeace.org/international/story/65507/plastics-role-in-the-triple-planetary-crisis/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>N. Jones, “More than 4,000 plastic chemicals are hazardous, report finds,” Nature, Mar. 2024, doi: 10.1038/d41586-024-00805-2.</li>
+</ul>
+
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:56</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

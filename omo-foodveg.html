@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:57 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Food - Vegetarian</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Food - Vegetarian</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org0a86e18">1. General</a></li>
+<li><a href="#orgf2af8b7">2. STEMM</a>
+<ul>
+<li><a href="#orge3987a0">2.1. Environment, Ecology</a></li>
+<li><a href="#org7fde4a2">2.2. Health</a></li>
+<li><a href="#orgfcd95a8">2.3. Data Science</a></li>
+</ul>
+</li>
+<li><a href="#org32a0616">3. Worldly Matters</a>
+<ul>
+<li><a href="#orgde991d1">3.1. Space and Time</a>
+<ul>
+<li><a href="#orgb3a167c">3.1.1. History</a></li>
+</ul>
+</li>
+<li><a href="#org9c13b4b">3.2. Religions, Spirituality, Misc</a>
+<ul>
+<li><a href="#orgb0b42d4">3.2.1. Buddhism</a></li>
+<li><a href="#org29395b1">3.2.2. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orge1cb929">4. Core</a>
+<ul>
+<li><a href="#orgf0c03d4">4.1. Variants</a>
+<ul>
+<li><a href="#org6cac0a5">4.1.1. Space and Time</a></li>
+<li><a href="#orgb041c13">4.1.2. Religions, Spirituality, Misc</a></li>
+<li><a href="#orgf02832a">4.1.3. SocioPolitical Studies, Law, Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orga6ec047">5. Special Topics</a>
+<ul>
+<li><a href="#org5792e3e">5.1. Texts</a></li>
+<li><a href="#orged15dba">5.2. Articles, Essays</a></li>
+</ul>
+</li>
+<li><a href="#org374d438">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org0a86e18" class="outline-2">
+<h2 id="org0a86e18"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orgf2af8b7" class="outline-2">
+<h2 id="orgf2af8b7"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orge3987a0" class="outline-3">
+<h3 id="orge3987a0"><span class="section-number-3">2.1.</span> Environment, Ecology</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>A. Trauger, “The vegan industrial complex: the political ecology of not eating animals,” Journal of Political Ecology, vol. 29, no. 1, Art. no. 1, Oct. 2022, doi: 10.2458/jpe.3052.</li>
+<li>U. of Georgia, “Veganism may not save the planet: Study suggests limited meat consumption better for environment, animals.” Accessed: Mar. 19, 2025. [Online]. Available: <a href="https://phys.org/news/2023-02-veganism-planet-limited-meat-consumption.html">https://phys.org/news/2023-02-veganism-planet-limited-meat-consumption.html</a></li>
+
+<li>“Climatarian, flexitarian, vegetarian, vegan: Which diet is best for the planet? (And what do they mean?),” ideas.ted.com. Accessed: Oct. 06, 2022. [Online]. Available: <a href="https://ideas.ted.com/which-diet-is-better-for-climate-change-vegan-vegetarian-climatarian-flexitarian/">https://ideas.ted.com/which-diet-is-better-for-climate-change-vegan-vegetarian-climatarian-flexitarian/</a></li>
+<li>P. Scarborough et al., “Vegans, vegetarians, fish-eaters and meat-eaters in the UK show discrepant environmental impacts,” Nat Food, pp. 1–10, Jul. 2023, doi: 10.1038/s43016-023-00795-w.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7fde4a2" class="outline-3">
+<h3 id="org7fde4a2"><span class="section-number-3">2.2.</span> Health</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>A. Stubbendorff and M. Wolff, “Low iron is common in teenage girls – with vegans and vegetarians at greatest risk, according to our research in Sweden,” The Conversation. Accessed: Apr. 17, 2025. [Online]. Available: <a href="http://theconversation.com/low-iron-is-common-in-teenage-girls-with-vegans-and-vegetarians-at-greatest-risk-according-to-our-research-in-sweden-253878">http://theconversation.com/low-iron-is-common-in-teenage-girls-with-vegans-and-vegetarians-at-greatest-risk-according-to-our-research-in-sweden-253878</a></li>
+<li>U. of Surrey, “Processed plant-based meat alternatives linked to depression risk in vegetarians.” Accessed: Dec. 19, 2024. [Online]. Available: <a href="https://medicalxpress.com/news/2024-12-based-meat-alternatives-linked-depression.html">https://medicalxpress.com/news/2024-12-based-meat-alternatives-linked-depression.html</a></li>
+<li>OCA, “Organic Bytes Newsletter #882: Fake Meat Linked to Depression,” Organic Consumers. Accessed: Feb. 08, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-882-fake-meat-linked-to-depression/">https://organicconsumers.org/organic-bytes-newsletter-882-fake-meat-linked-to-depression/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfcd95a8" class="outline-3">
+<h3 id="orgfcd95a8"><span class="section-number-3">2.3.</span> Data Science</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>“What share of people are vegetarian, vegan, or flexitarian?,” Our World in Data. Accessed: May 14, 2022. [Online]. Available: <a href="https://ourworldindata.org/vegetarian-vegan">https://ourworldindata.org/vegetarian-vegan</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org32a0616" class="outline-2">
+<h2 id="org32a0616"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgde991d1" class="outline-3">
+<h3 id="orgde991d1"><span class="section-number-3">3.1.</span> Space and Time</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgb3a167c" class="outline-4">
+<h4 id="orgb3a167c"><span class="section-number-4">3.1.1.</span> History</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>M. D. Conversation The, “What did ancient Greek and Roman philosophers think about vegetarianism?,” Scroll.in. Accessed: Nov. 29, 2024. [Online]. Available: <a href="https://scroll.in/article/1076110/what-did-ancient-greek-and-roman-philosophers-think-about-vegetarianism">https://scroll.in/article/1076110/what-did-ancient-greek-and-roman-philosophers-think-about-vegetarianism</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9c13b4b" class="outline-3">
+<h3 id="org9c13b4b"><span class="section-number-3">3.2.</span> Religions, Spirituality, Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orgb0b42d4" class="outline-4">
+<h4 id="orgb0b42d4"><span class="section-number-4">3.2.1.</span> Buddhism</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li>P. Pant, Buddhist Peace Recipes. New Delhi: Lustre, 2004.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org29395b1" class="outline-4">
+<h4 id="org29395b1"><span class="section-number-4">3.2.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li>“Jain vegetarianism,” Wikipedia. Jun. 08, 2025. Accessed: Jul. 09, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Jain_vegetarianism&amp;oldid=1294522385">https://en.wikipedia.org/w/index.php?title=Jain_vegetarianism&amp;oldid=1294522385</a></li>
+
+<li>S. G. Tilak, “A merry (meatless) Christmas,” The Hindu, Dec. 20, 2024. Accessed: Dec. 22, 2024. [Online]. Available: <a href="https://www.thehindu.com/food/features/merry-meatless-christmas-vegan-vegetarian-feast/article68998627.ece">https://www.thehindu.com/food/features/merry-meatless-christmas-vegan-vegetarian-feast/article68998627.ece</a></li>
+
+<li>L. Alsdorf, The History of Vegetarianism and Cow-Veneration in India. Routledge, 2010.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orge1cb929" class="outline-2">
+<h2 id="orge1cb929"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgf0c03d4" class="outline-3">
+<h3 id="orgf0c03d4"><span class="section-number-3">4.1.</span> Variants</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org6cac0a5" class="outline-4">
+<h4 id="org6cac0a5"><span class="section-number-4">4.1.1.</span> Space and Time</h4>
+<div class="outline-text-4" id="text-4-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org92aabce"></a>Regional Classes<br />
+<ol class="org-ol">
+<li><a id="orgc9ea33c"></a>Middle East<br />
+<div class="outline-text-6" id="text-4-1-1-1-1">
+<ul class="org-ul">
+<li>S. Abourezk, Vegetarian Mediterranean Cookbook: 125+ Simple, Healthy Recipes for Living Well. Naperville: Callisto Media, 2020.</li>
+<li>S. Hage, The Levantine Vegetarian: Recipes from the Middle East. London: Phaidon Inc Ltd, 2024.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgb041c13" class="outline-4">
+<h4 id="orgb041c13"><span class="section-number-4">4.1.2.</span> Religions, Spirituality, Misc</h4>
+<div class="outline-text-4" id="text-4-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org277679c"></a>Vaishnav Food<br />
+<ol class="org-ol">
+<li><a id="orgbf81150"></a>ISKCON<br />
+<div class="outline-text-6" id="text-4-1-2-1-1">
+<ul class="org-ul">
+<li>R. Das, <i>Yogiplate: The Fundamentals of Sattvic Food.</i> Penguin Random House India Private Limited, 2021.</li>
+
+<li>A. Dasa, <i>Hare Krishna Book of Vegetarian Cooking.</i> Mumbai: Bhaktivedanta Book Trust, 2014.</li>
+<li>K. P. D. Dasi, Devotional Dishes. The Bhaktivedanta Book Trust, 2014.</li>
+<li>C. Stammers, The Book of Egg Free Cakes. Bhaktivedanta Book Trust, 2001.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgeae699a"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org7104b49"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgf02832a" class="outline-4">
+<h4 id="orgf02832a"><span class="section-number-4">4.1.3.</span> SocioPolitical Studies, Law, Misc</h4>
+<div class="outline-text-4" id="text-4-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org433c203"></a>India<br />
+<ol class="org-ol">
+<li><a id="org81ebd65"></a>General<br /></li>
+<li><a id="org976bda0"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org8a2ce61"></a>Space and Time<br />
+<ul class="org-ul">
+<li><a id="orgb2089a7"></a>History<br />
+<div class="outline-text-8" id="text-orgb2089a7">
+<ul class="org-ul">
+<li>“Book Excerpt: Ashoka, the ‘vegetarian king.’” Accessed: Mar. 03, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/reviews/book-excerpt-ashoka-the-vegetarian-king--94772">https://www.downtoearth.org.in/reviews/book-excerpt-ashoka-the-vegetarian-king--94772</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org0f0f6cf"></a>Religions, Spirituality, Misc<br /></li>
+<li><a id="org8855aa2"></a>Humanities, Misc<br /></li>
+<li><a id="org3dfdb8c"></a>SocioPolitical Studies, Law, Misc<br />
+<ul class="org-ul">
+<li><a id="org8f39fce"></a>Misc<br />
+<div class="outline-text-8" id="text-org8f39fce">
+<ul class="org-ul">
+<li>“The Sangh’s Sustained Campaign Against Non-Veg Food is a Step Towards Becoming a Hindu Pakistan,” The Wire. Accessed: Apr. 12, 2025. [Online]. Available: <a href="https://thewire.in/communalism/the-sanghs-sustained-campaign-against-non-veg-food-is-a-step-towards-becoming-a-hindu-pakistan">https://thewire.in/communalism/the-sanghs-sustained-campaign-against-non-veg-food-is-a-step-towards-becoming-a-hindu-pakistan</a></li>
+
+<li>A. Butani, “DPS Gautam Buddh Nagar implements no non-veg rule, parents call move ‘discriminatory,’” The Hindu, Aug. 07, 2024. Accessed: Aug. 09, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/Delhi/dps-gautam-buddh-nagar-implements-no-non-veg-rule-parents-call-move-discriminatory/article68497523.ece">https://www.thehindu.com/news/cities/Delhi/dps-gautam-buddh-nagar-implements-no-non-veg-rule-parents-call-move-discriminatory/article68497523.ece</a></li>
+
+<li>A. Pandey, “Vegetarian Vigilance Of Zomato’s ‘Pure Veg’ Fleet: A Recipe For Social Division?,” Feminism in India. Accessed: Mar. 27, 2024. [Online]. Available: <a href="https://feminisminindia.com/2024/03/27/vegetarian-vigilance-of-zomatos-pure-veg-fleet-a-recipe-for-social-division/">https://feminisminindia.com/2024/03/27/vegetarian-vigilance-of-zomatos-pure-veg-fleet-a-recipe-for-social-division/</a></li>
+<li>V. Sanzgiri, “Green Deliveries: Zomato Revisits Veg Fleet Plan Amid Criticism,” MediaNama. Accessed: Mar. 21, 2024. [Online]. Available: <a href="https://www.medianama.com/2024/03/223-green-deliveries-zomato-revisits-veg-fleet-plan-amid-criticism/">https://www.medianama.com/2024/03/223-green-deliveries-zomato-revisits-veg-fleet-plan-amid-criticism/</a></li>
+<li>“Zomato Announces ‘Pure Veg’ Delivery Fleet, Revokes Colour Segregation After Blowback,” The Wire. Accessed: Mar. 21, 2024. [Online]. Available: <a href="https://thewire.in/business/zomato-announces-pure-veg-delivery-fleet-revokes-colour-segregation-after-blowback">https://thewire.in/business/zomato-announces-pure-veg-delivery-fleet-revokes-colour-segregation-after-blowback</a></li>
+<li>A. Deb, “Why Zomato’s ‘pure veg’ service is being criticised as casteist,” Scroll.in. Accessed: Mar. 21, 2024. [Online]. Available: <a href="https://scroll.in/article/1065529/why-zomatos-pure-veg-service-is-being-criticised-as-casteist">https://scroll.in/article/1065529/why-zomatos-pure-veg-service-is-being-criticised-as-casteist</a></li>
+<li>“Zomato Announces ‘Pure Veg’ Delivery Fleet, Revokes Colour Segregation After Blowback,” The Wire. Accessed: Mar. 20, 2024. [Online]. Available: <a href="https://thewire.in/business/zomato-announces-pure-veg-delivery-fleet-revokes-colour-segregation-after-blowback">https://thewire.in/business/zomato-announces-pure-veg-delivery-fleet-revokes-colour-segregation-after-blowback</a></li>
+
+<li>“IIT-B’s ‘vegetarian tables’ policy: Vegetarianism of purity promotes segregation, hierarchy and even violence,” The Indian Express. Accessed: Oct. 11, 2023. [Online]. Available: <a href="https://indianexpress.com/article/opinion/columns/iit-bombay-vegetarianism-segregation-hierarchy-violence-8976874/">https://indianexpress.com/article/opinion/columns/iit-bombay-vegetarianism-segregation-hierarchy-violence-8976874/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orga8b7ddd"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orgb42bebf"></a>Texts<br />
+<ul class="org-ul">
+<li><a id="org9d5d648"></a>South India<br />
+<div class="outline-text-8" id="text-org9d5d648">
+<ul class="org-ul">
+<li>C. Padmanabhan, Dakshin: Vegetarian Cuisine from South India. Westland, 2023.</li>
+<li>P. Srinivasan, Pure Vegatarian. HarperCollins India, 2024.</li>
+<li>S. S. Rajan, Bhog Naivedya: Food Offerings To The Gods. New Delhi: Rupa Publications India, 2021.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgdfd48a5"></a>Misc<br />
+<div class="outline-text-8" id="text-orgdfd48a5">
+<ul class="org-ul">
+<li>India: Cookbook &amp; The Indian Vegetarian Cookbook.</li>
+<li>P. Pant and L. and M. H. Hamilton, <b>The Indian Vegetarian Cookbook, Illustrated Edition.</b> Phaidon Press, 2018.</li>
+<li>C. Makan, Chetna’s Healthy Indian: Vegetarian: Everyday Veg and Vegan Feasts Effortlessly Good for You, Illustrated edition. London: Mitchell Beazley, 2020.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org93583dc"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org3d6a4c6"></a>Mexican<br />
+<div class="outline-text-5" id="text-4-1-3-2">
+<ul class="org-ul">
+<li>M. C. Arronte, Mexican Vegetarian Cookbook: 400 authentic everyday recipes for the home cook. Phaidon Press Ltd, 2022.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orga6ec047" class="outline-2">
+<h2 id="orga6ec047"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org5792e3e" class="outline-3">
+<h3 id="org5792e3e"><span class="section-number-3">5.1.</span> Texts</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>N. Iyer, The Everyday Healthy Vegetarian. Gurugram, India: Hachette India, 2017.</li>
+<li>P. Srinivasan, Pure Vegatarian. HarperCollins India, 2024.</li>
+<li>DK, The Vegetarian Cookbook. DK Children, 2019.</li>
+<li>H. Kang, The Vegetarian by Han Kang, Winner of the 2024 Nobel Prize in Literature, Latest edition. London: Random House, 2016.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orged15dba" class="outline-3">
+<h3 id="orged15dba"><span class="section-number-3">5.2.</span> Articles, Essays</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>“68 warming vegetarian recipes for cooler nights,” delicious.com.au. Accessed: Dec. 16, 2021. [Online]. Available: <a href="https://www.delicious.com.au/recipes/collections/gallery/68-warming-vegetarian-recipes-for-cooler-nights/8y4aw3xv">https://www.delicious.com.au/recipes/collections/gallery/68-warming-vegetarian-recipes-for-cooler-nights/8y4aw3xv</a></li>
+<li>“How I Defected from Vegetarianism,” The India Forum. Accessed: Mar. 23, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/society/how-i-defected-vegetarianism">https://www.theindiaforum.in/society/how-i-defected-vegetarianism</a></li>
+<li>D. Weingarten, “How a Former Vegetarian Became a Butcher and Ethical Meat Advocate,” Civil Eats. Accessed: Apr. 17, 2023. [Online]. Available: <a href="https://civileats.com/2016/05/27/how-a-former-vegetarian-became-a-butcher-and-ethical-meat-advocate/">https://civileats.com/2016/05/27/how-a-former-vegetarian-became-a-butcher-and-ethical-meat-advocate/</a></li>
+<li>“How to go vegetarian or vegan | Psyche Guides,” Psyche. Accessed: Nov. 17, 2022. [Online]. Available: <a href="https://psyche.co/guides/how-to-make-a-healthy-transition-to-a-vegetarian-or-vegan-diet">https://psyche.co/guides/how-to-make-a-healthy-transition-to-a-vegetarian-or-vegan-diet</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org374d438" class="outline-2">
+<h2 id="org374d438"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>S. Samuel, “Can’t commit to vegetarianism but want animals to suffer less? You’ve got options.,” Vox. Accessed: Aug. 25, 2025. [Online]. Available: <a href="https://www.vox.com/future-perfect/422275/vegan-vegetarian-diet-health-animal-suffering">https://www.vox.com/future-perfect/422275/vegan-vegetarian-diet-health-animal-suffering</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:57</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

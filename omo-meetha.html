@@ -1,0 +1,982 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:57 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sweets</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Sweets</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orge55fce1">1. Basic</a>
+<ul>
+<li><a href="#orgf9c3376">1.1. Sugars</a></li>
+<li><a href="#orgb25fd09">1.2. Honey</a>
+<ul>
+<li><a href="#org1c6a4d6">1.2.1. Organic</a></li>
+<li><a href="#orgf022d0f">1.2.2. Music</a></li>
+<li><a href="#orgd7e69c7">1.2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc1456f8">1.3. Jams</a>
+<ul>
+<li><a href="#orgc3618bc">1.3.1. Gulkand, Rose Jam</a></li>
+<li><a href="#orgafeb39b">1.3.2. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org5a4dde8">2. Combos</a>
+<ul>
+<li><a href="#org68fc04d">2.1. Energy Bars</a></li>
+<li><a href="#org8bc7be6">2.2. Western Traditional</a>
+<ul>
+<li><a href="#org0df5316">2.2.1. General</a></li>
+<li><a href="#orgf28f6be">2.2.2. Chocolates</a></li>
+<li><a href="#org4f022ab">2.2.3. Brownie</a></li>
+<li><a href="#org811136a">2.2.4. Pancakes</a></li>
+<li><a href="#org254313c">2.2.5. Ice Cream</a></li>
+<li><a href="#orgda257d1">2.2.6. CheeseCakes</a></li>
+<li><a href="#orgeb24ef9">2.2.7. Tarts</a></li>
+<li><a href="#orgec83a93">2.2.8. Doughnuts</a></li>
+<li><a href="#org18458a0">2.2.9. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org003744a">2.3. Indian Traditional</a>
+<ul>
+<li><a href="#orgb5d09f6">2.3.1. Basic</a></li>
+<li><a href="#org4dad7b4">2.3.2. Combos</a></li>
+<li><a href="#orgeaff165">2.3.3. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org04a946b">3. Special Topics</a>
+<ul>
+<li><a href="#orgc9fa1ad">3.1. Fruits</a>
+<ul>
+<li><a href="#orgeee162e">3.1.1. General</a></li>
+<li><a href="#org56c8a72">3.1.2. STEMM</a></li>
+<li><a href="#org7fbcb19">3.1.3. Worldly Matters</a></li>
+<li><a href="#org23bdd87">3.1.4. Core</a></li>
+<li><a href="#orge36f41b">3.1.5. Arts</a></li>
+<li><a href="#org728054d">3.1.6. Special Topics</a></li>
+<li><a href="#org3fe9d97">3.1.7. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org7749a96">3.2. Ketchup</a></li>
+<li><a href="#orgee7e551">3.3. Mints</a>
+<ul>
+<li><a href="#orgb2f05be">3.3.1. Polo</a></li>
+<li><a href="#org9039d7b">3.3.2. Jintan</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgbf4745e">4. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orge55fce1" class="outline-2">
+<h2 id="orge55fce1"><span class="section-number-2">1.</span> Basic</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgf9c3376" class="outline-3">
+<h3 id="orgf9c3376"><span class="section-number-3">1.1.</span> Sugars</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Sugars: <a href="https://tinyurl.com/4x3wvd6j">https://tinyurl.com/4x3wvd6j</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb25fd09" class="outline-3">
+<h3 id="orgb25fd09"><span class="section-number-3">1.2.</span> Honey</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org1c6a4d6" class="outline-4">
+<h4 id="org1c6a4d6"><span class="section-number-4">1.2.1.</span> Organic</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li>“Pro Nature 100% Organic Honey, 500g : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Dec. 31, 2023. [Online]. Available: <a href="https://www.amazon.in/Pro-Nature-Organic-Honey-500g/dp/B00MCLQM2K/ref=sr_1_32?crid=RMOW9KVESZ4S&amp;keywords=organic+honey&amp;qid=1703998017&amp;sprefix=%2Caps%2C387&amp;sr=8-32">https://www.amazon.in/Pro-Nature-Organic-Honey-500g/dp/B00MCLQM2K/ref=sr_1_32?crid=RMOW9KVESZ4S&amp;keywords=organic+honey&amp;qid=1703998017&amp;sprefix=%2Caps%2C387&amp;sr=8-32</a></li>
+<li>“Pure &amp; Sure Organic Honey : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Dec. 31, 2023. [Online]. Available: <a href="https://www.amazon.in/Pure-Sure-Organic-Honey-250g/dp/B00M710ISE/ref=sr_1_27?crid=RMOW9KVESZ4S&amp;keywords=organic+honey&amp;qid=1703998017&amp;sprefix=%2Caps%2C387&amp;sr=8-27">https://www.amazon.in/Pure-Sure-Organic-Honey-250g/dp/B00M710ISE/ref=sr_1_27?crid=RMOW9KVESZ4S&amp;keywords=organic+honey&amp;qid=1703998017&amp;sprefix=%2Caps%2C387&amp;sr=8-27</a></li>
+<li>“24 Mantra Organic Wild Honey - 250gms | Pack of 1 | Chemical Free &amp; Pesticides Free | Free from Sugar Syrup : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Dec. 31, 2023. [Online]. Available: <a href="https://www.amazon.in/24-Mantra-Organic-Wild-Honey/dp/B00L926OVW/ref=sr_1_9?crid=RMOW9KVESZ4S&amp;keywords=organic+honey&amp;qid=1703998017&amp;sprefix=%2Caps%2C387&amp;sr=8-9">https://www.amazon.in/24-Mantra-Organic-Wild-Honey/dp/B00L926OVW/ref=sr_1_9?crid=RMOW9KVESZ4S&amp;keywords=organic+honey&amp;qid=1703998017&amp;sprefix=%2Caps%2C387&amp;sr=8-9</a></li>
+<li>“ORGANIC INDIA Organic Honey Multi Floral 250g : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Dec. 31, 2023. [Online]. Available: <a href="https://www.amazon.in/Organic-India-Wild-Forest-Honey/dp/B01J634N86/ref=sr_1_7?crid=RMOW9KVESZ4S&amp;keywords=organic+honey&amp;qid=1703998017&amp;sprefix=%2Caps%2C387&amp;sr=8-7">https://www.amazon.in/Organic-India-Wild-Forest-Honey/dp/B01J634N86/ref=sr_1_7?crid=RMOW9KVESZ4S&amp;keywords=organic+honey&amp;qid=1703998017&amp;sprefix=%2Caps%2C387&amp;sr=8-7</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf022d0f" class="outline-4">
+<h4 id="orgf022d0f"><span class="section-number-4">1.2.2.</span> Music</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<ul class="org-ul">
+<li>Eric Clapton, Honey in Your Hips, (Sep. 06, 2018). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=-Lqj1a-Kd4Y">https://www.youtube.com/watch?v=-Lqj1a-Kd4Y</a></li>
+<li>Bob Dylan, Bob Dylan - <i>I Want You</i> (Official Audio), (Mar. 12, 2019). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=-iIS6ZZ9RVA">https://www.youtube.com/watch?v=-iIS6ZZ9RVA</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd7e69c7" class="outline-4">
+<h4 id="orgd7e69c7"><span class="section-number-4">1.2.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<ul class="org-ul">
+<li>E. Ahmed, “Detection of honey adulteration using machine learning,” PLOS Digital Health, vol. 3, no. 6, p. e0000536, Jun. 2024, doi: 10.1371/journal.pdig.0000536.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc1456f8" class="outline-3">
+<h3 id="orgc1456f8"><span class="section-number-3">1.3.</span> Jams</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-orgc3618bc" class="outline-4">
+<h4 id="orgc3618bc"><span class="section-number-4">1.3.1.</span> Gulkand, Rose Jam</h4>
+<div class="outline-text-4" id="text-1-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="orge47041a"></a>Organic<br />
+<div class="outline-text-5" id="text-1-3-1-1">
+<ul class="org-ul">
+<li>“Two Brothers Organic Farms - Natural Gulkand | A Rose Petal Preserve | Sweetened Using Raw Honey | No Added Sugar | Rose Petal Jam (300G) : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Dec. 31, 2023. [Online]. Available: <a href="https://www.amazon.in/Two-Brothers-Organic-Farms-Sweetened/dp/B0B18Z7HXS/ref=sr_1_8?crid=M9A3SUUUVQD4&amp;keywords=organic%2Bgulkand&amp;qid=1703998082&amp;sprefix=organic%2Bgul%2Caps%2C239&amp;sr=8-8&amp;th=1">https://www.amazon.in/Two-Brothers-Organic-Farms-Sweetened/dp/B0B18Z7HXS/ref=sr_1_8?crid=M9A3SUUUVQD4&amp;keywords=organic%2Bgulkand&amp;qid=1703998082&amp;sprefix=organic%2Bgul%2Caps%2C239&amp;sr=8-8&amp;th=1</a></li>
+
+<li>“Kapiva Organic Gulkand 300gms (Rose Petal Jam) | 100% Natural | Sun-Cooked Damask Roses : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Dec. 31, 2023. [Online]. Available: <a href="https://www.amazon.in/Kapiva-Organic-Gulkand-Antioxidants-Digestion/dp/B083394R89/ref=sr_1_5?crid=M9A3SUUUVQD4&amp;keywords=organic+gulkand&amp;qid=1703998082&amp;sprefix=organic+gul%2Caps%2C239&amp;sr=8-5">https://www.amazon.in/Kapiva-Organic-Gulkand-Antioxidants-Digestion/dp/B083394R89/ref=sr_1_5?crid=M9A3SUUUVQD4&amp;keywords=organic+gulkand&amp;qid=1703998082&amp;sprefix=organic+gul%2Caps%2C239&amp;sr=8-5</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Two Brothers Organic Farms - Natural Gulkand | A Rose Petal Preserve | Sweetened Using Raw Honey | No Added Sugar | Rose Petal Jam (300G) : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: May 31, 2024. [Online]. Available: <a href="https://www.amazon.in/gp/product/B0B18Z7HXS">https://www.amazon.in/gp/product/B0B18Z7HXS</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org806df14"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgafeb39b" class="outline-4">
+<h4 id="orgafeb39b"><span class="section-number-4">1.3.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<ul class="org-ul">
+<li>“Pure &amp; Sure Organic Apricot Jam 200G | 100% Vegan &amp; Real Fruit Ingredients | Bread Spread with Natural Sugar | Healthy Snacks for Weight Loss | No Added Artificial Flavor : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Jan. 25, 2025. [Online]. Available: <a href="https://www.amazon.in/Pure-Sure-Organic-Apricot-210gm/dp/B0863XZ9SN?nsdOptOutParam=true">https://www.amazon.in/Pure-Sure-Organic-Apricot-210gm/dp/B0863XZ9SN?nsdOptOutParam=true</a></li>
+<li>“Pure &amp; Sure Organic Orange Jam 210G | 100% Vegan &amp; Real Fruits Ingredients | Bread Spread with Natural Sugar | No Added Artificial Flavor &amp; Colors : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Jan. 25, 2025. [Online]. Available: <a href="https://www.amazon.in/Pure-Sure-Organic-Orange-210gm/dp/B0863S1R36?nsdOptOutParam=true">https://www.amazon.in/Pure-Sure-Organic-Orange-210gm/dp/B0863S1R36?nsdOptOutParam=true</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org5a4dde8" class="outline-2">
+<h2 id="org5a4dde8"><span class="section-number-2">2.</span> Combos</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org68fc04d" class="outline-3">
+<h3 id="org68fc04d"><span class="section-number-3">2.1.</span> Energy Bars</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>“Nourish Organics – Nutrition That Fits Your Lifestyle.” <a href="https://www.nourishorganics.in/">https://www.nourishorganics.in/</a> (accessed Mar. 18, 2022).
+<ul class="org-ul">
+<li>Nourish Organics Bars</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8bc7be6" class="outline-3">
+<h3 id="org8bc7be6"><span class="section-number-3">2.2.</span> Western Traditional</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org0df5316" class="outline-4">
+<h4 id="org0df5316"><span class="section-number-4">2.2.1.</span> General</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li>P. S. Bali, THEORY OF BAKERY, First Edition. London: Oxford University Press, 2018.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf28f6be" class="outline-4">
+<h4 id="orgf28f6be"><span class="section-number-4">2.2.2.</span> Chocolates</h4>
+<div class="outline-text-4" id="text-2-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org4235335"></a>General<br /></li>
+<li><a id="org146d479"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="org1d1fa65"></a>Chemistry<br />
+<div class="outline-text-6" id="text-2-2-2-2-1">
+<ul class="org-ul">
+<li>L. C. November 2016, “Butyric acid,” Chemistry World. Accessed: Feb. 15, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/podcasts/butyric-acid/1017662.article">https://www.chemistryworld.com/podcasts/butyric-acid/1017662.article</a></li>
+<li>A. K. August 2021, “How a single ingredient creates silky smooth chocolate without tempering,” Chemistry World. Accessed: Feb. 15, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/news/how-a-single-ingredient-creates-silky-smooth-chocolate-without-tempering/4014278.article">https://www.chemistryworld.com/news/how-a-single-ingredient-creates-silky-smooth-chocolate-without-tempering/4014278.article</a></li>
+<li>R. B. January 2018, “Elemental maps of cocoa beans could help cut chocolate contaminants,” Chemistry World. Accessed: Feb. 15, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/news/elemental-maps-of-cocoa-beans-could-help-cut-chocolate-contaminants/3008482.article">https://www.chemistryworld.com/news/elemental-maps-of-cocoa-beans-could-help-cut-chocolate-contaminants/3008482.article</a></li>
+<li>R. B. February 2019, “Near-death by chocolate,” Chemistry World. Accessed: Feb. 15, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/opinion/near-death-by-chocolate/3009989.article">https://www.chemistryworld.com/opinion/near-death-by-chocolate/3009989.article</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>S. T. Beckett, Science of Chocolate. London: Royal Society of Chemistry, 2019.</li>
+<li>D. Stuart et al., Chocolate and Health: Chemistry, Nutrition and Therapy. Cambridge: Royal Society of Chemistry, 2015.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf220236"></a>Environment<br />
+<div class="outline-text-6" id="text-2-2-2-2-2">
+<ul class="org-ul">
+<li>S. Watt, “Consumed: What is the environmental impact of chocolate?,” Mongabay Environmental News. Accessed: Jul. 29, 2024. [Online]. Available: <a href="https://news.mongabay.com/video/2022/08/consumed-what-is-the-environmental-impact-of-chocolate/">https://news.mongabay.com/video/2022/08/consumed-what-is-the-environmental-impact-of-chocolate/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga815d8a"></a>Health<br />
+<div class="outline-text-6" id="text-2-2-2-2-3">
+<ul class="org-ul">
+<li>“New GMO Alert: Synbio Chocolate (Or, Can Your Love Be Pure if Your Chocolate Is GMO?) - The Non-GMO Project.” Accessed: Mar. 19, 2024. [Online]. Available: <a href="https://www.nongmoproject.org/blog/new-gmo-alert-synbio-chocolate-or-can-your-love-be-pure-if-your-chocolate-is-gmo/">https://www.nongmoproject.org/blog/new-gmo-alert-synbio-chocolate-or-can-your-love-be-pure-if-your-chocolate-is-gmo/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org60e9795"></a>Worldly Matters<br />
+<ol class="org-ol">
+<li><a id="org8f743dc"></a>Misc<br />
+<div class="outline-text-6" id="text-2-2-2-3-1">
+<ul class="org-ul">
+<li>“The Bitter Truth about Sweet Chocolate - Rosa-Luxemburg-Stiftung.” Accessed: Dec. 30, 2024. [Online]. Available: <a href="https://www.rosalux.de/en/news/id/52804/the-bitter-truth-about-sweet-chocolate">https://www.rosalux.de/en/news/id/52804/the-bitter-truth-about-sweet-chocolate</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgfa3a1ff"></a>Core<br />
+<ol class="org-ol">
+<li><a id="org8c05e2f"></a>Products<br />
+<ul class="org-ul">
+<li><a id="org297875e"></a>Organic<br />
+<div class="outline-text-7" id="text-org297875e">
+<ul class="org-ul">
+<li>“Pure and Sure Organic Cocoa Powder | Natural Unsweetened Cocoa Powder | Dark Cocoa Powder for Cake | 200 gm. : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Cocoa-Powder/dp/B07MGJQ31Z/ref=sxts_rp_s_1_0?content-id=amzn1.sym.d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d%3Aamzn1.sym.d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d&amp;cv_ct_cx=pure+and+sure&amp;keywords=pure+and+sure&amp;pd_rd_i=B07MGJQ31Z&amp;pd_rd_r=72e2c1f3-6e68-4d4f-8003-8892743328c7&amp;pd_rd_w=ecIED&amp;pd_rd_wg=0xN9H&amp;pf_rd_p=d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d&amp;pf_rd_r=05A1JY7SSXW7JB6BP5GC&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=1-1-1890b328-3a40-4864-baa0-a8eddba1bf6a">https://www.amazon.in/Pure-Sure-Organic-Cocoa-Powder/dp/B07MGJQ31Z/ref=sxts_rp_s_1_0?content-id=amzn1.sym.d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d%3Aamzn1.sym.d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d&amp;cv_ct_cx=pure+and+sure&amp;keywords=pure+and+sure&amp;pd_rd_i=B07MGJQ31Z&amp;pd_rd_r=72e2c1f3-6e68-4d4f-8003-8892743328c7&amp;pd_rd_w=ecIED&amp;pd_rd_wg=0xN9H&amp;pf_rd_p=d50f3f1f-56ad-44a5-8d39-fb499e9f1a2d&amp;pf_rd_r=05A1JY7SSXW7JB6BP5GC&amp;qid=1674965345&amp;sprefix=pure+and+%2Caps%2C411&amp;sr=1-1-1890b328-3a40-4864-baa0-a8eddba1bf6a</a> (accessed Jan. 29, 2023).</li>
+<li>“Pure &amp; Sure Organic Dark Chocolate | Almond Blueberry Chocolate | Tasty &amp; Healthy Dark Chocolate, 30gm. : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Pure-Sure-Organic-Chocolate-Blueberry/dp/B07YLLWR65/ref=sr_1_20?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-20&amp;th=1">https://www.amazon.in/Pure-Sure-Organic-Chocolate-Blueberry/dp/B07YLLWR65/ref=sr_1_20?keywords=pure%2Band%2Bsure&amp;qid=1674965345&amp;sprefix=pure%2Band%2B%2Caps%2C411&amp;sr=8-20&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org2a10290"></a>Misc<br />
+<div class="outline-text-7" id="text-org2a10290">
+<ul class="org-ul">
+<li>“Mason Chocolate – Craftsmen of chocolate.” <a href="https://www.masonchocolate.com/">https://www.masonchocolate.com/</a> (accessed Mar. 18, 2022).
+<ul class="org-ul">
+<li>Mason &amp; Co. Chocolates</li>
+<li>Mason &amp; Co. Cacao Nibs</li>
+<li>Mason &amp; Co. Cacao Butter</li>
+</ul></li>
+
+<li>FabCafe Chocolates</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="orgb2cd4d8"></a>Misc<br />
+<div class="outline-text-5" id="text-2-2-2-5">
+<ul class="org-ul">
+<li>R. Brazil, “Sweet like chocolate: researching in the shade of a cacao tree,” Nature, vol. 645, no. 8081, pp. 814–814, Sep. 2025, doi: 10.1038/d41586-025-02923-x.</li>
+
+<li>K. Kavanagh, “Why chocolate tastes so good: microbes that fine-tune its flavour,” Nature, Aug. 2025, doi: 10.1038/d41586-025-02659-8.</li>
+
+<li>A. Paul, “How to make perfect chocolate, according to science,” Popular Science. Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://www.popsci.com/science/perfect-chocolate-science/">https://www.popsci.com/science/perfect-chocolate-science/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org4f022ab" class="outline-4">
+<h4 id="org4f022ab"><span class="section-number-4">2.2.3.</span> Brownie</h4>
+</div>
+<div id="outline-container-org811136a" class="outline-4">
+<h4 id="org811136a"><span class="section-number-4">2.2.4.</span> Pancakes</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<ul class="org-ul">
+<li>E. Kidwell, “How to Make the Perfect Pancake,” IMA. Accessed: Feb. 14, 2024. [Online]. Available: <a href="https://ima.org.uk/3877/make-perfect-pancake/">https://ima.org.uk/3877/make-perfect-pancake/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org254313c" class="outline-4">
+<h4 id="org254313c"><span class="section-number-4">2.2.5.</span> Ice Cream</h4>
+<div class="outline-text-4" id="text-2-2-5">
+</div>
+<ol class="org-ol">
+<li><a id="orgaad805b"></a>General<br /></li>
+<li><a id="org2da53c2"></a>STEMM<br />
+<div class="outline-text-5" id="text-2-2-5-2">
+<ul class="org-ul">
+<li>C. Clarke and A. Cox, Science of Ice Cream. London: Royal Society of Chemistry, 2024.</li>
+
+<li>C. Clarke and A. Cox, The Science of Ice Cream, 3rd ed. Royal Society of Chemistry, 2024. doi: 10.1039/9781837673032.</li>
+
+<li>“Ice cream’s healthier evolution explored in new edition of pop-science book,” Royal Society of Chemistry. Accessed: Aug. 01, 2024. [Online]. Available: <a href="https://www.rsc.org/news-events/articles/2024/07-july/science-of-ice-cream/">https://www.rsc.org/news-events/articles/2024/07-july/science-of-ice-cream/</a></li>
+
+<li>H. Johnston, “The physics of ice cream: food scientist Douglas Goff talks about this remarkable material,” Physics World. Accessed: Dec. 27, 2024. [Online]. Available: <a href="https://physicsworld.com/a/the-physics-of-ice-cream-food-scientist-douglas-goff-talks-about-this-remarkable-material/">https://physicsworld.com/a/the-physics-of-ice-cream-food-scientist-douglas-goff-talks-about-this-remarkable-material/</a></li>
+
+<li>H. Johnston, “A physicist’s guide to ice cream: the complex science behind one of the world’s most popular desserts,” Physics World. Accessed: Aug. 13, 2025. [Online]. Available: <a href="https://physicsworld.com/a-physicists-guide-to-ice-cream-the-complex-science-behind-one-of-the-worlds-most-popular-desserts/">https://physicsworld.com/a-physicists-guide-to-ice-cream-the-complex-science-behind-one-of-the-worlds-most-popular-desserts/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org136b38e"></a>Worldly Matters<br />
+<ol class="org-ol">
+<li><a id="org8d45979"></a>Nation States<br />
+<ul class="org-ul">
+<li><a id="org0986a20"></a>India<br />
+<ul class="org-ul">
+<li><a id="orgd32c28a"></a>Organic<br />
+<div class="outline-text-8" id="text-orgd32c28a">
+<ul class="org-ul">
+<li>N. Adlakha, “Iceberg Organic Ice creams experiments with donkey, camel, goat milk,” The Hindu, Sep. 25, 2024. Accessed: Oct. 02, 2024. [Online]. Available: <a href="https://www.thehindu.com/food/features/nellores-iceberg-organic-ice-creams-experiments-with-donkey-camel-goat-milk/article68647721.ece">https://www.thehindu.com/food/features/nellores-iceberg-organic-ice-creams-experiments-with-donkey-camel-goat-milk/article68647721.ece</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="orgee07ddb"></a>Misc<br />
+<div class="outline-text-5" id="text-2-2-5-4">
+<ul class="org-ul">
+<li>P. S. Team, “Victorians loved ice cream even though it kept killing them,” Popular Science. Accessed: Aug. 14, 2025. [Online]. Available: <a href="https://www.popsci.com/science/victorians-loved-ice-cream-weirdest-thing-podcast/">https://www.popsci.com/science/victorians-loved-ice-cream-weirdest-thing-podcast/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgda257d1" class="outline-4">
+<h4 id="orgda257d1"><span class="section-number-4">2.2.6.</span> CheeseCakes</h4>
+</div>
+<div id="outline-container-orgeb24ef9" class="outline-4">
+<h4 id="orgeb24ef9"><span class="section-number-4">2.2.7.</span> Tarts</h4>
+</div>
+<div id="outline-container-orgec83a93" class="outline-4">
+<h4 id="orgec83a93"><span class="section-number-4">2.2.8.</span> Doughnuts</h4>
+</div>
+<div id="outline-container-org18458a0" class="outline-4">
+<h4 id="org18458a0"><span class="section-number-4">2.2.9.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org003744a" class="outline-3">
+<h3 id="org003744a"><span class="section-number-3">2.3.</span> Indian Traditional</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-orgb5d09f6" class="outline-4">
+<h4 id="orgb5d09f6"><span class="section-number-4">2.3.1.</span> Basic</h4>
+<div class="outline-text-4" id="text-2-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="orga35b50b"></a>Fruity<br />
+<ol class="org-ol">
+<li><a id="orgd3d13a6"></a>Jaggery<br />
+<ul class="org-ul">
+<li><a id="org3e4cca2"></a>General<br /></li>
+<li><a id="org537c501"></a>Products<br />
+<div class="outline-text-7" id="text-org537c501">
+<ul class="org-ul">
+<li>Organic India Jaggery</li>
+</ul>
+</div>
+</li>
+<li><a id="org13d6c45"></a>Misc<br />
+<div class="outline-text-7" id="text-org13d6c45">
+<ul class="org-ul">
+<li>D. T. E. Staff, “Organic jaggery: How is this wholesome, time-tested sweetener made?,” Down To Earth. Accessed: Feb. 16, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/health/organic-jaggery-how-is-this-wholesome-time-tested-sweetener-made">https://www.downtoearth.org.in/health/organic-jaggery-how-is-this-wholesome-time-tested-sweetener-made</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org4dad7b4" class="outline-4">
+<h4 id="org4dad7b4"><span class="section-number-4">2.3.2.</span> Combos</h4>
+<div class="outline-text-4" id="text-2-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org3454c75"></a>Chikki<br />
+<div class="outline-text-5" id="text-2-3-2-1">
+<ul class="org-ul">
+<li>“Til Chikki Online - Buy Sesame Chikki in India,” I Say Organic. Accessed: Apr. 10, 2024. [Online]. Available: <a href="https://www.isayorganic.com/products/sesame-chikki">https://www.isayorganic.com/products/sesame-chikki</a></li>
+
+<li>“Chikki Makhana Combo Online - Buy Fox Nuts, Peanuts, Chikki Combo in India,” I Say Organic. Accessed: Apr. 10, 2024. [Online]. Available: <a href="https://www.isayorganic.com/products/chikki-makhana-combo">https://www.isayorganic.com/products/chikki-makhana-combo</a></li>
+
+<li>“24Mantra Organic Peanut Chikki, (33g*30N). : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/gp/product/B07C3DSDH5/ref=ox_sc_act_title_2?smid=ARENK22K2PQRH&amp;psc=1">https://www.amazon.in/gp/product/B07C3DSDH5/ref=ox_sc_act_title_2?smid=ARENK22K2PQRH&amp;psc=1</a> (accessed Jan. 29, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc43df31"></a>Shakarpara<br />
+<div class="outline-text-5" id="text-2-3-2-2">
+<ul class="org-ul">
+<li>“I Say Organic Assorted Sweet Combo of Shakarpara Meetha (100 grams) | Peanut Chikki 150gm | Sesame Chikki 150gm | Indian Snacks | Organic | Homemade and Ready to Eat | Homemade Sweets (Pack of 3) : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Organic-Assorted-Shakarpara-Meetha-Homemade/dp/B09P1N5YLD/ref=rvi_sccl_44/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B09P1N5YLD&amp;th=1">https://www.amazon.in/Organic-Assorted-Shakarpara-Meetha-Homemade/dp/B09P1N5YLD/ref=rvi_sccl_44/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B09P1N5YLD&amp;th=1</a> (accessed Jan. 29, 2023).</li>
+<li>“I Say Organic Shakarpara Meetha, 100 G | Indian Snacks | Homemade &amp; Ready to Eat, | Chini Ke Shakarpare | Sugar Shakarpara | Homemade Shakarpare : Amazon.in: Grocery &amp; Gourmet Foods.” <a href="https://www.amazon.in/Organic-Shakarpara-Meetha-Homemade-Shakarpare/dp/B09D3SWJG4/ref=rvi_sccl_43/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B09D3SWJG4&amp;psc=1">https://www.amazon.in/Organic-Shakarpara-Meetha-Homemade-Shakarpare/dp/B09D3SWJG4/ref=rvi_sccl_43/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B09D3SWJG4&amp;psc=1</a> (accessed Jan. 29, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org5c2dac7"></a>Gujiya<br />
+<div class="outline-text-5" id="text-2-3-2-3">
+<ul class="org-ul">
+<li>“I Say Organic - Baked Gujiya | Vegan Baked Gujiya | Coconut Gujia | Dry Fruits Gujjia | Holi Special Gujjiya | Whole Wheat Ghujia | Ghujiya |Traditional Holi Sweets for your loved ones (pack of 8) : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Mar. 24, 2024. [Online]. Available: <a href="https://www.amazon.in/Say-Organic-Coconut-Special-Traditional/dp/B0CXJ2RKP2?dib=eyJ2IjoiMSJ9.6ifoWaJf7uBtfEQ5SHD5XhpRjeuSU3UmlVBpByckNvmj6V5ml4mtqcWo5Eu36bxrTp1-mjtyorHww4MqNOTiteGlpHkPX0lI2DtUBPfzXWYHkB7X3Xl5nhyJn9j2MjP1eHK2y3UubijF8a9BpvmNI2GJMz5MjYREt9Tof77Rp0lWdB27GPC_lMmfZD4Lgt7FbQDZ3pJCx_7b-9phmqcnCe2KPyHsT1qRvOTZEw5P7fXX8VT1yXXS2RemXZhsbkdt0J4sfm8cOPB7QMuxd6firtFrznrSaAhpzZCp4zVi_pY.UtxtjdxZLWG7Mb-1jXdRlsoUHot-lpMvx222w4X4VkI&amp;dib_tag=se">https://www.amazon.in/Say-Organic-Coconut-Special-Traditional/dp/B0CXJ2RKP2?dib=eyJ2IjoiMSJ9.6ifoWaJf7uBtfEQ5SHD5XhpRjeuSU3UmlVBpByckNvmj6V5ml4mtqcWo5Eu36bxrTp1-mjtyorHww4MqNOTiteGlpHkPX0lI2DtUBPfzXWYHkB7X3Xl5nhyJn9j2MjP1eHK2y3UubijF8a9BpvmNI2GJMz5MjYREt9Tof77Rp0lWdB27GPC_lMmfZD4Lgt7FbQDZ3pJCx_7b-9phmqcnCe2KPyHsT1qRvOTZEw5P7fXX8VT1yXXS2RemXZhsbkdt0J4sfm8cOPB7QMuxd6firtFrznrSaAhpzZCp4zVi_pY.UtxtjdxZLWG7Mb-1jXdRlsoUHot-lpMvx222w4X4VkI&amp;dib_tag=se</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb16bda4"></a>Modak<br />
+<div class="outline-text-5" id="text-2-3-2-4">
+<ul class="org-ul">
+<li>A. Desikan, “How to make fried Modak for Ganesh Chaturti,” The Hindu, Sep. 07, 2024. Accessed: Sep. 07, 2024. [Online]. Available: <a href="https://www.thehindu.com/food/recipes/love-modaks-now-try-them-fried/article68616609.ece">https://www.thehindu.com/food/recipes/love-modaks-now-try-them-fried/article68616609.ece</a></li>
+<li>P. M. Borah, “Mood for modak: Explore the world of Modaks this Ganesh Chaturti,” The Hindu, Sep. 07, 2024. Accessed: Sep. 07, 2024. [Online]. Available: <a href="https://www.thehindu.com/food/features/mood-for-modak-explore-the-world-of-modaks-this-ganesh-chaturti/article68613507.ece">https://www.thehindu.com/food/features/mood-for-modak-explore-the-world-of-modaks-this-ganesh-chaturti/article68613507.ece</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb1604d3"></a>Laddoo<br />
+<div class="outline-text-5" id="text-2-3-2-5">
+<ul class="org-ul">
+<li>“I Say Organic Desi Cow Ghee Besan Ladoo Box, 250 G : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Mar. 16, 2024. [Online]. Available: <a href="https://www.amazon.in/Organic-Desi-Ghee-Besan-Ladoo/dp/B09GKNXYGX">https://www.amazon.in/Organic-Desi-Ghee-Besan-Ladoo/dp/B09GKNXYGX</a></li>
+<li>“TWO BROTHERS ORGANIC FARMS Sattu and Jaggery Laddu/Laddoo, Naturally Sweetened, Handrolled (350 Gm) : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: May 31, 2024. [Online]. Available: <a href="https://www.amazon.in/gp/product/B0CR3SRRFB">https://www.amazon.in/gp/product/B0CR3SRRFB</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3f8b988"></a>Pinni<br />
+<div class="outline-text-5" id="text-2-3-2-6">
+<ul class="org-ul">
+<li>“I Say Organic Punjabi Atta Pinni Mithai | Famous Wheat Laddoo Sweets from Punjab | Laddu Sweet Made of Roasted Atta, Desi Ghee, Crunchy Badam Almonds, Foxnuts and Gondh Box, 500 Grams : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Mar. 16, 2024. [Online]. Available: <a href="https://www.amazon.in/Organic-Punjabi-Roasted-Crunchy-Almonds/dp/B09GKPQ15X?psc=1">https://www.amazon.in/Organic-Punjabi-Roasted-Crunchy-Almonds/dp/B09GKPQ15X?psc=1</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga9af027"></a>Petha<br />
+<div class="outline-text-5" id="text-2-3-2-7">
+<ul class="org-ul">
+<li>“Petha.” Accessed: Sep. 11, 2025. [Online]. Available: <a href="https://food.ndtv.com/recipe-petha-218806">https://food.ndtv.com/recipe-petha-218806</a></li>
+<li>“Petha,” Wikipedia. Feb. 20, 2025. Accessed: Sep. 11, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Petha&amp;oldid=1276685319">https://en.wikipedia.org/w/index.php?title=Petha&amp;oldid=1276685319</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfb126d9"></a>Peda<br /></li>
+<li><a id="orga441877"></a>Thandai<br />
+<div class="outline-text-5" id="text-2-3-2-9">
+<ul class="org-ul">
+<li>I Say Organic Thandai</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgeaff165" class="outline-4">
+<h4 id="orgeaff165"><span class="section-number-4">2.3.3.</span> Misc</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org04a946b" class="outline-2">
+<h2 id="org04a946b"><span class="section-number-2">3.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgc9fa1ad" class="outline-3">
+<h3 id="orgc9fa1ad"><span class="section-number-3">3.1.</span> Fruits</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgeee162e" class="outline-4">
+<h4 id="orgeee162e"><span class="section-number-4">3.1.1.</span> General</h4>
+</div>
+<div id="outline-container-org56c8a72" class="outline-4">
+<h4 id="org56c8a72"><span class="section-number-4">3.1.2.</span> STEMM</h4>
+<div class="outline-text-4" id="text-3-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org8c9cb1a"></a>Systems Sciences, Misc<br />
+<ol class="org-ol">
+<li><a id="org7b609a8"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="orgb545600"></a>Environment<br />
+<div class="outline-text-5" id="text-3-1-2-2">
+<ul class="org-ul">
+<li>“Uncovering the Hidden Environmental and Human Costs of Laos’ Banana and Durian Boom.” Accessed: Sep. 25, 2025. [Online]. Available: <a href="https://gijn.org/stories/hidden-environmental-costs-laos-banana-durian-boom/">https://gijn.org/stories/hidden-environmental-costs-laos-banana-durian-boom/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge71f630"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org7fbcb19" class="outline-4">
+<h4 id="org7fbcb19"><span class="section-number-4">3.1.3.</span> Worldly Matters</h4>
+<div class="outline-text-4" id="text-3-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org97697a7"></a>Misc<br />
+<div class="outline-text-5" id="text-3-1-3-1">
+<ul class="org-ul">
+<li>“European apples contaminated with cocktails of pesticides (PFAS, neurotoxins and other highly toxic substances),” PAN Europe. Accessed: Feb. 04, 2026. [Online]. Available: <a href="https://www.pan-europe.info/press-releases/2026/01/european-apples-contaminated-cocktails-pesticides-pfas-neurotoxins-and-other">https://www.pan-europe.info/press-releases/2026/01/european-apples-contaminated-cocktails-pesticides-pfas-neurotoxins-and-other</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org23bdd87" class="outline-4">
+<h4 id="org23bdd87"><span class="section-number-4">3.1.4.</span> Core</h4>
+<div class="outline-text-4" id="text-3-1-4">
+</div>
+<ol class="org-ol">
+<li><a id="orga0848fc"></a>Mangoes<br />
+<ol class="org-ol">
+<li><a id="orgf5f7a39"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-4-1-1">
+<ul class="org-ul">
+<li>“Alphonso’s reign is running out.” Accessed: Jun. 19, 2025. [Online]. Available: <a href="https://beta.ruralindiaonline.org/article/alphonso-mangoes-reign-is-running-out">https://beta.ruralindiaonline.org/article/alphonso-mangoes-reign-is-running-out</a></li>
+
+<li>S. Joshi, “How the mango became a component of welfare and economic policies for kings in India,” Scroll.in. Accessed: Jul. 11, 2024. [Online]. Available: <a href="https://scroll.in/article/1070442/how-the-mango-became-a-component-of-welfare-and-economic-policies-for-kings-in-india">https://scroll.in/article/1070442/how-the-mango-became-a-component-of-welfare-and-economic-policies-for-kings-in-india</a></li>
+
+<li>“The Women Mangrove Keepers of Jhadling,” NewsClick. Accessed: Apr. 10, 2025. [Online]. Available: <a href="https://www.newsclick.in/women-mangrove-keepers-jhadling">https://www.newsclick.in/women-mangrove-keepers-jhadling</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org845b726"></a>General<br /></li>
+<li><a id="org0a3026f"></a>Environment<br />
+<div class="outline-text-6" id="text-3-1-4-1-3">
+<ul class="org-ul">
+<li>A. Tandon, “Heatwaves, extreme temperatures threaten the king of mangoes,” Mongabay-India. Accessed: May 21, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/05/heatwaves-extreme-temperatures-threaten-the-king-of-mangoes/">https://india.mongabay.com/2025/05/heatwaves-extreme-temperatures-threaten-the-king-of-mangoes/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org20170f9"></a>Vikalp Sangam<br />
+<div class="outline-text-6" id="text-3-1-4-1-4">
+<ul class="org-ul">
+<li>“India’s mango village with 102 varieties,” Vikalp Sangam. Accessed: Apr. 06, 2025. [Online]. Available: <a href="https://www.civilsocietyonline.com/past-and-present/indias-mango-village-with-102-varieties/">https://www.civilsocietyonline.com/past-and-present/indias-mango-village-with-102-varieties/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb18e66a"></a>Texts<br />
+<div class="outline-text-6" id="text-3-1-4-1-5">
+<ul class="org-ul">
+<li>V. K. &amp; V. Lakhera, “Mangifera Indica: Sopan Joshi’s New Book Details India’s Never-Ending Love Affair With the Mango,” Frontline. Accessed: Jul. 28, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/books/mangifera-indica-sopan-joshi-new-book-india-love-affair-with-mango-cultural-social-economic-history/article68453242.ece">https://frontline.thehindu.com/books/mangifera-indica-sopan-joshi-new-book-india-love-affair-with-mango-cultural-social-economic-history/article68453242.ece</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org521db71"></a>Feminism<br />
+<div class="outline-text-6" id="text-3-1-4-1-6">
+<ul class="org-ul">
+<li>101Reporters, “Women Leading The Charge In Conservation: Mangrove Keepers Of Jhadling,” Feminism in India. Accessed: Apr. 09, 2025. [Online]. Available: <a href="https://feminisminindia.com/2025/04/09/women-leading-the-charge-in-conservation-mangrove-keepers-of-jhadling/">https://feminisminindia.com/2025/04/09/women-leading-the-charge-in-conservation-mangrove-keepers-of-jhadling/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org426ca4d"></a>Buddhism<br />
+<div class="outline-text-6" id="text-3-1-4-1-7">
+<ul class="org-ul">
+<li>S. Joshi, “Book Excerpt: The mango in Buddhist symbolism,” Down To Earth. Accessed: May 12, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/wildlife-biodiversity/book-excerpt-the-mango-in-buddhist-symbolism">https://www.downtoearth.org.in/wildlife-biodiversity/book-excerpt-the-mango-in-buddhist-symbolism</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org43a536b"></a>Grapes<br />
+<div class="outline-text-5" id="text-3-1-4-2">
+<ul class="org-ul">
+<li>Grapes: <a href="https://tinyurl.com/44fb575f">https://tinyurl.com/44fb575f</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb4ee0ea"></a>Melons<br />
+<ol class="org-ol">
+<li><a id="orgaa732ac"></a>General<br />
+<div class="outline-text-6" id="text-3-1-4-3-1">
+<ul class="org-ul">
+<li>“Melon,” Wikipedia. Nov. 30, 2024. Accessed: Feb. 23, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Melon&amp;oldid=1260359006">https://en.wikipedia.org/w/index.php?title=Melon&amp;oldid=1260359006</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdb8f72f"></a>Water Melons<br />
+<div class="outline-text-6" id="text-3-1-4-3-2">
+<ul class="org-ul">
+<li>“Watermelon,” Wikipedia. Jan. 24, 2025. Accessed: Feb. 23, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Watermelon&amp;oldid=1271626641">https://en.wikipedia.org/w/index.php?title=Watermelon&amp;oldid=1271626641</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3ea1065"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="orgeefb409"></a>Bananas<br />
+<ol class="org-ol">
+<li><a id="orgbcb9aea"></a>General<br />
+<div class="outline-text-6" id="text-3-1-4-4-1">
+<ul class="org-ul">
+<li>“Banana,” Wikipedia. Feb. 05, 2025. Accessed: Feb. 23, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Banana&amp;oldid=1274104183">https://en.wikipedia.org/w/index.php?title=Banana&amp;oldid=1274104183</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3972170"></a>Environment<br />
+<div class="outline-text-6" id="text-3-1-4-4-2">
+<ul class="org-ul">
+<li>E. Schiex and T. D. Badia, “Biochar from banana peels breaks ground in Cameroon,” Mongabay Environmental News. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://news.mongabay.com/video/2024/11/biochar-from-banana-peels-breaks-ground-in-cameroon/">https://news.mongabay.com/video/2024/11/biochar-from-banana-peels-breaks-ground-in-cameroon/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9a8762c"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-4-4-3">
+<ul class="org-ul">
+<li>D. Han, “Fruit Geopeelitics: America’s Banana Republics,” JSTOR Daily. Accessed: Aug. 17, 2025. [Online]. Available: <a href="https://daily.jstor.org/fruit-geopeelitics-americas-banana-republics/">https://daily.jstor.org/fruit-geopeelitics-americas-banana-republics/</a></li>
+
+<li>“Colombian victims win historic verdict over Chiquita: Jury finds banana company liable for financing death squads.,” EarthRights International. Accessed: Jun. 13, 2024. [Online]. Available: <a href="https://earthrights.org/media_release/colombian-victims-win-historic-verdict-over-chiquita-jury-finds-banana-company-liable-for-financing-death-squads/">https://earthrights.org/media_release/colombian-victims-win-historic-verdict-over-chiquita-jury-finds-banana-company-liable-for-financing-death-squads/</a></li>
+<li>A. M. August 2024, “Discovery of ‘NO burst’ could help save world’s favourite banana from deadly fungus,” Chemistry World. Accessed: Aug. 28, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/news/discovery-of-no-burst-could-help-save-worlds-favourite-banana-from-deadly-fungus/4020053.article">https://www.chemistryworld.com/news/discovery-of-no-burst-could-help-save-worlds-favourite-banana-from-deadly-fungus/4020053.article</a></li>
+<li>#author.fullName}, “Genetically modified banana approved by regulators for first time,” New Scientist. Accessed: Feb. 23, 2024. [Online]. Available: <a href="https://www.newscientist.com/article/2417568-genetically-modified-banana-approved-by-regulators-for-first-time/">https://www.newscientist.com/article/2417568-genetically-modified-banana-approved-by-regulators-for-first-time/</a></li>
+
+<li>S. D. Gowda, “Banana bio-economy of Burhanpur: Promoting sustainability and empowering women,” Down To Earth. Accessed: Jul. 08, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/economy/banana-bio-economy-of-burhanpur-promoting-sustainability-and-empowering-women">https://www.downtoearth.org.in/economy/banana-bio-economy-of-burhanpur-promoting-sustainability-and-empowering-women</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orga9193da"></a>JackFruits<br /></li>
+<li><a id="orgd0f4737"></a>Bael<br />
+<ol class="org-ol">
+<li><a id="org136efba"></a>General<br /></li>
+<li><a id="org4c3c6d3"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-4-6-2">
+<ul class="org-ul">
+<li>“The Green Kitchen: The gooey goodness of bael.” Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/video/food/the-green-kitchen-the-gooey-goodness-of-bael-96656">https://www.downtoearth.org.in/video/food/the-green-kitchen-the-gooey-goodness-of-bael-96656</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgf647577"></a>SugarCane<br />
+<div class="outline-text-5" id="text-3-1-4-7">
+<ul class="org-ul">
+<li>SugarCane: <a href="https://tinyurl.com/554ufmfp">https://tinyurl.com/554ufmfp</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgaaedb98"></a>Dates<br />
+<div class="outline-text-5" id="text-3-1-4-8">
+<ul class="org-ul">
+<li>“Flyberry Gourmet Certified Organic Medjoul Dates (Khajoor/Khajur) 400g | 100% Natural | Rich in Calcium, Iron and Potassium | Instant Energy : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Feb. 23, 2025. [Online]. Available: <a href="https://www.amazon.in/Flyberry-Gourmet-Organic-Medjoul-Khajoor/dp/B08J85SX9H">https://www.amazon.in/Flyberry-Gourmet-Organic-Medjoul-Khajoor/dp/B08J85SX9H</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org589d9e2"></a>Raisins<br />
+<div class="outline-text-5" id="text-3-1-4-9">
+<ul class="org-ul">
+<li>“Just Organik - Organic Raisins 250 gm | 100% Pure Seedless Kishmish, Rich in Potassium, Natural Dry Fruit Snack | Certified Organic as per National NPOP and USDA NOP standards : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Feb. 23, 2025. [Online]. Available: <a href="https://www.amazon.in/Just-Organik-Raisins-100-Organic/dp/B07WGFJGJV">https://www.amazon.in/Just-Organik-Raisins-100-Organic/dp/B07WGFJGJV</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orge36f41b" class="outline-4">
+<h4 id="orge36f41b"><span class="section-number-4">3.1.5.</span> Arts</h4>
+<div class="outline-text-4" id="text-3-1-5">
+</div>
+<ol class="org-ol">
+<li><a id="org63637e7"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org728054d" class="outline-4">
+<h4 id="org728054d"><span class="section-number-4">3.1.6.</span> Special Topics</h4>
+</div>
+<div id="outline-container-org3fe9d97" class="outline-4">
+<h4 id="org3fe9d97"><span class="section-number-4">3.1.7.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-1-7">
+<ul class="org-ul">
+<li>paco, “‘Pesticide Cocktails’ Polluting Apples Across Europe, Study Finds,” Regeneration International. Accessed: Feb. 04, 2026. [Online]. Available: <a href="https://regenerationinternational.org/2026/02/03/pesticide-cocktails-polluting-apples-across-europe-study-finds/">https://regenerationinternational.org/2026/02/03/pesticide-cocktails-polluting-apples-across-europe-study-finds/</a></li>
+
+<li>T. Editors, “The Pomegranate in History and Myth,” JSTOR Daily. Accessed: Aug. 30, 2025. [Online]. Available: <a href="https://daily.jstor.org/the-pomegranate-in-history-and-myth/">https://daily.jstor.org/the-pomegranate-in-history-and-myth/</a></li>
+
+<li>T. Editors, “Dates: Civilization’s Sweetest Indulgence,” JSTOR Daily. Accessed: Aug. 14, 2025. [Online]. Available: <a href="https://daily.jstor.org/date-civilizations-sweetest-indulgence/">https://daily.jstor.org/date-civilizations-sweetest-indulgence/</a></li>
+
+<li>A. Miller, “Plant of the Month: Jackfruit,” JSTOR Daily. Accessed: Aug. 14, 2025. [Online]. Available: <a href="https://daily.jstor.org/plant-of-the-month-jackfruit/">https://daily.jstor.org/plant-of-the-month-jackfruit/</a></li>
+
+<li>A. Tandon, “How shifting weather patterns threaten a sweet legacy,” Mongabay-India. Accessed: Mar. 19, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/03/how-shifting-weather-patterns-threaten-a-sweet-legacy-of-jamuns/">https://india.mongabay.com/2025/03/how-shifting-weather-patterns-threaten-a-sweet-legacy-of-jamuns/</a></li>
+
+<li>D. T. E. Staff, “The Green Kitchen, Season 3, Episode 2 |Amla, the Indian gooseberry that heals and sustains farmers in arid fields,” Down To Earth. Accessed: Feb. 24, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/food/the-green-kitchen-season-3-episode-2-amla-the-indian-gooseberry-that-heals-and-sustains-farmers-in-arid-fields">https://www.downtoearth.org.in/food/the-green-kitchen-season-3-episode-2-amla-the-indian-gooseberry-that-heals-and-sustains-farmers-in-arid-fields</a></li>
+
+<li>A. M. August 2024, “Discovery of ‘NO burst’ could help save world’s favourite banana from deadly fungus,” Chemistry World. Accessed: Aug. 28, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/news/discovery-of-no-burst-could-help-save-worlds-favourite-banana-from-deadly-fungus/4020053.article">https://www.chemistryworld.com/news/discovery-of-no-burst-could-help-save-worlds-favourite-banana-from-deadly-fungus/4020053.article</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Gillam, “Peel those apples: washing produce doesn’t remove pesticides, study finds,” The Guardian, Aug. 08, 2024. Accessed: Aug. 10, 2024. [Online]. Available: <a href="https://www.theguardian.com/environment/article/2024/aug/08/clean-fruit-vegetables-pesticides">https://www.theguardian.com/environment/article/2024/aug/08/clean-fruit-vegetables-pesticides</a></li>
+
+<li>C. Gillam, “Peel those apples: New study confirms washing doesn’t remove pesticide residues,” The New Lede. Accessed: Aug. 09, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/08/peel-those-apples-new-study-confirms-washing-doesnt-remove-pesticide-residues/">https://www.thenewlede.org/2024/08/peel-those-apples-new-study-confirms-washing-doesnt-remove-pesticide-residues/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7749a96" class="outline-3">
+<h3 id="org7749a96"><span class="section-number-3">3.2.</span> Ketchup</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“Two Brothers Organic Farms Truemato Ketchup - Spicy Tomato Ketchup - 300g | Natually Made with Fresh Tomatoes | Elevate Every Meal | No Refined Sugar : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Jan. 25, 2025. [Online]. Available: <a href="https://www.amazon.in/Brothers-Organic-Farms-Truemato-Ketchup/dp/B0DSBVRQ25?nsdOptOutParam=true">https://www.amazon.in/Brothers-Organic-Farms-Truemato-Ketchup/dp/B0DSBVRQ25?nsdOptOutParam=true</a></li>
+<li>“Orchard Lane Organic Tomato Ketchup VALUE FAMILY PACK 600 gm - Low Sugar | No Preservatives or Chemicals | Healthy - High tomato content | LOW CALORIE : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Jan. 25, 2025. [Online]. Available: <a href="https://www.amazon.in/Orchard-Lane-Organic-Tomato-Ketchup/dp/B09LHXXVWS">https://www.amazon.in/Orchard-Lane-Organic-Tomato-Ketchup/dp/B09LHXXVWS</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgee7e551" class="outline-3">
+<h3 id="orgee7e551"><span class="section-number-3">3.3.</span> Mints</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-orgb2f05be" class="outline-4">
+<h4 id="orgb2f05be"><span class="section-number-4">3.3.1.</span> Polo</h4>
+</div>
+<div id="outline-container-org9039d7b" class="outline-4">
+<h4 id="org9039d7b"><span class="section-number-4">3.3.2.</span> Jintan</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbf4745e" class="outline-2">
+<h2 id="orgbf4745e"><span class="section-number-2">4.</span> Misc</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>S. Ivry, “Wayne Thiebaud’s Sweet Take on American Art,” JSTOR Daily. Accessed: Feb. 13, 2026. [Online]. Available: <a href="https://daily.jstor.org/wayne-thiebauds-sweet-take-on-american-art/">https://daily.jstor.org/wayne-thiebauds-sweet-take-on-american-art/</a></li>
+
+<li>“‘The sweetest juice is found in magh,’” PARI - People’s Archive of Rural India. Accessed: Jan. 30, 2026. [Online]. Available: <a href="https://ruralindiaonline.org/article/the-sweetest-juice-is-found-in-magh">https://ruralindiaonline.org/article/the-sweetest-juice-is-found-in-magh</a></li>
+
+<li>“Jamun seeds and coconut sugar give a Bengali sweet longer life,” Nature India, Oct. 2025, doi: 10.1038/d44151-025-00201-3.</li>
+
+<li>D. Hubbell, “How WWII made Hershey and Mars Halloween candy kings,” Popular Science. Accessed: Oct. 03, 2025. [Online]. Available: <a href="https://www.popsci.com/health/hershey-mars-wwii/">https://www.popsci.com/health/hershey-mars-wwii/</a></li>
+
+<li>“Explained: The Sweet Connection Between Cake and Coca-Cola.” Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/governance/simply-put-of-cake-and-coke">https://www.downtoearth.org.in/governance/simply-put-of-cake-and-coke</a></li>
+
+<li>“First Food Delicious Sattu Ke Laddu.” Accessed: Nov. 12, 2023. [Online]. Available: <a href="https://www.downtoearth.org.in/video/food/first-food-delicious-sattu-ke-laddu-60625">https://www.downtoearth.org.in/video/food/first-food-delicious-sattu-ke-laddu-60625</a></li>
+
+<li>M. Waddell, “Stay Naturally Cool and Non-GMO With Verified Ice Cream - The Non-GMO Project.” Accessed: Jul. 25, 2025. [Online]. Available: <a href="https://www.nongmoproject.org/blog/stay-cool-and-non-gmo-with-verified-ice-cream/">https://www.nongmoproject.org/blog/stay-cool-and-non-gmo-with-verified-ice-cream/</a></li>
+
+<li>“How sugar overload in early life affects the brain later,” Nature, Jul. 2025, doi: 10.1038/d41586-025-02229-y.</li>
+
+<li>“Maple syrup,” Wikipedia. Jul. 01, 2025. Accessed: Jul. 01, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Maple_syrup&amp;oldid=1298209431">https://en.wikipedia.org/w/index.php?title=Maple_syrup&amp;oldid=1298209431</a></li>
+
+<li>P. Shankar, “Churpi from mithun milk could boost farmer incomes,” Mongabay-India. Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/06/churpi-from-mithun-milk-could-boost-farmer-incomes/">https://india.mongabay.com/2025/06/churpi-from-mithun-milk-could-boost-farmer-incomes/</a></li>
+
+<li>N. Banerji, “Sugary beverages linked to millions of new diabetes &amp; heart disease cases globally, developing countries worst impacted,” Down To Earth. Accessed: Jan. 08, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/food/sugary-beverages-linked-to-millions-of-new-diabetes-heart-disease-cases-globally-developing-countries-worst-impacted">https://www.downtoearth.org.in/food/sugary-beverages-linked-to-millions-of-new-diabetes-heart-disease-cases-globally-developing-countries-worst-impacted</a></li>
+
+<li>The Price Some Pay for Sugar. 2023. Accessed: Dec. 04, 2024. [Online]. Available: <a href="https://ruralindiaonline.org/en/library/resource/the-price-some-pay-for-sugar/">https://ruralindiaonline.org/en/library/resource/the-price-some-pay-for-sugar/</a></li>
+
+<li>S. Malkan, “Is the ‘Diet’ Coke Chemical Making You Fat?,” U.S. Right to Know. Accessed: Dec. 04, 2024. [Online]. Available: <a href="https://usrtk.org/sweeteners/aspartame-weight-gain/">https://usrtk.org/sweeteners/aspartame-weight-gain/</a></li>
+
+<li>P. B. Conversation The Conversation &amp;. Alon Shepon, The, “Sugar is terrible for our health – and the environment,” Scroll.in. Accessed: Nov. 24, 2024. [Online]. Available: <a href="https://scroll.in/article/1075869/sugar-is-terrible-for-our-health-and-the-environment">https://scroll.in/article/1075869/sugar-is-terrible-for-our-health-and-the-environment</a></li>
+
+<li>S. Malkan, “Sucralose: Emerging science reveals health risks,” U.S. Right to Know. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://usrtk.org/sweeteners/sucralose-emerging-science-reveals-health-risks/">https://usrtk.org/sweeteners/sucralose-emerging-science-reveals-health-risks/</a></li>
+
+<li>C. Stammers, The Book of Egg Free Cakes. Bhaktivedanta Book Trust, 2001.</li>
+
+<li>L. Leffer, “Studying WWII-era rationing shows that sugar is dangerous even in utero,” Popular Science. Accessed: Nov. 01, 2024. [Online]. Available: <a href="https://www.popsci.com/health/sugar-health-risks/">https://www.popsci.com/health/sugar-health-risks/</a></li>
+
+<li>S. LaMotte, “Zero calorie sweetener linked to blood clots and risk of heart disease, study finds,” CNN. Accessed: Aug. 10, 2024. [Online]. Available: <a href="https://www.cnn.com/2024/08/08/health/erythritol-blood-clotting-wellness/index.html">https://www.cnn.com/2024/08/08/health/erythritol-blood-clotting-wellness/index.html</a></li>
+
+<li>D. T. E. Staff, “The Green Kitchen, Season 3, Episode 1 | The Sweetness of Tradition: Unlocking the Power of Gur,” Down To Earth. Accessed: Feb. 11, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/food/the-green-kitchen-season-3-episode-1-the-sweetness-of-tradition-unlocking-the-power-of-gur">https://www.downtoearth.org.in/food/the-green-kitchen-season-3-episode-1-the-sweetness-of-tradition-unlocking-the-power-of-gur</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:57</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

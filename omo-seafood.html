@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:57 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SeaFood</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">SeaFood</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org680c8a8">1. General</a></li>
+<li><a href="#org0a6851b">2. STEMM</a>
+<ul>
+<li><a href="#org0d8977c">2.1. Environment</a>
+<ul>
+<li><a href="#org3afffac">2.1.1. The Ecologist</a></li>
+<li><a href="#org58f33fd">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org2cb4f0c">2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org7b7f3eb">3. Worldly Matters</a>
+<ul>
+<li><a href="#org0df117e">3.1. Nation States</a>
+<ul>
+<li><a href="#orge9da4b9">3.1.1. India</a></li>
+</ul>
+</li>
+<li><a href="#org9f469f9">3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgeb3a6ca">4. Core</a>
+<ul>
+<li><a href="#org45094b8">4.1. General</a></li>
+<li><a href="#org16ac99e">4.2. Salmon</a></li>
+</ul>
+</li>
+<li><a href="#org8506651">5. Special Topics</a>
+<ul>
+<li><a href="#orgc23200a">5.1. Documentaries</a>
+<ul>
+<li><a href="#orgf06651b">5.1.1. Animal Well Being Documentaries</a></li>
+<li><a href="#orgd292f9e">5.1.2. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgb901224">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org680c8a8" class="outline-2">
+<h2 id="org680c8a8"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org0a6851b" class="outline-2">
+<h2 id="org0a6851b"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org0d8977c" class="outline-3">
+<h3 id="org0d8977c"><span class="section-number-3">2.1.</span> Environment</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org3afffac" class="outline-4">
+<h4 id="org3afffac"><span class="section-number-4">2.1.1.</span> The Ecologist</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>“Sustainable fishing rules ‘scientifically obsolete.’” Accessed: Sep. 25, 2024. [Online]. Available: <a href="https://theecologist.org/2024/sep/24/sustainable-fishing-rules-scientifically-obsolete">https://theecologist.org/2024/sep/24/sustainable-fishing-rules-scientifically-obsolete</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org58f33fd" class="outline-4">
+<h4 id="org58f33fd"><span class="section-number-4">2.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>S. Magazine and W. Sullivan, “Freshwater Fish Contain Harmful ‘Forever Chemicals,’” Smithsonian Magazine. Accessed: Feb. 17, 2024. [Online]. Available: <a href="https://www.smithsonianmag.com/smart-news/freshwater-fish-contain-harmful-forever-chemicals-180981467/">https://www.smithsonianmag.com/smart-news/freshwater-fish-contain-harmful-forever-chemicals-180981467/</a></li>
+
+<li>“Little Labels, Big Impact - The Non-GMO Project.” Accessed: Feb. 01, 2025. [Online]. Available: <a href="https://www.nongmoproject.org/little-labels-big-impact/">https://www.nongmoproject.org/little-labels-big-impact/</a>
+<ul class="org-ul">
+<li>“What does the MSC label mean,” MSC International - English. Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://www.msc.org/what-we-are-doing/our-approach/what-does-the-blue-msc-label-mean">https://www.msc.org/what-we-are-doing/our-approach/what-does-the-blue-msc-label-mean</a></li>
+</ul></li>
+
+<li>“Sustainable Fishing | MSC,” MSC International - English. Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://www.msc.org">https://www.msc.org</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2cb4f0c" class="outline-3">
+<h3 id="org2cb4f0c"><span class="section-number-3">2.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>D. Keats, “End of the line for cod?” Accessed: Sep. 29, 2025. [Online]. Available: <a href="https://theecologist.org/2025/sep/29/end-line-cod">https://theecologist.org/2025/sep/29/end-line-cod</a></li>
+
+<li>“Do Not Eat the Radioactive Shrimp!,” Popular Mechanics. Accessed: Aug. 21, 2025. [Online]. Available: <a href="https://www.popularmechanics.com/science/health/a65832293/radioactive-shrimp/">https://www.popularmechanics.com/science/health/a65832293/radioactive-shrimp/</a></li>
+
+<li>A. B. C. News, “FDA warns public not to eat possibly radioactive shrimp sold at Walmart,” ABC News. Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://abcnews.go.com/US/fda-warns-public-eat-possibly-radioactive-shrimp-sold/story?id=124780934">https://abcnews.go.com/US/fda-warns-public-eat-possibly-radioactive-shrimp-sold/story?id=124780934</a></li>
+
+<li>“Using AI and Satellites to Track Illegal Fishing in Marine Protected Areas.” Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://gijn.org/stories/using-ai-satellites-track-illegal-fishing-marine-protected-areas/">https://gijn.org/stories/using-ai-satellites-track-illegal-fishing-marine-protected-areas/</a></li>
+
+<li>the world’s top importer of shark meat Brazil,  which accumulate in sharks and can harm human health This influx of shark meat into public buildings is exposing infants and other vulnerable groups to high levels of heavy metals like mercury and arsenic, and 900 public institutions named as possible shark meat recipients in 1 We identified 5, “That ‘fish’ on the menu? In Brazil’s schools and prisons, it’s often shark,” Mongabay Environmental News. Accessed: Jul. 30, 2025. [Online]. Available: <a href="https://news.mongabay.com/custom-story/2025/07/that-fish-on-the-menu-in-brazils-schools-and-prisons-its-often-shark/">https://news.mongabay.com/custom-story/2025/07/that-fish-on-the-menu-in-brazils-schools-and-prisons-its-often-shark/</a></li>
+
+<li>M. Waddell, “What You Need to Know About Genetically Modified Seafood - The Non-GMO Project.” Accessed: Jun. 05, 2025. [Online]. Available: <a href="https://www.nongmoproject.org/blog/what-you-need-to-know-about-genetically-modified-seafood/">https://www.nongmoproject.org/blog/what-you-need-to-know-about-genetically-modified-seafood/</a></li>
+
+<li>M. Faraj, “Omega-3 can help prevent diabetes and cardiovascular disease,” Down To Earth. Accessed: Apr. 16, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/health/omega-3-can-help-prevent-diabetes-and-cardiovascular-disease">https://www.downtoearth.org.in/health/omega-3-can-help-prevent-diabetes-and-cardiovascular-disease</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“sustainable fishing | National Geographic Society.” <a href="https://education.nationalgeographic.org/resource/sustainable-fishing">https://education.nationalgeographic.org/resource/sustainable-fishing</a> (accessed Nov. 04, 2022).</li>
+<li>R. Castagnino, “Why is this endangered dolphin being killed to make ‘love perfumes’? | Wild Targets,” Mongabay Environmental News. Accessed: Feb. 06, 2025. [Online]. Available: <a href="https://news.mongabay.com/video/2025/02/why-is-this-endangered-dolphin-being-killed-to-make-love-perfumes-wild-targets/">https://news.mongabay.com/video/2025/02/why-is-this-endangered-dolphin-being-killed-to-make-love-perfumes-wild-targets/</a></li>
+<li>P. Ferdinand, “From ocean to table, researchers discover microplastics, other pollutant particles in popular fish,” U.S. Right to Know. Accessed: Jan. 10, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/microplastics-pollutant-particles-in-popular-fish/">https://usrtk.org/healthwire/microplastics-pollutant-particles-in-popular-fish/</a></li>
+<li>P. S. University, “Microplastics are widespread in seafood that people eat, study suggests.” Accessed: Jan. 07, 2025. [Online]. Available: <a href="https://phys.org/news/2025-01-microplastics-widespread-seafood-people.html">https://phys.org/news/2025-01-microplastics-widespread-seafood-people.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7b7f3eb" class="outline-2">
+<h2 id="org7b7f3eb"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org0df117e" class="outline-3">
+<h3 id="org0df117e"><span class="section-number-3">3.1.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orge9da4b9" class="outline-4">
+<h4 id="orge9da4b9"><span class="section-number-4">3.1.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org649ad84"></a>General<br /></li>
+<li><a id="org87ebd73"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="orgdba45f6"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-1-2-1">
+<ul class="org-ul">
+<li>“Bengal: Is ‘Moyna Model’ of Pisciculture Supplying Poisonous Fish to Kolkata’s Kitchens?,” NewsClick. Accessed: Jun. 24, 2025. [Online]. Available: <a href="https://www.newsclick.in/bengal-moyna-model-pisciculture-supplying-poisonous-fish-kolkatas-kitchens">https://www.newsclick.in/bengal-moyna-model-pisciculture-supplying-poisonous-fish-kolkatas-kitchens</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgf196a34"></a>Worldly Matters<br />
+<ol class="org-ol">
+<li><a id="org7d335aa"></a>Misc<br />
+<div class="outline-text-6" id="text-3-1-1-3-1">
+<ul class="org-ul">
+<li>“A Fishy Chase by Superbugs.” Accessed: Nov. 25, 2025. [Online]. Available: <a href="https://young.downtoearth.org.in/page/gobartimes">https://young.downtoearth.org.in/page/gobartimes</a></li>
+
+<li>N. Kumar, “Gobar Times: Antibiotics in my fish curry?,” Down To Earth. Accessed: Nov. 10, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/health/gobar-times-antibiotics-in-my-fish-curry">https://www.downtoearth.org.in/health/gobar-times-antibiotics-in-my-fish-curry</a></li>
+
+<li>“Labour and resilience of women in fishing-communities of tamil nadu and odisha.” Accessed: Oct. 01, 2025. [Online]. Available: <a href="https://caravanmagazine.in/communities/labour-crisis-and-resilience-of-women-fishing-communities-tamil-nadu-odisha">https://caravanmagazine.in/communities/labour-crisis-and-resilience-of-women-fishing-communities-tamil-nadu-odisha</a></li>
+
+<li>“MSC ELSA 3 Shipwreck Pushes Kerala Fishers Into Debt and Distress, Reveals Greenpeace India report,” Greenpeace India. Accessed: Sep. 18, 2025. [Online]. Available: <a href="https://www.greenpeace.org/india/en/publication/19738/msc-elsa-3-shipwreck-pushes-kerala-fishers-into-debt-and-distress-reveals-greenpeace-india-report/">https://www.greenpeace.org/india/en/publication/19738/msc-elsa-3-shipwreck-pushes-kerala-fishers-into-debt-and-distress-reveals-greenpeace-india-report/</a></li>
+
+<li>“Fish of Discord | Economic and Political Weekly.” Accessed: Sep. 06, 2025. [Online]. Available: <a href="https://www.epw.in/journal/2025/36/special-articles/fish-discord.html">https://www.epw.in/journal/2025/36/special-articles/fish-discord.html</a></li>
+
+<li>“Labour and resilience of women in fishing-communities of tamil nadu and odisha.” Accessed: Sep. 01, 2025. [Online]. Available: <a href="https://caravanmagazine.in/communities/labour-crisis-and-resilience-of-women-fishing-communities-tamil-nadu-odisha">https://caravanmagazine.in/communities/labour-crisis-and-resilience-of-women-fishing-communities-tamil-nadu-odisha</a></li>
+
+<li>“What can Traditional Fishing Communities Teach us about Sustainability?,” Vikalp Sangam. Accessed: Nov. 11, 2023. [Online]. Available: <a href="https://www.travellersuniversity.org/post/what-can-traditional-fishing-communities-teach-us-about-sustainability">https://www.travellersuniversity.org/post/what-can-traditional-fishing-communities-teach-us-about-sustainability</a></li>
+
+<li>“The invisible labour of Dalit fisherwomen.” Accessed: Jun. 19, 2025. [Online]. Available: <a href="https://beta.ruralindiaonline.org/article/the-invisible-labour-of-dalit-fisherwomen">https://beta.ruralindiaonline.org/article/the-invisible-labour-of-dalit-fisherwomen</a></li>
+
+<li>A. Tandon, “Pole-and-line fishing face new challenges with push for tuna fish exports,” Mongabay-India. Accessed: Jun. 17, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/06/pole-and-line-fishing-face-new-challenges-as-push-for-tuna-fish-exports-rise/">https://india.mongabay.com/2025/06/pole-and-line-fishing-face-new-challenges-as-push-for-tuna-fish-exports-rise/</a></li>
+
+<li>“The Fragrance of Fish,” The India Forum. Accessed: Jun. 04, 2025. [Online]. Available: <a href="https://www.theindiaforum.in/book-reviews/fragrance-fish">https://www.theindiaforum.in/book-reviews/fragrance-fish</a></li>
+
+<li>arathimenon, “Cast aside, small-scale fishers demand a framework for fair fisheries,” Mongabay-India. Accessed: Apr. 16, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/04/cast-aside-small-scale-fishers-demand-a-framework-for-fair-fisheries/">https://india.mongabay.com/2025/04/cast-aside-small-scale-fishers-demand-a-framework-for-fair-fisheries/</a></li>
+
+<li>“Tripura’s gudok: old recipe, new takes.” Accessed: Apr. 12, 2025. [Online]. Available: <a href="https://beta.ruralindiaonline.org/article/tripura-s-gudok-old-recipe-new-takes">https://beta.ruralindiaonline.org/article/tripura-s-gudok-old-recipe-new-takes</a></li>
+
+<li>arathimenon, “The conservation conundrum leaves shrimp farmers on edge,” Mongabay-India. Accessed: Apr. 11, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/04/the-conservation-conundrum-leaves-shrimp-farmers-on-edge/">https://india.mongabay.com/2025/04/the-conservation-conundrum-leaves-shrimp-farmers-on-edge/</a></li>
+
+<li>A. Tandon, “What is blue economy? [Explainer],” Mongabay-India. Accessed: Apr. 09, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/04/what-is-blue-economy-explainer/">https://india.mongabay.com/2025/04/what-is-blue-economy-explainer/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Bengal: Fisherfolk of East Medinipur Coast Threaten Stir, Write to Centre,” NewsClick. Accessed: Mar. 31, 2025. [Online]. Available: <a href="https://www.newsclick.in/bengal-fisherfolk-east-medinipur-coast-threaten-stir-write-centre">https://www.newsclick.in/bengal-fisherfolk-east-medinipur-coast-threaten-stir-write-centre</a></li>
+<li>arathimenon, “Small sardines signal a potential bumper catch,” Mongabay-India. Accessed: Mar. 28, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/03/small-sardines-signal-a-potential-bumper-catch/">https://india.mongabay.com/2025/03/small-sardines-signal-a-potential-bumper-catch/</a></li>
+<li>South First, Honnavar Protests: Fisherfolk face police brutality over controversial port project, (Feb. 28, 2025). Accessed: Mar. 10, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=NCuawVJKIPU">https://www.youtube.com/watch?v=NCuawVJKIPU</a></li>
+<li>T. Gupta et al., “Identifying leverage points for sustainability in India’s shark supply chains,” Marine Policy, vol. 173, p. 106580, Mar. 2025, doi: 10.1016/j.marpol.2024.106580.</li>
+<li>“Breaking the Nets: An Oral History of India’s Fisherwomen,” The Wire. Accessed: Dec. 24, 2024. [Online]. Available: <a href="https://thewire.in/special/breaking-the-nets-an-oral-history">https://thewire.in/special/breaking-the-nets-an-oral-history</a></li>
+<li>“A fishy catch-22 in the Bay of Bengal,” People’s Archive of Rural India. Accessed: Dec. 13, 2024. [Online]. Available: <a href="https://ruralindiaonline.org/en/articles/a-fishy-catch-22-in-the-bay-of-bengal/">https://ruralindiaonline.org/en/articles/a-fishy-catch-22-in-the-bay-of-bengal/</a></li>
+<li>J. Rahul, “Deep-Sea Fishermen of Kerala and Tamil Nadu: Life, Risk and Survival in the Arabian Sea,” Frontline. Accessed: Nov. 11, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/photo-essay/indian-deep-sea-fishing-communities-kerala-tamil-nadu-arabian-sea-long-distance-fishing-maritime-life/article68739582.ece">https://frontline.thehindu.com/photo-essay/indian-deep-sea-fishing-communities-kerala-tamil-nadu-arabian-sea-long-distance-fishing-maritime-life/article68739582.ece</a></li>
+<li>K. Pandey, “Oil spill in Ennore brings fishing to a standstill,” Mongabay-India. Accessed: Nov. 28, 2024. [Online]. Available: <a href="https://india.mongabay.com/2023/12/oil-spill-in-ennore-brings-fishing-to-a-standstill/">https://india.mongabay.com/2023/12/oil-spill-in-ennore-brings-fishing-to-a-standstill/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgab465b1"></a>Core<br />
+<ol class="org-ol">
+<li><a id="org3e81f33"></a>Goa<br />
+<div class="outline-text-6" id="text-3-1-1-4-1">
+<ul class="org-ul">
+<li>Food - Goa: <a href="https://tinyurl.com/mrup2ey2">https://tinyurl.com/mrup2ey2</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org08cbcf9"></a>Bengal<br />
+<div class="outline-text-6" id="text-3-1-1-4-2">
+<ul class="org-ul">
+<li>Food: <a href="https://tinyurl.com/bdzhbeh9">https://tinyurl.com/bdzhbeh9</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc75c3ed"></a>Kerala<br />
+<div class="outline-text-6" id="text-3-1-1-4-3">
+<ul class="org-ul">
+<li>Food - Kerala: <a href="https://tinyurl.com/4jyuk29d">https://tinyurl.com/4jyuk29d</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgae99f74"></a>Arts<br />
+<ol class="org-ol">
+<li><a id="orgd2d3445"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org76d8685"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org65ebefc"></a><b>Organic</b><br />
+<div class="outline-text-6" id="text-3-1-1-6-1">
+<ul class="org-ul">
+<li>T. H. Bureau, “Centre launches country’s first organic fish cluster in Sikkim,” The Hindu, Jan. 06, 2025. Accessed: Jan. 07, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/national/sikkim/centre-launches-countrys-first-organic-fish-cluster-in-sikkim/article69069666.ece">https://www.thehindu.com/news/national/sikkim/centre-launches-countrys-first-organic-fish-cluster-in-sikkim/article69069666.ece</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org18186cc"></a>Misc<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org9f469f9" class="outline-3">
+<h3 id="org9f469f9"><span class="section-number-3">3.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“Aquaculture supports nutrition globally, but undermines it in some countries.” Accessed: Feb. 12, 2026. [Online]. Available: <a href="https://www.stockholmresilience.org/research/research-stories/2026-02-11-aquaculture-supports-nutrition-globally-but-undermines-it-in-some-countries.html">https://www.stockholmresilience.org/research/research-stories/2026-02-11-aquaculture-supports-nutrition-globally-but-undermines-it-in-some-countries.html</a></li>
+
+<li>“The hidden harm from salmon farming.” Accessed: Dec. 05, 2025. [Online]. Available: <a href="https://theecologist.org/2025/dec/04/hidden-harm-salmon-farming">https://theecologist.org/2025/dec/04/hidden-harm-salmon-farming</a></li>
+
+<li>“SLAPP lawsuit filed by CPF against Witoon Lianchamroon and BioThai.” Accessed: Oct. 21, 2025. [Online]. Available: <a href="https://grain.org/en/article/7318-slapp-lawsuit-filed-by-cpf-against-witoon-lianchamroon-and-biothai">https://grain.org/en/article/7318-slapp-lawsuit-filed-by-cpf-against-witoon-lianchamroon-and-biothai</a></li>
+
+<li>“Wild landlocked salmon return to Finland.” Accessed: Oct. 22, 2025. [Online]. Available: <a href="https://theecologist.org/2025/oct/21/wild-landlocked-salmon-return-finland">https://theecologist.org/2025/oct/21/wild-landlocked-salmon-return-finland</a></li>
+
+<li>“Bottom trawling ban ‘must be top of agenda.’” Accessed: Oct. 18, 2025. [Online]. Available: <a href="https://theecologist.org/2025/oct/17/bottom-trawling-ban-must-be-top-agenda">https://theecologist.org/2025/oct/17/bottom-trawling-ban-must-be-top-agenda</a></li>
+
+<li>“Salmon are Sacred: Wild Salmon Caravan (WSC) 2025 Returns to Showcase Arts-based Conservation towards Indigenous Food Sovereignty,” Navdanya international. Accessed: Oct. 11, 2025. [Online]. Available: <a href="https://navdanyainternational.org/salmon-are-sacred-wild-salmon-caravan-wsc-2025/">https://navdanyainternational.org/salmon-are-sacred-wild-salmon-caravan-wsc-2025/</a></li>
+
+<li>T. B. / C. Commons, “Mackerel ‘at very real risk of collapse.’” Accessed: Oct. 02, 2025. [Online]. Available: <a href="https://theecologist.org/2025/oct/02/mackerel-very-real-risk-collapse">https://theecologist.org/2025/oct/02/mackerel-very-real-risk-collapse</a></li>
+
+<li>“How we probed a maze of websites to tally Brazilian government shark meat orders,” Mongabay Environmental News. Accessed: Sep. 27, 2025. [Online]. Available: <a href="https://news.mongabay.com/2025/09/how-we-probed-a-maze-of-websites-to-tally-brazilian-government-shark-meat-orders/">https://news.mongabay.com/2025/09/how-we-probed-a-maze-of-websites-to-tally-brazilian-government-shark-meat-orders/</a></li>
+
+<li>“Monthly Review | The Fishing Revolution and the Origins of Capitalism,” Monthly Review. Accessed: Sep. 08, 2025. [Online]. Available: <a href="https://monthlyreview.org/2023/03/01/the-fishing-revolution-and-the-origins-of-capitalism/">https://monthlyreview.org/2023/03/01/the-fishing-revolution-and-the-origins-of-capitalism/</a></li>
+
+<li>“More potentially radioactive shrimp recalled from brands sold at Walmart and Kroger,” The Independent. Accessed: Aug. 31, 2025. [Online]. Available: <a href="https://www.independent.co.uk/news/world/americas/radioactive-shrimp-recall-walmart-kroger-fda-b2816827.html">https://www.independent.co.uk/news/world/americas/radioactive-shrimp-recall-walmart-kroger-fda-b2816827.html</a></li>
+
+<li>“Ban bottom trawling in ‘protected’ zones.” Accessed: Aug. 19, 2025. [Online]. Available: <a href="https://theecologist.org/2025/aug/19/ban-bottom-trawling-protected-zones">https://theecologist.org/2025/aug/19/ban-bottom-trawling-protected-zones</a></li>
+
+<li>as well as in hospitals Endangered angelsharks have been served to schoolchildren in the Brazilian state of Rio Grande do Sul for years, ” a common name for angelshark We identified 52 tenders totaling more than 211 metric tons of “peixe anjo,  angelsharks can’t be caught in B. As endangered species, and  the state government and two municipal administrations said they wouldn’t buy angelshark anymore After we asked them for comment on past procurements, “Revealed: Brazilian state buys endangered angelsharks for school lunches,” Mongabay Environmental News. Accessed: Aug. 09, 2025. [Online]. Available: <a href="https://news.mongabay.com/custom-story/2025/08/revealed-brazilian-state-buys-endangered-angelsharks-for-school-lunches/">https://news.mongabay.com/custom-story/2025/08/revealed-brazilian-state-buys-endangered-angelsharks-for-school-lunches/</a></li>
+
+<li>“Indonesian fishers respond to US seafood company’s attempt to dismiss forced labour suit,” Greenpeace International. Accessed: Aug. 02, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/77591/indonesian-fishers-respond-to-us-seafood-companys-attempt-to-dismiss-forced-labour-suit/">https://www.greenpeace.org/international/press-release/77591/indonesian-fishers-respond-to-us-seafood-companys-attempt-to-dismiss-forced-labour-suit/</a></li>
+
+<li>“Boots to boost justice: Standing in solidarity with Indonesian migrant fishers,” Greenpeace International. Accessed: Jul. 30, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/story/77406/boots-to-boost-justice-standing-in-solidarity-with-indonesian-migrant-fishers/">https://www.greenpeace.org/international/story/77406/boots-to-boost-justice-standing-in-solidarity-with-indonesian-migrant-fishers/</a></li>
+
+<li>“A tender moment in a troubled industry?” Accessed: Jul. 10, 2025. [Online]. Available: <a href="https://theecologist.org/2025/jul/10/tender-moment-troubled-industry">https://theecologist.org/2025/jul/10/tender-moment-troubled-industry</a></li>
+
+<li>“Bottom trawling like ‘bulldozing national parks.’” Accessed: Jun. 11, 2025. [Online]. Available: <a href="https://theecologist.org/2025/jun/09/bottom-trawling-bulldozing-national-parks">https://theecologist.org/2025/jun/09/bottom-trawling-bulldozing-national-parks</a></li>
+
+<li>“Greenpeace activists disrupt industrial fishing operation ahead of UN Ocean Conference,” Greenpeace International. Accessed: Jun. 06, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/75176/greenpeace-activists-disrupt-industrial-fishing-operation-ahead-of-un-ocean-conference/">https://www.greenpeace.org/international/press-release/75176/greenpeace-activists-disrupt-industrial-fishing-operation-ahead-of-un-ocean-conference/</a></li>
+
+<li>“Trout welfare regime thrown into doubt.” Accessed: Mar. 26, 2025. [Online]. Available: <a href="https://theecologist.org/2025/mar/25/trout-welfare-regime-thrown-doubt">https://theecologist.org/2025/mar/25/trout-welfare-regime-thrown-doubt</a></li>
+
+<li>T. Wijaya, “Sumatran culinary heritage at risk as environment changes around Silk Road river,” Mongabay Environmental News. Accessed: Mar. 26, 2025. [Online]. Available: <a href="https://news.mongabay.com/2025/03/sumatran-culinary-heritage-at-risk-as-environment-changes-around-silk-road-river/">https://news.mongabay.com/2025/03/sumatran-culinary-heritage-at-risk-as-environment-changes-around-silk-road-river/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Indonesian fishers file historic human trafficking lawsuit against major US seafood company,” Greenpeace International. Accessed: Mar. 13, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/73401/indonesian-fishers-file-historic-human-trafficking-lawsuit-against-major-us-seafood-company/">https://www.greenpeace.org/international/press-release/73401/indonesian-fishers-file-historic-human-trafficking-lawsuit-against-major-us-seafood-company/</a></li>
+
+<li>“On Chennai’s Besant Nagar Coast, A Fisherman Makes Sense of the Sea,” Vikalp Sangam. Accessed: Feb. 17, 2025. [Online]. Available: <a href="https://thelocavore.in/2024/08/20/on-chennais-besant-nagar-coast-a-fisherman-makes-sense-of-the-sea/">https://thelocavore.in/2024/08/20/on-chennais-besant-nagar-coast-a-fisherman-makes-sense-of-the-sea/</a></li>
+
+<li>“MSC in the USA and Canada,” United States - English. Accessed: Jan. 28, 2025. [Online]. Available: <a href="https://www.msc.org/en-us">https://www.msc.org/en-us</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Seaspiracy,” Wikipedia. Dec. 21, 2024. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Seaspiracy&amp;oldid=1264316428">https://en.wikipedia.org/w/index.php?title=Seaspiracy&amp;oldid=1264316428</a></li>
+
+<li>“Raising the Blue Flag: Solidarity on World Fisherpeoples’ Day,” Voices from FoE Asia Pacific. Accessed: Nov. 24, 2024. [Online]. Available: <a href="https://foeasiapacific.org/2024/11/21/raising-the-blue-flag-solidarity-on-world-fisher-peoples-day/">https://foeasiapacific.org/2024/11/21/raising-the-blue-flag-solidarity-on-world-fisher-peoples-day/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgeb3a6ca" class="outline-2">
+<h2 id="orgeb3a6ca"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org45094b8" class="outline-3">
+<h3 id="org45094b8"><span class="section-number-3">4.1.</span> General</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>“Home | Good Fish Guide.” <a href="https://www.mcsuk.org/goodfishguide/">https://www.mcsuk.org/goodfishguide/</a> (accessed Sep. 26, 2021).</li>
+<li>“What does the MSC label mean,” MSC International - English. Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://www.msc.org/what-we-are-doing/our-approach/what-does-the-blue-msc-label-mean">https://www.msc.org/what-we-are-doing/our-approach/what-does-the-blue-msc-label-mean</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org16ac99e" class="outline-3">
+<h3 id="org16ac99e"><span class="section-number-3">4.2.</span> Salmon</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>L. Wainwright and N. Lutz, “How to buy sustainable salmon: an expert guide to navigating the nuance of eco-labels,” The Conversation. Accessed: Feb. 14, 2024. [Online]. Available: <a href="http://theconversation.com/how-to-buy-sustainable-salmon-an-expert-guide-to-navigating-the-nuance-of-eco-labels-222669">http://theconversation.com/how-to-buy-sustainable-salmon-an-expert-guide-to-navigating-the-nuance-of-eco-labels-222669</a></li>
+<li>J. Dyke, “Mass salmon deaths are a warning: no one should be eating this fish,” inews.co.uk. Accessed: Mar. 11, 2024. [Online]. Available: <a href="https://inews.co.uk/opinion/mass-salmon-deaths-warning-eating-fish-2947867">https://inews.co.uk/opinion/mass-salmon-deaths-warning-eating-fish-2947867</a></li>
+<li>“The World’s Hunger for Salmon Is Linked to an Ecological Disaster,” Yahoo Finance. Accessed: May 06, 2024. [Online]. Available: <a href="https://finance.yahoo.com/news/world-hunger-salmon-linked-ecological-040029279.html">https://finance.yahoo.com/news/world-hunger-salmon-linked-ecological-040029279.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8506651" class="outline-2">
+<h2 id="org8506651"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgc23200a" class="outline-3">
+<h3 id="orgc23200a"><span class="section-number-3">5.1.</span> Documentaries</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orgf06651b" class="outline-4">
+<h4 id="orgf06651b"><span class="section-number-4">5.1.1.</span> Animal Well Being Documentaries</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ul class="org-ul">
+<li>“Earthlings (film),” Wikipedia. Feb. 03, 2025. Accessed: Mar. 18, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Earthlings_(film)&amp;oldid=1273772960">https://en.wikipedia.org/w/index.php?title=Earthlings_(film)&amp;oldid=1273772960</a>
+<ul class="org-ul">
+<li>Earthlings. Accessed: Mar. 18, 2025. [Online Video]. Available: <a href="http://archive.org/details/earthlings-704x-528">http://archive.org/details/earthlings-704x-528</a></li>
+</ul></li>
+
+<li>“Eating Our Way to Extinction,” Wikipedia. Jan. 06, 2025. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Eating_Our_Way_to_Extinction&amp;oldid=1267824865">https://en.wikipedia.org/w/index.php?title=Eating_Our_Way_to_Extinction&amp;oldid=1267824865</a>
+<ul class="org-ul">
+<li>EATING OUR WAY TO EXTINCTION, Eating Our Way to Extinction | Film (ENGLISH) - Documentary, (Jul. 16, 2022). Accessed: Jan. 26, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=LaPge01NQTQ">https://www.youtube.com/watch?v=LaPge01NQTQ</a></li>
+</ul></li>
+
+<li>“Seaspiracy,” Wikipedia. Dec. 21, 2024. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Seaspiracy&amp;oldid=1264316428">https://en.wikipedia.org/w/index.php?title=Seaspiracy&amp;oldid=1264316428</a></li>
+<li>“Cowspiracy,” Wikipedia. Nov. 03, 2024. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Cowspiracy&amp;oldid=1255194122">https://en.wikipedia.org/w/index.php?title=Cowspiracy&amp;oldid=1255194122</a></li>
+<li>“What the Health,” Wikipedia. Nov. 21, 2024. Accessed: Jan. 28, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=What_the_Health&amp;oldid=1258679753">https://en.wikipedia.org/w/index.php?title=What_the_Health&amp;oldid=1258679753</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd292f9e" class="outline-4">
+<h4 id="orgd292f9e"><span class="section-number-4">5.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<ul class="org-ul">
+<li>“Seaspiracy,” Wikipedia. Dec. 21, 2024. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Seaspiracy&amp;oldid=1264316428">https://en.wikipedia.org/w/index.php?title=Seaspiracy&amp;oldid=1264316428</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb901224" class="outline-2">
+<h2 id="orgb901224"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>“World Fisheries Day: championing the communities who keep our oceans alive,” Greenpeace International. Accessed: Nov. 22, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/story/79881/world-fisheries-day-championing-the-communities-who-keep-our-oceans-alive/">https://www.greenpeace.org/international/story/79881/world-fisheries-day-championing-the-communities-who-keep-our-oceans-alive/</a></li>
+
+<li>“Fishing Hurts.” Accessed: Apr. 04, 2025. [Online]. Available: <a href="https://www.animaljusticeproject.com/blog-categories/fishing-hurts">https://www.animaljusticeproject.com/blog-categories/fishing-hurts</a></li>
+
+<li>Paco, “A Cookbook From the Host of ‘Outdoor Chef Life’ Entices Us to Fish, Forage, and Feast,” Organic Consumers. Accessed: Mar. 25, 2025. [Online]. Available: <a href="https://organicconsumers.org/a-cookbook-from-the-host-of-outdoor-chef-life-entices-us-to-fish-forage-and-feast/">https://organicconsumers.org/a-cookbook-from-the-host-of-outdoor-chef-life-entices-us-to-fish-forage-and-feast/</a></li>
+
+<li>“Pfiesteria,” Wikipedia. Jan. 29, 2024. Accessed: Mar. 22, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Pfiesteria&amp;oldid=1200243154">https://en.wikipedia.org/w/index.php?title=Pfiesteria&amp;oldid=1200243154</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:57</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

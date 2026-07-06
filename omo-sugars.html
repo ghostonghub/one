@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:57 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sugars</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Sugars</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org139d520">1. General</a></li>
+<li><a href="#org958b760">2. STEMM</a>
+<ul>
+<li><a href="#org60702fd">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org3467bb1">3. Worldly Matters</a>
+<ul>
+<li><a href="#orgc87570e">3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org76f654a">4. Variants</a>
+<ul>
+<li><a href="#org08f7012">4.1. Table Sugars</a>
+<ul>
+<li><a href="#org255c585">4.1.1. Brown Sugar</a></li>
+<li><a href="#org210fa1e">4.1.2. Khandsari Sugar</a></li>
+<li><a href="#orgb4549de">4.1.3. Palm Sugar</a></li>
+<li><a href="#org3004a47">4.1.4. Cocunut Sugar</a></li>
+<li><a href="#org63110f7">4.1.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgd51d881">4.2. Artificial Sugars</a>
+<ul>
+<li><a href="#orgf3413c6">4.2.1. General</a></li>
+<li><a href="#org2851b47">4.2.2. STEMM</a></li>
+<li><a href="#orgfae1de3">4.2.3. Worldly Matters</a></li>
+<li><a href="#orgafff47b">4.2.4. Core</a></li>
+<li><a href="#orgeabc514">4.2.5. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgefe4124">5. Arts</a>
+<ul>
+<li><a href="#org8474c48">5.1. Music</a></li>
+<li><a href="#orgb5af50e">5.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org3472ef3">6. Special Topics</a>
+<ul>
+<li><a href="#org14aa03a">6.1. US Right To Know</a></li>
+<li><a href="#org725273b">6.2. Critical Studies</a>
+<ul>
+<li><a href="#orgf12e2a9">6.2.1. Environment</a></li>
+<li><a href="#orgc93dccf">6.2.2. Health</a></li>
+<li><a href="#orgaa447b6">6.2.3. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgb9f23e7">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org139d520" class="outline-2">
+<h2 id="org139d520"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Sugar,” Wikipedia. Jun. 09, 2025. Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Sugar&amp;oldid=1294792316">https://en.wikipedia.org/w/index.php?title=Sugar&amp;oldid=1294792316</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org958b760" class="outline-2">
+<h2 id="org958b760"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org60702fd" class="outline-3">
+<h3 id="org60702fd"><span class="section-number-3">2.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Y. Huang et al., “Dietary sugar consumption and health: umbrella review,” BMJ, vol. 381, p. e071609, Apr. 2023, doi: 10.1136/bmj-2022-071609.</li>
+<li>W. P. Edwards, Science of Sugar Confectionery. La Vergne: Royal Society of Chemistry, 2018.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3467bb1" class="outline-2">
+<h2 id="org3467bb1"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgc87570e" class="outline-3">
+<h3 id="orgc87570e"><span class="section-number-3">3.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>B. Bienkowski, “How Big Sugar pushed fluoride — new study alleges a century of spin,” The New Lede. Accessed: Oct. 01, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/09/sugar-industry-fluoride-children-iqs/">https://www.thenewlede.org/2025/09/sugar-industry-fluoride-children-iqs/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org76f654a" class="outline-2">
+<h2 id="org76f654a"><span class="section-number-2">4.</span> Variants</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org08f7012" class="outline-3">
+<h3 id="org08f7012"><span class="section-number-3">4.1.</span> Table Sugars</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org255c585" class="outline-4">
+<h4 id="org255c585"><span class="section-number-4">4.1.1.</span> Brown Sugar</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>“Organic Tattva All Natural Brown Sugar, Zero Chemicals, Organically Processed, from Freshly Squeezed Sugar Cane Juice, and Enriched with Essentials Nutrients (1 Kg, Pouch) : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://www.amazon.in/Chemicals-Organically-Processed-Essentials-Nutrients/dp/B00M57WRHU?nsdOptOutParam=true&amp;sbo=m6DjfpMzMLDmL8pSMKX8hw%3D%3D">https://www.amazon.in/Chemicals-Organically-Processed-Essentials-Nutrients/dp/B00M57WRHU?nsdOptOutParam=true&amp;sbo=m6DjfpMzMLDmL8pSMKX8hw%3D%3D</a></li>
+<li>“Phalada Pure &amp; Sure Pure &amp; Sure Organic Brown Sugar | Natural Brown Sugar, Healthy &amp; Wholesome | Powdered Brown Sugar for Baking, Tea, &amp; Coffee, 1kg. : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://www.amazon.in/Pure-Sure-Organic-Sugar-Brown/dp/B017KJ388Y?nsdOptOutParam=true">https://www.amazon.in/Pure-Sure-Organic-Sugar-Brown/dp/B017KJ388Y?nsdOptOutParam=true</a></li>
+<li>“Pro Nature 100% Organic Brown Sugar - 1kg | Unrefined brown sugar ) Diabetic Friendly | Replacement for Sugar | Healthy Natural Sweetener For Cooking &amp; Baking : Amazon.in: Health &amp; Personal Care.” Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://www.amazon.in/Pro-Nature-Organic-Brown-Sugar/dp/B079T6PH2Z?nsdOptOutParam=true&amp;sbo=m6DjfpMzMLDmL8pSMKX8hw%3D%3D">https://www.amazon.in/Pro-Nature-Organic-Brown-Sugar/dp/B079T6PH2Z?nsdOptOutParam=true&amp;sbo=m6DjfpMzMLDmL8pSMKX8hw%3D%3D</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org210fa1e" class="outline-4">
+<h4 id="org210fa1e"><span class="section-number-4">4.1.2.</span> Khandsari Sugar</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li>“A TATA Product - Organic India Desi Khandsari Sugar (Unrefined Brown Sugar) 500 g Pouch : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://www.amazon.in/TATA-Product-Organic-Khandsari-Unrefined/dp/B0DWT6XGYV">https://www.amazon.in/TATA-Product-Organic-Khandsari-Unrefined/dp/B0DWT6XGYV</a></li>
+<li>“JUST ORGANIK- Organic Raw Sugar 500g | Desi khand | Raw &amp; Unrefined Sugar |Khandsari Sugar | Raw Sugar 500g | 100% Organic | USDA Certified | Unprocessed Sweetner | Organic Sugarcane Juice | Sugar : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://www.amazon.in/Just-Organik-Sugar-Unrefined-Pesticide/dp/B00YEWA77G">https://www.amazon.in/Just-Organik-Sugar-Unrefined-Pesticide/dp/B00YEWA77G</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb4549de" class="outline-4">
+<h4 id="orgb4549de"><span class="section-number-4">4.1.3.</span> Palm Sugar</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<ul class="org-ul">
+<li>“Phalada Pure &amp; Sure Pure &amp; Sure Organic Palm Sugar | Natural Sugar, Unrefined &amp; Wholesome | Organic Sugar for Tea, Coffee &amp; Baking, 500gm. : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://www.amazon.in/Pure-Sure-Organic-Palm-Sugar/dp/B017KJ5L8Y?nsdOptOutParam=true">https://www.amazon.in/Pure-Sure-Organic-Palm-Sugar/dp/B017KJ5L8Y?nsdOptOutParam=true</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3004a47" class="outline-4">
+<h4 id="org3004a47"><span class="section-number-4">4.1.4.</span> Cocunut Sugar</h4>
+<div class="outline-text-4" id="text-4-1-4">
+<ul class="org-ul">
+<li>“Pure &amp; Sure Pure and Sure Organic Coconut Sugar, 500g : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://www.amazon.in/Pure-Sure-Organic-Coconut-Sugar/dp/B017KJ5H1K/261-1311185-9892152?psc=1">https://www.amazon.in/Pure-Sure-Organic-Coconut-Sugar/dp/B017KJ5H1K/261-1311185-9892152?psc=1</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org63110f7" class="outline-4">
+<h4 id="org63110f7"><span class="section-number-4">4.1.5.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orgd51d881" class="outline-3">
+<h3 id="orgd51d881"><span class="section-number-3">4.2.</span> Artificial Sugars</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-orgf3413c6" class="outline-4">
+<h4 id="orgf3413c6"><span class="section-number-4">4.2.1.</span> General</h4>
+</div>
+<div id="outline-container-org2851b47" class="outline-4">
+<h4 id="org2851b47"><span class="section-number-4">4.2.2.</span> STEMM</h4>
+<div class="outline-text-4" id="text-4-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org020b246"></a>WHO<br />
+<div class="outline-text-5" id="text-4-2-2-1">
+<ul class="org-ul">
+<li>“WHO advises not to use non-sugar sweeteners for weight control in newly released guideline.” <a href="https://www.who.int/news/item/15-05-2023-who-advises-not-to-use-non-sugar-sweeteners-for-weight-control-in-newly-released-guideline">https://www.who.int/news/item/15-05-2023-who-advises-not-to-use-non-sugar-sweeteners-for-weight-control-in-newly-released-guideline</a> (accessed May 16, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgade513c"></a>Journals<br />
+<div class="outline-text-5" id="text-4-2-2-2">
+<ul class="org-ul">
+<li>C. Diaz et al., “Artificially sweetened beverages and health outcomes: an umbrella review,” Advances in Nutrition, May 2023, doi: 10.1016/j.advnut.2023.05.010.</li>
+<li>S. P. Chakravartti et al., “Non-caloric sweetener effects on brain appetite regulation in individuals across varying body weights,” Nat Metab, vol. 7, no. 3, pp. 574–585, Mar. 2025, doi: 10.1038/s42255-025-01227-8.</li>
+</ul>
+</div>
+</li>
+<li><a id="org3e61b42"></a>Down To Earth<br />
+<div class="outline-text-5" id="text-4-2-2-3">
+<ul class="org-ul">
+<li>“Using sugar substitutes to lose weight could cause harm long-term, warns WHO.” <a href="https://www.downtoearth.org.in/news/health/using-sugar-substitutes-to-lose-weight-could-cause-harm-long-term-warns-who-89353">https://www.downtoearth.org.in/news/health/using-sugar-substitutes-to-lose-weight-could-cause-harm-long-term-warns-who-89353</a> (accessed May 17, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgfae1de3" class="outline-4">
+<h4 id="orgfae1de3"><span class="section-number-4">4.2.3.</span> Worldly Matters</h4>
+<div class="outline-text-4" id="text-4-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="org68f5d67"></a>US Right To Know<br />
+<div class="outline-text-5" id="text-4-2-3-1">
+<ul class="org-ul">
+<li>“Sweeteners Archives,” U.S. Right to Know. Accessed: Feb. 12, 2024. [Online]. Available: <a href="https://usrtk.org/category/sweeteners/">https://usrtk.org/category/sweeteners/</a></li>
+<li>“Sickeningly Sweet,” U.S. Right to Know. <a href="https://usrtk.org/sweeteners/">https://usrtk.org/sweeteners/</a> (accessed Mar. 25, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org5ad6618"></a>Misc<br />
+<div class="outline-text-5" id="text-4-2-3-2">
+<ul class="org-ul">
+<li>C. Russell, C. Grimes, M. Lawrence, P. Baker, and R. Lindberg, “Too Much Sugar Is a Problem. Non-Nutritive Sweeteners Are Not the Solution. – The Wire Science.” <a href="https://science.thewire.in/health/too-much-sugar-is-a-problem-non-nutritive-sweeteners-are-not-the-solution/">https://science.thewire.in/health/too-much-sugar-is-a-problem-non-nutritive-sweeteners-are-not-the-solution/</a> (accessed Aug. 02, 2022).</li>
+<li>B. Wilson, “The price of ‘sugar free’: are sweeteners as harmless as we thought?,” The Guardian, Dec. 08, 2022. Accessed: Dec. 09, 2022. [Online]. Available: <a href="https://www.theguardian.com/lifeandstyle/2022/dec/08/artificial-sweeteners-price-of-sugar-free-are-they-as-harmless-as-we-thought">https://www.theguardian.com/lifeandstyle/2022/dec/08/artificial-sweeteners-price-of-sugar-free-are-they-as-harmless-as-we-thought</a></li>
+<li>A. O’Connor, A. Steckelberg, and L. Reiley, “How fake sugars sneak into foods and disrupt metabolic health,” Washington Post. <a href="https://www.washingtonpost.com/wellness/interactive/2023/sugar-substitutes-health-effects/">https://www.washingtonpost.com/wellness/interactive/2023/sugar-substitutes-health-effects/</a> (accessed Mar. 10, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgafff47b" class="outline-4">
+<h4 id="orgafff47b"><span class="section-number-4">4.2.4.</span> Core</h4>
+<div class="outline-text-4" id="text-4-2-4">
+</div>
+<ol class="org-ol">
+<li><a id="orgb510527"></a>Stevia<br />
+<div class="outline-text-5" id="text-4-2-4-1">
+<ul class="org-ul">
+<li>Organic India Stevia</li>
+</ul>
+</div>
+</li>
+<li><a id="org6476ee6"></a>Aspartame<br />
+<ol class="org-ol">
+<li><a id="org5d100f6"></a>Journals<br />
+<div class="outline-text-6" id="text-4-2-4-2-1">
+<ul class="org-ul">
+<li>H. Bai, X. Zuo, C. Zhao, S. Zhang, and X. Feng, “Non-nutritive Sweetener Aspartame Disrupts Circadian Behavior and Causes Memory Impairment in Mice,” J. Agric. Food Chem., Oct. 2024, doi: 10.1021/acs.jafc.4c05394.</li>
+<li>D. Chen and X. Hou, “Aspartame carcinogenic potential revealed through network toxicology and molecular docking insights,” Sci Rep, vol. 14, no. 1, p. 11492, May 2024, doi: 10.1038/s41598-024-62461-w.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc5476c8"></a>US Right To Know<br />
+<div class="outline-text-6" id="text-4-2-4-2-2">
+<ul class="org-ul">
+<li>P. Ferdinand, “Aspartame sweetener may disrupt blood vessels, raising stroke risk, first-of-its-kind study suggests,” U.S. Right to Know. Accessed: Aug. 15, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/aspartame-stroke/">https://usrtk.org/healthwire/aspartame-stroke/</a></li>
+
+<li>S. Malkan, “Aspartame: Decades of Science Point to Serious Health Risks,” U.S. Right to Know, Nov. 15, 2020. <a href="https://usrtk.org/sweeteners/aspartame_health_risks/">https://usrtk.org/sweeteners/aspartame_health_risks/</a> (accessed Mar. 25, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgcc5e749"></a>Down To Earth<br />
+<div class="outline-text-6" id="text-4-2-4-2-3">
+<ul class="org-ul">
+<li>“Aspartame ‘possibly carcinogenic to humans’, labels WHO expert panel.” <a href="https://www.downtoearth.org.in/news/health/aspartame-possibly-carcinogenic-to-humans-labels-who-expert-panel-90623">https://www.downtoearth.org.in/news/health/aspartame-possibly-carcinogenic-to-humans-labels-who-expert-panel-90623</a> (accessed Jul. 16, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org3f8d155"></a>Misc<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgeabc514" class="outline-4">
+<h4 id="orgeabc514"><span class="section-number-4">4.2.5.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-2-5">
+<ul class="org-ul">
+<li>“Xylitol sugar substitute linked to increased risk of heart attack and stroke, study finds - CBS News.” Accessed: Jun. 07, 2024. [Online]. Available: <a href="https://www.cbsnews.com/news/xylitol-sugar-substitute-linked-to-increased-risk-of-heart-attack-and-stroke-study-finds/">https://www.cbsnews.com/news/xylitol-sugar-substitute-linked-to-increased-risk-of-heart-attack-and-stroke-study-finds/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgefe4124" class="outline-2">
+<h2 id="orgefe4124"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org8474c48" class="outline-3">
+<h3 id="org8474c48"><span class="section-number-3">5.1.</span> Music</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Def Leppard, Def Leppard - <i>“Pour Some Sugar On Me”</i> (Official Music Video), (Aug. 27, 2012). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=0UIB9Y4OFPs">https://www.youtube.com/watch?v=0UIB9Y4OFPs</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb5af50e" class="outline-3">
+<h3 id="orgb5af50e"><span class="section-number-3">5.2.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org3472ef3" class="outline-2">
+<h2 id="org3472ef3"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org14aa03a" class="outline-3">
+<h3 id="org14aa03a"><span class="section-number-3">6.1.</span> US Right To Know</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>P. Ferdinand, “Most U.S. infant formulas contain mainly added sugars, posing a serious risk to babies’ health,” U.S. Right to Know. Accessed: Apr. 08, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/infant-formulas-added-sugars/">https://usrtk.org/healthwire/infant-formulas-added-sugars/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org725273b" class="outline-3">
+<h3 id="org725273b"><span class="section-number-3">6.2.</span> Critical Studies</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-orgf12e2a9" class="outline-4">
+<h4 id="orgf12e2a9"><span class="section-number-4">6.2.1.</span> Environment</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<ul class="org-ul">
+<li>Water Guzzler.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc93dccf" class="outline-4">
+<h4 id="orgc93dccf"><span class="section-number-4">6.2.2.</span> Health</h4>
+<div class="outline-text-4" id="text-6-2-2">
+<ul class="org-ul">
+<li>J. Volek and A. Campbell, Men’s Health TNT Diet: The Explosive New Plan to Blast Fat, Build Muscle, and Get Healthy in 12 Weeks. Potter/Ten Speed/Harmony/Rodale, 2008.
+<ul class="org-ul">
+<li>As less as 5 gm of sugar screws your metalbolism for 1 whole week!</li>
+</ul></li>
+<li>Obesity, Diabetes</li>
+<li>Aeing</li>
+<li>Mental Health</li>
+<li>Immunity</li>
+<li>8 times more addictive than drugs</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaa447b6" class="outline-4">
+<h4 id="orgaa447b6"><span class="section-number-4">6.2.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-6-2-3">
+<ul class="org-ul">
+<li>G. Taubes, The Case Against Sugar. Granta, 2018.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb9f23e7" class="outline-2">
+<h2 id="orgb9f23e7"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>S. Higgins, “A brief history of sugar,” The Conversation. Accessed: Jan. 27, 2026. [Online]. Available: <a href="http://theconversation.com/a-brief-history-of-sugar-266189">http://theconversation.com/a-brief-history-of-sugar-266189</a></li>
+
+<li>S. Higgins and T. Conversation, “A brief history of sugar.” Accessed: Jan. 27, 2026. [Online]. Available: <a href="https://phys.org/news/2026-01-history-sugar.html">https://phys.org/news/2026-01-history-sugar.html</a></li>
+
+<li>J. Zheng et al., “Exposure to sugar rationing in first 1000 days after conception and long term cardiovascular outcomes: natural experiment study,” BMJ, vol. 391, p. e083890, Oct. 2025, doi: 10.1136/bmj-2024-083890.</li>
+
+<li>“Are animal ingredients included in white sugar?,” PETA. Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://www.peta.org/about-peta/faq/are-animal-ingredients-included-in-white-sugar/">https://www.peta.org/about-peta/faq/are-animal-ingredients-included-in-white-sugar/</a></li>
+
+<li>“Stop the Abuse of Bulls: Unilever Must Switch to Ethical Sugar Manufacturing.” Accessed: Sep. 23, 2025. [Online]. Available: <a href="https://secure.petaindia.com/page/178035/action/1?locale=en-GB">https://secure.petaindia.com/page/178035/action/1?locale=en-GB</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:57</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

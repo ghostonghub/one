@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:58 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sleep</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Sleep</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orga87af4c">1. General</a></li>
+<li><a href="#orgebff5f0">2. STEMM</a>
+<ul>
+<li><a href="#org8f42a23">2.1. Medicine</a>
+<ul>
+<li><a href="#orgb0ddd9f">2.1.1. CAM</a></li>
+<li><a href="#org8391feb">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org0ec9c60">2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgbafcd7f">3. Worldly Matters</a>
+<ul>
+<li><a href="#org71127f2">3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org74f3866">4. Arts</a>
+<ul>
+<li><a href="#org3627842">4.1. Music</a></li>
+<li><a href="#org9b0541c">4.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgd6cff8a">5. Special Topics</a>
+<ul>
+<li><a href="#orgf98005c">5.1. Dreams</a>
+<ul>
+<li><a href="#org019e6b6">5.1.1. General</a></li>
+<li><a href="#org6ddbaba">5.1.2. STEMM</a></li>
+<li><a href="#orgae0c3cd">5.1.3. World</a></li>
+<li><a href="#org2c3960f">5.1.4. Core</a></li>
+<li><a href="#org69415cc">5.1.5. Arts</a></li>
+<li><a href="#orga426133">5.1.6. Special Topics</a></li>
+<li><a href="#orge66bf8b">5.1.7. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org936cc1a">5.2. Yoga</a></li>
+<li><a href="#org8568f77">5.3. Articles, Essays</a></li>
+<li><a href="#org2742d8a">5.4. Texts</a></li>
+</ul>
+</li>
+<li><a href="#org66f9c1f">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orga87af4c" class="outline-2">
+<h2 id="orga87af4c"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orgebff5f0" class="outline-2">
+<h2 id="orgebff5f0"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org8f42a23" class="outline-3">
+<h3 id="org8f42a23"><span class="section-number-3">2.1.</span> Medicine</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgb0ddd9f" class="outline-4">
+<h4 id="orgb0ddd9f"><span class="section-number-4">2.1.1.</span> CAM</h4>
+<div class="outline-text-4" id="text-2-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgf871fd0"></a>Ayurveda<br />
+<ol class="org-ol">
+<li><a id="org675bd98"></a>Organic<br />
+<div class="outline-text-6" id="text-2-1-1-1-1">
+<ul class="org-ul">
+<li>Organic India Tulsi Sleep</li>
+</ul>
+</div>
+</li>
+<li><a id="org2951d2a"></a>Misc<br />
+<div class="outline-text-6" id="text-2-1-1-1-2">
+<ul class="org-ul">
+<li>“Himalaya Tagara for sound sleep | 60 Tablets : Amazon.in: Health &amp; Personal Care.” Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://www.amazon.in/Himalaya-Wellness-Herbs-Tagara-Sleep/dp/B013X1H66S?nsdOptOutParam=true">https://www.amazon.in/Himalaya-Wellness-Herbs-Tagara-Sleep/dp/B013X1H66S?nsdOptOutParam=true</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org10e024f"></a>Homeopathy<br />
+<div class="outline-text-5" id="text-2-1-1-2">
+<ul class="org-ul">
+<li>“Dr. Reckeweg R14, Homeopathic Medicine For Insomnia in India, Buy Homeopathic Medicines For Sleeplessness.” Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://www.reckeweg-india.com/product-details/r14-14.html">https://www.reckeweg-india.com/product-details/r14-14.html</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org8391feb" class="outline-4">
+<h4 id="org8391feb"><span class="section-number-4">2.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>“Fast&amp;Up Magnesio - Restful Sleep Supplement - Magnesium &amp; Zinc for Stress Management &amp; Promoting Deep Sleep (20 Effervescent Tablets, Lime &amp; Lemon Flavor) : Amazon.in: Health &amp; Personal Care.” Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://www.amazon.in/Magnesio-Magnesium-Muscle-Health-Stress/dp/B07Q2TTY2J">https://www.amazon.in/Magnesio-Magnesium-Muscle-Health-Stress/dp/B07Q2TTY2J</a></li>
+<li>“Fast&amp;Up Melatonin with 5 mg Melatonin + 100 mg L-Theanine (20 Effervescent tablets) | Helps fall asleep faster &amp; Wake up refreshed | Fast Acting, 100% Natural, Non-Addictive - Strawberry flavour : Amazon.in: Health &amp; Personal Care.” Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://www.amazon.in/Melatonin-L-Theanine-Healthy-Supplement-Relaxation/dp/B09NL1FX1Q">https://www.amazon.in/Melatonin-L-Theanine-Healthy-Supplement-Relaxation/dp/B09NL1FX1Q</a></li>
+
+<li>“Carbamide Forte Melatonin 10 mg Sleeping Pills with Tagar 250 mg | Sleep Supplement for Men &amp; Women | Melatonin Tablet for Restful Deep Sleeps - 60 Veg Tablets. : Amazon.in: Health &amp; Personal Care.” Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://www.amazon.in/Carbamide-Forte-Melatonin-Sleeping-Supplement/dp/B07V9MM7ZG?nsdOptOutParam=true">https://www.amazon.in/Carbamide-Forte-Melatonin-Sleeping-Supplement/dp/B07V9MM7ZG?nsdOptOutParam=true</a></li>
+
+<li>“Buy Vicks ZzzQuil Natura, 24s Pack, Non-Addictive Sleep-Aid Gummy, Melatonin helps you fall Asleep Fast Online at Low Prices in India - Amazon.in.” Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://www.amazon.in/Vicks-Melatonin-Regenerated-Non-Addictive-Drowsiness/dp/B0BM92QBJM?nsdOptOutParam=true">https://www.amazon.in/Vicks-Melatonin-Regenerated-Non-Addictive-Drowsiness/dp/B0BM92QBJM?nsdOptOutParam=true</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0ec9c60" class="outline-3">
+<h3 id="org0ec9c60"><span class="section-number-3">2.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>L. Peeples, “How to get the best night’s sleep: what the science says,” Nature, vol. 646, no. 8083, pp. 26–28, Sep. 2025, doi: 10.1038/d41586-025-03148-8.</li>
+
+<li>C. Brincat, “Is it better to sleep in cycles?,” Popular Science. Accessed: Sep. 11, 2025. [Online]. Available: <a href="https://www.popsci.com/health/do-sleep-cycle-alarms-work/">https://www.popsci.com/health/do-sleep-cycle-alarms-work/</a></li>
+
+<li>R. Sanders, “Sleep strengthens muscle and bone by boosting growth hormone levels. UC Berkeley researchers discover how.,” Berkeley News. Accessed: Sep. 11, 2025. [Online]. Available: <a href="https://news.berkeley.edu/2025/09/08/sleep-strengthens-muscle-and-bone-by-boosting-growth-hormone-levels-uc-berkeley-researchers-discover-how/">https://news.berkeley.edu/2025/09/08/sleep-strengthens-muscle-and-bone-by-boosting-growth-hormone-levels-uc-berkeley-researchers-discover-how/</a></li>
+
+<li>“To Fall Asleep Faster, Science Says Do This 1-2 Hours Before Bed,” Popular Mechanics. Accessed: Aug. 23, 2025. [Online]. Available: <a href="https://www.popularmechanics.com/science/health/a65873361/warm-shower-before-bed-sleep-benefits/">https://www.popularmechanics.com/science/health/a65873361/warm-shower-before-bed-sleep-benefits/</a></li>
+
+<li>“The journey to adult sleep,” eLife. Accessed: Apr. 15, 2025. [Online]. Available: <a href="https://elifesciences.org/digests/83565/the-journey-to-adult-sleep">https://elifesciences.org/digests/83565/the-journey-to-adult-sleep</a></li>
+
+<li>“Study suggests how the brain, with sleep, learns meaningful maps of spaces | Picower Institute.” Accessed: Dec. 13, 2024. [Online]. Available: <a href="https://picower.mit.edu/news/study-suggests-how-brain-sleep-learns-meaningful-maps-spaces">https://picower.mit.edu/news/study-suggests-how-brain-sleep-learns-meaningful-maps-spaces</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbafcd7f" class="outline-2">
+<h2 id="orgbafcd7f"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org71127f2" class="outline-3">
+<h3 id="org71127f2"><span class="section-number-3">3.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org74f3866" class="outline-2">
+<h2 id="org74f3866"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org3627842" class="outline-3">
+<h3 id="org3627842"><span class="section-number-3">4.1.</span> Music</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>“SLEEP - YouTube.” Accessed: Feb. 21, 2024. [Online]. Available: <a href="https://www.youtube.com/playlist?list=PLJXRgnc7mCv_EXu2qj-OEDHRUZuZJ_sMl">https://www.youtube.com/playlist?list=PLJXRgnc7mCv_EXu2qj-OEDHRUZuZJ_sMl</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9b0541c" class="outline-3">
+<h3 id="org9b0541c"><span class="section-number-3">4.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>T. O. Staff, “New Study Finds Americans Need 6 Hours Of Sleep At Work,” The Onion. Accessed: Oct. 30, 2025. [Online]. Available: <a href="https://theonion.com/new-study-finds-americans-need-6-hours-of-sleep-at-work-1819573628/">https://theonion.com/new-study-finds-americans-need-6-hours-of-sleep-at-work-1819573628/</a></li>
+<li>“Sleep is not just a physical need but a delicious pleasure | Aeon Essays.” Accessed: Dec. 05, 2025. [Online]. Available: <a href="https://aeon.co/essays/sleep-is-not-just-a-physical-need-but-a-delicious-pleasure">https://aeon.co/essays/sleep-is-not-just-a-physical-need-but-a-delicious-pleasure</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd6cff8a" class="outline-2">
+<h2 id="orgd6cff8a"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgf98005c" class="outline-3">
+<h3 id="orgf98005c"><span class="section-number-3">5.1.</span> Dreams</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org019e6b6" class="outline-4">
+<h4 id="org019e6b6"><span class="section-number-4">5.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ul class="org-ul">
+<li>“Dream,” Wikipedia. Dec. 22, 2024. Accessed: Dec. 23, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Dream&amp;oldid=1264661703">https://en.wikipedia.org/w/index.php?title=Dream&amp;oldid=1264661703</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6ddbaba" class="outline-4">
+<h4 id="org6ddbaba"><span class="section-number-4">5.1.2.</span> STEMM</h4>
+<div class="outline-text-4" id="text-5-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgb1d80fc"></a>NeuroScience<br />
+<div class="outline-text-5" id="text-5-1-2-1">
+<ul class="org-ul">
+<li>M. Walker, Why We Sleep: Unlocking the Power of Sleep and Dreams. Simon and Schuster, 2017.</li>
+</ul>
+</div>
+</li>
+<li><a id="org1ed85ea"></a>Misc<br />
+<div class="outline-text-5" id="text-5-1-2-2">
+<ul class="org-ul">
+<li>A. Heidt, “Why Are Recurring Dreams Usually Bad Ones?,” Scientific American. Accessed: Jan. 18, 2025. [Online]. Available: <a href="https://www.scientificamerican.com/article/why-are-recurring-dreams-usually-nightmares/">https://www.scientificamerican.com/article/why-are-recurring-dreams-usually-nightmares/</a></li>
+<li>M. Carr, “The New Science of Controlling Lucid Dreams,” Scientific American. Accessed: Jan. 18, 2025. [Online]. Available: <a href="https://www.scientificamerican.com/article/engineering-lucid-dreams-could-improve-sleep-and-defuse-nightmares/">https://www.scientificamerican.com/article/engineering-lucid-dreams-could-improve-sleep-and-defuse-nightmares/</a></li>
+
+<li>M. Carr, “The New Science of Controlling Lucid Dreams,” Scientific American. Accessed: Dec. 23, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/engineering-lucid-dreams-could-improve-sleep-and-defuse-nightmares/">https://www.scientificamerican.com/article/engineering-lucid-dreams-could-improve-sleep-and-defuse-nightmares/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgae0c3cd" class="outline-4">
+<h4 id="orgae0c3cd"><span class="section-number-4">5.1.3.</span> World</h4>
+<div class="outline-text-4" id="text-5-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgbf977b3"></a>Humanities<br />
+<ol class="org-ol">
+<li><a id="org706d79c"></a>PsychoAnalysis<br />
+<div class="outline-text-6" id="text-5-1-3-1-1">
+<ul class="org-ul">
+<li>S. Kakar, <i>On Dreams and Dreaming.</i> Penguin UK, 2011.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgc8284d4"></a>Misc<br />
+<div class="outline-text-5" id="text-5-1-3-2">
+<ul class="org-ul">
+<li>W. D. O’Flaherty, Dreams, Illusion, and Other Realities. University of Chicago Press, 1986.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org2c3960f" class="outline-4">
+<h4 id="org2c3960f"><span class="section-number-4">5.1.4.</span> Core</h4>
+</div>
+<div id="outline-container-org69415cc" class="outline-4">
+<h4 id="org69415cc"><span class="section-number-4">5.1.5.</span> Arts</h4>
+<div class="outline-text-4" id="text-5-1-5">
+</div>
+<ol class="org-ol">
+<li><a id="org35f18fe"></a>Music<br />
+<div class="outline-text-5" id="text-5-1-5-1">
+<ul class="org-ul">
+<li>Ananta - Night And Daydream. 1978. Accessed: Apr. 01, 2023. [Online]. Available: <a href="https://www.discogs.com/release/5616129-Ananta-Night-And-Daydream">https://www.discogs.com/release/5616129-Ananta-Night-And-Daydream</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga663869"></a>Misc<br />
+<div class="outline-text-5" id="text-5-1-5-2">
+<ul class="org-ul">
+<li>“On the space between waking and dreaming in Kafka’s diaries | Aeon Essays,” Aeon. Accessed: Jun. 28, 2023. [Online]. Available: <a href="https://aeon.co/essays/on-the-space-between-waking-and-dreaming-in-kafkas-diaries">https://aeon.co/essays/on-the-space-between-waking-and-dreaming-in-kafkas-diaries</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orga426133" class="outline-4">
+<h4 id="orga426133"><span class="section-number-4">5.1.6.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-5-1-6">
+</div>
+<ol class="org-ol">
+<li><a id="org88ef8eb"></a>Nightmares<br />
+<div class="outline-text-5" id="text-5-1-6-1">
+<ul class="org-ul">
+<li>“How to calm your nightmares | Psyche Guides,” Psyche. Accessed: Sep. 13, 2023. [Online]. Available: <a href="https://psyche.co/guides/how-to-use-relaxation-and-rescripting-to-calm-your-nightmares">https://psyche.co/guides/how-to-use-relaxation-and-rescripting-to-calm-your-nightmares</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orge66bf8b" class="outline-4">
+<h4 id="orge66bf8b"><span class="section-number-4">5.1.7.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-1-7">
+<ul class="org-ul">
+<li>“The regenerative visions of dreaming across time and species | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/the-regenerative-visions-of-dreaming-across-time-and-species">https://aeon.co/essays/the-regenerative-visions-of-dreaming-across-time-and-species</a> (accessed Mar. 16, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org936cc1a" class="outline-3">
+<h3 id="org936cc1a"><span class="section-number-3">5.2.</span> Yoga</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>S. S. Saraswati, <i>Yoga Nidra.</i> Yoga Publications Trust, 1993.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8568f77" class="outline-3">
+<h3 id="org8568f77"><span class="section-number-3">5.3.</span> Articles, Essays</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>“How to sleep well again | Psyche Guides,” Psyche. <a href="https://psyche.co/guides/how-to-overcome-insomnia-by-breaking-your-behaviour-patterns">https://psyche.co/guides/how-to-overcome-insomnia-by-breaking-your-behaviour-patterns</a> (accessed Jun. 16, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2742d8a" class="outline-3">
+<h3 id="org2742d8a"><span class="section-number-3">5.4.</span> Texts</h3>
+<div class="outline-text-3" id="text-5-4">
+<ul class="org-ul">
+<li>D. S. Panda, <b>The Circadian Code: Lose Weight, Supercharge Your Energy And Sleep Well Every Night.</b> Random House, 2018.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org66f9c1f" class="outline-2">
+<h2 id="org66f9c1f"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>L. Denworth, “Your Brain Literally Washes Itself while You Sleep,” Scientific American. Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://www.scientificamerican.com/article/how-sleep-cleans-the-brain-and-keeps-you-healthy/">https://www.scientificamerican.com/article/how-sleep-cleans-the-brain-and-keeps-you-healthy/</a></li>
+
+<li>“Understanding the bidirectional relationship between sleep and mental health.” Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://news.stanford.edu/stories/2025/08/sleep-mental-health-mood-impact-science-research">https://news.stanford.edu/stories/2025/08/sleep-mental-health-mood-impact-science-research</a></li>
+
+<li>P. H. PhD, Sleep: Harness the Power of Sleep for Optimal Health and Wellbeing. DK, 2019.</li>
+
+<li>“Predicting Mood Episodes Based on Sleep and Circadian Rhythm Features | SIAM,” Society for Industrial and Applied Mathematics. Accessed: May 10, 2025. [Online]. Available: <a href="https://www.siam.org/publications/siam-news/articles/predicting-mood-episodes-based-on-sleep-and-circadian-rhythm-features/">https://www.siam.org/publications/siam-news/articles/predicting-mood-episodes-based-on-sleep-and-circadian-rhythm-features/</a></li>
+
+<li>R. Nuwer, “Bad Sleep Lets Intrusive Thoughts Flood In,” Scientific American. Accessed: Jan. 10, 2025. [Online]. Available: <a href="https://www.scientificamerican.com/article/bad-sleep-leaves-the-brain-more-vulnerable-to-intrusive-thoughts/">https://www.scientificamerican.com/article/bad-sleep-leaves-the-brain-more-vulnerable-to-intrusive-thoughts/</a></li>
+
+<li>“How to sleep when you’re a perfectionist | Psyche Guides,” Psyche. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://psyche.co/guides/how-to-sleep-when-youre-a-perfectionist-and-high-achiever">https://psyche.co/guides/how-to-sleep-when-youre-a-perfectionist-and-high-achiever</a></li>
+
+<li>“Tender and creative is the night: on the benefits of insomnia | Aeon Essays,” Aeon. Accessed: Sep. 13, 2024. [Online]. Available: <a href="https://aeon.co/essays/tender-and-creative-is-the-night-on-the-benefits-of-insomnia">https://aeon.co/essays/tender-and-creative-is-the-night-on-the-benefits-of-insomnia</a></li>
+
+<li>“Sleep deprivation alters connections in the brain, mouse study finds.” Accessed: Aug. 07, 2024. [Online]. Available: <a href="https://www.science.org/content/article/sleep-deprivation-alters-connections-brain-mouse-study-finds">https://www.science.org/content/article/sleep-deprivation-alters-connections-brain-mouse-study-finds</a></li>
+
+<li>B. Giri, N. Kinsky, U. Kaya, K. Maboudi, T. Abel, and K. Diba, “Sleep loss diminishes hippocampal reactivation and replay,” Nature, pp. 1–8, Jun. 2024, doi: 10.1038/s41586-024-07538-2.</li>
+
+<li>“Being underslept and out-of-sync is a political injustice | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/being-underslept-and-out-of-sync-is-a-political-injustice">https://aeon.co/essays/being-underslept-and-out-of-sync-is-a-political-injustice</a> (accessed Mar. 23, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Walker, <i>Why We Sleep: Unlocking the Power of Sleep and Dreams.</i> Simon and Schuster, 2017.</li>
+<li><b>“A quantitative theory unlocks the mysteries of why we sleep | Aeon Essays,”</b> Aeon. <a href="https://aeon.co/essays/a-quantitative-theory-unlocks-the-mysteries-of-why-we-sleep">https://aeon.co/essays/a-quantitative-theory-unlocks-the-mysteries-of-why-we-sleep</a> (accessed Sep. 21, 2021).</li>
+
+<li>“The brain’s twilight zone: when you’re neither awake nor asleep | Psyche Ideas,” Psyche. Accessed: Sep. 28, 2024. [Online]. Available: <a href="https://psyche.co/ideas/the-brains-twilight-zone-when-youre-neither-awake-nor-asleep">https://psyche.co/ideas/the-brains-twilight-zone-when-youre-neither-awake-nor-asleep</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:58</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

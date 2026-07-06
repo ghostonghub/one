@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:57 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tulsi</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Tulsi</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org45c4ad3">1. General</a></li>
+<li><a href="#orgdcd71d1">2. STEMM</a>
+<ul>
+<li><a href="#org71b93b5">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org3bad750">3. World</a>
+<ul>
+<li><a href="#org3be536f">3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgce9d2d4">4. Arts</a>
+<ul>
+<li><a href="#org29beb73">4.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org08e19ff">5. Misc</a>
+<ul>
+<li><a href="#org04711a9">5.1. Misc</a></li>
+<li><a href="#org3934179">5.2. Possibly MisInfo/DisInfo</a></li>
+<li><a href="#orgdcfa11d">5.3. Google Gemini</a></li>
+<li><a href="#org8e50c07">5.4. Brave AI</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org45c4ad3" class="outline-2">
+<h2 id="org45c4ad3"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orgdcd71d1" class="outline-2">
+<h2 id="orgdcd71d1"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org71b93b5" class="outline-3">
+<h3 id="org71b93b5"><span class="section-number-3">2.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org3bad750" class="outline-2">
+<h2 id="org3bad750"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org3be536f" class="outline-3">
+<h3 id="org3be536f"><span class="section-number-3">3.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>W. DESK, “Goswami Tulsidas Jayanti: Celebrating the sant of devotion,” Organiser. Accessed: Aug. 01, 2025. [Online]. Available: <a href="https://organiser.org/2025/07/31/302616/bharat/goswami-tulsidas-jayanti-honouring-the-sant-who-gave-ram-to-the-masses-and-defied-an-empire/">https://organiser.org/2025/07/31/302616/bharat/goswami-tulsidas-jayanti-honouring-the-sant-who-gave-ram-to-the-masses-and-defied-an-empire/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgce9d2d4" class="outline-2">
+<h2 id="orgce9d2d4"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org29beb73" class="outline-3">
+<h3 id="org29beb73"><span class="section-number-3">4.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org08e19ff" class="outline-2">
+<h2 id="org08e19ff"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org04711a9" class="outline-3">
+<h3 id="org04711a9"><span class="section-number-3">5.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>M. M. Cohen, “Tulsi - Ocimum sanctum: A herb for all reasons,” J Ayurveda Integr Med, vol. 5, no. 4, pp. 251–259, 2014, doi: 10.4103/0975-9476.146554.</li>
+
+<li>“What is Tulsi? All About Holy Basil,” Organic India Australia. Accessed: Apr. 14, 2025. [Online]. Available: <a href="https://www.organicindia.com.au/blogs/news/what-is-tulsi-all-about-holy-basil">https://www.organicindia.com.au/blogs/news/what-is-tulsi-all-about-holy-basil</a></li>
+<li>“Tulsi: Sacred Plant of the Gods,” Organic India. Accessed: Apr. 14, 2025. [Online]. Available: <a href="https://www.organicindiausa.com/tulsi/">https://www.organicindiausa.com/tulsi/</a></li>
+
+<li>“5 Health Benefits of Holy Basil,” Cleveland Clinic. Accessed: Apr. 14, 2025. [Online]. Available: <a href="https://health.clevelandclinic.org/benefits-of-holy-basil">https://health.clevelandclinic.org/benefits-of-holy-basil</a></li>
+
+<li>N. Jamshidi and M. M. Cohen, “The Clinical Efficacy and Safety of Tulsi in Humans: A Systematic Review of the Literature,” Evid Based Complement Alternat Med, vol. 2017, p. 9217567, 2017, doi: 10.1155/2017/9217567.</li>
+<li>H. D. A. Dharsono, S. A. Putri, D. Kurnia, D. Dudi, and M. H. Satari, “Ocimum Species: A Review on Chemical Constituents and Antibacterial Activity,” Molecules, vol. 27, no. 19, Art. no. 19, Jan. 2022, doi: 10.3390/molecules27196350.</li>
+<li>A. Beltrán-Noboa et al., “Exploring the Chemistry of Ocimum Species under Specific Extractions and Chromatographic Methods: A Systematic Review,” ACS Omega, vol. 8, no. 12, pp. 10747–10756, Mar. 2023, doi: 10.1021/acsomega.3c00043.</li>
+
+<li>“Ocimum Tenuiflorum - an overview | ScienceDirect Topics.” Accessed: Apr. 14, 2025. [Online]. Available: <a href="https://www.sciencedirect.com/topics/medicine-and-dentistry/ocimum-tenuiflorum">https://www.sciencedirect.com/topics/medicine-and-dentistry/ocimum-tenuiflorum</a></li>
+
+<li>A. Piras et al., “Ocimum tenuiflorum L. and Ocimum basilicum L., two spices of Lamiaceae family with bioactive essential oils,” Industrial Crops and Products, vol. 113, pp. 89–97, Mar. 2018, doi: 10.1016/j.indcrop.2018.01.024.</li>
+<li>A. K. Shasany and C. Kole, Eds., The Ocimum Genome, 1st ed. 2018 edition. New York, NY: Springer International Publishing AG, 2018.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3934179" class="outline-3">
+<h3 id="org3934179"><span class="section-number-3">5.2.</span> Possibly MisInfo/DisInfo</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>W. DESK, “Tulsi Pujan: Embracing divine blessings,” Organiser. Accessed: Dec. 25, 2024. [Online]. Available: <a href="https://organiser.org/2024/12/25/212600/bharat/tulsi-pujan-embracing-divine-blessings/">https://organiser.org/2024/12/25/212600/bharat/tulsi-pujan-embracing-divine-blessings/</a></li>
+<li>W. DESK, “Krishna Tulsi: The divine ayurvedic herb for health and healing,” Organiser. Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://organiser.org/2024/12/11/268903/bharat/krishna-tulsi-the-divine-ayurvedic-herb-for-health-and-healing/">https://organiser.org/2024/12/11/268903/bharat/krishna-tulsi-the-divine-ayurvedic-herb-for-health-and-healing/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdcfa11d" class="outline-3">
+<h3 id="orgdcfa11d"><span class="section-number-3">5.3.</span> Google Gemini</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>It is challenging to provide a definitive "top ten" list of papers on holy basil in top open-source peer-reviewed journals due to the following reasons:</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b><b>Subjectivity of "Top":</b></b> What constitutes a "top" paper can vary based on the criteria used (e.g., most cited, most downloaded, most influential in a specific subfield).</li>
+<li><b><b>Dynamic Nature of Research:</b></b> The most impactful papers can change over time as new research emerges.</li>
+<li><b><b>Open Source Journal Landscape:</b></b> Identifying the "top" open-source journals specifically focused on medicinal plants and then ranking papers within them is a complex and continuously evolving task.</li>
+
+<li>However, based on the search results, here's a breakdown of relevant information and some notable papers and journals in this area:</li>
+
+<li><b><b>Key Open Source Peer-Reviewed Journals in Medicinal Plant Research (with reported Impact Factors/CiteScores):</b></b></li>
+
+<li><b><b>Medicinal Plant Biology (Maximum Academic Press):</b></b> Indexed in Web of Science: Emerging Sources Citation Index (ESCI). This indicates it's a reputable journal, although an exact Impact Factor isn't explicitly listed in the search results. It is an open-access, online-only, peer-reviewed journal.</li>
+<li><b><b>Journal of Herbs, Spices &amp; Medicinal Plants (Taylor &amp; Francis):</b></b> Has a 2023 Impact Factor of 1.2 and a CiteScore of 3.0 (Scopus). It is listed as Q2 in CiteScore's best quartile. While it offers an open-access option, it's not exclusively open access.</li>
+<li><b><b>Medicinal &amp; Aromatic Plants (Longdom Publishing SL):</b></b> Claims a Journal Impact Factor of 26.36 and a Journal CiteScore of 28.93. These values seem exceptionally high and might warrant further verification against other sources. It is an open-access journal.</li>
+<li><b><b>Journal of Medicinal Plants (various publishers):</b></b> Several journals with similar names exist. One with ISSN 1684-0240 has a SCImago Journal Rank (SJR) of 0.195 and is in Q3 for Complementary and Alternative Medicine and Q4 for Pharmacology. It is indexed in DOAJ and Scopus. Another, the "Medicinal Plants Journal" (Academia Publishing), reported an Impact Factor of 2.630 in 2014.</li>
+<li><b><b>Plants (MDPI):</b></b> This is an open-access journal with a broad scope covering plant science. The paper "Holy Basil (Ocimum sanctum L.) Flower and Fenofibrate Improve Lipid Profiles in Rats with Metabolic Dysfunction Associated Steatotic Liver Disease (MASLD): The Role of Choline Metabolism" was published here in 2025. MDPI is a well-known open-access publisher.</li>
+<li><b><b>Frontiers in Sustainable Food Systems:</b></b> Published the article "Quality and bioactive compound accumulation in two holy basil cultivars as affected by microwave-assisted hot air drying at an industrial scale" (2023), which is open access. Frontiers is a major open-access publisher.</li>
+<li><b><b>Journal of Ayurveda and Integrative Medicine:</b></b> Published the highly cited review "Tulsi - Ocimum sanctum: A herb for all reasons" in 2014 (PMC4296439), available through PubMed Central, an open-access archive.</li>
+<li><b><b>Evidence-Based Complementary and Alternative Medicine (Hindawi):</b></b> Published the systematic review "The Clinical Efficacy and Safety of Tulsi in Humans: A Systematic Review of the Literature" in 2017 (PMC5376420), which is open access.</li>
+
+<li><b><b>Notable Papers on Holy Basil (based on search results and general knowledge):</b></b></li>
+
+<li>It's difficult to rank these without citation data from open-source databases, but these papers cover important aspects of holy basil research:</li>
+
+<li><b>*"Tulsi - Ocimum sanctum: A herb for all reasons" (Cohen, 2014, *Journal of Ayurveda and Integrative Medicine</b>):** This review provides a comprehensive overview of the traditional uses, pharmacological actions, and clinical applications of holy basil. It is a widely cited paper that highlights the multifaceted benefits of this herb.</li>
+<li><b>*"The Clinical Efficacy and Safety of Tulsi in Humans: A Systematic Review of the Literature" (Jamshidi &amp; Cohen, 2017, *Evidence-Based Complementary and Alternative Medicine</b>):** This systematic review critically evaluates the evidence from human clinical trials on the efficacy and safety of holy basil in various conditions.</li>
+<li><b>*"A randomized, double-blind, placebo-controlled trial investigating the effects of an *Ocimum tenuiflorum</b> (Holy Basil) extract (HolixerTM) on stress, mood, and sleep in adults experiencing stress" (Lopresti et al., 2022, <b>Frontiers in Nutrition</b>):** This recent study investigated the potential of a specific holy basil extract to reduce stress and improve sleep quality in humans.</li>
+<li><b>*"Unravelling the genome of Holy basil: an 'incomparable' 'elixir of life' of traditional Indian medicine" (Rastogi et al., 2015, *BMC Genomics</b>):** This paper presents the sequencing and analysis of the holy basil genome, offering insights into its metabolic potential and the genes responsible for its medicinal properties.</li>
+<li><b>*"Antioxidant activity of the ancient herb, holy basil in CCl4-induced liver injury in Rats" (Ponnusam et al., 2015, *Ayurvedic</b>):** This study investigated the antioxidant and hepatoprotective effects of holy basil in an animal model of liver injury.</li>
+<li><b>*"Chemical Composition and Antioxidant Property of Holy Basil (*Ocimum sanctum</b> L.) Leaves, Stems, and Inflorescence and Their in Vitro Callus Cultures" (Hakkim et al., 2007, <b>Journal of Agricultural and Food Chemistry</b>):** This paper, while from the <b>Journal of Agricultural and Food Chemistry</b> (not strictly open access but often accessible through institutional subscriptions or pay-per-view), is significant for detailing the chemical composition and antioxidant properties of different parts of the holy basil plant and its in vitro cultures.</li>
+<li><b>*"A Quantitative Literature Analysis of the Research on Holy Basil (Tulsi)" (Muley &amp; Medithi, 2022, *Journal of Scientometric Research</b>):** This bibliometric analysis provides an overview of the research trends, top contributing countries, and frequently studied aspects of holy basil based on publications in the Web of Science.</li>
+<li><b>*"Holy Basil (*Ocimum sanctum</b> L.) Flower and Fenofibrate Improve Lipid Profiles in Rats with Metabolic Dysfunction Associated Steatotic Liver Disease (MASLD): The Role of Choline Metabolism" (Taesuwan et al., 2025, <b>Plants</b>):** This recent open-access study explores the lipid-lowering effects of holy basil flower extract in rats with metabolic dysfunction.</li>
+<li><b>*"Quality and bioactive compound accumulation in two holy basil cultivars as affected by microwave-assisted hot air drying at an industrial scale" (Chutimanukul et al., 2023, *Frontiers in Sustainable Food Systems</b>):** This study examines the impact of different drying methods on the bioactive compounds and quality of two holy basil cultivars.</li>
+<li><b>*"A Review on Phytochemical and Pharmacological Properties of Holy Basil (*Ocimum sanctum</b> L.)" (Singh &amp; Chaudhuri, 2018, <b>Industrial Crops and Products</b>):** While <b>Industrial Crops and Products</b> might not be exclusively open access, this review provides a good overview of the phytochemicals and pharmacological activities of holy basil.</li>
+
+<li><b><b>General Information about Holy Basil Research:</b></b></li>
+
+<li><b><b>Traditional Uses:</b></b> Holy basil (also known as Tulsi) has a long history of use in Ayurvedic medicine for various health conditions, including stress, anxiety, diabetes, respiratory issues, and inflammation.</li>
+<li><b><b>Phytochemicals:</b></b> It is rich in various bioactive compounds, including essential oils (like eugenol, linalool, and caryophyllene), flavonoids (like orientin and vicenin), and phenolic acids (like rosmarinic acid).</li>
+<li><b><b>Pharmacological Activities:</b></b> Research has explored its antioxidant, anti-inflammatory, antidiabetic, antimicrobial, immunomodulatory, and stress-protective properties.</li>
+<li><b><b>Growing Research Interest:</b></b> The number of publications on holy basil has been steadily increasing, particularly in recent years, indicating a growing scientific interest in its potential health benefits. India and the United States have been major contributors to this research.</li>
+<li><b><b>Focus Areas:</b></b> Much of the research has focused on its effects on oxidative stress, diabetes, and its antioxidant and antimicrobial properties. More recent studies are also exploring its role in stress management and sleep.</li>
+
+<li>To get a more precise "top ten" list based on a specific criterion like citations within open-source journals, you would need to use specific databases (like DOAJ, PubMed Central, or Scopus with open access filters) and conduct a detailed citation analysis. However, the information above provides a good starting point for understanding significant research trends and relevant open-access publications on holy basil.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8e50c07" class="outline-3">
+<h3 id="org8e50c07"><span class="section-number-3">5.4.</span> Brave AI</h3>
+<div class="outline-text-3" id="text-5-4">
+<ul class="org-ul">
+<li>Here are the top 10 scholarly articles on <b>Ocimum tenuiflorum</b> (Tulsi) based on the provided context:</li>
+
+<li><b><b>"Ocimum sanctum (Tulsi), the queen of herbs: A Review"</b></b>: This review article provides a comprehensive overview of the botanical, phytochemical, ethnomedicinal, pharmacological, and toxicological information on <b>Ocimum sanctum</b> (Tulsi), highlighting its various medicinal properties and traditional uses</li>
+
+<li><b><b>"Exploring the Chemistry of Ocimum Species under Specific Extractions and Chromatographic Methods: A Systematic Review"</b></b>: This systematic review explores the chemical composition of non-essential oils in <b>Ocimum</b> species, focusing on the methods of extraction and identification. It identifies the most frequently detected compounds in <b>Ocimum tenuiflorum</b> and other species</li>
+
+<li><b><b>"Ocimum Species: A Review on Chemical Constituents and Antibacterial Activity"</b></b>: This review discusses the chemical constituents and antibacterial activity of five <b>Ocimum</b> species, including <b>O. tenuiflorum</b>. It highlights the potential of these plants as natural antibacterial agents</li>
+
+<li><b><b>"Metabolomic Profile and Computational Analysis for the Identification of the Potential Anti-Inflammatory Mechanisms of Action of the Traditional Medicinal Plants Ocimum Basilicum and Ocimum Tenuiflorum"</b></b>: This study provides a metabolomic profile and computational analysis of <b>Ocimum basilicum</b> and <b>Ocimum tenuiflorum</b>, focusing on their potential anti-inflammatory mechanisms</li>
+
+<li><b><b>"Antibacterial Property of Different Medicinal Plants: Ocimum sanctum, Cinnamomum zeylanicum, Xanthoxylum armatum and Origanum majorana"</b></b>: This article examines the antibacterial properties of <b>Ocimum sanctum</b> and other medicinal plants, providing insights into their potential use in treating bacterial infections</li>
+
+<li><b><b>"The composition and antibacterial activity of essential oils in three Ocimum species growing in Romania"</b></b>: This study investigates the composition and antibacterial activity of essential oils from three <b>Ocimum</b> species, including <b>O. tenuiflorum</b>, grown in Romania</li>
+
+<li><b><b>"Chemical composition and antimicrobial activity of the essential oils of four Ocimum species growing in Tanzania"</b></b>: This article reports on the chemical composition and antimicrobial activity of essential oils from four <b>Ocimum</b> species, including <b>O. tenuiflorum</b>, grown in Tanzania</li>
+
+<li><b><b>"Studies on Antimicrobial Activity of Ocimum Species of Karnataka against Clinical Isolates"</b></b>: This study evaluates the antimicrobial activity of <b>Ocimum</b> species, including <b>O. tenuiflorum</b>, against clinical isolates of bacteria</li>
+
+<li><b><b>"A review on Ocimum species: Ocimum americanum L., Ocimum basilicum L., Ocimum gratissimum L., and Ocimum tenuiflorum L."</b></b>: This review provides an overview of the medicinal properties and uses of four <b>Ocimum</b> species, including <b>O. tenuiflorum</b></li>
+
+<li><b><b>"Development of high-performance thin layer chromatography method for identification of phenolic compounds and quantification of rosmarinic acid content in some species of the Lamiaceae family"</b></b>: This article describes a method for identifying and quantifying phenolic compounds, including rosmarinic acid, in <b>Ocimum tenuiflorum</b> and other <b>Lamiaceae</b> species</li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:57</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

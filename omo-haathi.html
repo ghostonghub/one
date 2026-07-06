@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Elephants</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Elephants</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org9602bb3">1. General</a></li>
+<li><a href="#org9d51910">2. STEMM</a>
+<ul>
+<li><a href="#orgd3598b2">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org7659a94">3. World</a>
+<ul>
+<li><a href="#orgc4816bb">3.1. Nation States</a>
+<ul>
+<li><a href="#orgaf52cf7">3.1.1. India</a></li>
+</ul>
+</li>
+<li><a href="#orga907c31">3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org51ec747">4. Arts</a>
+<ul>
+<li><a href="#org9e0992d">4.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org0ea7053">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org9602bb3" class="outline-2">
+<h2 id="org9602bb3"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Elephant,” Wikipedia. Sep. 05, 2024. Accessed: Sep. 08, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Elephant&amp;oldid=1244106442">https://en.wikipedia.org/w/index.php?title=Elephant&amp;oldid=1244106442</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9d51910" class="outline-2">
+<h2 id="org9d51910"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgd3598b2" class="outline-3">
+<h3 id="orgd3598b2"><span class="section-number-3">2.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>“Elephants gesture to signal what they want—just like us.” Accessed: Jul. 09, 2025. [Online]. Available: <a href="https://www.science.org/content/article/elephants-gesture-signal-what-they-want-just-us">https://www.science.org/content/article/elephants-gesture-signal-what-they-want-just-us</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7659a94" class="outline-2">
+<h2 id="org7659a94"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgc4816bb" class="outline-3">
+<h3 id="orgc4816bb"><span class="section-number-3">3.1.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgaf52cf7" class="outline-4">
+<h4 id="orgaf52cf7"><span class="section-number-4">3.1.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org6cbc05a"></a>General<br /></li>
+<li><a id="org40ec06d"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="org0160cad"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org21d0d2e"></a>Worldly Matters<br />
+<ol class="org-ol">
+<li><a id="orgb50723f"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org8465209"></a>Arts<br />
+<ol class="org-ol">
+<li><a id="org099de46"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="orgbf07376"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="orgc056763"></a>PETA<br />
+<div class="outline-text-6" id="text-3-1-1-5-1">
+<ul class="org-ul">
+<li>E. Goyal, “Jackie Shroff and PETA India Gift Stunning Mechanical Elephant to Nediyathali Sri Siva Temple in Kodungallur, Kerala - Blog,” PETA India. Accessed: Aug. 17, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/jackie-shroff-and-peta-india-gift-stunning-mechanical-elephant-to-nediyathali-sri-siva-temple-in-kodungallur-kerala/">https://www.petaindia.com/blog/jackie-shroff-and-peta-india-gift-stunning-mechanical-elephant-to-nediyathali-sri-siva-temple-in-kodungallur-kerala/</a></li>
+<li>E. Goyal, “NEW: PETA India Statement on Elephant Madhuri (Mahadevi) - Blog,” PETA India. Accessed: Aug. 12, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/new-peta-india-statement-on-elephant-madhuri-mahadevi/">https://www.petaindia.com/blog/new-peta-india-statement-on-elephant-madhuri-mahadevi/</a></li>
+<li>E. Goyal, “After 33 Years Alone and in Chains, Disturbed Elephant Mahadevi Reaches Her New Sanctuary Home, Following PETA India Action - Blog,” PETA India. Accessed: Aug. 03, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/after-33-years-alone-and-in-chains-disturbed-jain-math-elephant-mahadevi-reaches-her-new-sanctuary-home-following-peta-india-action/">https://www.petaindia.com/blog/after-33-years-alone-and-in-chains-disturbed-jain-math-elephant-mahadevi-reaches-her-new-sanctuary-home-following-peta-india-action/</a></li>
+
+<li>S. Manocha, “POR and FIR Registered After Hanuman Langur Violently Thrashed in a Viral Video in Bokaro, Following PETA India Complaint - Blog,” PETA India. Accessed: Aug. 03, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/por-and-fir-registered-after-hanuman-langur-violently-thrashed-in-a-viral-video-in-bokaro-following-peta-india-complaint/">https://www.petaindia.com/blog/por-and-fir-registered-after-hanuman-langur-violently-thrashed-in-a-viral-video-in-bokaro-following-peta-india-complaint/</a></li>
+<li>S. Manocha, “The Full Mahadevi (Madhuri) Story: From Chains to Rescue - Blog,” PETA India. Accessed: Aug. 03, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/the-full-mahadevi-madhuri-story-from-chains-to-rescue/">https://www.petaindia.com/blog/the-full-mahadevi-madhuri-story-from-chains-to-rescue/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>S. Manocha, “PETA India Erects Billboard Near Janata Bhawan in Guwahati Reminding Assam Chief Minister Abused Elephant Joymala Still Needs Help - Blog,” PETA India. Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/peta-india-erects-billboard-near-janata-bhawan-in-guwahati-reminding-assam-chief-minister-abused-elephant-joymala-still-needs-help/">https://www.petaindia.com/blog/peta-india-erects-billboard-near-janata-bhawan-in-guwahati-reminding-assam-chief-minister-abused-elephant-joymala-still-needs-help/</a></li>
+<li>S. Manocha, “The True Full Mahadevi (Madhuri) Story: From Chains to Rescue - Blog,” PETA India. Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/the-true-full-mahadevi-madhuri-story-from-chains-to-rescue/">https://www.petaindia.com/blog/the-true-full-mahadevi-madhuri-story-from-chains-to-rescue/</a></li>
+
+<li>S. Manocha, “PETA India Staff Member Suffers Severe Rib Injury After Hooligans Pelt Hundreds of Stones During Elephant Mahadevi’s Rescue From Jain Math - Blog,” PETA India. Accessed: Jul. 30, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/peta-india-staff-member-suffers-severe-rib-injury-after-hooligans-pelt-hundreds-of-stones-during-elephant-mahadevis-rescue-from-jain-math/">https://www.petaindia.com/blog/peta-india-staff-member-suffers-severe-rib-injury-after-hooligans-pelt-hundreds-of-stones-during-elephant-mahadevis-rescue-from-jain-math/</a></li>
+
+<li>S. Manocha, “Supreme Court Upholds Bombay High Court Order to Rehabilitate Disturbed Jain Math Elephant Mahadevi to a Sanctuary, Following PETA India Action - Blog,” PETA India. Accessed: Jul. 30, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/supreme-court-upholds-bombay-high-court-order-to-rehabilitate-disturbed-jain-math-elephant-mahadevi-to-a-sanctuary-following-peta-india-action/">https://www.petaindia.com/blog/supreme-court-upholds-bombay-high-court-order-to-rehabilitate-disturbed-jain-math-elephant-mahadevi-to-a-sanctuary-following-peta-india-action/</a></li>
+
+<li>S. Manocha, “Bombay High Court Orders Disturbed Elephant Mahadevi’s Rehabilitation to a Sanctuary—Upholding a High-Powered Committee of the Supreme Court’s Decision—Following PETA India Intervention - Blog,” PETA India. Accessed: Jul. 18, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/bombay-high-court-orders-disturbed-elephant-mahadevis-rehabilitation-to-a-sanctuary-upholding-a-high-powered-committee-of-the-supreme-courts-decision-following-peta-i/">https://www.petaindia.com/blog/bombay-high-court-orders-disturbed-elephant-mahadevis-rehabilitation-to-a-sanctuary-upholding-a-high-powered-committee-of-the-supreme-courts-decision-following-peta-i/</a></li>
+
+<li>E. Goyal, “Trisha Krishnan Gifts Realistic Mechanical Elephant to Temples in Aruppukottai, Tamil Nadu, with People for Cattle in India - Blog,” PETA India. Accessed: Jun. 28, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/trisha-krishnan-gifts-realistic-mechanical-elephant-to-temples-in-aruppukottai-tamil-nadu-with-people-for-cattle-in-india/">https://www.petaindia.com/blog/trisha-krishnan-gifts-realistic-mechanical-elephant-to-temples-in-aruppukottai-tamil-nadu-with-people-for-cattle-in-india/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5afd3c3"></a>Down To Earth<br />
+<div class="outline-text-6" id="text-3-1-1-5-2">
+<ul class="org-ul">
+<li>V. Choudhary, “On World Elephant Day 2025, Shankar is still Delhi Zoo’s lonely jumbo,” Down To Earth. Accessed: Aug. 13, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/wildlife-biodiversity/on-world-elephant-day-2025-shankar-is-still-delhis-lonely-jumbo">https://www.downtoearth.org.in/wildlife-biodiversity/on-world-elephant-day-2025-shankar-is-still-delhis-lonely-jumbo</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf794033"></a>The India Forum<br />
+<div class="outline-text-6" id="text-3-1-1-5-3">
+<ul class="org-ul">
+<li>“Living with Elephants,” The India Forum. Accessed: Jan. 15, 2025. [Online]. Available: <a href="https://www.theindiaforum.in/book-reviews/living-elephants">https://www.theindiaforum.in/book-reviews/living-elephants</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org79c47c9"></a>Misc<br />
+<div class="outline-text-5" id="text-3-1-1-6">
+<ul class="org-ul">
+<li>S. Manocha, “Disturbing New Video of Elephant Madhuri Attacking a Man in Public Surfaces as Math Campaigns to Rip Her from New Sanctuary Home to Parade Her in Processions - Blog,” PETA India. Accessed: Sep. 25, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/disturbing-new-video-of-elephant-madhuri-attacking-a-man-in-public-surfaces-as-math-campaigns-to-rip-her-from-new-sanctuary-home-to-parade-her-in-processions/">https://www.petaindia.com/blog/disturbing-new-video-of-elephant-madhuri-attacking-a-man-in-public-surfaces-as-math-campaigns-to-rip-her-from-new-sanctuary-home-to-parade-her-in-processions/</a></li>
+
+<li>E. Goyal, “Mother Daughter Duo Raveena Tandon and Rasha Thadani Join PETA India to Make History with Mechanical Elephant Gift to Karnataka’s Iconic Thousand Pillars Jain Temple, World’s First Jain Temple to Welcome the Technology - Blog,” PETA India. Accessed: Aug. 30, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/mother-daughter-duo-raveena-tandon-and-rasha-thadani-join-peta-india-to-make-history-with-mechanical-elephant-gift-to-karnatakas-iconic-thousand-pillars-jain-temple-worlds-first-jai/">https://www.petaindia.com/blog/mother-daughter-duo-raveena-tandon-and-rasha-thadani-join-peta-india-to-make-history-with-mechanical-elephant-gift-to-karnatakas-iconic-thousand-pillars-jain-temple-worlds-first-jai/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Karnal, “Over 50 Animal Protection Groups Urge Tamil Nadu &amp; Uttarakhand Governments to Halt Transfer of Baby Elephant to Temple - Blog,” PETA India. Accessed: Aug. 29, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/over-50-animal-protection-groups-urge-tamil-nadu-uttarakhand-governments-to-halt-transfer-of-baby-elephant-to-temple/">https://www.petaindia.com/blog/over-50-animal-protection-groups-urge-tamil-nadu-uttarakhand-governments-to-halt-transfer-of-baby-elephant-to-temple/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga907c31" class="outline-3">
+<h3 id="orga907c31"><span class="section-number-3">3.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“The Hannibal of Manipur.” Accessed: Apr. 14, 2025. [Online]. Available: <a href="https://caravanmagazine.in/history/hannibal-manipur-james-howard-williams-elephant-staircase">https://caravanmagazine.in/history/hannibal-manipur-james-howard-williams-elephant-staircase</a></li>
+
+<li>“Rajasthan: Silent Tears of ‘Toiling’ Elephants in Amer Fort,” NewsClick. Accessed: Mar. 25, 2025. [Online]. Available: <a href="https://www.newsclick.in/rajasthan-silent-tears-toiling-elephants-amer-fort">https://www.newsclick.in/rajasthan-silent-tears-toiling-elephants-amer-fort</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Nandi, “John Abraham ‘Shackled’, ‘Beaten’, and ‘Abused’ in PETA India Campaign Against Elephant Rides - Blog,” PETA India. Accessed: Mar. 24, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/john-abraham-shackled-beaten-and-abused-in-peta-india-campaign-against-elephant-rides/">https://www.petaindia.com/blog/john-abraham-shackled-beaten-and-abused-in-peta-india-campaign-against-elephant-rides/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org51ec747" class="outline-2">
+<h2 id="org51ec747"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org9e0992d" class="outline-3">
+<h3 id="org9e0992d"><span class="section-number-3">4.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org0ea7053" class="outline-2">
+<h2 id="org0ea7053"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>“In conditions of scarcity, elephants (like humans) don’t play nice | Aeon Essays.” Accessed: Dec. 06, 2025. [Online]. Available: <a href="https://aeon.co/essays/in-conditions-of-scarcity-elephants-like-humans-dont-play-nice">https://aeon.co/essays/in-conditions-of-scarcity-elephants-like-humans-dont-play-nice</a></li>
+
+<li>S. Ghosh, “Asian elephants think before they act,” Nature India, Sep. 2025, doi: 10.1038/d44151-025-00178-z.</li>
+
+<li>“Sri Lanka tusker death sparks euthanasia debate &amp; calls for conservation solutions,” Mongabay Environmental News. Accessed: Jul. 20, 2025. [Online]. Available: <a href="https://news.mongabay.com/2025/07/sri-lanka-tusker-death-sparks-euthanasia-debate-calls-for-conservation-solutions/">https://news.mongabay.com/2025/07/sri-lanka-tusker-death-sparks-euthanasia-debate-calls-for-conservation-solutions/</a></li>
+
+<li>“Peter Knights changed Asia’s appetite for ivory. Can he do the same for Africa?,” Mongabay Environmental News. Accessed: Jul. 09, 2025. [Online]. Available: <a href="https://news.mongabay.com/2025/07/peter-knights-changed-asias-appetite-for-ivory-can-he-do-the-same-for-africa/">https://news.mongabay.com/2025/07/peter-knights-changed-asias-appetite-for-ivory-can-he-do-the-same-for-africa/</a></li>
+
+<li>MONGABAY.COM, “Nepali farmers switch crops to reduce human-elephant conflict,” Mongabay Environmental News. Accessed: Apr. 04, 2025. [Online]. Available: <a href="https://news.mongabay.com/short-article/2025/04/nepali-farmers-switch-crops-to-reduce-human-elephant-conflict/">https://news.mongabay.com/short-article/2025/04/nepali-farmers-switch-crops-to-reduce-human-elephant-conflict/</a></li>
+
+<li>arathimenon, “Genomes map elephant populations, history,” Mongabay-India. Accessed: Nov. 02, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/11/genomes-map-elephant-populations-history/">https://india.mongabay.com/2024/11/genomes-map-elephant-populations-history/</a></li>
+</ul>
+
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:56</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

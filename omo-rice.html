@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:57 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rice</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Rice</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org6d44434">1. General</a></li>
+<li><a href="#orgd32ea91">2. STEMM</a>
+<ul>
+<li><a href="#orgb791b01">2.1. Misc</a>
+<ul>
+<li><a href="#orgb13fb31">2.1.1. Misc</a></li>
+<li><a href="#orgf4efe14">2.1.2. Health</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org4aaaaa6">3. Worldly Matters</a>
+<ul>
+<li><a href="#org1ff1a2e">3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org462b005">4. Core</a>
+<ul>
+<li><a href="#org3dca105">4.1. Variants</a>
+<ul>
+<li><a href="#org08249f8">4.1.1. Red</a></li>
+<li><a href="#org61d7674">4.1.2. Brown</a></li>
+<li><a href="#orgdec9cc9">4.1.3. White</a></li>
+<li><a href="#org959dd78">4.1.4. Poha</a></li>
+<li><a href="#orgae86792">4.1.5. Puffed</a></li>
+<li><a href="#org3553953">4.1.6. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org874792c">5. Special Topics</a>
+<ul>
+<li><a href="#org148ea07">5.1. <b>Navdanya International</b></a></li>
+<li><a href="#org49a1766">5.2. SRI</a>
+<ul>
+<li><a href="#orgcd6052c">5.2.1. General</a></li>
+<li><a href="#orgbbd285b">5.2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org6613246">5.3. GM Rice</a>
+<ul>
+<li><a href="#org6c03e55">5.3.1. Journals</a></li>
+<li><a href="#org20c7444">5.3.2. <b>GM Watch</b></a></li>
+<li><a href="#org4b89c14">5.3.3. <b>The Non-GMO Project</b></a></li>
+<li><a href="#org4b0e2ba">5.3.4. Mongabay</a></li>
+<li><a href="#org4ec7666">5.3.5. Down To Earth</a></li>
+<li><a href="#org40be8e4">5.3.6. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org14a61a4">6. Misc</a>
+<ul>
+<li><a href="#org51ddfed">6.1. Down To Earth</a></li>
+<li><a href="#org1d81b3d">6.2. Organic Consumers Association</a></li>
+<li><a href="#orgfca37aa">6.3. Misc</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org6d44434" class="outline-2">
+<h2 id="org6d44434"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Rice,” Wikipedia. Apr. 15, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Rice&amp;oldid=1082772273">https://en.wikipedia.org/w/index.php?title=Rice&amp;oldid=1082772273</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd32ea91" class="outline-2">
+<h2 id="orgd32ea91"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgb791b01" class="outline-3">
+<h3 id="orgb791b01"><span class="section-number-3">2.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgb13fb31" class="outline-4">
+<h4 id="orgb13fb31"><span class="section-number-4">2.1.1.</span> Misc</h4>
+</div>
+<div id="outline-container-orgf4efe14" class="outline-4">
+<h4 id="orgf4efe14"><span class="section-number-4">2.1.2.</span> Health</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>S. Sen, R. Chakraborty, and P. Kalita, “Rice - not just a staple food: A comprehensive review on its phytochemicals and therapeutic potential,” Trends in Food Science &amp; Technology, vol. 97, pp. 265–285, Mar. 2020, doi: 10.1016/j.tifs.2020.01.022.</li>
+<li>B. Burlando and L. Cornara, “Therapeutic properties of rice constituents and derivatives (Oryza sativa L.): A review update,” Trends in Food Science &amp; Technology, vol. 40, no. 1, pp. 82–98, Nov. 2014, doi: 10.1016/j.tifs.2014.08.002.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org4aaaaa6" class="outline-2">
+<h2 id="org4aaaaa6"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org1ff1a2e" class="outline-3">
+<h3 id="org1ff1a2e"><span class="section-number-3">3.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>A. Kar, M. Aggarwal, N. Sethi, and H. Manwani, “Govt’s Partner to Promote India’s Rice Trade: An Alleged Scamster.” Accessed: Oct. 26, 2025. [Online]. Available: <a href="https://www.reporters-collective.in/trc/govt-partner-to-promote-rice-trade-alleged-scamster">https://www.reporters-collective.in/trc/govt-partner-to-promote-rice-trade-alleged-scamster</a></li>
+
+<li>“The Reporters’ Collective | #ModifiedRice Papers.” Accessed: Apr. 18, 2025. [Online]. Available: <a href="https://www.reporters-collective.in/projects/modified-rice-papers">https://www.reporters-collective.in/projects/modified-rice-papers</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org462b005" class="outline-2">
+<h2 id="org462b005"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org3dca105" class="outline-3">
+<h3 id="org3dca105"><span class="section-number-3">4.1.</span> Variants</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org08249f8" class="outline-4">
+<h4 id="org08249f8"><span class="section-number-4">4.1.1.</span> Red</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>“Organic Tattva - Organic Red Rice 1 KG | Rich Source of Iron, Vitamins and Antioxidants | Certified Organic, Gluten Free and No Additives : Amazon.in: Health &amp; Personal Care.” Accessed: Feb. 02, 2025. [Online]. Available: <a href="https://www.amazon.in/Organic-Tattva-Antioxidants-Certified-Additives/dp/B09K5P2ZPN">https://www.amazon.in/Organic-Tattva-Antioxidants-Certified-Additives/dp/B09K5P2ZPN</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org61d7674" class="outline-4">
+<h4 id="org61d7674"><span class="section-number-4">4.1.2.</span> Brown</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li>“Organic Tattva, Organic Gluten Free Sonamasuri Brown Unpolished Rice - 1Kg | All Natural, Quality Health Food, Enriched with Dietary Fibers &amp; Nutrients : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Feb. 02, 2025. [Online]. Available: <a href="https://www.amazon.in/Organic-Tattva-Masuri-Brown-Rice/dp/B00M57T02U">https://www.amazon.in/Organic-Tattva-Masuri-Brown-Rice/dp/B00M57T02U</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdec9cc9" class="outline-4">
+<h4 id="orgdec9cc9"><span class="section-number-4">4.1.3.</span> White</h4>
+<div class="outline-text-4" id="text-4-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgae4f6cc"></a>Products<br />
+<div class="outline-text-5" id="text-4-1-3-1">
+<ul class="org-ul">
+<li>“Pro Nature 100% Organic Sonamasoori Rice, Hand Pound, 1kg : Amazon.in: Health &amp; Personal Care.” Accessed: Feb. 02, 2025. [Online]. Available: <a href="https://www.amazon.in/Pro-Nature-Organic-Pound-Sonamasoori/dp/B00MCLQBTE">https://www.amazon.in/Pro-Nature-Organic-Pound-Sonamasoori/dp/B00MCLQBTE</a></li>
+<li>“24 Mantra Organic Sonamasuri Polished Raw Rice/Sonamasoori Chawal - 5 Kg | Pack of 1 | 100% Organic | Chemical Free &amp; Pesticides Free : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Feb. 02, 2025. [Online]. Available: <a href="https://www.amazon.in/24-Mantra-Organic-Sonamasuri-Polished/dp/B00L924RPC">https://www.amazon.in/24-Mantra-Organic-Sonamasuri-Polished/dp/B00L924RPC</a></li>
+
+<li>“Organic Tattva, Organic Biryani Basmati Rice 5Kg | Long Grain and Rich Aroma | Perfectly Aged | Source of Protein| Naturally Gluten Free | Pesticide and Chemical Free |Pack of 1 : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Feb. 02, 2025. [Online]. Available: <a href="https://www.amazon.in/Organic-Perfectly-Naturally-Pesticide-Chemical/dp/B0CGM74TL3">https://www.amazon.in/Organic-Perfectly-Naturally-Pesticide-Chemical/dp/B0CGM74TL3</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9d5f236"></a>Misc<br />
+<div class="outline-text-5" id="text-4-1-3-2">
+<ul class="org-ul">
+<li>OCA, “There’s a Secret Superfood in White Rice and Pasta: Here’s How To Unlock It,” Organic Consumers. Accessed: May 17, 2025. [Online]. Available: <a href="https://organicconsumers.org/theres-a-secret-superfood-in-white-rice-and-pasta-heres-how-to-unlock-it/">https://organicconsumers.org/theres-a-secret-superfood-in-white-rice-and-pasta-heres-how-to-unlock-it/</a></li>
+<li>M. Doucleff, “There’s a secret superfood in white rice and pasta: Here’s how to unlock it,” NPR, May 12, 2025. Accessed: May 17, 2025. [Online]. Available: <a href="https://www.npr.org/2025/05/12/nx-s1-5392004/rice-nutrition-pasta-digest-super-food">https://www.npr.org/2025/05/12/nx-s1-5392004/rice-nutrition-pasta-digest-super-food</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org959dd78" class="outline-4">
+<h4 id="org959dd78"><span class="section-number-4">4.1.4.</span> Poha</h4>
+<div class="outline-text-4" id="text-4-1-4">
+<ul class="org-ul">
+<li>“Organic Tattva ‘Red Poha’, All Natural Quality Health Food, Flattened Rice/Atukulu Enriched with Dietary Fibers &amp; Nutrients (500 g, Pouch) : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Feb. 02, 2025. [Online]. Available: <a href="https://www.amazon.in/Organic-Tattva-Red-Poha-500g/dp/B00M57TDCM">https://www.amazon.in/Organic-Tattva-Red-Poha-500g/dp/B00M57TDCM</a></li>
+<li>“Organic Tattva, Organic White Poha Health Food, Flattened Rice/Atukulu Enriched with Dietary Fibers &amp; Nutrients, 500 Gram : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Feb. 02, 2025. [Online]. Available: <a href="https://www.amazon.in/Organic-Tattva-Poha-500g/dp/B00M57TAQQ">https://www.amazon.in/Organic-Tattva-Poha-500g/dp/B00M57TAQQ</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgae86792" class="outline-4">
+<h4 id="orgae86792"><span class="section-number-4">4.1.5.</span> Puffed</h4>
+<div class="outline-text-4" id="text-4-1-5">
+<ul class="org-ul">
+<li>“Pro Nature Organic Puffed Rice, 200g : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Feb. 02, 2025. [Online]. Available: <a href="https://www.amazon.in/Pro-Nature-Organic-Puffed-Rice/dp/B06XYM1CL8">https://www.amazon.in/Pro-Nature-Organic-Puffed-Rice/dp/B06XYM1CL8</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3553953" class="outline-4">
+<h4 id="org3553953"><span class="section-number-4">4.1.6.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-1-6">
+<ul class="org-ul">
+<li>“Wild rice,” Wikipedia. Mar. 24, 2022. Accessed: Apr. 20, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Wild_rice&amp;oldid=1079008582">https://en.wikipedia.org/w/index.php?title=Wild_rice&amp;oldid=1079008582</a></li>
+
+<li>“Organics Food Market Gobindobhog | Jeera Rice (5Kg Pack) : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Feb. 02, 2025. [Online]. Available: <a href="https://www.amazon.in/Organics-Food-Market-Gobindobhog-Rice/dp/B07V7XGX7F">https://www.amazon.in/Organics-Food-Market-Gobindobhog-Rice/dp/B07V7XGX7F</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org874792c" class="outline-2">
+<h2 id="org874792c"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org148ea07" class="outline-3">
+<h3 id="org148ea07"><span class="section-number-3">5.1.</span> <b>Navdanya International</b></h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>“Defend Our Rice! Farmer-scientist group condemns Golden Rice commercial propagation, calls on farmers and consumers to protest,” Navdanya international. Accessed: Feb. 02, 2025. [Online]. Available: <a href="https://navdanyainternational.org/defend-our-rice-farmer-scientist-group-condemns-golden-rice-commercial-propagation-calls-on-farmers-and-consumers-to-protest/">https://navdanyainternational.org/defend-our-rice-farmer-scientist-group-condemns-golden-rice-commercial-propagation-calls-on-farmers-and-consumers-to-protest/</a></li>
+<li>“The Story of Rice,” Navdanya international. Accessed: Feb. 02, 2025. [Online]. Available: <a href="https://navdanyainternational.org/publications/the-story-of-rice/">https://navdanyainternational.org/publications/the-story-of-rice/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org49a1766" class="outline-3">
+<h3 id="org49a1766"><span class="section-number-3">5.2.</span> SRI</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-orgcd6052c" class="outline-4">
+<h4 id="orgcd6052c"><span class="section-number-4">5.2.1.</span> General</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<ul class="org-ul">
+<li>“System of Rice Intensification,” Wikipedia. Jun. 13, 2022. Accessed: Nov. 19, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=System_of_Rice_Intensification&amp;oldid=1092952339">https://en.wikipedia.org/w/index.php?title=System_of_Rice_Intensification&amp;oldid=1092952339</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbbd285b" class="outline-4">
+<h4 id="orgbbd285b"><span class="section-number-4">5.2.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-2-2">
+<ul class="org-ul">
+<li>“The System of Rice Intensification.” <a href="http://sri.ciifad.cornell.edu/">http://sri.ciifad.cornell.edu/</a> (accessed Nov. 19, 2022).</li>
+<li>“System of Rice Intensification.” <a href="https://www.oxfamamerica.org/explore/issues/humanitarian-response-and-leaders/hunger-and-famine/system-of-rice-intensification/">https://www.oxfamamerica.org/explore/issues/humanitarian-response-and-leaders/hunger-and-famine/system-of-rice-intensification/</a> (accessed Nov. 19, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6613246" class="outline-3">
+<h3 id="org6613246"><span class="section-number-3">5.3.</span> GM Rice</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-org6c03e55" class="outline-4">
+<h4 id="org6c03e55"><span class="section-number-4">5.3.1.</span> Journals</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<ul class="org-ul">
+<li>S. Priyadarshini, “India approves first genome-edited rice varieties,” Nature India, May 2025, doi: 10.1038/d44151-025-00078-2.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org20c7444" class="outline-4">
+<h4 id="org20c7444"><span class="section-number-4">5.3.2.</span> <b>GM Watch</b></h4>
+<div class="outline-text-4" id="text-5-3-2">
+<ul class="org-ul">
+<li>Editor2, “Philippines: MASIPAG challenges approval of GM rice.” Accessed: Jul. 03, 2026. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20686-philippines-masipag-challenges-approval-of-gm-rice">https://gmwatch.org/en/106-news/latest-news/20686-philippines-masipag-challenges-approval-of-gm-rice</a></li>
+
+<li>Editor2, “Mutant rice and Bill Gates’s lab rats: Grand experiments in India’s fields.” Accessed: May 15, 2025. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20546-mutant-rice-and-bill-gates-s-lab-rats-grand-experiments-in-india-s-fields">https://gmwatch.org/en/106-news/latest-news/20546-mutant-rice-and-bill-gates-s-lab-rats-grand-experiments-in-india-s-fields</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4b89c14" class="outline-4">
+<h4 id="org4b89c14"><span class="section-number-4">5.3.3.</span> <b>The Non-GMO Project</b></h4>
+<div class="outline-text-4" id="text-5-3-3">
+<ul class="org-ul">
+<li>N.-G. P. Staff, “New GMO Alert: GMO Rice Isn’t on the Market, but It’s Still Showing Up - The Non-GMO Project.” Accessed: Jun. 17, 2025. [Online]. Available: <a href="https://www.nongmoproject.org/blog/new-gmo-alert-gmo-rice-isnt-on-the-market-but-its-still-showing-up/">https://www.nongmoproject.org/blog/new-gmo-alert-gmo-rice-isnt-on-the-market-but-its-still-showing-up/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4b0e2ba" class="outline-4">
+<h4 id="org4b0e2ba"><span class="section-number-4">5.3.4.</span> Mongabay</h4>
+<div class="outline-text-4" id="text-5-3-4">
+<ul class="org-ul">
+<li>I. G. via W. C. C. A. T. S. P. E. TopicsAgricultureResearchIndia, “India gets two genome-edited rice varieties,” Mongabay-India. Accessed: Jul. 03, 2025. [Online]. Available: <a href="https://india.mongabay.com/short-article/india-gets-two-genome-edited-rice-varieties/">https://india.mongabay.com/short-article/india-gets-two-genome-edited-rice-varieties/</a></li>
+<li>P. Shankar, “India releases genome-edited rice, draws both applause and alarm,” Mongabay-India. Accessed: Jun. 03, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/06/india-releases-genome-edited-rice-draws-both-applause-and-alarm/">https://india.mongabay.com/2025/06/india-releases-genome-edited-rice-draws-both-applause-and-alarm/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4ec7666" class="outline-4">
+<h4 id="org4ec7666"><span class="section-number-4">5.3.5.</span> Down To Earth</h4>
+<div class="outline-text-4" id="text-5-3-5">
+<ul class="org-ul">
+<li>Shagun, “Agri scientists warn against ‘premature release’ of gene-edited rice,” Down To Earth. Accessed: Jun. 24, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/agriculture/agri-scientists-warn-against-premature-release-of-gene-edited-rice">https://www.downtoearth.org.in/agriculture/agri-scientists-warn-against-premature-release-of-gene-edited-rice</a></li>
+<li>L. Jishnu, “Is India’s CRISPR feat with rice a costly proposition?,” Down To Earth. Accessed: May 25, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/agriculture/is-indias-crispr-feat-with-rice-well-worth-the-effort">https://www.downtoearth.org.in/agriculture/is-indias-crispr-feat-with-rice-well-worth-the-effort</a></li>
+<li>Down To Earth, India Launches Gene-Edited Rice: Promises and Perils of Innovation, (May 12, 2025). Accessed: May 14, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=X28HtfIDPXQ">https://www.youtube.com/watch?v=X28HtfIDPXQ</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org40be8e4" class="outline-4">
+<h4 id="org40be8e4"><span class="section-number-4">5.3.6.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-3-6">
+<ul class="org-ul">
+<li>kavitha, “Coalition’s letter to Union Agriculture Minister on two untested and unsafe gene edited rice varieties.” Accessed: Jun. 29, 2025. [Online]. Available: <a href="https://indiagminfo.org/coalitions-letter-to-union-agriculture-minister-on-two-untested-and-unsafe-gene-edited-rice-varieties/">https://indiagminfo.org/coalitions-letter-to-union-agriculture-minister-on-two-untested-and-unsafe-gene-edited-rice-varieties/</a></li>
+
+<li>R. M. Desk, N. D. D.-T. article is from a syndicated feed T. original source is responsible for accuracy, views, and  content ownership V. expressed may not reflect those of rediff com I. Limited, “GM-Free Coalition Condemns Release of Gene-Edited Rice,” Rediff. Accessed: May 09, 2025. [Online]. Available: <a href="https://money.rediff.com/news/market/gm-free-coalition-condemns-release-of-gene-edited-rice/26351320250505">https://money.rediff.com/news/market/gm-free-coalition-condemns-release-of-gene-edited-rice/26351320250505</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Petition Urges Govt to Halt Release of Gene-Edited Rice Over Safety Concerns,” Deccan Herald. Accessed: Jun. 29, 2025. [Online]. Available: <a href="https://www.deccanherald.com/india/700-persons-sign-petition-against-gene-edited-rice-3604649">https://www.deccanherald.com/india/700-persons-sign-petition-against-gene-edited-rice-3604649</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>kavitha, “Scientific Fraud Exposed in ICAR’s Genome-Edited Rice Trials: Coalition for a GM-Free India Sounds the Alarm.” Accessed: Nov. 06, 2025. [Online]. Available: <a href="https://indiagminfo.org/scientific-fraud-exposed-in-icars-genome-edited-rice-trials-coalition-for-a-gm-free-india-sounds-the-alarm/">https://indiagminfo.org/scientific-fraud-exposed-in-icars-genome-edited-rice-trials-coalition-for-a-gm-free-india-sounds-the-alarm/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Shagun, “Centre’s claims about gene-edited rice varieties don’t match up, analysis of ICAR data shows,” Down To Earth. Accessed: Nov. 06, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/agriculture/centres-claims-about-gene-edited-rice-varieties-dont-match-up-analysis-of-icar-data-shows">https://www.downtoearth.org.in/agriculture/centres-claims-about-gene-edited-rice-varieties-dont-match-up-analysis-of-icar-data-shows</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org14a61a4" class="outline-2">
+<h2 id="org14a61a4"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org51ddfed" class="outline-3">
+<h3 id="org51ddfed"><span class="section-number-3">6.1.</span> Down To Earth</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>“Rice Virus Crisis: Deadly Spread Across Africa Threatens Food Security.” Accessed: Jun. 20, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/food/deadly-rice-virus-spreads-across-africa-threatening-food-security-study">https://www.downtoearth.org.in/food/deadly-rice-virus-spreads-across-africa-threatening-food-security-study</a></li>
+
+<li>L. Jishnu, “Is India’s CRISPR feat with rice a costly proposition?,” Down To Earth. Accessed: May 25, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/agriculture/is-indias-crispr-feat-with-rice-well-worth-the-effort">https://www.downtoearth.org.in/agriculture/is-indias-crispr-feat-with-rice-well-worth-the-effort</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1d81b3d" class="outline-3">
+<h3 id="org1d81b3d"><span class="section-number-3">6.2.</span> Organic Consumers Association</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>OCA, “There’s a Secret Superfood in White Rice and Pasta: Here’s How To Unlock It,” Organic Consumers. Accessed: May 17, 2025. [Online]. Available: <a href="https://organicconsumers.org/theres-a-secret-superfood-in-white-rice-and-pasta-heres-how-to-unlock-it/">https://organicconsumers.org/theres-a-secret-superfood-in-white-rice-and-pasta-heres-how-to-unlock-it/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfca37aa" class="outline-3">
+<h3 id="orgfca37aa"><span class="section-number-3">6.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-6-3">
+<ul class="org-ul">
+<li>M. Doucleff, “There’s a secret superfood in white rice and pasta: Here’s how to unlock it,” NPR, May 12, 2025. Accessed: May 17, 2025. [Online]. Available: <a href="https://www.npr.org/2025/05/12/nx-s1-5392004/rice-nutrition-pasta-digest-super-food">https://www.npr.org/2025/05/12/nx-s1-5392004/rice-nutrition-pasta-digest-super-food</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:57</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Home Making</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Home Making</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org164fe85">1. General</a></li>
+<li><a href="#orgc45dc2d">2. STEMM</a>
+<ul>
+<li><a href="#org3dae7b4">2.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#org3675d31">2.1.1. Complexity Science</a></li>
+<li><a href="#org7ee5c6a">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgab613cf">2.2. Biological Sciences, Misc</a></li>
+<li><a href="#orged7a531">2.3. Basic Sciences, Misc</a>
+<ul>
+<li><a href="#orga312ed5">2.3.1. Chemistry</a></li>
+</ul>
+</li>
+<li><a href="#org52b6823">2.4. Mathematical, Computational Sciences, Misc</a>
+<ul>
+<li><a href="#org52755b2">2.4.1. CSE</a></li>
+</ul>
+</li>
+<li><a href="#orgfd47a8e">2.5. Advanced Sciences, Misc</a></li>
+<li><a href="#orgc34dd2d">2.6. Technology, Misc</a></li>
+<li><a href="#org3b8a490">2.7. Special Topics</a></li>
+<li><a href="#org5f0ef1d">2.8. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orge81a872">3. Worldly Matters</a>
+<ul>
+<li><a href="#org52249a9">3.1. Space and Time</a></li>
+<li><a href="#orge15900c">3.2. Space, Earth, Life Sciences, Environment, Health, Misc</a></li>
+<li><a href="#org680d5ce">3.3. Religions, Spirituality, Misc</a></li>
+<li><a href="#orgaaaeb9d">3.4. Humanities, Misc</a>
+<ul>
+<li><a href="#org5b3d485">3.4.1. Psychology</a></li>
+<li><a href="#orgdd4eb4b">3.4.2. People</a></li>
+</ul>
+</li>
+<li><a href="#org1a474d4">3.5. SocioPolitical Studies, Law, Misc</a>
+<ul>
+<li><a href="#org2abf2af">3.5.1. Feminism</a></li>
+</ul>
+</li>
+<li><a href="#org4083c5a">3.6. Business Studies, Misc</a>
+<ul>
+<li><a href="#orgf1086c9">3.6.1. Economics</a></li>
+</ul>
+</li>
+<li><a href="#org731e594">3.7. Security Studies, Misc</a></li>
+<li><a href="#orgc255b5a">3.8. Communication, Misc</a></li>
+<li><a href="#orgc6c16e2">3.9. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgf16b7ec">4. Core</a>
+<ul>
+<li><a href="#orge2709d4">4.1. Education</a>
+<ul>
+<li><a href="#org826f77c">4.1.1. Google Gemini</a></li>
+<li><a href="#org00dc9fb">4.1.2. Humble Book Bundles</a></li>
+<li><a href="#org0e85a6b">4.1.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org8fec1cd">4.2. Gardening</a></li>
+<li><a href="#org3201cde">4.3. Cleaning</a></li>
+<li><a href="#org14c0b9d">4.4. Laundry</a></li>
+</ul>
+</li>
+<li><a href="#orgc7527b9">5. Special Topics</a>
+<ul>
+<li><a href="#org924cb73">5.1. Grok: AI tool by X (formerly Twitter)</a>
+<ul>
+<li><a href="#orgd172483">5.1.1. Q</a></li>
+<li><a href="#org028c553">5.1.2. A</a></li>
+</ul>
+</li>
+<li><a href="#orga6a34d2">5.2. Incense</a></li>
+<li><a href="#org3da17ea">5.3. Hospitality</a>
+<ul>
+<li><a href="#orgd820fff">5.3.1. HomeStay</a></li>
+<li><a href="#org4bb5bd0">5.3.2. Hotels</a></li>
+</ul>
+</li>
+<li><a href="#org53315d1">5.4. Pop Home Making</a></li>
+<li><a href="#org152b504">5.5. Articles, Essays</a></li>
+</ul>
+</li>
+<li><a href="#org40e0d12">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org164fe85" class="outline-2">
+<h2 id="org164fe85"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>C. Wing, How Your House Works: A Visual Guide to Understanding and Maintaining Your Home. John Wiley &amp; Sons, 2018.</li>
+<li>E. O. F. Handyman, <b>Complete Do-it-Yourself Manual Newly Updated.</b> Reader’s Digest, 2014.</li>
+<li>K. Brenneman, Home Management: Plain and Simple.</li>
+<li>C. Mendelson, <b>Home Comforts: The Art and Science of Keeping House.</b> Simon and Schuster, 2005.
+<ul class="org-ul">
+<li>A very comprehensive, affectionately written book; but (dangerously) dated.</li>
+</ul></li>
+<li>E. Hollis and T. S. of Life, <b>How to Make a Home.</b> Pan Macmillan, 2016.</li>
+<li>S. Matsumoto, <b>A Monk's Guide to a Clean House and Mind</b>. Penguin UK, 2018.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc45dc2d" class="outline-2">
+<h2 id="orgc45dc2d"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org3dae7b4" class="outline-3">
+<h3 id="org3dae7b4"><span class="section-number-3">2.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org3675d31" class="outline-4">
+<h4 id="org3675d31"><span class="section-number-4">2.1.1.</span> Complexity Science</h4>
+</div>
+<div id="outline-container-org7ee5c6a" class="outline-4">
+<h4 id="org7ee5c6a"><span class="section-number-4">2.1.2.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orgab613cf" class="outline-3">
+<h3 id="orgab613cf"><span class="section-number-3">2.2.</span> Biological Sciences, Misc</h3>
+</div>
+<div id="outline-container-orged7a531" class="outline-3">
+<h3 id="orged7a531"><span class="section-number-3">2.3.</span> Basic Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-orga312ed5" class="outline-4">
+<h4 id="orga312ed5"><span class="section-number-4">2.3.1.</span> Chemistry</h4>
+<div class="outline-text-4" id="text-2-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgbbacd48"></a>Chemicals Of Concern<br />
+<div class="outline-text-5" id="text-2-3-1-1">
+<ul class="org-ul">
+<li>Chemicals Of Concern: <a href="https://tinyurl.com/mr3ppu9t">https://tinyurl.com/mr3ppu9t</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfeeeabf"></a>Misc<br />
+<div class="outline-text-5" id="text-2-3-1-2">
+<ul class="org-ul">
+<li>J. Emsley, Chemistry at Home: Exploring the Ingredients in Everyday Products. La Vergne: Royal Society of Chemistry, 2015.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org52b6823" class="outline-3">
+<h3 id="org52b6823"><span class="section-number-3">2.4.</span> Mathematical, Computational Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-org52755b2" class="outline-4">
+<h4 id="org52755b2"><span class="section-number-4">2.4.1.</span> CSE</h4>
+<div class="outline-text-4" id="text-2-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgc5147cb"></a>Everyday Computing<br />
+<div class="outline-text-5" id="text-2-4-1-1">
+<ul class="org-ul">
+<li>Everyday Computing - Home Making: <a href="https://tinyurl.com/3zzaajya">https://tinyurl.com/3zzaajya</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgaa7cc5d"></a>Misc<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgfd47a8e" class="outline-3">
+<h3 id="orgfd47a8e"><span class="section-number-3">2.5.</span> Advanced Sciences, Misc</h3>
+</div>
+<div id="outline-container-orgc34dd2d" class="outline-3">
+<h3 id="orgc34dd2d"><span class="section-number-3">2.6.</span> Technology, Misc</h3>
+</div>
+<div id="outline-container-org3b8a490" class="outline-3">
+<h3 id="org3b8a490"><span class="section-number-3">2.7.</span> Special Topics</h3>
+</div>
+<div id="outline-container-org5f0ef1d" class="outline-3">
+<h3 id="org5f0ef1d"><span class="section-number-3">2.8.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-8">
+<ul class="org-ul">
+<li>H. A. Khan, “Bosch Unlimited 7 Review: Intuitive, thoughtfully designed and apt for Indian cleaning needs,” The Hindu, Sep. 27, 2025. Accessed: Sep. 28, 2025. [Online]. Available: <a href="https://www.thehindu.com/sci-tech/technology/gadgets/bosch-unlimited-7-review-intuitive-thoughtfully-designed-and-apt-for-indian-cleaning-needs/article70101266.ece">https://www.thehindu.com/sci-tech/technology/gadgets/bosch-unlimited-7-review-intuitive-thoughtfully-designed-and-apt-for-indian-cleaning-needs/article70101266.ece</a></li>
+
+<li>“Bed Bugs: Don’t Panic,” Beyond Pesticides. Accessed: Sep. 25, 2025. [Online]. Available: <a href="https://www.beyondpesticides.org/programs/bedbugs">https://www.beyondpesticides.org/programs/bedbugs</a></li>
+
+<li>“NASA Technologies Aim to Solve Housekeeping’s Biggest Issue – Dust - NASA.” Accessed: Dec. 14, 2024. [Online]. Available: <a href="https://www.nasa.gov/directorates/stmd/nasa-technologies-aim-to-solve-housekeepings-biggest-issue-dust/">https://www.nasa.gov/directorates/stmd/nasa-technologies-aim-to-solve-housekeepings-biggest-issue-dust/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge81a872" class="outline-2">
+<h2 id="orge81a872"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org52249a9" class="outline-3">
+<h3 id="org52249a9"><span class="section-number-3">3.1.</span> Space and Time</h3>
+</div>
+<div id="outline-container-orge15900c" class="outline-3">
+<h3 id="orge15900c"><span class="section-number-3">3.2.</span> Space, Earth, Life Sciences, Environment, Health, Misc</h3>
+</div>
+<div id="outline-container-org680d5ce" class="outline-3">
+<h3 id="org680d5ce"><span class="section-number-3">3.3.</span> Religions, Spirituality, Misc</h3>
+</div>
+<div id="outline-container-orgaaaeb9d" class="outline-3">
+<h3 id="orgaaaeb9d"><span class="section-number-3">3.4.</span> Humanities, Misc</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org5b3d485" class="outline-4">
+<h4 id="org5b3d485"><span class="section-number-4">3.4.1.</span> Psychology</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<ul class="org-ul">
+<li>A. de Botton, Architecture of Happiness, Latest Edition. London: Penguin, 2014.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Wiking, My Hygge Home: How to Make Home Your Happy Place. Penguin Life, 2022.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdd4eb4b" class="outline-4">
+<h4 id="orgdd4eb4b"><span class="section-number-4">3.4.2.</span> People</h4>
+<div class="outline-text-4" id="text-3-4-2">
+</div>
+<ol class="org-ol">
+<li><a id="org495410d"></a>Domestic Work<br />
+<ol class="org-ol">
+<li><a id="orgd2ba2ce"></a>General<br />
+<div class="outline-text-6" id="text-3-4-2-1-1">
+<ul class="org-ul">
+<li>“Domestic worker,” Wikipedia. Jun. 15, 2025. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Domestic_worker&amp;oldid=1295734579">https://en.wikipedia.org/w/index.php?title=Domestic_worker&amp;oldid=1295734579</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb0bb888"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="orgc5600e0"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org2ca62ee"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org4ab79b6"></a>Space and Time<br /></li>
+<li><a id="orgc52317b"></a>Space, Earth, Life Sciences, Environment, Health, Misc<br /></li>
+<li><a id="orge6d8c07"></a>Religions, Spirituality, Misc<br />
+<ul class="org-ul">
+<li><a id="org4bbd1cf"></a>Christianity<br />
+<div class="outline-text-8" id="text-org4bbd1cf">
+<ul class="org-ul">
+<li>“Zita,” Wikipedia. Feb. 27, 2025. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Zita&amp;oldid=1277921509">https://en.wikipedia.org/w/index.php?title=Zita&amp;oldid=1277921509</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org4dca64b"></a>SocioPolitical Studies, Law, Misc<br />
+<ul class="org-ul">
+<li><a id="org1cf88c3"></a>Nation States<br />
+<ul class="org-ul">
+<li><a id="orge8768b0"></a>India<br />
+<ul class="org-ul">
+<li><a id="org0b06cbe"></a>General<br /></li>
+<li><a id="orge38c96f"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="orgb4b14ca"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orge0e9244"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="orgbc072ae"></a>Misc<br />
+<div class="outline-text-11" id="text-orgbc072ae">
+<ul class="org-ul">
+<li>“Housekeeping Staff at Ashoka University ‘Forced’ to End Strike, Apologise After Salaries Withheld,” The Wire. Accessed: Sep. 10, 2025. [Online]. Available: <a href="https://thewire.in/labour/housekeeping-staff-at-ashoka-university-forced-to-end-strike-apologise-after-salaries-withheld">https://thewire.in/labour/housekeeping-staff-at-ashoka-university-forced-to-end-strike-apologise-after-salaries-withheld</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgb32f35a"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="org3c80e95"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org6eaccca"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org7b10b1d"></a>Texts<br />
+<div class="outline-text-11" id="text-org7b10b1d">
+<ul class="org-ul">
+<li>T. Lahiri, Maid in India: Stories of Inequality and Opportunity Inside Our Homes. Aleph Book Company, 2017.</li>
+<li>N. N, Working at Others Homes. New Delhi: Tulika Books, 2019.</li>
+
+<li>U. Mahanta and I. Gupta, Eds., Recognition of the Rights of Domestic Workers in India: Challenges and the Way Forward, 1st ed. 2019 edition. Springer, 2019.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org3ab9def"></a>Misc<br />
+<div class="outline-text-10" id="text-org3ab9def">
+<ul class="org-ul">
+<li>N. Khan, “Long Work Hours, Less Pay, And No Legal Protection: Female Domestic Workers Most Vulnerable To Abuse,” Feminism in India. Accessed: Sep. 16, 2025. [Online]. Available: <a href="https://feminisminindia.com/?p=189578">https://feminisminindia.com/?p=189578</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org1911e75"></a>Business Studies, Misc<br /></li>
+<li><a id="orgc157716"></a>Humanities, Misc<br /></li>
+<li><a id="orgf84103a"></a>Security Studies, Misc<br /></li>
+<li><a id="orgbc893a1"></a>Communication, Misc<br /></li>
+<li><a id="orgea40ffa"></a>Misc<br />
+<div class="outline-text-7" id="text-orgea40ffa">
+<ul class="org-ul">
+<li>T. H. Bureau, “International Domestic Workers’ Day observed,” The Hindu, Jun. 16, 2025. Accessed: Jun. 17, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/national/kerala/international-domestic-workers-day-observed/article69702313.ece">https://www.thehindu.com/news/national/kerala/international-domestic-workers-day-observed/article69702313.ece</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgc03fba6"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="orge24dd57"></a>Misc<br />
+<div class="outline-text-7" id="text-orge24dd57">
+<ul class="org-ul">
+<li>T. O. Staff, “Hilaria Baldwin Hires Nanny To Waltz For Her On ‘Dancing With The Stars,’” The Onion. Accessed: Sep. 30, 2025. [Online]. Available: <a href="https://theonion.com/hilaria-baldwin-hires-nanny-to-waltz-for-her-on-dancing-with-the-stars/">https://theonion.com/hilaria-baldwin-hires-nanny-to-waltz-for-her-on-dancing-with-the-stars/</a></li>
+
+<li>R. Kukreja, “Netflix TV drama ‘Secrets We Keep’ exposes the dangers of domestic migrant work,” The Conversation. Accessed: Jun. 27, 2025. [Online]. Available: <a href="http://theconversation.com/netflix-tv-drama-secrets-we-keep-exposes-the-dangers-of-domestic-migrant-work-258556">http://theconversation.com/netflix-tv-drama-secrets-we-keep-exposes-the-dangers-of-domestic-migrant-work-258556</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgbb55364"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orgf8d8206"></a>Migration, Domestic Work<br />
+<ul class="org-ul">
+<li><a id="org5c39630"></a>Book Series<br />
+<div class="outline-text-8" id="text-org5c39630">
+<ul class="org-ul">
+<li>“Studies in Migration and Diaspora.” Accessed: Jun. 18, 2025. [Online]. Available: <a href="http://www.amazon.in/Studies-in-Migration-and-Diaspora-71-book-series/dp/B08MJN53MC?ref=dbs_m_mng_rwt_0000_share">http://www.amazon.in/Studies-in-Migration-and-Diaspora-71-book-series/dp/B08MJN53MC?ref=dbs_m_mng_rwt_0000_share</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd172374"></a>Globalization<br />
+<div class="outline-text-8" id="text-orgd172374">
+<ul class="org-ul">
+<li>R. S. Parrenas, Servants of Globalization: Migration and Domestic Work, Reprint edition. Stanford, California: Stanford Univ Pr, 2015.</li>
+<li>M. Romero, V. Preston, and W. Giles, Eds., When Care Work Goes Global: Locating the Social Relations of Domestic Work, 1st edition. Routledge, 2020.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb19df5e"></a>Europe<br />
+<div class="outline-text-8" id="text-orgb19df5e">
+<ul class="org-ul">
+<li>C. Giordano, Ethnicisation and Domesticisation: The Impact of Care, Gender and Migration Regimes on Paid Domestic Work in Europe. Palgrave Macmillan, 2022.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc062b98"></a>Spain<br />
+<div class="outline-text-8" id="text-orgc062b98">
+<ul class="org-ul">
+<li>S. Issel-Dombert, Multilingualism, Migration and Domestic Work: On the Sociolinguistic Situation of Filipina Domestic Migrant Workers in Spain. De Gruyter, 2025.</li>
+</ul>
+</div>
+</li>
+<li><a id="org3887d80"></a>UK, USA<br />
+<div class="outline-text-8" id="text-org3887d80">
+<ul class="org-ul">
+<li>D. Perrons, M. Kilkey, and A. Plomien, Gender, Migration and Domestic Work: Masculinities, Male Labour and Fathering in the UK and USA, 2013th edition. Palgrave Macmillan, 2013.</li>
+</ul>
+</div>
+</li>
+<li><a id="org0c41eae"></a>Misc<br />
+<div class="outline-text-8" id="text-org0c41eae">
+<ul class="org-ul">
+<li>H. Lutz, Ed., Migration and Domestic Work: A European Perspective on a Global Theme, 1st edition. Routledge, 2016.</li>
+<li>S. Marchetti, Migration and Domestic Work: IMISCOE Short Reader. Springer, 2022.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>G. Yilmaz and S. Ledwith, Migration and Domestic Work: The Collective Organisation of Women and their Voices from the City, 1st ed. 2017 edition. Palgrave Macmillan, 2017.</li>
+<li>E. Gutiérrez-Rodríguez, Migration, Domestic Work and Affect: A Decolonial Approach on Value and the Feminization of Labor, 1st edition. Routledge, 2010.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org3f35d7a"></a>America Latin<br />
+<div class="outline-text-7" id="text-org3f35d7a">
+<ul class="org-ul">
+<li>M. Blofield, Care Work and Class: Domestic Workers’ Struggle for Equal Rights in Latin America. University Park, Pa: Pennsylvania State University Press, 2013.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgdc39a20"></a>France<br />
+<div class="outline-text-7" id="text-orgdc39a20">
+<ul class="org-ul">
+<li>J. Windebank, Domestic and Care Work in Modern France: Gender, Family and the State. Palgrave Macmillan, 2023.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgf45dea1"></a>Misc<br />
+<ul class="org-ul">
+<li><a id="org84bfe88"></a>Computer Science and Engineering<br />
+<div class="outline-text-7" id="text-org84bfe88">
+<ul class="org-ul">
+<li>“Should One Even Consider Making Domestic Work Part of the Gig Economy?,” The India Forum. Accessed: Apr. 21, 2025. [Online]. Available: <a href="https://www.theindiaforum.in/forum/platforming-domestic-work-will-amplify-existing-vulnerabilities-workers">https://www.theindiaforum.in/forum/platforming-domestic-work-will-amplify-existing-vulnerabilities-workers</a></li>
+<li>T. H. Bureau, “Domestic workers oppose new app-based ‘instant’ maid service,” The Hindu, Mar. 21, 2025. Accessed: Mar. 22, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/cities/chennai/domestic-workers-oppose-new-app-based-instant-maid-service/article69357904.ece">https://www.thehindu.com/news/cities/chennai/domestic-workers-oppose-new-app-based-instant-maid-service/article69357904.ece</a></li>
+<li>T. H. Bureau, “‘Maid-in-15-minutes’ offer by Urban Company draws flak from domestic and gig workers,” The Hindu, Mar. 20, 2025. Accessed: Mar. 20, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/cities/bangalore/domestic-and-gig-workers-condemn-maid-in-15-minutes-offer-by-urban-company/article69349627.ece">https://www.thehindu.com/news/cities/bangalore/domestic-and-gig-workers-condemn-maid-in-15-minutes-offer-by-urban-company/article69349627.ece</a></li>
+<li>“The apps were designed for home security. They’re being used to watch and harass domestic workers,” Rest of World. Accessed: Aug. 17, 2023. [Online]. Available: <a href="https://restofworld.org/2023/home-monitoring-mygate-digital-bias/">https://restofworld.org/2023/home-monitoring-mygate-digital-bias/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge028e0b"></a>COVID-19<br />
+<div class="outline-text-7" id="text-orge028e0b">
+<ul class="org-ul">
+<li>Impact of Covid-19 lockdown on domestic workers in India, 24th March to 4th May 2020. 2020. Accessed: Mar. 11, 2022. [Online]. Available: <a href="https://ruralindiaonline.org/en/library/resource/impact-of-covid-19-lockdown-on-domestic-workers-in-india-24th-march-to-4th-may-2020/">https://ruralindiaonline.org/en/library/resource/impact-of-covid-19-lockdown-on-domestic-workers-in-india-24th-march-to-4th-may-2020/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgbdcea13"></a>Misc<br />
+<div class="outline-text-7" id="text-orgbdcea13">
+<ul class="org-ul">
+<li>‘They respect their animals more’: Voices of child domestic workers. 2008. Accessed: Aug. 31, 2024. [Online]. Available: <a href="https://ruralindiaonline.org/en/library/resource/they-respect-their-animals-more-voices-of-child-domestic-workers/">https://ruralindiaonline.org/en/library/resource/they-respect-their-animals-more-voices-of-child-domestic-workers/</a></li>
+<li>“How Indians Are Endangering The Health of Their Domestic Workers: New Study.” Accessed: Aug. 27, 2023. [Online]. Available: <a href="https://www.article-14.com/post/how-indians-are-endangering-the-health-of-their-domestic-workers-new-study-64e8808c6dcfe">https://www.article-14.com/post/how-indians-are-endangering-the-health-of-their-domestic-workers-new-study-64e8808c6dcfe</a></li>
+<li>“Male Domestic Care Workers Also Face Employer Apathy,” The Wire. Accessed: Mar. 30, 2023. [Online]. Available: <a href="https://thewire.in/labour/male-domestic-care-workers-employer-apathy">https://thewire.in/labour/male-domestic-care-workers-employer-apathy</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org1a474d4" class="outline-3">
+<h3 id="org1a474d4"><span class="section-number-3">3.5.</span> SocioPolitical Studies, Law, Misc</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-org2abf2af" class="outline-4">
+<h4 id="org2abf2af"><span class="section-number-4">3.5.1.</span> Feminism</h4>
+<div class="outline-text-4" id="text-3-5-1">
+<ul class="org-ul">
+<li>R. Yadav, “The Hidden Assault: Stealthing, Sabotaging, And Reproductive Abuse In Indian Households,” Feminism in India. Accessed: Feb. 28, 2025. [Online]. Available: <a href="https://feminisminindia.com/2025/02/28/the-hidden-assault-stealthing-sabotaging-and-reproductive-abuse-in-indian-households/">https://feminisminindia.com/2025/02/28/the-hidden-assault-stealthing-sabotaging-and-reproductive-abuse-in-indian-households/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org4083c5a" class="outline-3">
+<h3 id="org4083c5a"><span class="section-number-3">3.6.</span> Business Studies, Misc</h3>
+<div class="outline-text-3" id="text-3-6">
+</div>
+<div id="outline-container-orgf1086c9" class="outline-4">
+<h4 id="orgf1086c9"><span class="section-number-4">3.6.1.</span> Economics</h4>
+<div class="outline-text-4" id="text-3-6-1">
+<ul class="org-ul">
+<li>“Valuation of Unpaid Household Activities in India | Economic and Political Weekly.” Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://www.epw.in/journal/2024/39/special-articles/valuation-unpaid-household-activities-india.html">https://www.epw.in/journal/2024/39/special-articles/valuation-unpaid-household-activities-india.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org731e594" class="outline-3">
+<h3 id="org731e594"><span class="section-number-3">3.7.</span> Security Studies, Misc</h3>
+<div class="outline-text-3" id="text-3-7">
+<ul class="org-ul">
+<li>B. &amp; K. McKay, “8 Low-Tech Ways to Strengthen Your Home Security,” The Art of Manliness, Apr. 14, 2022. <a href="https://www.artofmanliness.com/lifestyle/homeownership/8-low-tech-ways-to-strengthen-your-home-security/">https://www.artofmanliness.com/lifestyle/homeownership/8-low-tech-ways-to-strengthen-your-home-security/</a> (accessed Aug. 01, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc255b5a" class="outline-3">
+<h3 id="orgc255b5a"><span class="section-number-3">3.8.</span> Communication, Misc</h3>
+</div>
+<div id="outline-container-orgc6c16e2" class="outline-3">
+<h3 id="orgc6c16e2"><span class="section-number-3">3.9.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-9">
+<ul class="org-ul">
+<li>T. H. Bureau, “International Domestic Workers’ Day observed,” The Hindu, Jun. 16, 2025. Accessed: Jun. 17, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/national/kerala/international-domestic-workers-day-observed/article69702313.ece">https://www.thehindu.com/news/national/kerala/international-domestic-workers-day-observed/article69702313.ece</a></li>
+
+<li>“Should One Even Consider Making Domestic Work Part of the Gig Economy?,” The India Forum. Accessed: Apr. 21, 2025. [Online]. Available: <a href="https://www.theindiaforum.in/forum/platforming-domestic-work-will-amplify-existing-vulnerabilities-workers">https://www.theindiaforum.in/forum/platforming-domestic-work-will-amplify-existing-vulnerabilities-workers</a></li>
+
+<li>N. Sinha, N. Varma, and P. Jha, Servants’ Pasts: Sixteenth to Eighteenth Century, South Asia. Orient BlackSwan, 2019.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf16b7ec" class="outline-2">
+<h2 id="orgf16b7ec"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orge2709d4" class="outline-3">
+<h3 id="orge2709d4"><span class="section-number-3">4.1.</span> Education</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org826f77c" class="outline-4">
+<h4 id="org826f77c"><span class="section-number-4">4.1.1.</span> Google Gemini</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>“IIT exams for homemaking?,” Google Docs. Accessed: Mar. 18, 2025. [Online]. Available: <a href="https://docs.google.com/document/d/1GuBqLGHeaXCQoo2qBLCbHWQu8egwSV7-Rk15Fas-tFs/edit?usp=embed_facebook">https://docs.google.com/document/d/1GuBqLGHeaXCQoo2qBLCbHWQu8egwSV7-Rk15Fas-tFs/edit?usp=embed_facebook</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org00dc9fb" class="outline-4">
+<h4 id="org00dc9fb"><span class="section-number-4">4.1.2.</span> Humble Book Bundles</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li>“Humble Book Bundle: Self-Reliance and Off-Grid Skills for Dummies,” Humble Bundle. Accessed: Mar. 18, 2025. [Online]. Available: <a href="https://www.humblebundle.com/books/selfreliance-and-offgrid-skills-for-dummies-books">https://www.humblebundle.com/books/selfreliance-and-offgrid-skills-for-dummies-books</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0e85a6b" class="outline-4">
+<h4 id="org0e85a6b"><span class="section-number-4">4.1.3.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org8fec1cd" class="outline-3">
+<h3 id="org8fec1cd"><span class="section-number-3">4.2.</span> Gardening</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>Gardening: <a href="https://tinyurl.com/3p238f3w">https://tinyurl.com/3p238f3w</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3201cde" class="outline-3">
+<h3 id="org3201cde"><span class="section-number-3">4.3.</span> Cleaning</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>Cleaning: <a href="https://tinyurl.com/yd2c883r">https://tinyurl.com/yd2c883r</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org14c0b9d" class="outline-3">
+<h3 id="org14c0b9d"><span class="section-number-3">4.4.</span> Laundry</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li>Laundry: <a href="https://tinyurl.com/2hz3pcxu">https://tinyurl.com/2hz3pcxu</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc7527b9" class="outline-2">
+<h2 id="orgc7527b9"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org924cb73" class="outline-3">
+<h3 id="org924cb73"><span class="section-number-3">5.1.</span> Grok: AI tool by X (formerly Twitter)</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orgd172483" class="outline-4">
+<h4 id="orgd172483"><span class="section-number-4">5.1.1.</span> Q</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ul class="org-ul">
+<li>“feminism, homemaker.” Accessed: Dec. 08, 2025. [Online]. Available: <a href="https://grok.com/share/c2hhcmQtMg_27110f63-12d3-4dbc-bf47-bfabd25ba91c?rid=8bd582aa-2022-4b4c-93ea-c98e45188e3d">https://grok.com/share/c2hhcmQtMg_27110f63-12d3-4dbc-bf47-bfabd25ba91c?rid=8bd582aa-2022-4b4c-93ea-c98e45188e3d</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org028c553" class="outline-4">
+<h4 id="org028c553"><span class="section-number-4">5.1.2.</span> A</h4>
+</div>
+</div>
+<div id="outline-container-orga6a34d2" class="outline-3">
+<h3 id="orga6a34d2"><span class="section-number-3">5.2.</span> Incense</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>Incense: <a href="https://tinyurl.com/d75mmp88">https://tinyurl.com/d75mmp88</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3da17ea" class="outline-3">
+<h3 id="org3da17ea"><span class="section-number-3">5.3.</span> Hospitality</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-orgd820fff" class="outline-4">
+<h4 id="orgd820fff"><span class="section-number-4">5.3.1.</span> HomeStay</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<ul class="org-ul">
+<li>“How Punam’s journey into entrepreneurship was bolstered by the Margshala Fellowship,” Vikalp Sangam. Accessed: Feb. 25, 2024. [Online]. Available: <a href="https://vikalpsangam.org/article/how-punams-journey-into-entrepreneurship-was-bolstered-by-the-margshala-fellowship/">https://vikalpsangam.org/article/how-punams-journey-into-entrepreneurship-was-bolstered-by-the-margshala-fellowship/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4bb5bd0" class="outline-4">
+<h4 id="org4bb5bd0"><span class="section-number-4">5.3.2.</span> Hotels</h4>
+<div class="outline-text-4" id="text-5-3-2">
+<ul class="org-ul">
+<li>Hotels: <a href="https://tinyurl.com/4fcuvxvk">https://tinyurl.com/4fcuvxvk</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org53315d1" class="outline-3">
+<h3 id="org53315d1"><span class="section-number-3">5.4.</span> Pop Home Making</h3>
+<div class="outline-text-3" id="text-5-4">
+<ul class="org-ul">
+<li>“Down To Earth | Latest news, opinion, analysis on environment &amp; science issues | India, South Asia.” <a href="https://www.downtoearth.org.in/">https://www.downtoearth.org.in/</a> (accessed Jul. 06, 2023).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Recipe Ideas, Product Reviews, Home Decor Inspiration, and Beauty Tips,” Good Housekeeping. <a href="https://www.goodhousekeeping.com/">https://www.goodhousekeeping.com/</a> (accessed Jul. 06, 2023).</li>
+
+<li>“Home - How-To Tips, Product Reviews, and Home Improvement Ideas,” Popular Mechanics. Accessed: Mar. 19, 2025. [Online]. Available: <a href="https://www.popularmechanics.com/home/">https://www.popularmechanics.com/home/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org152b504" class="outline-3">
+<h3 id="org152b504"><span class="section-number-3">5.5.</span> Articles, Essays</h3>
+<div class="outline-text-3" id="text-5-5">
+<ul class="org-ul">
+<li>A. Thompson, “These Changes Can Make a House Resistant to Wildfire,” Scientific American. Accessed: Mar. 18, 2025. [Online]. Available: <a href="https://www.scientificamerican.com/article/how-to-build-a-wildfire-resistant-house/">https://www.scientificamerican.com/article/how-to-build-a-wildfire-resistant-house/</a></li>
+<li>M. Satyanarayana, “Should Kids Do Chores?,” Scientific American. Accessed: Mar. 18, 2025. [Online]. Available: <a href="https://www.scientificamerican.com/article/should-kids-do-chores/">https://www.scientificamerican.com/article/should-kids-do-chores/</a></li>
+
+<li>“An Indigenous-Owned Model for Sustainable Tourism,” The Tyee. Accessed: Mar. 20, 2025. [Online]. Available: <a href="https://thetyee.ca/WhatWorks/2024/12/06/Indigenous-Owned-Model-Sustainable-Tourism/">https://thetyee.ca/WhatWorks/2024/12/06/Indigenous-Owned-Model-Sustainable-Tourism/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Tandon, “The dark side of bright lights,” Mongabay-India. Accessed: Sep. 09, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/09/the-dark-side-of-bright-lights/">https://india.mongabay.com/2025/09/the-dark-side-of-bright-lights/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org40e0d12" class="outline-2">
+<h2 id="org40e0d12"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>T. M. P. Reader, “The Wet History of Media in the Bathroom,” The MIT Press Reader. Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/the-wet-history-of-media-in-the-bathroom/">https://thereader.mitpress.mit.edu/the-wet-history-of-media-in-the-bathroom/</a></li>
+
+<li>S. Horazek, “The Shark 3-in-1 air purifier, heater, and fan we’re testing right now is cheaper than ever on Amazon,” Popular Science. Accessed: Jan. 08, 2025. [Online]. Available: <a href="https://www.popsci.com/gear/shark-air-purifier-heater-fan-deal/">https://www.popsci.com/gear/shark-air-purifier-heater-fan-deal/</a></li>
+
+<li>J. Anderberg, “Keep Your House in Tip-Top Shape: An Incredibly Handy Home Maintenance Checklist,” The Art of Manliness, Oct. 09, 2013. <a href="https://www.artofmanliness.com/lifestyle/homeownership/keep-your-house-in-tip-top-shape-an-incredibly-handy-home-maintenance-checklist/">https://www.artofmanliness.com/lifestyle/homeownership/keep-your-house-in-tip-top-shape-an-incredibly-handy-home-maintenance-checklist/</a> (accessed Jan. 17, 2022).</li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:59</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
