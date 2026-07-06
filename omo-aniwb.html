@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Animal Well Being</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Animal Well Being</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org8d85fbc">1. General</a></li>
+<li><a href="#orgd3a8e90">2. STEMM</a>
+<ul>
+<li><a href="#org8e7cc39">2.1. Environment</a></li>
+<li><a href="#orgf41b011">2.2. Health</a>
+<ul>
+<li><a href="#org0f58286">2.2.1. General</a></li>
+<li><a href="#org99372f1">2.2.2. CAM</a></li>
+<li><a href="#orgb03855e">2.2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org2c2b281">2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orga81abf6">3. World</a>
+<ul>
+<li><a href="#org812890b">3.1. Humanities, Misc</a>
+<ul>
+<li><a href="#org8de8c81">3.1.1. People</a></li>
+</ul>
+</li>
+<li><a href="#org083076a">3.2. Religions, Spirituality, Misc</a>
+<ul>
+<li><a href="#org7da94bb">3.2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org0bf9076">3.3. SocioPolitical Studies, Law, Misc</a>
+<ul>
+<li><a href="#org6690e6a">3.3.1. Orgs</a></li>
+<li><a href="#org150d02c">3.3.2. Relationships, Gender, Feminism, Misc</a></li>
+<li><a href="#org8d18e85">3.3.3. Nation States</a></li>
+<li><a href="#org8398bff">3.3.4. Law</a></li>
+</ul>
+</li>
+<li><a href="#org71b2bf0">3.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgd9907b7">4. Core</a>
+<ul>
+<li><a href="#org6dcb44f">4.1. Education</a></li>
+</ul>
+</li>
+<li><a href="#orgabf683e">5. Arts</a>
+<ul>
+<li><a href="#orge23e957">5.1. Films</a></li>
+<li><a href="#org3467887">5.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org374b265">6. Special Topics</a>
+<ul>
+<li><a href="#org4edef6c">6.1. Documentaries</a></li>
+<li><a href="#orgd12a52b">6.2. Texts</a></li>
+</ul>
+</li>
+<li><a href="#orgfce69c7">7. Misc</a>
+<ul>
+<li><a href="#org2adb139">7.1. FAO</a></li>
+<li><a href="#org591fac1">7.2. Misc</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org8d85fbc" class="outline-2">
+<h2 id="org8d85fbc"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orgd3a8e90" class="outline-2">
+<h2 id="orgd3a8e90"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org8e7cc39" class="outline-3">
+<h3 id="org8e7cc39"><span class="section-number-3">2.1.</span> Environment</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>J. D’Silva and C. McKenna, Eds., Farming, Food and Nature: Respecting Animals, People and the Environment, 1st edition. London: Routledge, 2018.</li>
+
+<li>T. Gaulkin, “What happens if the world gets too hot for animals to survive?,” Bulletin of the Atomic Scientists, Jul. 20, 2022. <a href="https://thebulletin.org/2022/07/extreme-heat-animals-livestock-wildlife/">https://thebulletin.org/2022/07/extreme-heat-animals-livestock-wildlife/</a> (accessed Jul. 21, 2022).</li>
+
+<li>C. Nast, “What’s the Most Sustainable Meat?,” Bon Appétit, Jan. 25, 2017. <a href="https://www.bonappetit.com/story/most-sustainable-meat">https://www.bonappetit.com/story/most-sustainable-meat</a> (accessed Nov. 04, 2022).</li>
+
+<li>“How livestock farming affects the environment.” <a href="https://www.downtoearth.org.in/factsheet/how-livestock-farming-affects-the-environment-64218">https://www.downtoearth.org.in/factsheet/how-livestock-farming-affects-the-environment-64218</a> (accessed Nov. 04, 2022).</li>
+
+<li>“Switzerland Could Be the First Country to Ban Factory Farming,” Time. <a href="https://time.com/6215645/switzerland-factory-farming-protect-animals/">https://time.com/6215645/switzerland-factory-farming-protect-animals/</a> (accessed Sep. 26, 2022).</li>
+
+<li>“Human exceptionalism imposes horrible costs on other animals | Psyche Ideas,” Psyche. <a href="https://psyche.co/ideas/human-exceptionalism-imposes-horrible-costs-on-other-animals">https://psyche.co/ideas/human-exceptionalism-imposes-horrible-costs-on-other-animals</a> (accessed Nov. 02, 2022).</li>
+<li>“Pitting People against Nature,” The India Forum, Dec. 08, 2021. <a href="https://www.theindiaforum.in/article/pitting-people-against-nature">https://www.theindiaforum.in/article/pitting-people-against-nature</a> (accessed Nov. 04, 2022).</li>
+
+<li>H. Ritchie and M. Roser, “What are the trade-offs between animal welfare and the environmental impact of meat?,” Our World in Data, May 2024, Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://ourworldindata.org/what-are-the-trade-offs-between-animal-welfare-and-the-environmental-impact-of-meat">https://ourworldindata.org/what-are-the-trade-offs-between-animal-welfare-and-the-environmental-impact-of-meat</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf41b011" class="outline-3">
+<h3 id="orgf41b011"><span class="section-number-3">2.2.</span> Health</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org0f58286" class="outline-4">
+<h4 id="org0f58286"><span class="section-number-4">2.2.1.</span> General</h4>
+</div>
+<div id="outline-container-org99372f1" class="outline-4">
+<h4 id="org99372f1"><span class="section-number-4">2.2.2.</span> CAM</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ul class="org-ul">
+<li>“Homeopathy at Wellie Level, Homeopathy on the Farm and Smallholdings,” Hawl. Accessed: Feb. 03, 2024. [Online]. Available: <a href="https://www.hawl.co.uk">https://www.hawl.co.uk</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb03855e" class="outline-4">
+<h4 id="orgb03855e"><span class="section-number-4">2.2.3.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org2c2b281" class="outline-3">
+<h3 id="org2c2b281"><span class="section-number-3">2.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>“‘We must end animal testing - and solve sepsis.’” Accessed: Oct. 23, 2025. [Online]. Available: <a href="https://theecologist.org/2025/oct/22/we-must-end-animal-testing-and-solve-sepsis">https://theecologist.org/2025/oct/22/we-must-end-animal-testing-and-solve-sepsis</a></li>
+
+<li>“Facing ‘impossible’ workload, USDA struggles to oversee lab animal welfare.” Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://www.science.org/content/article/facing-impossible-workload-usda-struggles-oversee-lab-animal-welfare">https://www.science.org/content/article/facing-impossible-workload-usda-struggles-oversee-lab-animal-welfare</a></li>
+
+<li>L. Elmer, “Existential risks and global challenges: migrant workers and interspecies exploitation - CSER,” CSER - Centre for the Study of Existential Risk. Accessed: Jul. 26, 2025. [Online]. Available: <a href="https://www.cser.ac.uk/work/existential-risks-and-global-challenges-migrant-workers-and-interspecies-exploitation/">https://www.cser.ac.uk/work/existential-risks-and-global-challenges-migrant-workers-and-interspecies-exploitation/</a></li>
+
+<li>Elena, “How PETA Is Using Tech to Help Animals,” PETA. Accessed: Jun. 19, 2025. [Online]. Available: <a href="https://www.peta.org/blog/peta-tech/">https://www.peta.org/blog/peta-tech/</a></li>
+
+<li>“The Role of Animals in Agroecological Systems,” Navdanya international. Accessed: Apr. 10, 2025. [Online]. Available: <a href="https://navdanyainternational.org/the-role-of-animals-in-agroecological-systems/">https://navdanyainternational.org/the-role-of-animals-in-agroecological-systems/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga81abf6" class="outline-2">
+<h2 id="orga81abf6"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org812890b" class="outline-3">
+<h3 id="org812890b"><span class="section-number-3">3.1.</span> Humanities, Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org8de8c81" class="outline-4">
+<h4 id="org8de8c81"><span class="section-number-4">3.1.1.</span> People</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>B. Michelson and I. Newkirk, Voices for Animal Liberation: Inspirational Accounts by Animal Rights Activists. New York: Skyhorse, 2020.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org083076a" class="outline-3">
+<h3 id="org083076a"><span class="section-number-3">3.2.</span> Religions, Spirituality, Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org7da94bb" class="outline-4">
+<h4 id="org7da94bb"><span class="section-number-4">3.2.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgb2b5de6"></a>Texts<br />
+<div class="outline-text-5" id="text-3-2-1-1">
+<ul class="org-ul">
+<li>J. D’Silva, Animal Welfare in World Religion: Teaching and Practice, 1st edition. New York, NY: Routledge, 2023.</li>
+</ul>
+</div>
+</li>
+<li><a id="org00d2876"></a>Misc<br />
+<div class="outline-text-5" id="text-3-2-1-2">
+<ul class="org-ul">
+<li>Elena, “PETA Urges Pope Leo XIV to Denounce Bullfighting,” PETA. Accessed: Jun. 03, 2025. [Online]. Available: <a href="https://www.peta.org/blog/pope-leo-xiv-bullfighting/">https://www.peta.org/blog/pope-leo-xiv-bullfighting/</a></li>
+<li>“Urge Pope Leo XIV to Stand Against Bullfights!” Accessed: Jun. 02, 2025. [Online]. Available: <a href="https://support.peta.org/page/83607/petition/1?locale=en-US">https://support.peta.org/page/83607/petition/1?locale=en-US</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org0bf9076" class="outline-3">
+<h3 id="org0bf9076"><span class="section-number-3">3.3.</span> SocioPolitical Studies, Law, Misc</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org6690e6a" class="outline-4">
+<h4 id="org6690e6a"><span class="section-number-4">3.3.1.</span> Orgs</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<ul class="org-ul">
+<li>“People for the Ethical Treatment of Animals,” Wikipedia. Oct. 17, 2022. Accessed: Nov. 06, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=People_for_the_Ethical_Treatment_of_Animals&amp;oldid=1116518353">https://en.wikipedia.org/w/index.php?title=People_for_the_Ethical_Treatment_of_Animals&amp;oldid=1116518353</a>
+<ul class="org-ul">
+<li>“People for the Ethical Treatment of Animals (PETA),” PETA. <a href="https://www.peta.org/">https://www.peta.org/</a> (accessed Nov. 02, 2022).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org150d02c" class="outline-4">
+<h4 id="org150d02c"><span class="section-number-4">3.3.2.</span> Relationships, Gender, Feminism, Misc</h4>
+<div class="outline-text-4" id="text-3-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgdffba98"></a>Gender<br />
+<ol class="org-ol">
+<li><a id="org16b5726"></a>Male<br />
+<div class="outline-text-6" id="text-3-3-2-1-1">
+<ul class="org-ul">
+<li>“Reproductive Exploitation of Male Livestock Is an Overlooked Cornerstone of Factory Farming.” Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://sentientmedia.org/reproductive-exploitation-male-livestock/">https://sentientmedia.org/reproductive-exploitation-male-livestock/</a></li>
+<li>C. on February 06 and 2025, “Male Animals Face Severe Exploitation—Here’s How,” peta2. Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://www.peta2.com/learn/male-animals/">https://www.peta2.com/learn/male-animals/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgced9a54"></a>Female<br />
+<div class="outline-text-6" id="text-3-3-2-1-2">
+<ul class="org-ul">
+<li>“Welfare insights on slaughter of pregnant animals | EFSA.” Accessed: Oct. 27, 2024. [Online]. Available: <a href="https://www.efsa.europa.eu/en/press/news/170530">https://www.efsa.europa.eu/en/press/news/170530</a></li>
+<li>C. on March 04 and 2025, “Female Animals Are Exploited for Food,” peta2. Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://www.peta2.com/learn/female-animals/">https://www.peta2.com/learn/female-animals/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org8776636"></a>Bestiality<br />
+<ol class="org-ol">
+<li><a id="org67d0dfd"></a>General<br /></li>
+<li><a id="org4da07ad"></a>Misc<br />
+<div class="outline-text-6" id="text-3-3-2-2-2">
+<ul class="org-ul">
+<li>A. L. Podberscek and A. M. Beetz, Bestiality and Zoophilia: Sexual Relations with Animals. Berg, 2005.</li>
+<li>H. Miletski, Understanding Bestiality and Zoophilia. East-West Publishing, LLC, 2002.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgc83a7fb"></a>Zoophilia<br />
+<div class="outline-text-5" id="text-3-3-2-3">
+<ul class="org-ul">
+<li>“Zoophilia,” Wikipedia. Mar. 31, 2025. Accessed: Apr. 07, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Zoophilia&amp;oldid=1283262560">https://en.wikipedia.org/w/index.php?title=Zoophilia&amp;oldid=1283262560</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfdb20b5"></a>Misc<br />
+<div class="outline-text-5" id="text-3-3-2-4">
+<ul class="org-ul">
+<li>“<img src="../../../ourveryownorg/webpages/core/world/biophy/Indiaerotic5.jpg" alt="Indiaerotic5.jpg" /> - Wikipedia.” Accessed: Apr. 07, 2025. [Online]. Available: <img src="https://commons.wikimedia.org/wiki/File:Indiaerotic5.jpg" alt="File:Indiaerotic5.jpg" /></li>
+<li>“Pasiphaë,” Wikipedia. Apr. 05, 2025. Accessed: Apr. 07, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Pasipha%C3%AB&amp;oldid=1284046994">https://en.wikipedia.org/w/index.php?title=Pasipha%C3%AB&amp;oldid=1284046994</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org8d18e85" class="outline-4">
+<h4 id="org8d18e85"><span class="section-number-4">3.3.3.</span> Nation States</h4>
+<div class="outline-text-4" id="text-3-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgffb680e"></a>India<br />
+<ol class="org-ol">
+<li><a id="org02cf766"></a>General<br /></li>
+<li><a id="orgfdd7c7d"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org9400d3f"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org04c2099"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="orgf839174"></a>Orgs<br />
+<div class="outline-text-7" id="text-orgf839174">
+<ul class="org-ul">
+<li>“PETA India: India’s Animal Rights Organisation,” PETA India. <a href="https://www.petaindia.com/">https://www.petaindia.com/</a> (accessed Nov. 02, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgda3e1f2"></a>Religions, Spirituality, Misc<br />
+<div class="outline-text-7" id="text-orgda3e1f2">
+<ul class="org-ul">
+<li>N. Krishna, Sacred Animals of India. Penguin Books India, 2010.</li>
+</ul>
+</div>
+</li>
+<li><a id="org5e252c8"></a>Misc<br />
+<div class="outline-text-7" id="text-org5e252c8">
+<ul class="org-ul">
+<li>R. Goswami, “Rethinking conservation: Justice, Coexistence, and Community,” Frontline. Accessed: Nov. 12, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/environment/people-wildlife-coexistence-conservation-justice-india/article70185970.ece">https://frontline.thehindu.com/environment/people-wildlife-coexistence-conservation-justice-india/article70185970.ece</a></li>
+
+<li>S. Manocha, “Animal Sacrifice Crackdown in Rajasthan Following PETA India Intervention - Blog,” PETA India. Accessed: Oct. 09, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/animal-sacrifice-crackdown-in-rajasthan-following-peta-india-intervention/">https://www.petaindia.com/blog/animal-sacrifice-crackdown-in-rajasthan-following-peta-india-intervention/</a></li>
+<li>S. Manocha, “E-Rickshaw Handed to Meerut Family by PETA India in Ceremony After Injured Mule Is Retired to Sanctuary - Blog,” PETA India. Accessed: Oct. 09, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/e-rickshaw-handed-to-meerut-family-by-peta-india-in-ceremony-after-injured-mule-is-retired-to-sanctuary/">https://www.petaindia.com/blog/e-rickshaw-handed-to-meerut-family-by-peta-india-in-ceremony-after-injured-mule-is-retired-to-sanctuary/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>PETA, “Help PETA India Decide 2024’s Most Beautiful Vegetarian Celebrities,” PETA India. Accessed: Oct. 04, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/most-beautiful-vegetarian-celebrities/">https://www.petaindia.com/blog/most-beautiful-vegetarian-celebrities/</a></li>
+<li>E. Goyal, “‘Support Non-Violence for All’: PETA India Erects Dandi March-Inspired Animal Protection Plea Ahead of Gandhi Jayanti - Blog,” PETA India. Accessed: Oct. 04, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/support-non-violence-for-all-peta-india-erects-dandi-march-inspired-animal-protection-plea-ahead-of-gandhi-jayanti/">https://www.petaindia.com/blog/support-non-violence-for-all-peta-india-erects-dandi-march-inspired-animal-protection-plea-ahead-of-gandhi-jayanti/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Manocha, “Twenty Booked for Illegal Bull Race Event in Thiruvananthapuram Rural, After PETA India Complaint - Blog,” PETA India. Accessed: Sep. 05, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/twenty-booked-for-illegal-bull-race-event-in-thiruvananthapuram-rural-after-peta-india-complaint/">https://www.petaindia.com/blog/twenty-booked-for-illegal-bull-race-event-in-thiruvananthapuram-rural-after-peta-india-complaint/</a></li>
+<li>E. Goyal, “From Intern to President: Poorva Joshipura Spreads Jivdaya to the World as New President of PETA International - Blog,” PETA India. Accessed: Sep. 05, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/from-intern-to-president-poorva-joshipura-spreads-jivdaya-to-the-world-as-new-president-of-peta-international/">https://www.petaindia.com/blog/from-intern-to-president-poorva-joshipura-spreads-jivdaya-to-the-world-as-new-president-of-peta-international/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>E. Goyal, “Indore: FIR Registered for Truck Running Over Dog, Following People For Animals (PFA) Indore Complaint and PETA India Intervention - Blog,” PETA India. Accessed: Aug. 09, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/indore-fir-registered-for-truck-running-over-dog-following-people-for-animals-pfa-indore-complaint-and-peta-india-intervention/">https://www.petaindia.com/blog/indore-fir-registered-for-truck-running-over-dog-following-people-for-animals-pfa-indore-complaint-and-peta-india-intervention/</a></li>
+<li>S. Karnal, “Illegal Horse-Cart Race in Sangli Prevented Following PETA India Complaint - Blog,” PETA India. Accessed: Aug. 09, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/illegal-horse-cart-race-in-sangli-prevented-following-peta-india-complaint/">https://www.petaindia.com/blog/illegal-horse-cart-race-in-sangli-prevented-following-peta-india-complaint/</a></li>
+<li>S. Manocha, “‘Cat Monger’ Serves Up ‘Kitten Meat’ in Goa, Ahead of International Cat Day - Blog,” PETA India. Accessed: Aug. 09, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/cat-monger-serves-up-kitten-meat-in-goa-ahead-of-international-cat-day/">https://www.petaindia.com/blog/cat-monger-serves-up-kitten-meat-in-goa-ahead-of-international-cat-day/</a></li>
+<li>S. Manocha, “Kanker Forest Division Books Man Over Viral Video of Python Abuse Following PETA India Complaint - Blog,” PETA India. Accessed: Aug. 09, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/kanker-forest-division-books-man-over-viral-video-of-python-abuse-following-peta-india-complaint/">https://www.petaindia.com/blog/kanker-forest-division-books-man-over-viral-video-of-python-abuse-following-peta-india-complaint/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Manocha, “Dog Dad John Abraham Urges Union Cabinet Minister to Urgently Rescue More Than 1200 Beagles and Other Animals from Palamur Biosciences - Blog,” PETA India. Accessed: Aug. 03, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/dog-dad-john-abraham-urges-union-cabinet-minister-to-urgently-rescue-more-than-1200-beagles-and-other-animals-from-palamur-biosciences/">https://www.petaindia.com/blog/dog-dad-john-abraham-urges-union-cabinet-minister-to-urgently-rescue-more-than-1200-beagles-and-other-animals-from-palamur-biosciences/</a></li>
+
+<li>S. Manocha, “PETA India Files Objection in Delhi High Court to CCSEA Recommendation for Scientist From IISC, a Laboratory Accused of Cruelty to Animals, to Inspect Palamur Biosciences for Cruelty - Blog,” PETA India. Accessed: Jul. 30, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/peta-india-files-objection-in-delhi-high-court-to-ccsea-recommendation-for-scientist-from-iisc-a-laboratory-accused-of-cruelty-to-animals-to-inspect-palamur-biosciences-for-cruelty/">https://www.petaindia.com/blog/peta-india-files-objection-in-delhi-high-court-to-ccsea-recommendation-for-scientist-from-iisc-a-laboratory-accused-of-cruelty-to-animals-to-inspect-palamur-biosciences-for-cruelty/</a></li>
+<li>E. Goyal, “Mice Force-Fed With Faecal Bacteria: PETA India Calls On ‘Oreo’ Manufacturer Mondelēz to Stop Senseless Animal Testing For Good - Blog,” PETA India. Accessed: Jul. 30, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/mice-force-fed-with-faecal-bacteria-peta-india-calls-on-oreo-manufacturer-mondelez-to-stop-senseless-animal-testing-for-good/">https://www.petaindia.com/blog/mice-force-fed-with-faecal-bacteria-peta-india-calls-on-oreo-manufacturer-mondelez-to-stop-senseless-animal-testing-for-good/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Manocha, “Sikkim Police &amp; Animal Husbandry Department Invite PETA India to Lead Workshops to Combat Cruelty to Animals. - Blog,” PETA India. Accessed: Jul. 17, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/sikkim-police-animal-husbandry-department-invite-peta-india-to-lead-workshops-to-combat-cruelty-to-animals/">https://www.petaindia.com/blog/sikkim-police-animal-husbandry-department-invite-peta-india-to-lead-workshops-to-combat-cruelty-to-animals/</a></li>
+<li>S. Manocha, “PETA India Wins Interim Custody of Eleven Abused Horses Seized by Mumbai Police Following PETA India’s Intervention - Blog,” PETA India. Accessed: Jul. 17, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/peta-india-wins-interim-custody-of-eleven-abused-horses-seized-by-mumbai-police-following-peta-indias-intervention/">https://www.petaindia.com/blog/peta-india-wins-interim-custody-of-eleven-abused-horses-seized-by-mumbai-police-following-peta-indias-intervention/</a></li>
+<li>S. Manocha, “Car Brand Renault Commits to Going Leather-Free Following Talks with PETA US - Blog,” PETA India. Accessed: Jul. 17, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/car-brand-renault-commits-to-going-leather-free-following-talks-with-peta-us/">https://www.petaindia.com/blog/car-brand-renault-commits-to-going-leather-free-following-talks-with-peta-us/</a></li>
+
+<li>P. C. Kumar Shinjinee Majumder, Abhishek, “The ‘Animal Welfare’ Groups That Beat Up Truck Drivers in the Name of Cows,” bellingcat. Accessed: Jul. 15, 2025. [Online]. Available: <a href="https://www.bellingcat.com/news/2025/07/15/cow-vigilantes-india/">https://www.bellingcat.com/news/2025/07/15/cow-vigilantes-india/</a></li>
+
+<li>E. Goyal, “Delhi High Court Halts Palamur Biosciences From Procuring New Animals, Orders Interim Remedial Action, Following PETA India Petition - Blog,” PETA India. Accessed: Jul. 12, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/delhi-high-court-halts-palamur-biosciences-from-procuring-new-animals-orders-interim-remedial-action-following-peta-india-petition/">https://www.petaindia.com/blog/delhi-high-court-halts-palamur-biosciences-from-procuring-new-animals-orders-interim-remedial-action-following-peta-india-petition/</a></li>
+
+<li>S. Manocha, “Kurnool: Preliminary Offence Report Registered for Killing Wild Life Following PETA India Complaint - Blog,” PETA India. Accessed: Jul. 10, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/kurnool-preliminary-offence-report-registered-for-killing-wild-life-following-peta-india-complaint/">https://www.petaindia.com/blog/kurnool-preliminary-offence-report-registered-for-killing-wild-life-following-peta-india-complaint/</a></li>
+
+<li>E. Goyal, “Now Available as an Audiobook: ‘Survival at Stake’ by PETA India’s Director Poorva Joshipura With Foreword by Dia Mirza - Blog,” PETA India. Accessed: Jun. 06, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/new-book-order-survival-at-stake-by-petas-poorva-joshipura-with-foreword-by-dia-mirza/">https://www.petaindia.com/blog/new-book-order-survival-at-stake-by-petas-poorva-joshipura-with-foreword-by-dia-mirza/</a></li>
+
+<li>S. Manocha, “Pune Police Invite PETA India to Conduct Workshop for Over 100 Officers to Combat Cruelty to Animals - Blog,” PETA India. Accessed: Apr. 18, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/pune-police-invite-peta-india-to-conduct-workshop-for-over-100-officers-to-combat-cruelty-to-animals/">https://www.petaindia.com/blog/pune-police-invite-peta-india-to-conduct-workshop-for-over-100-officers-to-combat-cruelty-to-animals/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>E. Goyal, “Nagpur Animal Husbandry Department and Poultry Industry Try to Silence Public Health Warning on Bird Flu - Blog,” PETA India. Accessed: Apr. 05, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/nagpur-animal-husbandry-department-and-poultry-industry-try-to-silence-public-health-warning-on-bird-flu/">https://www.petaindia.com/blog/nagpur-animal-husbandry-department-and-poultry-industry-try-to-silence-public-health-warning-on-bird-flu/</a></li>
+
+<li>S. Manocha, “Retired Chief Justice of India, Dr. DY Chandrachud, and Family are Chief Guests at PETA India 25th Anniversary Event - Blog,” PETA India. Accessed: Mar. 30, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/retired-chief-justice-of-india-dr-dy-chandrachud-and-family-are-chief-guests-at-peta-india-25th-anniversary-event/">https://www.petaindia.com/blog/retired-chief-justice-of-india-dr-dy-chandrachud-and-family-are-chief-guests-at-peta-india-25th-anniversary-event/</a></li>
+
+<li>S. Manocha, “PETA India Director Hangs Alongside Goat and Pig Carcasses in ‘We Are All Animals’ Appeal - Blog,” PETA India. Accessed: Mar. 28, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/peta-india-director-hangs-alongside-goat-and-pig-carcasses-in-we-are-all-animals-appeal/">https://www.petaindia.com/blog/peta-india-director-hangs-alongside-goat-and-pig-carcasses-in-we-are-all-animals-appeal/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orga9cec74"></a>Misc<br />
+<div class="outline-text-6" id="text-3-3-3-1-4">
+<ul class="org-ul">
+<li>S. Manocha, “With Dogs, Pigeons, Wildlife &amp; Other Species Under Increasing Attack, PETA India Launches ‘Let Jivdaya Guide Us’ Campaign with Full Page Newspaper Cover - Blog,” PETA India. Accessed: Aug. 29, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/with-dogs-pigeons-wildlife-other-species-under-increasing-attack-peta-india-launches-let-jivdaya-guide-us-campaign-with-full-page-newspaper-cover/">https://www.petaindia.com/blog/with-dogs-pigeons-wildlife-other-species-under-increasing-attack-peta-india-launches-let-jivdaya-guide-us-campaign-with-full-page-newspaper-cover/</a></li>
+
+<li>“Blog,” Local Futures. Accessed: Aug. 26, 2025. [Online]. Available: <a href="https://www.localfutures.org/blog/">https://www.localfutures.org/blog/</a></li>
+
+<li>P. Shankar, “Evolving hunting practices pose an increasing threat to wildlife,” Mongabay-India. Accessed: Aug. 26, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/08/evolving-hunting-practices-pose-an-increasing-threat-to-wildlife/">https://india.mongabay.com/2025/08/evolving-hunting-practices-pose-an-increasing-threat-to-wildlife/</a></li>
+
+<li>“Let evidence offer ways to handle stray animals,” The Tribune. Accessed: Aug. 21, 2025. [Online]. Available: <a href="https://www.tribuneindia.com/news/comment/let-evidence-offer-ways-to-handle-stray-animals/">https://www.tribuneindia.com/news/comment/let-evidence-offer-ways-to-handle-stray-animals/</a></li>
+
+<li>S. Manocha, “Two Grey Mongoose Rescued from Illegal Confinement in Jehanabad, POR Registered, Following PETA India Complaint - Blog,” PETA India. Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/two-grey-mongoose-rescued-from-illegal-confinement-in-jehanabad-por-registered-following-peta-india-complaint/">https://www.petaindia.com/blog/two-grey-mongoose-rescued-from-illegal-confinement-in-jehanabad-por-registered-following-peta-india-complaint/</a></li>
+
+<li>E. Goyal, “When You See Animal In Distress,” PETA India. Accessed: Aug. 17, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/helpinganimalsindistress/">https://www.petaindia.com/blog/helpinganimalsindistress/</a></li>
+
+<li>R. G. Deol Himanshu Nitnaware,Taran, “Urban Menace: Down To Earth’s cover story on dogs, monkeys and pigeons in Indian cities,” Down To Earth. Accessed: Aug. 12, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/governance/urban-menace-down-to-earth-s-cover-story-on-dogs-monkeys-and-pigeons-in-indian-cities-90342">https://www.downtoearth.org.in/governance/urban-menace-down-to-earth-s-cover-story-on-dogs-monkeys-and-pigeons-in-indian-cities-90342</a></li>
+
+<li>R. Ghai, “IUCN-TRAFFIC report praises ‘strengthened monitoring and surveillance’ for protecting India and Nepal’s rhinos from poaching,” Down To Earth. Accessed: Aug. 12, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/wildlife-biodiversity/iucn-traffic-report-praises-strengthened-monitoring-and-surveillance-for-protecting-india-and-nepals-rhinos-from-poaching">https://www.downtoearth.org.in/wildlife-biodiversity/iucn-traffic-report-praises-strengthened-monitoring-and-surveillance-for-protecting-india-and-nepals-rhinos-from-poaching</a></li>
+
+<li>S. Manocha, “Mira-Bhayandar, Vasai-Virar Police Commissionerate Invite PETA India to Conduct Workshop for Nearly 100 Officers to Combat Cruelty to Animals - Blog,” PETA India. Accessed: Jul. 24, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/mira-bhayandar-vasai-virar-police-commissionerate-invite-peta-india-to-conduct-workshop-for-nearly-100-officers-to-combat-cruelty-to-animals/">https://www.petaindia.com/blog/mira-bhayandar-vasai-virar-police-commissionerate-invite-peta-india-to-conduct-workshop-for-nearly-100-officers-to-combat-cruelty-to-animals/</a></li>
+<li>S. Karnal, “Thousands of Chicks Saved from Sacrifice at Mangai Devi Temple This Year by Belagavi Authorities Following PETA India and Shri Dayananda Swamiji’s Intervention - Blog,” PETA India. Accessed: Jul. 24, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/thousands-of-chicks-saved-from-sacrifice-at-mangai-devi-temple-this-year-by-belagavi-authorities-following-peta-india-and-shri-dayananda-swamijis-intervention/">https://www.petaindia.com/blog/thousands-of-chicks-saved-from-sacrifice-at-mangai-devi-temple-this-year-by-belagavi-authorities-following-peta-india-and-shri-dayananda-swamijis-intervention/</a></li>
+<li>S. Karnal, “Rescued With Love: Adopt the Kitten Saved by Actor Deepti Bhatnagar - Blog,” PETA India. Accessed: Jul. 24, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/rescued-with-love-adopt-the-kitten-saved-by-actor-deepti-bhatnagar/">https://www.petaindia.com/blog/rescued-with-love-adopt-the-kitten-saved-by-actor-deepti-bhatnagar/</a></li>
+
+<li>E. Goyal, “Award-Winning Actor and Director Adivi Sesh Urges Rescue of Beagles and Other Animals Bred and Poisoned by Telangana-Based Palamur Biosciences After PETA India Exposé - Blog,” PETA India. Accessed: Jun. 24, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/award-winning-actor-and-director-adivi-sesh-urges-rescue-of-beagles-and-other-animals-bred-and-poisoned-by-telangana-based-palamur-biosciences-after-peta-india-expose/">https://www.petaindia.com/blog/award-winning-actor-and-director-adivi-sesh-urges-rescue-of-beagles-and-other-animals-bred-and-poisoned-by-telangana-based-palamur-biosciences-after-peta-india-expose/</a></li>
+
+<li>E. Goyal, “Award-Winning Actor and Director Adivi Sesh Urges Rescue of Beagles and Other Animals Bred and Poisoned by Telangana-Based Palamur Biosciences After PETA India Exposé - Blog,” PETA India. Accessed: Jun. 20, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/award-winning-actor-and-director-adivi-sesh-urges-rescue-of-beagles-and-other-animals-bred-and-poisoned-by-telangana-based-palamur-biosciences-after-peta-india-expose/">https://www.petaindia.com/blog/award-winning-actor-and-director-adivi-sesh-urges-rescue-of-beagles-and-other-animals-bred-and-poisoned-by-telangana-based-palamur-biosciences-after-peta-india-expose/</a></li>
+
+<li>S. Manocha, “Giant ‘Cat’ and ‘Dog’ Mark Animal Rights Awareness Week with Lesson on ABCs: Animal Birth Control - Blog,” PETA India. Accessed: Jun. 19, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/giant-cat-and-dog-mark-animal-rights-awareness-week-with-lesson-on-abcs-animal-birth-control/">https://www.petaindia.com/blog/giant-cat-and-dog-mark-animal-rights-awareness-week-with-lesson-on-abcs-animal-birth-control/</a></li>
+
+<li>E. Goyal, “Volunteer for PETA India’s Cruelty Response Team to Help Animals in Need - Blog,” PETA India. Accessed: Jun. 14, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/join-peta-india-as-cruelty-response-volunteer-2/">https://www.petaindia.com/blog/join-peta-india-as-cruelty-response-volunteer-2/</a></li>
+
+<li>“Inside the human-bear conflict in northern India,” Mongabay Environmental News. Accessed: Jun. 09, 2025. [Online]. Available: <a href="https://news.mongabay.com/video/2025/05/inside-the-human-bear-conflict-in-northern-india/">https://news.mongabay.com/video/2025/05/inside-the-human-bear-conflict-in-northern-india/</a></li>
+
+<li>S. Oliver, “VIDEO: Farmer Focus Chicken and Alleged ‘Traceable’ Deception,” PETA. Accessed: May 22, 2025. [Online]. Available: <a href="https://www.peta.org/blog/farmer-focus-traceable-humane/">https://www.peta.org/blog/farmer-focus-traceable-humane/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Manocha, “PETA India Supporter Takes a Fish’s Place and Urges Goans to Go Vegan - Blog,” PETA India. Accessed: Apr. 27, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/peta-india-supporter-takes-a-fishs-place-and-urges-goans-to-go-vegan/">https://www.petaindia.com/blog/peta-india-supporter-takes-a-fishs-place-and-urges-goans-to-go-vegan/</a></li>
+<li>S. Manocha, “FIR Registered in Kolkata as Carriage Horse Collapses; PETA India Urges Use of Electric Vehicles - Blog,” PETA India. Accessed: Apr. 27, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/fir-registered-in-kolkata-as-carriage-horse-collapses-peta-india-urges-use-of-electric-vehicles/">https://www.petaindia.com/blog/fir-registered-in-kolkata-as-carriage-horse-collapses-peta-india-urges-use-of-electric-vehicles/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>E. Goyal, “PETA India’s First Immersive Role-Playing Experience ‘When They Came for Us’ Aims To End Speciesism - Blog,” PETA India. Accessed: Apr. 18, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/peta-indias-first-immersive-role-playing-experience-when-they-came-for-us-aims-to-end-speciesism/">https://www.petaindia.com/blog/peta-indias-first-immersive-role-playing-experience-when-they-came-for-us-aims-to-end-speciesism/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Compassionate Citizen - Living,” PETA India. Accessed: Apr. 05, 2025. [Online]. Available: <a href="https://www.petaindia.com/features/compassionate-citizen/">https://www.petaindia.com/features/compassionate-citizen/</a></li>
+<li>“PETA India: India’s Animal Rights Organisation,” PETA India. Accessed: Apr. 05, 2025. [Online]. Available: <a href="https://www.petaindia.com/">https://www.petaindia.com/</a></li>
+
+<li>S. Nandi, “John Abraham ‘Shackled’, ‘Beaten’, and ‘Abused’ in PETA India Campaign Against Elephant Rides - Blog,” PETA India. Accessed: Mar. 24, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/john-abraham-shackled-beaten-and-abused-in-peta-india-campaign-against-elephant-rides/">https://www.petaindia.com/blog/john-abraham-shackled-beaten-and-abused-in-peta-india-campaign-against-elephant-rides/</a></li>
+<li>E. Goyal, “John Abraham Named First Honorary Director of PETA India at 25th Anniversary Celebration - Blog,” PETA India. Accessed: Mar. 24, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/john-abraham-named-first-honorary-director-of-peta-india-at-25th-anniversary-celebration/">https://www.petaindia.com/blog/john-abraham-named-first-honorary-director-of-peta-india-at-25th-anniversary-celebration/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org8398bff" class="outline-4">
+<h4 id="org8398bff"><span class="section-number-4">3.3.4.</span> Law</h4>
+<div class="outline-text-4" id="text-3-3-4">
+</div>
+<ol class="org-ol">
+<li><a id="orgc535d15"></a>Animals Rights<br />
+<ol class="org-ol">
+<li><a id="orgf4b9634"></a>General<br />
+<div class="outline-text-6" id="text-3-3-4-1-1">
+<ul class="org-ul">
+<li>“Animal rights,” Wikipedia. Oct. 06, 2022. Accessed: Oct. 11, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Animal_rights&amp;oldid=1114379493">https://en.wikipedia.org/w/index.php?title=Animal_rights&amp;oldid=1114379493</a></li>
+
+<li>D. DeGrazia and D. (Associate P. of P. at G. W. U. D. DC) Washington, Animal Rights: A Very Short Introduction. OUP Oxford, 2002.</li>
+</ul>
+</div>
+</li>
+<li><a id="org2007c0b"></a>Arts<br />
+<div class="outline-text-6" id="text-3-3-4-1-2">
+<ul class="org-ul">
+<li>“Okja,” Wikipedia. Sep. 26, 2022. Accessed: Oct. 11, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Okja&amp;oldid=1112385497">https://en.wikipedia.org/w/index.php?title=Okja&amp;oldid=1112385497</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org51f4cbd"></a>India<br />
+<div class="outline-text-6" id="text-3-3-4-1-3">
+<ul class="org-ul">
+<li>“PETA India: India’s Animal Rights Organisation,” PETA India. <a href="https://www.petaindia.com/">https://www.petaindia.com/</a> (accessed Oct. 11, 2022).</li>
+<li>“International Landing Page | PETA.” <a href="https://www.peta.org/international/">https://www.peta.org/international/</a> (accessed Oct. 11, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb6748da"></a>Misc<br />
+<div class="outline-text-6" id="text-3-3-4-1-4">
+<ul class="org-ul">
+<li>C. R. Sunstein and M. C. Nussbaum, Animal Rights: Current Debates and New Directions. Oxford University Press, 2004.</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org71b2bf0" class="outline-3">
+<h3 id="org71b2bf0"><span class="section-number-3">3.4.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li>“Animal Law Foundation | Support Animals Today,” Animal Law Foundation. Accessed: Feb. 13, 2026. [Online]. Available: <a href="https://animallawfoundation.org">https://animallawfoundation.org</a></li>
+
+<li>“The world’s leading farm animal welfare organisation.” Accessed: Nov. 26, 2025. [Online]. Available: <a href="https://www.ciwf.org/">https://www.ciwf.org/</a></li>
+
+<li>Stephen and Helen Jones, “Waitrose ‘relies on animal welfare myths.’” Accessed: Nov. 01, 2025. [Online]. Available: <a href="https://theecologist.org/2025/oct/31/waitrose-relies-animal-welfare-myths">https://theecologist.org/2025/oct/31/waitrose-relies-animal-welfare-myths</a></li>
+
+<li>“Hong Kong Customs Intercepts 150-tonne Shipment of Donkey Skins,” OCCRP. Accessed: Oct. 29, 2025. [Online]. Available: <a href="https://www.occrp.org/en/news/hong-kong-customs-intercepts-150-tonne-shipment-of-donkey-skins">https://www.occrp.org/en/news/hong-kong-customs-intercepts-150-tonne-shipment-of-donkey-skins</a></li>
+
+<li>S. Kelleher, “EPA effort to withdraw pollution controls for slaughterhouses is illegal, lawsuit claims,” The New Lede. Accessed: Sep. 17, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/09/epa-effort-to-withdraw-pollution-controls-for-slaughterhouses-is-illegal-lawsuit-claims/">https://www.thenewlede.org/2025/09/epa-effort-to-withdraw-pollution-controls-for-slaughterhouses-is-illegal-lawsuit-claims/</a></li>
+
+<li>M. Sledge, “How the FBI and Big Ag Started Treating Animal Rights Activists as Bioterrorists,” The Intercept. Accessed: Jun. 09, 2025. [Online]. Available: <a href="https://theintercept.com/2025/06/02/fbi-animal-rights-bird-flu-disease-terrorists/">https://theintercept.com/2025/06/02/fbi-animal-rights-bird-flu-disease-terrorists/</a></li>
+
+<li>P. Singer, “Francis on Animals | by Peter Singer,” Project Syndicate. Accessed: May 03, 2025. [Online]. Available: <a href="https://www.project-syndicate.org/commentary/pope-francis-reject-human-domination-but-no-practical-change-by-peter-singer-2025-05">https://www.project-syndicate.org/commentary/pope-francis-reject-human-domination-but-no-practical-change-by-peter-singer-2025-05</a></li>
+
+<li>H. Mensendiek, “Breathing injustice: How a new scientific tool could help communities oppose industrial animal farming pollution,” U.S. Right to Know. Accessed: Apr. 29, 2025. [Online]. Available: <a href="https://usrtk.org/factory-farming/new-tool-measure-industrial-animal-farming-pollution/">https://usrtk.org/factory-farming/new-tool-measure-industrial-animal-farming-pollution/</a></li>
+
+<li>“Best Friends Animal Society: No Friend to Animals,” PETA. Accessed: Apr. 26, 2025. [Online]. Available: <a href="https://www.peta.org/features/best-friends-animal-society/">https://www.peta.org/features/best-friends-animal-society/</a></li>
+
+<li>P. Staff, “Is the Global Animal Partnership Bad? Get the Facts,” PETA. Accessed: Mar. 31, 2025. [Online]. Available: <a href="https://www.peta.org/blog/global-animal-partnership-campaign-history/">https://www.peta.org/blog/global-animal-partnership-campaign-history/</a></li>
+<li>“Advertorial: Happy Hens Farm,” Down To Earth. Accessed: Mar. 31, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/advertorial-happy-hens-farm-01">https://www.downtoearth.org.in/advertorial-happy-hens-farm-01</a></li>
+
+<li>P. Joshipura, Survival at Stake : How Our Treatment of Animals Is Key to Human Existence. Noida, Uttar Pradesh, India: HarperCollins India, 2023.</li>
+
+<li>“Animal rights activists flock to KFC protests.” Accessed: Mar. 13, 2025. [Online]. Available: <a href="https://theecologist.org/2025/mar/11/animal-rights-activists-flock-kfc-protests">https://theecologist.org/2025/mar/11/animal-rights-activists-flock-kfc-protests</a></li>
+
+<li>G. Moran, “The FBI’s Weapons of Mass Destruction Program Has a New Target: Animal Rights Activists,” The Intercept. Accessed: Oct. 23, 2024. [Online]. Available: <a href="https://theintercept.com/2024/10/19/fbi-meat-industry-animal-rights-activists-weapons-mass-destruction/">https://theintercept.com/2024/10/19/fbi-meat-industry-animal-rights-activists-weapons-mass-destruction/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd9907b7" class="outline-2">
+<h2 id="orgd9907b7"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org6dcb44f" class="outline-3">
+<h3 id="org6dcb44f"><span class="section-number-3">4.1.</span> Education</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>“K–12 Lesson Plans and Classroom Tips for Compassionate Teachers,” PETA. Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://www.peta.org/teachkind/">https://www.peta.org/teachkind/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgabf683e" class="outline-2">
+<h2 id="orgabf683e"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orge23e957" class="outline-3">
+<h3 id="orge23e957"><span class="section-number-3">5.1.</span> Films</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>“Okja,” Wikipedia. Sep. 26, 2022. Accessed: Oct. 07, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Okja&amp;oldid=1112385497">https://en.wikipedia.org/w/index.php?title=Okja&amp;oldid=1112385497</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3467887" class="outline-3">
+<h3 id="org3467887"><span class="section-number-3">5.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>“Listen In to the PETA Podcast,” PETA. Accessed: Jul. 18, 2025. [Online]. Available: <a href="https://www.peta.org/features/peta-podcast-listen-now/">https://www.peta.org/features/peta-podcast-listen-now/</a></li>
+
+<li>T. M. P. Reader, “The Ghost Bird’s Last Song: How a 1935 Recording Became a Symbol of Hope and Controversy,” The MIT Press Reader. Accessed: Apr. 11, 2025. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/the-ghost-birds-last-song-how-a-1935-recording-became-a-symbol-of-hope-and-controversy/">https://thereader.mitpress.mit.edu/the-ghost-birds-last-song-how-a-1935-recording-became-a-symbol-of-hope-and-controversy/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org374b265" class="outline-2">
+<h2 id="org374b265"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org4edef6c" class="outline-3">
+<h3 id="org4edef6c"><span class="section-number-3">6.1.</span> Documentaries</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>“Earthlings (film),” Wikipedia. Feb. 03, 2025. Accessed: Mar. 18, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Earthlings_(film)&amp;oldid=1273772960">https://en.wikipedia.org/w/index.php?title=Earthlings_(film)&amp;oldid=1273772960</a>
+<ul class="org-ul">
+<li>Earthlings. Accessed: Mar. 18, 2025. [Online Video]. Available: <a href="http://archive.org/details/earthlings-704x-528">http://archive.org/details/earthlings-704x-528</a></li>
+</ul></li>
+
+<li>“Eating Our Way to Extinction,” Wikipedia. Jan. 06, 2025. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Eating_Our_Way_to_Extinction&amp;oldid=1267824865">https://en.wikipedia.org/w/index.php?title=Eating_Our_Way_to_Extinction&amp;oldid=1267824865</a>
+<ul class="org-ul">
+<li>EATING OUR WAY TO EXTINCTION, Eating Our Way to Extinction | Film (ENGLISH) - Documentary, (Jul. 16, 2022). Accessed: Jan. 26, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=LaPge01NQTQ">https://www.youtube.com/watch?v=LaPge01NQTQ</a></li>
+</ul></li>
+
+<li>“Seaspiracy,” Wikipedia. Dec. 21, 2024. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Seaspiracy&amp;oldid=1264316428">https://en.wikipedia.org/w/index.php?title=Seaspiracy&amp;oldid=1264316428</a></li>
+<li>“Cowspiracy,” Wikipedia. Nov. 03, 2024. Accessed: Jan. 26, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Cowspiracy&amp;oldid=1255194122">https://en.wikipedia.org/w/index.php?title=Cowspiracy&amp;oldid=1255194122</a></li>
+<li>“What the Health,” Wikipedia. Nov. 21, 2024. Accessed: Jan. 28, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=What_the_Health&amp;oldid=1258679753">https://en.wikipedia.org/w/index.php?title=What_the_Health&amp;oldid=1258679753</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd12a52b" class="outline-3">
+<h3 id="orgd12a52b"><span class="section-number-3">6.2.</span> Texts</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>M. Ricard, A Plea for the Animals: The Moral, Philosophical, and Evolutionary Imperative to Treat All Beings with Compassion. Boulder: Shambhala, 2016.</li>
+
+<li>M. C. Nussbaum, Justice for Animals: Our Collective Responsibility. New York (N.Y.) London: Simon &amp; Schuster, 2023.</li>
+
+<li>D. Prater, “Free the Animals 30th Anniversary Edition—Order It Now,” PETA. Accessed: Mar. 20, 2025. [Online]. Available: <a href="https://www.peta.org/blog/free-the-animals-30th-anniversary-edition/">https://www.peta.org/blog/free-the-animals-30th-anniversary-edition/</a></li>
+<li>I. Newkirk and G. Stone, Animalkind: Remarkable Discoveries about Animals and Revolutionary New Ways to Show Them Compassion. Simon and Schuster, 2021.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfce69c7" class="outline-2">
+<h2 id="orgfce69c7"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org2adb139" class="outline-3">
+<h3 id="org2adb139"><span class="section-number-3">7.1.</span> FAO</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>FAO, Framework for early warning of animal health threats. Rome, Italy: FAO, 2025. doi: 10.4060/cd6477en.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org591fac1" class="outline-3">
+<h3 id="org591fac1"><span class="section-number-3">7.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>“Time to act on animal welfare.” Accessed: Feb. 13, 2026. [Online]. Available: <a href="https://theecologist.org/2026/feb/13/time-act-animal-welfare">https://theecologist.org/2026/feb/13/time-act-animal-welfare</a></li>
+
+<li>“FAST Community | Join the Animal Advocacy Community,” FAST Community. Accessed: Feb. 13, 2026. [Online]. Available: <a href="https://fastcommunity.org">https://fastcommunity.org</a></li>
+
+<li>“Starmer’s ‘sneaky’ animal rights protest ban.” Accessed: Feb. 09, 2026. [Online]. Available: <a href="https://theecologist.org/2026/feb/09/starmers-sneaky-animal-rights-protest-ban">https://theecologist.org/2026/feb/09/starmers-sneaky-animal-rights-protest-ban</a></li>
+
+<li>“End orca captivity.” Accessed: Jan. 16, 2026. [Online]. Available: <a href="https://theecologist.org/2026/jan/15/end-orca-captivity">https://theecologist.org/2026/jan/15/end-orca-captivity</a></li>
+
+<li>“Warm words won’t free hens.” Accessed: Jan. 14, 2026. [Online]. Available: <a href="https://theecologist.org/2026/jan/13/warm-words-wont-free-hens">https://theecologist.org/2026/jan/13/warm-words-wont-free-hens</a></li>
+
+<li>“Animal rights and legal wrongs.” Accessed: Jan. 09, 2026. [Online]. Available: <a href="https://theecologist.org/2026/jan/08/animal-rights-and-legal-wrongs">https://theecologist.org/2026/jan/08/animal-rights-and-legal-wrongs</a></li>
+
+<li>L. Elmer, “Framework for early warning of animal health threats - CSER,” CSER - Centre for the Study of Existential Risk. Accessed: Nov. 11, 2025. [Online]. Available: <a href="https://www.cser.ac.uk/work/framework-for-early-warning-of-animal-health-threats/">https://www.cser.ac.uk/work/framework-for-early-warning-of-animal-health-threats/</a></li>
+
+<li>“‘Animals matter as we plan our world.’” Accessed: Oct. 21, 2025. [Online]. Available: <a href="https://theecologist.org/2025/oct/20/animals-matter-we-plan-our-world">https://theecologist.org/2025/oct/20/animals-matter-we-plan-our-world</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Craig Conant Joins His Cats on a ‘Paw-cast’ (VIDEO),” PETA. Accessed: Aug. 09, 2025. [Online]. Available: <a href="https://www.peta.org/features/craig-conant-cat-care-psa/">https://www.peta.org/features/craig-conant-cat-care-psa/</a></li>
+<li>“Does SeaWorld Still Have Orcas? | PETA,” SeaWorld of Hurt. Accessed: Aug. 09, 2025. [Online]. Available: <a href="https://www.seaworldofhurt.com/features/surviving-orcas-seaworld-parks/">https://www.seaworldofhurt.com/features/surviving-orcas-seaworld-parks/</a></li>
+<li>S. Oliver, “Vegan i Scream Truck Launches Nationwide Tour,” PETA. Accessed: Aug. 09, 2025. [Online]. Available: <a href="https://www.peta.org/news/i-scream-truck/">https://www.peta.org/news/i-scream-truck/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>S. Oliver, “Aalborg Zoo Wants Companion Animals—Learn Why,” PETA. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://www.peta.org/news/nothing-natural-about-the-aalborg-zoo-feeding-guinea-pigs-to-tigers/">https://www.peta.org/news/nothing-natural-about-the-aalborg-zoo-feeding-guinea-pigs-to-tigers/</a></li>
+
+<li>Elena, “Trial Reveals Another Deadly Cost of Hermès’ Handbags,” PETA. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://www.peta.org/news/hermes-handbags-crocodile-hunter-killed/">https://www.peta.org/news/hermes-handbags-crocodile-hunter-killed/</a></li>
+<li>“Maine Lobster Festival Sued by PETA for Steaming Lobsters Alive,” PETA. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://www.peta.org/media/news-releases/maine-lobster-festival-sued-by-peta-for-steaming-lobsters-alive/">https://www.peta.org/media/news-releases/maine-lobster-festival-sued-by-peta-for-steaming-lobsters-alive/</a></li>
+<li>D. J. Olsen, “Why San Antonio Aquarium Is a Shipwreck of a Facility,” PETA. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://www.peta.org/news/san-antonio-aquarium/">https://www.peta.org/news/san-antonio-aquarium/</a></li>
+<li>K. Brown, “Stating the Obvious to Massachusetts Legislators: Baby Monkeys Need Their Mothers,” PETA. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://www.peta.org/news/ma-legislators-baby-monkeys-need-their-mothers/">https://www.peta.org/news/ma-legislators-baby-monkeys-need-their-mothers/</a></li>
+<li>S. Oliver, “Trophy Hunter Killed by Cape Buffalo in South Africa,” PETA. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://www.peta.org/news/trophy-hunter-killed-by-cape-buffalo/">https://www.peta.org/news/trophy-hunter-killed-by-cape-buffalo/</a></li>
+<li>“Farmer Focus Chicken: What the Labels Don’t Tell You,” PETA Exposés and Undercover Investigations. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://investigations.peta.org/farmer-focus-chicken/">https://investigations.peta.org/farmer-focus-chicken/</a></li>
+<li>“Feds Send 1,000 Endangered Monkeys to Cruel Charles River Laboratories,” PETA. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://www.peta.org/action/action-alerts/1000-endangered-monkeys/">https://www.peta.org/action/action-alerts/1000-endangered-monkeys/</a></li>
+<li>“Drone Attack Hits Animal Rescue Van in Ukraine,” PETA Headlines. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://headlines.peta.org/ukraine-updates/august-6-peta-backed-rescuers-survive-another-drone-attack/">https://headlines.peta.org/ukraine-updates/august-6-peta-backed-rescuers-survive-another-drone-attack/</a></li>
+
+<li>S. Manocha, “Tips to Help Animals During Rains - Blog,” PETA India. Accessed: Jul. 08, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/tips-to-help-animals-during-rains/">https://www.petaindia.com/blog/tips-to-help-animals-during-rains/</a></li>
+
+<li>“PETA Wins! The Taiwan FDA Prevents Cruel Arthritis Tests on Animals,” PETA. Accessed: Jul. 04, 2025. [Online]. Available: <a href="https://www.peta.org/action/action-alerts/urge-taiwanese-government-to-ban-animal-experiments-in-anti-arthritis-testing/">https://www.peta.org/action/action-alerts/urge-taiwanese-government-to-ban-animal-experiments-in-anti-arthritis-testing/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Stop Cruel and Deadly Experiments on Animals.” Accessed: Jul. 03, 2025. [Online]. Available: <a href="https://support.peta.org/page/31339/donate/1?locale=en-US">https://support.peta.org/page/31339/donate/1?locale=en-US</a></li>
+<li>K. Brown, “Coast Guard Reaffirms Ban on Cruel Trauma Training,” PETA. Accessed: Jul. 03, 2025. [Online]. Available: <a href="https://www.peta.org/news/coast-guard-to-reaffirm-stance-against-animal-mutilation-drills/">https://www.peta.org/news/coast-guard-to-reaffirm-stance-against-animal-mutilation-drills/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Elena, “Wu-Tang Clan Legend Stars in ‘Killa’ New PETA Ad | News,” PETA. Accessed: Jun. 24, 2025. [Online]. Available: <a href="https://www.peta.org/news/wu-tang-clans-masta-killa/">https://www.peta.org/news/wu-tang-clans-masta-killa/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>Elena, “Pig Gas Chambers and the ‘Animal Welfare Certified’ Lie,” PETA. Accessed: May 10, 2025. [Online]. Available: <a href="https://www.peta.org/blog/pig-gas-chambers-gap/">https://www.peta.org/blog/pig-gas-chambers-gap/</a></li>
+
+<li>“Best Friends Animal Society: No Friend to Animals,” PETA. Accessed: May 10, 2025. [Online]. Available: <a href="https://www.peta.org/features/best-friends-animal-society/">https://www.peta.org/features/best-friends-animal-society/</a></li>
+
+<li>P. Staff, “How the Dairy Industry Is Cruel to Mothers,” PETA. Accessed: May 10, 2025. [Online]. Available: <a href="https://www.peta.org/blog/honor-all-mothers-this-mothers-day/">https://www.peta.org/blog/honor-all-mothers-this-mothers-day/</a></li>
+
+<li>P. Staff, “How the Dairy Industry Is Cruel to Mothers,” PETA. Accessed: May 10, 2025. [Online]. Available: <a href="https://www.peta.org/blog/honor-all-mothers-this-mothers-day/">https://www.peta.org/blog/honor-all-mothers-this-mothers-day/</a></li>
+
+<li>“Farmer Focus Chicken: What the Labels Don’t Tell You,” PETA Exposés and Undercover Investigations. Accessed: May 10, 2025. [Online]. Available: <a href="https://investigations.peta.org/farmer-focus-chicken/">https://investigations.peta.org/farmer-focus-chicken/</a></li>
+
+<li>Elena, “Fashion Police! 11 Times PETA Shocked Hermés Shoppers,” PETA. Accessed: May 10, 2025. [Online]. Available: <a href="https://www.peta.org/blog/peta-hermes-campaign/">https://www.peta.org/blog/peta-hermes-campaign/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>Elena, “‘American Psycho’ Director Exposes Animal Tests in Chilling Short,” PETA. Accessed: Apr. 15, 2025. [Online]. Available: <a href="https://www.peta.org/blog/mary-harron-exposes-animal-tests-for-american-psycho-anniversary/">https://www.peta.org/blog/mary-harron-exposes-animal-tests-for-american-psycho-anniversary/</a></li>
+
+<li>P. Staff, “Is the Global Animal Partnership Bad? Get the Facts,” PETA. Accessed: Apr. 15, 2025. [Online]. Available: <a href="https://www.peta.org/blog/global-animal-partnership-campaign-history/">https://www.peta.org/blog/global-animal-partnership-campaign-history/</a></li>
+
+<li>M. Sanger, “Groundbreaking ‘How the Other Half Lives’ Exhibit,” PETA. Accessed: Apr. 15, 2025. [Online]. Available: <a href="https://www.peta.org/blog/how-the-other-half-lives/">https://www.peta.org/blog/how-the-other-half-lives/</a></li>
+
+<li>“Video: Mayim Bialik Shares Animal-Friendly Seder Tips,” PETA. Accessed: Apr. 13, 2025. [Online]. Available: <a href="https://www.peta.org/living/food/mayim-bialik-vegan-passover-tips/">https://www.peta.org/living/food/mayim-bialik-vegan-passover-tips/</a></li>
+
+<li>“Why PETA’s Ingrid Newkirk Is Still Getting in Our Faces.” Accessed: Apr. 11, 2025. [Online]. Available: <a href="https://www.washingtonian.com/2025/04/10/why-petas-ingrid-newkirk-is-still-getting-in-our-faces/">https://www.washingtonian.com/2025/04/10/why-petas-ingrid-newkirk-is-still-getting-in-our-faces/</a></li>
+
+<li>“Ending the use of animals in agriculture.” Accessed: Apr. 04, 2025. [Online]. Available: <a href="https://www.animaljusticeproject.com/">https://www.animaljusticeproject.com/</a></li>
+
+<li>P. Staff, “Is the Global Animal Partnership Bad? Get the Facts,” PETA. Accessed: Mar. 26, 2025. [Online]. Available: <a href="https://www.peta.org/blog/global-animal-partnership-campaign-history/">https://www.peta.org/blog/global-animal-partnership-campaign-history/</a></li>
+
+<li>“The PETA Shop | peta2.” Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://shop.peta.org/trending/peta2.html">https://shop.peta.org/trending/peta2.html</a></li>
+<li>“Sentient | Stories + solutions for a changing world.” Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://sentientmedia.org/">https://sentientmedia.org/</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:56</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

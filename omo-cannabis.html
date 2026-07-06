@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:58 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cannabis</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Cannabis</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org2c08de4">1. General</a></li>
+<li><a href="#orga9b5e4e">2. STEMM</a>
+<ul>
+<li><a href="#org121be14">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org415ef0d">3. World</a>
+<ul>
+<li><a href="#org5862c0a">3.1. Nation States</a>
+<ul>
+<li><a href="#org1f6a10c">3.1.1. India</a></li>
+</ul>
+</li>
+<li><a href="#org5c436bf">3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgdc6d71e">4. Core</a>
+<ul>
+<li><a href="#org501a808">4.1. Bhang</a>
+<ul>
+<li><a href="#org9c72104">4.1.1. General</a></li>
+<li><a href="#orgb753e38">4.1.2. STEMM</a></li>
+<li><a href="#org6349610">4.1.3. Worldly Matters</a></li>
+<li><a href="#org83b96cf">4.1.4. Core</a></li>
+<li><a href="#org9d0d35a">4.1.5. Arts</a></li>
+<li><a href="#org05b8afe">4.1.6. Special Topics</a></li>
+<li><a href="#org7cac5e4">4.1.7. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org01bbb71">4.2. Hemp</a>
+<ul>
+<li><a href="#org5554481">4.2.1. General</a></li>
+<li><a href="#orgf06f8f2">4.2.2. STEMM</a></li>
+<li><a href="#org3457b96">4.2.3. Worldly Matters</a></li>
+<li><a href="#orga8fae86">4.2.4. Core</a></li>
+<li><a href="#org716db0d">4.2.5. Arts</a></li>
+<li><a href="#orgca07ee5">4.2.6. Special Topics</a></li>
+<li><a href="#org4ffd71c">4.2.7. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1991a66">5. Special Topics</a>
+<ul>
+<li><a href="#org1d54aab">5.1. Transnational Institute</a></li>
+</ul>
+</li>
+<li><a href="#org4ec55a1">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org2c08de4" class="outline-2">
+<h2 id="org2c08de4"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orga9b5e4e" class="outline-2">
+<h2 id="orga9b5e4e"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org121be14" class="outline-3">
+<h3 id="org121be14"><span class="section-number-3">2.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org415ef0d" class="outline-2">
+<h2 id="org415ef0d"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org5862c0a" class="outline-3">
+<h3 id="org5862c0a"><span class="section-number-3">3.1.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org1f6a10c" class="outline-4">
+<h4 id="org1f6a10c"><span class="section-number-4">3.1.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>Bhagirath, “Himachal Pradesh launches pilot project for cannabis farming to capitalise its medicinal and industrial value,” Down To Earth. Accessed: Jan. 29, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/agriculture/himachal-pradesh-launches-pilot-project-for-cannabis-farming-to-capitalise-its-medicinal-and-industrial-value">https://www.downtoearth.org.in/agriculture/himachal-pradesh-launches-pilot-project-for-cannabis-farming-to-capitalise-its-medicinal-and-industrial-value</a></li>
+
+<li>K. Madhok, “Decriminalising Cannabis: Is it Time to Weed out Taboos and Embrace the Plant as India’s Cultural Gift to the World?,” Frontline. Accessed: Nov. 28, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/society/cannabis-india-ban-history-law-pop-culture-cinema-songs/article68881722.ece">https://frontline.thehindu.com/society/cannabis-india-ban-history-law-pop-culture-cinema-songs/article68881722.ece</a></li>
+<li>D. Gandhi, “How One Activist is Leading the Push for Legalisation of Cannabis in India,” Frontline. Accessed: Nov. 28, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/society/cannabis-legalisation-viki-vaurora-great-legalisation-movement-interview-thc-cbd-therapeutic-effects/article68882098.ece">https://frontline.thehindu.com/society/cannabis-legalisation-viki-vaurora-great-legalisation-movement-interview-thc-cbd-therapeutic-effects/article68882098.ece</a></li>
+<li>T. K. Rajalakshmi, “Will Himachal Pradesh’s Resolution for Controlled Cultivation of Cannabis Prove a Game-Changer?,” Frontline. Accessed: Nov. 28, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/society/himachal-pradesh-cannabis-controlled-cultivation-assembly-resolution-legalisation-agriculture-economic-impact/article68889249.ece">https://frontline.thehindu.com/society/himachal-pradesh-cannabis-controlled-cultivation-assembly-resolution-legalisation-agriculture-economic-impact/article68889249.ece</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5c436bf" class="outline-3">
+<h3 id="org5c436bf"><span class="section-number-3">3.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>B. J. Borougerdi, “Food history: How cooked cannabis and cannabis-infused dishes became popular around the world,” Scroll.in. Accessed: Feb. 21, 2026. [Online]. Available: <a href="https://scroll.in/article/1090256/food-history-how-cooked-cannabis-and-cannabis-infused-dishes-became-popular-around-the-world">https://scroll.in/article/1090256/food-history-how-cooked-cannabis-and-cannabis-infused-dishes-became-popular-around-the-world</a></li>
+
+<li>A. Banerjee, “‘Ananda’: An illuminating and diverse account of the deep roots of cannabis in Indian society,” Scroll.in. Accessed: Apr. 19, 2025. [Online]. Available: <a href="https://scroll.in/article/1081370/ananda-an-illuminating-and-diverse-account-of-the-deep-roots-of-cannabis-in-indian-society">https://scroll.in/article/1081370/ananda-an-illuminating-and-diverse-account-of-the-deep-roots-of-cannabis-in-indian-society</a></li>
+<li>C. E. Bearden, “The Link between Cannabis and Psychosis in Teens Is Real,” Scientific American. Accessed: Apr. 19, 2025. [Online]. Available: <a href="https://www.scientificamerican.com/article/the-link-between-cannabis-and-psychosis-in-teens-is-real/">https://www.scientificamerican.com/article/the-link-between-cannabis-and-psychosis-in-teens-is-real/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdc6d71e" class="outline-2">
+<h2 id="orgdc6d71e"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org501a808" class="outline-3">
+<h3 id="org501a808"><span class="section-number-3">4.1.</span> Bhang</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org9c72104" class="outline-4">
+<h4 id="org9c72104"><span class="section-number-4">4.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>“Bhang,” Wikipedia. Feb. 17, 2022. Accessed: Mar. 16, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Bhang&amp;oldid=1072352376">https://en.wikipedia.org/w/index.php?title=Bhang&amp;oldid=1072352376</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb753e38" class="outline-4">
+<h4 id="orgb753e38"><span class="section-number-4">4.1.2.</span> STEMM</h4>
+<div class="outline-text-4" id="text-4-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org4cf214a"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org6349610" class="outline-4">
+<h4 id="org6349610"><span class="section-number-4">4.1.3.</span> Worldly Matters</h4>
+<div class="outline-text-4" id="text-4-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org542533c"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org83b96cf" class="outline-4">
+<h4 id="org83b96cf"><span class="section-number-4">4.1.4.</span> Core</h4>
+<div class="outline-text-4" id="text-4-1-4">
+</div>
+<ol class="org-ol">
+<li><a id="org048d023"></a>Texts<br />
+<div class="outline-text-5" id="text-4-1-4-1">
+<ul class="org-ul">
+<li>A. Bahibala, Bhang Journeys : Stories, Histories, Trips and Travels. Speaking Tiger, 2024.
+<ul class="org-ul">
+<li>A. Bahibala, “Why do many Ayurvedic doctors consider bhang a ‘medicine’? A new book tries to find answers,” Scroll.in. Accessed: Apr. 11, 2024. [Online]. Available: <a href="https://scroll.in/article/1066285/why-do-many-ayurvedic-doctors-consider-bhang-a-medicine-a-new-book-tries-to-find-answers">https://scroll.in/article/1066285/why-do-many-ayurvedic-doctors-consider-bhang-a-medicine-a-new-book-tries-to-find-answers</a></li>
+<li>I. Mitra, “‘Bhang Journeys’: A heady tale about the popular Indian intoxicant and its many splendours,” Scroll.in. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://scroll.in/article/1069133/bhang-journeys-a-heady-tale-about-the-popular-indian-intoxicant-and-its-many-splendours">https://scroll.in/article/1069133/bhang-journeys-a-heady-tale-about-the-popular-indian-intoxicant-and-its-many-splendours</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org1d04201"></a>Products<br />
+<ol class="org-ol">
+<li><a id="org7f74b7c"></a>Bhang Lassi<br />
+<div class="outline-text-6" id="text-4-1-4-2-1">
+<ul class="org-ul">
+<li>S. Staelens, “The Bhang Lassi Is How Hindus Drink Themselves High for Shiva,” Vice, Mar. 10, 2015. <a href="https://www.vice.com/en/article/kbx94a/httpmunchies-vice-comarticlesthe-bhang-lassi-is-how-hindus-drink-themselves-high-for-shiva">https://www.vice.com/en/article/kbx94a/httpmunchies-vice-comarticlesthe-bhang-lassi-is-how-hindus-drink-themselves-high-for-shiva</a> (accessed Feb. 18, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org5c49ca0"></a>Bhang Gola<br />
+<div class="outline-text-6" id="text-4-1-4-2-2">
+<ul class="org-ul">
+<li>Z. M. Khan, “Here’s the Deal With Bhang Gola,” Vice, Jul. 17, 2018. <a href="https://www.vice.com/en/article/ywkdem/heres-the-deal-with-bhang-gola">https://www.vice.com/en/article/ywkdem/heres-the-deal-with-bhang-gola</a> (accessed Feb. 18, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org9d0d35a" class="outline-4">
+<h4 id="org9d0d35a"><span class="section-number-4">4.1.5.</span> Arts</h4>
+<div class="outline-text-4" id="text-4-1-5">
+</div>
+<ol class="org-ol">
+<li><a id="org08cf5d4"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org05b8afe" class="outline-4">
+<h4 id="org05b8afe"><span class="section-number-4">4.1.6.</span> Special Topics</h4>
+</div>
+<div id="outline-container-org7cac5e4" class="outline-4">
+<h4 id="org7cac5e4"><span class="section-number-4">4.1.7.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org01bbb71" class="outline-3">
+<h3 id="org01bbb71"><span class="section-number-3">4.2.</span> Hemp</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org5554481" class="outline-4">
+<h4 id="org5554481"><span class="section-number-4">4.2.1.</span> General</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>“Hemp,” Wikipedia. Mar. 20, 2025. Accessed: Mar. 30, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Hemp&amp;oldid=1281395074">https://en.wikipedia.org/w/index.php?title=Hemp&amp;oldid=1281395074</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf06f8f2" class="outline-4">
+<h4 id="orgf06f8f2"><span class="section-number-4">4.2.2.</span> STEMM</h4>
+<div class="outline-text-4" id="text-4-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org6777a95"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org3457b96" class="outline-4">
+<h4 id="org3457b96"><span class="section-number-4">4.2.3.</span> Worldly Matters</h4>
+<div class="outline-text-4" id="text-4-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="org507cf57"></a>Nation States<br />
+<ol class="org-ol">
+<li><a id="org2c527c6"></a>India<br />
+<ul class="org-ul">
+<li><a id="org79851f8"></a>General<br /></li>
+<li><a id="org7254588"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org80eb1b5"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orgaa8efd1"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org99ffd07"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org0cde868"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="orgc7c9bec"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org72b00b9"></a>Special Topics<br /></li>
+<li><a id="orgdc3b399"></a>Misc<br /></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="org8eafcdd"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-orga8fae86" class="outline-4">
+<h4 id="orga8fae86"><span class="section-number-4">4.2.4.</span> Core</h4>
+<div class="outline-text-4" id="text-4-2-4">
+</div>
+<ol class="org-ol">
+<li><a id="orgfc2b9c9"></a>Seeds<br />
+<div class="outline-text-5" id="text-4-2-4-1">
+<ul class="org-ul">
+<li>“Hampa Hemp Hearts | Hemp seeds | Essential Edestin Protein, Good Fats - Omega - 3, 6 and 9 in a Golden Ratio, Dietary Fibres | Nutrition powerhouse with wholesome benefits | Miracle of nature (100, Plain Roasted) : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Mar. 30, 2025. [Online]. Available: <a href="https://www.amazon.in/Hampa-Hearts-Essential-Edestin-Protein/dp/B0D6VRSSRH">https://www.amazon.in/Hampa-Hearts-Essential-Edestin-Protein/dp/B0D6VRSSRH</a></li>
+<li>“Hampa Hemp Hearts 200g | Himalayan shelled hemp seeds | Essential Edestin Protein, Good fats- Omega - 3, 6 and 9 in a Golden Ratio, Dietary Fibres | Nutrition powerhouse with wholesome benefits | Miracle of nature : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Mar. 30, 2025. [Online]. Available: <a href="https://www.amazon.in/Hampa-Himalayan-shelled-Essential-Edestin/dp/B0DGX6HP96">https://www.amazon.in/Hampa-Himalayan-shelled-Essential-Edestin/dp/B0DGX6HP96</a></li>
+<li>“urban platter Hemp Hearts, 150G (Hulled Hemp Seeds,High In Protein,Rich In Fibre,Nutty &amp; Crunchy,Allergen-Free Superfood,Garnish Or Add To Smoothies, Sauces, Dips, And Marinades,Plant-Based Protein) : Amazon.in: Health &amp; Personal Care.” Accessed: Mar. 30, 2025. [Online]. Available: <a href="https://www.amazon.in/Allergen-free-Superfood-smoothies-marinades-Plant-based/dp/B0B51CQ96H">https://www.amazon.in/Allergen-free-Superfood-smoothies-marinades-Plant-based/dp/B0B51CQ96H</a></li>
+<li>“Hemptyful Hemp Hearts - Hulled Hemp Seeds | 10g Protein per Serving | 10g Omegas per Serving (250g) : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Mar. 30, 2025. [Online]. Available: <a href="https://www.amazon.in/Hemptyful-Hemp-Hearts-Protein-Serving/dp/B0CF2PVGZ1">https://www.amazon.in/Hemptyful-Hemp-Hearts-Protein-Serving/dp/B0CF2PVGZ1</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org716db0d" class="outline-4">
+<h4 id="org716db0d"><span class="section-number-4">4.2.5.</span> Arts</h4>
+<div class="outline-text-4" id="text-4-2-5">
+</div>
+<ol class="org-ol">
+<li><a id="org403ae8b"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgca07ee5" class="outline-4">
+<h4 id="orgca07ee5"><span class="section-number-4">4.2.6.</span> Special Topics</h4>
+</div>
+<div id="outline-container-org4ffd71c" class="outline-4">
+<h4 id="org4ffd71c"><span class="section-number-4">4.2.7.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-2-7">
+<ul class="org-ul">
+<li>“High Hopes for Hempcrete,” The Tyee. Accessed: Mar. 20, 2025. [Online]. Available: <a href="https://thetyee.ca/WhatWorks/2025/02/03/High-Hopes-Hempcrete/">https://thetyee.ca/WhatWorks/2025/02/03/High-Hopes-Hempcrete/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1991a66" class="outline-2">
+<h2 id="org1991a66"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org1d54aab" class="outline-3">
+<h3 id="org1d54aab"><span class="section-number-3">5.1.</span> Transnational Institute</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>“Cannabis | Transnational Institute.” Accessed: Jul. 20, 2024. [Online]. Available: <a href="https://www.tni.org/en/topic/cannabis">https://www.tni.org/en/topic/cannabis</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org4ec55a1" class="outline-2">
+<h2 id="org4ec55a1"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>B. J. Borougerdi, “Food history: How cooked cannabis and cannabis-infused dishes became popular around the world,” Scroll.in. Accessed: Feb. 21, 2026. [Online]. Available: <a href="https://scroll.in/article/1090256/food-history-how-cooked-cannabis-and-cannabis-infused-dishes-became-popular-around-the-world">https://scroll.in/article/1090256/food-history-how-cooked-cannabis-and-cannabis-infused-dishes-became-popular-around-the-world</a></li>
+
+<li>A. Banerjee, “‘Ananda’: An illuminating and diverse account of the deep roots of cannabis in Indian society,” Scroll.in. Accessed: Apr. 19, 2025. [Online]. Available: <a href="https://scroll.in/article/1081370/ananda-an-illuminating-and-diverse-account-of-the-deep-roots-of-cannabis-in-indian-society">https://scroll.in/article/1081370/ananda-an-illuminating-and-diverse-account-of-the-deep-roots-of-cannabis-in-indian-society</a></li>
+<li>C. E. Bearden, “The Link between Cannabis and Psychosis in Teens Is Real,” Scientific American. Accessed: Apr. 19, 2025. [Online]. Available: <a href="https://www.scientificamerican.com/article/the-link-between-cannabis-and-psychosis-in-teens-is-real/">https://www.scientificamerican.com/article/the-link-between-cannabis-and-psychosis-in-teens-is-real/</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:58</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

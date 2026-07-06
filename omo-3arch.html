@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Architecture</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Architecture</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb647545">1. General</a></li>
+<li><a href="#orga2cabd9">2. Philosophy</a>
+<ul>
+<li><a href="#org378419a">2.1. Ethics</a></li>
+<li><a href="#orgf9dec16">2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org47c7507">3. STEMM</a>
+<ul>
+<li><a href="#orgdbd125a">3.1. Systems Sciences</a>
+<ul>
+<li><a href="#org116f222">3.1.1. Complexity Science</a></li>
+<li><a href="#orgc45670d">3.1.2. Network Science</a></li>
+<li><a href="#org936e293">3.1.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org8295983">3.2. Environment</a></li>
+<li><a href="#orgc19d213">3.3. CSE</a>
+<ul>
+<li><a href="#org030fb1b">3.3.1. Data Science</a></li>
+<li><a href="#org53bde62">3.3.2. AI</a></li>
+<li><a href="#orgec924b8">3.3.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgad75dc9">3.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org26df05b">4. Worldly Matters</a>
+<ul>
+<li><a href="#orgd600c01">4.1. Space and Time</a>
+<ul>
+<li><a href="#org88bc496">4.1.1. History</a></li>
+</ul>
+</li>
+<li><a href="#org9e8a7db">4.2. Space, Earth, Life Sciences, Environment, Health, Misc</a></li>
+<li><a href="#org35aaae3">4.3. Religions, Spirituality, Misc</a></li>
+<li><a href="#org87223f0">4.4. Humanities, Misc</a>
+<ul>
+<li><a href="#org979d523">4.4.1. Psychology</a></li>
+</ul>
+</li>
+<li><a href="#org1a368ae">4.5. SocioPolitical Studies, Law, Misc</a>
+<ul>
+<li><a href="#org43d5ef6">4.5.1. Orgs</a></li>
+<li><a href="#org5358d2f">4.5.2. Nation States</a></li>
+<li><a href="#org09fd9c9">4.5.3. Feminism</a></li>
+<li><a href="#org0d67359">4.5.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org845759d">4.6. Business Studies, Misc</a></li>
+<li><a href="#orga014e8c">4.7. Security Studies, Misc</a></li>
+<li><a href="#org46968f8">4.8. Communication, Misc</a></li>
+<li><a href="#orgb2680ee">4.9. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgb148cca">5. Arts</a>
+<ul>
+<li><a href="#org2b0d536">5.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org2b22563">6. Special Topics</a></li>
+<li><a href="#org8c4d022">7. Misc</a>
+<ul>
+<li><a href="#org64c4f45">7.1. 9</a></li>
+<li><a href="#orgaf25f36">7.2. Texts</a></li>
+<li><a href="#orgdbd0225">7.3. Articles, Essays</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgb647545" class="outline-2">
+<h2 id="orgb647545"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orga2cabd9" class="outline-2">
+<h2 id="orga2cabd9"><span class="section-number-2">2.</span> Philosophy</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org378419a" class="outline-3">
+<h3 id="org378419a"><span class="section-number-3">2.1.</span> Ethics</h3>
+</div>
+<div id="outline-container-orgf9dec16" class="outline-3">
+<h3 id="orgf9dec16"><span class="section-number-3">2.2.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org47c7507" class="outline-2">
+<h2 id="org47c7507"><span class="section-number-2">3.</span> STEMM</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgdbd125a" class="outline-3">
+<h3 id="orgdbd125a"><span class="section-number-3">3.1.</span> Systems Sciences</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org116f222" class="outline-4">
+<h4 id="org116f222"><span class="section-number-4">3.1.1.</span> Complexity Science</h4>
+</div>
+<div id="outline-container-orgc45670d" class="outline-4">
+<h4 id="orgc45670d"><span class="section-number-4">3.1.2.</span> Network Science</h4>
+</div>
+<div id="outline-container-org936e293" class="outline-4">
+<h4 id="org936e293"><span class="section-number-4">3.1.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ul class="org-ul">
+<li>J. Harris, <b>Fractal Architecture: Organic Design Philosophy in Theory and Practice.</b> UNM Press, 2012.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8295983" class="outline-3">
+<h3 id="org8295983"><span class="section-number-3">3.2.</span> Environment</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>A. Nelson and F. Schneider, Eds., Housing for Degrowth: Principles, Models, Challenges and Opportunities, 1st edition. Abingdon, Oxon ; New York, NY: Routledge, 2018.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc19d213" class="outline-3">
+<h3 id="orgc19d213"><span class="section-number-3">3.3.</span> CSE</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org030fb1b" class="outline-4">
+<h4 id="org030fb1b"><span class="section-number-4">3.3.1.</span> Data Science</h4>
+</div>
+<div id="outline-container-org53bde62" class="outline-4">
+<h4 id="org53bde62"><span class="section-number-4">3.3.2.</span> AI</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<ul class="org-ul">
+<li>I. As and P. Basu, Eds., The Routledge Companion to Artificial Intelligence in Architecture, 1st edition. Abington, Oxon ; New York: Routledge, 2021.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgec924b8" class="outline-4">
+<h4 id="orgec924b8"><span class="section-number-4">3.3.3.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<ul class="org-ul">
+<li>“Brazilian Interiors That Use Organic Shapes to Challenge Straight Lines | ArchDaily.” <a href="https://www.archdaily.com/991921/brazilian-interiors-that-use-organic-shapes-to-challenge-straight-lines">https://www.archdaily.com/991921/brazilian-interiors-that-use-organic-shapes-to-challenge-straight-lines</a> (accessed Nov. 19, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>F. Sepanta, “How virtual reality technologies are shaping an inclusive future for architecture,” The Conversation. Accessed: Jan. 10, 2025. [Online]. Available: <a href="http://theconversation.com/how-virtual-reality-technologies-are-shaping-an-inclusive-future-for-architecture-244356">http://theconversation.com/how-virtual-reality-technologies-are-shaping-an-inclusive-future-for-architecture-244356</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgad75dc9" class="outline-3">
+<h3 id="orgad75dc9"><span class="section-number-3">3.4.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li>D. S. Team and M. J. Ostwald, “The Science of Beautiful Buildings,” The Conversation. Accessed: Sep. 12, 2025. [Online]. Available: <a href="http://theconversation.com/the-science-of-beautiful-buildings-257453">http://theconversation.com/the-science-of-beautiful-buildings-257453</a></li>
+
+<li>B. T. C. Team, “Beyond Architecture: Redefining The Place of Sustainability in Architectural Designs with Re:Vision,” Medium. Accessed: Sep. 10, 2025. [Online]. Available: <a href="https://bthechange.com/beyond-architecture-redefining-the-place-of-sustainability-in-architectural-designs-with-re-vision-7cb5998ac412">https://bthechange.com/beyond-architecture-redefining-the-place-of-sustainability-in-architectural-designs-with-re-vision-7cb5998ac412</a></li>
+
+<li>“The Genius of Gaudí: Geometry and Architecture.” Accessed: Jul. 04, 2025. [Online]. Available: <a href="https://bookstore.ams.org/SPEC/106">https://bookstore.ams.org/SPEC/106</a></li>
+
+<li>“How the buildings you occupy might be affecting your brain | Psyche Ideas,” Psyche. Accessed: Sep. 03, 2024. [Online]. Available: <a href="https://psyche.co/ideas/how-the-buildings-you-occupy-might-be-affecting-your-brain">https://psyche.co/ideas/how-the-buildings-you-occupy-might-be-affecting-your-brain</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org26df05b" class="outline-2">
+<h2 id="org26df05b"><span class="section-number-2">4.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgd600c01" class="outline-3">
+<h3 id="orgd600c01"><span class="section-number-3">4.1.</span> Space and Time</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org88bc496" class="outline-4">
+<h4 id="org88bc496"><span class="section-number-4">4.1.1.</span> History</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>B. Calder, Architecture: From Prehistory to Climate Emergency. Penguin UK, 2021.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9e8a7db" class="outline-3">
+<h3 id="org9e8a7db"><span class="section-number-3">4.2.</span> Space, Earth, Life Sciences, Environment, Health, Misc</h3>
+</div>
+<div id="outline-container-org35aaae3" class="outline-3">
+<h3 id="org35aaae3"><span class="section-number-3">4.3.</span> Religions, Spirituality, Misc</h3>
+</div>
+<div id="outline-container-org87223f0" class="outline-3">
+<h3 id="org87223f0"><span class="section-number-3">4.4.</span> Humanities, Misc</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-org979d523" class="outline-4">
+<h4 id="org979d523"><span class="section-number-4">4.4.1.</span> Psychology</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<ul class="org-ul">
+<li>A. de Botton, The Architecture of Happiness. Penguin UK, 2007.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1a368ae" class="outline-3">
+<h3 id="org1a368ae"><span class="section-number-3">4.5.</span> SocioPolitical Studies, Law, Misc</h3>
+<div class="outline-text-3" id="text-4-5">
+</div>
+<div id="outline-container-org43d5ef6" class="outline-4">
+<h4 id="org43d5ef6"><span class="section-number-4">4.5.1.</span> Orgs</h4>
+</div>
+<div id="outline-container-org5358d2f" class="outline-4">
+<h4 id="org5358d2f"><span class="section-number-4">4.5.2.</span> Nation States</h4>
+<div class="outline-text-4" id="text-4-5-2">
+</div>
+<ol class="org-ol">
+<li><a id="org39f64f4"></a>India<br />
+<ol class="org-ol">
+<li><a id="org269b3e6"></a>General<br /></li>
+<li><a id="orgaee5689"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="orgc89ba3d"></a>Environment<br />
+<div class="outline-text-7" id="text-orgc89ba3d">
+<ul class="org-ul">
+<li>A. Roychowdhury and A. Somvanshi, <i>Building Sense : Beyond The Green Façade Of Sustainable Habitat, First Edition.</i> New Delhi: Centre for Science &amp; Environment, 2014.</li>
+
+<li>P. Shankar, “[Book Review] Didi Contractor’s journey through ecologically-sensitive architecture,” Mongabay-India. Accessed: Jul. 31, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/07/book-review-didi-contractors-journey-through-ecologically-sensitive-architecture/">https://india.mongabay.com/2024/07/book-review-didi-contractors-journey-through-ecologically-sensitive-architecture/</a></li>
+
+<li>P. Banerjee, “The architecture &amp; landscape of Santiniketan embrace nature as primary educator,” Down To Earth. Accessed: Aug. 07, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/environment/the-architecture-landscape-of-santiniketan-embrace-nature-as-primary-educator-91901">https://www.downtoearth.org.in/environment/the-architecture-landscape-of-santiniketan-embrace-nature-as-primary-educator-91901</a></li>
+
+<li>arathimenon, “Rooted in tradition, nature-based architecture bridges generations,” Mongabay-India. Accessed: Nov. 02, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/11/rooted-in-tradition-nature-based-architecture-bridges-generations/">https://india.mongabay.com/2024/11/rooted-in-tradition-nature-based-architecture-bridges-generations/</a></li>
+
+<li>“Inspiration Office, Kochi,” Inspiration Collective - For Sensitively Created Living Environs. <a href="https://www.inspirationcollective.org/projects/inspiration-office-kochi">https://www.inspirationcollective.org/projects/inspiration-office-kochi</a> (accessed Nov. 24, 2022).</li>
+<li>“Inspiration Collective - For Sensitively Created Living Environs,” Inspiration Collective - For Sensitively Created Living Environs. <a href="https://www.inspirationcollective.org">https://www.inspirationcollective.org</a> (accessed Nov. 24, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf36d95e"></a>Misc<br />
+<div class="outline-text-7" id="text-orgf36d95e">
+<ul class="org-ul">
+<li><a href="https://iisc.ac.in/events/formal-release-of-the-whitepaper-transforming-indias-built-environment-a-2050-vision-for-wellness-and-resilience-via-webex/">Formal release of the whitepaper “Transforming India’s Built Environment: A 2050 vision for wellness and resilience” via WebEx</a>, Indian Institute of Science. (accessed Nov. 25, 2021).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgf33e0c3"></a>World<br />
+<ul class="org-ul">
+<li><a id="org082e398"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org93b5435"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orge39eb0f"></a>Possibly MisInfo/DisInfo<br />
+<ul class="org-ul">
+<li><a id="orge3e7690"></a>Vaastu<br />
+<ul class="org-ul">
+<li><a id="orgd02ecf0"></a>General<br />
+<div class="outline-text-9" id="text-orgd02ecf0">
+<ul class="org-ul">
+<li>“Vastu shastra,” Wikipedia. Jun. 27, 2022. Accessed: Jul. 28, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Vastu_shastra&amp;oldid=1095235646">https://en.wikipedia.org/w/index.php?title=Vastu_shastra&amp;oldid=1095235646</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc57657f"></a>Core<br />
+<div class="outline-text-9" id="text-orgc57657f">
+<ul class="org-ul">
+<li>A. Sashikala, Guide To Vaastu. New Delhi: PENGUIN INDIA, 2000.</li>
+<li>P. Chawla, Vaastu: Secrets for a Better Life. The Times Group Books, 2008.</li>
+<li>R. E. Svoboda, VASTU, Bilingual edition. Rupa Publications India, 2020.</li>
+<li>R. Patra, Vaastu Shaastra an Ancient Technological Treatise, First Edition. Chicago: Fingerprint! Publishing, 2013.</li>
+<li>L. N. Sharma, Bhartiya Vaastu Shastra : An Ancient Science of Architecture. Notion Press, 2024.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgbf2b8cf"></a>Misc<br /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org91d4aeb"></a>Misc<br />
+<div class="outline-text-6" id="text-4-5-2-1-5">
+<ul class="org-ul">
+<li>“Mahadeva Gramam: Kannur village that keeps Gandhi’s quiet architect alive,” Mahadeva Gramam: Kannur village that keeps Gandhi’s quiet architect alive. Accessed: Aug. 16, 2025. [Online]. Available: <a href="https://www.onmanorama.com/news/kerala/2025/08/15/mahadev-desai-payyannur.html">https://www.onmanorama.com/news/kerala/2025/08/15/mahadev-desai-payyannur.html</a></li>
+
+<li>“The hostile architecture of Bimal Patel.” Accessed: Aug. 07, 2024. [Online]. Available: <a href="https://caravanmagazine.in/government/bimal-patel-modi-builder-hostile-architecture-central-vista">https://caravanmagazine.in/government/bimal-patel-modi-builder-hostile-architecture-central-vista</a></li>
+
+<li>“Māru-Gurjara architecture,” Wikipedia. Sep. 24, 2022. Accessed: Nov. 29, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=M%C4%81ru-Gurjara_architecture&amp;oldid=1112127244">https://en.wikipedia.org/w/index.php?title=M%C4%81ru-Gurjara_architecture&amp;oldid=1112127244</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org09fd9c9" class="outline-4">
+<h4 id="org09fd9c9"><span class="section-number-4">4.5.3.</span> Feminism</h4>
+<div class="outline-text-4" id="text-4-5-3">
+<ul class="org-ul">
+<li>D. Hayden, The Grand Domestic Revolution: A History of Feminist Designs For American Homes, Neighborhoods, and Cities. MIT Press, 1982.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0d67359" class="outline-4">
+<h4 id="org0d67359"><span class="section-number-4">4.5.4.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-5-4">
+<ul class="org-ul">
+<li>BY, “Brutalism Is Back.” Accessed: Aug. 17, 2025. [Online]. Available: <a href="https://jacobin.com/2025/08/architecture-brutalism-neobrutalism-aesthetics-ecology">https://jacobin.com/2025/08/architecture-brutalism-neobrutalism-aesthetics-ecology</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org845759d" class="outline-3">
+<h3 id="org845759d"><span class="section-number-3">4.6.</span> Business Studies, Misc</h3>
+</div>
+<div id="outline-container-orga014e8c" class="outline-3">
+<h3 id="orga014e8c"><span class="section-number-3">4.7.</span> Security Studies, Misc</h3>
+</div>
+<div id="outline-container-org46968f8" class="outline-3">
+<h3 id="org46968f8"><span class="section-number-3">4.8.</span> Communication, Misc</h3>
+</div>
+<div id="outline-container-orgb2680ee" class="outline-3">
+<h3 id="orgb2680ee"><span class="section-number-3">4.9.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgb148cca" class="outline-2">
+<h2 id="orgb148cca"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org2b0d536" class="outline-3">
+<h3 id="org2b0d536"><span class="section-number-3">5.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>“The Brutalist,” Wikipedia. Oct. 17, 2025. Accessed: Oct. 23, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=The_Brutalist&amp;oldid=1317403971">https://en.wikipedia.org/w/index.php?title=The_Brutalist&amp;oldid=1317403971</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2b22563" class="outline-2">
+<h2 id="org2b22563"><span class="section-number-2">6.</span> Special Topics</h2>
+</div>
+<div id="outline-container-org8c4d022" class="outline-2">
+<h2 id="org8c4d022"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org64c4f45" class="outline-3">
+<h3 id="org64c4f45"><span class="section-number-3">7.1.</span> 9</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>T. M. P. Reader, “Frank Gehry and the Art of Drawing,” The MIT Press Reader. Accessed: Dec. 08, 2025. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/frank-gehry-and-the-art-of-drawing/">https://thereader.mitpress.mit.edu/frank-gehry-and-the-art-of-drawing/</a></li>
+
+<li>T. Editors, “Building De Stijl Style,” JSTOR Daily. Accessed: Oct. 23, 2025. [Online]. Available: <a href="https://daily.jstor.org/building-de-stijl-style/">https://daily.jstor.org/building-de-stijl-style/</a></li>
+
+<li>T. Editors, “Tyler S. Sprague on the Intersection of Structure and Design,” JSTOR Daily. Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://daily.jstor.org/tyler-sprague-working-at-the-intersection-of-structure-and-design/">https://daily.jstor.org/tyler-sprague-working-at-the-intersection-of-structure-and-design/</a></li>
+
+<li>Undisciplined: Of Architectural Nomadism and the Rebellious Practice | Anthem Press. Accessed: Aug. 23, 2025. [Online]. Available: <a href="https://anthempress.com/books/undefined/books/undisciplined-of-architectural-nomadism-and-the-rebellious-practice-hb">https://anthempress.com/books/undefined/books/undisciplined-of-architectural-nomadism-and-the-rebellious-practice-hb</a></li>
+
+<li>“A lush tour of Fallingwater – the Frank Lloyd Wright design that changed architecture | Aeon Videos,” Aeon. Accessed: Jun. 24, 2025. [Online]. Available: <a href="https://aeon.co/videos/a-lush-tour-of-fallingwater-the-frank-lloyd-wright-design-that-changed-architecture">https://aeon.co/videos/a-lush-tour-of-fallingwater-the-frank-lloyd-wright-design-that-changed-architecture</a></li>
+
+<li>T. Editors, “Organic and Unusual: The Architecture of Bruce Goff,” JSTOR Daily. Accessed: Jun. 20, 2025. [Online]. Available: <a href="https://daily.jstor.org/organic-and-unusual-the-architecture-of-bruce-goff/">https://daily.jstor.org/organic-and-unusual-the-architecture-of-bruce-goff/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>O. Holland, “11 architecture projects set to shape the world in 2025,” CNN. Accessed: Jan. 04, 2025. [Online]. Available: <a href="https://www.cnn.com/2025/01/01/style/new-buildings-architecture-2025/index.html">https://www.cnn.com/2025/01/01/style/new-buildings-architecture-2025/index.html</a></li>
+
+<li>T. M. P. Reader, “How Fish Markets Transformed London’s Architectural Identity,” The MIT Press Reader. Accessed: Nov. 13, 2024. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/how-fish-markets-transformed-londons-architectural-identity/">https://thereader.mitpress.mit.edu/how-fish-markets-transformed-londons-architectural-identity/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgaf25f36" class="outline-3">
+<h3 id="orgaf25f36"><span class="section-number-3">7.2.</span> Texts</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li>H. Lefebvre, The Production of Space, 1st edition. Malden: Wiley-Blackwell, 1991.</li>
+
+<li>C. Alexander and P. in the D. of A. C. Alexander, <b>The Timeless Way of Building.</b> Oxford University Press, 1979.</li>
+<li>C. Alexander et al., <b>A Pattern Language: Towns, Buildings, Construction.</b> OUP USA, 1977.</li>
+
+<li>M. Z. Danielewski, G. Bachelard, and R. Kearney, <i>The Poetics of Space.</i> 2014.</li>
+
+<li>“Prior Art,” MIT Press. Accessed: Jan. 25, 2025. [Online]. Available: <a href="https://mitpress.mit.edu/9780262048958/prior-art/">https://mitpress.mit.edu/9780262048958/prior-art/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdbd0225" class="outline-3">
+<h3 id="orgdbd0225"><span class="section-number-3">7.3.</span> Articles, Essays</h3>
+<div class="outline-text-3" id="text-7-3">
+<ul class="org-ul">
+<li>T. M. P. Reader, “The Man Who Invented Times Square: O.J. Gude and the Birth of the Spectacular,” The MIT Press Reader. Accessed: Jul. 09, 2024. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/the-man-who-invented-times-square-o-j-gude-and-the-birth-of-the-spectacular/">https://thereader.mitpress.mit.edu/the-man-who-invented-times-square-o-j-gude-and-the-birth-of-the-spectacular/</a></li>
+
+<li>T. M. P. Reader, “The Tyranny of the Template: The Graphic Design of the First Edition of ‘Learning From Las Vegas,’” The MIT Press Reader. Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/the-tyranny-of-the-template-the-graphic-design-of-the-first-edition-of-learning-from-las-vegas/">https://thereader.mitpress.mit.edu/the-tyranny-of-the-template-the-graphic-design-of-the-first-edition-of-learning-from-las-vegas/</a></li>
+
+<li>“Furniture can be a ripely ambiguous artform of its own | Aeon Essays,” Aeon. Accessed: May 15, 2024. [Online]. Available: <a href="https://aeon.co/essays/furniture-can-be-a-ripely-ambiguous-artform-of-its-own">https://aeon.co/essays/furniture-can-be-a-ripely-ambiguous-artform-of-its-own</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:59</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

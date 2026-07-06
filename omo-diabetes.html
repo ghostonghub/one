@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Diabetes</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Diabetes</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org7d51420">1. General</a></li>
+<li><a href="#org01f179b">2. STEMM</a>
+<ul>
+<li><a href="#orge4b5aa2">2.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#orgcfe8bec">2.1.1. Complexity Science</a></li>
+<li><a href="#org4aa5105">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgf3e2c10">2.2. Biological Sciences, Misc</a></li>
+<li><a href="#orga8f2568">2.3. Basic Sciences, Misc</a></li>
+<li><a href="#org9bfbf18">2.4. Mathematical, Computational Sciences, Misc</a>
+<ul>
+<li><a href="#org7eac1b2">2.4.1. CSE</a></li>
+</ul>
+</li>
+<li><a href="#orgc2eeda6">2.5. Advanced Sciences, Misc</a></li>
+<li><a href="#org236e4ab">2.6. Technology, Misc</a></li>
+<li><a href="#org0e3e961">2.7. Special Topics</a>
+<ul>
+<li><a href="#org791fdc3">2.7.1. Texts</a></li>
+</ul>
+</li>
+<li><a href="#org552aae0">2.8. Misc</a>
+<ul>
+<li><a href="#org8c35b4d">2.8.1. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgf31e792">3. Worldly Matters</a>
+<ul>
+<li><a href="#orgcd109e3">3.1. Orgs</a>
+<ul>
+<li><a href="#orgdcf8b96">3.1.1. European Society of Preventive Medicine</a></li>
+</ul>
+</li>
+<li><a href="#org9927e4d">3.2. Events</a></li>
+<li><a href="#orgb522258">3.3. Nation States</a>
+<ul>
+<li><a href="#org15a981c">3.3.1. USA</a></li>
+<li><a href="#org0f27072">3.3.2. India</a></li>
+</ul>
+</li>
+<li><a href="#org2b19a64">3.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orge0d9964">4. Arts</a>
+<ul>
+<li><a href="#orgdef448d">4.1. Music</a></li>
+<li><a href="#orgb3ff0b7">4.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc5a4233">5. Special Topics</a>
+<ul>
+<li><a href="#orgba6dc70">5.1. Possibly MisInfo/DisInfo</a>
+<ul>
+<li><a href="#org5122a7b">5.1.1. Children’S Health Defense</a></li>
+</ul>
+</li>
+<li><a href="#org3379f8b">5.2. Unconventional Resources</a></li>
+<li><a href="#org1f25512">5.3. Health</a>
+<ul>
+<li><a href="#org21e6f64">5.3.1. COVID-19</a></li>
+<li><a href="#org20e1bb9">5.3.2. Diet</a></li>
+<li><a href="#orgc00a4a9">5.3.3. Sleep</a></li>
+<li><a href="#org7b04fbb">5.3.4. CAM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org4c1d106">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org7d51420" class="outline-2">
+<h2 id="org7d51420"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org01f179b" class="outline-2">
+<h2 id="org01f179b"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orge4b5aa2" class="outline-3">
+<h3 id="orge4b5aa2"><span class="section-number-3">2.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgcfe8bec" class="outline-4">
+<h4 id="orgcfe8bec"><span class="section-number-4">2.1.1.</span> Complexity Science</h4>
+</div>
+<div id="outline-container-org4aa5105" class="outline-4">
+<h4 id="org4aa5105"><span class="section-number-4">2.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>“Diabetes costs the global economy trillions,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jan. 10, 2026. [Online]. Available: <a href="http://iiasa.ac.at/news/jan-2026/diabetes-costs-global-economy-trillions">http://iiasa.ac.at/news/jan-2026/diabetes-costs-global-economy-trillions</a></li>
+
+<li>“The Long-Lasting Impact Of War On Global Diabetes Prevalence.” Accessed: Aug. 09, 2024. [Online]. Available: <a href="https://csh.ac.at/news/the-long-lasting-impact-of-war-on-global-diabetes-prevalence/">https://csh.ac.at/news/the-long-lasting-impact-of-war-on-global-diabetes-prevalence/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Woller et al., “Quantification of beta cell carrying capacity in prediabetes.” bioRxiv, p. 2024.01.31.578144, Feb. 02, 2024. doi: 10.1101/2024.01.31.578144.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf3e2c10" class="outline-3">
+<h3 id="orgf3e2c10"><span class="section-number-3">2.2.</span> Biological Sciences, Misc</h3>
+</div>
+<div id="outline-container-orga8f2568" class="outline-3">
+<h3 id="orga8f2568"><span class="section-number-3">2.3.</span> Basic Sciences, Misc</h3>
+</div>
+<div id="outline-container-org9bfbf18" class="outline-3">
+<h3 id="org9bfbf18"><span class="section-number-3">2.4.</span> Mathematical, Computational Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-org7eac1b2" class="outline-4">
+<h4 id="org7eac1b2"><span class="section-number-4">2.4.1.</span> CSE</h4>
+<div class="outline-text-4" id="text-2-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="org6259b74"></a>General<br /></li>
+<li><a id="org5423340"></a>IoT<br />
+<div class="outline-text-5" id="text-2-4-1-2">
+<ul class="org-ul">
+<li>S. Dash, S. K. Pani, W. Susilo, C. M. Y. Bernard, and G. Tse, Eds., Internet of Things and Machine Learning for Type I and Type II Diabetes: Use cases. Elsevier - Health Sciences Division, 2024.</li>
+</ul>
+</div>
+</li>
+<li><a id="org7745baa"></a>AI<br />
+<div class="outline-text-5" id="text-2-4-1-3">
+<ul class="org-ul">
+<li>R. Paranjape, Z. Wang, and S. Gill, The Diabetic Patient Agent: Modeling Disease in Humans and the Healthcare System Response: 133, Softcover reprint of the original 1st ed. 2018 edition. Springer-Verlag Berlin and Heidelberg GmbH &amp; Co. K, 2019.</li>
+
+<li>S. Dash, S. K. Pani, W. Susilo, C. M. Y. Bernard, and G. Tse, Eds., Internet of Things and Machine Learning for Type I and Type II Diabetes: Use cases. Elsevier - Health Sciences Division, 2024.</li>
+
+<li>D. C. K. M. D. F. F. F. AIMBE, D. K. M. F. FRCP, and J. E. M. FAAP, Eds., Diabetes Digital Health, Telehealth, and Artificial Intelligence. Academic Press Inc, 2024.</li>
+</ul>
+</div>
+</li>
+<li><a id="orga2659af"></a>Misc<br />
+<div class="outline-text-5" id="text-2-4-1-4">
+<ul class="org-ul">
+<li>“Managing Diabetes in Software Freedom,” Software Freedom Conservancy. Accessed: Nov. 08, 2025. [Online]. Available: <a href="https://sfconservancy.org/blog/2025/nov/06/juggluco-foss-continuous-glucose-montior-diabetes/">https://sfconservancy.org/blog/2025/nov/06/juggluco-foss-continuous-glucose-montior-diabetes/</a></li>
+
+<li>A. A. Metwally et al., “Prediction of metabolic subphenotypes of type 2 diabetes via continuous glucose monitoring and machine learning,” Nat. Biomed. Eng, pp. 1–18, Dec. 2024, doi: 10.1038/s41551-024-01311-6.</li>
+
+<li>A. Kumar and F. Shaik, Image Processing in Diabetic Related Causes, 2016th edition. Springer, 2015.</li>
+
+<li>D. C. Klonoff, D. Kerr, and S. A. Mulvaney, Eds., Diabetes Digital Health, 1st edition. Elsevier, 2020.</li>
+
+<li>D. C. K. M. D. F. F. F. AIMBE, D. K. M. F. FRCP, and J. E. M. FAAP, Eds., Diabetes Digital Health, Telehealth, and Artificial Intelligence. Academic Press Inc, 2024.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgc2eeda6" class="outline-3">
+<h3 id="orgc2eeda6"><span class="section-number-3">2.5.</span> Advanced Sciences, Misc</h3>
+</div>
+<div id="outline-container-org236e4ab" class="outline-3">
+<h3 id="org236e4ab"><span class="section-number-3">2.6.</span> Technology, Misc</h3>
+</div>
+<div id="outline-container-org0e3e961" class="outline-3">
+<h3 id="org0e3e961"><span class="section-number-3">2.7.</span> Special Topics</h3>
+<div class="outline-text-3" id="text-2-7">
+</div>
+<div id="outline-container-org791fdc3" class="outline-4">
+<h4 id="org791fdc3"><span class="section-number-4">2.7.1.</span> Texts</h4>
+<div class="outline-text-4" id="text-2-7-1">
+<ul class="org-ul">
+<li>R. Noor, Ed., Advances in Diabetes Research and Management, 1st ed. 2023 edition. Springer Verlag, Singapore, 2024.</li>
+<li>K. K. Sadasivuni, J.-J. Cabibihan, A. K. A. M. Al-Ali, and R. A. Malik, Eds., Advanced Bioscience and Biosystems for Detection and Management of Diabetes: 13, 1st ed. 2022 edition. Springer Nature Switzerland AG, 2023.</li>
+<li>S. K. Amponsah, E. K. Ofori, and Y. V. Pathak, Eds., Current Trends in the Diagnosis and Management of Metabolic Disorders, 1st edition. Boca Raton: CRC Press, 2023.</li>
+<li>O. Hamdy, S. R. Colberg, and S. Colberg, <i>The Diabetes Breakthrough.</i> Harlequin, 2013.</li>
+<li>S. P. PhD, <b>The Circadian Diabetes Code: Discover the Right Time to Eat, Sleep, and Exercise to Prevent and Reverse Prediabetes and Diabetes.</b> Harmony/Rodale, 2021.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org552aae0" class="outline-3">
+<h3 id="org552aae0"><span class="section-number-3">2.8.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-8">
+</div>
+<div id="outline-container-org8c35b4d" class="outline-4">
+<h4 id="org8c35b4d"><span class="section-number-4">2.8.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-8-1">
+<ul class="org-ul">
+<li>K. Conger, “Type 1 diabetes cured in mice with gentle blood stem-cell and pancreatic islet transplant,” News Center. Accessed: Nov. 26, 2025. [Online]. Available: <a href="https://med.stanford.edu/news/all-news/2025/11/type-1-diabetes-cure.html">https://med.stanford.edu/news/all-news/2025/11/type-1-diabetes-cure.html</a></li>
+
+<li>E. Dolgin, “Hope for diabetes: CRISPR-edited cells pump out insulin in a person – and evade immune detection,” Nature, Sep. 2025, doi: 10.1038/d41586-025-02802-5.</li>
+
+<li>H. Basilio, “Type 1 Diabetes Patient’s Insulin Production Restored with New Cell Transplant Therapy,” Scientific American. Accessed: Aug. 29, 2025. [Online]. Available: <a href="https://www.scientificamerican.com/article/type-1-diabetes-patients-insulin-production-restored-with-new-cell/">https://www.scientificamerican.com/article/type-1-diabetes-patients-insulin-production-restored-with-new-cell/</a></li>
+
+<li>T. H. Bureau, “IISc team’s new findings may have therapeutic implications in treating diabetes,” The Hindu, Aug. 18, 2025. Accessed: Aug. 19, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/cities/bangalore/iisc-teams-new-findings-may-have-therapeutic-implications-in-treating-diabetes/article69947799.ece">https://www.thehindu.com/news/cities/bangalore/iisc-teams-new-findings-may-have-therapeutic-implications-in-treating-diabetes/article69947799.ece</a></li>
+
+<li>“Indian Institute of Science.” Accessed: Aug. 19, 2025. [Online]. Available: <a href="https://iisc.ac.in/events/untangling-glucose-traffic-jams-in-type-2-diabetes/">https://iisc.ac.in/events/untangling-glucose-traffic-jams-in-type-2-diabetes/</a></li>
+
+<li>“Immune-dodging cells could give diabetes treatment a shot in the arm.” Accessed: Aug. 05, 2025. [Online]. Available: <a href="https://www.science.org/content/article/immune-dodging-cells-could-give-diabetes-treatment-shot-arm">https://www.science.org/content/article/immune-dodging-cells-could-give-diabetes-treatment-shot-arm</a></li>
+
+<li>S. Berneau, “Stem cell therapy reverses type 1 diabetes in world first,” The Conversation. Accessed: Oct. 12, 2024. [Online]. Available: <a href="http://theconversation.com/stem-cell-therapy-reverses-type-1-diabetes-in-world-first-240250">http://theconversation.com/stem-cell-therapy-reverses-type-1-diabetes-in-world-first-240250</a></li>
+<li>E. Burch and L. Ball, “What is type 1.5 diabetes? It’s a bit like type 1 and a bit like type 2 – but it’s often misdiagnosed,” The Conversation. Accessed: Aug. 27, 2024. [Online]. Available: <a href="http://theconversation.com/what-is-type-1-5-diabetes-its-a-bit-like-type-1-and-a-bit-like-type-2-but-its-often-misdiagnosed-237041">http://theconversation.com/what-is-type-1-5-diabetes-its-a-bit-like-type-1-and-a-bit-like-type-2-but-its-often-misdiagnosed-237041</a></li>
+<li>G. Maltese, S. A. McAuley, S. Trawley, and A. J. Sinclair, “Ageing well with diabetes: the role of technology,” Diabetologia, Aug. 2024, doi: 10.1007/s00125-024-06240-2.</li>
+<li>J. Wu et al., “Treating a type 2 diabetic patient with impaired pancreatic islet function by personalized endoderm stem cell-derived islet tissue,” Cell Discov, vol. 10, no. 1, pp. 1–5, Apr. 2024, doi: 10.1038/s41421-024-00662-3.
+<ul class="org-ul">
+<li>“Chinese scientists cure diabetes using stem cells in world first,” Yahoo News. Accessed: Jun. 09, 2024. [Online]. Available: <a href="https://ca.news.yahoo.com/chinese-scientists-cure-diabetes-using-205304771.html">https://ca.news.yahoo.com/chinese-scientists-cure-diabetes-using-205304771.html</a></li>
+</ul></li>
+
+<li>R. F. magazine Nature, “Ozempic Cuts Risk of Kidney Disease Death in People with Diabetes,” Scientific American. Accessed: May 29, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/ozempic-cuts-risk-of-kidney-disease-death-in-people-with-diabetes/">https://www.scientificamerican.com/article/ozempic-cuts-risk-of-kidney-disease-death-in-people-with-diabetes/</a></li>
+<li>S. Crespo-Garcia et al., “Therapeutic targeting of cellular senescence in diabetic macular edema: preclinical and phase 1 trial results,” Nat Med, pp. 1–12, Feb. 2024, doi: 10.1038/s41591-024-02802-4.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf31e792" class="outline-2">
+<h2 id="orgf31e792"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgcd109e3" class="outline-3">
+<h3 id="orgcd109e3"><span class="section-number-3">3.1.</span> Orgs</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgdcf8b96" class="outline-4">
+<h4 id="orgdcf8b96"><span class="section-number-4">3.1.1.</span> European Society of Preventive Medicine</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>admin, “Diabetes,” European Society of Preventive Medicine. Accessed: Jan. 30, 2024. [Online]. Available: <a href="https://espm.co/diseases-conditions/diabetes/">https://espm.co/diseases-conditions/diabetes/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9927e4d" class="outline-3">
+<h3 id="org9927e4d"><span class="section-number-3">3.2.</span> Events</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“World Diabetes Day,” Wikipedia. Nov. 14, 2024. Accessed: Nov. 14, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=World_Diabetes_Day&amp;oldid=1257275333">https://en.wikipedia.org/w/index.php?title=World_Diabetes_Day&amp;oldid=1257275333</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb522258" class="outline-3">
+<h3 id="orgb522258"><span class="section-number-3">3.3.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org15a981c" class="outline-4">
+<h4 id="org15a981c"><span class="section-number-4">3.3.1.</span> USA</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<ul class="org-ul">
+<li>A. D. Association, <i>American Diabetes Association Complete Guide to Diabetes: The Ultimate Home Reference from the Diabetes Experts.</i> American Diabetes Association, 2002.</li>
+
+<li>A. D. Association, <i>Type 2 Diabetes: Your Healthy Living Guide: Tips, Techniques, and Practical Advice for Living Well with Diabetes.</i> American Diabetes Association, 2009.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0f27072" class="outline-4">
+<h4 id="org0f27072"><span class="section-number-4">3.3.2.</span> India</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<ul class="org-ul">
+<li>Popular, <i>The Illustrated Guide to Living with Diabetes in India.</i> Popular Prakashan Private limited, 2013.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2b19a64" class="outline-3">
+<h3 id="org2b19a64"><span class="section-number-3">3.4.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orge0d9964" class="outline-2">
+<h2 id="orge0d9964"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgdef448d" class="outline-3">
+<h3 id="orgdef448d"><span class="section-number-3">4.1.</span> Music</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>“Music For Diabetes by Dr. T. Mythily on Prime Music.” Accessed: Dec. 27, 2023. [Online]. Available: <a href="https://music.amazon.in/albums/B0752ZK6HW">https://music.amazon.in/albums/B0752ZK6HW</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb3ff0b7" class="outline-3">
+<h3 id="orgb3ff0b7"><span class="section-number-3">4.2.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgc5a4233" class="outline-2">
+<h2 id="orgc5a4233"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgba6dc70" class="outline-3">
+<h3 id="orgba6dc70"><span class="section-number-3">5.1.</span> Possibly MisInfo/DisInfo</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org5122a7b" class="outline-4">
+<h4 id="org5122a7b"><span class="section-number-4">5.1.1.</span> Children’S Health Defense</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ul class="org-ul">
+<li>“Diabetes Archives,” Children’s Health Defense. Accessed: Mar. 30, 2024. [Online]. Available: <a href="https://childrenshealthdefense.org/research_category/diabetes/">https://childrenshealthdefense.org/research_category/diabetes/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3379f8b" class="outline-3">
+<h3 id="org3379f8b"><span class="section-number-3">5.2.</span> Unconventional Resources</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>D. J. Fung, <b>The Diabetes Code: Prevent and Reverse Type 2 Diabetes Naturally.</b> Greystone Books, 2018.</li>
+
+<li>J. Fung and A. Maclean, <b>The Diabetes Code Cookbook: Delicious, Healthy, Low-Carb Recipes to Manage Your Insulin and Prevent and Reverse Type 2 Diabetes.</b> Greystone Books Limited, 2021.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1f25512" class="outline-3">
+<h3 id="org1f25512"><span class="section-number-3">5.3.</span> Health</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-org21e6f64" class="outline-4">
+<h4 id="org21e6f64"><span class="section-number-4">5.3.1.</span> COVID-19</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<ul class="org-ul">
+<li><i>“HumanBase Sees Connections Between COVID-19 and Diabetes,”</i> Simons Foundation 2020 Annual Report, Jun. 03, 2021. <a href="https://annualreports.simonsfoundation.org/2020/humanbase-sees-connections-between-covid-19-and-diabetes/">https://annualreports.simonsfoundation.org/2020/humanbase-sees-connections-between-covid-19-and-diabetes/</a> (accessed Jun. 18, 2021).</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“The Disproportionate Toll That COVID-19 Took On People With Diabetes Continues Today,” Discover Magazine. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.discovermagazine.com/health/the-disproportionate-toll-that-covid-19-took-on-people-with-diabetes">https://www.discovermagazine.com/health/the-disproportionate-toll-that-covid-19-took-on-people-with-diabetes</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org20e1bb9" class="outline-4">
+<h4 id="org20e1bb9"><span class="section-number-4">5.3.2.</span> Diet</h4>
+<div class="outline-text-4" id="text-5-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgfc0c7dc"></a>Misc<br />
+<div class="outline-text-5" id="text-5-3-2-1">
+<ul class="org-ul">
+<li>T. M. S. Hospital, “Study links ‘forever chemicals’ to increased risk of type 2 diabetes.” Accessed: Jul. 23, 2025. [Online]. Available: <a href="https://medicalxpress.com/news/2025-07-links-chemicals-diabetes.html">https://medicalxpress.com/news/2025-07-links-chemicals-diabetes.html</a></li>
+<li>V. Midya et al., “Exposure to per- and poly-fluoroalkyl substances in association to later occurrence of type 2 diabetes and metabolic pathway dysregulation in a multiethnic US population,” eBioMedicine, vol. 0, no. 0, Jul. 2025, doi: 10.1016/j.ebiom.2025.105838.</li>
+
+<li>J. Fung and A. Maclean, <b>The Diabetes Code Cookbook: Delicious, Healthy, Low-Carb Recipes to Manage Your Insulin and Prevent and Reverse Type 2 Diabetes.</b> Greystone Books Limited, 2021.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Low Carbohydrate and Very Low Carbohydrate Eating Patterns in Adults with Diabetes: A Guide for Health Care Providers,” ShopDiabetes.org | Store from the American Diabetes Association®. <a href="https://shopdiabetes.org/products/low-carbohydrate-and-very-low-carbohydrate-eating-patterns-in-adults-with-diabetes-a-guide-for-health-care-providers">https://shopdiabetes.org/products/low-carbohydrate-and-very-low-carbohydrate-eating-patterns-in-adults-with-diabetes-a-guide-for-health-care-providers</a> (accessed Apr. 16, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgfc5bba7"></a>Fasting<br />
+<div class="outline-text-5" id="text-5-3-2-2">
+<ul class="org-ul">
+<li>A. Sulaj et al., “Six-Month Periodic Fasting in Patients With Type 2 Diabetes and Diabetic Nephropathy: A Proof-of-Concept Study,” The Journal of Clinical Endocrinology &amp; Metabolism, p. dgac197, Jun. 2022, doi: 10.1210/clinem/dgac197.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgc00a4a9" class="outline-4">
+<h4 id="orgc00a4a9"><span class="section-number-4">5.3.3.</span> Sleep</h4>
+<div class="outline-text-4" id="text-5-3-3">
+<ul class="org-ul">
+<li>S. P. PhD, <b>The Circadian Diabetes Code: Discover the Right Time to Eat, Sleep, and Exercise to Prevent and Reverse Prediabetes and Diabetes.</b> Harmony/Rodale, 2021.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7b04fbb" class="outline-4">
+<h4 id="org7b04fbb"><span class="section-number-4">5.3.4.</span> CAM</h4>
+<div class="outline-text-4" id="text-5-3-4">
+</div>
+<ol class="org-ol">
+<li><a id="org193fa95"></a>AyurVeda<br />
+<ol class="org-ol">
+<li><a id="org6e1ff33"></a>Organic India<br />
+<div class="outline-text-6" id="text-5-3-4-1-1">
+<ul class="org-ul">
+<li>“Buy ORGANIC INDIA Ayurveda Capsule for Diabetes (Sugar Balance, Cinnamon) - Combo Pack Online at Low Prices in India - Amazon.in.” Accessed: Dec. 05, 2024. [Online]. Available: <a href="https://www.amazon.in/ORGANIC-INDIA-Ayurveda-Diabetes-Cinnamon/dp/B09FGWV6NW?nsdOptOutParam=true">https://www.amazon.in/ORGANIC-INDIA-Ayurveda-Diabetes-Cinnamon/dp/B09FGWV6NW?nsdOptOutParam=true</a></li>
+
+<li>“ORGANIC INDIA Sugar Balance - Pack of 60 Veg Capsules : Amazon.in: Health &amp; Personal Care.” Accessed: Dec. 05, 2024. [Online]. Available: <a href="https://www.amazon.in/Organic-India-Sugar-Balance-Capsules/dp/B00B5Y5F3M?nsdOptOutParam=true">https://www.amazon.in/Organic-India-Sugar-Balance-Capsules/dp/B00B5Y5F3M?nsdOptOutParam=true</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb631626"></a>Himalaya<br />
+<div class="outline-text-6" id="text-5-3-4-1-2">
+<ul class="org-ul">
+<li>“Himalaya Diabecon (DS) Tablets - 60 : Amazon.in: Health &amp; Personal Care.” Accessed: Dec. 06, 2024. [Online]. Available: <a href="https://www.amazon.in/Himalaya-Diabecon-DS-Tablets-60/dp/B07D3ZDTHR">https://www.amazon.in/Himalaya-Diabecon-DS-Tablets-60/dp/B07D3ZDTHR</a></li>
+<li>“Himalaya Methi Tablets 60’s : Amazon.in: Health &amp; Personal Care.” Accessed: Dec. 06, 2024. [Online]. Available: <a href="https://www.amazon.in/Himalaya-7004373-Methi-Tablets-60s/dp/B0CQM1Y5GM">https://www.amazon.in/Himalaya-7004373-Methi-Tablets-60s/dp/B0CQM1Y5GM</a></li>
+<li>“Himalaya Wellness Pure Herbs Meshashringi Metabolic Wellness - 60 Tablet : Amazon.in: Health &amp; Personal Care.” Accessed: Dec. 06, 2024. [Online]. Available: <a href="https://www.amazon.in/Himalaya-Wellness-Herbs-Meshashringi-Metabolic/dp/B006FE0JJ2">https://www.amazon.in/Himalaya-Wellness-Herbs-Meshashringi-Metabolic/dp/B006FE0JJ2</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org7dfede3"></a>Glucose Levels Reduction<br />
+<div class="outline-text-6" id="text-5-3-4-1-3">
+<ul class="org-ul">
+<li>Organic India Cinnamon</li>
+<li>Organic Fenugreek Seeds</li>
+</ul>
+</div>
+</li>
+<li><a id="org86c7a33"></a>Combos<br />
+<div class="outline-text-6" id="text-5-3-4-1-4">
+<ul class="org-ul">
+<li>Organic India Triphala</li>
+<li>Organic India Sugar Balance</li>
+<li>Organic India Liver Kidney Care</li>
+</ul>
+</div>
+</li>
+<li><a id="org749582e"></a>Solo<br />
+<div class="outline-text-6" id="text-5-3-4-1-5">
+<ul class="org-ul">
+<li>Organic India Neem</li>
+<li>Organic Karela</li>
+<li>Organic Jamun</li>
+<li>Organic India P. Husk</li>
+</ul>
+</div>
+</li>
+<li><a id="org5850c2c"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org8dcadd2"></a>Homeopathy<br />
+<div class="outline-text-5" id="text-5-3-4-2">
+<ul class="org-ul">
+<li>“Buy Dr. Reckeweg Bio-Combination 7 (BC 7) Tablet (PACK OF 2) Online at Low Prices in India - Amazon.in.” Accessed: Dec. 05, 2024. [Online]. Available: <a href="https://www.amazon.in/Dr-Reckeweg-Bio-Combination-Tablet-PACK/dp/B0CND4W67X?nsdOptOutParam=true">https://www.amazon.in/Dr-Reckeweg-Bio-Combination-Tablet-PACK/dp/B0CND4W67X?nsdOptOutParam=true</a></li>
+<li>“Buy HOMEOLAV R 40 Homeopathic Medicine Pack Of 2(22Mlx2) Online at Low Prices in India - Amazon.in.” Accessed: Dec. 05, 2024. [Online]. Available: <a href="https://www.amazon.in/HOMEOLAV-Homeopathic-Medicine-Pack-22Mlx2/dp/B0CM295S3K?nsdOptOutParam=true">https://www.amazon.in/HOMEOLAV-Homeopathic-Medicine-Pack-22Mlx2/dp/B0CM295S3K?nsdOptOutParam=true</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org4c1d106" class="outline-2">
+<h2 id="org4c1d106"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>arathimenon, “Overlooking climate change impacts may affect diabetes treatment in India,” Mongabay-India. Accessed: Jul. 11, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/07/overlooking-climate-change-impacts-may-affect-diabetes-treatment-in-india/">https://india.mongabay.com/2025/07/overlooking-climate-change-impacts-may-affect-diabetes-treatment-in-india/</a></li>
+
+<li>“Mucormycosis: Lessons for a Diabetic Society,” The India Forum. Accessed: Jul. 07, 2025. [Online]. Available: <a href="https://www.theindiaforum.in/health/mucormycosis-lessons-diabetic-society">https://www.theindiaforum.in/health/mucormycosis-lessons-diabetic-society</a></li>
+
+<li>M. Taylor, D. Ng, K. J. Pfisterer, J. A. Cafazzo, and D. Sherifali, “The value of diabetes technology enabled coaching (DTEC) to support remission evaluation of medical interventions in T2D: Patient and health coach perspectives,” PLOS Digital Health, vol. 4, no. 1, p. e0000701, Jan. 2025, doi: 10.1371/journal.pdig.0000701.</li>
+
+<li>J. Rand, “Dogs and cats get diabetes too. Here’s what to look out for and how to manage it,” The Conversation. Accessed: Dec. 27, 2024. [Online]. Available: <a href="http://theconversation.com/dogs-and-cats-get-diabetes-too-heres-what-to-look-out-for-and-how-to-manage-it-225673">http://theconversation.com/dogs-and-cats-get-diabetes-too-heres-what-to-look-out-for-and-how-to-manage-it-225673</a></li>
+
+<li>P. Ferdinand, “Carrageenan may damage gut lining, promote inflammation and type 2 diabetes risk,” U.S. Right to Know. Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://usrtk.org/healthwire/carrageenan-gut-lining-inflammation-type-2-diabetes/">https://usrtk.org/healthwire/carrageenan-gut-lining-inflammation-type-2-diabetes/</a></li>
+
+<li>“Microcapsules to help diabetic wounds heal faster,” Nature India, Jan. 2026, doi: 10.1038/d44151-026-00005-z.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>19 to 28% et al., “Older diabetics at risk of developing cardiovascular disease from air pollution,” Mongabay-India. Accessed: Jan. 14, 2026. [Online]. Available: <a href="https://india.mongabay.com/short-article/older-diabetics-at-risk-of-developing-cardiovascular-disease-from-air-pollution/">https://india.mongabay.com/short-article/older-diabetics-at-risk-of-developing-cardiovascular-disease-from-air-pollution/</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:56</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:57 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cheese</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Cheese</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orge0fd2bb">1. General</a></li>
+<li><a href="#orga55e8c5">2. STEMM</a>
+<ul>
+<li><a href="#orgaba93fd">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgd5cfa37">3. World</a>
+<ul>
+<li><a href="#org4677d65">3.1. Orgs</a>
+<ul>
+<li><a href="#orgb11b036">3.1.1. <b>Organic</b></a></li>
+<li><a href="#org7b93a17">3.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org34bde1c">3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgd8c819b">4. Core</a>
+<ul>
+<li><a href="#orgbaa8975">4.1. Variants</a>
+<ul>
+<li><a href="#orgde3ba2f">4.1.1. Artisanal Cheese</a></li>
+<li><a href="#org022a407">4.1.2. Cottage Cheese, Paneer</a></li>
+<li><a href="#orgd182167">4.1.3. Gouda</a></li>
+<li><a href="#orga75f299">4.1.4. Parmesan</a></li>
+<li><a href="#org20211cd">4.1.5. Mozzarella</a></li>
+<li><a href="#org73a3aa2">4.1.6. Feta</a></li>
+<li><a href="#orgce6467c">4.1.7. Cheddar</a></li>
+<li><a href="#org72d1198">4.1.8. Ricotta</a></li>
+<li><a href="#org54b8df0">4.1.9. Edam</a></li>
+<li><a href="#orgc9c6c68">4.1.10. Brie</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org3c0a0b6">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orge0fd2bb" class="outline-2">
+<h2 id="orge0fd2bb"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Cheese,” Wikipedia. Sep. 28, 2024. Accessed: Oct. 04, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Cheese&amp;oldid=1248335838">https://en.wikipedia.org/w/index.php?title=Cheese&amp;oldid=1248335838</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga55e8c5" class="outline-2">
+<h2 id="orga55e8c5"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgaba93fd" class="outline-3">
+<h3 id="orgaba93fd"><span class="section-number-3">2.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>A. E. November 2013, “Blessed are the cheesemakers,” Chemistry World. Accessed: Dec. 17, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/features/blessed-are-the-cheesemakers/6848.article">https://www.chemistryworld.com/features/blessed-are-the-cheesemakers/6848.article</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd5cfa37" class="outline-2">
+<h2 id="orgd5cfa37"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org4677d65" class="outline-3">
+<h3 id="org4677d65"><span class="section-number-3">3.1.</span> Orgs</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgb11b036" class="outline-4">
+<h4 id="orgb11b036"><span class="section-number-4">3.1.1.</span> <b>Organic</b></h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>“WHYTE FARM.” Accessed: Jul. 23, 2024. [Online]. Available: <a href="https://whytefarms.com/">https://whytefarms.com/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7b93a17" class="outline-4">
+<h4 id="org7b93a17"><span class="section-number-4">3.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li><i>ISayOrganic</i></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org34bde1c" class="outline-3">
+<h3 id="org34bde1c"><span class="section-number-3">3.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“Chhurpi Connectivity: Himalayan Cheese as Bioregional Frame,” Vikalp Sangam. Accessed: Dec. 03, 2025. [Online]. Available: <a href="https://www.roadsides.net/articles/8240?fbclid=IwZnRzaAOV8I9leHRuA2FlbQIxMQBzcnRjBmFwcF9pZAo2NjI4NTY4Mzc5AAEeh8tNa9qnCN6ZLCAd9lCDvCADDiDC-GzFGSsN2yB7lVSe6_RLBUVlFKdruy8_aem_zK4pO05Rlnj3oUAfSZ7X1w">https://www.roadsides.net/articles/8240?fbclid=IwZnRzaAOV8I9leHRuA2FlbQIxMQBzcnRjBmFwcF9pZAo2NjI4NTY4Mzc5AAEeh8tNa9qnCN6ZLCAd9lCDvCADDiDC-GzFGSsN2yB7lVSe6_RLBUVlFKdruy8_aem_zK4pO05Rlnj3oUAfSZ7X1w</a></li>
+
+<li>A. Dalby, “A history of cheese: An ingredient that was used in recipes in ‘the oldest cookbook in the world,’” Scroll.in. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://scroll.in/article/1084946/a-history-of-cheese-an-ingredient-that-was-used-in-recipes-in-the-oldest-cookbook-in-the-world">https://scroll.in/article/1084946/a-history-of-cheese-an-ingredient-that-was-used-in-recipes-in-the-oldest-cookbook-in-the-world</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd8c819b" class="outline-2">
+<h2 id="orgd8c819b"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgbaa8975" class="outline-3">
+<h3 id="orgbaa8975"><span class="section-number-3">4.1.</span> Variants</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-orgde3ba2f" class="outline-4">
+<h4 id="orgde3ba2f"><span class="section-number-4">4.1.1.</span> Artisanal Cheese</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>arathimenon, “Say cheese! Traditional pastoralists embrace innovation with artisanal cheese,” Mongabay-India. Accessed: Dec. 26, 2023. [Online]. Available: <a href="https://india.mongabay.com/2023/12/say-cheese-traditional-pastoralists-embrace-innovation-with-artisanal-cheese/">https://india.mongabay.com/2023/12/say-cheese-traditional-pastoralists-embrace-innovation-with-artisanal-cheese/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org022a407" class="outline-4">
+<h4 id="org022a407"><span class="section-number-4">4.1.2.</span> Cottage Cheese, Paneer</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li>“Cottage cheese,” Wikipedia. Sep. 19, 2024. Accessed: Oct. 05, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Cottage_cheese&amp;oldid=1246558429">https://en.wikipedia.org/w/index.php?title=Cottage_cheese&amp;oldid=1246558429</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd182167" class="outline-4">
+<h4 id="orgd182167"><span class="section-number-4">4.1.3.</span> Gouda</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<ul class="org-ul">
+<li>“Gouda cheese,” Wikipedia. Sep. 01, 2024. Accessed: Oct. 05, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Gouda_cheese&amp;oldid=1243390553">https://en.wikipedia.org/w/index.php?title=Gouda_cheese&amp;oldid=1243390553</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga75f299" class="outline-4">
+<h4 id="orga75f299"><span class="section-number-4">4.1.4.</span> Parmesan</h4>
+<div class="outline-text-4" id="text-4-1-4">
+<ul class="org-ul">
+<li>“Parmesan,” Wikipedia. Oct. 03, 2024. Accessed: Oct. 04, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Parmesan&amp;oldid=1249123401">https://en.wikipedia.org/w/index.php?title=Parmesan&amp;oldid=1249123401</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org20211cd" class="outline-4">
+<h4 id="org20211cd"><span class="section-number-4">4.1.5.</span> Mozzarella</h4>
+<div class="outline-text-4" id="text-4-1-5">
+<ul class="org-ul">
+<li>“Mozzarella,” Wikipedia. Sep. 27, 2024. Accessed: Oct. 04, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mozzarella&amp;oldid=1247987404">https://en.wikipedia.org/w/index.php?title=Mozzarella&amp;oldid=1247987404</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org73a3aa2" class="outline-4">
+<h4 id="org73a3aa2"><span class="section-number-4">4.1.6.</span> Feta</h4>
+<div class="outline-text-4" id="text-4-1-6">
+<ul class="org-ul">
+<li>“Feta - Wikipedia.” Accessed: Oct. 05, 2024. [Online]. Available: <a href="https://en.wikipedia.org/wiki/Feta">https://en.wikipedia.org/wiki/Feta</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgce6467c" class="outline-4">
+<h4 id="orgce6467c"><span class="section-number-4">4.1.7.</span> Cheddar</h4>
+<div class="outline-text-4" id="text-4-1-7">
+<ul class="org-ul">
+<li>“Cheddar cheese,” Wikipedia. Sep. 11, 2024. Accessed: Oct. 04, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Cheddar_cheese&amp;oldid=1245178044">https://en.wikipedia.org/w/index.php?title=Cheddar_cheese&amp;oldid=1245178044</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org72d1198" class="outline-4">
+<h4 id="org72d1198"><span class="section-number-4">4.1.8.</span> Ricotta</h4>
+<div class="outline-text-4" id="text-4-1-8">
+<ul class="org-ul">
+<li>“Ricotta,” Wikipedia. Sep. 29, 2024. Accessed: Oct. 04, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ricotta&amp;oldid=1248460049">https://en.wikipedia.org/w/index.php?title=Ricotta&amp;oldid=1248460049</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org54b8df0" class="outline-4">
+<h4 id="org54b8df0"><span class="section-number-4">4.1.9.</span> Edam</h4>
+<div class="outline-text-4" id="text-4-1-9">
+<ul class="org-ul">
+<li>“Edam cheese,” Wikipedia. Sep. 27, 2024. Accessed: Oct. 04, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Edam_cheese&amp;oldid=1248004200">https://en.wikipedia.org/w/index.php?title=Edam_cheese&amp;oldid=1248004200</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc9c6c68" class="outline-4">
+<h4 id="orgc9c6c68"><span class="section-number-4">4.1.10.</span> Brie</h4>
+<div class="outline-text-4" id="text-4-1-10">
+<ul class="org-ul">
+<li>“Brie,” Wikipedia. Oct. 03, 2024. Accessed: Oct. 04, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Brie&amp;oldid=1249126263">https://en.wikipedia.org/w/index.php?title=Brie&amp;oldid=1249126263</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org3c0a0b6" class="outline-2">
+<h2 id="org3c0a0b6"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>“Vegan Cheese, Please! Ask Domino’s to Add Dairy-Free Cheese to Its Menu.” Accessed: Aug. 15, 2025. [Online]. Available: <a href="https://support.peta.org/page/84945/petition/1?locale=en-US">https://support.peta.org/page/84945/petition/1?locale=en-US</a></li>
+
+<li>“Vegan Cheese, Please! Ask Domino’s to Add Dairy-Free Cheese to Its Menu,” PETA. Accessed: Jun. 03, 2025. [Online]. Available: <a href="https://www.peta.org/action/action-alerts/vegan-cheese-dominos/">https://www.peta.org/action/action-alerts/vegan-cheese-dominos/</a></li>
+
+<li>J. Narzary, “The Last Cheesemakers of the Eastern Himalayas,” Atlas Obscura, 00:00 400AD. <a href="http://www.atlasobscura.com/articles/yak-cheese-india-bhutan">http://www.atlasobscura.com/articles/yak-cheese-india-bhutan</a> (accessed Nov. 18, 2022).</li>
+
+<li>“Godwar Camel Cheese Fest,” League for Pastoral Peoples, Nov. 06, 2022. <a href="http://www.pastoralpeoples.org/godwar-camel-cheese-fest/">http://www.pastoralpeoples.org/godwar-camel-cheese-fest/</a> (accessed Nov. 18, 2022).</li>
+
+<li>M. Bartels, “Why Do Cheeses Melt Differently?,” Scientific American. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/why-cheeses-such-as-mozzarella-and-cheddar-melt-differently-than-ricotta/">https://www.scientificamerican.com/article/why-cheeses-such-as-mozzarella-and-cheddar-melt-differently-than-ricotta/</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:57</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

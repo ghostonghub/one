@@ -1,0 +1,1655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cooling</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Cooling</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgee88635">1. General</a></li>
+<li><a href="#orga503055">2. STEMM</a>
+<ul>
+<li><a href="#orgbe2d7e1">2.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#org2a9b16d">2.1.1. Complexity Science</a></li>
+<li><a href="#orge921885">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc24a17f">2.2. Biological Sciences, Misc</a>
+<ul>
+<li><a href="#org415b95b">2.2.1. Environment</a></li>
+</ul>
+</li>
+<li><a href="#org3a422c5">2.3. Basic Sciences, Misc</a></li>
+<li><a href="#orgb7d7fc4">2.4. Mathematical, Computational Sciences, Misc</a></li>
+<li><a href="#orge7605a2">2.5. Technology, Misc</a>
+<ul>
+<li><a href="#orgeaa2830">2.5.1. Fans</a></li>
+<li><a href="#org21e9bc7">2.5.2. Coolers</a></li>
+<li><a href="#org01c5759">2.5.3. AC</a></li>
+</ul>
+</li>
+<li><a href="#org20f3412">2.6. Special Topics</a>
+<ul>
+<li><a href="#org777ee59">2.6.1. Union Of Concerned Scientists</a></li>
+<li><a href="#orgf19ebc0">2.6.2. Oxford</a></li>
+<li><a href="#orgf5d193f">2.6.3. The Bulletin</a></li>
+<li><a href="#org4246123">2.6.4. IEA</a></li>
+</ul>
+</li>
+<li><a href="#org591c026">2.7. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc06d49c">3. Worldly Matters</a>
+<ul>
+<li><a href="#org869ee06">3.1. Orgs</a></li>
+<li><a href="#orgdbde119">3.2. Awards</a></li>
+<li><a href="#org3d691ba">3.3. Nation States</a>
+<ul>
+<li><a href="#orga78f753">3.3.1. USA</a></li>
+<li><a href="#orga696145">3.3.2. India</a></li>
+</ul>
+</li>
+<li><a href="#orgf017c6b">3.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org1cd6891">4. Core</a>
+<ul>
+<li><a href="#org7afe4e7">4.1. HeatWaves</a>
+<ul>
+<li><a href="#org1d007ef">4.1.1. General</a></li>
+<li><a href="#orgc1bb94a">4.1.2. STEMM</a></li>
+<li><a href="#org5a1af9c">4.1.3. Worldly Matters</a></li>
+<li><a href="#org3321ad2">4.1.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org3293980">4.2. Global Warming</a>
+<ul>
+<li><a href="#org8535af3">4.2.1. General</a></li>
+<li><a href="#org2efb7fe">4.2.2. STEMM</a></li>
+<li><a href="#org9504667">4.2.3. Worldly Matters</a></li>
+<li><a href="#org8061eaf">4.2.4. Arts</a></li>
+<li><a href="#org49a1935">4.2.5. Special Topics</a></li>
+<li><a href="#org7967016">4.2.6. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgea334e7">4.3. Buildings</a></li>
+</ul>
+</li>
+<li><a href="#orge99b00e">5. Special Topics</a></li>
+<li><a href="#org83a9c0e">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgee88635" class="outline-2">
+<h2 id="orgee88635"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Cooling,” Wikipedia. Apr. 12, 2024. Accessed: May 31, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Cooling&amp;oldid=1218645609">https://en.wikipedia.org/w/index.php?title=Cooling&amp;oldid=1218645609</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga503055" class="outline-2">
+<h2 id="orga503055"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgbe2d7e1" class="outline-3">
+<h3 id="orgbe2d7e1"><span class="section-number-3">2.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org2a9b16d" class="outline-4">
+<h4 id="org2a9b16d"><span class="section-number-4">2.1.1.</span> Complexity Science</h4>
+</div>
+<div id="outline-container-orge921885" class="outline-4">
+<h4 id="orge921885"><span class="section-number-4">2.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>“Halfway there: demand-side policies key to net-zero in home heating and cooling,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jun. 04, 2025. [Online]. Available: <a href="http://iiasa.ac.at/news/jun-2025/halfway-there-demand-side-policies-key-to-net-zero-in-home-heating-and-cooling">http://iiasa.ac.at/news/jun-2025/halfway-there-demand-side-policies-key-to-net-zero-in-home-heating-and-cooling</a></li>
+
+<li>“Amplified global heating risk due to climate and carbon cycle feedbacks,” Potsdam Institute for Climate Impact Research. Accessed: Mar. 25, 2025. [Online]. Available: <a href="https://www.pik-potsdam.de/en/news/latest-news/amplified-global-heating-risk-due-to-climate-and-carbon-cycle-feedbacks">https://www.pik-potsdam.de/en/news/latest-news/amplified-global-heating-risk-due-to-climate-and-carbon-cycle-feedbacks</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Interactive Map Highlights Heat Vulnerability In Austria.” Accessed: Jul. 18, 2024. [Online]. Available: <a href="https://csh.ac.at/news/interactive-map-highlights-heat-vulnerability/">https://csh.ac.at/news/interactive-map-highlights-heat-vulnerability/</a></li>
+
+<li>“Heatwaves: The Climate Scenario We Must Be Prepared For.” Accessed: Jul. 02, 2024. [Online]. Available: <a href="https://csh.ac.at/news/heatwaves-the-climate-scenario-we-must-be-prepared-for/">https://csh.ac.at/news/heatwaves-the-climate-scenario-we-must-be-prepared-for/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc24a17f" class="outline-3">
+<h3 id="orgc24a17f"><span class="section-number-3">2.2.</span> Biological Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org415b95b" class="outline-4">
+<h4 id="org415b95b"><span class="section-number-4">2.2.1.</span> Environment</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li>E. D. Wilson, After Cooling: On Freon, Global Warming, and the Terrible Cost of Comfort. Simon &amp; Schuster, 2021.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3a422c5" class="outline-3">
+<h3 id="org3a422c5"><span class="section-number-3">2.3.</span> Basic Sciences, Misc</h3>
+</div>
+<div id="outline-container-orgb7d7fc4" class="outline-3">
+<h3 id="orgb7d7fc4"><span class="section-number-3">2.4.</span> Mathematical, Computational Sciences, Misc</h3>
+</div>
+<div id="outline-container-orge7605a2" class="outline-3">
+<h3 id="orge7605a2"><span class="section-number-3">2.5.</span> Technology, Misc</h3>
+<div class="outline-text-3" id="text-2-5">
+</div>
+<div id="outline-container-orgeaa2830" class="outline-4">
+<h4 id="orgeaa2830"><span class="section-number-4">2.5.1.</span> Fans</h4>
+</div>
+
+<div id="outline-container-org21e9bc7" class="outline-4">
+<h4 id="org21e9bc7"><span class="section-number-4">2.5.2.</span> Coolers</h4>
+</div>
+<div id="outline-container-org01c5759" class="outline-4">
+<h4 id="org01c5759"><span class="section-number-4">2.5.3.</span> AC</h4>
+<div class="outline-text-4" id="text-2-5-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgf37f799"></a>General<br /></li>
+<li><a id="orgb05730a"></a>Buying Guides, Misc<br />
+<ol class="org-ol">
+<li><a id="org5ad4d55"></a>Consumer Reports<br />
+<div class="outline-text-6" id="text-2-5-3-2-1">
+<ul class="org-ul">
+<li>“Most Reliable Central Air-Conditioning Systems,” Consumer Reports. Accessed: Jun. 02, 2024. [Online]. Available: <a href="https://www.consumerreports.org/appliances/central-air-conditioning/most-reliable-central-air-conditioning-systems-a5246005663/">https://www.consumerreports.org/appliances/central-air-conditioning/most-reliable-central-air-conditioning-systems-a5246005663/</a></li>
+<li>“How Effective Are Portable Air Conditioners?,” Consumer Reports. Accessed: Jun. 02, 2024. [Online]. Available: <a href="https://www.consumerreports.org/appliances/air-conditioners/are-portable-air-conditioners-a-lot-of-hot-air-a1062000761/">https://www.consumerreports.org/appliances/air-conditioners/are-portable-air-conditioners-a-lot-of-hot-air-a1062000761/</a></li>
+<li>“Best Air Conditioner Reviews,” Consumer Reports. Accessed: Jun. 02, 2024. [Online]. Available: <a href="https://www.consumerreports.org/appliances/air-conditioners/">https://www.consumerreports.org/appliances/air-conditioners/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orga30642f"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org8b0e78c"></a>India<br />
+<div class="outline-text-6" id="text-2-5-3-3-1">
+<ul class="org-ul">
+<li>“Heatwave in Delhi: Are ACs adding fuel to fire?” Accessed: May 31, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/climate-change/cool-dwellings-here-is-what-you-can-do-to-make-your-building-beat-the-heat-82708">https://www.downtoearth.org.in/blog/climate-change/cool-dwellings-here-is-what-you-can-do-to-make-your-building-beat-the-heat-82708</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. C. via W. C. C. A. T. S. P. E. T. C. WarmingIndia, “Government to reduce AC temperature limits to improve energy efficiency,” Mongabay-India. Accessed: Jun. 17, 2025. [Online]. Available: <a href="https://india.mongabay.com/short-article/government-to-reduce-ac-temperature-limits-to-improve-energy-efficiency/">https://india.mongabay.com/short-article/government-to-reduce-ac-temperature-limits-to-improve-energy-efficiency/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgf7dd373"></a>Misc<br />
+<div class="outline-text-5" id="text-2-5-3-4">
+<ul class="org-ul">
+<li>W. de Freitas, “Air conditioning isn’t the only answer,” The Conversation. Accessed: Aug. 29, 2025. [Online]. Available: <a href="http://theconversation.com/air-conditioning-isnt-the-only-answer-264036">http://theconversation.com/air-conditioning-isnt-the-only-answer-264036</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Sustainable management of refrigerants could be a powerful climate solution,” IIASA - International Institute for Applied Systems Analysis. Accessed: Aug. 05, 2025. [Online]. Available: <a href="http://iiasa.ac.at/news/aug-2025/sustainable-management-of-refrigerants-could-be-powerful-climate-solution">http://iiasa.ac.at/news/aug-2025/sustainable-management-of-refrigerants-could-be-powerful-climate-solution</a></li>
+
+<li>“Portable A/Cs Are Pricier Than Window Units. But Their Versatility Can Actually Save You Money.,” Popular Mechanics. Accessed: Jun. 25, 2025. [Online]. Available: <a href="https://www.popularmechanics.com/home/g3066/best-portable-air-conditioners/">https://www.popularmechanics.com/home/g3066/best-portable-air-conditioners/</a></li>
+<li>“Portable A/C vs. Window A/C: We’ve Tested Both. So Which Is Better?,” Popular Mechanics. Accessed: Jun. 25, 2025. [Online]. Available: <a href="https://www.popularmechanics.com/home/a65046369/portable-air-conditioner-vs-window-air-conditioner/">https://www.popularmechanics.com/home/a65046369/portable-air-conditioner-vs-window-air-conditioner/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>J. Lizana, N. Miranda, and R. Khosla, “How to make homes cooler without cranking up the air conditioning,” The Conversation, Jul. 20, 2023. <a href="http://theconversation.com/how-to-make-homes-cooler-without-cranking-up-the-air-conditioning-207243">http://theconversation.com/how-to-make-homes-cooler-without-cranking-up-the-air-conditioning-207243</a> (accessed Jul. 21, 2023).</li>
+
+<li>dslanger@gmail.com, “Breakthrough, Climate-Friendly ACs: Winners of the Global Cooling Prize Announced,” Global Cooling Prize. Accessed: May 31, 2024. [Online]. Available: <a href="https://globalcoolingprize.org/grand-winners-press-release/">https://globalcoolingprize.org/grand-winners-press-release/</a></li>
+
+<li>“Air conditioning use emerges as one of the key drivers of global electricity-demand growth - News,” IEA. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.iea.org/news/air-conditioning-use-emerges-as-one-of-the-key-drivers-of-global-electricity-demand-growth">https://www.iea.org/news/air-conditioning-use-emerges-as-one-of-the-key-drivers-of-global-electricity-demand-growth</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>T. F. News E&amp;E, “Relentless Heat Waves Make AC Too Expensive for Many People,” Scientific American. Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/heat-waves-make-ac-too-expensive-for-many-people/">https://www.scientificamerican.com/article/heat-waves-make-ac-too-expensive-for-many-people/</a></li>
+
+<li>T. W. January 2025, “Phase-changing crystals could cut air-conditioning’s climate impact,” Chemistry World. Accessed: Jan. 15, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/phase-changing-crystals-could-cut-air-conditionings-climate-impact/4020796.article">https://www.chemistryworld.com/news/phase-changing-crystals-could-cut-air-conditionings-climate-impact/4020796.article</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org20f3412" class="outline-3">
+<h3 id="org20f3412"><span class="section-number-3">2.6.</span> Special Topics</h3>
+<div class="outline-text-3" id="text-2-6">
+</div>
+<div id="outline-container-org777ee59" class="outline-4">
+<h4 id="org777ee59"><span class="section-number-4">2.6.1.</span> Union Of Concerned Scientists</h4>
+<div class="outline-text-4" id="text-2-6-1">
+<ul class="org-ul">
+<li>“Killer Heat in the United States | Union of Concerned Scientists.” Accessed: May 31, 2024. [Online]. Available: <a href="https://www.ucsusa.org/resources/killer-heat-united-states-0">https://www.ucsusa.org/resources/killer-heat-united-states-0</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf19ebc0" class="outline-4">
+<h4 id="orgf19ebc0"><span class="section-number-4">2.6.2.</span> Oxford</h4>
+<div class="outline-text-4" id="text-2-6-2">
+<ul class="org-ul">
+<li>“Future of Cooling,” Oxford Martin School. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.oxfordmartin.ox.ac.uk/future-of-cooling">https://www.oxfordmartin.ox.ac.uk/future-of-cooling</a></li>
+
+<li>“Cooling the world without heating the planet,” Oxford Martin School. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.oxfordmartin.ox.ac.uk/long-read/cooling-the-world-without-heating-the-planet">https://www.oxfordmartin.ox.ac.uk/long-read/cooling-the-world-without-heating-the-planet</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf5d193f" class="outline-4">
+<h4 id="orgf5d193f"><span class="section-number-4">2.6.3.</span> The Bulletin</h4>
+<div class="outline-text-4" id="text-2-6-3">
+<ul class="org-ul">
+<li>“‘Silent killer’: A series on surviving the extremely hot future,” Bulletin of the Atomic Scientists. Accessed: May 31, 2024. [Online]. Available: <a href="https://thebulletin.org/silent-killer-a-series-on-surviving-the-extremely-hot-future/">https://thebulletin.org/silent-killer-a-series-on-surviving-the-extremely-hot-future/</a></li>
+<li>T. Gaulkin, “Helping pollen beat the heat to save global agriculture,” Bulletin of the Atomic Scientists. Accessed: May 31, 2024. [Online]. Available: <a href="https://thebulletin.org/2022/07/helping-pollen-beat-the-heat-to-save-global-agriculture/">https://thebulletin.org/2022/07/helping-pollen-beat-the-heat-to-save-global-agriculture/</a></li>
+<li>T. Gaulkin, “Are cities ready for extreme heat?,” Bulletin of the Atomic Scientists. Accessed: May 31, 2024. [Online]. Available: <a href="https://thebulletin.org/2022/07/are-cities-ready-for-extreme-heat/">https://thebulletin.org/2022/07/are-cities-ready-for-extreme-heat/</a></li>
+<li>T. Gaulkin, “How to not die from heat on a too-hot planet,” Bulletin of the Atomic Scientists. Accessed: May 31, 2024. [Online]. Available: <a href="https://thebulletin.org/2022/07/how-to-not-die-on-a-too-hot-planet/">https://thebulletin.org/2022/07/how-to-not-die-on-a-too-hot-planet/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Stover, “The cold crunch: How to cool people without overheating the planet,” Bulletin of the Atomic Scientists, Jul. 19, 2022. <a href="https://thebulletin.org/2022/07/the-cold-crunch-how-to-cool-people-without-overheating-the-planet/">https://thebulletin.org/2022/07/the-cold-crunch-how-to-cool-people-without-overheating-the-planet/</a> (accessed Jul. 20, 2022).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4246123" class="outline-4">
+<h4 id="org4246123"><span class="section-number-4">2.6.4.</span> IEA</h4>
+<div class="outline-text-4" id="text-2-6-4">
+<ul class="org-ul">
+<li>“The Future of Cooling – Analysis,” IEA. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.iea.org/reports/the-future-of-cooling">https://www.iea.org/reports/the-future-of-cooling</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org591c026" class="outline-3">
+<h3 id="org591c026"><span class="section-number-3">2.7.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-7">
+<ul class="org-ul">
+<li>“Austria’s Heat Map: Sharp Rise In Days With Severe Heat Stress.” Accessed: Jul. 02, 2025. [Online]. Available: <a href="https://csh.ac.at/news/austrias-heat-map-sharp-rise-in-days-with-severe-heat-stress/">https://csh.ac.at/news/austrias-heat-map-sharp-rise-in-days-with-severe-heat-stress/</a></li>
+
+<li>A. Thompson, “How to Keep Your Home Cool in Extreme Heat,” Scientific American. Accessed: Jun. 25, 2025. [Online]. Available: <a href="https://www.scientificamerican.com/article/how-to-keep-your-home-cool-in-extreme-heat/">https://www.scientificamerican.com/article/how-to-keep-your-home-cool-in-extreme-heat/</a></li>
+
+<li>N. Author, “Urban cool: how to make cities less hot than their surroundings,” Physics World. Accessed: Jun. 21, 2025. [Online]. Available: <a href="https://physicsworld.com/urban-cool/">https://physicsworld.com/urban-cool/</a></li>
+
+<li>“What We’re Watching: Coming Historic Heat Plus Acute Risks Could Make Rest of June a Hot Mess,” The Equation. Accessed: Jun. 19, 2025. [Online]. Available: <a href="https://blog.ucs.org/erika-spanger-siegfried/what-were-watching-coming-historic-heat-plus-acute-risks-could-make-rest-of-june-a-hot-mess/">https://blog.ucs.org/erika-spanger-siegfried/what-were-watching-coming-historic-heat-plus-acute-risks-could-make-rest-of-june-a-hot-mess/</a></li>
+
+<li>T. Sarkar, “Cool tech at your service, now with extra degrees celsius,” Down To Earth. Accessed: Jun. 16, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/climate-change/cool-tech-at-your-service-now-with-extra-degrees-celsius">https://www.downtoearth.org.in/climate-change/cool-tech-at-your-service-now-with-extra-degrees-celsius</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc06d49c" class="outline-2">
+<h2 id="orgc06d49c"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org869ee06" class="outline-3">
+<h3 id="org869ee06"><span class="section-number-3">3.1.</span> Orgs</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>“Future of Cooling,” Oxford Martin School. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.oxfordmartin.ox.ac.uk/future-of-cooling">https://www.oxfordmartin.ox.ac.uk/future-of-cooling</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Global Cooling Pledge,” Cool Coalition. Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://coolcoalition.org/global-cooling-pledge/">https://coolcoalition.org/global-cooling-pledge/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdbde119" class="outline-3">
+<h3 id="orgdbde119"><span class="section-number-3">3.2.</span> Awards</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“Global Cooling Prize,” Global Cooling Prize. Accessed: May 31, 2024. [Online]. Available: <a href="https://globalcoolingprize.org/">https://globalcoolingprize.org/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3d691ba" class="outline-3">
+<h3 id="org3d691ba"><span class="section-number-3">3.3.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-orga78f753" class="outline-4">
+<h4 id="orga78f753"><span class="section-number-4">3.3.1.</span> USA</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<ul class="org-ul">
+<li>“Killer Heat in the United States | Union of Concerned Scientists.” Accessed: May 31, 2024. [Online]. Available: <a href="https://www.ucsusa.org/resources/killer-heat-united-states-0">https://www.ucsusa.org/resources/killer-heat-united-states-0</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga696145" class="outline-4">
+<h4 id="orga696145"><span class="section-number-4">3.3.2.</span> India</h4>
+<div class="outline-text-4" id="text-3-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org1e05b63"></a>General<br /></li>
+<li><a id="orgefe7cb2"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="org7fa8d4b"></a>Top STEMM India<br /></li>
+<li><a id="orgfb3eccf"></a>GreenPeace India<br />
+<div class="outline-text-6" id="text-3-3-2-2-2">
+<ul class="org-ul">
+<li>“New Report by Greenpeace India and National Hawkers Federation Reveals Harsh Heatwave Toll on Street Vendors,” Greenpeace India. Accessed: Jun. 26, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/press/16737/new-report-by-greenpeace-india-and-national-hawkers-federation-reveals-harsh-heatwave-toll-on-street-vendors/">https://www.greenpeace.org/india/en/press/16737/new-report-by-greenpeace-india-and-national-hawkers-federation-reveals-harsh-heatwave-toll-on-street-vendors/</a></li>
+<li>“HEAT HAVOC Report,” Greenpeace India. Accessed: Jun. 26, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/publication/16735/heat-havoc-report/">https://www.greenpeace.org/india/en/publication/16735/heat-havoc-report/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“HEAT HAVOC Report,” Greenpeace India. Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/publication/16735/heat-havoc-report/">https://www.greenpeace.org/india/en/publication/16735/heat-havoc-report/</a></li>
+<li>“New Report by Greenpeace India and National Hawkers Federation Reveals Harsh Heatwave Toll on Street Vendors,” Greenpeace India. Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/press/16737/new-report-by-greenpeace-india-and-national-hawkers-federation-reveals-harsh-heatwave-toll-on-street-vendors/">https://www.greenpeace.org/india/en/press/16737/new-report-by-greenpeace-india-and-national-hawkers-federation-reveals-harsh-heatwave-toll-on-street-vendors/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgba80d74"></a>Mongabay India<br />
+<div class="outline-text-6" id="text-3-3-2-2-3">
+<ul class="org-ul">
+<li>P. Shankar, “With intense and recurring heat waves, AC market grows,” Mongabay-India. Accessed: Jul. 06, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/07/with-intense-and-recurring-heat-waves-ac-market-grows/">https://india.mongabay.com/2024/07/with-intense-and-recurring-heat-waves-ac-market-grows/</a></li>
+<li>K. Pandey, “Extreme heat compounds vulnerabilities in low income neighbourhoods,” Mongabay-India. Accessed: Jun. 28, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/06/extreme-heat-compounds-vulnerabilities-in-low-income-neighbourhoods-delhi-ncr/">https://india.mongabay.com/2024/06/extreme-heat-compounds-vulnerabilities-in-low-income-neighbourhoods-delhi-ncr/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb089dca"></a>Down To Earth<br />
+<div class="outline-text-6" id="text-3-3-2-2-4">
+<ul class="org-ul">
+<li>A. Sangomla, “India needs a heat stress index, even during winters: Experts,” Down To Earth. Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/climate-change/india-needs-a-heat-stress-index-even-during-winters-experts">https://www.downtoearth.org.in/climate-change/india-needs-a-heat-stress-index-even-during-winters-experts</a></li>
+
+<li>“The Green Kitchen: How are heatwaves affecting mangoes?” Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/video/food/the-green-kitchen-how-are-heatwaves-affecting-mangoes--96769">https://www.downtoearth.org.in/video/food/the-green-kitchen-how-are-heatwaves-affecting-mangoes--96769</a></li>
+<li>“India’s urban open spaces have become unbearably hot. A planning expert shows how to reclaim these areas.” Accessed: Jun. 22, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/governance/india-s-urban-open-spaces-have-become-unbearably-hot-a-planning-expert-shows-how-to-reclaim-these-areas-96787">https://www.downtoearth.org.in/blog/governance/india-s-urban-open-spaces-have-become-unbearably-hot-a-planning-expert-shows-how-to-reclaim-these-areas-96787</a></li>
+<li>“Killer heat’s shadow: DTE chronicles scorching lives of India’s factory workers in sweatshops turned sweatboxes.” Accessed: Jun. 22, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/killer-heat-s-shadow-dte-chronicles-scorching-lives-of-india-s-factory-workers-in-sweatshops-turned-sweatboxes-96814">https://www.downtoearth.org.in/news/climate-change/killer-heat-s-shadow-dte-chronicles-scorching-lives-of-india-s-factory-workers-in-sweatshops-turned-sweatboxes-96814</a></li>
+<li>“Stalled southwest monsoon: ‘break periods’ are normal every season; but this time, there is a difference.” Accessed: Jun. 20, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/stalled-southwest-monsoon-break-periods-are-normal-every-season-but-this-time-there-is-a-difference-96762">https://www.downtoearth.org.in/news/climate-change/stalled-southwest-monsoon-break-periods-are-normal-every-season-but-this-time-there-is-a-difference-96762</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3fff33d"></a>A. Kothari<br />
+<div class="outline-text-6" id="text-3-3-2-2-5">
+<ul class="org-ul">
+<li>A. Kothari, “Escalating heat, boiling questions,” Meer. Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://www.meer.com/en/80900-escalating-heat-boiling-questions">https://www.meer.com/en/80900-escalating-heat-boiling-questions</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org63ee049"></a>IITM Shaastra Magazine<br />
+<div class="outline-text-6" id="text-3-3-2-2-6">
+<ul class="org-ul">
+<li>“MAY 2024 | Indian Institute of Technology Madras - IITM Shaastra.” Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://shaastramag.iitm.ac.in/print-issue/may-2024">https://shaastramag.iitm.ac.in/print-issue/may-2024</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org91d3945"></a>Misc<br />
+<div class="outline-text-6" id="text-3-3-2-2-7">
+<ul class="org-ul">
+<li>simrinsirur, “A new analysis in a warming state links land use change to increasing heat,” Mongabay-India. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/08/a-new-analysis-in-a-warming-state-links-land-use-change-to-increasing-heat/">https://india.mongabay.com/2025/08/a-new-analysis-in-a-warming-state-links-land-use-change-to-increasing-heat/</a></li>
+
+<li>“How an innovative portable shelter could help India’s outdoor workers beat the heat,” AP News. Accessed: Jun. 14, 2025. [Online]. Available: <a href="https://apnews.com/article/india-climate-change-extreme-heat-shelter-solutions-b51fc1710942ba02753dd5cd81e53c78">https://apnews.com/article/india-climate-change-extreme-heat-shelter-solutions-b51fc1710942ba02753dd5cd81e53c78</a></li>
+
+<li>S. Bose, “For India, cooling is now a necessity. Its choice of refrigerant will impact progress on climate goals,” Down To Earth. Accessed: May 31, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/waste/for-india-cooling-is-now-a-necessity-its-choice-of-refrigerant-will-impact-progress-on-climate-goals">https://www.downtoearth.org.in/waste/for-india-cooling-is-now-a-necessity-its-choice-of-refrigerant-will-impact-progress-on-climate-goals</a></li>
+
+<li>“India is a global warming ‘hole,’ and scientists aren’t sure why.” Accessed: Apr. 09, 2025. [Online]. Available: <a href="https://www.science.org/content/article/india-global-warming-hole-scientists-arent-sure">https://www.science.org/content/article/india-global-warming-hole-scientists-arent-sure</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org1337cc0"></a>Worldly Matters<br />
+<ol class="org-ol">
+<li><a id="org10390e7"></a>NewsClick<br />
+<div class="outline-text-6" id="text-3-3-2-3-1">
+<ul class="org-ul">
+<li>“Blowing Hot and Hotter: Or Learning to Live With Heat,” NewsClick. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.newsclick.in/blowing-hot-and-hotter-or-learning-live-heat-0">https://www.newsclick.in/blowing-hot-and-hotter-or-learning-live-heat-0</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Cities Need to Beat the Heat: India Should Place Moratorium on Cutting Trees,” NewsClick. Accessed: Jun. 17, 2024. [Online]. Available: <a href="https://www.newsclick.in/cities-need-beat-heat-india-should-place-moratorium-cutting-trees">https://www.newsclick.in/cities-need-beat-heat-india-should-place-moratorium-cutting-trees</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Heat Stress Exposes Dangerous Trends in India’s Biggest Cities,” NewsClick. Accessed: Jun. 17, 2024. [Online]. Available: <a href="https://www.newsclick.in/heat-stress-exposes-dangerous-trends-indias-biggest-cities">https://www.newsclick.in/heat-stress-exposes-dangerous-trends-indias-biggest-cities</a></li>
+<li>“Can a Habitable Planet Earth Turn into a Hot, Lifeless Sphere Like Venus?,” NewsClick. Accessed: Jun. 17, 2024. [Online]. Available: <a href="https://www.newsclick.in/can-habitable-planet-earth-turn-hot-lifeless-sphere-venus">https://www.newsclick.in/can-habitable-planet-earth-turn-hot-lifeless-sphere-venus</a></li>
+<li>“Divided by Class: How Heat Waves Expose Socio-Economic Fault Lines,” NewsClick. Accessed: Jun. 17, 2024. [Online]. Available: <a href="https://www.newsclick.in/divided-class-how-heat-waves-expose-socio-economic-fault-lines">https://www.newsclick.in/divided-class-how-heat-waves-expose-socio-economic-fault-lines</a></li>
+<li>“NDMA Should Declare Heat Wave as Disaster, Pay Heat Surcharge:Amazon India Workers Association,” NewsClick. Accessed: Jun. 17, 2024. [Online]. Available: <a href="https://www.newsclick.in/ndma-should-declare-heat-wave-disaster-pay-heat-surchargeamazon-india-workers-association">https://www.newsclick.in/ndma-should-declare-heat-wave-disaster-pay-heat-surchargeamazon-india-workers-association</a></li>
+<li>“Climate Change: WMO’s Report Confirms 2023 Was Hottest Year,” NewsClick. Accessed: Jun. 17, 2024. [Online]. Available: <a href="https://www.newsclick.in/climate-change-wmos-report-confirms-2023-was-hottest-year">https://www.newsclick.in/climate-change-wmos-report-confirms-2023-was-hottest-year</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgac701c6"></a>The Hindu, The Frontline<br />
+<div class="outline-text-6" id="text-3-3-2-3-2">
+<ul class="org-ul">
+<li>H. A. Khan, “How Delhi’s scorching heat puts smartphones to the ultimate test,” The Hindu, Jun. 14, 2024. Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://www.thehindu.com/sci-tech/technology/gadgets/how-delhis-scorching-heat-puts-smartphones-to-the-ultimate-test/article68285649.ece">https://www.thehindu.com/sci-tech/technology/gadgets/how-delhis-scorching-heat-puts-smartphones-to-the-ultimate-test/article68285649.ece</a></li>
+<li>N. Adve, “India’s Extreme Heat Crisis: Government Action Lags Behind Climate Change Impacts,” Frontline. Accessed: Jul. 27, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/environment/climate-change-indian-meteorological-department-global-warming-heatwave-electric-vehicles/article68407686.ece">https://frontline.thehindu.com/environment/climate-change-indian-meteorological-department-global-warming-heatwave-electric-vehicles/article68407686.ece</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdca3c82"></a>Centre for Financial Accountability<br />
+<div class="outline-text-6" id="text-3-3-2-3-3">
+<ul class="org-ul">
+<li>R. K. Sinha, “गर्मी से गहराता संकट,” Centre for Financial Accountability. Accessed: Jul. 05, 2024. [Online]. Available: <a href="https://www.cenfa.org/crisis-deepening-due-to-heat/">https://www.cenfa.org/crisis-deepening-due-to-heat/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org80ea8d0"></a>Alternative Media<br />
+<div class="outline-text-6" id="text-3-3-2-3-4">
+<ul class="org-ul">
+<li>“India Urgently Needs a Comprehensive Public Health Plan to Tackle Heatwaves,” The Wire. Accessed: Jul. 13, 2024. [Online]. Available: <a href="https://thewire.in/health/india-needs-comprehensive-public-health-preparedness-to-tackle-heatwaves">https://thewire.in/health/india-needs-comprehensive-public-health-preparedness-to-tackle-heatwaves</a></li>
+<li>V. K. Jain, “Higher than normal temperature, persistent heatwaves fuel demand for ACs across India,” Scroll.in. Accessed: Jul. 11, 2024. [Online]. Available: <a href="https://scroll.in/article/1070300/higher-than-normal-temperature-persistent-heatwaves-fuel-demand-for-acs-across-india">https://scroll.in/article/1070300/higher-than-normal-temperature-persistent-heatwaves-fuel-demand-for-acs-across-india</a></li>
+</ul>
+
+
+
+
+
+
+<ul class="org-ul">
+<li>“The Inequality of Heat: Heatwave Leaves Delhi’s Poor, Marginalised Gasping for Breath,” The Wire. Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://thewire.in/environment/the-inequality-of-heat-heatwave-leaves-delhis-poor-marginalised-gasping-for-breath">https://thewire.in/environment/the-inequality-of-heat-heatwave-leaves-delhis-poor-marginalised-gasping-for-breath</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“In photos: How delivery riders are coping with India’s extreme heat wave,” Rest of World. Accessed: Jun. 26, 2024. [Online]. Available: <a href="https://restofworld.org/2024/india-heat-wave-delivery-workers/">https://restofworld.org/2024/india-heat-wave-delivery-workers/</a></li>
+</ul>
+
+
+
+
+
+
+
+<ul class="org-ul">
+<li>“Escalating Heat, Boiling Questions – Janata Weekly.” Accessed: Jun. 25, 2024. [Online]. Available: <a href="https://janataweekly.org/escalating-heat-boiling-questions/">https://janataweekly.org/escalating-heat-boiling-questions/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgbacb34a"></a>Cities<br />
+<ul class="org-ul">
+<li><a id="orgd147062"></a>Delhi<br />
+<div class="outline-text-7" id="text-orgd147062">
+<ul class="org-ul">
+<li>“Urban Heat Stress Tracker- Delhi.” Accessed: May 31, 2024. [Online]. Available: <a href="https://www.cseindia.org/urban-heat-stress-tracker-delhi-12193">https://www.cseindia.org/urban-heat-stress-tracker-delhi-12193</a></li>
+
+<li>“Heat Proofing Delhi: The Challenges and Solutions in the Capital&amp;#8217;s Heat Action Plan,” Greenpeace India. Accessed: Apr. 01, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/story/15963/heat-proofing-delhi-the-challenges-and-solutions-in-the-capitals-heat-action-plan/">https://www.greenpeace.org/india/en/story/15963/heat-proofing-delhi-the-challenges-and-solutions-in-the-capitals-heat-action-plan/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orge4fefd8"></a>Misc<br />
+<div class="outline-text-6" id="text-3-3-2-3-6">
+<ul class="org-ul">
+<li>K. Pandey, “Property tax revenue could help cities adapt to a hotter world,” Mongabay-India. Accessed: Mar. 29, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/03/fairer-property-taxes-could-help-cities-adapt-to-a-hotter-world/">https://india.mongabay.com/2025/03/fairer-property-taxes-could-help-cities-adapt-to-a-hotter-world/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>A. Tandon, “Heat action crumbles when it needs cross-department coordination, says report,” Mongabay-India. Accessed: Mar. 28, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/03/heat-mitigation-actions-crumble-when-they-need-multi-sectoral-support-says-report/">https://india.mongabay.com/2025/03/heat-mitigation-actions-crumble-when-they-need-multi-sectoral-support-says-report/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org416aad8"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org0ed7223"></a>India NCR<br />
+<ul class="org-ul">
+<li><a id="org3356f9d"></a>General<br /></li>
+<li><a id="org9dbb683"></a>Delhi<br /></li>
+<li><a id="orgb84a7a2"></a>Gurugram<br /></li>
+<li><a id="orga5f450c"></a>Misc<br />
+<div class="outline-text-7" id="text-orga5f450c">
+<ul class="org-ul">
+<li>“Set up your own Cooling Point. Join #DelhiRising,” Greenpeace India. Accessed: May 19, 2025. [Online]. Available: <a href="https://www.greenpeace.org/india/en/story/18368/set-up-your-own-cooling-point-join-delhirising/">https://www.greenpeace.org/india/en/story/18368/set-up-your-own-cooling-point-join-delhirising/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="orgdbf2c6e"></a>Misc<br />
+<div class="outline-text-5" id="text-3-3-2-5">
+<ul class="org-ul">
+<li>Z. H. C. M. C. M. A. E. T. ChangeIndia, “India among hardest hit as extreme heat worsens since 2015,” Mongabay-India. Accessed: Oct. 21, 2025. [Online]. Available: <a href="https://india.mongabay.com/short-article/india-among-hardest-hit-as-extreme-heat-worsens-since-2015/">https://india.mongabay.com/short-article/india-among-hardest-hit-as-extreme-heat-worsens-since-2015/</a></li>
+
+<li>Z. H. C. M. C. M. A. E. T. ChangeIndia, “India among hardest hit as extreme heat worsens since 2015,” Mongabay-India. Accessed: Oct. 22, 2025. [Online]. Available: <a href="https://india.mongabay.com/short-article/india-among-hardest-hit-as-extreme-heat-worsens-since-2015/">https://india.mongabay.com/short-article/india-among-hardest-hit-as-extreme-heat-worsens-since-2015/</a></li>
+
+<li>D. T. E. Staff, “India’s warming: It is all in the numbers,” Down To Earth. Accessed: Aug. 02, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/climate-change/indias-climate-it-is-all-in-the-numbers">https://www.downtoearth.org.in/climate-change/indias-climate-it-is-all-in-the-numbers</a></li>
+
+<li>A. Tandon, “Too hot to handle as rural houses turn heat traps,” Mongabay-India. Accessed: Jun. 24, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/06/too-hot-to-handle-as-rural-houses-turn-heat-traps/">https://india.mongabay.com/2025/06/too-hot-to-handle-as-rural-houses-turn-heat-traps/</a></li>
+
+<li>S. Dua, “Urban heat islands are causing Indian cities to boil. And the poor are paying the price,” Down To Earth. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/climate-change/urban-heat-islands-are-causing-indian-cities-to-boil-and-the-poor-are-paying-the-price">https://www.downtoearth.org.in/climate-change/urban-heat-islands-are-causing-indian-cities-to-boil-and-the-poor-are-paying-the-price</a></li>
+
+<li>N. Kohli, “Simple, sustainable ways to make city homes cooler,” 360. Accessed: Jun. 17, 2025. [Online]. Available: <a href="https://360info.org/simple-sustainable-ways-to-make-city-homes-cooler/">https://360info.org/simple-sustainable-ways-to-make-city-homes-cooler/</a></li>
+
+<li>“Broken Signals: India’s Heatwave Warnings Are Missing the Mark,” Vikalp Sangam. Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://nivarana.org/article/broken-signals-indias-heatwave-warnings-are-missing-the-mark">https://nivarana.org/article/broken-signals-indias-heatwave-warnings-are-missing-the-mark</a></li>
+
+<li>“Daily heat tracker: Hisar sizzles at 45°C, hottest among scorching cities.” Accessed: May 20, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/climate-change/daily-heat-tracker-hisar-sizzles-at-45c-hottest-among-scorching-cities">https://www.downtoearth.org.in/climate-change/daily-heat-tracker-hisar-sizzles-at-45c-hottest-among-scorching-cities</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Lahariya, “Beat the heat with people-centric responses,” The Hindu, Apr. 20, 2025. Accessed: Apr. 21, 2025. [Online]. Available: <a href="https://www.thehindu.com/opinion/lead/beat-the-heat-with-people-centric-responses/article69471759.ece">https://www.thehindu.com/opinion/lead/beat-the-heat-with-people-centric-responses/article69471759.ece</a></li>
+
+<li>saumitrashinde, “Safeguarding Indian cities from heat: In conversation with Sudeshna Chatterjee [Interview],” Mongabay-India. Accessed: Apr. 15, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/04/safeguarding-indian-cities-from-heat-in-conversation-with-sudeshna-chatterjee-interview/">https://india.mongabay.com/2025/04/safeguarding-indian-cities-from-heat-in-conversation-with-sudeshna-chatterjee-interview/</a></li>
+
+<li>“Is India Ready for a Warming World? How Heat Resilience Measures Are Being Implemented for 11% of India’s Urban Population in Some of Its Most At-Risk Cities,” Sustainable Futures Collaborative. Accessed: Mar. 19, 2025. [Online]. Available: <a href="https://www.sustainablefutures.org/publication/is-india-ready-for-a-warming-world-how-heat-resilience-measures-are-being-implemented-for-11-of-indias-urban-population-in-some-of-its-most-at-risk-cities/">https://www.sustainablefutures.org/publication/is-india-ready-for-a-warming-world-how-heat-resilience-measures-are-being-implemented-for-11-of-indias-urban-population-in-some-of-its-most-at-risk-cities/</a></li>
+
+<li>“Escalating heat, boiling questions,” Vikalp Sangam. Accessed: Mar. 17, 2025. [Online]. Available: <a href="https://www.meer.com/en/80900-escalating-heat-boiling-questions">https://www.meer.com/en/80900-escalating-heat-boiling-questions</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgf017c6b" class="outline-3">
+<h3 id="orgf017c6b"><span class="section-number-3">3.4.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-4">
+<ul class="org-ul">
+<li>G. Guglielmi, “Summer 2025 is roasting hot: these charts show why it matters,” Nature, Aug. 2025, doi: 10.1038/d41586-025-02553-3.</li>
+
+<li>“Hot Summer 2025 Could Be the Coolest for the Rest of Our Lives: 6 Things to Know,” The Equation. Accessed: Aug. 01, 2025. [Online]. Available: <a href="https://blog.ucs.org/erika-spanger-siegfried/hot-summer-2025-could-be-the-coolest-for-the-rest-of-our-lives-6-things-to-know/">https://blog.ucs.org/erika-spanger-siegfried/hot-summer-2025-could-be-the-coolest-for-the-rest-of-our-lives-6-things-to-know/</a></li>
+
+<li>“USAID and Red Cross to organise virtual ‘Global Summit on Extreme Heat’ today.” Accessed: Mar. 28, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/usaid-and-red-cross-to-organise-virtual-global-summit-on-extreme-heat-today-95260">https://www.downtoearth.org.in/news/climate-change/usaid-and-red-cross-to-organise-virtual-global-summit-on-extreme-heat-today-95260</a></li>
+
+<li>“It’s Time for OSHA to Finalize a Strong Heat Health Standard to Protect Workers: Here’s How You Can Help.,” The Equation. Accessed: Nov. 19, 2024. [Online]. Available: <a href="https://blog.ucsusa.org/shana-udvardy/its-time-for-osha-to-finalize-a-strong-heat-health-standard-to-protect-workers-heres-how-you-can-help/">https://blog.ucsusa.org/shana-udvardy/its-time-for-osha-to-finalize-a-strong-heat-health-standard-to-protect-workers-heres-how-you-can-help/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org1cd6891" class="outline-2">
+<h2 id="org1cd6891"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org7afe4e7" class="outline-3">
+<h3 id="org7afe4e7"><span class="section-number-3">4.1.</span> HeatWaves</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org1d007ef" class="outline-4">
+<h4 id="org1d007ef"><span class="section-number-4">4.1.1.</span> General</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>“Heat wave,” Wikipedia. Jul. 22, 2022. Accessed: Jul. 23, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Heat_wave&amp;oldid=1099827915">https://en.wikipedia.org/w/index.php?title=Heat_wave&amp;oldid=1099827915</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc1bb94a" class="outline-4">
+<h4 id="orgc1bb94a"><span class="section-number-4">4.1.2.</span> STEMM</h4>
+<div class="outline-text-4" id="text-4-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgeb0a255"></a>Systems Sciences<br /></li>
+<li><a id="org81c8e94"></a>Psychology<br />
+<div class="outline-text-5" id="text-4-1-2-2">
+<ul class="org-ul">
+<li>“Heat Wave Resources,” Climate Psychiatry Alliance. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.climatepsychiatry.org/heat-wave-resources">https://www.climatepsychiatry.org/heat-wave-resources</a>
+<ul class="org-ul">
+<li>“Heat Wave Toolkits - Factsheets,” Climate Psychiatry Alliance. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.climatepsychiatry.org/heat-wave-toolkits-factsheets">https://www.climatepsychiatry.org/heat-wave-toolkits-factsheets</a></li>
+<li>“Heat Wave Toolkits - Posters &amp; Handouts,” Climate Psychiatry Alliance. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.climatepsychiatry.org/heat-wave-toolkits-posters-and-handouts">https://www.climatepsychiatry.org/heat-wave-toolkits-posters-and-handouts</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orged96b70"></a>UCS<br />
+<div class="outline-text-5" id="text-4-1-2-3">
+<ul class="org-ul">
+<li>“Danger Season 2024,” Union of Concerned Scientists. Accessed: May 31, 2024. [Online]. Available: <a href="https://danger-season.ucsusa.org">https://danger-season.ucsusa.org</a></li>
+<li>“Danger Season,” The Equation. Accessed: May 31, 2024. [Online]. Available: <a href="https://blog.ucsusa.org/series/danger-season/">https://blog.ucsusa.org/series/danger-season/</a></li>
+<li>“Danger Season 2024: It’s Already Started,” The Equation. Accessed: May 25, 2024. [Online]. Available: <a href="https://blog.ucsusa.org/erika-spanger-siegfried/danger-season-2024-its-already-started/">https://blog.ucsusa.org/erika-spanger-siegfried/danger-season-2024-its-already-started/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5dc9ff9"></a>XR<br />
+<div class="outline-text-5" id="text-4-1-2-4">
+<ul class="org-ul">
+<li>“‘Hot Take’ #1 from XR Global: Feel the Heat (Caution: Contents Hot!),” Extinction Rebellion. Accessed: Jul. 23, 2022. [Online]. Available: <a href="https://rebellion.global/blog/2022/07/22/hot-take-1-feel-the-heat/">https://rebellion.global/blog/2022/07/22/hot-take-1-feel-the-heat/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org505c1f0"></a>Misc<br />
+<div class="outline-text-5" id="text-4-1-2-5">
+<ul class="org-ul">
+<li>O. Jay, J. Vanos, D. Gagnon, and F. Tartarini, “To save lives in heatwaves, focus on how human bodies work,” Nature, vol. 644, no. 8075, pp. 35–38, Aug. 2025, doi: 10.1038/d41586-025-02461-6.</li>
+<li>“Heatwave: how to cope in hot weather,” nhs.uk. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.nhs.uk/live-well/seasonal-health/heatwave-how-to-cope-in-hot-weather/">https://www.nhs.uk/live-well/seasonal-health/heatwave-how-to-cope-in-hot-weather/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org5a1af9c" class="outline-4">
+<h4 id="org5a1af9c"><span class="section-number-4">4.1.3.</span> Worldly Matters</h4>
+<div class="outline-text-4" id="text-4-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org75a4ccb"></a>Nation States<br />
+<ol class="org-ol">
+<li><a id="org5d05309"></a>USA<br />
+<div class="outline-text-6" id="text-4-1-3-1-1">
+<ul class="org-ul">
+<li>“Houston Storm Death Toll Climbs to 7,” Democracy Now! Accessed: May 22, 2024. [Online]. Available: <a href="https://www.democracynow.org/2024/5/20/headlines/houston_storm_death_toll_climbs_to_7_people">https://www.democracynow.org/2024/5/20/headlines/houston_storm_death_toll_climbs_to_7_people</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfc0b301"></a>EU<br />
+<div class="outline-text-6" id="text-4-1-3-1-2">
+<ul class="org-ul">
+<li>“2022 European heat waves,” Wikipedia. Jul. 24, 2022. Accessed: Jul. 24, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=2022_European_heat_waves&amp;oldid=1100071690">https://en.wikipedia.org/w/index.php?title=2022_European_heat_waves&amp;oldid=1100071690</a></li>
+
+<li>“‘Just hell.’ 5 countries suffering in Europe’s heat wave,” POLITICO. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.politico.eu/article/five-countries-suffering-from-the-heat-wave-in-europe/">https://www.politico.eu/article/five-countries-suffering-from-the-heat-wave-in-europe/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb85b1bf"></a>UK<br />
+<div class="outline-text-6" id="text-4-1-3-1-3">
+<ul class="org-ul">
+<li>C. B. Staff, “Media reaction: UK’s record-smashing 40C heatwave and climate change,” Carbon Brief. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.carbonbrief.org/media-reaction-uks-record-smashing-40c-heatwave-and-climate-change/">https://www.carbonbrief.org/media-reaction-uks-record-smashing-40c-heatwave-and-climate-change/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. McGuire, “The terrifying truth: Britain’s a hothouse, but one day 40C will seem cool,” The Guardian, Jul. 18, 2022. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.theguardian.com/commentisfree/2022/jul/18/britain-hothouse-extreme-weather">https://www.theguardian.com/commentisfree/2022/jul/18/britain-hothouse-extreme-weather</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org735934b"></a>India<br />
+<ul class="org-ul">
+<li><a id="org52d4e0d"></a>GoI Official<br />
+<div class="outline-text-7" id="text-org52d4e0d">
+<ul class="org-ul">
+<li>India Meteorological Department, Ministry of Earth Sciences Government of India, “Heat Wave Guidance.” Accessed: May 31, 2024. [Online]. Available: <a href="https://internal.imd.gov.in/pages/heatwave_mausam.php">https://internal.imd.gov.in/pages/heatwave_mausam.php</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org896f760"></a>Journals<br />
+<div class="outline-text-7" id="text-org896f760">
+<ul class="org-ul">
+<li>“Climate change alone is not making Indian cities hotter,” Nature India, May 2024, doi: 10.1038/d44151-024-00075-x.</li>
+
+<li>S. S. Sethi and V. Vinoj, “Urbanization and regional climate change-linked warming of Indian cities,” Nat Cities, pp. 1–4, May 2024, doi: 10.1038/s44284-024-00074-0.</li>
+
+<li>M. Rajeevan, “Heatwave preparedness grows more pressing,” natindia, May 2023, doi: 10.1038/d44151-023-00056-6.</li>
+</ul>
+</div>
+</li>
+<li><a id="org1e52e60"></a>GreenPeace India<br />
+<div class="outline-text-7" id="text-org1e52e60">
+<ul class="org-ul">
+<li>“Heatwave.” Accessed: May 24, 2024. [Online]. Available: <a href="https://gpin.greenpeace.org/heatwave">https://gpin.greenpeace.org/heatwave</a></li>
+
+<li>“Heatwave in India: A global warming-induced crisis,” Greenpeace India. Accessed: May 17, 2022. [Online]. Available: <a href="https://www.greenpeace.org/india/en/publication/13402/heatwave-in-india-a-global-warming-induced-crisis/">https://www.greenpeace.org/india/en/publication/13402/heatwave-in-india-a-global-warming-induced-crisis/</a></li>
+
+<li>“Heat Proofing Delhi: The Challenges and Solutions in the Capital&amp;#8217;s Heat Action Plan,” Greenpeace India. Accessed: Apr. 01, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/story/15963/heat-proofing-delhi-the-challenges-and-solutions-in-the-capitals-heat-action-plan/">https://www.greenpeace.org/india/en/story/15963/heat-proofing-delhi-the-challenges-and-solutions-in-the-capitals-heat-action-plan/</a></li>
+
+<li>“Melting Futures: Greenpeace India&amp;#8217;s dramatic Ice Sculpture activity symbolises heatwave disasters unfolding across India,” Greenpeace India. Accessed: May 21, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/press/16710/melting-futures-greenpeace-indias-dramatic-ice-sculpture-activity-symbolises-heatwave-disasters-unfolding-across-india/">https://www.greenpeace.org/india/en/press/16710/melting-futures-greenpeace-indias-dramatic-ice-sculpture-activity-symbolises-heatwave-disasters-unfolding-across-india/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org4de8d34"></a>Mongabay India<br />
+<div class="outline-text-7" id="text-org4de8d34">
+<ul class="org-ul">
+<li>“[Commentary] India needs a national heat code,” Mongabay-India, Jul. 09, 2021. <a href="https://india.mongabay.com/2021/07/commentary-india-needs-a-national-heat-code/">https://india.mongabay.com/2021/07/commentary-india-needs-a-national-heat-code/</a> (accessed May 17, 2022).</li>
+<li>P. Shankar, “As temperatures increase, India’s solar sector feels the heat,” Mongabay-India. Accessed: Jun. 26, 2023. [Online]. Available: <a href="https://india.mongabay.com/2023/06/as-temperatures-increase-indias-solar-sector-feels-the-heat/">https://india.mongabay.com/2023/06/as-temperatures-increase-indias-solar-sector-feels-the-heat/</a></li>
+<li>K. Pandey, “Indian Ocean headed for a near-permanent state of marine heatwave,” Mongabay-India. Accessed: Apr. 30, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/04/indian-ocean-headed-for-a-near-permanent-state-of-marine-heatwave-cyclones-to-intensify-fisheries-at-risk/">https://india.mongabay.com/2024/04/indian-ocean-headed-for-a-near-permanent-state-of-marine-heatwave-cyclones-to-intensify-fisheries-at-risk/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org1d3cc75"></a>Down To Earth<br />
+<ul class="org-ul">
+<li><a id="orgeb0dfd0"></a>A<br />
+<div class="outline-text-8" id="text-orgeb0dfd0">
+<ul class="org-ul">
+<li>“Climate India 2023: An assessment of extreme weather events.” Accessed: May 31, 2024. [Online]. Available: <a href="https://www.cseindia.org/india-2023-extreme-weather-events-11973">https://www.cseindia.org/india-2023-extreme-weather-events-11973</a></li>
+<li>“Decoding the Urban Heat Stress among Indian cities.” Accessed: May 28, 2024. [Online]. Available: <a href="https://www.cseindia.org/decoding-the-urban-heat-stress-among-indian-cities-12191">https://www.cseindia.org/decoding-the-urban-heat-stress-among-indian-cities-12191</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgeb74986"></a>B<br />
+<div class="outline-text-8" id="text-orgeb74986">
+<ul class="org-ul">
+<li>“India is warming fast; endured its 2nd-hottest year on record in 2023: State of Environment in Figures 2024.” Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/india-is-warming-fast-endured-its-2nd-hottest-year-on-record-in-2023-state-of-environment-in-figures-2024-96449">https://www.downtoearth.org.in/news/climate-change/india-is-warming-fast-endured-its-2nd-hottest-year-on-record-in-2023-state-of-environment-in-figures-2024-96449</a></li>
+<li>“India’s voters literally feel the heat.” Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/governance/india-s-voters-literally-feel-the-heat-96446">https://www.downtoearth.org.in/blog/governance/india-s-voters-literally-feel-the-heat-96446</a></li>
+<li>“This is how dangerous extreme heat is to humans.” Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/health/this-is-how-dangerous-extreme-heat-is-to-humans-96444">https://www.downtoearth.org.in/blog/health/this-is-how-dangerous-extreme-heat-is-to-humans-96444</a></li>
+<li>“Scorching days, sweltering nights: Bihar’s heatwave impact worsens due to hot nights.” Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/scorching-days-sweltering-nights-bihar-s-heatwave-impact-worsens-due-to-hot-nights-96432">https://www.downtoearth.org.in/news/climate-change/scorching-days-sweltering-nights-bihar-s-heatwave-impact-worsens-due-to-hot-nights-96432</a></li>
+<li>“Why did Delhi get so hot? The answer may lie in warming of the Arabian Sea.” Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/why-did-delhi-get-so-hot-the-answer-may-lie-in-warming-of-the-arabian-sea-96462">https://www.downtoearth.org.in/news/climate-change/why-did-delhi-get-so-hot-the-answer-may-lie-in-warming-of-the-arabian-sea-96462</a></li>
+<li>“India is warming fast; endured its 2nd-hottest year on record in 2023: State of Environment in Figures 2024.” Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/india-is-warming-fast-endured-its-2nd-hottest-year-on-record-in-2023-state-of-environment-in-figures-2024-96449">https://www.downtoearth.org.in/news/climate-change/india-is-warming-fast-endured-its-2nd-hottest-year-on-record-in-2023-state-of-environment-in-figures-2024-96449</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Heatwave in Delhi: Are ACs adding fuel to fire?” Accessed: May 31, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/climate-change/cool-dwellings-here-is-what-you-can-do-to-make-your-building-beat-the-heat-82708">https://www.downtoearth.org.in/blog/climate-change/cool-dwellings-here-is-what-you-can-do-to-make-your-building-beat-the-heat-82708</a></li>
+<li>“Monsoon 2024 unlikely to bring relief to North East India as IMD forecast paints grim picture, dry trend to continue.” Accessed: May 29, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/monsoon-2024-unlikely-to-bring-relief-to-north-east-india-as-imd-forecast-paints-grim-picture-dry-trend-to-continue-96394">https://www.downtoearth.org.in/news/climate-change/monsoon-2024-unlikely-to-bring-relief-to-north-east-india-as-imd-forecast-paints-grim-picture-dry-trend-to-continue-96394</a></li>
+<li>“May 2024 to mark one year streak of high temperatures?” Accessed: May 22, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/video/climate-change/may-2024-to-mark-one-year-streak-of-high-temperatures--96269">https://www.downtoearth.org.in/video/climate-change/may-2024-to-mark-one-year-streak-of-high-temperatures--96269</a></li>
+<li>“Indian cities no longer cooling down at night, finds CSE study.” Accessed: May 28, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/urbanisation/indian-cities-no-longer-cooling-down-at-night-finds-cse-study-96370">https://www.downtoearth.org.in/news/urbanisation/indian-cities-no-longer-cooling-down-at-night-finds-cse-study-96370</a></li>
+<li>“May 2024 to mark one-year streak of high temperatures?” Accessed: May 23, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/video/climate-change/may-2024-to-mark-one-year-streak-of-high-temperatures--96269">https://www.downtoearth.org.in/video/climate-change/may-2024-to-mark-one-year-streak-of-high-temperatures--96269</a></li>
+<li>“Delhi’s heatwave: Rising temperatures, surging power demand &amp; urgency for climate action.” Accessed: May 24, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/delhi-s-heatwave-rising-temperatures-surging-power-demand-urgency-for-climate-action-96310">https://www.downtoearth.org.in/news/climate-change/delhi-s-heatwave-rising-temperatures-surging-power-demand-urgency-for-climate-action-96310</a></li>
+<li>“Killer heat’s shadow: India’s labourers on the frontlines, face boiling temperatures.” Accessed: May 30, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/killer-heat-s-shadow-india-s-labourers-on-the-frontlines-face-boiling-temperatures-96409">https://www.downtoearth.org.in/news/climate-change/killer-heat-s-shadow-india-s-labourers-on-the-frontlines-face-boiling-temperatures-96409</a></li>
+<li>“Indians may already be experiencing temperatures close to limits of human survivability without even being aware.” Accessed: Mar. 29, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/indians-may-already-be-experiencing-temperatures-close-to-limits-of-human-survivability-without-even-being-aware-95278">https://www.downtoearth.org.in/news/climate-change/indians-may-already-be-experiencing-temperatures-close-to-limits-of-human-survivability-without-even-being-aware-95278</a></li>
+<li>“General Elections 2024: Elections in the time of heatwaves.” Accessed: Apr. 25, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/video/climate-change/general-elections-2024-elections-in-the-time-of-heatwaves-95775">https://www.downtoearth.org.in/video/climate-change/general-elections-2024-elections-in-the-time-of-heatwaves-95775</a></li>
+<li>“Humid heatwaves in India: Three climatic factors creating the unbearable conditions in many states.” Accessed: May 02, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/humid-heatwaves-in-india-three-climatic-factors-creating-the-unbearable-conditions-in-many-states-95921">https://www.downtoearth.org.in/news/climate-change/humid-heatwaves-in-india-three-climatic-factors-creating-the-unbearable-conditions-in-many-states-95921</a></li>
+<li>“Unusual heat scorches Bangladesh as April’s consecutive heatwave breaks 76-year record.” Accessed: May 15, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/unusual-heat-scorches-bangladesh-as-april-s-consecutive-heatwave-breaks-76-year-record-96034">https://www.downtoearth.org.in/news/climate-change/unusual-heat-scorches-bangladesh-as-april-s-consecutive-heatwave-breaks-76-year-record-96034</a></li>
+<li>“Delhi’s heatwave: Rising temperatures, surging power demand &amp; urgency for climate action.” Accessed: May 24, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/delhi-s-heatwave-rising-temperatures-surging-power-demand-urgency-for-climate-action-96310">https://www.downtoearth.org.in/news/climate-change/delhi-s-heatwave-rising-temperatures-surging-power-demand-urgency-for-climate-action-96310</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org12c6344"></a>WSWS<br />
+<div class="outline-text-7" id="text-org12c6344">
+<ul class="org-ul">
+<li>“Heavy rainfall kills over 100 people in India, following heatwaves that took the lives of almost 200,” World Socialist Web Site. Accessed: Sep. 01, 2023. [Online]. Available: <a href="https://www.wsws.org/en/articles/2023/07/14/dmpj-j14.html">https://www.wsws.org/en/articles/2023/07/14/dmpj-j14.html</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd3cb5ac"></a>Misc<br />
+<div class="outline-text-7" id="text-orgd3cb5ac">
+<ul class="org-ul">
+<li>BY, “Workers Are Dying in the Heat in India.” Accessed: Jun. 26, 2026. [Online]. Available: <a href="https://jacobin.com/2026/06/india-pakistan-heat-wave-deaths">https://jacobin.com/2026/06/india-pakistan-heat-wave-deaths</a></li>
+
+<li>“Deadly heat waves scorching India’s cities point to impact of capitalist-induced climate change,” World Socialist Web Site. Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/08/02/mwok-a02.html">https://www.wsws.org/en/articles/2024/08/02/mwok-a02.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Kaur, “Step towards prompt action: Uttar Pradesh sets district-specific thresholds to send out custom heatwave alerts,” Down To Earth. Accessed: Jul. 31, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/governance/step-towards-prompt-action-uttar-pradesh-sets-district-specific-thresholds-to-send-out-custom-heatwave-alerts">https://www.downtoearth.org.in/governance/step-towards-prompt-action-uttar-pradesh-sets-district-specific-thresholds-to-send-out-custom-heatwave-alerts</a></li>
+
+<li>D. Gandhi, “Heatwaves in India: Climate Change Fuels Deadly Temperatures, Urban Heat Islands, and Wildlife Disruption,” Frontline. Accessed: Jul. 24, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/environment/heatwaves-india-extreme-weather-events-climate-change-imd-greenhouse-gas-emissions/article68389127.ece">https://frontline.thehindu.com/environment/heatwaves-india-extreme-weather-events-climate-change-imd-greenhouse-gas-emissions/article68389127.ece</a></li>
+<li>M. Chari, “‘International Cooperation is Required to Fight Heatwaves’: Climate Scientist Indu. K. Murthy,” Frontline. Accessed: Jul. 24, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/environment/indu-k-murthy-interview-tackle-heatwaves-climate-change-global-warming/article68392332.ece">https://frontline.thehindu.com/environment/indu-k-murthy-interview-tackle-heatwaves-climate-change-global-warming/article68392332.ece</a></li>
+<li>N. Adve, “India’s Extreme Heat Crisis: Government Action Lags Behind Climate Change Impacts,” Frontline. Accessed: Jul. 24, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/environment/climate-change-indian-meteorological-department-global-warming-heatwave-electric-vehicles/article68407686.ece">https://frontline.thehindu.com/environment/climate-change-indian-meteorological-department-global-warming-heatwave-electric-vehicles/article68407686.ece</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>B. Kumar, “Incomes halved, health hit: How heatwave affects street vendors in Delhi,” Newslaundry. Accessed: Jun. 21, 2024. [Online]. Available: <a href="https://www.newslaundry.com/2024/06/20/incomes-halved-health-decline-how-heatwave-hit-street-vendors-in-delhi">https://www.newslaundry.com/2024/06/20/incomes-halved-health-decline-how-heatwave-hit-street-vendors-in-delhi</a></li>
+<li>“India heat: Inside Delhi’s first emergency room to tackle crisis.” Accessed: Jun. 21, 2024. [Online]. Available: <a href="https://www.bbc.com/news/articles/cn00nkzdvkjo">https://www.bbc.com/news/articles/cn00nkzdvkjo</a></li>
+<li>T. H. Bureau, “Delhi Weather: After days of heatwave, Delhi witnesses light rains, pleasant morning,” The Hindu, Jun. 20, 2024. Accessed: Jun. 21, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/Delhi/after-days-of-heatwave-delhi-witnesses-light-rains-pleasant-morning/article68310856.ece">https://www.thehindu.com/news/cities/Delhi/after-days-of-heatwave-delhi-witnesses-light-rains-pleasant-morning/article68310856.ece</a></li>
+<li>M. Vijayarangakumar, “Study: Delhi Street Vendors Suffer Health Issues, Financial Losses Due to Heatwaves,” Frontline. Accessed: Jun. 21, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/environment/delhi-heatwave-street-vendors-affected-most-climate-crisis-greenpeace-india-national-hawkers-federation/article68311112.ece">https://frontline.thehindu.com/environment/delhi-heatwave-street-vendors-affected-most-climate-crisis-greenpeace-india-national-hawkers-federation/article68311112.ece</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>T. H. Bureau, “The Hindu Morning Digest, June 19, 2024,” The Hindu, Jun. 19, 2024. Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/morning-digest-june-19-2024/article68305247.ece">https://www.thehindu.com/news/morning-digest-june-19-2024/article68305247.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Uttar Pradesh heatwave: Ganga water levels fall to historic lows in Varanasi amid scorching heat,” The Times of India, Jun. 16, 2024. Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://timesofindia.indiatimes.com/city/varanasi/heatwave-ganga-water-levels-fall-to-historic-lows-in-varanasi-amid-scorching-heat/articleshow/111027038.cms">https://timesofindia.indiatimes.com/city/varanasi/heatwave-ganga-water-levels-fall-to-historic-lows-in-varanasi-amid-scorching-heat/articleshow/111027038.cms</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Dhillon, “Indian engineers warn of prolonged blackouts amid searing heatwave,” The Guardian, Jun. 18, 2024. Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://www.theguardian.com/world/article/2024/jun/18/india-engineers-blackouts-heatwave-north">https://www.theguardian.com/world/article/2024/jun/18/india-engineers-blackouts-heatwave-north</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Intense heatwave batters Ladakh to Jharkhand and large parts of northwest India.” Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://www.telegraphindia.com/india/intense-heatwave-batters-ladakh-to-jharkhand-and-large-parts-of-northwest-india/cid/2027842">https://www.telegraphindia.com/india/intense-heatwave-batters-ladakh-to-jharkhand-and-large-parts-of-northwest-india/cid/2027842</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Get the Heat Index right: an important first step to protect people from heatwaves.” Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/climate-change/get-the-heat-index-right-an-important-first-step-to-protect-people-from-heatwaves-96717">https://www.downtoearth.org.in/blog/climate-change/get-the-heat-index-right-an-important-first-step-to-protect-people-from-heatwaves-96717</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“The Sunita Narain Show: Heatwave in India — how to mitigate the risk?” Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/video/climate-change/the-sunita-narain-show-heatwave-in-india-how-to-mitigate-the-risk--96705">https://www.downtoearth.org.in/video/climate-change/the-sunita-narain-show-heatwave-in-india-how-to-mitigate-the-risk--96705</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Rajesh, “From Headaches to Diarrhoea, How to Combat Heat-Related Illnesses?,” TheQuint. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://www.thequint.com/fit/headache-diarrhoea-how-to-combat-heat-related-illnesses">https://www.thequint.com/fit/headache-diarrhoea-how-to-combat-heat-related-illnesses</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“How does heatwaves impact the health of labourers | Burnt to Build.” Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/video/climate-change/how-does-heatwaves-impact-the-health-of-labourers-burnt-to-build-96598">https://www.downtoearth.org.in/video/climate-change/how-does-heatwaves-impact-the-health-of-labourers-burnt-to-build-96598</a></li>
+<li>“Climate Change: Greenpeace India unveils a museum of people’s lived heatwave experiences,” Greenpeace India. Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://www.greenpeace.org/india/en/press/16725/climate-change-greenpeace-india-unveils-a-museum-of-peoples-lived-heatwave-experiences/">https://www.greenpeace.org/india/en/press/16725/climate-change-greenpeace-india-unveils-a-museum-of-peoples-lived-heatwave-experiences/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Opinion | Southeast Asia’s heatwaves threaten food security. How can nations adapt?,” South China Morning Post. Accessed: Apr. 29, 2024. [Online]. Available: <a href="https://www.scmp.com/opinion/asia-opinion/article/3260404/southeast-asias-heatwaves-threaten-food-security-how-can-nations-adapt">https://www.scmp.com/opinion/asia-opinion/article/3260404/southeast-asias-heatwaves-threaten-food-security-how-can-nations-adapt</a></li>
+<li>“News Wrap: Bangladesh faces historic heat wave | PBS NewsHour.” Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.pbs.org/newshour/show/news-wrap-bangladesh-faces-historic-heat-wave">https://www.pbs.org/newshour/show/news-wrap-bangladesh-faces-historic-heat-wave</a></li>
+<li>S. Dayal and P. Singh, “Indian capital swelters as temperature hits all-time high of 52.9 Celsius,” Reuters, May 29, 2024. Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.reuters.com/world/india/india-issues-heat-wave-alert-delhi-posts-record-high-temperature-2024-05-29/">https://www.reuters.com/world/india/india-issues-heat-wave-alert-delhi-posts-record-high-temperature-2024-05-29/</a></li>
+<li>H. Ellis-Petersen, “‘Unliveable’: Delhi’s residents struggle to cope in record-breaking heat,” The Guardian, May 30, 2024. Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.theguardian.com/world/article/2024/may/30/unliveable-delhis-residents-struggle-to-cope-in-record-breaking-heat">https://www.theguardian.com/world/article/2024/may/30/unliveable-delhis-residents-struggle-to-cope-in-record-breaking-heat</a></li>
+<li>J. Coleman, “Chance of heatwaves in India rising with climate change,” Nature, May 2024, doi: 10.1038/d41586-024-01577-5.</li>
+<li>“Soaring temperatures in South Asia can put children’s health in danger, UNICEF warns.” Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.unicef.org/press-releases/soaring-temperatures-south-asia-can-put-childrens-health-danger-unicef-warns">https://www.unicef.org/press-releases/soaring-temperatures-south-asia-can-put-childrens-health-danger-unicef-warns</a></li>
+<li>“Record-breaking heatwave hits Delhi as India swelters – in pictures,” the Guardian, May 29, 2024. Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.theguardian.com/world/gallery/2024/may/29/india-heatwave-weather-delhi-record-temperatures-photos-pictures">https://www.theguardian.com/world/gallery/2024/may/29/india-heatwave-weather-delhi-record-temperatures-photos-pictures</a></li>
+<li>“Heatwave alert for next five days as highest temperature in India soars to 50 degrees, IMD’s warning for 5 states,” The Economic Times, May 26, 2024. Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://economictimes.indiatimes.com/news/india/highest-temperature-in-india-soars-to-50-degrees-severe-heatwave-to-continue-for-5-days-red-alert-for-5-states/articleshow/110440520.cms?from=mdr">https://economictimes.indiatimes.com/news/india/highest-temperature-in-india-soars-to-50-degrees-severe-heatwave-to-continue-for-5-days-red-alert-for-5-states/articleshow/110440520.cms?from=mdr</a></li>
+<li>S. Reuters, “Protesting Indian farmers endure severe heatwave – video,” The Guardian, May 29, 2024. Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.theguardian.com/world/video/2024/may/29/protesting-indian-farmers-endure-severe-heat-wave-video">https://www.theguardian.com/world/video/2024/may/29/protesting-indian-farmers-endure-severe-heat-wave-video</a></li>
+</ul>
+
+
+
+
+
+
+
+<ul class="org-ul">
+<li>“What is a Heat Dome and why is it causing extreme heatwaves in the USA?” Accessed: Jun. 09, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/video/climate-change/what-is-a-heat-dome-and-why-is-it-causing-extreme-heatwaves-in-the-usa--96587">https://www.downtoearth.org.in/video/climate-change/what-is-a-heat-dome-and-why-is-it-causing-extreme-heatwaves-in-the-usa--96587</a></li>
+<li>“Cool it.” Accessed: Jun. 09, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/climate-change/cool-it-96585">https://www.downtoearth.org.in/blog/climate-change/cool-it-96585</a></li>
+<li>“The million dollar question — what can soothe Indians from blistering heatwaves?” Accessed: Jun. 09, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/climate-change/the-million-dollar-question-what-can-soothe-indians-from-blistering-heatwaves--96584">https://www.downtoearth.org.in/news/climate-change/the-million-dollar-question-what-can-soothe-indians-from-blistering-heatwaves--96584</a></li>
+<li>How does heatwaves impact the health of labourers  | Burnt to Build, (Jun. 08, 2024). Accessed: Jun. 09, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=zs0nkD5EjVU">https://www.youtube.com/watch?v=zs0nkD5EjVU</a></li>
+<li>May 2024 to mark one year streak of high temperatures?, (May 21, 2024). Accessed: Jun. 09, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=r39PY0lN3S8">https://www.youtube.com/watch?v=r39PY0lN3S8</a></li>
+<li>Extreme heatwave conditions continue to persist over several parts of India, (Jun. 03, 2024). Accessed: Jun. 09, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=ORUuBXy4Rf4">https://www.youtube.com/watch?v=ORUuBXy4Rf4</a></li>
+<li>“India’s Voters Literally Feel the Heat,” The India Forum. Accessed: Jun. 07, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/climate-change/indias-voters-literally-feel-heat">https://www.theindiaforum.in/climate-change/indias-voters-literally-feel-heat</a></li>
+<li>“NDMA Should Declare Heat Wave as Disaster, Pay Heat Surcharge:Amazon India Workers Association,” NewsClick. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://www.newsclick.in/ndma-should-declare-heat-wave-disaster-pay-heat-surchargeamazon-india-workers-association">https://www.newsclick.in/ndma-should-declare-heat-wave-disaster-pay-heat-surchargeamazon-india-workers-association</a></li>
+<li>“Divided by Class: How Heat Waves Expose Socio-Economic Fault Lines,” NewsClick. Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://www.newsclick.in/divided-class-how-heat-waves-expose-socio-economic-fault-lines">https://www.newsclick.in/divided-class-how-heat-waves-expose-socio-economic-fault-lines</a></li>
+<li>“Extreme heatwave conditions continue to persist over several parts of India.” Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/video/climate-change/extreme-heatwave-conditions-continue-to-persist-over-several-parts-of-india-96491">https://www.downtoearth.org.in/video/climate-change/extreme-heatwave-conditions-continue-to-persist-over-several-parts-of-india-96491</a></li>
+<li>K. Pandey, “Heat wave hits earnings, health of auto rickshaw drivers,” Mongabay-India. Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/06/heat-wave-hits-earnings-health-of-auto-rickshaw-drivers/">https://india.mongabay.com/2024/06/heat-wave-hits-earnings-health-of-auto-rickshaw-drivers/</a></li>
+<li>“Extreme heat makes women extremely vulnerable.” Accessed: Jun. 04, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/climate-change/extreme-heat-makes-women-extremely-vulnerable-96476">https://www.downtoearth.org.in/blog/climate-change/extreme-heat-makes-women-extremely-vulnerable-96476</a></li>
+<li>“A heatwave is raging during election season, but who will take responsibility of polling officers on duty?” Accessed: Jun. 04, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/governance/a-heatwave-is-raging-during-election-season-but-who-will-take-responsibility-of-polling-officers-on-duty--96213">https://www.downtoearth.org.in/blog/governance/a-heatwave-is-raging-during-election-season-but-who-will-take-responsibility-of-polling-officers-on-duty--96213</a></li>
+<li>“India’s voters literally feel the heat.” Accessed: Jun. 04, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/governance/india-s-voters-literally-feel-the-heat-96446">https://www.downtoearth.org.in/blog/governance/india-s-voters-literally-feel-the-heat-96446</a></li>
+<li>“6-Week Indian Election Wraps Up Amid Deadly Heat Wave, Crackdown on Opposition,” Democracy Now! Accessed: Jun. 04, 2024. [Online]. Available: <a href="https://www.democracynow.org/2024/6/3/headlines/6_week_indian_election_wraps_up_amid_deadly_heat_wave_crackdown_on_opposition">https://www.democracynow.org/2024/6/3/headlines/6_week_indian_election_wraps_up_amid_deadly_heat_wave_crackdown_on_opposition</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Ghosh, “Summer In India: The Burning Question Of Climate Change And Impact On The Marginalised,” Feminism in India. Accessed: Jun. 07, 2024. [Online]. Available: <a href="https://feminisminindia.com/2024/06/07/summer-in-india-the-burning-question-of-climate-change-and-impact-on-the-marginalised/">https://feminisminindia.com/2024/06/07/summer-in-india-the-burning-question-of-climate-change-and-impact-on-the-marginalised/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“In Photos | Heatwave in New Delhi,” The Wire. Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://thewire.in/environment/in-photos-heatwave-in-new-delhi">https://thewire.in/environment/in-photos-heatwave-in-new-delhi</a></li>
+<li>“Extreme heat makes women extremely vulnerable.” Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/climate-change/extreme-heat-makes-women-extremely-vulnerable-96476">https://www.downtoearth.org.in/blog/climate-change/extreme-heat-makes-women-extremely-vulnerable-96476</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“The Numbers Don’t Lie: Heat Kills,” The Wire. Accessed: Jun. 02, 2024. [Online]. Available: <a href="https://thewire.in/environment/the-numbers-dont-lie-heat-kills">https://thewire.in/environment/the-numbers-dont-lie-heat-kills</a></li>
+
+<li>PTI, “Dust storm eases heatwave conditions in Delhi,” The Hindu, Jun. 01, 2024. Accessed: Jun. 02, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/Delhi/dust-storm-eases-heatwave-conditions-in-delhi/article68239386.ece">https://www.thehindu.com/news/cities/Delhi/dust-storm-eases-heatwave-conditions-in-delhi/article68239386.ece</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>S. Srivastava, “In photos: Weathering Delhi’s blazing heatwave,” Scroll.in. Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://scroll.in/article/1068576/in-photos-weathering-delhis-blazing-heatwave">https://scroll.in/article/1068576/in-photos-weathering-delhis-blazing-heatwave</a></li>
+
+<li>P. Prakash, “Heatwave: Why is north and central India facing a severe heatwave? | Explained,” The Hindu, May 31, 2024. Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.thehindu.com/sci-tech/energy-and-environment/heatwave-alert-india-why-is-it-happening-explained/article68235399.ece">https://www.thehindu.com/sci-tech/energy-and-environment/heatwave-alert-india-why-is-it-happening-explained/article68235399.ece</a></li>
+
+<li>“Power cuts sweep Noida, Lucknow amid heatwave, protests pour out on streets,” India Today. Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.indiatoday.in/india/story/power-cuts-uttar-pradesh-noida-lucknow-ghaziabad-heatwave-protests-power-stations-2545709-2024-05-30">https://www.indiatoday.in/india/story/power-cuts-uttar-pradesh-noida-lucknow-ghaziabad-heatwave-protests-power-stations-2545709-2024-05-30</a></li>
+
+<li>“8 officials on poll duty among 18 heat-related deaths in Bihar,” The Indian Express. Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://indianexpress.com/article/india/bihar-heatwave-deaths-poll-duty-9363457/">https://indianexpress.com/article/india/bihar-heatwave-deaths-poll-duty-9363457/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“India court urges heat wave emergency declaration as deaths rise.” Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://phys.org/news/2024-05-india-court-urges-national-emergency.html">https://phys.org/news/2024-05-india-court-urges-national-emergency.html</a></li>
+<li>L. Hanna, “The Delhi heatwave is testing the limits of human endurance. Other hot countries should beware and prepare,” The Conversation. Accessed: Jun. 01, 2024. [Online]. Available: <a href="http://theconversation.com/the-delhi-heatwave-is-testing-the-limits-of-human-endurance-other-hot-countries-should-beware-and-prepare-230866">http://theconversation.com/the-delhi-heatwave-is-testing-the-limits-of-human-endurance-other-hot-countries-should-beware-and-prepare-230866</a></li>
+<li>Q. Editorial, “Urgent heat conversations and actions we need in India to cool down cities - Question of Cities.” Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://questionofcities.org/urgent-heat-conversations-and-actions-we-need-in-india-to-cool-down-cities/">https://questionofcities.org/urgent-heat-conversations-and-actions-we-need-in-india-to-cool-down-cities/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>J. Koshy, “‘Record-breaking’ Delhi temperature could have been due to a faulty instrument,” The Hindu, May 30, 2024. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/Delhi/record-breaking-delhi-temperature-could-have-been-due-to-a-faulty-instrument/article68233451.ece">https://www.thehindu.com/news/cities/Delhi/record-breaking-delhi-temperature-could-have-been-due-to-a-faulty-instrument/article68233451.ece</a></li>
+
+<li>A. Dhillon, “Delhi heatwave: officials investigating if temperature of 52.9C due to faulty sensor,” The Guardian, May 30, 2024. Accessed: May 30, 2024. [Online]. Available: <a href="https://www.theguardian.com/world/article/2024/may/29/delhi-temperature-hits-499c-as-indias-capital-records-hottest-day">https://www.theguardian.com/world/article/2024/may/29/delhi-temperature-hits-499c-as-indias-capital-records-hottest-day</a></li>
+
+<li>“Heatwave takes a toll but no data on deaths,” Hindustan Times. Accessed: May 30, 2024. [Online]. Available: <a href="https://www.hindustantimes.com/india-news/heatwave-takes-a-toll-but-no-data-on-deaths-101716924548997.html">https://www.hindustantimes.com/india-news/heatwave-takes-a-toll-but-no-data-on-deaths-101716924548997.html</a></li>
+
+<li>T. H. Bureau, “Delhi Heatwave: 52.9°C temperature recorded at Mungeshpur AWS, highest-ever temperature in national capital,” The Hindu, May 29, 2024. Accessed: May 30, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/Delhi/delhi-records-highest-ever-temperature-amid-severe-heatwave/article68228346.ece">https://www.thehindu.com/news/cities/Delhi/delhi-records-highest-ever-temperature-amid-severe-heatwave/article68228346.ece</a></li>
+
+<li>T. H. Bureau, “Raj Niwas, Bharadwaj spar over city’s ability to deal with heatwave,” The Hindu, May 29, 2024. Accessed: May 30, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/Delhi/raj-niwas-bharadwaj-spar-over-citys-ability-to-deal-with-heatwave/article68230030.ece">https://www.thehindu.com/news/cities/Delhi/raj-niwas-bharadwaj-spar-over-citys-ability-to-deal-with-heatwave/article68230030.ece</a></li>
+
+<li>“Insidious, incendiary: On the negligence of fire safety in India,” The Hindu, May 29, 2024. Accessed: May 30, 2024. [Online]. Available: <a href="https://www.thehindu.com/opinion/editorial/insidious-incendiary-on-the-negligence-of-fire-safety-in-india/article68228778.ece">https://www.thehindu.com/opinion/editorial/insidious-incendiary-on-the-negligence-of-fire-safety-in-india/article68228778.ece</a></li>
+
+<li>D. Welle, “Delhi heatwave: How are residents coping with extreme weather?,” Frontline. Accessed: May 30, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/news/delhi-heatwave-residents-coping-heatstroke-high-temperature-dehydration-exhaustion-hospitals-50-degree-celsius/article68225207.ece">https://frontline.thehindu.com/news/delhi-heatwave-residents-coping-heatstroke-high-temperature-dehydration-exhaustion-hospitals-50-degree-celsius/article68225207.ece</a></li>
+
+<li>“Heatwave takes a toll but no data on deaths,” Hindustan Times. Accessed: May 29, 2024. [Online]. Available: <a href="https://www.hindustantimes.com/india-news/heatwave-takes-a-toll-but-no-data-on-deaths-101716924548997.html">https://www.hindustantimes.com/india-news/heatwave-takes-a-toll-but-no-data-on-deaths-101716924548997.html</a></li>
+
+<li>“Gurgaon sizzles at 47°C, heat sparks Aravali fire,” The Times of India, May 29, 2024. Accessed: May 29, 2024. [Online]. Available: <a href="https://timesofindia.indiatimes.com/city/gurgaon/gurgaon-sizzles-at-47c-heat-sparks-aravali-fire/articleshow/110517269.cms">https://timesofindia.indiatimes.com/city/gurgaon/gurgaon-sizzles-at-47c-heat-sparks-aravali-fire/articleshow/110517269.cms</a></li>
+
+<li>“Heatwave alert for next five days as highest temperature in India soars to 50 degrees, IMD’s warning for 5 states,” The Economic Times, May 26, 2024. Accessed: May 28, 2024. [Online]. Available: <a href="https://economictimes.indiatimes.com/news/india/highest-temperature-in-india-soars-to-50-degrees-severe-heatwave-to-continue-for-5-days-red-alert-for-5-states/articleshow/110440520.cms?from=mdr">https://economictimes.indiatimes.com/news/india/highest-temperature-in-india-soars-to-50-degrees-severe-heatwave-to-continue-for-5-days-red-alert-for-5-states/articleshow/110440520.cms?from=mdr</a></li>
+
+<li>S. Mahajan, “Delhi election 2024: Approximate voter turnout trend of 54.37% recorded,” The Hindu, May 25, 2024. Accessed: May 26, 2024. [Online]. Available: <a href="https://www.thehindu.com/elections/lok-sabha/approximate-voter-turnout-trend-of-5437-recorded-in-delhi/article68216007.ece">https://www.thehindu.com/elections/lok-sabha/approximate-voter-turnout-trend-of-5437-recorded-in-delhi/article68216007.ece</a></li>
+
+<li>S. Mittal, “‘Difficult to carry on’: Heatwave in Delhi but party workers spend long hours in the sun,” Newslaundry. Accessed: May 25, 2024. [Online]. Available: <a href="https://www.newslaundry.com/2024/05/24/difficult-to-carry-on-heatwave-in-delhi-but-party-workers-spend-long-hours-in-the-sun">https://www.newslaundry.com/2024/05/24/difficult-to-carry-on-heatwave-in-delhi-but-party-workers-spend-long-hours-in-the-sun</a></li>
+
+<li>P. Sharma and J. Orlene, “Heat stress: how soaring temperatures are taking their toll on migrant workers in India’s garden city,” The Guardian, May 22, 2024. Accessed: May 24, 2024. [Online]. Available: <a href="https://www.theguardian.com/global-development/article/2024/may/22/india-bengaluru-heatwaves-climate-inequalities-cities-planning-informal-workers">https://www.theguardian.com/global-development/article/2024/may/22/india-bengaluru-heatwaves-climate-inequalities-cities-planning-informal-workers</a></li>
+
+<li>PTI, “Heatwave alert: Brutal heat in large parts of India; temperatures set to rise further, says IMD,” The Hindu, May 23, 2024. Accessed: May 23, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/brutal-heat-in-large-parts-of-india-temperatures-set-to-rise-further-says-imd/article68206575.ece">https://www.thehindu.com/news/national/brutal-heat-in-large-parts-of-india-temperatures-set-to-rise-further-says-imd/article68206575.ece</a></li>
+
+<li>“Delhi: North India sizzles under intense heatwave.” Accessed: May 21, 2024. [Online]. Available: <a href="https://www.bbc.com/news/articles/c888e0730zpo">https://www.bbc.com/news/articles/c888e0730zpo</a></li>
+
+<li>PTI, “Swathes of north India reel from severe heatwave conditions, Delhi’s Najafgarh hottest in country,” The Hindu, May 21, 2024. Accessed: May 21, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/swathes-of-north-india-reel-from-severe-heatwave-conditions-delhis-najafgarh-hottest-in-country/article68198588.ece">https://www.thehindu.com/news/national/swathes-of-north-india-reel-from-severe-heatwave-conditions-delhis-najafgarh-hottest-in-country/article68198588.ece</a></li>
+
+<li>“Rain shocks: On the monsoon in 2024,” The Hindu, Apr. 17, 2024. Accessed: Apr. 18, 2024. [Online]. Available: <a href="https://www.thehindu.com/opinion/editorial/rain-shocks-on-the-monsoon-in-2024/article68071987.ece">https://www.thehindu.com/opinion/editorial/rain-shocks-on-the-monsoon-in-2024/article68071987.ece</a></li>
+
+<li>“2022 Redux: Adani Group will make most of Haryana’s long, hot summer,” Adani Watch. Accessed: Apr. 29, 2023. [Online]. Available: <a href="https://www.adaniwatch.org/2022_redux_and_a_long_hot_summer_adani_group_will_make_most_of_haryana_s_power_crisis">https://www.adaniwatch.org/2022_redux_and_a_long_hot_summer_adani_group_will_make_most_of_haryana_s_power_crisis</a></li>
+
+<li>“Heatwave: Is India ready to deal with extreme temperatures?,” BBC News. Accessed: Apr. 26, 2023. [Online]. Available: <a href="https://www.bbc.com/news/world-asia-india-65299807">https://www.bbc.com/news/world-asia-india-65299807</a></li>
+
+<li>“India’s deadly heatwaves are getting even hotter,” The Economist. Accessed: Apr. 04, 2023. [Online]. Available: <a href="https://www.economist.com/asia/2023/04/02/global-warming-is-killing-indians-and-pakistanis">https://www.economist.com/asia/2023/04/02/global-warming-is-killing-indians-and-pakistanis</a></li>
+
+<li>“How Can India Adapt Better to Heatwaves?,” The Wire. Accessed: Mar. 30, 2023. [Online]. Available: <a href="https://thewire.in/environment/how-can-india-adapt-better-to-heatwaves">https://thewire.in/environment/how-can-india-adapt-better-to-heatwaves</a></li>
+
+<li>“Rising Heat Across India Raises Alarm On Another Energy Crunch,” NDTV.com. Accessed: Feb. 27, 2023. [Online]. Available: <a href="https://www.ndtv.com/india-news/heatwave-rising-heat-across-india-raises-alarm-on-another-energy-crunch-3812778">https://www.ndtv.com/india-news/heatwave-rising-heat-across-india-raises-alarm-on-another-energy-crunch-3812778</a></li>
+
+<li>R. B. Palanichamy, “How Well Do You Know Your Heatwave? A Study of India Data – The Wire Science.” Accessed: Jul. 24, 2022. [Online]. Available: <a href="https://science.thewire.in/environment/india-heatwave-data-analysis/">https://science.thewire.in/environment/india-heatwave-data-analysis/</a></li>
+
+<li>“No power, no fans, no AC: The villagers fighting to survive India’s deadly heatwaves,” MIT Technology Review. Accessed: Jul. 06, 2022. [Online]. Available: <a href="https://www.technologyreview.com/2022/07/05/1054750/how-indian-villagers-are-coping-with-the-deadly-heatwaves/">https://www.technologyreview.com/2022/07/05/1054750/how-indian-villagers-are-coping-with-the-deadly-heatwaves/</a></li>
+
+<li>“As Brutal Heatwave Grips India’s North, Keep an Eye on the Wet-Bulb Temperature,” The Wire. Accessed: Apr. 30, 2022. [Online]. Available: <a href="https://thewire.in/environment/as-indias-heat-waves-get-worse-heres-why-the-wet-bulb-temperature-matters">https://thewire.in/environment/as-indias-heat-waves-get-worse-heres-why-the-wet-bulb-temperature-matters</a></li>
+
+<li>P. Sharma and J. Orlene, “Heat stress: how soaring temperatures are taking their toll on migrant workers in India’s garden city,” The Guardian, May 22, 2024. Accessed: May 24, 2024. [Online]. Available: <a href="https://www.theguardian.com/global-development/article/2024/may/22/india-bengaluru-heatwaves-climate-inequalities-cities-planning-informal-workers">https://www.theguardian.com/global-development/article/2024/may/22/india-bengaluru-heatwaves-climate-inequalities-cities-planning-informal-workers</a></li>
+
+<li>PTI, “Heatwave alert: Brutal heat in large parts of India; temperatures set to rise further, says IMD,” The Hindu, May 23, 2024. Accessed: May 23, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/national/brutal-heat-in-large-parts-of-india-temperatures-set-to-rise-further-says-imd/article68206575.ece">https://www.thehindu.com/news/national/brutal-heat-in-large-parts-of-india-temperatures-set-to-rise-further-says-imd/article68206575.ece</a></li>
+
+<li>A. R. Zargar, “Summer heat hits Asia early, killing dozens as one expert calls it the ‘most extreme event’ in climate history - CBS News.” Accessed: May 29, 2024. [Online]. Available: <a href="https://www.cbsnews.com/news/heat-wave-asia-2024-deaths-india-severe-weather-climate-change/">https://www.cbsnews.com/news/heat-wave-asia-2024-deaths-india-severe-weather-climate-change/</a></li>
+
+<li>M. Andreoni, “How India Is Coping With Extreme Heat,” The New York Times, May 21, 2024. Accessed: May 29, 2024. [Online]. Available: <a href="https://www.nytimes.com/2024/05/21/climate/india-extreme-heat.html">https://www.nytimes.com/2024/05/21/climate/india-extreme-heat.html</a></li>
+
+<li>“Heatwave takes a toll but no data on deaths,” Hindustan Times. Accessed: May 29, 2024. [Online]. Available: <a href="https://www.hindustantimes.com/india-news/heatwave-takes-a-toll-but-no-data-on-deaths-101716924548997.html">https://www.hindustantimes.com/india-news/heatwave-takes-a-toll-but-no-data-on-deaths-101716924548997.html</a></li>
+
+<li>“Gurgaon sizzles at 47°C, heat sparks Aravali fire,” The Times of India, May 29, 2024. Accessed: May 29, 2024. [Online]. Available: <a href="https://timesofindia.indiatimes.com/city/gurgaon/gurgaon-sizzles-at-47c-heat-sparks-aravali-fire/articleshow/110517269.cms">https://timesofindia.indiatimes.com/city/gurgaon/gurgaon-sizzles-at-47c-heat-sparks-aravali-fire/articleshow/110517269.cms</a></li>
+
+<li>“Heatwave alert for next five days as highest temperature in India soars to 50 degrees, IMD’s warning for 5 states,” The Economic Times, May 26, 2024. Accessed: May 28, 2024. [Online]. Available: <a href="https://economictimes.indiatimes.com/news/india/highest-temperature-in-india-soars-to-50-degrees-severe-heatwave-to-continue-for-5-days-red-alert-for-5-states/articleshow/110440520.cms?from=mdr">https://economictimes.indiatimes.com/news/india/highest-temperature-in-india-soars-to-50-degrees-severe-heatwave-to-continue-for-5-days-red-alert-for-5-states/articleshow/110440520.cms?from=mdr</a></li>
+
+<li>R. B. Palanichamy, “How Well Do You Know Your Heatwave? A Study of India Data – The Wire Science.” <a href="https://science.thewire.in/environment/india-heatwave-data-analysis/">https://science.thewire.in/environment/india-heatwave-data-analysis/</a> (accessed Jul. 24, 2022).</li>
+
+<li>A. Rajvanshi, “Why Women Are So Vulnerable During India’s Deadly Heat Waves,” TIME. Accessed: May 21, 2024. [Online]. Available: <a href="https://time.com/6289448/india-extreme-heat-women/">https://time.com/6289448/india-extreme-heat-women/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B. Bhushan, “Local strategies a must for Indian cities facing heat waves,” 360. Accessed: Jun. 17, 2025. [Online]. Available: <a href="https://360info.org/local-strategies-a-must-for-indian-cities-facing-heat-waves/">https://360info.org/local-strategies-a-must-for-indian-cities-facing-heat-waves/</a></li>
+
+<li>“Delhi’s Informal Workers Join Hands with IMD to Strengthen Heatwave Warning Services.,” Greenpeace India. Accessed: Jun. 14, 2025. [Online]. Available: <a href="https://www.greenpeace.org/india/en/press/18635/delhis-informal-workers-join-hands-with-imd-to-strengthen-heatwave-warning-services/">https://www.greenpeace.org/india/en/press/18635/delhis-informal-workers-join-hands-with-imd-to-strengthen-heatwave-warning-services/</a></li>
+<li>N. Khan, “Heatwaves deepen India’s economic divide,” Nature India, Oct. 2025, doi: 10.1038/d44151-025-00193-0.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="orgb623cb6"></a>Misc<br />
+<div class="outline-text-5" id="text-4-1-3-2">
+<ul class="org-ul">
+<li>A. Zinin, “One for the history books: What we know about the European heat wave,” Phys.org. Accessed: Jul. 04, 2026. [Online]. Available: <a href="https://phys.org/news/2026-07-history-european.html">https://phys.org/news/2026-07-history-european.html</a></li>
+
+<li>M. R. Alizadeh et al., “Increasing Heat-Stress Inequality in a Warming Climate,” Earth’s Future, vol. 10, no. 2, p. e2021EF002488, 2022, doi: 10.1029/2021EF002488.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org3321ad2" class="outline-4">
+<h4 id="org3321ad2"><span class="section-number-4">4.1.4.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-1-4">
+<ul class="org-ul">
+<li>M. Leonardi, “Europe Is Burning: The Deadly Heatwave That Exposes the Criminality of Fossil Capitalism and the Economy of Genocide,” CounterPunch.org. Accessed: Jul. 04, 2026. [Online]. Available: <a href="https://www.counterpunch.org/2026/07/03/europe-is-burning-the-deadly-heatwave-that-exposes-the-criminality-of-fossil-capitalism-and-the-economy-of-genocide/">https://www.counterpunch.org/2026/07/03/europe-is-burning-the-deadly-heatwave-that-exposes-the-criminality-of-fossil-capitalism-and-the-economy-of-genocide/</a></li>
+
+<li>“Heat wave exposes workers to injury and death in auto plants, warehouses and delivery routes,” World Socialist Web Site. Accessed: Jul. 04, 2026. [Online]. Available: <a href="https://www.wsws.org/en/articles/2026/07/03/yash-j03.html">https://www.wsws.org/en/articles/2026/07/03/yash-j03.html</a></li>
+
+<li>“Europe’s record heatwave: Climate catastrophe or world socialism,” World Socialist Web Site. Accessed: Jun. 30, 2026. [Online]. Available: <a href="https://www.wsws.org/en/articles/2026/06/30/hdzd-j30.html">https://www.wsws.org/en/articles/2026/06/30/hdzd-j30.html</a></li>
+
+<li>T. Seythal, F. Landini, S. Jacobsen, F. Landini, and S. Jacobsen, “Temperature records shattered in Europe as deadly heatwave moves east,” Reuters, Jun. 27, 2026. Accessed: Jun. 30, 2026. [Online]. Available: <a href="https://www.reuters.com/business/environment/germany-poland-poised-soaring-temperatures-heatwave-moves-east-2026-06-27/">https://www.reuters.com/business/environment/germany-poland-poised-soaring-temperatures-heatwave-moves-east-2026-06-27/</a></li>
+
+<li>S. P. L. en español, “France records its hottest day ever as Europe withers in early heat wave,” AP News. Accessed: Jun. 26, 2026. [Online]. Available: <a href="https://apnews.com/article/heat-wave-france-europe-climate-change-record-81c341900166135de6cbc0f49156477b">https://apnews.com/article/heat-wave-france-europe-climate-change-record-81c341900166135de6cbc0f49156477b</a></li>
+
+<li>S. Kar-Gupta, E. Pinedo, and C. Achi, “Forty drown in France as people seek relief from Europe’s heatwave,” Reuters, Jun. 23, 2026. Accessed: Jun. 25, 2026. [Online]. Available: <a href="https://www.reuters.com/business/environment/around-20-drown-france-people-seek-relief-heatwave-2026-06-23/">https://www.reuters.com/business/environment/around-20-drown-france-people-seek-relief-heatwave-2026-06-23/</a></li>
+
+<li>S. Kar-Gupta, E. Pinedo, and C. Achi, “Forty drown in France as people seek relief from Europe’s heatwave,” Reuters, Jun. 23, 2026. Accessed: Jun. 24, 2026. [Online]. Available: <a href="https://www.reuters.com/business/environment/around-20-drown-france-people-seek-relief-heatwave-2026-06-23/">https://www.reuters.com/business/environment/around-20-drown-france-people-seek-relief-heatwave-2026-06-23/</a></li>
+
+<li>“Climate crisis tripled death toll of Europe’s latest heatwave: Greenpeace calls for polluters to pay,” Greenpeace International. Accessed: Jul. 09, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/76867/climate-crisis-tripled-death-toll-of-europes-latest-heatwave-greenpeace-calls-for-polluters-to-pay/">https://www.greenpeace.org/international/press-release/76867/climate-crisis-tripled-death-toll-of-europes-latest-heatwave-greenpeace-calls-for-polluters-to-pay/</a></li>
+
+<li>“Hot air: the most extreme heatwaves are accelerating the fastest,” Nature, Jul. 2025, doi: 10.1038/d41586-025-02109-5.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“European heatwave threatens the lives of thousands,” World Socialist Web Site. Accessed: Jul. 05, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/07/05/ecvd-j05.html">https://www.wsws.org/en/articles/2025/07/05/ecvd-j05.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“When is it too hot to use a fan?” Accessed: Nov. 07, 2024. [Online]. Available: <a href="https://www.science.org/content/article/when-is-it-too-hot-use-fan">https://www.science.org/content/article/when-is-it-too-hot-use-fan</a></li>
+
+<li>“Early and Often: Heatwaves in Focus | Economic and Political Weekly.” Accessed: Apr. 29, 2025. [Online]. Available: <a href="https://www.epw.in/journal/2025/17/comment/early-and-often-heatwaves-focus.html">https://www.epw.in/journal/2025/17/comment/early-and-often-heatwaves-focus.html</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“New tool provides knowledge on heat stress vulnerability in cities for more targeted adaptation,” IIASA - International Institute for Applied Systems Analysis. Accessed: Oct. 20, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news/oct-2024/new-tool-provides-knowledge-on-heat-stress-vulnerability-in-cities-for-more-targeted">https://iiasa.ac.at/news/oct-2024/new-tool-provides-knowledge-on-heat-stress-vulnerability-in-cities-for-more-targeted</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Record breaking heat wave puts hundreds of millions in US and Canada under heat risk advisories,” World Socialist Web Site. Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://www.wsws.org/en/articles/2024/06/18/nbhk-j18.html">https://www.wsws.org/en/articles/2024/06/18/nbhk-j18.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Matzarakis and H. Mayer, “The extreme heat wave in Athens in July 1987 from the point of view of human biometeorology,” Atmospheric Environment. Part B. Urban Atmosphere, vol. 25, no. 2, pp. 203–211, Jan. 1991, doi: 10.1016/0957-1272(91)90055-J.</li>
+<li>“Get the Heat Index right: an important first step to protect people from heatwaves.” Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/climate-change/get-the-heat-index-right-an-important-first-step-to-protect-people-from-heatwaves-96717">https://www.downtoearth.org.in/blog/climate-change/get-the-heat-index-right-an-important-first-step-to-protect-people-from-heatwaves-96717</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+<ul class="org-ul">
+<li>“Heatwaves ripple into the financial system,” CEPR. Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://cepr.org/voxeu/columns/heatwaves-ripple-financial-system">https://cepr.org/voxeu/columns/heatwaves-ripple-financial-system</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>S. Burga, “How to Protect Yourself During a Heat Wave,” TIME. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://time.com/6986082/how-to-protect-yourself-during-a-heat-wave/">https://time.com/6986082/how-to-protect-yourself-during-a-heat-wave/</a></li>
+<li>J. Ducharme, “How to Sleep When It’s Really Hot Outside,” TIME. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://time.com/6291185/how-to-sleep-when-its-hot/">https://time.com/6291185/how-to-sleep-when-its-hot/</a></li>
+<li>T. Law, “Why Extreme Heat Is So Bad for the Human Body,” TIME. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://time.com/6202849/extreme-heat-health-risks/">https://time.com/6202849/extreme-heat-health-risks/</a></li>
+<li>A. Park, “When It’s This Hot, What Should You Eat?,” TIME. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://time.com/6295520/what-to-eat-in-heat-wave/">https://time.com/6295520/what-to-eat-in-heat-wave/</a></li>
+<li>A. Haupt, “How to Build Up Your Heat Tolerance to Prepare for a Hotter World,” TIME. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://time.com/6207087/improve-heat-tolerance/">https://time.com/6207087/improve-heat-tolerance/</a></li>
+<li>S. Burga, “How to Keep Your Home Cool in Extreme Heat,” TIME. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://time.com/6295911/how-to-keep-house-cool-extreme-heat/">https://time.com/6295911/how-to-keep-house-cool-extreme-heat/</a></li>
+<li>S. Burga, “How to Protect Yourself During a Heat Wave,” TIME. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://time.com/6986082/how-to-protect-yourself-during-a-heat-wave/">https://time.com/6986082/how-to-protect-yourself-during-a-heat-wave/</a></li>
+<li>S. Burga, “How to Protect Yourself During a Heat Wave,” TIME. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://time.com/6986082/how-to-protect-yourself-during-a-heat-wave/">https://time.com/6986082/how-to-protect-yourself-during-a-heat-wave/</a></li>
+<li>J. Ducharme, “How to Sleep When It’s Really Hot Outside,” TIME. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://time.com/6291185/how-to-sleep-when-its-hot/">https://time.com/6291185/how-to-sleep-when-its-hot/</a></li>
+<li>T. Law, “Why Extreme Heat Is So Bad for the Human Body,” TIME. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://time.com/6202849/extreme-heat-health-risks/">https://time.com/6202849/extreme-heat-health-risks/</a></li>
+<li>A. Park, “When It’s This Hot, What Should You Eat?,” TIME. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://time.com/6295520/what-to-eat-in-heat-wave/">https://time.com/6295520/what-to-eat-in-heat-wave/</a></li>
+<li>A. Haupt, “How to Build Up Your Heat Tolerance to Prepare for a Hotter World,” TIME. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://time.com/6207087/improve-heat-tolerance/">https://time.com/6207087/improve-heat-tolerance/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Delay Is Deadly: Protect Workers Now from Killer Heat,” Union of Concerned Scientists. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://secure.ucsusa.org/a/2023-protect-workers-from-killer-hea">https://secure.ucsusa.org/a/2023-protect-workers-from-killer-hea</a></li>
+
+<li>J. Goldenberg, “How animals are changing to cope with stronger heatwaves,” The Conversation. Accessed: Jun. 06, 2024. [Online]. Available: <a href="http://theconversation.com/how-animals-are-changing-to-cope-with-stronger-heatwaves-231116">http://theconversation.com/how-animals-are-changing-to-cope-with-stronger-heatwaves-231116</a></li>
+
+<li>M. Olson, “Heat index warnings can save lives on dangerously hot days − if people understand what they mean,” The Conversation. Accessed: Jun. 06, 2024. [Online]. Available: <a href="http://theconversation.com/heat-index-warnings-can-save-lives-on-dangerously-hot-days-if-people-understand-what-they-mean-229174">http://theconversation.com/heat-index-warnings-can-save-lives-on-dangerously-hot-days-if-people-understand-what-they-mean-229174</a></li>
+
+<li>“Dangerously hot conditions expected as heatwave strikes south-west US,” The Guardian, Jun. 04, 2024. Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://www.theguardian.com/environment/article/2024/jun/04/heatwave-california-arizona-nevada">https://www.theguardian.com/environment/article/2024/jun/04/heatwave-california-arizona-nevada</a></li>
+
+<li>M. Bedigan, “‘Heat dome’ settles over West Coast with 112F temps creating deadly conditions and sparking wildfire fears,” The Independent, Jun. 04, 2024. Accessed: Jun. 04, 2024. [Online]. Available: <a href="https://www.independent.co.uk/climate-change/heat-dome-hot-weather-west-coast-b2556136.html">https://www.independent.co.uk/climate-change/heat-dome-hot-weather-west-coast-b2556136.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. A. Press, “South-east Australia marine heatwave forecast to be literally off the scale,” The Guardian, Aug. 26, 2023. Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.theguardian.com/australia-news/2023/aug/27/south-east-australia-marine-heatwave-forecast-to-be-literally-off-the-scale">https://www.theguardian.com/australia-news/2023/aug/27/south-east-australia-marine-heatwave-forecast-to-be-literally-off-the-scale</a></li>
+
+<li>“When will the next ocean heat wave strike? Scientists develop early warning systems.” Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.science.org/content/article/when-will-next-ocean-heat-wave-strike-scientists-develop-early-warning-systems">https://www.science.org/content/article/when-will-next-ocean-heat-wave-strike-scientists-develop-early-warning-systems</a></li>
+
+<li>“European heatwave: what’s causing it and is climate change to blame?” Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/blog/climate-change/european-heatwave-what-s-causing-it-and-is-climate-change-to-blame--90656">https://www.downtoearth.org.in/blog/climate-change/european-heatwave-what-s-causing-it-and-is-climate-change-to-blame--90656</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Li et al., “Persistent urban heat,” Science Advances, vol. 10, no. 15, p. eadj7398, Apr. 2024, doi: 10.1126/sciadv.adj7398.</li>
+<li>G. Canon, “‘Hell on earth’: Phoenix’s extreme heatwave tests the limits of survival,” The Guardian, Jul. 14, 2023. Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.theguardian.com/us-news/2023/jul/14/phoenix-heatwave-summer-extreme-weather-arizona">https://www.theguardian.com/us-news/2023/jul/14/phoenix-heatwave-summer-extreme-weather-arizona</a></li>
+
+<li>C. Hu, “How Some Common Medications Can Make People More Vulnerable to Heat,” Scientific American. Accessed: Jun. 02, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/how-some-common-medications-can-make-people-more-vulnerable-to-heat/">https://www.scientificamerican.com/article/how-some-common-medications-can-make-people-more-vulnerable-to-heat/</a></li>
+
+<li>“Mexico Faces Water Shortages as Another Heat Wave Sends Temperatures Soaring,” Democracy Now! Accessed: May 29, 2024. [Online]. Available: <a href="https://www.democracynow.org/2024/5/28/headlines/mexico_faces_water_shortages_as_another_heat_wave_sends_temperatures_soaring">https://www.democracynow.org/2024/5/28/headlines/mexico_faces_water_shortages_as_another_heat_wave_sends_temperatures_soaring</a></li>
+
+<li>S. Kevany, “Bumblebee nests are overheating to fatal levels, study finds,” The Guardian, May 04, 2024. Accessed: May 06, 2024. [Online]. Available: <a href="https://www.theguardian.com/environment/article/2024/may/04/bumblebees-overheating-threat-global-heating-temperatures-aoe">https://www.theguardian.com/environment/article/2024/may/04/bumblebees-overheating-threat-global-heating-temperatures-aoe</a></li>
+
+<li>A. Moloney, “In a boiling world, chief heat officers battle ‘silent killer’ | Context.” Accessed: May 23, 2024. [Online]. Available: <a href="https://www.context.news/climate-risks/in-a-boiling-world-chief-heat-officers-battle-silent-killer">https://www.context.news/climate-risks/in-a-boiling-world-chief-heat-officers-battle-silent-killer</a></li>
+
+<li>“Photos: Submerged homes and heatwaves fuel Mexico climate angst,” Al Jazeera. Accessed: May 31, 2024. [Online]. Available: <a href="https://www.aljazeera.com/gallery/2024/5/28/submerged-homes-and-heatwaves-fuel-mexico-climate-angst">https://www.aljazeera.com/gallery/2024/5/28/submerged-homes-and-heatwaves-fuel-mexico-climate-angst</a></li>
+
+<li>Reuters, “England’s heatwaves see highest ever excess deaths among elderly,” Reuters, Oct. 07, 2022. Accessed: Oct. 14, 2022. [Online]. Available: <a href="https://www.reuters.com/world/uk/englands-heatwaves-see-highest-ever-excess-deaths-among-elderly-2022-10-07/">https://www.reuters.com/world/uk/englands-heatwaves-see-highest-ever-excess-deaths-among-elderly-2022-10-07/</a></li>
+
+<li>“Heat wave,” Wikipedia. Jul. 23, 2022. Accessed: Jul. 24, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Heat_wave&amp;oldid=1099929921">https://en.wikipedia.org/w/index.php?title=Heat_wave&amp;oldid=1099929921</a></li>
+<li>E. English, “A perfect firestorm: The social, political, and climate forces that keep Athens burning,” Bulletin of the Atomic Scientists. Accessed: Aug. 19, 2025. [Online]. Available: <a href="https://thebulletin.org/2025/08/a-perfect-firestorm/">https://thebulletin.org/2025/08/a-perfect-firestorm/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Sky-high protest: activists confront fossil gas in Croatia during heatwave emergency,” Greenpeace International. Accessed: Jul. 05, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/76786/sky-high-protest-activists-confront-fossil-gas-in-croatia-during-heatwave-emergency/">https://www.greenpeace.org/international/press-release/76786/sky-high-protest-activists-confront-fossil-gas-in-croatia-during-heatwave-emergency/</a></li>
+
+<li>A. Zinin, “Heat waves threaten health of both young and old,” Phys.org. Accessed: Jun. 24, 2026. [Online]. Available: <a href="https://phys.org/news/2026-06-threaten-health-young.html">https://phys.org/news/2026-06-threaten-health-young.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3293980" class="outline-3">
+<h3 id="org3293980"><span class="section-number-3">4.2.</span> Global Warming</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org8535af3" class="outline-4">
+<h4 id="org8535af3"><span class="section-number-4">4.2.1.</span> General</h4>
+</div>
+<div id="outline-container-org2efb7fe" class="outline-4">
+<h4 id="org2efb7fe"><span class="section-number-4">4.2.2.</span> STEMM</h4>
+<div class="outline-text-4" id="text-4-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgffc5daa"></a>Systems Sciences, Misc<br />
+<ol class="org-ol">
+<li><a id="orgea4b3ce"></a>Complexity Science<br /></li>
+<li><a id="org484017c"></a>Misc<br />
+<div class="outline-text-6" id="text-4-2-2-1-2">
+<ul class="org-ul">
+<li>“Tipping risks from overshooting 1.5°C can be minimized if warming is swiftly reversed,” IIASA - International Institute for Applied Systems Analysis. Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news/aug-2024/tipping-risks-from-overshooting-15degc-can-be-minimized-if-warming-is-swiftly">https://iiasa.ac.at/news/aug-2024/tipping-risks-from-overshooting-15degc-can-be-minimized-if-warming-is-swiftly</a></li>
+<li>“Safe, practical underground carbon storage could reduce warming by only 0.7°C – almost 10 times less than previously thought,” IIASA - International Institute for Applied Systems Analysis. Accessed: Sep. 04, 2025. [Online]. Available: <a href="http://iiasa.ac.at/news/sep-2025/safe-practical-underground-carbon-storage-could-reduce-warming-by-only-07degc-almost">http://iiasa.ac.at/news/sep-2025/safe-practical-underground-carbon-storage-could-reduce-warming-by-only-07degc-almost</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgda24eab"></a>Biological Sciences, Misc<br /></li>
+<li><a id="orga32c6e8"></a>Basic Sciences, Misc<br /></li>
+<li><a id="orgb7bf6a3"></a>Mathematical, Computational Sciences, Misc<br /></li>
+<li><a id="org5d00ebc"></a>Advanced Sciences, Misc<br /></li>
+<li><a id="org35dc8c2"></a>Technology, Misc<br /></li>
+<li><a id="orgefbbba7"></a>Special Topics<br /></li>
+<li><a id="orgf2cdca9"></a>Misc<br />
+<div class="outline-text-5" id="text-4-2-2-8">
+<ul class="org-ul">
+<li>“A Theory on Regional Impacts of Global Warming | MIT CS3.” Accessed: Sep. 28, 2025. [Online]. Available: <a href="https://cs3.mit.edu/publication/118629">https://cs3.mit.edu/publication/118629</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org9504667" class="outline-4">
+<h4 id="org9504667"><span class="section-number-4">4.2.3.</span> Worldly Matters</h4>
+<div class="outline-text-4" id="text-4-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgfb8f00c"></a>Nation States<br />
+<ol class="org-ol">
+<li><a id="org40f8ff4"></a>India<br />
+<div class="outline-text-6" id="text-4-2-3-1-1">
+<ul class="org-ul">
+<li>“India’s approach to global warming cannot mirror the West.” Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://caravanmagazine.in/books/india-approach-global-warming">https://caravanmagazine.in/books/india-approach-global-warming</a></li>
+
+<li>“Global Warming in India: Science, Impacts, and Politics - ePub,” Eklavya Pitara. Accessed: Dec. 17, 2024. [Online]. Available: <a href="https://eklavyapitara.in/products/global-warming-in-india-science-impacts-and-politics-epub">https://eklavyapitara.in/products/global-warming-in-india-science-impacts-and-politics-epub</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="org03772bc"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org8061eaf" class="outline-4">
+<h4 id="org8061eaf"><span class="section-number-4">4.2.4.</span> Arts</h4>
+<div class="outline-text-4" id="text-4-2-4">
+</div>
+<ol class="org-ol">
+<li><a id="orga54afce"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org49a1935" class="outline-4">
+<h4 id="org49a1935"><span class="section-number-4">4.2.5.</span> Special Topics</h4>
+</div>
+<div id="outline-container-org7967016" class="outline-4">
+<h4 id="org7967016"><span class="section-number-4">4.2.6.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-2-6">
+<ul class="org-ul">
+<li>P. Hawken, Ed., Drawdown: The Most Comprehensive Plan Ever Proposed to Reverse Global Warming. New York, New York: Penguin Books, 2017.</li>
+
+<li>B. H. Samset and L. Wilcox, “Cleaner air in east Asia may have driven recent acceleration in global warming, our new study indicates,” The Conversation. Accessed: Jul. 16, 2025. [Online]. Available: <a href="http://theconversation.com/cleaner-air-in-east-asia-may-have-driven-recent-acceleration-in-global-warming-our-new-study-indicates-260601">http://theconversation.com/cleaner-air-in-east-asia-may-have-driven-recent-acceleration-in-global-warming-our-new-study-indicates-260601</a></li>
+
+<li>S. S. Mauritsen Benoit Meyssignac,Thorsten, “Earth is trapping much more heat than climate models forecast — and the rate has doubled in 20 years,” Down To Earth. Accessed: Jun. 30, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/climate-change/earth-is-trapping-much-more-heat-than-climate-models-forecast-and-the-rate-has-doubled-in-20-years">https://www.downtoearth.org.in/climate-change/earth-is-trapping-much-more-heat-than-climate-models-forecast-and-the-rate-has-doubled-in-20-years</a></li>
+
+<li>B. Meyssignac, S. Sherwood, and T. Mauritsen, “Earth is trapping much more heat than climate models forecast – and the rate has doubled in 20 years,” The Conversation. Accessed: Jun. 28, 2025. [Online]. Available: <a href="http://theconversation.com/earth-is-trapping-much-more-heat-than-climate-models-forecast-and-the-rate-has-doubled-in-20-years-258822">http://theconversation.com/earth-is-trapping-much-more-heat-than-climate-models-forecast-and-the-rate-has-doubled-in-20-years-258822</a></li>
+
+<li>C. H. News E&amp;E, “Heat Domes Are Hotter and Lingering Longer—Because of the Arctic,” Scientific American. Accessed: Jun. 28, 2025. [Online]. Available: <a href="https://www.scientificamerican.com/article/heat-domes-are-hotter-and-lingering-longer-because-of-the-arctic/">https://www.scientificamerican.com/article/heat-domes-are-hotter-and-lingering-longer-because-of-the-arctic/</a></li>
+
+<li>K. D. C. H. via W. C. C. D. K. E. T. C. WarmingIndia, “Asia warming faster than global average, says WMO,” Mongabay-India. Accessed: Jun. 25, 2025. [Online]. Available: <a href="https://india.mongabay.com/short-article/asia-warming-faster-than-global-average-says-wmo/">https://india.mongabay.com/short-article/asia-warming-faster-than-global-average-says-wmo/</a></li>
+
+<li>“The World Is Burning—Does the YES! Approach Still Matter? - YES! Magazine Solutions Journalism,” YES! Magazine. Accessed: Jun. 12, 2025. [Online]. Available: <a href="https://www.yesmagazine.org/opinion/2025/06/11/the-world-is-burning-does-the-yes-approach-still-matter">https://www.yesmagazine.org/opinion/2025/06/11/the-world-is-burning-does-the-yes-approach-still-matter</a></li>
+
+<li>J.-L. Cruz and E. Rossi-Hansberg, “The Economic Geography of Global Warming,” The Review of Economic Studies, vol. 91, no. 2, pp. 899–939, Mar. 2024, doi: 10.1093/restud/rdad042.</li>
+
+<li>simrinsirur, “Record heat is worsening pollution and public health in the Global South,” Mongabay-India. Accessed: Jan. 14, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/01/record-heat-is-worsening-pollution-and-public-health-in-the-global-south/">https://india.mongabay.com/2025/01/record-heat-is-worsening-pollution-and-public-health-in-the-global-south/</a></li>
+
+<li>M. Wright, N. Leach, and S. Ermis, “Global temperatures passed critical 1.5°C milestone for the first time in 2024 – new report,” The Conversation. Accessed: Jan. 12, 2025. [Online]. Available: <a href="http://theconversation.com/global-temperatures-passed-critical-1-5-c-milestone-for-the-first-time-in-2024-new-report-246821">http://theconversation.com/global-temperatures-passed-critical-1-5-c-milestone-for-the-first-time-in-2024-new-report-246821</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“‘Hell of a year’: Greenpeace comments on hottest year on record, the first to exceed 1.5°C,” Greenpeace International. Accessed: Jan. 10, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/press-release/72051/hell-of-a-year-greenpeace-comments-on-hottest-year-on-record-the-first-to-exceed-1-5c/">https://www.greenpeace.org/international/press-release/72051/hell-of-a-year-greenpeace-comments-on-hottest-year-on-record-the-first-to-exceed-1-5c/</a></li>
+<li>H. F. Goessling, T. Rackow, and T. Jung, “Recent global temperature surge intensified by record-low planetary albedo,” Science, vol. 387, no. 6729, pp. 68–73, Jan. 2025, doi: 10.1126/science.adq7280.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>K. Giles, “AI predicts that most of the world will see temperatures rise to 3C much faster than previously expected,” IOP Publishing. Accessed: Dec. 27, 2024. [Online]. Available: <a href="https://ioppublishing.org/news/ai-predicts-that-most-of-the-world-will-see-temperatures-rise-to-3c-much-faster-than-previously-expected/">https://ioppublishing.org/news/ai-predicts-that-most-of-the-world-will-see-temperatures-rise-to-3c-much-faster-than-previously-expected/</a></li>
+
+<li>K. Mackenzie, “Global Boiling | The Polycrisis,” Phenomenal World. Accessed: Dec. 18, 2024. [Online]. Available: <a href="https://www.phenomenalworld.org/analysis/global-boiling/">https://www.phenomenalworld.org/analysis/global-boiling/</a></li>
+
+<li>P. Shankar, “[Commentary] The current global warming is geologically unprecedented,” Mongabay-India. Accessed: Oct. 29, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/10/commentary-the-current-global-warming-is-geologically-unprecedented/">https://india.mongabay.com/2024/10/commentary-the-current-global-warming-is-geologically-unprecedented/</a></li>
+
+<li>“How a warming Earth is changing our brains, bodies and minds | Aeon Essays,” Aeon. Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://aeon.co/essays/how-a-warming-earth-is-changing-our-brains-bodies-and-minds">https://aeon.co/essays/how-a-warming-earth-is-changing-our-brains-bodies-and-minds</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Tipping risks from overshooting 1.5 °C can be minimised if warming is swiftly reversed,” Potsdam Institute for Climate Impact Research. Accessed: Aug. 02, 2024. [Online]. Available: <a href="https://www.pik-potsdam.de/en/news/latest-news/tipping-risks-from-overshooting-1-5-degc-can-be-minimised-if-warming-is-swiftly-reversed">https://www.pik-potsdam.de/en/news/latest-news/tipping-risks-from-overshooting-1-5-degc-can-be-minimised-if-warming-is-swiftly-reversed</a></li>
+
+<li>S. Tripathi, “It’s Now Or Never, If We Want To Limit Global Warming To 1.5°C: Head Of UN Climate Panel,” <a href="https://www.outlookindia.com/">https://www.outlookindia.com/</a>, Apr. 05, 2022. <a href="https://www.outlookindia.com/business/it-s-now-or-never-if-we-want-to-limit-global-warming-to-1-5-c-head-of-un-climate-panel-news-190092">https://www.outlookindia.com/business/it-s-now-or-never-if-we-want-to-limit-global-warming-to-1-5-c-head-of-un-climate-panel-news-190092</a> (accessed Apr. 07, 2022).</li>
+
+<li>“Are we ready for life beyond 1.5°C of global warming? | Chatham House – International Affairs Think Tank.” Accessed: Sep. 23, 2025. [Online]. Available: <a href="https://www.chathamhouse.org/publications/the-world-today/2025-09/are-we-ready-life-beyond-15degc-global-warming">https://www.chathamhouse.org/publications/the-world-today/2025-09/are-we-ready-life-beyond-15degc-global-warming</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgea334e7" class="outline-3">
+<h3 id="orgea334e7"><span class="section-number-3">4.3.</span> Buildings</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>J. Lizana, N. Miranda, and R. Khosla, “How to make homes cooler without cranking up the air conditioning,” The Conversation, Jul. 20, 2023. <a href="http://theconversation.com/how-to-make-homes-cooler-without-cranking-up-the-air-conditioning-207243">http://theconversation.com/how-to-make-homes-cooler-without-cranking-up-the-air-conditioning-207243</a> (accessed Jul. 21, 2023).</li>
+
+<li>T. C. Amin Al-Habaibeh, “How can humans burn less fossil fuel? By using their body heat to heat buildings instead,” Scroll.in. <a href="https://scroll.in/article/1022789/how-can-humans-burn-less-fossil-fuel-by-using-their-body-heat-to-heat-buildings-instead">https://scroll.in/article/1022789/how-can-humans-burn-less-fossil-fuel-by-using-their-body-heat-to-heat-buildings-instead</a> (accessed May 12, 2022).</li>
+
+<li>“Cool dwellings: Here is what you can do to make your building beat the heat.” <a href="https://www.downtoearth.org.in/blog/climate-change/cool-dwellings-here-is-what-you-can-do-to-make-your-building-beat-the-heat-82708">https://www.downtoearth.org.in/blog/climate-change/cool-dwellings-here-is-what-you-can-do-to-make-your-building-beat-the-heat-82708</a> (accessed May 06, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge99b00e" class="outline-2">
+<h2 id="orge99b00e"><span class="section-number-2">5.</span> Special Topics</h2>
+</div>
+<div id="outline-container-org83a9c0e" class="outline-2">
+<h2 id="org83a9c0e"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>M. Matias, G. Mills, T. Silva, C. Girotti, and A. Lopes, “The underestimated impact of parked cars in urban warming.,” City and Environment Interactions, vol. 28, p. 100232, Dec. 2025, doi: 10.1016/j.cacint.2025.100232.</li>
+<li>K. Kasal and Phys.org, “Parked cars are heating up cities by significantly contributing to urban heat island effect—especially darker cars.” Accessed: Sep. 04, 2025. [Online]. Available: <a href="https://phys.org/news/2025-08-cars-cities-significantly-contributing-urban.html">https://phys.org/news/2025-08-cars-cities-significantly-contributing-urban.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Heatwave Exposes How Trump Administration Cuts Endanger Workers and Energy-Burdened Communities,” The Equation. Accessed: Jul. 03, 2025. [Online]. Available: <a href="https://blog.ucs.org/juan-declet-barreto/heatwave-exposes-how-trump-administration-cuts-endanger-workers-and-energy-burdened-communities/">https://blog.ucs.org/juan-declet-barreto/heatwave-exposes-how-trump-administration-cuts-endanger-workers-and-energy-burdened-communities/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>simrinsirur, “Surviving a heat stroke, one year later,” Mongabay-India. Accessed: Jun. 28, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/06/surviving-a-heat-stroke-one-year-later/">https://india.mongabay.com/2025/06/surviving-a-heat-stroke-one-year-later/</a></li>
+
+<li>Suzannah, “Lessons for the world in how Darwin keeps it cool,” 360. Accessed: Jun. 20, 2025. [Online]. Available: <a href="https://360info.org/lessons-for-the-world-in-how-darwin-keeps-it-cool/">https://360info.org/lessons-for-the-world-in-how-darwin-keeps-it-cool/</a></li>
+
+<li>“The heat is on.” Accessed: Mar. 20, 2025. [Online]. Available: <a href="https://theecologist.org/2025/mar/19/heat">https://theecologist.org/2025/mar/19/heat</a></li>
+
+<li>“Heat Pumps: Save Lives, Slash Bills, Cut Carbon.” Accessed: Aug. 16, 2024. [Online]. Available: <a href="https://www.paddio.ca/paddio-blog-posts/heat-pumps-save-lives-slash-bills-cut-carbon">https://www.paddio.ca/paddio-blog-posts/heat-pumps-save-lives-slash-bills-cut-carbon</a></li>
+
+<li>“Does humidity make heat more deadly? Scientists are divided.” Accessed: Jul. 30, 2024. [Online]. Available: <a href="https://www.science.org/content/article/does-humidity-make-heat-more-deadly-scientists-are-divided">https://www.science.org/content/article/does-humidity-make-heat-more-deadly-scientists-are-divided</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>U. Nations, “Extreme Heat,” United Nations. Accessed: Jul. 26, 2024. [Online]. Available: <a href="https://www.un.org/en/climatechange/extreme-heat">https://www.un.org/en/climatechange/extreme-heat</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. W. News E&amp;E, “Biden Enacted Landmark Heat Protections. Millions of Public Employees Are Still in Danger,” Scientific American. Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/biden-heat-protection-rule-cant-help-millions-of-public-employees/">https://www.scientificamerican.com/article/biden-heat-protection-rule-cant-help-millions-of-public-employees/</a></li>
+
+<li>“How to protect yourself from the dangers of extreme heat waves?,” Greenpeace International. Accessed: Jul. 12, 2024. [Online]. Available: <a href="https://www.greenpeace.org/international/story/68298/how-to-protect-yourself-from-the-dangers-of-extreme-heat-waves/">https://www.greenpeace.org/international/story/68298/how-to-protect-yourself-from-the-dangers-of-extreme-heat-waves/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Workers Need New Heat Protections Immediately.” Accessed: Jul. 06, 2024. [Online]. Available: <a href="https://jacobin.com/2024/07/osha-heat-regulations-climate-amazon">https://jacobin.com/2024/07/osha-heat-regulations-climate-amazon</a></li>
+
+<li>A. Thompson, “New Heat Map Shows Scorching Streets That Can Burn Skin in Seconds,” Scientific American. Accessed: Jul. 04, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/new-nasa-heat-map-shows-scorching-streets-that-can-burn-skin-in-seconds/">https://www.scientificamerican.com/article/new-nasa-heat-map-shows-scorching-streets-that-can-burn-skin-in-seconds/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Haupt, “Why You Sweat So Much at Night—And What to Do About It,” TIME. Accessed: Jul. 04, 2024. [Online]. Available: <a href="https://time.com/6988035/why-you-sweat-at-night/">https://time.com/6988035/why-you-sweat-at-night/</a></li>
+<li>S. Burga, “Here’s What States Are Under Heat Alerts for July 4,” TIME. Accessed: Jul. 04, 2024. [Online]. Available: <a href="https://time.com/6994929/what-states-heat-alerts-july-4/">https://time.com/6994929/what-states-heat-alerts-july-4/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Kelleher, “Proposed rule could protect 36 million workers from hazardous heat,” The New Lede. Accessed: Jul. 04, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/07/proposed-rule-could-protect-36-million-workers-from-hazardous-heat/">https://www.thenewlede.org/2024/07/proposed-rule-could-protect-36-million-workers-from-hazardous-heat/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>K. Pandey, “Extreme heat compounds vulnerabilities in low income neighbourhoods,” Mongabay-India. Accessed: Jul. 02, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/06/extreme-heat-compounds-vulnerabilities-in-low-income-neighbourhoods-delhi-ncr/">https://india.mongabay.com/2024/06/extreme-heat-compounds-vulnerabilities-in-low-income-neighbourhoods-delhi-ncr/</a></li>
+
+<li>D. Jetly, “Delhi’s night shelters fail to bring respite to homeless as heatwaves now make way for deadlier humid heat,” Down To Earth. Accessed: Jul. 02, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/governance/delhis-night-shelters-fail-to-bring-respite-to-homeless-as-heatwaves-now-make-way-for-deadlier-humid-heat">https://www.downtoearth.org.in/governance/delhis-night-shelters-fail-to-bring-respite-to-homeless-as-heatwaves-now-make-way-for-deadlier-humid-heat</a></li>
+<li>simrinsirur, “Surviving a heat stroke, against all odds,” Mongabay-India. Accessed: Jul. 02, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/07/surviving-a-heat-stroke-against-all-odds/">https://india.mongabay.com/2024/07/surviving-a-heat-stroke-against-all-odds/</a></li>
+<li>“How India’s capital went from extreme heat to heavy floods,” South China Morning Post. Accessed: Jul. 02, 2024. [Online]. Available: <a href="https://www.scmp.com/news/asia/south-asia/article/3268461/how-indias-capital-went-extreme-heat-heavy-floods">https://www.scmp.com/news/asia/south-asia/article/3268461/how-indias-capital-went-extreme-heat-heavy-floods</a></li>
+<li>V. K. &amp; V. Lakhera, “How the record-breaking heatwave revealed Delhi’s climate vulnerabilities,” Frontline. Accessed: Jul. 02, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/environment/how-delhi-record-breaking-heatwave-revealed-climate-vulnerabilities-infrastructure-shortcomings-policy/article68355247.ece">https://frontline.thehindu.com/environment/how-delhi-record-breaking-heatwave-revealed-climate-vulnerabilities-infrastructure-shortcomings-policy/article68355247.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“How heatwaves affect the human body,” South China Morning Post. Accessed: Jun. 30, 2024. [Online]. Available: <a href="https://www.scmp.com/video/asia/3268253/nausea-fatigue-and-even-death-what-heat-can-do-human-body">https://www.scmp.com/video/asia/3268253/nausea-fatigue-and-even-death-what-heat-can-do-human-body</a></li>
+
+<li>“Climate Change-Driven Extreme Heat May Have Affected 619 Million Indians Over 9 Days in Mid-June,” The Wire. Accessed: Jun. 30, 2024. [Online]. Available: <a href="https://thewire.in/environment/climate-change-driven-extreme-heat-may-have-affected-619-million-indians-over-just-nine-days-in-mid-june">https://thewire.in/environment/climate-change-driven-extreme-heat-may-have-affected-619-million-indians-over-just-nine-days-in-mid-june</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Extreme Heat is Here to Stay,” NewsClick. Accessed: Jun. 24, 2024. [Online]. Available: <a href="https://www.newsclick.in/extreme-heat-here-stay">https://www.newsclick.in/extreme-heat-here-stay</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>S. Borenstein, “How does heat kill? It confuses your brain. It shuts down your organs. It overworks your heart.” Accessed: Jun. 22, 2024. [Online]. Available: <a href="https://phys.org/news/2024-06-brain-overworks-heart.html">https://phys.org/news/2024-06-brain-overworks-heart.html</a></li>
+
+<li>D. J. Vecellio, Q. Kong, W. L. Kenney, and M. Huber, “Greatly enhanced risk to humans as a consequence of empirically determined lower moist heat stress tolerance,” Proceedings of the National Academy of Sciences, vol. 120, no. 42, p. e2305427120, Oct. 2023, doi: 10.1073/pnas.2305427120.</li>
+
+<li>T. M. Lenton et al., “Quantifying the human cost of global warming,” Nat Sustain, vol. 6, no. 10, pp. 1237–1247, Oct. 2023, doi: 10.1038/s41893-023-01132-6.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. Thompson, “This Isn’t Your Grandparents’ Summer Heat,” Scientific American. Accessed: Jun. 20, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/summers-are-hotter-than-ever-and-are-only-going-to-get-worse/">https://www.scientificamerican.com/article/summers-are-hotter-than-ever-and-are-only-going-to-get-worse/</a></li>
+
+<li>A. C. Athens, “Take care in 44C heat, Greece warns as more tourists die.” Accessed: Jun. 20, 2024. [Online]. Available: <a href="https://www.thetimes.com/world/europe/article/take-care-in-44c-heat-greece-warns-as-tourists-die-kngbn2c0r">https://www.thetimes.com/world/europe/article/take-care-in-44c-heat-greece-warns-as-tourists-die-kngbn2c0r</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Delhi: Inside India’s first heat stroke emergency room.” Accessed: Jun. 20, 2024. [Online]. Available: <a href="https://www.bbc.com/news/articles/cn00nkzdvkjo">https://www.bbc.com/news/articles/cn00nkzdvkjo</a></li>
+
+<li>“Eyes on sky: Gurgaon minimum temperature down by 3.3C, IMD says rain likely today,” The Times of India, Jun. 19, 2024. Accessed: Jun. 20, 2024. [Online]. Available: <a href="https://timesofindia.indiatimes.com/city/gurgaon/imd-forecasts-rain-with-decrease-in-temperatures-in-gurgaon-and-delhi/articleshow/111095736.cms">https://timesofindia.indiatimes.com/city/gurgaon/imd-forecasts-rain-with-decrease-in-temperatures-in-gurgaon-and-delhi/articleshow/111095736.cms</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul class="org-ul">
+<li>A. Thompson, “Vermont Will Be Hotter Than Miami This Week—Blame the Heat Dome,” Scientific American. Accessed: Jun. 19, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/intense-heat-dome-will-bring-record-breaking-temperatures-to-the-east/">https://www.scientificamerican.com/article/intense-heat-dome-will-bring-record-breaking-temperatures-to-the-east/</a></li>
+<li>W. Gallus, “What is a heat dome? A meteorologist explains the weather phenomenon baking the northeast quarter of the US,” The Conversation. Accessed: Jun. 19, 2024. [Online]. Available: <a href="http://theconversation.com/what-is-a-heat-dome-a-meteorologist-explains-the-weather-phenomenon-baking-the-northeast-quarter-of-the-us-185569">http://theconversation.com/what-is-a-heat-dome-a-meteorologist-explains-the-weather-phenomenon-baking-the-northeast-quarter-of-the-us-185569</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>T. L. Fischman Josh, “How to Cool Down Fast in Summer Heat,” Scientific American. Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/podcast/episode/how-to-cool-down-fast-in-summer-heat/">https://www.scientificamerican.com/podcast/episode/how-to-cool-down-fast-in-summer-heat/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Z. Hausfather, “Analysis: What record global heat means for breaching the 1.5C warming limit,” Carbon Brief. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.carbonbrief.org/analysis-what-record-global-heat-means-for-breaching-the-1-5c-warming-limit/">https://www.carbonbrief.org/analysis-what-record-global-heat-means-for-breaching-the-1-5c-warming-limit/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>CDC, “Symptoms of Heat-Related Illnesses,” Extreme Heat. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.cdc.gov/extreme-heat/signs-symptoms/index.html">https://www.cdc.gov/extreme-heat/signs-symptoms/index.html</a></li>
+<li>CDC, “Extreme Heat and Your Health,” Extreme Heat. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.cdc.gov/extreme-heat/about/index.html">https://www.cdc.gov/extreme-heat/about/index.html</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>A. Kothari, “Escalating heat, boiling questions,” Meer. Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://www.meer.com/en/80900-escalating-heat-boiling-questions">https://www.meer.com/en/80900-escalating-heat-boiling-questions</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Michael Mosley reportedly died from heat exhaustion. How can extreme heat turn deadly?” Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/health/michael-mosley-reportedly-died-from-heat-exhaustion-how-can-extreme-heat-turn-deadly--96647">https://www.downtoearth.org.in/news/health/michael-mosley-reportedly-died-from-heat-exhaustion-how-can-extreme-heat-turn-deadly--96647</a></li>
+
+<li>D. Nolan, “‘It’s unbearable’: in ever-hotter US cities, air conditioning is no longer enough,” The Guardian, Jun. 11, 2024. Accessed: Jun. 13, 2024. [Online]. Available: <a href="https://www.theguardian.com/us-news/article/2024/jun/11/air-conditioning-protect-extreme-heat">https://www.theguardian.com/us-news/article/2024/jun/11/air-conditioning-protect-extreme-heat</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“New Government’s Agenda: Plan them cool.” Accessed: Jun. 10, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/governance/new-government-s-agenda-plan-them-cool-96573">https://www.downtoearth.org.in/news/governance/new-government-s-agenda-plan-them-cool-96573</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. W. June 2024, “Explainer: how chemistry powers heat pumps,” Chemistry World. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/news/explainer-how-chemistry-powers-heat-pumps/4019534.article">https://www.chemistryworld.com/news/explainer-how-chemistry-powers-heat-pumps/4019534.article</a></li>
+<li>“Transforming the cooling sector,” Clean Cooling Collaborative. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://www.cleancoolingcollaborative.org/">https://www.cleancoolingcollaborative.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Brimicombe, “What science says about the best ways to cool down,” The Conversation. Accessed: Jul. 09, 2022. [Online]. Available: <a href="http://theconversation.com/what-science-says-about-the-best-ways-to-cool-down-185643">http://theconversation.com/what-science-says-about-the-best-ways-to-cool-down-185643</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:56</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

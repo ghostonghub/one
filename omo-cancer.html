@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cancer</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Cancer</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org46600fb">1. General</a></li>
+<li><a href="#orgb9e3e26">2. STEMM</a>
+<ul>
+<li><a href="#org854a53e">2.1. Systems Sciences</a>
+<ul>
+<li><a href="#org5490a07">2.1.1. Complexity Science</a></li>
+<li><a href="#orgf59fb74">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc4a8bdb">2.2. Chemistry</a>
+<ul>
+<li><a href="#org31d4f0f">2.2.1. Chemicals Of Concern</a></li>
+<li><a href="#org5c1d123">2.2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org565b75a">2.3. Biology</a>
+<ul>
+<li><a href="#org1ae5a2a">2.3.1. Evolution</a></li>
+<li><a href="#org779957a">2.3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgbe3a000">2.4. Medicine</a>
+<ul>
+<li><a href="#org8329586">2.4.1. European Society of Preventive Medicine</a></li>
+<li><a href="#org75d89ea">2.4.2. Allopathy</a></li>
+<li><a href="#org76ef83f">2.4.3. CAM</a></li>
+<li><a href="#org94cb05f">2.4.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgd7d2e5e">2.5. Nano Science &amp; Technology</a></li>
+<li><a href="#org053b822">2.6. Computer Science And Engineering</a>
+<ul>
+<li><a href="#orgc2cccd9">2.6.1. Artificial Intelligence</a></li>
+<li><a href="#orge86f697">2.6.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org83f3c81">2.7. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org66af783">3. Worldly Matters</a>
+<ul>
+<li><a href="#org9d215ac">3.1. Events</a></li>
+<li><a href="#orgb352c53">3.2. Orgs</a></li>
+<li><a href="#org12600c1">3.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org22e8ebe">4. Core</a></li>
+<li><a href="#org31bda6e">5. Arts</a>
+<ul>
+<li><a href="#org38ccbf1">5.1. Films</a></li>
+<li><a href="#orgc63fcac">5.2. Humor</a></li>
+<li><a href="#org095ccf5">5.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgd2de6d7">6. Special Topics</a>
+<ul>
+<li><a href="#org543af01">6.1. Unconventional Resources</a></li>
+<li><a href="#orgfe3660a">6.2. Food</a></li>
+<li><a href="#org023d005">6.3. Workouts</a></li>
+<li><a href="#orgb766085">6.4. Breast Cancer</a>
+<ul>
+<li><a href="#orgbf1c98c">6.4.1. General</a></li>
+<li><a href="#orgccbf13e">6.4.2. STEMM</a></li>
+<li><a href="#org6517d0a">6.4.3. Worldly Matters</a></li>
+<li><a href="#orgb621ba5">6.4.4. Arts</a></li>
+<li><a href="#org8f6d0d4">6.4.5. Special Topics</a></li>
+<li><a href="#orgac8fc78">6.4.6. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgb929ece">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org46600fb" class="outline-2">
+<h2 id="org46600fb"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orgb9e3e26" class="outline-2">
+<h2 id="orgb9e3e26"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org854a53e" class="outline-3">
+<h3 id="org854a53e"><span class="section-number-3">2.1.</span> Systems Sciences</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org5490a07" class="outline-4">
+<h4 id="org5490a07"><span class="section-number-4">2.1.1.</span> Complexity Science</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>cxdig, “Modeling tumors as complex ecosystems,” Complexity Digest. Accessed: Nov. 02, 2024. [Online]. Available: <a href="https://comdig.unam.mx/2024/11/01/modeling-tumors-as-complex-ecosystems/">https://comdig.unam.mx/2024/11/01/modeling-tumors-as-complex-ecosystems/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf59fb74" class="outline-4">
+<h4 id="orgf59fb74"><span class="section-number-4">2.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>A. B. Brummer and V. M. Savage, <b>“Cancer as a Model System for Testing Metabolic Scaling Theory,”</b> Frontiers in Ecology and Evolution, vol. 9, p. 667, 2021, doi: 10.3389/fevo.2021.691830.</li>
+
+<li>G. Aguadé-Gorgorió, S. Kauffman, and R. Solé, <b>“Transition Therapy: Tackling the Ecology of Tumor Phenotypic Plasticity,”</b> Bull Math Biol, vol. 84, no. 1, p. 24, Dec. 2021, doi: 10.1007/s11538-021-00970-9.n</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc4a8bdb" class="outline-3">
+<h3 id="orgc4a8bdb"><span class="section-number-3">2.2.</span> Chemistry</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org31d4f0f" class="outline-4">
+<h4 id="org31d4f0f"><span class="section-number-4">2.2.1.</span> Chemicals Of Concern</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li>A. S. Lerner Sharon, “Map: What’s the Cancer Risk From Formaldehyde Where I Live?,” ProPublica. Accessed: Dec. 07, 2024. [Online]. Available: <a href="https://projects.propublica.org/formaldehyde-cancer-risk-map/">https://projects.propublica.org/formaldehyde-cancer-risk-map/</a></li>
+<li>S. L. Shaw Al, “Formaldehyde Increases Your Cancer Risk No Matter Where you Live,” ProPublica. Accessed: Dec. 04, 2024. [Online]. Available: <a href="https://www.propublica.org/article/formaldehyde-epa-trump-public-health-danger">https://www.propublica.org/article/formaldehyde-epa-trump-public-health-danger</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Cancer was caused by chemicals sprayed on family farm, Manitoba man alleges in lawsuit,” CBC News, Jun. 11, 2024. Accessed: Jun. 20, 2024. [Online]. Available: <a href="https://www.cbc.ca/news/canada/manitoba/monsanto-bayer-corteva-farm-chemicals-lawsuit-1.7231907">https://www.cbc.ca/news/canada/manitoba/monsanto-bayer-corteva-farm-chemicals-lawsuit-1.7231907</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5c1d123" class="outline-4">
+<h4 id="org5c1d123"><span class="section-number-4">2.2.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ul class="org-ul">
+<li>“Rabinowitz Discovers New Approach to Augment Leading Cancer Therapy – Princeton University Department of Chemistry.” Accessed: Jun. 25, 2024. [Online]. Available: <a href="https://chemistry.princeton.edu/news/rabinowitz-discovers-new-approach-to-augment-leading-cancer-therapy/?utm_campaign=communications&amp;utm_content=1719243861&amp;utm_medium=social&amp;utm_source=twitter">https://chemistry.princeton.edu/news/rabinowitz-discovers-new-approach-to-augment-leading-cancer-therapy/?utm_campaign=communications&amp;utm_content=1719243861&amp;utm_medium=social&amp;utm_source=twitter</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org565b75a" class="outline-3">
+<h3 id="org565b75a"><span class="section-number-3">2.3.</span> Biology</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org1ae5a2a" class="outline-4">
+<h4 id="org1ae5a2a"><span class="section-number-4">2.3.1.</span> Evolution</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<ul class="org-ul">
+<li><b>“Crested cacti show medicine the possibility of adapting to cancer – Athena Aktipis | Aeon Essays,”</b> Aeon. <a href="https://aeon.co/essays/crested-cacti-show-medicine-the-possibility-of-adapting-to-cancer">https://aeon.co/essays/crested-cacti-show-medicine-the-possibility-of-adapting-to-cancer</a> (accessed Nov. 30, 2020).</li>
+
+<li>A. Aktipis, <b>The Cheating Cell: How Evolution Helps Us Understand and Treat Cancer.</b> Princeton University Press, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org779957a" class="outline-4">
+<h4 id="org779957a"><span class="section-number-4">2.3.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<ul class="org-ul">
+<li>A. B. Brummer and V. M. Savage, <b>“Cancer as a Model System for Testing Metabolic Scaling Theory,”</b> Frontiers in Ecology and Evolution, vol. 9, p. 667, 2021, doi: 10.3389/fevo.2021.691830.</li>
+
+<li>G. Aguadé-Gorgorió, S. Kauffman, and R. Solé, <b>“Transition Therapy: Tackling the Ecology of Tumor Phenotypic Plasticity,”</b> Bull Math Biol, vol. 84, no. 1, p. 24, Dec. 2021, doi: 10.1007/s11538-021-00970-9.n</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbe3a000" class="outline-3">
+<h3 id="orgbe3a000"><span class="section-number-3">2.4.</span> Medicine</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-org8329586" class="outline-4">
+<h4 id="org8329586"><span class="section-number-4">2.4.1.</span> European Society of Preventive Medicine</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<ul class="org-ul">
+<li>admin, “Cancer,” European Society of Preventive Medicine. Accessed: Jan. 30, 2024. [Online]. Available: <a href="https://espm.co/diseases-conditions/cancer/">https://espm.co/diseases-conditions/cancer/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org75d89ea" class="outline-4">
+<h4 id="org75d89ea"><span class="section-number-4">2.4.2.</span> Allopathy</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<ul class="org-ul">
+<li>Metformin
+<ul class="org-ul">
+<li>D. J. Fung, <b>The Cancer Code: A Revolutionary New Understanding of a Medical Mystery.</b> HarperCollins, 2020.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org76ef83f" class="outline-4">
+<h4 id="org76ef83f"><span class="section-number-4">2.4.3.</span> CAM</h4>
+<div class="outline-text-4" id="text-2-4-3">
+</div>
+<ol class="org-ol">
+<li><a id="orge7aba2a"></a>Traditional Chinese Medicine<br /></li>
+<li><a id="org54872b1"></a>AyurVeda<br />
+<div class="outline-text-5" id="text-2-4-3-2">
+<ul class="org-ul">
+<li>Organic Green Tea Extract</li>
+<li>Organic Turmeric</li>
+<li>Organic Cinnamon</li>
+<li>Organic Chicory Powder</li>
+</ul>
+</div>
+</li>
+<li><a id="org367ecce"></a>Homeopathy<br /></li>
+</ol>
+</div>
+<div id="outline-container-org94cb05f" class="outline-4">
+<h4 id="org94cb05f"><span class="section-number-4">2.4.4.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-4-4">
+<ul class="org-ul">
+<li>E. Schattner, “Randomized trials of cancer drugs are for yesterday,” Nature, vol. 629, no. 8014, pp. S13–S13, May 2024, doi: 10.1038/d41586-024-01430-9.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Frontiers, “Cancer risk from pesticides comparable to smoking in some cases, study finds.” Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://medicalxpress.com/news/2024-07-cancer-pesticides-cases.html">https://medicalxpress.com/news/2024-07-cancer-pesticides-cases.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd7d2e5e" class="outline-3">
+<h3 id="orgd7d2e5e"><span class="section-number-3">2.5.</span> Nano Science &amp; Technology</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li>“A NICER nanovaccine for cancer immunotherapy,” Nat. Nanotechnol., pp. 1–2, Jun. 2025, doi: 10.1038/s41565-025-01953-w.</li>
+
+<li>M. Cardinal, “Tens of millions of nanoneedles could replace painful cancer biopsies,” nanotechnologyworld. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://www.nanotechnologyworld.org/post/tens-of-millions-of-nanoneedles-could-replace-painful-cancer-biopsies">https://www.nanotechnologyworld.org/post/tens-of-millions-of-nanoneedles-could-replace-painful-cancer-biopsies</a></li>
+
+<li>Q. You et al., “A nanovaccine targeting cancer stem cells and bulk cancer cells for postoperative cancer immunotherapy,” Nat. Nanotechnol., pp. 1–14, Jun. 2025, doi: 10.1038/s41565-025-01952-x.</li>
+
+<li>T. Freeman, “Gold nanoparticles could improve radiotherapy of pancreatic cancer,” Physics World. Accessed: Aug. 31, 2024. [Online]. Available: <a href="https://physicsworld.com/gold-nanoparticles-could-improve-radiotherapy-of-pancreatic-cancer/">https://physicsworld.com/gold-nanoparticles-could-improve-radiotherapy-of-pancreatic-cancer/</a></li>
+
+<li>N. Author, “Self-propelling nanobots shrink bladder tumours in mice by 90%,” Physics World. Accessed: Feb. 22, 2024. [Online]. Available: <a href="https://physicsworld.com/a/self-propelling-nanobots-shrink-bladder-tumours-in-mice-by-90/">https://physicsworld.com/a/self-propelling-nanobots-shrink-bladder-tumours-in-mice-by-90/</a></li>
+
+<li>M. Cardinal, “Killing cancer with a trick of the light,” nanotechnologyworld. Accessed: Jun. 06, 2024. [Online]. Available: <a href="https://www.nanotechnologyworld.org/post/killing-cancer-with-a-trick-of-the-light">https://www.nanotechnologyworld.org/post/killing-cancer-with-a-trick-of-the-light</a></li>
+<li>M. Cardinal, “New technique to diagnose cancer metastasis uses origami nanoprobes,” nanotechnologyworld. Accessed: Jul. 24, 2024. [Online]. Available: <a href="https://www.nanotechnologyworld.org/post/new-technique-to-diagnose-cancer-metastasis-uses-origami-nanoprobes">https://www.nanotechnologyworld.org/post/new-technique-to-diagnose-cancer-metastasis-uses-origami-nanoprobes</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org053b822" class="outline-3">
+<h3 id="org053b822"><span class="section-number-3">2.6.</span> Computer Science And Engineering</h3>
+<div class="outline-text-3" id="text-2-6">
+</div>
+<div id="outline-container-orgc2cccd9" class="outline-4">
+<h4 id="orgc2cccd9"><span class="section-number-4">2.6.1.</span> Artificial Intelligence</h4>
+<div class="outline-text-4" id="text-2-6-1">
+</div>
+<ol class="org-ol">
+<li><a id="org479f742"></a>Critical Studies<br />
+<div class="outline-text-5" id="text-2-6-1-1">
+<ul class="org-ul">
+<li>H. Fry, Hello World: How to be Human in the Age of the Machine. Transworld Digital, 2018.</li>
+</ul>
+</div>
+</li>
+<li><a id="org48e4a46"></a>Misc<br />
+<div class="outline-text-5" id="text-2-6-1-2">
+<ul class="org-ul">
+<li>“How a Gemma model helped discover a new potential cancer therapy pathway,” Google. Accessed: Oct. 20, 2025. [Online]. Available: <a href="https://blog.google/technology/ai/google-gemma-ai-cancer-therapy-discovery/">https://blog.google/technology/ai/google-gemma-ai-cancer-therapy-discovery/</a></li>
+
+<li>V. Corless, “AI tools turned to creating designer proteins for personalised cancer therapies and antibiotics,” Chemistry World. Accessed: Aug. 06, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/ai-tools-turned-to-creating-designer-proteins-for-personalised-cancer-therapies-and-antibiotics/4021946.article">https://www.chemistryworld.com/news/ai-tools-turned-to-creating-designer-proteins-for-personalised-cancer-therapies-and-antibiotics/4021946.article</a></li>
+
+<li>A. University, “AI meets biophysics: New approach identifies critical interaction points in cancer-related proteins.” Accessed: Sep. 06, 2024. [Online]. Available: <a href="https://phys.org/news/2024-09-ai-biophysics-approach-critical-interaction.html">https://phys.org/news/2024-09-ai-biophysics-approach-critical-interaction.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Artificial Intelligence and Cancer Care: the Future of Oncology?,” Stanford Cancer Institute. Accessed: Mar. 01, 2024. [Online]. Available: <a href="https://med.stanford.edu/cancer/about/news/ai.html">https://med.stanford.edu/cancer/about/news/ai.html</a></li>
+<li>“AI Tool Brings Precision Pathology for Cancer Into Focus.” Accessed: Mar. 01, 2024. [Online]. Available: <a href="https://www.pennmedicine.org/news/news-releases/2024/january/ai-tool-brings-precision-pathology-for-cancer-into-focus">https://www.pennmedicine.org/news/news-releases/2024/january/ai-tool-brings-precision-pathology-for-cancer-into-focus</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orge86f697" class="outline-4">
+<h4 id="orge86f697"><span class="section-number-4">2.6.2.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org83f3c81" class="outline-3">
+<h3 id="org83f3c81"><span class="section-number-3">2.7.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-7">
+<ul class="org-ul">
+<li>M. Díaz-Gay et al., “The mutagenic forces shaping the genomes of lung cancer in never smokers,” Nature, vol. 644, no. 8075, pp. 133–144, Aug. 2025, doi: 10.1038/s41586-025-09219-0.</li>
+
+<li>M. Kozlov, “People with some cancers live longer after a COVID vaccine,” Nature, Oct. 2025, doi: 10.1038/d41586-025-03432-7.</li>
+
+<li>E. Topol, “How mRNA Vaccines Can Help Fight Cancer,” Ground Truths. Accessed: Oct. 23, 2025. [Online]. Available: <a href="https://erictopol.substack.com/p/how-mrna-vaccines-can-help-fight">https://erictopol.substack.com/p/how-mrna-vaccines-can-help-fight</a></li>
+
+<li>M. Naddaf, “Low quality papers are flooding the cancer literature — can this AI tool help to catch them?,” Nature, Oct. 2025, doi: 10.1038/d41586-025-02906-y.</li>
+
+<li>C. Kuehn, “Mathematical models for self-adaptive response to cancer dynamics,” J. Phys. Complex., vol. 6, no. 3, p. 035016, Sep. 2025, doi: 10.1088/2632-072X/ae0851.</li>
+
+<li>I. Dumé, “Compact diamond magnetometer detects metastatic tumours,” Physics World. Accessed: Sep. 23, 2025. [Online]. Available: <a href="https://physicsworld.com/a/compact-diamond-magnetometer-detects-metastatic-tumours/">https://physicsworld.com/a/compact-diamond-magnetometer-detects-metastatic-tumours/</a></li>
+
+<li>F. Diaz-Maurin, “Why a national cancer study near US reactors must be conducted before any new expansion of nuclear power,” Bulletin of the Atomic Scientists. Accessed: Sep. 13, 2025. [Online]. Available: <a href="https://thebulletin.org/2025/09/why-a-national-cancer-study-near-us-reactors-must-be-conducted-before-any-new-expansion-of-nuclear-power/">https://thebulletin.org/2025/09/why-a-national-cancer-study-near-us-reactors-must-be-conducted-before-any-new-expansion-of-nuclear-power/</a></li>
+
+<li>“Cambridge is changing the story of cancer.” Accessed: Sep. 10, 2025. [Online]. Available: <a href="https://www.cam.ac.uk/cancer">https://www.cam.ac.uk/cancer</a></li>
+<li>S. Bevan, “AI versus cancer - the Cambridge researchers using machine intelligence to beat disease.” Accessed: Sep. 10, 2025. [Online]. Available: <a href="https://www.cam.ac.uk/stories/cambridge-cancer-research-ai">https://www.cam.ac.uk/stories/cambridge-cancer-research-ai</a></li>
+<li>“‘AI scientist’ suggests combinations of widely available non-cancer drugs can kill cancer cells | University of Cambridge.” Accessed: Sep. 10, 2025. [Online]. Available: <a href="https://www.cam.ac.uk/research/news/ai-scientist-suggests-combinations-of-widely-available-non-cancer-drugs-can-kill-cancer-cells">https://www.cam.ac.uk/research/news/ai-scientist-suggests-combinations-of-widely-available-non-cancer-drugs-can-kill-cancer-cells</a></li>
+<li>“Study of breast cell changes in motherhood provides clues to breastfeeding difficulties | University of Cambridge.” Accessed: Sep. 10, 2025. [Online]. Available: <a href="https://www.cam.ac.uk/research/news/study-of-breast-cell-changes-in-motherhood-provides-clues-to-breastfeeding-difficulties">https://www.cam.ac.uk/research/news/study-of-breast-cell-changes-in-motherhood-provides-clues-to-breastfeeding-difficulties</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Pressure flips the switch on cancer cells | University of Oxford.” Accessed: Aug. 30, 2025. [Online]. Available: <a href="https://www.ox.ac.uk/news/2025-08-28-pressure-flips-switch-cancer-cells">https://www.ox.ac.uk/news/2025-08-28-pressure-flips-switch-cancer-cells</a></li>
+
+<li>T. Freeman, “Amorphous carbon membrane creates precision proton beams for cancer therapy,” Physics World. Accessed: Aug. 15, 2025. [Online]. Available: <a href="https://physicsworld.com/amorphous-carbon-membrane-creates-precision-proton-beams-for-cancer-therapy/">https://physicsworld.com/amorphous-carbon-membrane-creates-precision-proton-beams-for-cancer-therapy/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. A. Aktipis and R. M. Nesse, “Evolutionary foundations for cancer biology,” Evolutionary Applications, vol. 6, no. 1, pp. 144–159, Jan. 2013, doi: 10.1111/eva.12034.</li>
+
+<li>“Princeton Engineering - Tracking cell mutations, a new tool reveals how tumors evolve,” Princeton Engineering. Accessed: Aug. 09, 2025. [Online]. Available: <a href="https://engineering.princeton.edu/news/2024/10/31/tracking-cell-mutations-new-tool-reveals-how-tumors-evolve">https://engineering.princeton.edu/news/2024/10/31/tracking-cell-mutations-new-tool-reveals-how-tumors-evolve</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Glowing nanoparticles ferry drug to breast and cervical cancer cells,” Nature India, Aug. 2025, doi: 10.1038/d44151-025-00137-8.</li>
+<li>J. Yoshimi, “Gaming cancer: How video games and citizen science could help cure disease,” Big Think. Accessed: Jul. 12, 2025. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/how-citizen-science-games-could-help-cure-disease/">https://thereader.mitpress.mit.edu/how-citizen-science-games-could-help-cure-disease/</a></li>
+
+<li>D. Wang et al., “Iron–silver-modified quantum dots act as efficient catalysts in anti-cancer multitherapy through controlled, ultrasound-induced oxidation,” Nat. Nanotechnol., pp. 1–10, Jul. 2025, doi: 10.1038/s41565-025-01943-y.</li>
+
+<li>M. Díaz-Gay et al., “The mutagenic forces shaping the genomes of lung cancer in never smokers,” Nature, pp. 1–12, Jul. 2025, doi: 10.1038/s41586-025-09219-0.</li>
+
+<li>T. Freeman, “Cancer centres streamline radiotherapy workflow with SunCHECK QA platform,” Physics World. Accessed: Jul. 03, 2025. [Online]. Available: <a href="https://physicsworld.com/a/cancer-centres-streamline-radiotherapy-workflow-with-suncheck-qa-platform/">https://physicsworld.com/a/cancer-centres-streamline-radiotherapy-workflow-with-suncheck-qa-platform/</a></li>
+
+<li>P. Ferdinand, “High-fructose corn syrup fuels tumor growth in animals with cancer, a new study shows,” U.S. Right to Know. Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://usrtk.org/healthwire/high-fructose-corn-syrup-fuels-tumor-growth/">https://usrtk.org/healthwire/high-fructose-corn-syrup-fuels-tumor-growth/</a></li>
+
+<li>Z. Corbyn, “This scientist treated her own cancer with viruses she grew in the lab,” Nature, Nov. 2024, doi: 10.1038/d41586-024-03647-0.</li>
+
+<li>T. Freeman, “Gallium-doped bioactive glass kills 99% of bone cancer cells,” Physics World. Accessed: Sep. 19, 2024. [Online]. Available: <a href="https://physicsworld.com/a/gallium-doped-bioactive-glass-kills-99-of-bone-cancer-cells/">https://physicsworld.com/a/gallium-doped-bioactive-glass-kills-99-of-bone-cancer-cells/</a></li>
+
+<li>“Eliminating a gut microbe could slash gastric cancers.” Accessed: Aug. 21, 2024. [Online]. Available: <a href="https://www.science.org/content/article/eliminating-gut-microbe-could-slash-gastric-cancers">https://www.science.org/content/article/eliminating-gut-microbe-could-slash-gastric-cancers</a></li>
+
+<li>L. Morgan, “The master of mutations.” Accessed: Aug. 01, 2024. [Online]. Available: <a href="https://www.cam.ac.uk/stories/dr-alex-cagan">https://www.cam.ac.uk/stories/dr-alex-cagan</a></li>
+
+<li>T. Freeman, “Deep transfer learning detects six different cancers on PET/CT scans,” Physics World. Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://physicsworld.com/deep-transfer-learning-detects-six-different-cancers-on-pet-ct-scans/">https://physicsworld.com/deep-transfer-learning-detects-six-different-cancers-on-pet-ct-scans/</a></li>
+
+<li>E. Dolgin, “The future of precision cancer therapy might be to try everything,” Nature, vol. 626, no. 7999, pp. 470–473, Feb. 2024, doi: 10.1038/d41586-024-00392-2.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org66af783" class="outline-2">
+<h2 id="org66af783"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org9d215ac" class="outline-3">
+<h3 id="org9d215ac"><span class="section-number-3">3.1.</span> Events</h3>
+</div>
+<div id="outline-container-orgb352c53" class="outline-3">
+<h3 id="orgb352c53"><span class="section-number-3">3.2.</span> Orgs</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“Oxford Cancer.” Accessed: Dec. 11, 2024. [Online]. Available: <a href="https://www.cancer.ox.ac.uk/oxford-cancer">https://www.cancer.ox.ac.uk/oxford-cancer</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org12600c1" class="outline-3">
+<h3 id="org12600c1"><span class="section-number-3">3.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>“What can positive thinking do for a cancer patient? | Aeon Essays,” Aeon. Accessed: Oct. 01, 2025. [Online]. Available: <a href="https://aeon.co/essays/what-can-positive-thinking-do-for-a-cancer-patient">https://aeon.co/essays/what-can-positive-thinking-do-for-a-cancer-patient</a></li>
+
+<li>M. Field, “RFK Jr.’s endless anti-vax campaign targets the science that could lead to cancer vaccines,” Bulletin of the Atomic Scientists. Accessed: Sep. 03, 2025. [Online]. Available: <a href="https://thebulletin.org/2025/09/rfk-jr-s-endless-anti-vax-campaign-targets-the-science-that-could-lead-to-cancer-vaccines/">https://thebulletin.org/2025/09/rfk-jr-s-endless-anti-vax-campaign-targets-the-science-that-could-lead-to-cancer-vaccines/</a></li>
+
+<li>“‘Toxic Air’: Meet the Mother-Daughter Duo Fighting Pollution in Louisiana’s ‘Cancer Alley,’” Democracy Now! Accessed: Aug. 02, 2025. [Online]. Available: <a href="https://www.democracynow.org/2025/8/1/toxic_billionaire_tour">https://www.democracynow.org/2025/8/1/toxic_billionaire_tour</a></li>
+
+<li>“World Cancer Day,” Wikipedia. Feb. 04, 2025. Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=World_Cancer_Day&amp;oldid=1273842046">https://en.wikipedia.org/w/index.php?title=World_Cancer_Day&amp;oldid=1273842046</a></li>
+
+<li>“Accessibility issues in cancer care | Michigan Medicine.” Accessed: Jun. 25, 2024. [Online]. Available: <a href="https://www.michiganmedicine.org/health-lab/accessibility-issues-cancer-care">https://www.michiganmedicine.org/health-lab/accessibility-issues-cancer-care</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“How employees of top cancer hospitals sold empty vials of chemotherapy injections to fill with spurious drugs,” The Indian Express. Accessed: Jul. 19, 2024. [Online]. Available: <a href="https://indianexpress.com/article/cities/delhi/fake-cancer-drugs-case-accused-worked-for-top-hospitals-eight-patients-traced-says-delhi-police-9457861/">https://indianexpress.com/article/cities/delhi/fake-cancer-drugs-case-accused-worked-for-top-hospitals-eight-patients-traced-says-delhi-police-9457861/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org22e8ebe" class="outline-2">
+<h2 id="org22e8ebe"><span class="section-number-2">4.</span> Core</h2>
+</div>
+<div id="outline-container-org31bda6e" class="outline-2">
+<h2 id="org31bda6e"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org38ccbf1" class="outline-3">
+<h3 id="org38ccbf1"><span class="section-number-3">5.1.</span> Films</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>“Love Story (1970 film),” Wikipedia. Feb. 23, 2024. Accessed: Feb. 29, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Love_Story_(1970_film)&amp;oldid=1209692429">https://en.wikipedia.org/w/index.php?title=Love_Story_(1970_film)&amp;oldid=1209692429</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc63fcac" class="outline-3">
+<h3 id="orgc63fcac"><span class="section-number-3">5.2.</span> Humor</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>12-Year-Old Boy Scouts Offer To Give Breast Exams, (Oct. 13, 2008). Accessed: Apr. 09, 2023. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=xbVifPkbYsk">https://www.youtube.com/watch?v=xbVifPkbYsk</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org095ccf5" class="outline-3">
+<h3 id="org095ccf5"><span class="section-number-3">5.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>J. Yoshimi, “Gaming cancer: How video games and citizen science could help cure disease,” Big Think. Accessed: Jul. 12, 2025. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/how-citizen-science-games-could-help-cure-disease/">https://thereader.mitpress.mit.edu/how-citizen-science-games-could-help-cure-disease/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd2de6d7" class="outline-2">
+<h2 id="orgd2de6d7"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org543af01" class="outline-3">
+<h3 id="org543af01"><span class="section-number-3">6.1.</span> Unconventional Resources</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>D. J. Fung, <b>The Cancer Code: A Revolutionary New Understanding of a Medical Mystery.</b> HarperCollins, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfe3660a" class="outline-3">
+<h3 id="orgfe3660a"><span class="section-number-3">6.2.</span> Food</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>L. J. Young, “Ultraprocessed Foods High in Seed Oils Could Be Fueling Colon Cancer Risk,” Scientific American. Accessed: Dec. 14, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/ultraprocessed-foods-high-in-seed-oils-could-be-fueling-colon-cancer-risk/">https://www.scientificamerican.com/article/ultraprocessed-foods-high-in-seed-oils-could-be-fueling-colon-cancer-risk/</a></li>
+
+<li>M. Conley, “Ultra-processed foods: increased risk of cancer,” U.S. Right to Know. Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://usrtk.org/ultra-processed-foods/cancer/">https://usrtk.org/ultra-processed-foods/cancer/</a></li>
+
+<li>J. Stebbing, “The role alcohol plays in new cancer cases – landmark new report,” The Conversation. Accessed: Oct. 02, 2024. [Online]. Available: <a href="http://theconversation.com/the-role-alcohol-plays-in-new-cancer-cases-landmark-new-report-239643">http://theconversation.com/the-role-alcohol-plays-in-new-cancer-cases-landmark-new-report-239643</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Scientists find anti-cancer properties in three rice varieties,” The Times of India, Feb. 18, 2018. Accessed: Jul. 19, 2024. [Online]. Available: <a href="https://timesofindia.indiatimes.com/home/science/scientists-find-anti-cancer-properties-in-three-rice-varieties/articleshow/62968002.cms">https://timesofindia.indiatimes.com/home/science/scientists-find-anti-cancer-properties-in-three-rice-varieties/articleshow/62968002.cms</a></li>
+<li>K. Ratna, “Why the Humble Tomato Can Be the Next Superfood Because of its Cancer-Fighting Magic Molecule,” Frontline. Accessed: Nov. 20, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/columns/how-tomato-sauce-reflects-human-folly-lycopene-benefits-ketchup-history-food-industrialization-nightshade-homo-stultus/article68859183.ece">https://frontline.thehindu.com/columns/how-tomato-sauce-reflects-human-folly-lycopene-benefits-ketchup-history-food-industrialization-nightshade-homo-stultus/article68859183.ece</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org023d005" class="outline-3">
+<h3 id="org023d005"><span class="section-number-3">6.3.</span> Workouts</h3>
+<div class="outline-text-3" id="text-6-3">
+<ul class="org-ul">
+<li>T. Freeman, “Mathematical model sheds light on how exercise suppresses tumour growth,” Physics World. Accessed: Dec. 04, 2024. [Online]. Available: <a href="https://physicsworld.com/a/mathematical-model-sheds-light-on-how-exercise-suppresses-tumour-growth/">https://physicsworld.com/a/mathematical-model-sheds-light-on-how-exercise-suppresses-tumour-growth/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb766085" class="outline-3">
+<h3 id="orgb766085"><span class="section-number-3">6.4.</span> Breast Cancer</h3>
+<div class="outline-text-3" id="text-6-4">
+</div>
+<div id="outline-container-orgbf1c98c" class="outline-4">
+<h4 id="orgbf1c98c"><span class="section-number-4">6.4.1.</span> General</h4>
+</div>
+<div id="outline-container-orgccbf13e" class="outline-4">
+<h4 id="orgccbf13e"><span class="section-number-4">6.4.2.</span> STEMM</h4>
+<div class="outline-text-4" id="text-6-4-2">
+</div>
+<ol class="org-ol">
+<li><a id="org5ee77b8"></a>Systems Sciences, Misc<br />
+<ol class="org-ol">
+<li><a id="org57c0808"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org23ee509"></a>The Ecologist<br />
+<div class="outline-text-5" id="text-6-4-2-2">
+<ul class="org-ul">
+<li>“A silent killer.” Accessed: Jan. 28, 2025. [Online]. Available: <a href="https://theecologist.org/2025/jan/27/silent-killer">https://theecologist.org/2025/jan/27/silent-killer</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org23041a9"></a>Computer Science and Engineering<br />
+<ol class="org-ol">
+<li><a id="org11d56de"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="orgde12abb"></a>Misc<br />
+<div class="outline-text-5" id="text-6-4-2-4">
+<ul class="org-ul">
+<li>J. T. Arantes and FAPESP, “Combination of quantum and classical computing supports early diagnosis of breast cancer.” Accessed: Oct. 02, 2025. [Online]. Available: <a href="https://phys.org/news/2025-10-combination-quantum-classical-early-diagnosis.html">https://phys.org/news/2025-10-combination-quantum-classical-early-diagnosis.html</a></li>
+<li>S. B. Chia et al., “Respiratory viral infections awaken metastatic breast cancer cells in lungs,” Nature, pp. 1–11, Jul. 2025, doi: 10.1038/s41586-025-09332-0.</li>
+<li>K. Giles, “Dual-action Therapy Shows Promise in Breast Cancer Care,” IOP Publishing. Accessed: Jul. 24, 2025. [Online]. Available: <a href="https://ioppublishing.org/news/dual-action-therapy-shows-promise-in-breast-cancer-care/">https://ioppublishing.org/news/dual-action-therapy-shows-promise-in-breast-cancer-care/</a></li>
+<li>“Glowing nanoparticles ferry drug to breast and cervical cancer cells,” Nature India, Aug. 2025, doi: 10.1038/d44151-025-00137-8.</li>
+<li>P. Ferdinand, “Phthalates in everyday products may fuel breast cancer, new study warns,” U.S. Right to Know. Accessed: Sep. 06, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/phthalates-breast-cancer/">https://usrtk.org/healthwire/phthalates-breast-cancer/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“IIT-G researchers develop injectable hydrogel for breast cancer therapy,” The Times of India, Jan. 02, 2025. Accessed: Jan. 04, 2025. [Online]. Available: <a href="https://timesofindia.indiatimes.com/city/guwahati/iit-g-researchers-develop-injectable-hydrogel-for-breast-cancer-therapy/articleshow/116893525.cms">https://timesofindia.indiatimes.com/city/guwahati/iit-g-researchers-develop-injectable-hydrogel-for-breast-cancer-therapy/articleshow/116893525.cms</a></li>
+<li>J. Stone, “Having dense breasts is linked to cancer. But advice about breast density can depend on where you live,” The Conversation. Accessed: Feb. 18, 2025. [Online]. Available: <a href="http://theconversation.com/having-dense-breasts-is-linked-to-cancer-but-advice-about-breast-density-can-depend-on-where-you-live-249863">http://theconversation.com/having-dense-breasts-is-linked-to-cancer-but-advice-about-breast-density-can-depend-on-where-you-live-249863</a></li>
+<li>T. Perkins, “More than 400 chemicals in plastic products linked to breast cancer – study,” The Guardian, Dec. 06, 2024. Accessed: Dec. 07, 2024. [Online]. Available: <a href="https://www.theguardian.com/environment/2024/dec/06/plastic-chemicals-breast-cancer">https://www.theguardian.com/environment/2024/dec/06/plastic-chemicals-breast-cancer</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org6517d0a" class="outline-4">
+<h4 id="org6517d0a"><span class="section-number-4">6.4.3.</span> Worldly Matters</h4>
+<div class="outline-text-4" id="text-6-4-3">
+</div>
+<ol class="org-ol">
+<li><a id="org8f0b75e"></a>Nation States<br />
+<ol class="org-ol">
+<li><a id="org54154a4"></a>India<br /></li>
+</ol>
+</li>
+<li><a id="org9d1eed2"></a>Misc<br />
+<div class="outline-text-5" id="text-6-4-3-2">
+<ul class="org-ul">
+<li>“Pluralistic: Blue Cross of Louisiana doesn’t give a shit about breast cancer (12 Apr 2025) – Pluralistic: Daily links from Cory Doctorow.” Accessed: Apr. 13, 2025. [Online]. Available: <a href="https://pluralistic.net/2025/04/12/pre-authorization/">https://pluralistic.net/2025/04/12/pre-authorization/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgb621ba5" class="outline-4">
+<h4 id="orgb621ba5"><span class="section-number-4">6.4.4.</span> Arts</h4>
+<div class="outline-text-4" id="text-6-4-4">
+</div>
+<ol class="org-ol">
+<li><a id="org6b62746"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org8f6d0d4" class="outline-4">
+<h4 id="org8f6d0d4"><span class="section-number-4">6.4.5.</span> Special Topics</h4>
+</div>
+<div id="outline-container-orgac8fc78" class="outline-4">
+<h4 id="orgac8fc78"><span class="section-number-4">6.4.6.</span> Misc</h4>
+<div class="outline-text-4" id="text-6-4-6">
+<ul class="org-ul">
+<li>K. Thiagarajan, “Women who are blind play a critical role in identifying possible breast cancers,” NPR, Sep. 08, 2024. Accessed: Sep. 10, 2024. [Online]. Available: <a href="https://www.npr.org/sections/goats-and-soda/2024/09/08/g-s1-15690/breast-cancer-tumors-women-blind">https://www.npr.org/sections/goats-and-soda/2024/09/08/g-s1-15690/breast-cancer-tumors-women-blind</a></li>
+
+<li>P. Ferdinand, “Air pollution, even at low levels, may heighten breast cancer risk,” U.S. Right to Know. Accessed: Nov. 07, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/air-pollution-breast-cancer/">https://usrtk.org/healthwire/air-pollution-breast-cancer/</a></li>
+
+<li>“Make Breast Cancer Awareness Breast Cancer Prevention,” Beyond Pesticides. Accessed: Sep. 25, 2025. [Online]. Available: <a href="https://www.beyondpesticides.org/resources/breast-cancer-awareness-month">https://www.beyondpesticides.org/resources/breast-cancer-awareness-month</a></li>
+
+<li>“15,000 women a year with breast cancer could benefit from whole genome sequencing | University of Cambridge.” Accessed: Oct. 11, 2025. [Online]. Available: <a href="https://www.cam.ac.uk/research/news/15000-women-a-year-with-breast-cancer-could-benefit-from-whole-genome-sequencing">https://www.cam.ac.uk/research/news/15000-women-a-year-with-breast-cancer-could-benefit-from-whole-genome-sequencing</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb929ece" class="outline-2">
+<h2 id="orgb929ece"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>“Tips to Investigate Links Between Pesticide and Cancer.” Accessed: Jun. 24, 2026. [Online]. Available: <a href="https://gijn.org/stories/tips-investigate-pesticide-cancer-links/">https://gijn.org/stories/tips-investigate-pesticide-cancer-links/</a></li>
+
+<li>“I had cancer. Did I need all the miserable comforters too? | Psyche Turning Points.” Accessed: Feb. 13, 2026. [Online]. Available: <a href="https://psyche.co/turning-points/i-had-cancer-did-i-need-all-the-miserable-comforters-too">https://psyche.co/turning-points/i-had-cancer-did-i-need-all-the-miserable-comforters-too</a></li>
+
+<li>G. Ruskin, “Dicamba: Concerns about cancer and crop damage,” U.S. Right to Know. Accessed: Feb. 12, 2026. [Online]. Available: <a href="https://usrtk.org/pesticides/dicamba/">https://usrtk.org/pesticides/dicamba/</a></li>
+
+<li>“I had cancer. Did I need all the miserable comforters too? | Psyche Turning Points.” Accessed: Feb. 12, 2026. [Online]. Available: <a href="https://psyche.co/turning-points/i-had-cancer-did-i-need-all-the-miserable-comforters-too">https://psyche.co/turning-points/i-had-cancer-did-i-need-all-the-miserable-comforters-too</a></li>
+
+<li>G. Conroy, “More than one-third of cancer cases are preventable, massive study finds,” Nature, Feb. 2026, doi: 10.1038/d41586-026-00333-1.</li>
+
+<li>E. Chen, “How tumours trick the brain into shutting down cancer-fighting cells,” Nature, Feb. 2026, doi: 10.1038/d41586-026-00338-w.</li>
+
+<li>A. Heidt, “Why cancer can come back years later — and how to stop it,” Nature, vol. 649, no. 8096, pp. 282–284, Jan. 2026, doi.org/10.1038/d41586-025-04149-3.</li>
+
+<li>“Cancer killed my brother. I’ve been on standby for 45 years | Psyche Turning Points.” Accessed: Jan. 17, 2026. [Online]. Available: <a href="https://psyche.co/turning-points/cancer-killed-my-brother-ive-been-on-standby-for-45-years">https://psyche.co/turning-points/cancer-killed-my-brother-ive-been-on-standby-for-45-years</a></li>
+
+<li>P. Ferdinand, “Common male cancer linked to hormone-disrupting chemicals, scientists warn,” U.S. Right to Know. Accessed: Oct. 16, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/prostate-cancer-linked-to-hormone-disrupting-chemicals/">https://usrtk.org/healthwire/prostate-cancer-linked-to-hormone-disrupting-chemicals/</a></li>
+
+<li>N. Author, “A SMART approach to treating lung cancers in challenging locations,” Physics World. Accessed: Oct. 25, 2025. [Online]. Available: <a href="https://physicsworld.com/a/a-smart-approach-to-treating-lung-cancers-in-challenging-locations/">https://physicsworld.com/a/a-smart-approach-to-treating-lung-cancers-in-challenging-locations/</a></li>
+
+<li>“Common pesticide could be behind mysterious surge in young cancers.” Accessed: Sep. 30, 2025. [Online]. Available: <a href="https://www.msn.com/en-ph/news/other/common-pesticide-could-be-behind-mysterious-surge-in-young-cancers/ar-AA1uiV8H">https://www.msn.com/en-ph/news/other/common-pesticide-could-be-behind-mysterious-surge-in-young-cancers/ar-AA1uiV8H</a></li>
+
+<li>“Oxford University researchers pioneer new breathing test to detect lung disease earlier | University of Oxford.” Accessed: Sep. 27, 2025. [Online]. Available: <a href="https://www.ox.ac.uk/news/2025-09-25-oxford-university-researchers-pioneer-new-breathing-test-detect-lung-disease-earlier">https://www.ox.ac.uk/news/2025-09-25-oxford-university-researchers-pioneer-new-breathing-test-detect-lung-disease-earlier</a></li>
+
+<li>“Technology originating at MIT leads to approved bladder cancer treatment,” MIT News | Massachusetts Institute of Technology. Accessed: Sep. 19, 2025. [Online]. Available: <a href="https://news.mit.edu/2025/technology-originating-at-mit-approved-bladder-cancer-treatment-0911">https://news.mit.edu/2025/technology-originating-at-mit-approved-bladder-cancer-treatment-0911</a></li>
+
+<li>“New study evaluates effectiveness of cancer diagnosis pathway for patients with non-specific symptoms | University of Oxford.” Accessed: Sep. 13, 2025. [Online]. Available: <a href="https://www.ox.ac.uk/news/2025-09-10-new-study-evaluates-effectiveness-cancer-diagnosis-pathway-patients-non-specific">https://www.ox.ac.uk/news/2025-09-10-new-study-evaluates-effectiveness-cancer-diagnosis-pathway-patients-non-specific</a></li>
+
+<li>C. Gillam, “Cancer in the Corn Belt,” The New Lede. Accessed: Sep. 06, 2025. [Online]. Available: <a href="https://www.thenewlede.org/cancer-in-the-corn-belt/">https://www.thenewlede.org/cancer-in-the-corn-belt/</a></li>
+
+<li>“Brain cancer cells can be ‘reprogrammed’ to stop them from spreading | University of Cambridge.” Accessed: Sep. 03, 2025. [Online]. Available: <a href="https://www.cam.ac.uk/research/news/brain-cancer-cells-can-be-reprogrammed-to-stop-them-from-spreading">https://www.cam.ac.uk/research/news/brain-cancer-cells-can-be-reprogrammed-to-stop-them-from-spreading</a></li>
+
+<li>K. Giles, “3D-Printed Kidney Tumours Show Potential for More Targeted Treatment,” IOP Publishing. Accessed: Aug. 15, 2025. [Online]. Available: <a href="https://ioppublishing.org/news/3d-printed-kidney-tumours-show-potential-for-more-targeted-treatment/">https://ioppublishing.org/news/3d-printed-kidney-tumours-show-potential-for-more-targeted-treatment/</a></li>
+
+<li>C. Gillam, “WATCH: Cancer and water contamination fuel public outcry in Iowa,” The New Lede. Accessed: Aug. 13, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/08/iowa-cancer-water-pollution-farms-public-outcry/">https://www.thenewlede.org/2025/08/iowa-cancer-water-pollution-farms-public-outcry/</a></li>
+
+<li>T. Freeman, “Amorphous carbon membrane creates precision proton beams for cancer therapy,” Physics World. Accessed: Aug. 13, 2025. [Online]. Available: <a href="https://physicsworld.com/amorphous-carbon-membrane-creates-precision-proton-beams-for-cancer-therapy/">https://physicsworld.com/amorphous-carbon-membrane-creates-precision-proton-beams-for-cancer-therapy/</a></li>
+
+<li>“Novel cancer-killing mechanism opens path to new treatments.” Accessed: Aug. 12, 2025. [Online]. Available: <a href="https://news.stanford.edu/stories/2025/08/tegavivint-research-cell-death-cancer-treatments">https://news.stanford.edu/stories/2025/08/tegavivint-research-cell-death-cancer-treatments</a></li>
+
+<li>J. Stebbing, “From sweetener to cancer fighter? Fermented stevia shows promise in pancreatic cancer study,” The Conversation. Accessed: Jul. 25, 2025. [Online]. Available: <a href="http://theconversation.com/from-sweetener-to-cancer-fighter-fermented-stevia-shows-promise-in-pancreatic-cancer-study-261599">http://theconversation.com/from-sweetener-to-cancer-fighter-fermented-stevia-shows-promise-in-pancreatic-cancer-study-261599</a></li>
+
+<li>M. Díaz-Gay et al., “The mutagenic forces shaping the genomes of lung cancer in never smokers,” Nature, pp. 1–12, Jul. 2025, doi: 10.1038/s41586-025-09219-0.</li>
+
+<li>N N Taleb’s Probability Moocs, Does the Ketogenic Diet Work for Brain Cancer? Finding Signal in a Small Sample. Accessed: Mar. 08, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=GqxoNctdYOI">https://www.youtube.com/watch?v=GqxoNctdYOI</a></li>
+
+<li>T. M. P. Reader, “The Art of Living and Dying With Cancer: In Conversation With Dr. Robert Schneider,” The MIT Press Reader. Accessed: Feb. 15, 2025. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/the-art-of-living-and-dying-with-cancer/">https://thereader.mitpress.mit.edu/the-art-of-living-and-dying-with-cancer/</a></li>
+
+<li>“Persistent Homology Identifies Tumor Shapes to Enhance Prognostic Precision | SIAM,” Society for Industrial and Applied Mathematics. Accessed: Jan. 30, 2025. [Online]. Available: <a href="https://www.siam.org/publications/siam-news/articles/persistent-homology-identifies-tumor-shapes-to-enhance-prognostic-precision/">https://www.siam.org/publications/siam-news/articles/persistent-homology-identifies-tumor-shapes-to-enhance-prognostic-precision/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. Ogliore, “Research reveals how fructose in diet enhances tumor growth,” The Source. Accessed: Jan. 06, 2025. [Online]. Available: <a href="https://source.washu.edu/2024/12/research-reveals-how-fructose-in-diet-enhances-tumor-growth/">https://source.washu.edu/2024/12/research-reveals-how-fructose-in-diet-enhances-tumor-growth/</a></li>
+<li>P. Ferdinand, “High-fructose corn syrup fuels tumor growth in animals with cancer, a new study shows,” U.S. Right to Know. Accessed: Jan. 06, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/high-fructose-corn-syrup-fuels-tumor-growth/">https://usrtk.org/healthwire/high-fructose-corn-syrup-fuels-tumor-growth/</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:56</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

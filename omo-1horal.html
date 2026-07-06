@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:57 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Oral Health</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Oral Health</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf6762dd">1. General</a>
+<ul>
+<li><a href="#org98f29c4">1.1. Wikipedia</a></li>
+<li><a href="#org4cc44b4">1.2. Internet Resources</a>
+<ul>
+<li><a href="#org21a5799">1.2.1. WebMD</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org97a557e">2. STEMM</a>
+<ul>
+<li><a href="#org5354946">2.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#org9cff625">2.1.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org934e066">2.2. European Society of Preventive Medicine</a></li>
+<li><a href="#org52fea7a">2.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgf629994">3. Worldly Matters</a>
+<ul>
+<li><a href="#org1079c76">3.1. Nation States</a>
+<ul>
+<li><a href="#org052028d">3.1.1. India</a></li>
+</ul>
+</li>
+<li><a href="#org6510186">3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgb9c65ff">4. Core</a>
+<ul>
+<li><a href="#org224ae5d">4.1. Toiletries</a>
+<ul>
+<li><a href="#org872ebc7">4.1.1. Toothpastes</a></li>
+<li><a href="#org9798399">4.1.2. ToothBrushes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org31a3982">5. Arts</a>
+<ul>
+<li><a href="#org2637b56">5.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org0f664b3">6. Special Topics</a>
+<ul>
+<li><a href="#orgc57fb5a">6.1. CAM</a>
+<ul>
+<li><a href="#orge0633f1">6.1.1. AyurVeda</a></li>
+</ul>
+</li>
+<li><a href="#org3cd1164">6.2. Tongue</a></li>
+</ul>
+</li>
+<li><a href="#org312ddef">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgf6762dd" class="outline-2">
+<h2 id="orgf6762dd"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org98f29c4" class="outline-3">
+<h3 id="org98f29c4"><span class="section-number-3">1.1.</span> Wikipedia</h3>
+</div>
+<div id="outline-container-org4cc44b4" class="outline-3">
+<h3 id="org4cc44b4"><span class="section-number-3">1.2.</span> Internet Resources</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org21a5799" class="outline-4">
+<h4 id="org21a5799"><span class="section-number-4">1.2.1.</span> WebMD</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li>“Oral Health Center Guide,” WebMD. <a href="https://www.webmd.com/oral-health/guide/default.htm">https://www.webmd.com/oral-health/guide/default.htm</a> (accessed Feb. 04, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org97a557e" class="outline-2">
+<h2 id="org97a557e"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org5354946" class="outline-3">
+<h3 id="org5354946"><span class="section-number-3">2.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org9cff625" class="outline-4">
+<h4 id="org9cff625"><span class="section-number-4">2.1.1.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org934e066" class="outline-3">
+<h3 id="org934e066"><span class="section-number-3">2.2.</span> European Society of Preventive Medicine</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>M. Sagner, “Oral Health,” European Society of Preventive Medicine. Accessed: Jan. 30, 2024. [Online]. Available: <a href="https://espm.co/microbiome-oral-health/">https://espm.co/microbiome-oral-health/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org52fea7a" class="outline-3">
+<h3 id="org52fea7a"><span class="section-number-3">2.3.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgf629994" class="outline-2">
+<h2 id="orgf629994"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org1079c76" class="outline-3">
+<h3 id="org1079c76"><span class="section-number-3">3.1.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org052028d" class="outline-4">
+<h4 id="org052028d"><span class="section-number-4">3.1.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org2eb09d2"></a>General<br /></li>
+<li><a id="orgf072457"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="org11cb165"></a>Systems Sciences, Misc<br />
+<ul class="org-ul">
+<li><a id="orgc701229"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org64e5cad"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="orgf4dbc8e"></a>Worldly Matters<br />
+<ol class="org-ol">
+<li><a id="orgf19ad12"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org6e13c34"></a>Arts<br />
+<ol class="org-ol">
+<li><a id="org91efcbe"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="orgbb83150"></a>Special Topics<br /></li>
+<li><a id="org352dc95"></a>Misc<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org6510186" class="outline-3">
+<h3 id="org6510186"><span class="section-number-3">3.2.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgb9c65ff" class="outline-2">
+<h2 id="orgb9c65ff"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org224ae5d" class="outline-3">
+<h3 id="org224ae5d"><span class="section-number-3">4.1.</span> Toiletries</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org872ebc7" class="outline-4">
+<h4 id="org872ebc7"><span class="section-number-4">4.1.1.</span> Toothpastes</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>A. Paul, “Want a better toothpaste? Just add wool,” Popular Science. Accessed: Aug. 19, 2025. [Online]. Available: <a href="https://www.popsci.com/health/toothpaste-stronger-enamel-keratin/">https://www.popsci.com/health/toothpaste-stronger-enamel-keratin/</a></li>
+<li>D. Main, “Fluoride toothpastes, mouthwash marketed to kids in dangerous ways, lawsuit says,” The New Lede. Accessed: Jan. 31, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/01/fluoride-toothpaste-mouthwash-illegal-dangerous-marketing-to-kids-lawsuit/">https://www.thenewlede.org/2025/01/fluoride-toothpaste-mouthwash-illegal-dangerous-marketing-to-kids-lawsuit/</a></li>
+<li>Tamara, “Chart Comparing the Toxicant Profiles of Popular Toothpaste and Tooth Powder Products Tested by an Independent, Third-Party Lab in 2025,” Lead Safe Mama. Accessed: May 26, 2025. [Online]. Available: <a href="https://tamararubin.com/2025/01/toothpaste-chart/">https://tamararubin.com/2025/01/toothpaste-chart/</a></li>
+<li>Tamara, “Chart Comparing the Toxicant Profiles of Popular Toothpaste and Tooth Powder Products Tested by an Independent, Third-Party Lab in 2025,” Lead Safe Mama. Accessed: Apr. 18, 2025. [Online]. Available: <a href="https://tamararubin.com/2025/01/toothpaste-chart/">https://tamararubin.com/2025/01/toothpaste-chart/</a></li>
+<li>T. Perkins, “Toothpaste widely contaminated with lead and other metals, US research finds,” The Guardian, Apr. 17, 2025. Accessed: Apr. 18, 2025. [Online]. Available: <a href="https://www.theguardian.com/us-news/2025/apr/17/toothpaste-lead-heavy-metals">https://www.theguardian.com/us-news/2025/apr/17/toothpaste-lead-heavy-metals</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9798399" class="outline-4">
+<h4 id="org9798399"><span class="section-number-4">4.1.2.</span> ToothBrushes</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org31a3982" class="outline-2">
+<h2 id="org31a3982"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org2637b56" class="outline-3">
+<h3 id="org2637b56"><span class="section-number-3">5.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org0f664b3" class="outline-2">
+<h2 id="org0f664b3"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgc57fb5a" class="outline-3">
+<h3 id="orgc57fb5a"><span class="section-number-3">6.1.</span> CAM</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-orge0633f1" class="outline-4">
+<h4 id="orge0633f1"><span class="section-number-4">6.1.1.</span> AyurVeda</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<ul class="org-ul">
+<li>W. DESK, “Neem Stick: Reviving an ancient tradition for modern Dental health,” Organiser. Accessed: Dec. 24, 2024. [Online]. Available: <a href="https://organiser.org/2024/12/23/270520/bharat/neem-stick-reviving-an-ancient-tradition-for-modern-dental-health/">https://organiser.org/2024/12/23/270520/bharat/neem-stick-reviving-an-ancient-tradition-for-modern-dental-health/</a></li>
+
+<li>W. DESK, “Ayurvedic Herbs for Tonsils: Natural remedies for soothing and healing,” Organiser. Accessed: Dec. 19, 2024. [Online]. Available: <a href="https://organiser.org/2024/12/18/269865/bharat/ayurvedic-herbs-for-tonsils-natural-remedies-for-soothing-and-healing/">https://organiser.org/2024/12/18/269865/bharat/ayurvedic-herbs-for-tonsils-natural-remedies-for-soothing-and-healing/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3cd1164" class="outline-3">
+<h3 id="org3cd1164"><span class="section-number-3">6.2.</span> Tongue</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>“Tongue Laceration: Causes And Treatment.” <a href="https://www.colgate.com/en-us/oral-health/mouth-and-teeth-anatomy/tongue-laceration-causes-and-treatment">https://www.colgate.com/en-us/oral-health/mouth-and-teeth-anatomy/tongue-laceration-causes-and-treatment</a> (accessed Feb. 04, 2022).</li>
+<li>H. Parker, “Tongue Problem Basics,” WebMD. <a href="https://www.webmd.com/oral-health/guide/tongue-problem-basics-sore-or-discolored-tongue-and-tongue-bumps">https://www.webmd.com/oral-health/guide/tongue-problem-basics-sore-or-discolored-tongue-and-tongue-bumps</a> (accessed Feb. 04, 2022).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org312ddef" class="outline-2">
+<h2 id="org312ddef"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>S. Shahid, “The hidden plastic problem in your daily dental routine – and what’s being done about it,” The Conversation. Accessed: Sep. 10, 2025. [Online]. Available: <a href="http://theconversation.com/the-hidden-plastic-problem-in-your-daily-dental-routine-and-whats-being-done-about-it-264072">http://theconversation.com/the-hidden-plastic-problem-in-your-daily-dental-routine-and-whats-being-done-about-it-264072</a></li>
+
+<li>“There is no shame worse than poor teeth in a rich world | Aeon Essays,” Aeon. Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://aeon.co/essays/there-is-no-shame-worse-than-poor-teeth-in-a-rich-world">https://aeon.co/essays/there-is-no-shame-worse-than-poor-teeth-in-a-rich-world</a></li>
+
+<li>R. J. Mackenzie, “Don’t put charcoal on your teeth and 4 other dental no-nos,” Popular Science. Accessed: Jul. 26, 2025. [Online]. Available: <a href="https://www.popsci.com/health/dental-myths/">https://www.popsci.com/health/dental-myths/</a></li>
+
+<li>BY, “Private Equity Is Coming for Your Teeth.” Accessed: Jul. 23, 2025. [Online]. Available: <a href="https://jacobin.com/2025/07/private-equity-dental-care-health">https://jacobin.com/2025/07/private-equity-dental-care-health</a></li>
+
+<li>B. C. Kisely Amanda Wheeler,Caroline Victoria Robertson,Santosh Tadakamadla,Steve, “Gum disease, decay, missing teeth: Why people with mental illness have poorer oral health,” Down To Earth. Accessed: Jul. 02, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/health/gum-disease-decay-missing-teeth-why-people-with-mental-illness-have-poorer-oral-health">https://www.downtoearth.org.in/health/gum-disease-decay-missing-teeth-why-people-with-mental-illness-have-poorer-oral-health</a></li>
+
+<li>“The Emerging Face of Digital Dentistry – Communications of the ACM.” Accessed: Jun. 27, 2025. [Online]. Available: <a href="https://cacm.acm.org/news/the-emerging-face-of-digital-dentistry/">https://cacm.acm.org/news/the-emerging-face-of-digital-dentistry/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Sanders, “Can the ‘good’ bacteria in your mouth act as probiotic cavity fighters?,” Berkeley News. Accessed: Sep. 09, 2025. [Online]. Available: <a href="https://news.berkeley.edu/2025/09/04/can-the-good-bacteria-in-your-mouth-act-as-probiotic-cavity-fighters/">https://news.berkeley.edu/2025/09/04/can-the-good-bacteria-in-your-mouth-act-as-probiotic-cavity-fighters/</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:57</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

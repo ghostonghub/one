@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aging</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Aging</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org263c75f">1. General</a></li>
+<li><a href="#org2827a81">2. STEMM</a>
+<ul>
+<li><a href="#org0473ab0">2.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#org2435e50">2.1.1. Complexity Science</a></li>
+<li><a href="#org77d64f6">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgff22207">2.2. Biology</a>
+<ul>
+<li><a href="#org7943f4e">2.2.1. WHO</a></li>
+<li><a href="#orge044efa">2.2.2. Brain</a></li>
+<li><a href="#org4f2654a">2.2.3. Medicine</a></li>
+<li><a href="#org5ad6fd8">2.2.4. Diet</a></li>
+<li><a href="#org92dac06">2.2.5. Immune System</a></li>
+</ul>
+</li>
+<li><a href="#org3d0e1e9">2.3. Misc</a>
+<ul>
+<li><a href="#org10457fc">2.3.1. Misc</a></li>
+<li><a href="#org08bf3ce">2.3.2. Articles, Essays</a></li>
+<li><a href="#org3aeac51">2.3.3. Texts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org3f7c1a2">3. Worldly Matters</a>
+<ul>
+<li><a href="#org13ac64b">3.1. Space and Time</a>
+<ul>
+<li><a href="#orge7931a6">3.1.1. History</a></li>
+<li><a href="#org96cd71a">3.1.2. Geography</a></li>
+<li><a href="#org9f170af">3.1.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org9a130cc">3.2. Space, Earth, Life Sciences, Environment, Health, Misc</a>
+<ul>
+<li><a href="#org52a9e66">3.2.1. Space</a></li>
+<li><a href="#org819983b">3.2.2. Earth Science</a></li>
+<li><a href="#org34c1b86">3.2.3. The Precautionary Principle</a></li>
+<li><a href="#org62d4325">3.2.4. Biodiversity</a></li>
+<li><a href="#orge01f09b">3.2.5. Air Pollution</a></li>
+<li><a href="#org2902c23">3.2.6. Water Pollution, Scarcity</a></li>
+<li><a href="#orga751ebb">3.2.7. Health</a></li>
+<li><a href="#orgd168a18">3.2.8. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgfd0b8a2">3.3. Religions, Spirituality, Misc</a>
+<ul>
+<li><a href="#orgf0e8a61">3.3.1. Hinduism</a></li>
+<li><a href="#org2294857">3.3.2. Buddhism</a></li>
+<li><a href="#org41617ce">3.3.3. Islam</a></li>
+<li><a href="#orgbbfef69">3.3.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org3329100">3.4. Humanities, Misc</a>
+<ul>
+<li><a href="#org2d37697">3.4.1. Psychology, Misc</a></li>
+</ul>
+</li>
+<li><a href="#org85daaa0">3.5. SocioPolitical Studies, Law, Misc</a>
+<ul>
+<li><a href="#org511da64">3.5.1. Orgs</a></li>
+<li><a href="#org43f1132">3.5.2. Events</a></li>
+<li><a href="#org1497173">3.5.3. Relationships, Gender, Feminism, Misc</a></li>
+<li><a href="#org605c6ad">3.5.4. Special Groups</a></li>
+<li><a href="#orgf07b526">3.5.5. Politics</a></li>
+<li><a href="#org996ec37">3.5.6. Nation States</a></li>
+<li><a href="#org508b862">3.5.7. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org979dff9">3.6. Business Studies, Misc</a>
+<ul>
+<li><a href="#orgf4af041">3.6.1. Management, Misc</a></li>
+<li><a href="#orgdf3dd2d">3.6.2. Economics, Misc</a></li>
+<li><a href="#org9530a81">3.6.3. Finance, Misc</a></li>
+<li><a href="#org3021a6a">3.6.4. Special Topics</a></li>
+<li><a href="#org8f86f9f">3.6.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org2471e4b">3.7. Security Studies, Misc</a>
+<ul>
+<li><a href="#org9e05dd6">3.7.1. Special Topics</a></li>
+<li><a href="#org0428ac6">3.7.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org8f14127">3.8. Communication, Misc</a></li>
+<li><a href="#orgd477356">3.9. Special Topics</a>
+<ul>
+<li><a href="#orgdcf91e4">3.9.1. <b>DeUrbanize</b></a></li>
+<li><a href="#orged1ecdd">3.9.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgfd9fb39">3.10. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org6e69037">4. Arts</a>
+<ul>
+<li><a href="#orgde4d450">4.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgf5178ce">5. Special Topics</a>
+<ul>
+<li><a href="#orga3f9202">5.1. Immortality</a></li>
+<li><a href="#orgb359e79">5.2. Elder Abuse</a></li>
+</ul>
+</li>
+<li><a href="#orgb98633e">6. Misc</a>
+<ul>
+<li><a href="#org3988a95">6.1. Feminist Political Ecology</a></li>
+<li><a href="#orgb5678c5">6.2. Misc</a></li>
+<li><a href="#orgd07c0a8">6.3. Texts</a></li>
+<li><a href="#orgb5ac591">6.4. Articles, Essays</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org263c75f" class="outline-2">
+<h2 id="org263c75f"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Ageing,” Wikipedia. Apr. 21, 2024. Accessed: Apr. 21, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ageing&amp;oldid=1219964969">https://en.wikipedia.org/w/index.php?title=Ageing&amp;oldid=1219964969</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2827a81" class="outline-2">
+<h2 id="org2827a81"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org0473ab0" class="outline-3">
+<h3 id="org0473ab0"><span class="section-number-3">2.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org2435e50" class="outline-4">
+<h4 id="org2435e50"><span class="section-number-4">2.1.1.</span> Complexity Science</h4>
+<div class="outline-text-4" id="text-2-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgbf4e0e5"></a>Santa Fe Institute<br />
+<div class="outline-text-5" id="text-2-1-1-1">
+<ul class="org-ul">
+<li>“Workshop explores general patterns for lifespan across scales | Santa Fe Institute.” Accessed: Sep. 28, 2023. [Online]. Available: <a href="https://www.santafe.edu/news-center/news/workshop-explores-general-patterns-lifespan-across-scales">https://www.santafe.edu/news-center/news/workshop-explores-general-patterns-lifespan-across-scales</a></li>
+
+<li>“Limits of (Im)mortality in Complex Living Systems | Santa Fe Institute.” Accessed: Sep. 28, 2023. [Online]. Available: <a href="https://www.santafe.edu/info/limits-immortality-complex-living-systems/abou">https://www.santafe.edu/info/limits-immortality-complex-living-systems/abou</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org86d7a62"></a>New England Complex Systems Institute<br />
+<div class="outline-text-5" id="text-2-1-1-2">
+<ul class="org-ul">
+<li><b>Aging Is a Disease. Is There a Cure?</b>, New England Complex Systems Institute. <a href="https://necsi.edu/aging-is-a-disease-is-there-a-cure">https://necsi.edu/aging-is-a-disease-is-there-a-cure</a> (accessed Apr. 12, 2020).</li>
+<li><b>Environmental Complexity: Information For Human-Environment Well-being</b>, New England Complex Systems Institute. [Online]. Available: <a href="https://necsi.edu/environmental-complexity-information-for-humanenvironment-wellbeing">https://necsi.edu/environmental-complexity-information-for-humanenvironment-wellbeing</a>. [Accessed: 01-Aug-2019].</li>
+</ul>
+</div>
+</li>
+<li><a id="orgbede967"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org77d64f6" class="outline-4">
+<h4 id="org77d64f6"><span class="section-number-4">2.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>B. Shenhar, S. Frenkl, T. Levy, and U. Alon, “Maximal human lifespan in light of a mechanistic model of aging,” Dec. 23, 2025, bioRxiv. doi: 10.64898/2025.12.22.695887.</li>
+
+<li>“A pioneering tool for global aging analysis,” IIASA - International Institute for Applied Systems Analysis. Accessed: Mar. 28, 2025. [Online]. Available: <a href="http://iiasa.ac.at/news/mar-2025/pioneering-tool-for-global-aging-analysis">http://iiasa.ac.at/news/mar-2025/pioneering-tool-for-global-aging-analysis</a></li>
+<li>“Training Workshop on Demographic Analysis with Applications to Aging and Health,” IIASA - International Institute for Applied Systems Analysis. Accessed: Mar. 14, 2025. [Online]. Available: <a href="http://iiasa.ac.at/news/mar-2025/training-workshop-on-demographic-analysis-with-applications-to-aging-and-health">http://iiasa.ac.at/news/mar-2025/training-workshop-on-demographic-analysis-with-applications-to-aging-and-health</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Y. Yang et al., “Compression of morbidity by interventions that steepen the survival curve,” Nat Commun, vol. 16, no. 1, p. 3340, Apr. 2025, doi: 10.1038/s41467-025-57807-5.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgff22207" class="outline-3">
+<h3 id="orgff22207"><span class="section-number-3">2.2.</span> Biology</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org7943f4e" class="outline-4">
+<h4 id="org7943f4e"><span class="section-number-4">2.2.1.</span> WHO</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li>“WHO’s work on the UN Decade of Healthy Ageing (2021-2030).” Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.who.int/initiatives/decade-of-healthy-ageing">https://www.who.int/initiatives/decade-of-healthy-ageing</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge044efa" class="outline-4">
+<h4 id="orge044efa"><span class="section-number-4">2.2.2.</span> Brain</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ul class="org-ul">
+<li>J. Nowogrodzki, “What accelerates brain ageing? This AI ‘brain clock’ points to answers,” Nature, vol. 633, no. 8028, pp. 20–20, Aug. 2024, doi: 10.1038/d41586-024-02770-2.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4f2654a" class="outline-4">
+<h4 id="org4f2654a"><span class="section-number-4">2.2.3.</span> Medicine</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<ul class="org-ul">
+<li>H. Vally, “A drug that can extend your life by 25%? Don’t hold your breath,” The Conversation. Accessed: Jul. 25, 2024. [Online]. Available: <a href="http://theconversation.com/a-drug-that-can-extend-your-life-by-25-dont-hold-your-breath-235313">http://theconversation.com/a-drug-that-can-extend-your-life-by-25-dont-hold-your-breath-235313</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5ad6fd8" class="outline-4">
+<h4 id="org5ad6fd8"><span class="section-number-4">2.2.4.</span> Diet</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<ul class="org-ul">
+<li>D. J. DiNicolantonio and D. J. Fung, The Longevity Solution: Rediscovering Centuries-Old Secrets to a Healthy, Long Life. Victory Belt Publishing, 2019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org92dac06" class="outline-4">
+<h4 id="org92dac06"><span class="section-number-4">2.2.5.</span> Immune System</h4>
+<div class="outline-text-4" id="text-2-2-5">
+<ul class="org-ul">
+<li>A. Abbott, “Hacking the immune system could slow ageing — here’s how,” Nature, vol. 629, no. 8011, pp. 276–278, May 2024, doi: 10.1038/d41586-024-01274-3.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3d0e1e9" class="outline-3">
+<h3 id="org3d0e1e9"><span class="section-number-3">2.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org10457fc" class="outline-4">
+<h4 id="org10457fc"><span class="section-number-4">2.3.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<ul class="org-ul">
+<li>A. Heidt, “Coffee linked to slower brain ageing in study of 130,000 people,” Nature, Feb. 2026, doi: 10.1038/d41586-026-00409-y.</li>
+
+<li>M. Lenharo, “Still working at 107: supercentenarian study probes genetics of extreme longevity,” Nature, Jan. 2026, doi: 10.1038/d41586-026-00256-x.</li>
+
+<li>C. T. Murphy, “The cutting-edge medical approaches that could transform ageing,” Nature, vol. 646, no. 8084, pp. 281–283, Oct. 2025, doi: 10.1038/d41586-025-03225-y.</li>
+
+<li>C. McDonald, “Ageing could be stopped in its tracks, says Nobel prizewinner.” Accessed: Oct. 11, 2025. [Online]. Available: <a href="https://www.thetimes.com/uk/scotland/article/ageing-could-be-stopped-in-its-tracks-says-nobel-prizewinner-7dw0507t8">https://www.thetimes.com/uk/scotland/article/ageing-could-be-stopped-in-its-tracks-says-nobel-prizewinner-7dw0507t8</a></li>
+
+<li>Wolfram, Future of Science and Technology Q&amp;A (July 18, 2025), (Jul. 19, 2025). Accessed: Oct. 05, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=nXF8t9muz9U">https://www.youtube.com/watch?v=nXF8t9muz9U</a></li>
+
+<li>G. Conroy, “Creative hobbies could slow brain ageing at the molecular level,” Nature, Oct. 2025, doi: 10.1038/d41586-025-03197-z.</li>
+
+<li>C. Simms, “How ageing changes our genes — huge epigenetic atlas gives clearest picture yet,” Nature, Sep. 2025, doi: 10.1038/d41586-025-02735-z.</li>
+
+<li>“Scientists Say They’ve Found a Way to Reverse Aging in Human Skin Cells,” Popular Mechanics. Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://www.popularmechanics.com/science/health/a65789680/scientists-say-theyve-found-a-way-to-reverse-aging-in-human-skin-cells/">https://www.popularmechanics.com/science/health/a65789680/scientists-say-theyve-found-a-way-to-reverse-aging-in-human-skin-cells/</a></li>
+
+<li>H. Ledford, “How fast are you ageing? Ordinary brain scans reveal the pace,” Nature, Jul. 2025, doi: 10.1038/d41586-025-02086-9.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org08bf3ce" class="outline-4">
+<h4 id="org08bf3ce"><span class="section-number-4">2.3.2.</span> Articles, Essays</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<ul class="org-ul">
+<li>S. Mallapaty, “What is ageing? Even the field’s researchers can’t agree,” Nature, vol. 636, no. 8042, pp. 283–284, Dec. 2024, doi: 10.1038/d41586-024-03936-8.</li>
+<li>“4 Top Ways to Live Longer.” Accessed: Dec. 24, 2024. [Online]. Available: <a href="https://www.hopkinsmedicine.org/health/wellness-and-prevention/4-top-ways-to-live-longer">https://www.hopkinsmedicine.org/health/wellness-and-prevention/4-top-ways-to-live-longer</a></li>
+<li>“How to Live Forever: The Groundbreaking Scientific Research Bringing Us Closer to Immortality,” Popular Mechanics. Accessed: Dec. 18, 2024. [Online]. Available: <a href="https://www.popularmechanics.com/science/a60825360/how-to-live-forever/">https://www.popularmechanics.com/science/a60825360/how-to-live-forever/</a></li>
+<li>“The Biology of Aging,” Secretary-General’s Scientific Advisory Board. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://www.un.org/scientific-advisory-board/en/biology-aging">https://www.un.org/scientific-advisory-board/en/biology-aging</a></li>
+<li>“Aging Brain Initiative seed grants fund five new projects to address neurodegenerative disease | Picower Institute.” Accessed: Jun. 10, 2025. [Online]. Available: <a href="https://picower.mit.edu/news/aging-brain-initiative-seed-grants-fund-five-new-projects-address-neurodegenerative-disease">https://picower.mit.edu/news/aging-brain-initiative-seed-grants-fund-five-new-projects-address-neurodegenerative-disease</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3aeac51" class="outline-4">
+<h4 id="org3aeac51"><span class="section-number-4">2.3.3.</span> Texts</h4>
+<div class="outline-text-4" id="text-2-3-3">
+<ul class="org-ul">
+<li>“Nobel Prize winner Venki Ramakrishnan discusses ageing and death in new book.” Accessed: Apr. 03, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/science-technology/nobel-prize-winner-venki-ramakrishnan-discusses-ageing-and-death-in-new-book-95350">https://www.downtoearth.org.in/news/science-technology/nobel-prize-winner-venki-ramakrishnan-discusses-ageing-and-death-in-new-book-95350</a></li>
+<li>T. M. P. Reader, “The New Science of Optimism and Longevity,” The MIT Press Reader. Accessed: Mar. 16, 2024. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/the-new-science-of-optimism-and-longevity/">https://thereader.mitpress.mit.edu/the-new-science-of-optimism-and-longevity/</a></li>
+<li>E. Topol, Super Agers: An Evidence-Based Approach to Longevity. Simon &amp; Schuster, 2025.</li>
+<li>D. E. Blackburn and D. E. Epel, <i>The Telomere Effect: A Revolutionary Approach to Living Younger, Healthier, Longer.</i> Grand Central Publishing, 2018.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org3f7c1a2" class="outline-2">
+<h2 id="org3f7c1a2"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org13ac64b" class="outline-3">
+<h3 id="org13ac64b"><span class="section-number-3">3.1.</span> Space and Time</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orge7931a6" class="outline-4">
+<h4 id="orge7931a6"><span class="section-number-4">3.1.1.</span> History</h4>
+</div>
+<div id="outline-container-org96cd71a" class="outline-4">
+<h4 id="org96cd71a"><span class="section-number-4">3.1.2.</span> Geography</h4>
+<div class="outline-text-4" id="text-3-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org87f8324"></a>Cities<br />
+<div class="outline-text-5" id="text-3-1-2-1">
+<ul class="org-ul">
+<li>Age-friendly cities benefit everyone, (Apr. 24, 2023). Accessed: Jun. 16, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=sppjdYCM8yg">https://www.youtube.com/watch?v=sppjdYCM8yg</a></li>
+<li>C. Wang, D. Sierra Huertas, J. W. Rowe, R. Finkelstein, L. L. Carstensen, and R. B. Jackson, “Rethinking the urban physical environment for century-long lives: from age-friendly to longevity-ready cities,” Nat Aging, vol. 1, no. 12, pp. 1088–1095, Dec. 2021, doi: 10.1038/s43587-021-00140-5.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org9f170af" class="outline-4">
+<h4 id="org9f170af"><span class="section-number-4">3.1.3.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org9a130cc" class="outline-3">
+<h3 id="org9a130cc"><span class="section-number-3">3.2.</span> Space, Earth, Life Sciences, Environment, Health, Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org52a9e66" class="outline-4">
+<h4 id="org52a9e66"><span class="section-number-4">3.2.1.</span> Space</h4>
+</div>
+<div id="outline-container-org819983b" class="outline-4">
+<h4 id="org819983b"><span class="section-number-4">3.2.2.</span> Earth Science</h4>
+</div>
+<div id="outline-container-org34c1b86" class="outline-4">
+<h4 id="org34c1b86"><span class="section-number-4">3.2.3.</span> The Precautionary Principle</h4>
+<div class="outline-text-4" id="text-3-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="org8a94e9c"></a><b>Climate</b><br /></li>
+<li><a id="org97079cf"></a><b>COVID-19</b><br /></li>
+<li><a id="org2506a5c"></a><b>GMOs</b><br /></li>
+</ol>
+</div>
+<div id="outline-container-org62d4325" class="outline-4">
+<h4 id="org62d4325"><span class="section-number-4">3.2.4.</span> Biodiversity</h4>
+</div>
+<div id="outline-container-orge01f09b" class="outline-4">
+<h4 id="orge01f09b"><span class="section-number-4">3.2.5.</span> Air Pollution</h4>
+</div>
+<div id="outline-container-org2902c23" class="outline-4">
+<h4 id="org2902c23"><span class="section-number-4">3.2.6.</span> Water Pollution, Scarcity</h4>
+</div>
+<div id="outline-container-orga751ebb" class="outline-4">
+<h4 id="orga751ebb"><span class="section-number-4">3.2.7.</span> Health</h4>
+</div>
+<div id="outline-container-orgd168a18" class="outline-4">
+<h4 id="orgd168a18"><span class="section-number-4">3.2.8.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orgfd0b8a2" class="outline-3">
+<h3 id="orgfd0b8a2"><span class="section-number-3">3.3.</span> Religions, Spirituality, Misc</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-orgf0e8a61" class="outline-4">
+<h4 id="orgf0e8a61"><span class="section-number-4">3.3.1.</span> Hinduism</h4>
+<div class="outline-text-4" id="text-3-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="org00273c5"></a>Vrindavan<br /></li>
+<li><a id="org6439d7a"></a>Tantra<br /></li>
+<li><a id="org9b7b0e7"></a>Yoga<br /></li>
+<li><a id="org3b4c1d4"></a>Sri Aurobindo<br /></li>
+<li><a id="orga1a4116"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org2294857" class="outline-4">
+<h4 id="org2294857"><span class="section-number-4">3.3.2.</span> Buddhism</h4>
+<div class="outline-text-4" id="text-3-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="org5480a1a"></a>Zen<br /></li>
+<li><a id="orge00a829"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org41617ce" class="outline-4">
+<h4 id="org41617ce"><span class="section-number-4">3.3.3.</span> Islam</h4>
+<div class="outline-text-4" id="text-3-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="org7a5882d"></a>Sufism<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgbbfef69" class="outline-4">
+<h4 id="orgbbfef69"><span class="section-number-4">3.3.4.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org3329100" class="outline-3">
+<h3 id="org3329100"><span class="section-number-3">3.4.</span> Humanities, Misc</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org2d37697" class="outline-4">
+<h4 id="org2d37697"><span class="section-number-4">3.4.1.</span> Psychology, Misc</h4>
+<div class="outline-text-4" id="text-3-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="orge900981"></a>Cognitive Science, Misc<br /></li>
+<li><a id="orgd1af761"></a>Misc<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org85daaa0" class="outline-3">
+<h3 id="org85daaa0"><span class="section-number-3">3.5.</span> SocioPolitical Studies, Law, Misc</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-org511da64" class="outline-4">
+<h4 id="org511da64"><span class="section-number-4">3.5.1.</span> Orgs</h4>
+<div class="outline-text-4" id="text-3-5-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgeef1fd1"></a>UN<br />
+<div class="outline-text-5" id="text-3-5-1-1">
+<ul class="org-ul">
+<li>U. Nations, “Ageing,” United Nations. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.un.org/en/global-issues/ageing">https://www.un.org/en/global-issues/ageing</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org409f25c"></a>Misc<br />
+<div class="outline-text-5" id="text-3-5-1-2">
+<ul class="org-ul">
+<li><i>“Age UK | The UK’s leading charity helping every older person who needs us,”</i> Age UK. <a href="https://www.ageuk.org.uk/">https://www.ageuk.org.uk/</a> (accessed Aug. 19, 2021).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org43f1132" class="outline-4">
+<h4 id="org43f1132"><span class="section-number-4">3.5.2.</span> Events</h4>
+<div class="outline-text-4" id="text-3-5-2">
+<ul class="org-ul">
+<li>U. Nations, “International Day of Older Persons,” United Nations. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.un.org/en/observances/older-persons-day">https://www.un.org/en/observances/older-persons-day</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1497173" class="outline-4">
+<h4 id="org1497173"><span class="section-number-4">3.5.3.</span> Relationships, Gender, Feminism, Misc</h4>
+<div class="outline-text-4" id="text-3-5-3">
+</div>
+<ol class="org-ol">
+<li><a id="org0942f4f"></a>Feminism<br /></li>
+<li><a id="org594422a"></a>Sexuality, Love<br />
+<div class="outline-text-5" id="text-3-5-3-2">
+<ul class="org-ul">
+<li>“Lovemaking for longevity: a recipe from Tokyo’s imperial archives | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/lovemaking-for-longevity-a-recipe-from-tokyos-imperial-archives">https://aeon.co/essays/lovemaking-for-longevity-a-recipe-from-tokyos-imperial-archives</a> (accessed Feb. 17, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org0f56f41"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org605c6ad" class="outline-4">
+<h4 id="org605c6ad"><span class="section-number-4">3.5.4.</span> Special Groups</h4>
+<div class="outline-text-4" id="text-3-5-4">
+</div>
+<ol class="org-ol">
+<li><a id="org99391ac"></a>Race<br /></li>
+<li><a id="org053fb17"></a>Indigenous People<br /></li>
+<li><a id="orgbdd1192"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgf07b526" class="outline-4">
+<h4 id="orgf07b526"><span class="section-number-4">3.5.5.</span> Politics</h4>
+<div class="outline-text-4" id="text-3-5-5">
+</div>
+<ol class="org-ol">
+<li><a id="orgd445d69"></a>Politics: Left<br />
+<ol class="org-ol">
+<li><a id="org29ef6f0"></a>Politics: Radical Left<br /></li>
+</ol>
+</li>
+<li><a id="orgc5f1baa"></a>Politics: Socialism<br /></li>
+<li><a id="org373c548"></a>Politics: Right<br />
+<ol class="org-ol">
+<li><a id="orge6c440d"></a>Politics: Radical Right<br /></li>
+</ol>
+</li>
+<li><a id="org05eefe1"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="orga674dd0"></a><b>Decentralization</b><br /></li>
+<li><a id="org8247b85"></a><b>Deglobalization, Localism</b><br /></li>
+</ol>
+</li>
+<li><a id="org7456445"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org996ec37" class="outline-4">
+<h4 id="org996ec37"><span class="section-number-4">3.5.6.</span> Nation States</h4>
+<div class="outline-text-4" id="text-3-5-6">
+</div>
+<ol class="org-ol">
+<li><a id="org63f0505"></a>Global South<br />
+<ol class="org-ol">
+<li><a id="orgcfd97a4"></a>India<br />
+<ul class="org-ul">
+<li><a id="org946bbe5"></a>General<br /></li>
+<li><a id="orgf8dafc1"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="orgd003f3a"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="org182bee4"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org129f725"></a>Orgs<br />
+<div class="outline-text-8" id="text-org129f725">
+<ul class="org-ul">
+<li>“Longevity India.” Accessed: Apr. 19, 2024. [Online]. Available: <a href="https://longevity.iisc.ac.in/">https://longevity.iisc.ac.in/</a>
+<ul class="org-ul">
+<li>“Indian Institute of Science.” Accessed: Apr. 19, 2024. [Online]. Available: <a href="https://iisc.ac.in/events/iisc-launches-longevity-india-initiative-to-pioneer-ageing-research-in-india/">https://iisc.ac.in/events/iisc-launches-longevity-india-initiative-to-pioneer-ageing-research-in-india/</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org8769097"></a>Misc<br />
+<div class="outline-text-8" id="text-org8769097">
+<ul class="org-ul">
+<li>D. Padmanaban, “Does India Have the Infrastructure to Support Its Elderly?,” Frontline. Accessed: Jul. 19, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/the-nation/public-health/india-ageing-population-public-healthcare-elderly-care/article69824458.ece">https://frontline.thehindu.com/the-nation/public-health/india-ageing-population-public-healthcare-elderly-care/article69824458.ece</a></li>
+
+<li>S. P. IndiaSpend.com, “Why India’s increasing elderly population faces a dire future,” Scroll.in. Accessed: Jan. 21, 2025. [Online]. Available: <a href="https://scroll.in/article/1077895/why-indias-increasing-elderly-population-faces-a-dire-future">https://scroll.in/article/1077895/why-indias-increasing-elderly-population-faces-a-dire-future</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org45001bb"></a>Core<br />
+<ul class="org-ul">
+<li><a id="org85541dc"></a>Texts<br />
+<div class="outline-text-8" id="text-org85541dc">
+<ul class="org-ul">
+<li>M. K. Shankardass, Ageing Issues and Responses in India. RAWAT PUBLICATIONS / SPRINGER, 2022.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org3177868"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org4e9db1e"></a>Down To Earth<br />
+<div class="outline-text-8" id="text-org4e9db1e">
+<ul class="org-ul">
+<li>“India will be greyer by 2050, women will live longer than men: India Ageing Report 2023.” Accessed: Sep. 28, 2023. [Online]. Available: <a href="https://www.downtoearth.org.in/news/health/india-will-be-greyer-by-2050-women-will-live-longer-than-men-india-ageing-report-2023-91998">https://www.downtoearth.org.in/news/health/india-will-be-greyer-by-2050-women-will-live-longer-than-men-india-ageing-report-2023-91998</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgff0da61"></a>Economic and Political Weekly<br />
+<div class="outline-text-8" id="text-orgff0da61">
+<ul class="org-ul">
+<li>“Demystifying Ageing in India | Economic and Political Weekly.” Accessed: Nov. 21, 2024. [Online]. Available: <a href="https://www.epw.in/journal/2024/46/book-reviews/demystifying-ageing-india.html">https://www.epw.in/journal/2024/46/book-reviews/demystifying-ageing-india.html</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc23debf"></a>People's Archive of Rural India<br />
+<div class="outline-text-8" id="text-orgc23debf">
+<ul class="org-ul">
+<li>State of Elderly in India 2014. 2015. Accessed: Sep. 07, 2024. [Online]. Available: <a href="https://ruralindiaonline.org/en/library/resource/state-of-elderly-in-india-2014/">https://ruralindiaonline.org/en/library/resource/state-of-elderly-in-india-2014/</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgfa3d210"></a>Misc<br />
+<div class="outline-text-7" id="text-orgfa3d210">
+<ul class="org-ul">
+<li>D. A. Kumar, Narratives of a Geriatrician: Stories of Elder Care and Caregiving, First Edition. White Falcon Publishing, 2025.</li>
+
+<li>N. Iqbal, “What India Needs To Do Urgently To Support Its Ageing Population.” Accessed: Mar. 02, 2024. [Online]. Available: <a href="https://www.indiaspend.com/governance/what-india-needs-to-do-urgently-to-support-its-ageing-population-897338">https://www.indiaspend.com/governance/what-india-needs-to-do-urgently-to-support-its-ageing-population-897338</a></li>
+
+<li>A. Ramanathan, “Bulking up India’s healthy ageing strategy,” natindia, Jul. 2025, doi: 10.1038/d44151-025-00134-x.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="org2b5b068"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org508b862" class="outline-4">
+<h4 id="org508b862"><span class="section-number-4">3.5.7.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org979dff9" class="outline-3">
+<h3 id="org979dff9"><span class="section-number-3">3.6.</span> Business Studies, Misc</h3>
+<div class="outline-text-3" id="text-3-6">
+</div>
+<div id="outline-container-orgf4af041" class="outline-4">
+<h4 id="orgf4af041"><span class="section-number-4">3.6.1.</span> Management, Misc</h4>
+<div class="outline-text-4" id="text-3-6-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgde43e2b"></a><b>Cooperatives</b><br /></li>
+</ol>
+</div>
+<div id="outline-container-orgdf3dd2d" class="outline-4">
+<h4 id="orgdf3dd2d"><span class="section-number-4">3.6.2.</span> Economics, Misc</h4>
+<div class="outline-text-4" id="text-3-6-2">
+</div>
+<ol class="org-ol">
+<li><a id="orga8e7feb"></a><b>Ecological Economics</b><br /></li>
+<li><a id="org2e4dc1c"></a><b>DeGrowth</b><br /></li>
+<li><a id="org2550ef6"></a><b>Complexity Economics</b>, Misc<br /></li>
+<li><a id="orgc466c96"></a><b>Ergodicity Economics</b><br /></li>
+<li><a id="orgab2c2b5"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org962dd22"></a>Top 1%<br /></li>
+<li><a id="org6d5c7cd"></a>Top 10%<br /></li>
+<li><a id="orgcf738dc"></a>Silver Economy<br /></li>
+</ol>
+</li>
+<li><a id="org27bd4d8"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org9530a81" class="outline-4">
+<h4 id="org9530a81"><span class="section-number-4">3.6.3.</span> Finance, Misc</h4>
+<div class="outline-text-4" id="text-3-6-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgff2d205"></a><b>CryptoCurrencies</b><br /></li>
+<li><a id="org0e7c983"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org3021a6a" class="outline-4">
+<h4 id="org3021a6a"><span class="section-number-4">3.6.4.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-3-6-4">
+</div>
+<ol class="org-ol">
+<li><a id="org2b838a5"></a><b>Definancialize</b><br /></li>
+<li><a id="org98db9c8"></a><b>Decommoditize</b><br /></li>
+<li><a id="org61971de"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org8f86f9f" class="outline-4">
+<h4 id="org8f86f9f"><span class="section-number-4">3.6.5.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org2471e4b" class="outline-3">
+<h3 id="org2471e4b"><span class="section-number-3">3.7.</span> Security Studies, Misc</h3>
+<div class="outline-text-3" id="text-3-7">
+</div>
+<div id="outline-container-org9e05dd6" class="outline-4">
+<h4 id="org9e05dd6"><span class="section-number-4">3.7.1.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-3-7-1">
+</div>
+<ol class="org-ol">
+<li><a id="org858d7e0"></a><b>Demilitarization</b><br /></li>
+<li><a id="orgd54a842"></a><b>Bioregionalism</b><br /></li>
+</ol>
+</div>
+<div id="outline-container-org0428ac6" class="outline-4">
+<h4 id="org0428ac6"><span class="section-number-4">3.7.2.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org8f14127" class="outline-3">
+<h3 id="org8f14127"><span class="section-number-3">3.8.</span> Communication, Misc</h3>
+</div>
+<div id="outline-container-orgd477356" class="outline-3">
+<h3 id="orgd477356"><span class="section-number-3">3.9.</span> Special Topics</h3>
+<div class="outline-text-3" id="text-3-9">
+</div>
+<div id="outline-container-orgdcf91e4" class="outline-4">
+<h4 id="orgdcf91e4"><span class="section-number-4">3.9.1.</span> <b>DeUrbanize</b></h4>
+</div>
+<div id="outline-container-orged1ecdd" class="outline-4">
+<h4 id="orged1ecdd"><span class="section-number-4">3.9.2.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orgfd9fb39" class="outline-3">
+<h3 id="orgfd9fb39"><span class="section-number-3">3.10.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-10">
+<ul class="org-ul">
+<li>D. Sridhar, How Not to Die (Too Soon): The Lies We’ve Been Sold and the Policies That Can Save Us. Penguin, 2025.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6e69037" class="outline-2">
+<h2 id="org6e69037"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgde4d450" class="outline-3">
+<h3 id="orgde4d450"><span class="section-number-3">4.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgf5178ce" class="outline-2">
+<h2 id="orgf5178ce"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orga3f9202" class="outline-3">
+<h3 id="orga3f9202"><span class="section-number-3">5.1.</span> Immortality</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>“How to Live Forever: The Science That May Help Us Achieve Immortality.” Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://www.popularmechanics.com/science/a60825360/how-to-live-forever/">https://www.popularmechanics.com/science/a60825360/how-to-live-forever/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb359e79" class="outline-3">
+<h3 id="orgb359e79"><span class="section-number-3">5.2.</span> Elder Abuse</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>U. Nations, “World Elder Abuse Awareness Day,” United Nations. Accessed: Jun. 16, 2024. [Online]. Available: <a href="https://www.un.org/en/observances/elder-abuse-awareness-day/">https://www.un.org/en/observances/elder-abuse-awareness-day/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb98633e" class="outline-2">
+<h2 id="orgb98633e"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org3988a95" class="outline-3">
+<h3 id="org3988a95"><span class="section-number-3">6.1.</span> Feminist Political Ecology</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>C. Dupuis and N. Nakamura, “Ageing and Feminist Political Ecology,” in Contours of Feminist Political Ecology, W. Harcourt, A. Agostino, R. Elmhirst, M. Gómez, and P. Kotsila, Eds., Cham: Springer International Publishing, 2023, pp. 105–127. doi: 10.1007/978-3-031-20928-4<sub>5</sub>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb5678c5" class="outline-3">
+<h3 id="orgb5678c5"><span class="section-number-3">6.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>L. Clarke et al., Ageing in Everyday Life: Materialities and Embodiments. Bristol, UK: Policy Press, 2019.</li>
+<li>“Ageing.” Accessed: Apr. 09, 2026. [Online]. Available: <a href="https://www.who.int/health-topics/ageing">https://www.who.int/health-topics/ageing</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Naddaf, “How do autistic people age — and what does it mean for their health?,” Nature, vol. 650, no. 8102, pp. 538–540, Feb. 2026, doi: 10.1038/d41586-026-00471-6.</li>
+
+<li>M. P. Soares and E. Jentho, “Ageing rewires the body’s tolerance to infection,” Nature, Jan. 2026, doi: 10.1038/d41586-025-04091-4.</li>
+
+<li>C. McDonald, “Ageing could be stopped in its tracks, says Nobel prizewinner.” Accessed: Oct. 11, 2025. [Online]. Available: <a href="https://www.thetimes.com/uk/scotland/article/ageing-could-be-stopped-in-its-tracks-says-nobel-prizewinner-7dw0507t8">https://www.thetimes.com/uk/scotland/article/ageing-could-be-stopped-in-its-tracks-says-nobel-prizewinner-7dw0507t8</a></li>
+
+<li>“Zen and the art of midlife maintenance.” Accessed: Oct. 21, 2025. [Online]. Available: <a href="https://www.wbur.org/cognoscenti/2025/10/01/midlife-and-philosophy-kieran-setiya-jonathan-d-fitzgerald">https://www.wbur.org/cognoscenti/2025/10/01/midlife-and-philosophy-kieran-setiya-jonathan-d-fitzgerald</a></li>
+
+<li>M. Lenharo, “She lived to 117: what her genes and lifestyle tell us about longevity,” Nature, Sep. 2025, doi: 10.1038/d41586-025-03112-6.</li>
+
+<li>“‘Longevity is going to change almost all aspects of our lives.’” Accessed: Aug. 30, 2025. [Online]. Available: <a href="https://news.stanford.edu/stories/2025/08/research-matters-laura-carstensen">https://news.stanford.edu/stories/2025/08/research-matters-laura-carstensen</a></li>
+
+<li>“It Sure Looks Like Humans Have Found a Way to Reverse Aging,” Popular Mechanics. Accessed: Aug. 23, 2025. [Online]. Available: <a href="https://www.popularmechanics.com/science/health/a65583845/study-finds-reverse-aging-in-humans/">https://www.popularmechanics.com/science/health/a65583845/study-finds-reverse-aging-in-humans/</a></li>
+
+<li>Paco, “Here’s the Most Effective, Proven Way to Shape Your Microbiome for Slower Ageing,” Organic Consumers. Accessed: Aug. 09, 2025. [Online]. Available: <a href="https://organicconsumers.org/heres-the-most-effective-proven-way-to-shape-your-microbiome-for-slower-ageing/">https://organicconsumers.org/heres-the-most-effective-proven-way-to-shape-your-microbiome-for-slower-ageing/</a></li>
+
+<li>M. Naddaf, “Ageing is linked to inflammation — but only in the industrialized world,” Nature, Jun. 2025, doi: 10.1038/d41586-025-02085-w.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd07c0a8" class="outline-3">
+<h3 id="orgd07c0a8"><span class="section-number-3">6.3.</span> Texts</h3>
+<div class="outline-text-3" id="text-6-3">
+<ul class="org-ul">
+<li>A. Karpf and T. S. of Life, <i>How to Age</i>. Pan Macmillan, 2014.</li>
+<li>H. García and F. Miralles, <b>IKIGAI: The Japanese secret to a long and happy life.</b> Random House, 2017.</li>
+<li>D. A. Sinclair and M. D. LaPlante, <i>Lifespan: Why We Age—and Why We Don’t Have To.</i> Simon and Schuster, 2019.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb5ac591" class="outline-3">
+<h3 id="orgb5ac591"><span class="section-number-3">6.4.</span> Articles, Essays</h3>
+<div class="outline-text-3" id="text-6-4">
+<ul class="org-ul">
+<li>M. Redmond, “How midlife became a crisis,” The Conversation. Accessed: Jan. 10, 2025. [Online]. Available: <a href="http://theconversation.com/how-midlife-became-a-crisis-245439">http://theconversation.com/how-midlife-became-a-crisis-245439</a></li>
+<li>“Rather than fearing getting old, here’s how to embrace it | Psyche Ideas,” Psyche. Accessed: Jan. 01, 2025. [Online]. Available: <a href="https://psyche.co/ideas/rather-than-fearing-getting-old-heres-how-to-embrace-it">https://psyche.co/ideas/rather-than-fearing-getting-old-heres-how-to-embrace-it</a></li>
+<li>“Simone de Beauvoir on facing old age and avoiding bad faith | Aeon Essays,” Aeon. <a href="https://aeon.co/essays/simone-de-beauvoir-on-facing-old-age-and-avoiding-bad-faith">https://aeon.co/essays/simone-de-beauvoir-on-facing-old-age-and-avoiding-bad-faith</a> (accessed Jun. 15, 2022).</li>
+<li>“Rather than fearing getting old, here’s how to embrace it | Psyche Ideas,” Psyche. Accessed: Aug. 22, 2024. [Online]. Available: <a href="https://psyche.co/ideas/rather-than-fearing-getting-old-heres-how-to-embrace-it">https://psyche.co/ideas/rather-than-fearing-getting-old-heres-how-to-embrace-it</a></li>
+<li>M. Rees, “‘Outlive’ Review: Heaven Can Wait,” Wall Street Journal, Mar. 29, 2023. Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://www.wsj.com/articles/outlive-review-heaven-can-wait-6a50eb2">https://www.wsj.com/articles/outlive-review-heaven-can-wait-6a50eb2</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:56</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

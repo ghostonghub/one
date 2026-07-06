@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Earth Science</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Earth Science</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org28ee1c1">1. General</a></li>
+<li><a href="#org52d38f0">2. STEMM</a>
+<ul>
+<li><a href="#org70737fd">2.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#org1ebb9c6">2.1.1. International Institute for Applied Systems Analysis</a></li>
+<li><a href="#org5d56d40">2.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org4291078">2.2. Biological Sciences, Misc</a></li>
+<li><a href="#org0bb4a94">2.3. Basic Sciences, Misc</a>
+<ul>
+<li><a href="#org8a671e9">2.3.1. Physics</a></li>
+</ul>
+</li>
+<li><a href="#orgbc82384">2.4. Mathematical, Computational Sciences, Misc</a>
+<ul>
+<li><a href="#org9a59594">2.4.1. Mathematics</a></li>
+<li><a href="#orga42f4fe">2.4.2. Computer Science And Engineering</a></li>
+</ul>
+</li>
+<li><a href="#org386cd09">2.5. Advanced Sciences, Misc</a></li>
+<li><a href="#org3a9f030">2.6. Technology, Misc</a></li>
+<li><a href="#org1d5947a">2.7. Special Topics</a></li>
+<li><a href="#org1a2b3e7">2.8. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org4f198f7">3. Worldly Matters</a>
+<ul>
+<li><a href="#org786bc24">3.1. Events</a>
+<ul>
+<li><a href="#org41524db">3.1.1. Earth Day</a></li>
+</ul>
+</li>
+<li><a href="#orgb651f64">3.2. Orgs</a></li>
+<li><a href="#org57fe540">3.3. Contests, Awards</a>
+<ul>
+<li><a href="#org77aeb33">3.3.1. Olympiads</a></li>
+</ul>
+</li>
+<li><a href="#org19785a1">3.4. Nation States</a>
+<ul>
+<li><a href="#org6fcdeeb">3.4.1. India</a></li>
+</ul>
+</li>
+<li><a href="#orgde14847">3.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org4d3c2bf">4. Core</a>
+<ul>
+<li><a href="#org5be41a5">4.1. Introductory Texts</a></li>
+</ul>
+</li>
+<li><a href="#orge685f4b">5. Arts</a>
+<ul>
+<li><a href="#org17c14ef">5.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org15d4142">6. Special Topics</a>
+<ul>
+<li><a href="#orgd079574">6.1. BioRegionalism</a></li>
+<li><a href="#org9acd41a">6.2. EarthQuake</a>
+<ul>
+<li><a href="#org2b4c897">6.2.1. General</a></li>
+<li><a href="#org1c3e13e">6.2.2. STEMM</a></li>
+<li><a href="#orga10c72a">6.2.3. Worldly Matters</a></li>
+<li><a href="#orge9a5b0e">6.2.4. Arts</a></li>
+<li><a href="#orga6a5644">6.2.5. Special Topics</a></li>
+<li><a href="#org14b732a">6.2.6. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orga99e877">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org28ee1c1" class="outline-2">
+<h2 id="org28ee1c1"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Earth science,” Wikipedia. Nov. 11, 2022. Accessed: Nov. 17, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Earth_science&amp;oldid=1121213744">https://en.wikipedia.org/w/index.php?title=Earth_science&amp;oldid=1121213744</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. Lenton, Earth System Science: A Very Short Introduction, 1st edition. Oxford ; New York, NY: Oxford University Press, 2016.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>DK, The Science of the Earth: The Secrets of Our Planet Revealed. London: DK, 2022.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org52d38f0" class="outline-2">
+<h2 id="org52d38f0"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org70737fd" class="outline-3">
+<h3 id="org70737fd"><span class="section-number-3">2.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org1ebb9c6" class="outline-4">
+<h4 id="org1ebb9c6"><span class="section-number-4">2.1.1.</span> International Institute for Applied Systems Analysis</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>“Urgent action needed to ensure a safe and just planet for all,” IIASA - International Institute for Applied Systems Analysis. Accessed: Sep. 13, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news/sep-2024/urgent-action-needed-to-ensure-safe-and-just-planet-for-all">https://iiasa.ac.at/news/sep-2024/urgent-action-needed-to-ensure-safe-and-just-planet-for-all</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5d56d40" class="outline-4">
+<h4 id="org5d56d40"><span class="section-number-4">2.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ul class="org-ul">
+<li>W. J. Ripple et al., “The risk of a hothouse Earth trajectory,” One Earth, p. 101565, Feb. 2026, doi: 10.1016/j.oneear.2025.101565.</li>
+
+<li>“Course correction needed quickly to avoid pathway to ‘hothouse Earth’ scenario,” IIASA - International Institute for Applied Systems Analysis. Accessed: Feb. 12, 2026. [Online]. Available: <a href="http://iiasa.ac.at/news/feb-2026/course-correction-needed-quickly-to-avoid-pathway-to-hothouse-earth-scenario">http://iiasa.ac.at/news/feb-2026/course-correction-needed-quickly-to-avoid-pathway-to-hothouse-earth-scenario</a></li>
+
+<li>“IIASA at AGU25: Engagement with Global Earth System Science,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jan. 17, 2026. [Online]. Available: <a href="http://iiasa.ac.at/blog/jan-2026/iiasa-at-agu25-engagement-with-global-earth-system-science">http://iiasa.ac.at/blog/jan-2026/iiasa-at-agu25-engagement-with-global-earth-system-science</a></li>
+
+<li>J. Rockström et al., “Living beyond limits: Consequences of missing the decisive decade for preserving our planet’s life-supporting systems,” One Earth, p. 101527, Nov. 2025, doi: 10.1016/j.oneear.2025.101527.</li>
+
+<li>J. Rockström et al., “Safe and just Earth system boundaries,” Nature, vol. 619, no. 7968, pp. 102–111, Jul. 2023, doi: 10.1038/s41586-023-06083-8.</li>
+
+<li>A. Ramírez-Rojas, L. Di G Sigalotti, and E. L. Flores-Márquez, “Natural time analysis of the corrected Mexican seismic catalog using complexity measures,” J. Phys. Complex., vol. 6, no. 3, p. 035009, Aug. 2025, doi: 10.1088/2632-072X/adfb3e.</li>
+
+<li>“Design School for Regenerating Earth,” Design School for Regenerating Earth. Accessed: Mar. 31, 2024. [Online]. Available: <a href="https://design-school-for-regenerating-earth.mn.co/">https://design-school-for-regenerating-earth.mn.co/</a>
+<ul class="org-ul">
+<li>Book Trailer for “The Design Pathway for Regenerating Earth” by Joe Brewer, (Aug. 20, 2023). Accessed: Apr. 23, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=Ugj_4MnOQk8">https://www.youtube.com/watch?v=Ugj_4MnOQk8</a></li>
+<li>“On-Ground Projects,” Earth Regenerators. Accessed: Apr. 23, 2024. [Online]. Available: <a href="https://earthregenerators.org/on-ground-projects/">https://earthregenerators.org/on-ground-projects/</a></li>
+<li>“Design School for Regenerating Earth,” Design School for Regenerating Earth. Accessed: Apr. 23, 2024. [Online]. Available: <a href="https://design-school-for-regenerating-earth.mn.co/">https://design-school-for-regenerating-earth.mn.co/</a></li>
+<li>“Earth Regenerators,” Earth Regenerators. Accessed: Apr. 23, 2024. [Online]. Available: <a href="https://earthregenerators.org/">https://earthregenerators.org/</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org4291078" class="outline-3">
+<h3 id="org4291078"><span class="section-number-3">2.2.</span> Biological Sciences, Misc</h3>
+</div>
+<div id="outline-container-org0bb4a94" class="outline-3">
+<h3 id="org0bb4a94"><span class="section-number-3">2.3.</span> Basic Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org8a671e9" class="outline-4">
+<h4 id="org8a671e9"><span class="section-number-4">2.3.1.</span> Physics</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<ul class="org-ul">
+<li>“ICTP Sections: Earth System Physics - YouTube.” Accessed: May 30, 2024. [Online]. Available: <a href="https://www.youtube.com/watch?v=8kk3UgJNtP8&amp;list=WL&amp;index=10">https://www.youtube.com/watch?v=8kk3UgJNtP8&amp;list=WL&amp;index=10</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbc82384" class="outline-3">
+<h3 id="orgbc82384"><span class="section-number-3">2.4.</span> Mathematical, Computational Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-org9a59594" class="outline-4">
+<h4 id="org9a59594"><span class="section-number-4">2.4.1.</span> Mathematics</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<ul class="org-ul">
+<li>“MPE24 Panel Explores Mathematical Careers in Earth Science and Sustainability | SIAM,” Society for Industrial and Applied Mathematics. Accessed: Oct. 03, 2024. [Online]. Available: <a href="https://www.siam.org/publications/siam-news/articles/mpe24-panel-explores-mathematical-careers-in-earth-science-and-sustainability/">https://www.siam.org/publications/siam-news/articles/mpe24-panel-explores-mathematical-careers-in-earth-science-and-sustainability/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga42f4fe" class="outline-4">
+<h4 id="orga42f4fe"><span class="section-number-4">2.4.2.</span> Computer Science And Engineering</h4>
+<div class="outline-text-4" id="text-2-4-2">
+</div>
+<ol class="org-ol">
+<li><a id="org2fffb7d"></a>Misc<br />
+<div class="outline-text-5" id="text-2-4-2-1">
+<ul class="org-ul">
+<li>T. R. K. Thompson Stephen C. Diggs, Franklin Nutter, Kevin Reed, Terence, “The Looming Data Loss That Threatens Public Safety and Prosperity,” Eos. Accessed: Feb. 04, 2026. [Online]. Available: <a href="https://eos.org/features/the-looming-data-loss-that-threatens-public-safety-and-prosperity">https://eos.org/features/the-looming-data-loss-that-threatens-public-safety-and-prosperity</a></li>
+
+<li>T. M. P. Reader, “Benjamin Bratton on Planetary Computation’s Next Phase,” The MIT Press Reader. Accessed: Feb. 06, 2026. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/computation-in-motion-from-the-personal-to-the-planetary/">https://thereader.mitpress.mit.edu/computation-in-motion-from-the-personal-to-the-planetary/</a></li>
+
+<li>“Diagnosing and Comparing Sources of Error in Emulators of Earth System Models | MIT CS3.” Accessed: Jan. 27, 2026. [Online]. Available: <a href="https://cs3.mit.edu/publication/118647">https://cs3.mit.edu/publication/118647</a></li>
+
+<li>“New updates and more access to Google Earth AI,” Google. Accessed: Oct. 30, 2025. [Online]. Available: <a href="https://blog.google/technology/research/new-updates-and-more-access-to-google-earth-ai/">https://blog.google/technology/research/new-updates-and-more-access-to-google-earth-ai/</a></li>
+
+<li>“Earth Genome - Data, Science and People for the Planet.” Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://www.earthgenome.org/">https://www.earthgenome.org/</a></li>
+
+<li>“Open-Earth-Monitor project – A cyberinfrastructure to accelerate uptake of environmental information.” Accessed: May 06, 2024. [Online]. Available: <a href="https://earthmonitor.org/">https://earthmonitor.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Next-generation Algorithms for Next-generation Seismology | SIAM,” Society for Industrial and Applied Mathematics. Accessed: Apr. 02, 2025. [Online]. Available: <a href="https://www.siam.org/publications/siam-news/articles/next-generation-algorithms-for-next-generation-seismology/">https://www.siam.org/publications/siam-news/articles/next-generation-algorithms-for-next-generation-seismology/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org834e580"></a>AI<br />
+<div class="outline-text-5" id="text-2-4-2-2">
+<ul class="org-ul">
+<li>“New updates and more access to Google Earth AI,” Google. Accessed: Oct. 30, 2025. [Online]. Available: <a href="https://blog.google/technology/research/new-updates-and-more-access-to-google-earth-ai/">https://blog.google/technology/research/new-updates-and-more-access-to-google-earth-ai/</a></li>
+
+<li>“AI at IIASA for earth monitoring in the era of transition,” IIASA - International Institute for Applied Systems Analysis. Accessed: Oct. 20, 2024. [Online]. Available: <a href="https://iiasa.ac.at/blog/oct-2024/ai-at-iiasa-for-earth-monitoring-in-era-of-transition">https://iiasa.ac.at/blog/oct-2024/ai-at-iiasa-for-earth-monitoring-in-era-of-transition</a></li>
+
+<li>J. McKenzie, “Earth scientists to environmentalists: AI isn’t all bad,” Bulletin of the Atomic Scientists. Accessed: Mar. 10, 2025. [Online]. Available: <a href="https://thebulletin.org/2025/03/earth-scientists-to-environmentalists-ai-isnt-all-bad/">https://thebulletin.org/2025/03/earth-scientists-to-environmentalists-ai-isnt-all-bad/</a></li>
+
+<li>“Machine Learning: Earth - IOPscience.” Accessed: Jul. 24, 2025. [Online]. Available: <a href="https://iopscience.iop.org/journal/3049-4753">https://iopscience.iop.org/journal/3049-4753</a></li>
+<li>“Digital Twins of the Earth System via Hybrid Physics-AI Models | SIAM,” Society for Industrial and Applied Mathematics. Accessed: Oct. 24, 2025. [Online]. Available: <a href="https://www.siam.org/publications/siam-news/articles/digital-twins-of-the-earth-system-via-hybrid-physics-ai-models/">https://www.siam.org/publications/siam-news/articles/digital-twins-of-the-earth-system-via-hybrid-physics-ai-models/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb16fbee"></a>Data Science<br />
+<div class="outline-text-5" id="text-2-4-2-3">
+<ul class="org-ul">
+<li>“Home.” Accessed: Oct. 18, 2024. [Online]. Available: <a href="https://www.geo-wiki.org/">https://www.geo-wiki.org/</a></li>
+<li>W. S. Siegfried Tasha Snow, Joanna D. Millstein, James Colliander, Matthew R., “Democratizing Science in the Cloud,” Eos. Accessed: Sep. 07, 2024. [Online]. Available: <a href="http://eos.org/opinions/democratizing-science-in-the-cloud">http://eos.org/opinions/democratizing-science-in-the-cloud</a></li>
+<li>D. Ryder, “The UK Space Agency is funding The Big Earth Data Project,” MEI. Accessed: Jun. 21, 2024. [Online]. Available: <a href="https://mei.org.uk/the-uk-space-agency-is-funding-the-big-earth-data-project/">https://mei.org.uk/the-uk-space-agency-is-funding-the-big-earth-data-project/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org386cd09" class="outline-3">
+<h3 id="org386cd09"><span class="section-number-3">2.5.</span> Advanced Sciences, Misc</h3>
+</div>
+<div id="outline-container-org3a9f030" class="outline-3">
+<h3 id="org3a9f030"><span class="section-number-3">2.6.</span> Technology, Misc</h3>
+</div>
+<div id="outline-container-org1d5947a" class="outline-3">
+<h3 id="org1d5947a"><span class="section-number-3">2.7.</span> Special Topics</h3>
+</div>
+<div id="outline-container-org1a2b3e7" class="outline-3">
+<h3 id="org1a2b3e7"><span class="section-number-3">2.8.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-8">
+<ul class="org-ul">
+<li>N. Author, “Earth, air, fire, water: the growing links between climate change and geophysical hazards,” Physics World. Accessed: Feb. 10, 2026. [Online]. Available: <a href="https://physicsworld.com/a/earth-air-fire-water-the-growing-links-between-climate-change-and-geophysical-hazards/">https://physicsworld.com/a/earth-air-fire-water-the-growing-links-between-climate-change-and-geophysical-hazards/</a></li>
+
+<li>P. Shankar, “ISRO-NASA radar to offer a closer look at Earth’s changing landscapes,” Mongabay-India. Accessed: Nov. 06, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/11/isro-nasa-radar-to-offer-a-closer-look-at-earths-changing-landscapes/">https://india.mongabay.com/2025/11/isro-nasa-radar-to-offer-a-closer-look-at-earths-changing-landscapes/</a></li>
+
+<li>S. Malkan, “Big Food ‘transparency’ campaign seeks to block tough new food safety laws,” U.S. Right to Know. Accessed: Nov. 13, 2025. [Online]. Available: <a href="https://usrtk.org/ultra-processed-foods/big-food-campaign-to-block-state-food-safety-laws/">https://usrtk.org/ultra-processed-foods/big-food-campaign-to-block-state-food-safety-laws/</a></li>
+
+<li>T. Lemp, “Connecting Gaia,” Arts at MIT. Accessed: Nov. 13, 2025. [Online]. Available: <a href="https://arts.mit.edu/connecting-gaia/">https://arts.mit.edu/connecting-gaia/</a></li>
+
+<li>“Home.” Accessed: Nov. 03, 2025. [Online]. Available: <a href="https://livingplanet.panda.org/en-US/">https://livingplanet.panda.org/en-US/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Home | Future Earth.” Accessed: Oct. 31, 2025. [Online]. Available: <a href="https://futureearth.org/">https://futureearth.org/</a></li>
+<li>“Home,” The Earth League. Accessed: Oct. 31, 2025. [Online]. Available: <a href="https://the-earth-league.org/">https://the-earth-league.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Homepage,” Planetary Health Check. Accessed: Sep. 25, 2025. [Online]. Available: <a href="https://www.planetaryhealthcheck.org/">https://www.planetaryhealthcheck.org/</a></li>
+
+<li>J. L. Bishop and M. Parente, “Mystery Martian minerals hint at the planet’s complex geochemical past,” Nature, vol. 645, no. 8080, pp. 317–318, Sep. 2025, doi: 10.1038/d41586-025-02597-5.</li>
+
+<li>“Princeton Engineering - Tropical volcanic eruptions push rainfall across the equator,” Princeton Engineering. Accessed: Aug. 30, 2025. [Online]. Available: <a href="https://engineering.princeton.edu/news/2025/08/26/tropical-volcanic-eruptions-push-rainfall-across-equator">https://engineering.princeton.edu/news/2025/08/26/tropical-volcanic-eruptions-push-rainfall-across-equator</a></li>
+
+<li>“AMS :: Notices of the American Mathematical Society.” Accessed: Aug. 29, 2025. [Online]. Available: <a href="https://www.ams.org/journals/notices/202508/noti3209/noti3209.html?adat=September%202025&amp;trk=3209&amp;pdfissue=202508&amp;pdffile=rnoti-p818.pdf&amp;cat=none&amp;type=.html">https://www.ams.org/journals/notices/202508/noti3209/noti3209.html?adat=September%202025&amp;trk=3209&amp;pdfissue=202508&amp;pdffile=rnoti-p818.pdf&amp;cat=none&amp;type=.html</a></li>
+<li>M. Boutin and G. Kemper, “New Developments in Global Positioning”.</li>
+
+<li>S. Lellouch, “Quantum alternative to GPS navigation will be tested on US military spaceplane,” The Conversation. Accessed: Aug. 26, 2025. [Online]. Available: <a href="http://theconversation.com/quantum-alternative-to-gps-navigation-will-be-tested-on-us-military-spaceplane-262967">http://theconversation.com/quantum-alternative-to-gps-navigation-will-be-tested-on-us-military-spaceplane-262967</a></li>
+
+<li>S. Ghosh, “NASA and ISRO launch first joint mission to map Earth’s shifts in striking detail,” Nature India, Jul. 2025, doi: 10.1038/d44151-025-00138-7.</li>
+
+<li>K. Giles, “IOP Publishing and BIPM transition Metrologia to fully open access,” IOP Publishing. Accessed: Aug. 01, 2025. [Online]. Available: <a href="https://ioppublishing.org/news/metrologia-to-fully-open-access/">https://ioppublishing.org/news/metrologia-to-fully-open-access/</a></li>
+
+<li>“Avoiding a ‘Ghastly Future’: Hard Truths on the State of the Planet,” Yale E360. Accessed: May 29, 2024. [Online]. Available: <a href="https://e360.yale.edu/features/avoiding-a-ghastly-future-hard-truths-on-the-state-of-the-planet">https://e360.yale.edu/features/avoiding-a-ghastly-future-hard-truths-on-the-state-of-the-planet</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org4f198f7" class="outline-2">
+<h2 id="org4f198f7"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org786bc24" class="outline-3">
+<h3 id="org786bc24"><span class="section-number-3">3.1.</span> Events</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org41524db" class="outline-4">
+<h4 id="org41524db"><span class="section-number-4">3.1.1.</span> Earth Day</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org9bf3a3d"></a>Mongabay<br />
+<div class="outline-text-5" id="text-3-1-1-1">
+<ul class="org-ul">
+<li>B. Bascomb, “Earth Day check-in: Planetary boundaries in peril,” Mongabay Environmental News. Accessed: Apr. 22, 2025. [Online]. Available: <a href="https://news.mongabay.com/short-article/2025/04/earth-day-check-in-planetary-boundaries-in-peril/">https://news.mongabay.com/short-article/2025/04/earth-day-check-in-planetary-boundaries-in-peril/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Dasgupta, “Earth Day: The wonder of iconic satellite images,” Mongabay Environmental News. Accessed: Apr. 23, 2025. [Online]. Available: <a href="https://news.mongabay.com/short-article/2025/04/earth-day-the-wonder-of-iconic-satellite-images/">https://news.mongabay.com/short-article/2025/04/earth-day-the-wonder-of-iconic-satellite-images/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb2a7c63"></a>Navdanya International<br />
+<div class="outline-text-5" id="text-3-1-1-2">
+<ul class="org-ul">
+<li>“Mother Earth is Not for Sale!,” Navdanya International, Apr. 20, 2022. <a href="https://navdanyainternational.org/mother-earth-is-not-for-sale/">https://navdanyainternational.org/mother-earth-is-not-for-sale/</a> (accessed Apr. 22, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf857d3e"></a>PETA<br />
+<div class="outline-text-5" id="text-3-1-1-3">
+<ul class="org-ul">
+<li>E. Goyal, “Group of ‘Dinosaurs’ Urge Kochi Residents to Eat Modern, Eat Vegan, Ahead of Earth Day - Blog,” PETA India. Accessed: Apr. 23, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/group-of-dinosaurs-to-urge-kochi-residents-to-eat-modern-eat-vegan-ahead-of-earth-day/">https://www.petaindia.com/blog/group-of-dinosaurs-to-urge-kochi-residents-to-eat-modern-eat-vegan-ahead-of-earth-day/</a></li>
+<li>S. Dasgupta, “Earth Day: The wonder of iconic satellite images,” Mongabay Environmental News. Accessed: Apr. 23, 2025. [Online]. Available: <a href="https://news.mongabay.com/short-article/2025/04/earth-day-the-wonder-of-iconic-satellite-images/">https://news.mongabay.com/short-article/2025/04/earth-day-the-wonder-of-iconic-satellite-images/</a></li>
+<li>“Earth Day 2025: Stick a Fork in Climate Change – Go Vegan - Living,” PETA India. Accessed: Apr. 22, 2025. [Online]. Available: <a href="https://www.petaindia.com/features/go-vegan-earth-day/">https://www.petaindia.com/features/go-vegan-earth-day/</a></li>
+<li>E. Goyal, “Group of ‘Dinosaurs’ Urge Kochi Residents to Eat Modern, Eat Vegan, Ahead of Earth Day - Blog,” PETA India. Accessed: Apr. 18, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/group-of-dinosaurs-to-urge-kochi-residents-to-eat-modern-eat-vegan-ahead-of-earth-day/">https://www.petaindia.com/blog/group-of-dinosaurs-to-urge-kochi-residents-to-eat-modern-eat-vegan-ahead-of-earth-day/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3be964b"></a>Misc<br />
+<div class="outline-text-5" id="text-3-1-1-4">
+<ul class="org-ul">
+<li>gabriela, “Announcing the 2025 Frontiers Planet Prize national champions,” International Science Council. Accessed: Apr. 23, 2025. [Online]. Available: <a href="https://council.science/news/announcing-the-2025-frontiers-planet-prize-national-champions/">https://council.science/news/announcing-the-2025-frontiers-planet-prize-national-champions/</a></li>
+
+<li>T. Editors, “On Earth Day,” JSTOR Daily. Accessed: Apr. 23, 2025. [Online]. Available: <a href="https://daily.jstor.org/on-earth-day/">https://daily.jstor.org/on-earth-day/</a></li>
+
+<li>“Earth Day Is a Day to Celebrate the Environmental Progress We’ve Made in Recent Years,” The Equation. Accessed: Apr. 23, 2024. [Online]. Available: <a href="https://blog.ucsusa.org/chitra-kumar/earth-day-is-a-day-to-celebrate-the-environmental-progress-weve-made-in-recent-years/">https://blog.ucsusa.org/chitra-kumar/earth-day-is-a-day-to-celebrate-the-environmental-progress-weve-made-in-recent-years/</a></li>
+
+<li>“Oxford researchers comment on the plastic waste crisis for Earth Day 2024 | University of Oxford.” Accessed: Apr. 23, 2024. [Online]. Available: <a href="https://www.ox.ac.uk/news/2024-04-22-oxford-researchers-comment-plastic-waste-crisis-earth-day-2024">https://www.ox.ac.uk/news/2024-04-22-oxford-researchers-comment-plastic-waste-crisis-earth-day-2024</a></li>
+
+<li>“10 Things You Can Do for the Earth on Earth Day Weekend - GMO / Toxin Free USA.” Accessed: Apr. 23, 2024. [Online]. Available: <a href="https://toxinfreeusa.org/10-things-you-can-do-for-the-earth-on-earth-day-weekend/">https://toxinfreeusa.org/10-things-you-can-do-for-the-earth-on-earth-day-weekend/</a></li>
+
+<li>J. McKenzie, “The heat is on: Earth Day 2024 puts spotlight on plastics,” Bulletin of the Atomic Scientists. Accessed: Apr. 23, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/04/the-heat-is-on-earth-day-2024-puts-spotlight-on-plastics/">https://thebulletin.org/2024/04/the-heat-is-on-earth-day-2024-puts-spotlight-on-plastics/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgb651f64" class="outline-3">
+<h3 id="orgb651f64"><span class="section-number-3">3.2.</span> Orgs</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“The Earth League,” The Earth League. Accessed: Nov. 25, 2025. [Online]. Available: <a href="https://the-earth-league.org/">https://the-earth-league.org/</a></li>
+
+<li>“Home | MIT Earth Resources Laboratory.” Accessed: Aug. 05, 2024. [Online]. Available: <a href="https://erlweb.mit.edu/">https://erlweb.mit.edu/</a></li>
+<li>“MIT EAPS,” MIT EAPS. Accessed: Oct. 19, 2024. [Online]. Available: <a href="https://eaps.mit.edu/">https://eaps.mit.edu/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Global Earth Repair Foundation,” Global Earth Repair Foundation. Accessed: Oct. 18, 2024. [Online]. Available: <a href="https://globalearthrepairfoundation.org/">https://globalearthrepairfoundation.org/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org57fe540" class="outline-3">
+<h3 id="org57fe540"><span class="section-number-3">3.3.</span> Contests, Awards</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org77aeb33" class="outline-4">
+<h4 id="org77aeb33"><span class="section-number-4">3.3.1.</span> Olympiads</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<ul class="org-ul">
+<li>“International Earth Science Olympiad,” Wikipedia. Aug. 08, 2024. Accessed: Aug. 25, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=International_Earth_Science_Olympiad&amp;oldid=1239289831">https://en.wikipedia.org/w/index.php?title=International_Earth_Science_Olympiad&amp;oldid=1239289831</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org19785a1" class="outline-3">
+<h3 id="org19785a1"><span class="section-number-3">3.4.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org6fcdeeb" class="outline-4">
+<h4 id="org6fcdeeb"><span class="section-number-4">3.4.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="org302485b"></a>General<br /></li>
+<li><a id="orgcb02357"></a>World<br />
+<ol class="org-ol">
+<li><a id="org1b79dc6"></a>Orgs<br />
+<div class="outline-text-6" id="text-3-4-1-2-1">
+<ul class="org-ul">
+<li><i>“Centre for Earth Sciences.”</i> <a href="http://ceas.iisc.ac.in/">http://ceas.iisc.ac.in/</a> (accessed Oct. 10, 2021).</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orge715770"></a>Misc<br />
+<div class="outline-text-5" id="text-3-4-1-3">
+<ul class="org-ul">
+<li>P. Shankar, “What are earth observation satellites? How do they support environmental research? [Explainer],” Mongabay-India. Accessed: Mar. 24, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/03/what-are-earth-observation-satellites-how-do-they-support-environmental-research-explainer/">https://india.mongabay.com/2025/03/what-are-earth-observation-satellites-how-do-they-support-environmental-research-explainer/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgde14847" class="outline-3">
+<h3 id="orgde14847"><span class="section-number-3">3.5.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org4d3c2bf" class="outline-2">
+<h2 id="org4d3c2bf"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org5be41a5" class="outline-3">
+<h3 id="org5be41a5"><span class="section-number-3">4.1.</span> Introductory Texts</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>Kump/Kasting/Crane, Earth System, 3rd Edn, Third Edition. Pearson Education India, 2016.</li>
+<li>F. K. Lutgens, E. J. Tarbuck, And D. G. Tasa, Foundations Of Earth Science, 8th Edn, Eighth Edition. Pearson Education, 2016.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge685f4b" class="outline-2">
+<h2 id="orge685f4b"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org17c14ef" class="outline-3">
+<h3 id="org17c14ef"><span class="section-number-3">5.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>“‘End to Begin’: A play about the future of the planet,” IIASA - International Institute for Applied Systems Analysis. Accessed: Oct. 20, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news/oct-2024/end-to-begin-play-about-future-of-planet">https://iiasa.ac.at/news/oct-2024/end-to-begin-play-about-future-of-planet</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org15d4142" class="outline-2">
+<h2 id="org15d4142"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgd079574" class="outline-3">
+<h3 id="orgd079574"><span class="section-number-3">6.1.</span> BioRegionalism</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>BioRegionalism: <a href="https://tinyurl.com/2d2as5h8">https://tinyurl.com/2d2as5h8</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9acd41a" class="outline-3">
+<h3 id="org9acd41a"><span class="section-number-3">6.2.</span> EarthQuake</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-org2b4c897" class="outline-4">
+<h4 id="org2b4c897"><span class="section-number-4">6.2.1.</span> General</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<ul class="org-ul">
+<li>“Earthquake,” Wikipedia. Jul. 31, 2022. Accessed: Aug. 01, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Earthquake&amp;oldid=1101607664">https://en.wikipedia.org/w/index.php?title=Earthquake&amp;oldid=1101607664</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1c3e13e" class="outline-4">
+<h4 id="org1c3e13e"><span class="section-number-4">6.2.2.</span> STEMM</h4>
+<div class="outline-text-4" id="text-6-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org1b0cafb"></a>Systems Sciences, Misc<br />
+<ol class="org-ol">
+<li><a id="orgd25456a"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org3972594"></a>Computer Science and Engineering<br />
+<div class="outline-text-5" id="text-6-2-2-2">
+<ul class="org-ul">
+<li>J. Tollefson, “Google tapped billions of mobile phones to detect quakes worldwide — and send alerts,” Nature, Jul. 2025, doi: 10.1038/d41586-025-02278-3.</li>
+<li>I. Dumé, “Android phone network makes an effective early warning system for earthquakes,” Physics World. Accessed: Aug. 15, 2025. [Online]. Available: <a href="https://physicsworld.com/a/android-phone-network-makes-an-effective-early-warning-system-for-earthquakes/">https://physicsworld.com/a/android-phone-network-makes-an-effective-early-warning-system-for-earthquakes/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgbb51b83"></a>Misc<br />
+<div class="outline-text-5" id="text-6-2-2-3">
+<ul class="org-ul">
+<li>“MIT geologists discover where energy goes during an earthquake,” MIT News | Massachusetts Institute of Technology. Accessed: Sep. 20, 2025. [Online]. Available: <a href="https://news.mit.edu/2025/mit-geologists-discover-where-energy-goes-during-earthquake-0916">https://news.mit.edu/2025/mit-geologists-discover-where-energy-goes-during-earthquake-0916</a></li>
+
+<li>“DOE, LBNL Release Earthquake Database to Strengthen Disaster Plans,” Energy.gov. Accessed: Aug. 21, 2025. [Online]. Available: <a href="https://www.energy.gov/ceser/articles/doe-lbnl-release-earthquake-database-strengthen-disaster-plans">https://www.energy.gov/ceser/articles/doe-lbnl-release-earthquake-database-strengthen-disaster-plans</a></li>
+
+<li>S. M. Mousavi, C. Cattania, and G. C. Beroza, “The pursuit of reliable earthquake forecasting,” Physics Today, vol. 78, no. 8, pp. 42–50, Aug. 2025, doi: 10.1063/pt.tdwq.nppx.</li>
+<li>“Study: Heavy snowfall and rain may contribute to some earthquakes,” MIT News | Massachusetts Institute of Technology. Accessed: May 24, 2024. [Online]. Available: <a href="https://news.mit.edu/2024/study-heavy-snowfall-rain-may-contribute-to-earthquakes-0508">https://news.mit.edu/2024/study-heavy-snowfall-rain-may-contribute-to-earthquakes-0508</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orga10c72a" class="outline-4">
+<h4 id="orga10c72a"><span class="section-number-4">6.2.3.</span> Worldly Matters</h4>
+<div class="outline-text-4" id="text-6-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="org9d85898"></a>Nation States<br />
+<ol class="org-ol">
+<li><a id="org3de28ae"></a>India<br />
+<ul class="org-ul">
+<li><a id="orgb88560a"></a>General<br /></li>
+<li><a id="orgc7da9a6"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org91edc9f"></a>Systems Sciences, Misc<br />
+<ul class="org-ul">
+<li><a id="org3106c05"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orge1e159c"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orgd537738"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org8f9db02"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orge793549"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="org1ef50f3"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orgdc9284a"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org805d937"></a>Texts<br />
+<div class="outline-text-8" id="text-org805d937">
+<ul class="org-ul">
+<li>C. P. Rajendran and K. Rajendran, The Rumbling Earth: The Story of Indian Earthquakes. Vintage Books, 2024.
+<ul class="org-ul">
+<li>R. Kulkarni, “[Book review] Unravelling India’s seismic mysteries and our preparedness for the future,” Mongabay-India. Accessed: Sep. 03, 2024. [Online]. Available: <a href="https://india.mongabay.com/2024/09/book-review-unravelling-indias-seismic-mysteries-and-our-preparedness-for-the-future/">https://india.mongabay.com/2024/09/book-review-unravelling-indias-seismic-mysteries-and-our-preparedness-for-the-future/</a></li>
+</ul></li>
+<li>R. Krishnamurthy, “‘India a laboratory for seismologists,’” Down To Earth. Accessed: Jan. 25, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/science-technology/india-a-laboratory-for-seismologists">https://www.downtoearth.org.in/science-technology/india-a-laboratory-for-seismologists</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb1a904f"></a>Ganga<br />
+<div class="outline-text-8" id="text-orgb1a904f">
+<ul class="org-ul">
+<li>D. Welle, “Would another earthquake reroute the Ganga?,” Frontline. Accessed: Jun. 27, 2024. [Online]. Available: <a href="https://frontline.thehindu.com/news/would-another-earthquake-reroute-ganga-river-earthquake-soil-erosion-rerouting-india-bangladesh/article68335796.ece">https://frontline.thehindu.com/news/would-another-earthquake-reroute-ganga-river-earthquake-soil-erosion-rerouting-india-bangladesh/article68335796.ece</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org55c0111"></a>NCR<br />
+<ul class="org-ul">
+<li><a id="orgc5be8e9"></a>Google Gemini<br />
+<div class="outline-text-9" id="text-orgc5be8e9">
+<ul class="org-ul">
+<li>“Delhi NCR earthquake risk mitigation,” Google Docs. Accessed: Feb. 28, 2025. [Online]. Available: <a href="https://docs.google.com/document/d/107OYPJZsA_jYSFDJyyB4G2JehV48Yz6UTdepFHmsQlI/edit?usp=embed_facebook">https://docs.google.com/document/d/107OYPJZsA_jYSFDJyyB4G2JehV48Yz6UTdepFHmsQlI/edit?usp=embed_facebook</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org75466fd"></a>X's AI<br />
+<div class="outline-text-9" id="text-org75466fd">
+<ul class="org-ul">
+<li>“What Is The Likelihood Of An Earthquake In The Delhi NCR Region And What Will Be Its Impact ?,” X (formerly Twitter). Accessed: Dec. 04, 2024. [Online]. Available: <a href="https://x.com/i/grok/share/lzlzmir4q19nrazinaoxfdyxn">https://x.com/i/grok/share/lzlzmir4q19nrazinaoxfdyxn</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgcfa926e"></a>Misc<br />
+<div class="outline-text-9" id="text-orgcfa926e">
+<ul class="org-ul">
+<li>“Why were Delhi earthquake tremors strong despite a low magnitude?,” Hindustan Times. Accessed: Feb. 17, 2025. [Online]. Available: <a href="https://www.hindustantimes.com/india-news/delhi-earthquake-magnitude-4-why-did-delhi-ncr-feel-such-strong-tremors-today-ncs-epicentre-101739758016795.html">https://www.hindustantimes.com/india-news/delhi-earthquake-magnitude-4-why-did-delhi-ncr-feel-such-strong-tremors-today-ncs-epicentre-101739758016795.html</a></li>
+<li>“Delhi NCR earthquake live updates: PM Modi urges calm, asks residents to ‘stay alert,’” Hindustan Times. Accessed: Feb. 17, 2025. [Online]. Available: <a href="https://www.hindustantimes.com/india-news/delhi-ncr-earthquake-live-updates-february-17-strong-tremors-twitter-reactions-videos-latest-101739751443536.html">https://www.hindustantimes.com/india-news/delhi-ncr-earthquake-live-updates-february-17-strong-tremors-twitter-reactions-videos-latest-101739751443536.html</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orgc29a6fc"></a>Misc<br /></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="orgee59327"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-orge9a5b0e" class="outline-4">
+<h4 id="orge9a5b0e"><span class="section-number-4">6.2.4.</span> Arts</h4>
+<div class="outline-text-4" id="text-6-2-4">
+</div>
+<ol class="org-ol">
+<li><a id="org70347ac"></a>Misc<br />
+<div class="outline-text-5" id="text-6-2-4-1">
+<ul class="org-ul">
+<li>H. Murakami, After the Quake. Random House, 2011.</li>
+<li>S. Bolakhe, “Shaking up earthquake safety in Nepal with a folk song,” Nature, vol. 639, no. 8056, pp. 1103–1105, Mar. 2025, doi: 10.1038/d41586-025-00919-1.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orga6a5644" class="outline-4">
+<h4 id="orga6a5644"><span class="section-number-4">6.2.5.</span> Special Topics</h4>
+</div>
+<div id="outline-container-org14b732a" class="outline-4">
+<h4 id="org14b732a"><span class="section-number-4">6.2.6.</span> Misc</h4>
+<div class="outline-text-4" id="text-6-2-6">
+<ul class="org-ul">
+<li>D. T. E. Staff, “Massive earthquake hits Russia, Tsunami warnings across the Pacific region,” Down To Earth. Accessed: Aug. 02, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/natural-disasters/massive-earthquake-hits-russia-tsunami-warnings-across-the-pacific-region">https://www.downtoearth.org.in/natural-disasters/massive-earthquake-hits-russia-tsunami-warnings-across-the-pacific-region</a></li>
+<li>F. N. Desk, “Pacific on Edge After 8.8 Earthquake Hits Russia’s Far East,” Frontline. Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/news/kamchatka-russia-far-east-earthquake-pacific-tsunami-hawaii-japan-alert/article69872928.ece">https://frontline.thehindu.com/news/kamchatka-russia-far-east-earthquake-pacific-tsunami-hawaii-japan-alert/article69872928.ece</a></li>
+<li>“2025 Kamchatka Peninsula earthquake,” Wikipedia. Jul. 31, 2025. Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=2025_Kamchatka_Peninsula_earthquake&amp;oldid=1303471316">https://en.wikipedia.org/w/index.php?title=2025_Kamchatka_Peninsula_earthquake&amp;oldid=1303471316</a></li>
+<li>D. Ninis and J. Townend, “Kamchatka earthquake is among top 10 strongest ever recorded. Here’s what they have in common,” The Conversation. Accessed: Jul. 31, 2025. [Online]. Available: <a href="http://theconversation.com/kamchatka-earthquake-is-among-top-10-strongest-ever-recorded-heres-what-they-have-in-common-262223">http://theconversation.com/kamchatka-earthquake-is-among-top-10-strongest-ever-recorded-heres-what-they-have-in-common-262223</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orga99e877" class="outline-2">
+<h2 id="orga99e877"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>“Scientists find ozone depletion began decades before discovery of ozone hole,” MIT News | Massachusetts Institute of Technology. Accessed: Jun. 30, 2026. [Online]. Available: <a href="https://news.mit.edu/2026/scientists-find-ozone-depletion-began-decades-before-ozone-hole-discovery-0629">https://news.mit.edu/2026/scientists-find-ozone-depletion-began-decades-before-ozone-hole-discovery-0629</a></li>
+
+<li>“Future Earth Releases 10 Year Impact Report | Future Earth.” Accessed: Jun. 25, 2026. [Online]. Available: <a href="https://futureearth.org/future-earth-releases-10-year-impact-report/">https://futureearth.org/future-earth-releases-10-year-impact-report/</a></li>
+
+<li>“Homepage,” Eos. Accessed: Feb. 04, 2026. [Online]. Available: <a href="https://eos.org/">https://eos.org/</a></li>
+
+<li>F. Li and T. Tamarin-Brodsky, “Atmospheric stability sets maximum moist heat and convection in the midlatitudes,” Science Advances, vol. 12, no. 1, p. eaea8453, Jan. 2026, doi: 10.1126/sciadv.aea8453.</li>
+
+<li>“What’s Happening With the Volcanoes?,” The Wire. Accessed: Nov. 28, 2025. [Online]. Available: <a href="https://thewire.in/environment/whats-happening-with-the-volcanoes">https://thewire.in/environment/whats-happening-with-the-volcanoes</a></li>
+
+<li>D. T. E. Staff, “Ash from Ethiopia’s 12,000-Year dormant volcano drifts into India,” Down To Earth. Accessed: Nov. 27, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/air/ash-from-ethiopias-12000-year-dormant-volcano-drifts-into-india">https://www.downtoearth.org.in/air/ash-from-ethiopias-12000-year-dormant-volcano-drifts-into-india</a></li>
+
+<li>“The cycling of phosphorus is the basis for all life on Earth | Aeon Essays.” Accessed: Nov. 21, 2025. [Online]. Available: <a href="https://aeon.co/essays/the-cycling-of-phosphorus-is-the-basis-for-all-life-on-earth">https://aeon.co/essays/the-cycling-of-phosphorus-is-the-basis-for-all-life-on-earth</a></li>
+
+<li>“Homo Ecophagus: A Deep Diagnosis to Save the Earth,” Routledge &amp; CRC Press. Accessed: Nov. 16, 2025. [Online]. Available: <a href="https://www.routledge.com/Homo-Ecophagus-A-Deep-Diagnosis-to-Save-the-Earth/Hern/p/book/9781032322223">https://www.routledge.com/Homo-Ecophagus-A-Deep-Diagnosis-to-Save-the-Earth/Hern/p/book/9781032322223</a></li>
+
+<li>K. Gardner, “Inge Lehmann: the ground-breaking seismologist who faced a rocky road to success,” Physics World. Accessed: Nov. 06, 2025. [Online]. Available: <a href="https://physicsworld.com/inge-lehmann-the-ground-breaking-seismologist-who-faced-a-rocky-road-to-success/">https://physicsworld.com/inge-lehmann-the-ground-breaking-seismologist-who-faced-a-rocky-road-to-success/</a></li>
+
+<li>“Natural Wonders,” Modernist Cuisine. Accessed: Nov. 09, 2025. [Online]. Available: <a href="https://modernistcuisine.com/books/natural-wonders/">https://modernistcuisine.com/books/natural-wonders/</a></li>
+
+<li>L. Mani et al., “Lessons from 40 years of communicating volcanic risk during crises,” Nat. Geosci., vol. 18, no. 11, pp. 1077–1080, Nov. 2025, doi: 10.1038/s41561-025-01832-y.</li>
+<li>L. Elmer, “Lessons from 40 years of communicating volcanic risk during crises - CSER,” CSER - Centre for the Study of Existential Risk. Accessed: Nov. 11, 2025. [Online]. Available: <a href="https://www.cser.ac.uk/work/lessons-from-40-years-of-communicating-volcanic-risk-during-crises/">https://www.cser.ac.uk/work/lessons-from-40-years-of-communicating-volcanic-risk-during-crises/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Robb, “‘Mad About Geology’: Charles Darwin’s Origin Story,” JSTOR Daily. Accessed: Oct. 23, 2025. [Online]. Available: <a href="https://daily.jstor.org/mad-about-geology-charles-darwins-origin-story/">https://daily.jstor.org/mad-about-geology-charles-darwins-origin-story/</a></li>
+
+<li>D. Robb, “Underground Conquest: Cave Exploration and Nationalism,” JSTOR Daily. Accessed: Sep. 16, 2025. [Online]. Available: <a href="https://daily.jstor.org/underground-conquest-cave-exploration-and-nationalism/">https://daily.jstor.org/underground-conquest-cave-exploration-and-nationalism/</a></li>
+
+<li>“Hidden volcanoes: are we ignoring the next big eruption? | Aeon Essays,” Aeon. Accessed: Sep. 16, 2025. [Online]. Available: <a href="https://aeon.co/essays/hidden-volcanoes-are-we-ignoring-the-next-big-eruptino">https://aeon.co/essays/hidden-volcanoes-are-we-ignoring-the-next-big-eruptino</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“A Kichwa activist on ayahuasca’s rise – and what it really means to her people | Aeon Videos,” Aeon. Accessed: Sep. 16, 2025. [Online]. Available: <a href="https://aeon.co/videos/a-kichwa-activist-on-ayahuascas-rise-and-what-it-really-means-to-her-people">https://aeon.co/videos/a-kichwa-activist-on-ayahuascas-rise-and-what-it-really-means-to-her-people</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. M. P. Reader, “Gaia’s Fever: Why an Overheating Earth Could Turn Deadly,” The MIT Press Reader. Accessed: Sep. 09, 2025. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/gaias-fever-why-an-overheating-earth-could-turn-deadly/">https://thereader.mitpress.mit.edu/gaias-fever-why-an-overheating-earth-could-turn-deadly/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Speak to the Earth, and It Will Teach You,” John Templeton Foundation. Accessed: Jul. 16, 2025. [Online]. Available: <a href="https://www.templeton.org/news/speak-to-the-earth-and-it-will-teach-you">https://www.templeton.org/news/speak-to-the-earth-and-it-will-teach-you</a></li>
+
+<li>“day 33, BRAZIL - Speak up - VOICE OF COMMONS.” Accessed: Jul. 01, 2025. [Online]. Available: <a href="https://voice-of-commons.org/en/speakup/day-33">https://voice-of-commons.org/en/speakup/day-33</a></li>
+
+<li>“VOICE OF COMMONS.” Accessed: Jul. 01, 2025. [Online]. Available: <a href="https://voice-of-commons.org/en/">https://voice-of-commons.org/en/</a></li>
+
+<li>“Model reveals hidden magma pressures beneath Earth’s surface,” Nature India, Jun. 2025, doi: 10.1038/d44151-025-00102-5.</li>
+
+<li>“Professor Thomas Hale - Tracking net zero commitments.” Accessed: Apr. 23, 2025. [Online]. Available: <a href="https://oxford.shorthandstories.com/professor-thomas-hale-tracking-net-zero-commitments/">https://oxford.shorthandstories.com/professor-thomas-hale-tracking-net-zero-commitments/</a></li>
+
+<li>“Foundation Model of the Earth Improves Atmospheric Forecasting | SIAM,” Society for Industrial and Applied Mathematics. Accessed: Mar. 07, 2025. [Online]. Available: <a href="https://www.siam.org/publications/siam-news/articles/foundation-model-of-the-earth-improves-atmospheric-forecasting/">https://www.siam.org/publications/siam-news/articles/foundation-model-of-the-earth-improves-atmospheric-forecasting/</a></li>
+
+<li>G. E. Repair, “How much wild nature do we need? An essay by Anastassia Makarieva,” Global Earth Repair Foundation. Accessed: Jan. 08, 2025. [Online]. Available: <a href="https://globalearthrepairfoundation.org/how-much-nature/">https://globalearthrepairfoundation.org/how-much-nature/</a></li>
+
+<li>“Boom, crackle, pop: Sounds of Earth’s crust,” MIT News | Massachusetts Institute of Technology. Accessed: Apr. 13, 2024. [Online]. Available: <a href="https://news.mit.edu/2023/boom-crackle-pop-earth-crust-sounds-1009">https://news.mit.edu/2023/boom-crackle-pop-earth-crust-sounds-1009</a></li>
+
+<li>“Whole Earth Field Guide,” MIT Press. Accessed: May 01, 2024. [Online]. Available: <a href="https://mitpress.mit.edu/9780262529280/whole-earth-field-guide/">https://mitpress.mit.edu/9780262529280/whole-earth-field-guide/</a></li>
+
+<li>“Mission: Protecting the Planet.” Accessed: Aug. 22, 2024. [Online]. Available: <a href="https://alum.mit.edu/slice/mission-protecting-planet">https://alum.mit.edu/slice/mission-protecting-planet</a></li>
+
+<li>D. Grinspoon, “Why Most Planets Will Either Be Lush or Dead,” Nautilus. Accessed: Aug. 08, 2024. [Online]. Available: <a href="https://nautil.us/why-most-planets-will-either-be-lush-or-dead-236366/">https://nautil.us/why-most-planets-will-either-be-lush-or-dead-236366/</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:59</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

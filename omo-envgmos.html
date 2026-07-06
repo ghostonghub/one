@@ -1,0 +1,1392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GMOs</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">GMOs</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org06a4eaf">1. <b>GMOs: Top Resources</b></a></li>
+<li><a href="#org501c610">2. General</a></li>
+<li><a href="#org49182cf">3. STEMM</a>
+<ul>
+<li><a href="#org6f21d91">3.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#orgcbe5cc2">3.1.1. Complexity Science</a></li>
+<li><a href="#orgb16eb9f">3.1.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgecddbf9">3.2. Biological Sciences, Misc</a></li>
+<li><a href="#orgde1b023">3.3. Basic Sciences, Misc</a></li>
+<li><a href="#orgecd0f01">3.4. Mathematical, Computational Sciences, Misc</a></li>
+<li><a href="#orgfc4419f">3.5. Advanced Sciences, Misc</a></li>
+<li><a href="#org860959d">3.6. Technology, Misc</a></li>
+<li><a href="#orgcfdad5b">3.7. Special Topics</a></li>
+<li><a href="#orga16c71e">3.8. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgcd52f67">4. Worldly Matters</a>
+<ul>
+<li><a href="#orgf1a33f4">4.1. Space and Time</a></li>
+<li><a href="#org6ad7cfa">4.2. Space, Earth, Life Sciences, Environment, Health, Misc</a></li>
+<li><a href="#orga27b76b">4.3. Humanities, Misc</a>
+<ul>
+<li><a href="#org12d0ccc">4.3.1. People</a></li>
+</ul>
+</li>
+<li><a href="#orga5928ef">4.4. Religions, Spirituality, Misc</a>
+<ul>
+<li><a href="#org2f6fd4d">4.4.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org1765d8a">4.5. SocioPolitical Studies, Law, Misc</a>
+<ul>
+<li><a href="#orgd1bde10">4.5.1. Orgs</a></li>
+<li><a href="#orgf292416">4.5.2. Nation States</a></li>
+<li><a href="#org54d1148">4.5.3. Law</a></li>
+<li><a href="#org255c65b">4.5.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org726fff9">4.6. Business Studies, Misc</a>
+<ul>
+<li><a href="#org80bd7a4">4.6.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org8ab07d0">4.7. Security Studies, Misc</a></li>
+<li><a href="#org6d92c3f">4.8. Communication, Misc</a></li>
+<li><a href="#org1f7b166">4.9. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgba08ff0">5. Arts</a>
+<ul>
+<li><a href="#orgbb2e1af">5.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org55fefbb">6. Special Topics</a>
+<ul>
+<li><a href="#orge3966b7">6.1. GM Mustard</a>
+<ul>
+<li><a href="#orgb99e53c">6.1.1. General</a></li>
+<li><a href="#org027c608">6.1.2. STEMM</a></li>
+<li><a href="#org74c6391">6.1.3. Worldly Matters</a></li>
+<li><a href="#org358be16">6.1.4. Arts</a></li>
+<li><a href="#org99496fb">6.1.5. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org8d155b9">6.2. GMO Myths and Facts</a></li>
+</ul>
+</li>
+<li><a href="#org8828e4b">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org06a4eaf" class="outline-2">
+<h2 id="org06a4eaf"><span class="section-number-2">1.</span> <b>GMOs: Top Resources</b></h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>N. N. Taleb, R. Read, R. Douady, J. Norman, and Y. Bar-Yam, <b>“The Precautionary Principle (with Application to the Genetic Modification of Organisms),”</b> arXiv:1410.5787 [physics, q-fin], Oct. 2014, Accessed: Jul. 20, 2019. [Online]. Available: <a href="http://arxiv.org/abs/1410.5787">http://arxiv.org/abs/1410.5787</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. R. Mphil, J. F. PhD, and M. A. PhD, <i>GMO Myths &amp; Truths: A Citizen’s Guide to the Evidence on the Safety and Efficacy of Genetically Modified Crops and Foods, 4th Edition.</i> Earth Open Source, 2018.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org501c610" class="outline-2">
+<h2 id="org501c610"><span class="section-number-2">2.</span> General</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>“Genetically modified organism,” Wikipedia. Feb. 14, 2024. Accessed: Feb. 17, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Genetically_modified_organism&amp;oldid=1207342240">https://en.wikipedia.org/w/index.php?title=Genetically_modified_organism&amp;oldid=1207342240</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org49182cf" class="outline-2">
+<h2 id="org49182cf"><span class="section-number-2">3.</span> STEMM</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org6f21d91" class="outline-3">
+<h3 id="org6f21d91"><span class="section-number-3">3.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgcbe5cc2" class="outline-4">
+<h4 id="orgcbe5cc2"><span class="section-number-4">3.1.1.</span> Complexity Science</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>N. N. Taleb, R. Read, R. Douady, J. Norman, and Y. Bar-Yam, <b>“The Precautionary Principle (with Application to the Genetic Modification of Organisms),”</b> arXiv:1410.5787 [physics, q-fin], Oct. 2014, Accessed: Jul. 20, 2019. [Online]. Available: <a href="http://arxiv.org/abs/1410.5787">http://arxiv.org/abs/1410.5787</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb16eb9f" class="outline-4">
+<h4 id="orgb16eb9f"><span class="section-number-4">3.1.2.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orgecddbf9" class="outline-3">
+<h3 id="orgecddbf9"><span class="section-number-3">3.2.</span> Biological Sciences, Misc</h3>
+</div>
+<div id="outline-container-orgde1b023" class="outline-3">
+<h3 id="orgde1b023"><span class="section-number-3">3.3.</span> Basic Sciences, Misc</h3>
+</div>
+<div id="outline-container-orgecd0f01" class="outline-3">
+<h3 id="orgecd0f01"><span class="section-number-3">3.4.</span> Mathematical, Computational Sciences, Misc</h3>
+</div>
+<div id="outline-container-orgfc4419f" class="outline-3">
+<h3 id="orgfc4419f"><span class="section-number-3">3.5.</span> Advanced Sciences, Misc</h3>
+</div>
+<div id="outline-container-org860959d" class="outline-3">
+<h3 id="org860959d"><span class="section-number-3">3.6.</span> Technology, Misc</h3>
+</div>
+<div id="outline-container-orgcfdad5b" class="outline-3">
+<h3 id="orgcfdad5b"><span class="section-number-3">3.7.</span> Special Topics</h3>
+</div>
+<div id="outline-container-orga16c71e" class="outline-3">
+<h3 id="orga16c71e"><span class="section-number-3">3.8.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-8">
+<ul class="org-ul">
+<li>S. Malkan, “Are GMOs safe? A molecular geneticist speaks out,” U.S. Right to Know. Accessed: Sep. 11, 2025. [Online]. Available: <a href="https://usrtk.org/gmo/are-gmos-safe-a-molecular-geneticist-speaks-out/">https://usrtk.org/gmo/are-gmos-safe-a-molecular-geneticist-speaks-out/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>paco, “Glyphosate and GMOs Are Damaging Our Health. It’s Time to Ban Them,” Regeneration International. Accessed: Aug. 02, 2025. [Online]. Available: <a href="https://regenerationinternational.org/2025/07/16/glyphosate-and-gmos-are-damaging-our-health-its-time-to-ban-them/">https://regenerationinternational.org/2025/07/16/glyphosate-and-gmos-are-damaging-our-health-its-time-to-ban-them/</a></li>
+
+<li>A. King, “Gene-edited crops set to arrive in England, but EU remains divided on them,” Chemistry World. Accessed: Jun. 29, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/gene-edited-crops-set-to-arrive-in-england-but-eu-remains-divided-on-them/4021687.article">https://www.chemistryworld.com/news/gene-edited-crops-set-to-arrive-in-england-but-eu-remains-divided-on-them/4021687.article</a></li>
+
+<li>Franziska, “GMO design, just a prompt away,” Save Our Seeds. Accessed: Jun. 05, 2025. [Online]. Available: <a href="https://www.saveourseeds.org/news/gmo-design-just-a-prompt-away/">https://www.saveourseeds.org/news/gmo-design-just-a-prompt-away/</a></li>
+
+<li>A. Flachs, G. D. Stone, S. Hallett, and K. R. Kranthi, “GM Crops and the Jevons Paradox: Induced Innovation, Systemic Effects and Net Pesticide Increases From Pesticide-Decreasing Crops,” Journal of Agrarian Change, vol. n/a, no. n/a, p. e70006, doi: 10.1111/joac.70006.</li>
+
+<li>“New GMOs: sorting spin from facts &amp;#8211; media briefing,” Greenpeace European Unit. Accessed: Apr. 08, 2025. [Online]. Available: <a href="https://www.greenpeace.org/eu-unit/issues/nature-food/47491/new-gmos-sorting-spin-from-facts-media-briefing/">https://www.greenpeace.org/eu-unit/issues/nature-food/47491/new-gmos-sorting-spin-from-facts-media-briefing/</a></li>
+
+<li>Editor2, “There is no ‘magic threshold’ for new GMO safety.” Accessed: Jan. 24, 2025. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20502-there-is-no-magic-threshold-for-new-gmo-safety">https://gmwatch.org/en/106-news/latest-news/20502-there-is-no-magic-threshold-for-new-gmo-safety</a></li>
+<li>Editor2, “Convergence of generative AI and genetic engineering raises new concerns.” Accessed: Jan. 24, 2025. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20503-convergence-of-generative-ai-and-genetic-engineering-raises-new-concerns">https://gmwatch.org/en/106-news/latest-news/20503-convergence-of-generative-ai-and-genetic-engineering-raises-new-concerns</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcd52f67" class="outline-2">
+<h2 id="orgcd52f67"><span class="section-number-2">4.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgf1a33f4" class="outline-3">
+<h3 id="orgf1a33f4"><span class="section-number-3">4.1.</span> Space and Time</h3>
+</div>
+<div id="outline-container-org6ad7cfa" class="outline-3">
+<h3 id="org6ad7cfa"><span class="section-number-3">4.2.</span> Space, Earth, Life Sciences, Environment, Health, Misc</h3>
+</div>
+<div id="outline-container-orga27b76b" class="outline-3">
+<h3 id="orga27b76b"><span class="section-number-3">4.3.</span> Humanities, Misc</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-org12d0ccc" class="outline-4">
+<h4 id="org12d0ccc"><span class="section-number-4">4.3.1.</span> People</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<ul class="org-ul">
+<li>“David W. Orr,” Wikipedia. Dec. 06, 2022. Accessed: Apr. 07, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=David_W._Orr&amp;oldid=1125820638">https://en.wikipedia.org/w/index.php?title=David_W._Orr&amp;oldid=1125820638</a>
+<ul class="org-ul">
+<li>“David Orr,” Oberlin College and Conservatory. Accessed: Apr. 07, 2024. [Online]. Available: <a href="https://www.oberlin.edu/david-orr">https://www.oberlin.edu/david-orr</a></li>
+</ul></li>
+
+<li>K. C. London, “Michael Antoniou,” King’s College London. Accessed: Apr. 07, 2024. [Online]. Available: <a href="https://www.kcl.ac.uk/people/michael-antoniou">https://www.kcl.ac.uk/people/michael-antoniou</a></li>
+
+<li>“Ignacio Chapela,” Wikipedia. Apr. 27, 2022. Accessed: Apr. 07, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Ignacio_Chapela&amp;oldid=1084860492">https://en.wikipedia.org/w/index.php?title=Ignacio_Chapela&amp;oldid=1084860492</a></li>
+
+<li>“Árpád Pusztai,” Wikipedia. Oct. 25, 2022. Accessed: Apr. 07, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=%C3%81rp%C3%A1d_Pusztai&amp;oldid=1118076915">https://en.wikipedia.org/w/index.php?title=%C3%81rp%C3%A1d_Pusztai&amp;oldid=1118076915</a>
+<ul class="org-ul">
+<li>Editor2, “GMWatch publishes the full definitive account of the Pusztai affair.” Accessed: Jan. 19, 2025. [Online]. Available: <a href="https://gmwatch.org/en/main-menu/news-menu-title/archive/109-2022/19987-gmwatch-publishes-the-full-definitive-account-of-the-pusztai-affair">https://gmwatch.org/en/main-menu/news-menu-title/archive/109-2022/19987-gmwatch-publishes-the-full-definitive-account-of-the-pusztai-affair</a></li>
+</ul></li>
+
+<li>“UW SAFS—Young Investigators in Aquatic and Fishery Sciences: Emma Rosi-Marshall.” Accessed: Apr. 07, 2024. [Online]. Available: <a href="http://depts.washington.edu/safs/seminars/fall_06/rosi-marshall.html">http://depts.washington.edu/safs/seminars/fall_06/rosi-marshall.html</a></li>
+
+<li>“Manuela Malatesta-Faculty of Medicine and Surgery-University of Verona.” Accessed: Apr. 07, 2024. [Online]. Available: <a href="https://www.medicina.univr.it/?ent=persona&amp;id=3911">https://www.medicina.univr.it/?ent=persona&amp;id=3911</a></li>
+
+<li>“Gilles-Éric Séralini,” Wikipedia. Jan. 10, 2024. Accessed: Apr. 07, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Gilles-%C3%89ric_S%C3%A9ralini&amp;oldid=1194690329">https://en.wikipedia.org/w/index.php?title=Gilles-%C3%89ric_S%C3%A9ralini&amp;oldid=1194690329</a></li>
+
+<li>“Longtime Salk Professor David Schubert passes at the age of 77,” Salk Institute for Biological Studies. Accessed: Apr. 07, 2024. [Online]. Available: <a href="https://www.salk.edu/news-release/longtime-salk-professor-david-schubert-passes-at-the-age-of-77/">https://www.salk.edu/news-release/longtime-salk-professor-david-schubert-passes-at-the-age-of-77/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga5928ef" class="outline-3">
+<h3 id="orga5928ef"><span class="section-number-3">4.4.</span> Religions, Spirituality, Misc</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-org2f6fd4d" class="outline-4">
+<h4 id="org2f6fd4d"><span class="section-number-4">4.4.1.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org1765d8a" class="outline-3">
+<h3 id="org1765d8a"><span class="section-number-3">4.5.</span> SocioPolitical Studies, Law, Misc</h3>
+<div class="outline-text-3" id="text-4-5">
+</div>
+<div id="outline-container-orgd1bde10" class="outline-4">
+<h4 id="orgd1bde10"><span class="section-number-4">4.5.1.</span> Orgs</h4>
+<div class="outline-text-4" id="text-4-5-1">
+</div>
+<ol class="org-ol">
+<li><a id="orge6bfdc3"></a>IFOAM<br />
+<div class="outline-text-5" id="text-4-5-1-1">
+<ul class="org-ul">
+<li>“New GMOs – Key resources. A living article to keep you updated,” IFOAM Organics Europe. Accessed: Feb. 07, 2024. [Online]. Available: <a href="https://www.organicseurope.bio/news/new-gmos-key-resources/">https://www.organicseurope.bio/news/new-gmos-key-resources/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“European organic movement resolution: No hidden GMOs,” IFOAM Organics Europe. <a href="https://www.organicseurope.bio/news/european-organic-movement-resolution-no-hidden-gmos-system-based-approach-to-innovation/">https://www.organicseurope.bio/news/european-organic-movement-resolution-no-hidden-gmos-system-based-approach-to-innovation/</a> (accessed Jun. 23, 2023).</li>
+<li>“NGT vote a step backward for biosafety,” IFOAM Organics Europe. Accessed: Feb. 09, 2024. [Online]. Available: <a href="https://www.organicseurope.bio/news/ngt-vote-a-step-backward-for-biosafety-that-nonetheless-safeguards-the-possibility-for-traceability-and-national-coexistence-measures/">https://www.organicseurope.bio/news/ngt-vote-a-step-backward-for-biosafety-that-nonetheless-safeguards-the-possibility-for-traceability-and-national-coexistence-measures/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org1ed56bc"></a>NoGMOProject<br />
+<div class="outline-text-5" id="text-4-5-1-2">
+<ul class="org-ul">
+<li><b>“New GMO Alert: Gene-edited Microbes Introduce a New Twist in GMO Agriculture - The Non-GMO Project,”</b> Mar. 16, 2023. <a href="https://www.nongmoproject.org/blog/new-gmo-alert-gene-edited-microbes-introduce-a-new-twist-in-gmo-agriculture/">https://www.nongmoproject.org/blog/new-gmo-alert-gene-edited-microbes-introduce-a-new-twist-in-gmo-agriculture/</a> (accessed Apr. 06, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org5f6b0a9"></a>GMWatch<br />
+<div class="outline-text-5" id="text-4-5-1-3">
+<ul class="org-ul">
+<li>“GMWatch Home.” Accessed: Feb. 17, 2024. [Online]. Available: <a href="https://gmwatch.org/en/">https://gmwatch.org/en/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>GMWatch, <b>“Gene editing myths and reality – a guide through the smokescreen.”</b> <a href="https://gmwatch.org/en/67-uncategorised/19751-gene-editing-myths-and-reality-a-guide-through-the-smokescreen">https://gmwatch.org/en/67-uncategorised/19751-gene-editing-myths-and-reality-a-guide-through-the-smokescreen</a> (accessed Feb. 10, 2022).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Editor2, “Bayer, BASF lobby pushed to scrap safety rules on new GM crops – even if they increase pesticide use.” Accessed: Feb. 05, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/106-news/latest-news/20341-bayer-basf-lobby-pushed-to-scrap-safety-rules-on-new-gm-crops-even-if-they-increase-pesticide-use">https://www.gmwatch.org/en/106-news/latest-news/20341-bayer-basf-lobby-pushed-to-scrap-safety-rules-on-new-gm-crops-even-if-they-increase-pesticide-use</a></li>
+<li>Editor2, “CRISPR causes serious DNA damage with high frequency – but it’s often overlooked,” Aug. 09, 2023. <a href="https://gmwatch.org/en/106-news/latest-news/20275-crispr-gene-editing-causes-serious-unintended-dna-damage-at-high-frequencies">https://gmwatch.org/en/106-news/latest-news/20275-crispr-gene-editing-causes-serious-unintended-dna-damage-at-high-frequencies</a> (accessed Aug. 12, 2023).</li>
+<li>Editor2, “Gene editing is not ‘precision breeding’ – international scientists and policy experts,” Sep. 08, 2022. <a href="https://www.gmwatch.org/en/106-news/latest-news/20092-gene-editing-is-not-precision-breeding-international-scientists-and-policy-experts">https://www.gmwatch.org/en/106-news/latest-news/20092-gene-editing-is-not-precision-breeding-international-scientists-and-policy-experts</a> (accessed Aug. 11, 2023).</li>
+<li>Editor2, “GMO-using fake meat company Impossible Foods’ EU patent revoked,” Feb. 01, 2023. <a href="https://gmwatch.org/en/106-news/latest-news/20169-gmo-using-fake-meat-company-impossible-foods-eu-patent-revoked">https://gmwatch.org/en/106-news/latest-news/20169-gmo-using-fake-meat-company-impossible-foods-eu-patent-revoked</a> (accessed Feb. 05, 2023).</li>
+<li>Editor2, “Scientists genetically engineer mother hens to kill their own male chicks before they hatch,” May 25, 2022. <a href="https://gmwatch.org/en/106-news/latest-news/20034-scientists-genetically-engineer-mother-hens-to-kill-their-own-male-chicks-before-they-hatch">https://gmwatch.org/en/106-news/latest-news/20034-scientists-genetically-engineer-mother-hens-to-kill-their-own-male-chicks-before-they-hatch</a> (accessed Feb. 16, 2023).</li>
+<li>Editor, “Leaked proposal to deregulate new GMOs – Commission plan gives in to GMO seed corporations,” Jun. 16, 2023. <a href="https://gmwatch.org/en/106-news/latest-news/20237-leaked-proposal-to-deregulate-new-gmos-commission-plan-gives-in-to-gmo-seed-corporations">https://gmwatch.org/en/106-news/latest-news/20237-leaked-proposal-to-deregulate-new-gmos-commission-plan-gives-in-to-gmo-seed-corporations</a> (accessed Jun. 18, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orga9a73bb"></a>Navdanya International<br />
+<div class="outline-text-5" id="text-4-5-1-4">
+<ul class="org-ul">
+<li>“New GMOs must not be deregulated,” Navdanya international, Apr. 02, 2022. <a href="https://navdanyainternational.org/cause/new-gmos-must-not-be-deregulated/">https://navdanyainternational.org/cause/new-gmos-must-not-be-deregulated/</a> (accessed Jul. 10, 2023).</li>
+<li>“NOTHING NEW IN NEW GMOS: A new report by Navdanya International exposes the corporate interest behind the gene editing business,” Navdanya international, Aug. 07, 2023. <a href="https://navdanyainternational.org/a-new-report-by-navdanya-international-exposes-the-corporate-interest-behind-the-gene-editing-business/">https://navdanyainternational.org/a-new-report-by-navdanya-international-exposes-the-corporate-interest-behind-the-gene-editing-business/</a> (accessed Aug. 08, 2023).</li>
+<li>“Nothing New in New GMOs – Gateway to Total Corporate Control,” Navdanya international, Aug. 07, 2023. <a href="https://navdanyainternational.org/publications/nothing-new-in-new-gmos/">https://navdanyainternational.org/publications/nothing-new-in-new-gmos/</a> (accessed Aug. 08, 2023).</li>
+<li>“Green light for new gene editing techniques: threats and corporate interests behind new wave of GMOs,” Navdanya international, Jul. 08, 2023. <a href="https://navdanyainternational.org/threats-and-corporate-interests-behind-new-wave-of-gmos/">https://navdanyainternational.org/threats-and-corporate-interests-behind-new-wave-of-gmos/</a> (accessed Aug. 16, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org2a868d2"></a>Regeneration International<br />
+<div class="outline-text-5" id="text-4-5-1-5">
+<ul class="org-ul">
+<li>“The Science-based Evidence to Ban Glyphosate and GMOs - Regeneration International.” <a href="https://regenerationinternational.org/2023/02/19/the-science-based-evidence-to-ban-glyphosate-and-gmos/">https://regenerationinternational.org/2023/02/19/the-science-based-evidence-to-ban-glyphosate-and-gmos/</a> (accessed Mar. 06, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org3f36097"></a>Organic Consumers Association<br />
+<div class="outline-text-5" id="text-4-5-1-6">
+<ul class="org-ul">
+<li>oca<sub>admin</sub>, “Home,” Organic Consumers. Accessed: Feb. 17, 2024. [Online]. Available: <a href="https://organicconsumers.org/">https://organicconsumers.org/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3b3402c"></a>US Right To Know<br />
+<div class="outline-text-5" id="text-4-5-1-7">
+<ul class="org-ul">
+<li>“GMOs Archives,” U.S. Right to Know. Accessed: Feb. 12, 2024. [Online]. Available: <a href="https://usrtk.org/category/gmo/">https://usrtk.org/category/gmo/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org83a0b22"></a>GreenPeace<br />
+<div class="outline-text-5" id="text-4-5-1-8">
+<ul class="org-ul">
+<li>“New GMOs: danger ahead,” Greenpeace European Unit. <a href="https://www.greenpeace.org/eu-unit/issues/nature-food/45559/new-gmos-danger-ahead/">https://www.greenpeace.org/eu-unit/issues/nature-food/45559/new-gmos-danger-ahead/</a> (accessed Aug. 17, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd6b2626"></a>Friends of the Earth<br />
+<div class="outline-text-5" id="text-4-5-1-9">
+<ul class="org-ul">
+<li>“New GMOs: how big business gets control over our food,” Friends of the Earth Europe. <a href="https://friendsoftheearth.eu/publication/new-gmos-how-big-business-gets-control-over-our-food/">https://friendsoftheearth.eu/publication/new-gmos-how-big-business-gets-control-over-our-food/</a> (accessed Aug. 17, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org08b6875"></a>Union Of Concerned Scientists<br />
+<div class="outline-text-5" id="text-4-5-1-10">
+<ul class="org-ul">
+<li>“Everything the 2023 Food and Farm Bill Can—and Should—Do,” The Equation, Aug. 15, 2023. <a href="https://blog.ucsusa.org/melissa-kaplan/everything-the-2023-food-and-farm-bill-can-and-should-do/">https://blog.ucsusa.org/melissa-kaplan/everything-the-2023-food-and-farm-bill-can-and-should-do/</a> (accessed Aug. 18, 2023).</li>
+</ul>
+</div>
+</li>
+<li><a id="org1f4c9b3"></a>Toxin Free USA<br />
+<div class="outline-text-5" id="text-4-5-1-11">
+<ul class="org-ul">
+<li>“GMO / Toxin Free USA.” Accessed: Feb. 18, 2024. [Online]. Available: <a href="https://toxinfreeusa.org/">https://toxinfreeusa.org/</a>
+<ul class="org-ul">
+<li>“The Non-Toxic Sleuth Archives - GMO / Toxin Free USA.” Accessed: Feb. 18, 2024. [Online]. Available: <a href="https://toxinfreeusa.org/news/the-non-toxic-sleuth/">https://toxinfreeusa.org/news/the-non-toxic-sleuth/</a></li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc6c6178"></a>Misc<br />
+<div class="outline-text-5" id="text-4-5-1-12">
+<ul class="org-ul">
+<li>“THE ORGANIC STANDARD NEWS,” The Organic Standard. Accessed: Nov. 13, 2025. [Online]. Available: <a href="https://organicstandard.com/">https://organicstandard.com/</a></li>
+
+<li>“An Eminently Qualified Organic Industry Watchdog,” OrganicEye. Accessed: Jun. 04, 2025. [Online]. Available: <a href="https://organiceye.org/">https://organiceye.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“GM Freeze,” GM Freeze. Accessed: Apr. 07, 2024. [Online]. Available: <a href="https://www.gmfreeze.org/">https://www.gmfreeze.org/</a></li>
+
+<li>“Beyond GM,” Beyond GM. Accessed: Apr. 07, 2024. [Online]. Available: <a href="https://beyond-gm.org">https://beyond-gm.org</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgf292416" class="outline-4">
+<h4 id="orgf292416"><span class="section-number-4">4.5.2.</span> Nation States</h4>
+<div class="outline-text-4" id="text-4-5-2">
+</div>
+<ol class="org-ol">
+<li><a id="org791f3a1"></a>India<br />
+<ol class="org-ol">
+<li><a id="orgd408357"></a>General<br /></li>
+<li><a id="org5d2b02a"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org49d4a4c"></a>Misc<br />
+<div class="outline-text-7" id="text-org49d4a4c">
+<ul class="org-ul">
+<li>“Don’t test maize, learn from Bt cotton fiasco,” The Tribune. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://www.tribuneindia.com/news/premium/dont-test-maize-learn-from-bt-cotton-fiasco/">https://www.tribuneindia.com/news/premium/dont-test-maize-learn-from-bt-cotton-fiasco/</a></li>
+
+<li>R. Sreevathsa, “India must develop a GM crop plan based on science,” natindia, Jun. 2025, doi: 10.1038/d44151-025-00098-y.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org7662600"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org25cff1b"></a>Misc<br />
+<div class="outline-text-7" id="text-org25cff1b">
+<ul class="org-ul">
+<li>S. Patel, “Big Talk, Little Progress: India’s Shift to Organic Hits Roadblocks,” Frontline. Accessed: Nov. 06, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/the-nation/agriculture/organic-farming-promises-implementation-support-policy-rhetoric/article70212201.ece">https://frontline.thehindu.com/the-nation/agriculture/organic-farming-promises-implementation-support-policy-rhetoric/article70212201.ece</a></li>
+
+<li>S. Khetarpal, “Why experts are opposing India’s gene-edited rice varieties,” India Today. Accessed: Oct. 23, 2025. [Online]. Available: <a href="https://www.indiatoday.in/india-today-insight/story/why-experts-are-opposing-indias-gene-edited-rice-varieties-2774142-2025-08-20">https://www.indiatoday.in/india-today-insight/story/why-experts-are-opposing-indias-gene-edited-rice-varieties-2774142-2025-08-20</a></li>
+
+<li>P. Parija, “US trade talks may be cracking India’s opposition to GM crops,” The Economic Times, Oct. 14, 2025. Accessed: Oct. 20, 2025. [Online]. Available: <a href="https://economictimes.indiatimes.com/news/economy/agriculture/us-trade-talks-may-be-cracking-indias-opposition-to-gm-crops/articleshow/124541629.cms?from=mdr">https://economictimes.indiatimes.com/news/economy/agriculture/us-trade-talks-may-be-cracking-indias-opposition-to-gm-crops/articleshow/124541629.cms?from=mdr</a></li>
+
+<li>J. Choubey, “Rajasthan HC halts sale of GM foods until safety regulations are established,” The New Indian Express. Accessed: Oct. 21, 2025. [Online]. Available: <a href="https://www.newindianexpress.com/nation/2025/Oct/19/rajasthan-hc-halts-sale-of-gm-foods-until-safety-regulations-are-established">https://www.newindianexpress.com/nation/2025/Oct/19/rajasthan-hc-halts-sale-of-gm-foods-until-safety-regulations-are-established</a></li>
+
+<li>“After China’s Snub, Is India Going to be the Dumpyard For the US’s Genetically Modified Soybean?,” The Wire. Accessed: Sep. 29, 2025. [Online]. Available: <a href="https://thewire.in/agriculture/after-chinas-snub-is-india-going-to-be-the-dumpyard-for-the-uss-genetically-modified-soybean">https://thewire.in/agriculture/after-chinas-snub-is-india-going-to-be-the-dumpyard-for-the-uss-genetically-modified-soybean</a></li>
+
+<li>A. Aga, “‘Responsible to Science and Responsive to Society’: The Executive, Bureaucracy, and Genetically Modified Food Crops in India,” Annals of the American Association of Geographers, vol. 0, no. 0, pp. 1–17, doi: 10.1080/24694452.2025.2534561.</li>
+
+<li>G. link, Facebook, X, Pinterest, and O. Apps, “‘Act of war on agriculture’: Aruna Rodrigues slams GM crop expansion and regulatory apathy.” Accessed: Jul. 26, 2025. [Online]. Available: <a href="https://www.counterview.net/2025/07/act-of-war-on-agriculture-aruna.html">https://www.counterview.net/2025/07/act-of-war-on-agriculture-aruna.html</a></li>
+
+<li>I. Mishra, “RSS-affiliated farmers’ body calls for cancellation of permission to test GM maize at Punjab Agricultural University,” The Hindu, Jul. 18, 2025. Accessed: Jul. 23, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/national/punjab/rss-affiliated-farmers-body-calls-for-cancellation-of-permission-to-test-gm-maize-at-punjab-agricultural-university/article69828656.ece">https://www.thehindu.com/news/national/punjab/rss-affiliated-farmers-body-calls-for-cancellation-of-permission-to-test-gm-maize-at-punjab-agricultural-university/article69828656.ece</a></li>
+
+<li>“India’s stand on GM crops in negotiations with the US explained,” The Week. Accessed: Jul. 22, 2025. [Online]. Available: <a href="https://www.theweek.in/news/world/2025/07/18/india-stand-on-gm-crops-in-negotiations-with-the-us-explained.html">https://www.theweek.in/news/world/2025/07/18/india-stand-on-gm-crops-in-negotiations-with-the-us-explained.html</a></li>
+<li>Editor2, “Bt cotton in India is a monumental catastrophic failure.” Accessed: Jul. 22, 2025. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20575-bt-cotton-in-india-is-a-monumental-catastrophic-failure">https://gmwatch.org/en/106-news/latest-news/20575-bt-cotton-in-india-is-a-monumental-catastrophic-failure</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“India weighs GM-free ‘self-certification’ for US food imports,” The Economic Times. Accessed: Jul. 04, 2025. [Online]. Available: <a href="https://economictimes.indiatimes.com/news/economy/foreign-trade/india-weighs-gm-free-self-certification-for-us-food-imports/articleshow/122211747.cms">https://economictimes.indiatimes.com/news/economy/foreign-trade/india-weighs-gm-free-self-certification-for-us-food-imports/articleshow/122211747.cms</a></li>
+
+<li>K. V. Kurmanath, “Farmers body pleads to Modi to not allow GM crops, US dairy products into India,” BusinessLine. Accessed: Jul. 02, 2025. [Online]. Available: <a href="https://www.thehindubusinessline.com/economy/agri-business/farmers-body-pleads-to-modi-to-not-allow-gm-crops-us-dairy-products-into-india/article69758329.ece">https://www.thehindubusinessline.com/economy/agri-business/farmers-body-pleads-to-modi-to-not-allow-gm-crops-us-dairy-products-into-india/article69758329.ece</a></li>
+<li>PTI, “Congress leader Jairam Ramesh flags ‘withdrawal’ of NITI Aayog’s working paper on Indo-U.S. trade,” The Hindu, Jul. 01, 2025. Accessed: Jul. 02, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/national/cong-leader-jairam-ramesh-flags-withdrawal-of-niti-aayogs-working-paper-on-indo-us-trade/article69758219.ece">https://www.thehindu.com/news/national/cong-leader-jairam-ramesh-flags-withdrawal-of-niti-aayogs-working-paper-on-indo-us-trade/article69758219.ece</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“Ground Reality.” Accessed: Jun. 29, 2025. [Online]. Available: <a href="https://devinder-sharma.blogspot.com/">https://devinder-sharma.blogspot.com/</a></li>
+<li>“India GM Info – Get acquainted with GM crops in India.” Accessed: Jun. 29, 2025. [Online]. Available: <a href="https://indiagminfo.org/">https://indiagminfo.org/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>P. Shankar, “India releases genome-edited rice, draws both applause and alarm,” Mongabay-India. Accessed: Jun. 03, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/06/india-releases-genome-edited-rice-draws-both-applause-and-alarm/">https://india.mongabay.com/2025/06/india-releases-genome-edited-rice-draws-both-applause-and-alarm/</a></li>
+
+<li>T. H. Bureau, “AIKS opposes promotion of gene-edited crop varieties,” The Hindu, May 30, 2025. Accessed: Jun. 01, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/national/andhra-pradesh/aiks-opposes-promotion-of-gene-edited-crop-varieties/article69638361.ece">https://www.thehindu.com/news/national/andhra-pradesh/aiks-opposes-promotion-of-gene-edited-crop-varieties/article69638361.ece</a></li>
+
+<li>L. Jishnu, “Is India’s CRISPR feat with rice a costly proposition?,” Down To Earth. Accessed: May 25, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/agriculture/is-indias-crispr-feat-with-rice-well-worth-the-effort">https://www.downtoearth.org.in/agriculture/is-indias-crispr-feat-with-rice-well-worth-the-effort</a></li>
+
+<li>Editor2, “Mutant rice and Bill Gates’s lab rats: Grand experiments in India’s fields.” Accessed: May 15, 2025. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20546-mutant-rice-and-bill-gates-s-lab-rats-grand-experiments-in-india-s-fields">https://gmwatch.org/en/106-news/latest-news/20546-mutant-rice-and-bill-gates-s-lab-rats-grand-experiments-in-india-s-fields</a></li>
+
+<li>Shagun, “Objections raised over Centre’s proposed changes to verify conflict of interest for expert GM panel members,” Down To Earth. Accessed: Feb. 12, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/agriculture/objections-raised-over-centres-proposed-changes-to-verify-conflict-of-interest-for-expert-gm-panel-members">https://www.downtoearth.org.in/agriculture/objections-raised-over-centres-proposed-changes-to-verify-conflict-of-interest-for-expert-gm-panel-members</a></li>
+
+<li>101Reporters, “Dilemma Faced By Poor Farmers In Bundelkhand: Grow Organic While Selling Non-Organic,” Feminism in India. Accessed: Jan. 22, 2025. [Online]. Available: <a href="https://feminisminindia.com/2025/01/22/dilemma-faced-by-poor-farmers-in-bundelkhand-grow-organic-while-selling-non-organic/">https://feminisminindia.com/2025/01/22/dilemma-faced-by-poor-farmers-in-bundelkhand-grow-organic-while-selling-non-organic/</a></li>
+
+<li>G. Menon, “The Hidden Cost of Non-Organic Food: A Farmer’s Journey into Soil Health,” Frontline. Accessed: Jan. 11, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/the-nation/agriculture/organic-farming-benefits-soil-health-climate-change-food-quality/article69083521.ece">https://frontline.thehindu.com/the-nation/agriculture/organic-farming-benefits-soil-health-climate-change-food-quality/article69083521.ece</a></li>
+<li>PTI, “Government notifies procedure for export of certified organic products,” The Hindu, Jan. 07, 2025. Accessed: Jan. 07, 2025. [Online]. Available: <a href="https://www.thehindu.com/business/government-notifies-procedure-for-export-of-certified-organic-products/article69071814.ece">https://www.thehindu.com/business/government-notifies-procedure-for-export-of-certified-organic-products/article69071814.ece</a></li>
+
+<li>“How a sasur-bahu duo is redefining desi cotton cultivation in Sirsa,” The Indian Express. Accessed: Dec. 31, 2024. [Online]. Available: <a href="https://indianexpress.com/article/cities/chandigarh/cotton-cultivation-sirsa-9749540/">https://indianexpress.com/article/cities/chandigarh/cotton-cultivation-sirsa-9749540/</a></li>
+
+<li>Codingest, “Include Farmers’ Opinions in Formulating the National GM Policy: Bharatiya Kisan Sangh,” Ruralvoice. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://eng.ruralvoice.in/national/include-farmers-opinions-in-formulating-the-national-gm-policy-says-bharatiya-kisan-sangh.html">https://eng.ruralvoice.in/national/include-farmers-opinions-in-formulating-the-national-gm-policy-says-bharatiya-kisan-sangh.html</a></li>
+
+<li>“RSS affiliate BKS expresses concern on MNCs promoting GM seeds,” The Times of India, Aug. 14, 2024. Accessed: Aug. 15, 2024. [Online]. Available: <a href="https://timesofindia.indiatimes.com/city/lucknow/rss-affiliate-bks-raises-concern-over-mncs-promoting-gm-seeds/articleshow/112508665.cms">https://timesofindia.indiatimes.com/city/lucknow/rss-affiliate-bks-raises-concern-over-mncs-promoting-gm-seeds/articleshow/112508665.cms</a></li>
+
+<li>N. Murthy, “Weavers design the Sonthanga collection with locally sourced organic cotton,” The Hindu, Jun. 06, 2024. Accessed: Jun. 07, 2024. [Online]. Available: <a href="https://www.thehindu.com/life-and-style/the-sonthanga-collection-is-an-initiative-by-malkha-commons-in-hyderabad/article68210799.ece">https://www.thehindu.com/life-and-style/the-sonthanga-collection-is-an-initiative-by-malkha-commons-in-hyderabad/article68210799.ece</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org1cce91c"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="org7cb4de1"></a>Vikalp Sangam<br />
+<div class="outline-text-7" id="text-org7cb4de1">
+<ul class="org-ul">
+<li>“A Call for Expert and Public Consultations on Genetically Modified Mustard,” Vikalp Sangam. Accessed: Sep. 30, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/forum/call-expert-and-public-consultations-genetically-modified-mustard">https://www.theindiaforum.in/forum/call-expert-and-public-consultations-genetically-modified-mustard</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orged78565"></a><b>GM Watch</b><br />
+<div class="outline-text-7" id="text-orged78565">
+<ul class="org-ul">
+<li>Editor2, “How GMOs will destroy non-GMO Indian agriculture.” Accessed: Feb. 25, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/106-news/latest-news/20384-how-gmos-will-destroy-non-gmo-indian-agriculture">https://www.gmwatch.org/en/106-news/latest-news/20384-how-gmos-will-destroy-non-gmo-indian-agriculture</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2724a2a"></a>Heinrich Böll Stiftung<br />
+<div class="outline-text-7" id="text-org2724a2a">
+<ul class="org-ul">
+<li>“Genetically modified crops: Twenty years of debate in India | Heinrich Böll Stiftung | India Office.” Accessed: Apr. 08, 2024. [Online]. Available: <a href="https://in.boell.org/en/gm-crops-india">https://in.boell.org/en/gm-crops-india</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org30eb9de"></a>Down To Earth<br />
+<div class="outline-text-7" id="text-org30eb9de">
+<ul class="org-ul">
+<li>V. Mishra, “GM crops undesirable for India say farmer leaders, demand comprehensive discussion in national policy,” Down To Earth. Accessed: Sep. 12, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/agriculture/gm-crops-undesirable-for-india-say-farmer-leaders-demand-comprehensive-discussion-in-national-policy">https://www.downtoearth.org.in/agriculture/gm-crops-undesirable-for-india-say-farmer-leaders-demand-comprehensive-discussion-in-national-policy</a></li>
+
+<li>H. Nitnaware, “SC rules against commercial sale and release of GM mustard,” Down To Earth. Accessed: Jul. 24, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/governance/sc-rules-against-commercial-sale-and-release-of-gm-mustard">https://www.downtoearth.org.in/governance/sc-rules-against-commercial-sale-and-release-of-gm-mustard</a></li>
+
+<li>“Coalition for GM-Free India alleges Solicitor General of India misled court during hearing.” Accessed: Feb. 06, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/governance/coalition-for-gm-free-india-alleges-solicitor-general-of-india-misled-court-during-hearing-94066">https://www.downtoearth.org.in/news/governance/coalition-for-gm-free-india-alleges-solicitor-general-of-india-misled-court-during-hearing-94066</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orgfa13d69"></a>Misc<br />
+<div class="outline-text-6" id="text-4-5-2-1-5">
+<ul class="org-ul">
+<li>S. Radhakrishnan, “The Soy Mirage: When ‘Strategic Alliances’ Pose a Threat to Indian Farmers,” Sridhar Radhakrishnan. Accessed: Oct. 27, 2025. [Online]. Available: <a href="https://sridharradhakrishnan67.substack.com/p/the-soy-mirage-when-strategic-alliances">https://sridharradhakrishnan67.substack.com/p/the-soy-mirage-when-strategic-alliances</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Why Genetically Modified Crops Need A Trait-based Naming Typology,” The India Forum. Accessed: Oct. 23, 2025. [Online]. Available: <a href="https://www.theindiaforum.in/environment/why-genetically-modified-crops-need-trait-based-naming-typology">https://www.theindiaforum.in/environment/why-genetically-modified-crops-need-trait-based-naming-typology</a></li>
+
+<li>S. Radhakrishnan, “GMOs have delivered more hype, harm and false hope than real solutions,” Down To Earth. Accessed: Jul. 29, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/agriculture/gmos-have-delivered-more-hype-harm-and-false-hope-than-real-solutions">https://www.downtoearth.org.in/agriculture/gmos-have-delivered-more-hype-harm-and-false-hope-than-real-solutions</a></li>
+
+<li>J. Choubey, “NITI Aayog advocates GM crop imports to boost US-India agri trade amid local safeguards,” The New Indian Express. Accessed: Jun. 14, 2025. [Online]. Available: <a href="https://www.newindianexpress.com/nation/2025/Jun/13/niti-aayog-advocates-gm-crop-imports-to-boost-us-india-agri-trade-amid-local-safeguards">https://www.newindianexpress.com/nation/2025/Jun/13/niti-aayog-advocates-gm-crop-imports-to-boost-us-india-agri-trade-amid-local-safeguards</a></li>
+<li>S. Srivastava, “India, US trade talks hit hurdle on Trump tariffs, GM crops,” The Economic Times, Jun. 13, 2025. Accessed: Jun. 14, 2025. [Online]. Available: <a href="https://economictimes.indiatimes.com/news/economy/foreign-trade/india-us-trade-talks-hit-hurdle-on-trump-tariffs-gm-crops/articleshow/121821010.cms">https://economictimes.indiatimes.com/news/economy/foreign-trade/india-us-trade-talks-hit-hurdle-on-trump-tariffs-gm-crops/articleshow/121821010.cms</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Priyadarshini, “India approves first genome-edited rice varieties,” Nature India, May 2025, doi: 10.1038/d44151-025-00078-2.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Shagun, “New study links GM crops to rising pesticide dependence,” Down To Earth. Accessed: Apr. 21, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/agriculture/new-study-links-gm-crops-to-rising-pesticide-dependence">https://www.downtoearth.org.in/agriculture/new-study-links-gm-crops-to-rising-pesticide-dependence</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org54d1148" class="outline-4">
+<h4 id="org54d1148"><span class="section-number-4">4.5.3.</span> Law</h4>
+<div class="outline-text-4" id="text-4-5-3">
+<ul class="org-ul">
+<li>“GMOs and patents - The Non-GMO Project.” Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://www.nongmoproject.org/blog/gmofacts/gmos-and-patents/">https://www.nongmoproject.org/blog/gmofacts/gmos-and-patents/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org255c65b" class="outline-4">
+<h4 id="org255c65b"><span class="section-number-4">4.5.4.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org726fff9" class="outline-3">
+<h3 id="org726fff9"><span class="section-number-3">4.6.</span> Business Studies, Misc</h3>
+<div class="outline-text-3" id="text-4-6">
+</div>
+<div id="outline-container-org80bd7a4" class="outline-4">
+<h4 id="org80bd7a4"><span class="section-number-4">4.6.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-6-1">
+<ul class="org-ul">
+<li>“GMO/Toxin Free USA’s Amazon Page.” Accessed: Oct. 30, 2025. [Online]. Available: <a href="https://www.amazon.com/shop/gmofreeusa_official?ccs_id=43a4ac93-6bb8-419d-abc7-4f4f93020c38">https://www.amazon.com/shop/gmofreeusa_official?ccs_id=43a4ac93-6bb8-419d-abc7-4f4f93020c38</a></li>
+
+<li>“Toxin Free USA Giveaway Fundraiser - GMO / Toxin Free USA.” Accessed: Aug. 31, 2025. [Online]. Available: <a href="https://toxinfreeusa.org/summer-giveway-2025/">https://toxinfreeusa.org/summer-giveway-2025/</a></li>
+
+<li>Editor2, “The tech billionaires and rogue scientists moving to commercialise CRISPR babies.” Accessed: Jul. 20, 2025. [Online]. Available: <a href="https://www.gmwatch.org/en/106-news/latest-news/20573-the-tech-billionaires-and-rogue-scientists-moving-to-commercialise-crispr-babies">https://www.gmwatch.org/en/106-news/latest-news/20573-the-tech-billionaires-and-rogue-scientists-moving-to-commercialise-crispr-babies</a></li>
+
+<li>“GMO/Toxin Free USA’s Amazon Page - Prime Day 2025 Deals.” Accessed: Jul. 10, 2025. [Online]. Available: <a href="https://www.amazon.com/shop/gmofreeusa_official/list/2S6OT3QXBYPZH">https://www.amazon.com/shop/gmofreeusa_official/list/2S6OT3QXBYPZH</a></li>
+<li>“GMO/Toxin Free USA’s Amazon Page.” Accessed: Jul. 10, 2025. [Online]. Available: <a href="https://www.amazon.com/shop/gmofreeusa_official">https://www.amazon.com/shop/gmofreeusa_official</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Paco, “Gauging the Return on Investment in Buying Organic Food,” Organic Consumers. Accessed: Jul. 02, 2025. [Online]. Available: <a href="https://organicconsumers.org/gauging-the-return-on-investment-in-buying-organic-food/">https://organicconsumers.org/gauging-the-return-on-investment-in-buying-organic-food/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8ab07d0" class="outline-3">
+<h3 id="org8ab07d0"><span class="section-number-3">4.7.</span> Security Studies, Misc</h3>
+</div>
+<div id="outline-container-org6d92c3f" class="outline-3">
+<h3 id="org6d92c3f"><span class="section-number-3">4.8.</span> Communication, Misc</h3>
+</div>
+<div id="outline-container-org1f7b166" class="outline-3">
+<h3 id="org1f7b166"><span class="section-number-3">4.9.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-9">
+<ul class="org-ul">
+<li>L. updated SharePrint, “Who Owns Organic?,” Cornucopia Institute. Accessed: Nov. 19, 2025. [Online]. Available: <a href="https://www.cornucopia.org/research/who-owns-organic/">https://www.cornucopia.org/research/who-owns-organic/</a></li>
+
+<li>“Home,” Engineering Nature. Accessed: Oct. 05, 2025. [Online]. Available: <a href="https://engineeringnature.org/">https://engineeringnature.org/</a></li>
+
+<li>“GM Freeze | A disaster by design: the UK’s new rules for new GMOs.” Accessed: Oct. 02, 2025. [Online]. Available: <a href="https://www.gmfreeze.org/publications/disaster-by-design-uk-rules-new-gmos/">https://www.gmfreeze.org/publications/disaster-by-design-uk-rules-new-gmos/</a></li>
+
+<li>Editor2, “GMWatch publishes historic recordings of scientist Arpad Pusztai.” Accessed: Aug. 22, 2025. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20584-gmwatch-publishes-historic-recordings-of-scientist-arpad-pusztai">https://gmwatch.org/en/106-news/latest-news/20584-gmwatch-publishes-historic-recordings-of-scientist-arpad-pusztai</a></li>
+
+<li>Editor2, “Regulators use double standards when evaluating scientific evidence indicating harm.” Accessed: Aug. 18, 2025. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20586-regulators-use-double-standards-when-evaluating-scientific-evidence-indicating-harm">https://gmwatch.org/en/106-news/latest-news/20586-regulators-use-double-standards-when-evaluating-scientific-evidence-indicating-harm</a></li>
+
+<li>Editor2, “GMWatch publishes historic recordings of scientist Arpad Pusztai.” Accessed: Aug. 17, 2025. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20584-gmwatch-publishes-historic-recordings-of-scientist-arpad-pusztai">https://gmwatch.org/en/106-news/latest-news/20584-gmwatch-publishes-historic-recordings-of-scientist-arpad-pusztai</a></li>
+
+<li>“Service Not Available in Your Location.” Accessed: Aug. 06, 2025. [Online]. Available: <a href="https://vocal.media/theSwamp/the-media-is-the-message-and-monsanto-paid-for-it/">https://vocal.media/theSwamp/the-media-is-the-message-and-monsanto-paid-for-it/</a></li>
+
+<li>R. Cummins, “Six Rules for Organizing a Grassroots Regeneration Revolution,” Organic Consumers. Accessed: Jul. 30, 2025. [Online]. Available: <a href="https://organicconsumers.org/six-rules-organizing-grassroots-regeneration-revolution/">https://organicconsumers.org/six-rules-organizing-grassroots-regeneration-revolution/</a></li>
+
+<li>Editor2, “The tech billionaires and rogue scientists moving to commercialise CRISPR babies.” Accessed: Jul. 12, 2025. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20573-the-tech-billionaires-and-rogue-scientists-moving-to-commercialise-crispr-babies">https://gmwatch.org/en/106-news/latest-news/20573-the-tech-billionaires-and-rogue-scientists-moving-to-commercialise-crispr-babies</a></li>
+
+<li>Editor2, “European laboratories join forces to call for detection methods for all new GMOs.” Accessed: Jul. 10, 2025. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20570-european-laboratories-join-forces-to-call-for-detection-methods-for-all-new-gmos">https://gmwatch.org/en/106-news/latest-news/20570-european-laboratories-join-forces-to-call-for-detection-methods-for-all-new-gmos</a></li>
+
+<li>C. Behr, “No GMOs through the back door!,” Demeter International. Accessed: Jul. 02, 2025. [Online]. Available: <a href="https://demeter.net/no-gmos-through-the-back-door/">https://demeter.net/no-gmos-through-the-back-door/</a></li>
+
+<li>“Judicial Review: Stop hidden GMOs entering our food and environment,” CrowdJustice. Accessed: Jul. 01, 2025. [Online]. Available: <a href="https://www.crowdjustice.com/case/stop-hidden-gmos/">https://www.crowdjustice.com/case/stop-hidden-gmos/</a></li>
+
+<li>Editor2, “Bitter harvest — 30 years of broken GMO promises.” Accessed: Jun. 25, 2025. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20561-bitter-harvest-30-years-of-broken-gmo-promises">https://gmwatch.org/en/106-news/latest-news/20561-bitter-harvest-30-years-of-broken-gmo-promises</a></li>
+
+<li>Editor2, “New report shows dismal market reality of New GMOs.” Accessed: Jun. 19, 2025. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20556-new-report-shows-dismal-market-reality-of-new-gmos">https://gmwatch.org/en/106-news/latest-news/20556-new-report-shows-dismal-market-reality-of-new-gmos</a></li>
+
+<li>S. W. I. swissinfo.ch, “Switzerland to extend GMO moratorium by five years,” SWI swissinfo.ch. Accessed: Jun. 17, 2025. [Online]. Available: <a href="https://www.swissinfo.ch/eng/various/parliament-wants-to-extend-genetic-engineering-moratorium-by-five-years/89467765">https://www.swissinfo.ch/eng/various/parliament-wants-to-extend-genetic-engineering-moratorium-by-five-years/89467765</a></li>
+
+<li>C. Behr, “No GMOs through the back door!,” Demeter International. Accessed: May 28, 2025. [Online]. Available: <a href="https://demeter.net/no-gmos-through-the-back-door/">https://demeter.net/no-gmos-through-the-back-door/</a></li>
+
+<li>“GMOs, Corporate Control, and the Future of Africa’s Food System,” Greenpeace Africa. Accessed: Apr. 16, 2025. [Online]. Available: <a href="https://www.greenpeace.org/africa/en/blog/57314/gmos-corporate-control-and-the-future-of-africas-food-system/">https://www.greenpeace.org/africa/en/blog/57314/gmos-corporate-control-and-the-future-of-africas-food-system/</a></li>
+
+<li>S. Malkan, “GM corn and glyphosate science: Documents from Mexico-US trade dispute,” U.S. Right to Know. Accessed: Mar. 22, 2025. [Online]. Available: <a href="https://usrtk.org/gmo/gm-corn-and-glyphosate-science-documents-from-mexico-us-trade-dispute/">https://usrtk.org/gmo/gm-corn-and-glyphosate-science-documents-from-mexico-us-trade-dispute/</a></li>
+
+<li>Editor2, “Monsanto mouthpieces use copyright claims ‘to hide their trail of industry deceit.’” Accessed: Mar. 21, 2025. [Online]. Available: <a href="https://gmwatch.org/en/news-mobile/mobile-archive/2023-articles2/20172-monsanto-mouthpieces-use-copyright-claims-to-hide-their-trail-of-industry-deceit">https://gmwatch.org/en/news-mobile/mobile-archive/2023-articles2/20172-monsanto-mouthpieces-use-copyright-claims-to-hide-their-trail-of-industry-deceit</a></li>
+
+<li>Paco, “Dramatic Changes to the U.S. Government May Impact the Future of Organic,” Organic Consumers. Accessed: Mar. 11, 2025. [Online]. Available: <a href="https://organicconsumers.org/dramatic-changes-to-the-u-s-government-may-impact-the-future-of-organic/">https://organicconsumers.org/dramatic-changes-to-the-u-s-government-may-impact-the-future-of-organic/</a></li>
+
+<li>“Azure Standard - Azure Standard.” Accessed: Feb. 01, 2025. [Online]. Available: <a href="https://www.azurestandard.com/">https://www.azurestandard.com/</a></li>
+
+<li>“Non-GMO Project Home - The Non-GMO Project.” Accessed: Jan. 28, 2025. [Online]. Available: <a href="https://www.nongmoproject.org/">https://www.nongmoproject.org/</a></li>
+
+<li>“Food Integrity Collective,” Food Integrity Collective. Accessed: Dec. 31, 2024. [Online]. Available: <a href="https://www.foodintegritycollective.org">https://www.foodintegritycollective.org</a></li>
+
+<li>Paco, “New Scientific Analyses Underpin Mexico’s Restrictions on GM Corn and Glyphosate Due to Health Risks,” Organic Consumers. Accessed: Dec. 24, 2024. [Online]. Available: <a href="https://organicconsumers.org/new-scientific-analyses-underpin-mexicos-restrictions-on-gm-corn-and-glyphosate-due-to-health-risks/">https://organicconsumers.org/new-scientific-analyses-underpin-mexicos-restrictions-on-gm-corn-and-glyphosate-due-to-health-risks/</a></li>
+
+<li>“Victory! Federal Court Strikes Down Lax GMO Rules, Halts GE Crop Introductions Without USDA Oversight,” Center for Food Safety. Accessed: Dec. 20, 2024. [Online]. Available: <a href="https://www.centerforfoodsafety.org/press-releases/6975/victory-federal-court-strikes-down-lax-gmo-rules-halts-ge-crop-introductions-without-usda-oversight">https://www.centerforfoodsafety.org/press-releases/6975/victory-federal-court-strikes-down-lax-gmo-rules-halts-ge-crop-introductions-without-usda-oversight</a></li>
+
+<li>S. Malkan, “GM corn and glyphosate science: Documents from Mexico-US trade dispute,” U.S. Right to Know. Accessed: Dec. 18, 2024. [Online]. Available: <a href="https://usrtk.org/gmo/gm-corn-and-glyphosate-science-documents-from-mexico-us-trade-dispute/">https://usrtk.org/gmo/gm-corn-and-glyphosate-science-documents-from-mexico-us-trade-dispute/</a></li>
+
+<li>Editor2, ““Laureates’ letter” misled signatories about GMO regulation in Europe, has industry’s fingerprints all over it.” Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20368-laureates-letter-misled-signatories-about-gmo-regulation-in-europe-has-industry-s-fingerprints-all-over-it">https://gmwatch.org/en/106-news/latest-news/20368-laureates-letter-misled-signatories-about-gmo-regulation-in-europe-has-industry-s-fingerprints-all-over-it</a></li>
+
+<li>“GMO/Toxin Free USA’s Amazon Page.” Accessed: Oct. 13, 2024. [Online]. Available: <a href="https://www.amazon.com/shop/gmofreeusa_official">https://www.amazon.com/shop/gmofreeusa_official</a></li>
+
+<li>“How a US-Based PR Firm Is Profiling Activists, Scientists Opposing Pesticides and GMO,” The Wire. Accessed: Oct. 06, 2024. [Online]. Available: <a href="https://thewire.in/agriculture/how-a-us-based-pr-firm-is-profiling-activists-scientists-opposing-pesticides-and-gmo">https://thewire.in/agriculture/how-a-us-based-pr-firm-is-profiling-activists-scientists-opposing-pesticides-and-gmo</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgba08ff0" class="outline-2">
+<h2 id="orgba08ff0"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgbb2e1af" class="outline-3">
+<h3 id="orgbb2e1af"><span class="section-number-3">5.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org55fefbb" class="outline-2">
+<h2 id="org55fefbb"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orge3966b7" class="outline-3">
+<h3 id="orge3966b7"><span class="section-number-3">6.1.</span> GM Mustard</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-orgb99e53c" class="outline-4">
+<h4 id="orgb99e53c"><span class="section-number-4">6.1.1.</span> General</h4>
+</div>
+<div id="outline-container-org027c608" class="outline-4">
+<h4 id="org027c608"><span class="section-number-4">6.1.2.</span> STEMM</h4>
+<div class="outline-text-4" id="text-6-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orga909624"></a>Navdanya International<br />
+<div class="outline-text-5" id="text-6-1-2-1">
+<ul class="org-ul">
+<li><b>“GMO Mustard: An unnecessary, toxic, and failed technology,”</b> Navdanya international, Nov. 10, 2022. <a href="https://navdanyainternational.org/gmo-mustard-an-unnecessary-toxic-and-failed-technology/">https://navdanyainternational.org/gmo-mustard-an-unnecessary-toxic-and-failed-technology/</a> (accessed Nov. 11, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org237299c"></a>Down To Earth<br />
+<div class="outline-text-5" id="text-6-1-2-2">
+<ul class="org-ul">
+<li>“Biotech regulator approves GM mustard, now Centre to take a call.” <a href="https://www.downtoearth.org.in/news/agriculture/biotech-regulator-approves-gm-mustard-now-centre-to-take-a-call-85630">https://www.downtoearth.org.in/news/agriculture/biotech-regulator-approves-gm-mustard-now-centre-to-take-a-call-85630</a> (accessed Nov. 01, 2022).</li>
+<li>“After Dave, what does future hold for GM Mustard?” <a href="https://www.downtoearth.org.in/news/agriculture/after-dave-what-does-future-hold-for-gm-mustard--57890">https://www.downtoearth.org.in/news/agriculture/after-dave-what-does-future-hold-for-gm-mustard--57890</a> (accessed Nov. 01, 2022).</li>
+<li>“GM mustard will obliterate honey bees: Apiculturists protest Central decision in Bharatpur.” <a href="https://www.downtoearth.org.in/news/agriculture/gm-mustard-will-obliterate-honey-bees-apiculturists-protest-central-decision-in-bharatpur-85794">https://www.downtoearth.org.in/news/agriculture/gm-mustard-will-obliterate-honey-bees-apiculturists-protest-central-decision-in-bharatpur-85794</a> (accessed Nov. 06, 2022).</li>
+<li>“‘Approval of GM mustard may threaten food security, increase pesticide tolerance.’” <a href="https://www.downtoearth.org.in/news/agriculture/-approval-of-gm-mustard-may-threaten-food-security-increase-pesticide-tolerance--85560">https://www.downtoearth.org.in/news/agriculture/-approval-of-gm-mustard-may-threaten-food-security-increase-pesticide-tolerance--85560</a> (accessed Nov. 01, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org3cde2d6"></a>Organic Consumers Association<br />
+<div class="outline-text-5" id="text-6-1-2-3">
+<ul class="org-ul">
+<li>“India’s GM Mustard and the 30-Year Path to Food Tyranny.” <a href="https://www.organicconsumers.org/news/india%E2%80%99s-gm-mustard-and-30-year-path-food-tyranny">https://www.organicconsumers.org/news/india%E2%80%99s-gm-mustard-and-30-year-path-food-tyranny</a> (accessed Nov. 02, 2022).</li>
+<li>“Supreme Court Puts Environmental Release of GM Mustard on Hold.” <a href="https://www.organicconsumers.org/news/supreme-court-puts-environmental-release-gm-mustard-hold">https://www.organicconsumers.org/news/supreme-court-puts-environmental-release-gm-mustard-hold</a> (accessed Nov. 10, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="orgce3e6fb"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org74c6391" class="outline-4">
+<h4 id="org74c6391"><span class="section-number-4">6.1.3.</span> Worldly Matters</h4>
+<div class="outline-text-4" id="text-6-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org41bf3dc"></a>The Hindu, The Frontline<br />
+<div class="outline-text-5" id="text-6-1-3-1">
+<ul class="org-ul">
+<li>I. Mishra, “RSS’s farmer body opposes GM Mustard, alleges that it can cause cancer,” The Hindu, New Delhi:, Oct. 27, 2022. Accessed: Nov. 02, 2022. [Online]. Available: <a href="https://www.thehindu.com/news/national/rsss-farmer-body-opposes-gm-mustard-alleges-that-it-can-cause-cancer/article66061585.ece">https://www.thehindu.com/news/national/rsss-farmer-body-opposes-gm-mustard-alleges-that-it-can-cause-cancer/article66061585.ece</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc8b90f5"></a>The Wire, The Reporters-Collective<br />
+<div class="outline-text-5" id="text-6-1-3-2">
+<ul class="org-ul">
+<li>“Union Government Grants Environmental Clearance to Genetically Modified Mustard,” The Wire. <a href="https://thewire.in/agriculture/union-government-grants-environmental-clearance-to-genetically-modified-mustard">https://thewire.in/agriculture/union-government-grants-environmental-clearance-to-genetically-modified-mustard</a> (accessed Nov. 01, 2022).</li>
+
+<li>A. Perinchery, “What Stands in the Way of Transgenic Mustard Becoming India’s First GM Food Crop? – The Wire Science.” <a href="https://science.thewire.in/environment/transgenic-mustard-opposition-geac/">https://science.thewire.in/environment/transgenic-mustard-opposition-geac/</a> (accessed Nov. 02, 2022).</li>
+</ul>
+</div>
+</li>
+<li><a id="org2bd85bb"></a>Misc<br />
+<div class="outline-text-5" id="text-6-1-3-3">
+<ul class="org-ul">
+<li>“Boon or bane: What’s holding back the implementation of GM mustard in India?,” India Today. Accessed: Apr. 10, 2025. [Online]. Available: <a href="https://www.indiatoday.in/environment/story/gm-mustard-controversy-seeds-honey-bees-bt-cotton-supreme-court-2706231-2025-04-09">https://www.indiatoday.in/environment/story/gm-mustard-controversy-seeds-honey-bees-bt-cotton-supreme-court-2706231-2025-04-09</a></li>
+
+<li><b>“Ex-Delhi University Vice Chancellor Deepak Pental Sent to Tihar Jail on Plagiarism Complaint,”</b> NDTV.com. <a href="https://www.ndtv.com/india-news/ex-delhi-university-vice-chancellor-deepak-pental-sent-to-tihar-jail-on-plagiarism-complaint-703842">https://www.ndtv.com/india-news/ex-delhi-university-vice-chancellor-deepak-pental-sent-to-tihar-jail-on-plagiarism-complaint-703842</a> (accessed Nov. 01, 2022).</li>
+
+<li>D. Sharma, “GM Mustard: India gearing up to be biggest dustbin for risky, harmful tech,” May 16, 2017. <a href="https://www.business-standard.com/article/economy-policy/gm-mustard-india-gearing-up-to-be-biggest-dustbin-for-risky-harmful-tech-117051600321_1.html">https://www.business-standard.com/article/economy-policy/gm-mustard-india-gearing-up-to-be-biggest-dustbin-for-risky-harmful-tech-117051600321_1.html</a> (accessed Nov. 01, 2022).</li>
+
+<li>“Nod for GM mustard could mean a repeat of anti-farm laws stir,” Deccan Herald, Oct. 31, 2022. <a href="https://www.deccanherald.com/opinion/nod-for-gm-mustard-could-mean-a-repeat-of-anti-farm-laws-stir-1158030.html">https://www.deccanherald.com/opinion/nod-for-gm-mustard-could-mean-a-repeat-of-anti-farm-laws-stir-1158030.html</a> (accessed Nov. 02, 2022).</li>
+
+<li>G. link, Facebook, Twitter, Pinterest, Email, and O. Apps, “Why there is really ‘no established need’ in India for genetic modification of mustard.” <a href="https://www.counterview.net/2022/11/why-there-is-really-no-established-need.html">https://www.counterview.net/2022/11/why-there-is-really-no-established-need.html</a> (accessed Nov. 07, 2022).</li>
+
+<li><b>“GM mustard gets go-ahead: Scientist Vandana Shiva calls move ’fraud perpetrated on nation’-India News , Firstpost,”</b> Firstpost, May 13, 2017. <a href="https://www.firstpost.com/india/gm-mustard-gets-go-ahead-scientist-vandana-shiva-calls-move-fraud-perpetrated-on-nation-3442044.html">https://www.firstpost.com/india/gm-mustard-gets-go-ahead-scientist-vandana-shiva-calls-move-fraud-perpetrated-on-nation-3442044.html</a> (accessed Nov. 01, 2022).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org358be16" class="outline-4">
+<h4 id="org358be16"><span class="section-number-4">6.1.4.</span> Arts</h4>
+<div class="outline-text-4" id="text-6-1-4">
+</div>
+<ol class="org-ol">
+<li><a id="orgd1ece1c"></a>Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org99496fb" class="outline-4">
+<h4 id="org99496fb"><span class="section-number-4">6.1.5.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org8d155b9" class="outline-3">
+<h3 id="org8d155b9"><span class="section-number-3">6.2.</span> GMO Myths and Facts</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>Editor1, “GMO Myths and Facts: What they don’t want to tell you about genetically modified crops and foods.” Accessed: Dec. 21, 2022. [Online]. Available: <a href="https://www.gmwatch.org/en/67-uncategorised/20012-gmo-myths-and-facts-what-they-don-t-want-to-tell-you-about-genetically-modified-crops-and-foods">https://www.gmwatch.org/en/67-uncategorised/20012-gmo-myths-and-facts-what-they-don-t-want-to-tell-you-about-genetically-modified-crops-and-foods</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. R. Mphil, J. F. PhD, and M. A. PhD, GMO Myths &amp; Truths: A Citizen’s Guide to the Evidence on the Safety and Efficacy of Genetically Modified Crops and Foods, 4th Edition, 4th edition. Earth Open Source, 2018.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Editor1, “References for GMO Myths and Facts.” Accessed: Feb. 26, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/67-uncategorised/18765-references-for-genetically-modified-crops-and-foods-the-facts">https://www.gmwatch.org/en/67-uncategorised/18765-references-for-genetically-modified-crops-and-foods-the-facts</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8828e4b" class="outline-2">
+<h2 id="org8828e4b"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>OCA, “Organic Bytes Newsletter #924: The Glyphosate Crisis: Why Immediate Action is Needed,” Organic Consumers. Accessed: Jan. 14, 2026. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-924-the-glyphosate-crisis-why-immediate-action-is-needed/">https://organicconsumers.org/organic-bytes-newsletter-924-the-glyphosate-crisis-why-immediate-action-is-needed/</a></li>
+
+<li>OCA, “Organic Bytes Newsletter #924: The Glyphosate Crisis: Why Immediate Action is Needed,” Organic Consumers. Accessed: Jan. 11, 2026. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-924-the-glyphosate-crisis-why-immediate-action-is-needed/">https://organicconsumers.org/organic-bytes-newsletter-924-the-glyphosate-crisis-why-immediate-action-is-needed/</a></li>
+
+<li>“Seeds of Resistance: GMO Deregulation and Grassroots Mobilization,” Navdanya international. Accessed: Dec. 09, 2025. [Online]. Available: <a href="https://navdanyainternational.org/publications/seeds-of-resistance-report/">https://navdanyainternational.org/publications/seeds-of-resistance-report/</a></li>
+
+<li>OCA, “Organic Bytes Newsletter #920: EPA Approves Spraying PFAS on Our Food,” Organic Consumers. Accessed: Dec. 07, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-920-epa-approves-spraying-pfas-on-our-food/">https://organicconsumers.org/organic-bytes-newsletter-920-epa-approves-spraying-pfas-on-our-food/</a></li>
+
+<li>OCA, “Organic Bytes Newsletter #919: The Real Story Behind the ‘Better Food Disclosure Act,’” Organic Consumers. Accessed: Nov. 29, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-919-the-real-story-behind-the-better-food-disclosure-act/">https://organicconsumers.org/organic-bytes-newsletter-919-the-real-story-behind-the-better-food-disclosure-act/</a></li>
+
+<li>OCA, “Organic Bytes Newsletter #918: HB4 GMO Wheat To Enter U.S. Market,” Organic Consumers. Accessed: Nov. 22, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-918-hb4-gmo-wheat-to-enter-us-market/">https://organicconsumers.org/organic-bytes-newsletter-918-hb4-gmo-wheat-to-enter-us-market/</a></li>
+
+<li>“16 Civil Society Organizations warn of the risks of new GMOs/NGTs and seed patents,” Navdanya international. Accessed: Nov. 11, 2025. [Online]. Available: <a href="https://navdanyainternational.org/16-civil-society-organizations-warn-of-the-risks-of-new-gmos-ngts-and-seed-patents/">https://navdanyainternational.org/16-civil-society-organizations-warn-of-the-risks-of-new-gmos-ngts-and-seed-patents/</a></li>
+
+<li>“200+ environment and farmer groups: new GMOs, old problems,” Navdanya international. Accessed: Nov. 11, 2025. [Online]. Available: <a href="https://navdanyainternational.org/200-environment-and-farmer-groups-new-gmos-old-problems/">https://navdanyainternational.org/200-environment-and-farmer-groups-new-gmos-old-problems/</a></li>
+
+<li>Editor2, “Long-read whole genome sequencing the only way to confirm absence of foreign DNA in gene-edited products.” Accessed: Oct. 30, 2025. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20605-long-read-whole-genome-sequencing-the-only-way-to-confirm-absence-of-foreign-dna-in-gene-edited-products">https://gmwatch.org/en/106-news/latest-news/20605-long-read-whole-genome-sequencing-the-only-way-to-confirm-absence-of-foreign-dna-in-gene-edited-products</a></li>
+
+<li>OCA, “Organic Bytes Newsletter #915: Ban Bayer &amp; ICL’s White Phosphorus Weapons!,” Organic Consumers. Accessed: Oct. 25, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-915-ban-bayer-icls-white-phosphorus-weapons/">https://organicconsumers.org/organic-bytes-newsletter-915-ban-bayer-icls-white-phosphorus-weapons/</a></li>
+
+<li>M. Westgate, “Expanding Our Vision: The Strategic Imperative of the Food Integrity Collective - The Non-GMO Project.” Accessed: Oct. 23, 2025. [Online]. Available: <a href="https://www.nongmoproject.org/blog/expanding-our-vision-the-strategic-imperative-of-the-food-integrity-collective/">https://www.nongmoproject.org/blog/expanding-our-vision-the-strategic-imperative-of-the-food-integrity-collective/</a></li>
+
+<li>Editor2, “Review 590: New GMOs.” Accessed: Oct. 20, 2025. [Online]. Available: <a href="https://gmwatch.org/en/main-menu/news-menu-title/news-reviews/20601-review-590-new-gmos">https://gmwatch.org/en/main-menu/news-menu-title/news-reviews/20601-review-590-new-gmos</a></li>
+
+<li>“RNA Spray Crops vs. GMOs: A Physician’s Warning on Terrana Biosciences - GMOScience,” <a href="https://gmoscience.org/">https://gmoscience.org/</a>. Accessed: Oct. 06, 2025. [Online]. Available: <a href="https://gmoscience.org/2025/07/31/rna-spray-crops-vs-gmos-a-physicians-warning-on-terrana-biosciences/">https://gmoscience.org/2025/07/31/rna-spray-crops-vs-gmos-a-physicians-warning-on-terrana-biosciences/</a></li>
+
+<li>“GMO Promises,” GMO Promises. Accessed: Sep. 20, 2025. [Online]. Available: <a href="https://gmopromises.org/">https://gmopromises.org/</a></li>
+
+<li>S. Malkan, “Not substantially equivalent: New scientific methods challenge claims that GMOs are safe (Professor Antoniou interview part 2),” U.S. Right to Know. Accessed: Sep. 17, 2025. [Online]. Available: <a href="https://usrtk.org/gmo/new-scientific-research-challenges-claims-that-gmos-are-safe/">https://usrtk.org/gmo/new-scientific-research-challenges-claims-that-gmos-are-safe/</a></li>
+
+<li>S. Malkan, “Not substantially equivalent: New scientific methods challenge claims that GMOs are safe (Professor Antoniou interview part 2),” U.S. Right to Know. Accessed: Sep. 17, 2025. [Online]. Available: <a href="https://usrtk.org/gmo/new-scientific-research-challenges-claims-that-gmos-are-safe/">https://usrtk.org/gmo/new-scientific-research-challenges-claims-that-gmos-are-safe/</a></li>
+
+<li>OCA, “Organic Bytes Newsletter #910: Frightening New Generation of PFAS Pesticides Approved!,” Organic Consumers. Accessed: Sep. 13, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-910-frightening-new-generation-of-pfas-approved/">https://organicconsumers.org/organic-bytes-newsletter-910-frightening-new-generation-of-pfas-approved/</a></li>
+
+<li>E. Jackson, J. Li, and X. Li, “White mold fungi split their genome across several nuclei, with implications for future gene editing,” The Conversation. Accessed: Aug. 30, 2025. [Online]. Available: <a href="http://theconversation.com/white-mold-fungi-split-their-genome-across-several-nuclei-with-implications-for-future-gene-editing-260699">http://theconversation.com/white-mold-fungi-split-their-genome-across-several-nuclei-with-implications-for-future-gene-editing-260699</a></li>
+
+<li>“Do foods made with GMOs pose special health risks? | National Academies.” Accessed: Aug. 21, 2025. [Online]. Available: <a href="https://www.nationalacademies.org/based-on-science/foods-made-with-gmos-do-not-pose-special-health-risks">https://www.nationalacademies.org/based-on-science/foods-made-with-gmos-do-not-pose-special-health-risks</a></li>
+
+<li>OCA, “Organic Bytes Newsletter #907: Vitamin D Deficiency Is Costing Us Our Health and Money,” Organic Consumers. Accessed: Aug. 15, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-907-vitamin-d-deficiency-is-costing-us-our-health-and-money/">https://organicconsumers.org/organic-bytes-newsletter-907-vitamin-d-deficiency-is-costing-us-our-health-and-money/</a></li>
+
+<li>Editor2, “GM microorganisms pose huge challenges for risk assessment and governance.” Accessed: Aug. 08, 2025. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20581-gm-microorganisms-pose-huge-challenges-for-risk-assessment-and-governance">https://gmwatch.org/en/106-news/latest-news/20581-gm-microorganisms-pose-huge-challenges-for-risk-assessment-and-governance</a></li>
+
+<li>Paco, “Researchers Quietly Planned a Test To Dim Sunlight. They Wanted To ‘Avoid Scaring’ the Public.,” Organic Consumers. Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://organicconsumers.org/researchers-quietly-planned-a-test-to-dim-sunlight-they-wanted-to-avoid-scaring-the-public/">https://organicconsumers.org/researchers-quietly-planned-a-test-to-dim-sunlight-they-wanted-to-avoid-scaring-the-public/</a></li>
+<li>Paco, “Earth Appears To Be Developing New Never-Before-Seen Human-Made Seasons, Study Finds,” Organic Consumers. Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://organicconsumers.org/earth-appears-to-be-developing-new-never-before-seen-human-made-seasons-study-finds/">https://organicconsumers.org/earth-appears-to-be-developing-new-never-before-seen-human-made-seasons-study-finds/</a></li>
+<li>Paco, “Almost 50% of Microplastic Pollution Comes From Cars. Here’s Why.,” Organic Consumers. Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://organicconsumers.org/almost-50-of-microplastic-pollution-comes-from-cars-heres-why/">https://organicconsumers.org/almost-50-of-microplastic-pollution-comes-from-cars-heres-why/</a></li>
+<li>Paco, “Farmers Are Facing a Fork on Trump’s Immigration Highway. So What’s Next?,” Organic Consumers. Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://organicconsumers.org/farmers-are-facing-a-fork-on-trumps-immigration-highway-so-whats-next/">https://organicconsumers.org/farmers-are-facing-a-fork-on-trumps-immigration-highway-so-whats-next/</a></li>
+<li>Paco, “Japan’s Fast-Growing Wine Market Embraces Natural Wine,” Organic Consumers. Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://organicconsumers.org/japans-fast-growing-wine-market-embraces-natural-wine/">https://organicconsumers.org/japans-fast-growing-wine-market-embraces-natural-wine/</a></li>
+<li>Paco, “Earth Overshoot Day Reaches Record for Earliest Date,” Organic Consumers. Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://organicconsumers.org/earth-overshoot-day-reaches-record-for-earliest-date/">https://organicconsumers.org/earth-overshoot-day-reaches-record-for-earliest-date/</a></li>
+
+<li>OCA, “Farm Programs, USDA Would Shrink Under Project 2025 Goals for Ag,” Organic Consumers. Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://organicconsumers.org/farm-programs-usda-would-shrink-under-project-2025-goals-for-ag/">https://organicconsumers.org/farm-programs-usda-would-shrink-under-project-2025-goals-for-ag/</a></li>
+<li>OCA, “Op-ed: We Need a Food Bill of Rights,” Organic Consumers. Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://organicconsumers.org/op-ed-we-need-a-food-bill-of-rights/">https://organicconsumers.org/op-ed-we-need-a-food-bill-of-rights/</a></li>
+
+<li>OCA, “Organic Bytes Newsletter #905: The Scientific Evidence That Justifies Banning GMOs and Glyphosate,” Organic Consumers. Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-905-the-scientific-evidence-that-justifies-banning-gmos-and-glyphosate/">https://organicconsumers.org/organic-bytes-newsletter-905-the-scientific-evidence-that-justifies-banning-gmos-and-glyphosate/</a></li>
+
+<li>“GMOs and patents - The Non-GMO Project.” Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://www.nongmoproject.org/blog/gmofacts/gmos-and-patents/">https://www.nongmoproject.org/blog/gmofacts/gmos-and-patents/</a></li>
+<li>“Corn PRICE Today | Corn Spot Price Chart | Live Price of Corn per Ounce | Markets Insider,” markets.businessinsider.com. Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://markets.businessinsider.com/commodities/corn-price">https://markets.businessinsider.com/commodities/corn-price</a></li>
+
+<li>R. International, “Celebrating 10 Years of Regeneration International: Cultivating Soil, Solidarity, and System Change,” Regeneration International. Accessed: Jul. 31, 2025. [Online]. Available: <a href="https://regenerationinternational.org/2025/07/23/celebrating-10-years-of-regeneration-international-cultivating-soil-solidarity-and-system-change/">https://regenerationinternational.org/2025/07/23/celebrating-10-years-of-regeneration-international-cultivating-soil-solidarity-and-system-change/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Substack, “Moderna Founder Launches Aerial-spraying of RNA to Alter Gene Expression of Crops.” Accessed: Jul. 25, 2025. [Online]. Available: <a href="https://substack.com/inbox/post/168744399">https://substack.com/inbox/post/168744399</a></li>
+<li>G. link, Facebook, X, Pinterest, and O. Apps, “The GMO illusion: Three decades of hype, harm, and false hope.” Accessed: Jul. 25, 2025. [Online]. Available: <a href="https://www.counterview.net/2025/07/the-gmo-illusion-three-decades-of-hype.html">https://www.counterview.net/2025/07/the-gmo-illusion-three-decades-of-hype.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Inf’OGM – Citizen information watchdog on GMOs and seeds.” Accessed: Jul. 24, 2025. [Online]. Available: <a href="https://infogm.org/en/welcome/">https://infogm.org/en/welcome/</a></li>
+
+<li>Editor2, “Review 588: Urgent Updates on Glyphosate and New GMOs.” Accessed: Jul. 23, 2025. [Online]. Available: <a href="https://gmwatch.org/en/main-menu/news-menu-title/news-reviews/20576-review-588-urgent-updates-on-glyphosate-and-new-gmos">https://gmwatch.org/en/main-menu/news-menu-title/news-reviews/20576-review-588-urgent-updates-on-glyphosate-and-new-gmos</a></li>
+
+<li>Paco, “Bitter Harvest — 30 Years of Broken GMO Promises,” Organic Consumers. Accessed: Jul. 10, 2025. [Online]. Available: <a href="https://organicconsumers.org/bitter-harvest-30-years-of-broken-gmo-promises/">https://organicconsumers.org/bitter-harvest-30-years-of-broken-gmo-promises/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Editor2, “Review 587 – GMOs in General.” Accessed: Jul. 03, 2025. [Online]. Available: <a href="https://gmwatch.org/en/main-menu/news-menu-title/news-reviews/20568-review-587-gmos-in-general">https://gmwatch.org/en/main-menu/news-menu-title/news-reviews/20568-review-587-gmos-in-general</a></li>
+
+<li>OCA, “Organic Bytes Newsletter #900: A Victory for Organic Consumers,” Organic Consumers. Accessed: Jun. 28, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-900-a-victory-for-organic-consumers/">https://organicconsumers.org/organic-bytes-newsletter-900-a-victory-for-organic-consumers/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. King, “Gene-edited crops set to arrive in England, but EU remains divided on them,” Chemistry World. Accessed: Jun. 24, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/gene-edited-crops-set-to-arrive-in-england-but-eu-remains-divided-on-them/4021687.article">https://www.chemistryworld.com/news/gene-edited-crops-set-to-arrive-in-england-but-eu-remains-divided-on-them/4021687.article</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>OCA, “Real Organic Gifts for Dad,” Organic Consumers. Accessed: Jun. 08, 2025. [Online]. Available: <a href="https://organicconsumers.org/real-organic-gifts-for-dad/">https://organicconsumers.org/real-organic-gifts-for-dad/</a></li>
+<li>OCA, “Organic Bytes Newsletter #897: Organic Pet Food Rules About To Be Axed,” Organic Consumers. Accessed: Jun. 08, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-897-organic-pet-food-rules-about-to-be-axed/">https://organicconsumers.org/organic-bytes-newsletter-897-organic-pet-food-rules-about-to-be-axed/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“𝐂𝐨𝐥𝐢𝐧 𝐓𝐨𝐝𝐡𝐮𝐧𝐭𝐞𝐫 - Academia.edu.” Accessed: Apr. 16, 2025. [Online]. Available: <a href="https://independent.academia.edu/TodhunterC">https://independent.academia.edu/TodhunterC</a></li>
+
+<li>K. M. April 2025, “Making genetically engineered food palatable,” Chemistry World. Accessed: Apr. 08, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/features/making-genetically-engineered-food-palatable/4021232.article">https://www.chemistryworld.com/features/making-genetically-engineered-food-palatable/4021232.article</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>OCA, “Organic Bytes Newsletter #888: GMOs Should Not Be GRAS!,” Organic Consumers. Accessed: Mar. 29, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-888-gmos-should-not-be-gras/">https://organicconsumers.org/organic-bytes-newsletter-888-gmos-should-not-be-gras/</a></li>
+
+<li>M. Waddell, “The GMO High-Risk List: Pineapple - The Non-GMO Project.” Accessed: Mar. 28, 2025. [Online]. Available: <a href="https://www.nongmoproject.org/blog/this-genetically-modified-pink-pineapple-can-be-yours-for-49/">https://www.nongmoproject.org/blog/this-genetically-modified-pink-pineapple-can-be-yours-for-49/</a></li>
+<li>“The Impossible Burger,” The Impossible Burger. Accessed: Mar. 28, 2025. [Online]. Available: <a href="https://friendsoftheearth.eu/impossible-burger">https://friendsoftheearth.eu/impossible-burger</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>Editor2, “‘Definitive historical account’ of Monsanto provides motherlode of valuable material.” Accessed: Mar. 27, 2025. [Online]. Available: <a href="https://www.gmwatch.org/en/main-menu/news-menu-title/archive/109-2022/20009-definitive-historical-account-of-monsanto-provides-motherlode-of-valuable-material">https://www.gmwatch.org/en/main-menu/news-menu-title/archive/109-2022/20009-definitive-historical-account-of-monsanto-provides-motherlode-of-valuable-material</a></li>
+
+<li>K. C. London, “Inaugural Lectures: Professor Michael Antoniou,” King’s College London. Accessed: Feb. 08, 2025. [Online]. Available: <a href="https://www.kcl.ac.uk/events/inaugural-lectures-professor-michael-antoniou">https://www.kcl.ac.uk/events/inaugural-lectures-professor-michael-antoniou</a></li>
+
+<li>S. Malkan, “African groups want Gates Foundation, USAID to shift agricultural funding as hunger crisis worsens,” U.S. Right to Know. Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://usrtk.org/bill-gates/agra-donors/">https://usrtk.org/bill-gates/agra-donors/</a></li>
+<li>Editor2, “US government paid PR firm to track and vilify critics of GMOs and pesticides.” Accessed: Feb. 04, 2025. [Online]. Available: <a href="https://www.gmwatch.org/en/main-menu/news-menu-title/archive/111-2024/20475-us-government-paid-pr-firm-to-track-and-vilify-critics-of-gmos-and-pesticides">https://www.gmwatch.org/en/main-menu/news-menu-title/archive/111-2024/20475-us-government-paid-pr-firm-to-track-and-vilify-critics-of-gmos-and-pesticides</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Spisák et al., “Complete Genes May Pass from Food to Human Blood,” PLOS ONE, vol. 8, no. 7, p. e69805, Jul. 2013, doi: 10.1371/journal.pone.0069805.</li>
+
+<li>M. Waddell, “What Is Animal-Free Dairy? - The Non-GMO Project.” Accessed: Jan. 22, 2025. [Online]. Available: <a href="https://www.nongmoproject.org/blog/what-is-animal-free-dairy/">https://www.nongmoproject.org/blog/what-is-animal-free-dairy/</a></li>
+
+<li>“Celebrating EU Organic Day and rewarding excellent examples,” IFOAM Organics Europe. Accessed: Jan. 22, 2025. [Online]. Available: <a href="https://www.organicseurope.bio/news/celebrating-eu-organic-day-and-rewarding-excellent-examples/">https://www.organicseurope.bio/news/celebrating-eu-organic-day-and-rewarding-excellent-examples/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>OCA, “Organic Bytes Newsletter #879: Take Synthetic ‘Milk’ From GMO Microorganisms off the Market!,” Organic Consumers. Accessed: Jan. 17, 2025. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-879-take-synthetic-milk-from-gmo-microorganisms-off-the-market/">https://organicconsumers.org/organic-bytes-newsletter-879-take-synthetic-milk-from-gmo-microorganisms-off-the-market/</a></li>
+
+<li>“Return of the native seeds,” People’s Archive of Rural India. Accessed: Jan. 17, 2025. [Online]. Available: <a href="https://ruralindiaonline.org/en/articles/return-of-the-native-seeds/">https://ruralindiaonline.org/en/articles/return-of-the-native-seeds/</a></li>
+
+<li>“The Mutant Project,” Macmillan Publishers. Accessed: Jan. 14, 2025. [Online]. Available: <a href="https://us.macmillan.com/books/9781250265357/themutantproject/">https://us.macmillan.com/books/9781250265357/themutantproject/</a></li>
+
+<li>Editor1, “Review 578: New GMOs.” Accessed: Jan. 09, 2025. [Online]. Available: <a href="https://gmwatch.org/en/main-menu/news-menu-title/news-reviews/20492-review-578-new-gmos-3">https://gmwatch.org/en/main-menu/news-menu-title/news-reviews/20492-review-578-new-gmos-3</a></li>
+
+<li>“Search for Non-GMO Seed Sellers | Seed Integrity Pledge,” Safe Seed Pledge. Accessed: Jan. 09, 2025. [Online]. Available: <a href="https://www.safeseedpledge.org/search-for-non-gmo-seeds">https://www.safeseedpledge.org/search-for-non-gmo-seeds</a></li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>“GMO/Toxin Free USA Connecting the Dots Newsletter January 4, 2025.” Accessed: Jan. 06, 2025. [Online]. Available: <a href="https://gmofreeusa.salsalabs.org/connectthedots20250104_0/index.html">https://gmofreeusa.salsalabs.org/connectthedots20250104_0/index.html</a></li>
+
+<li>“2024 Year in Review - The Non-GMO Project.” Accessed: Dec. 31, 2024. [Online]. Available: <a href="https://www.nongmoproject.org/blog/2024-year-in-review/">https://www.nongmoproject.org/blog/2024-year-in-review/</a></li>
+
+<li>“Victory! Federal Court Strikes Down Lax GMO Rules, Halts GE Crop Introductions Without USDA Oversight,” Center for Food Safety. Accessed: Dec. 18, 2024. [Online]. Available: <a href="https://www.centerforfoodsafety.org/press-releases/6975/victory-federal-court-strikes-down-lax-gmo-rules-halts-ge-crop-introductions-without-usda-oversight">https://www.centerforfoodsafety.org/press-releases/6975/victory-federal-court-strikes-down-lax-gmo-rules-halts-ge-crop-introductions-without-usda-oversight</a></li>
+
+<li>Editor2, “GM soybean oil damages liver and kidneys.” Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/106-news/latest-news/20467-gm-soybean-oil-damages-liver-and-kidneys">https://www.gmwatch.org/en/106-news/latest-news/20467-gm-soybean-oil-damages-liver-and-kidneys</a></li>
+
+<li>“New GMO Alert: Biotechnology Sustainability Solutions for Whom? - The Non-GMO Project.” Accessed: Dec. 11, 2024. [Online]. Available: <a href="https://www.nongmoproject.org/blog/new-gmo-alert-biotechnology-sustainability-solutions-for-whom/">https://www.nongmoproject.org/blog/new-gmo-alert-biotechnology-sustainability-solutions-for-whom/</a></li>
+
+<li>“USDA’s genetically engineered plants ruling overturned,” Newsweek. Accessed: Dec. 08, 2024. [Online]. Available: <a href="https://www.newsweek.com/department-agriculture-genetically-modified-crops-tom-vilsack-federal-court-monsanto-1996749">https://www.newsweek.com/department-agriculture-genetically-modified-crops-tom-vilsack-federal-court-monsanto-1996749</a></li>
+
+<li>“Map unveils the lobbying practices of the pesticide and GMO industry in Canada | CBAN.” Accessed: Dec. 04, 2024. [Online]. Available: <a href="https://cban.ca/map-unveils-the-lobbying-practices-of-the-pesticide-and-gmo-industry-in-canada/">https://cban.ca/map-unveils-the-lobbying-practices-of-the-pesticide-and-gmo-industry-in-canada/</a></li>
+
+<li>“Add Water and Stir? EPA Could Approve GMO Mosquitoes for Consumers’ Backyards,” Children’s Health Defense. Accessed: Dec. 03, 2024. [Online]. Available: <a href="https://childrenshealthdefense.org/defender/epa-could-approve-gmo-mosquitoes-for-consumers-backyards/">https://childrenshealthdefense.org/defender/epa-could-approve-gmo-mosquitoes-for-consumers-backyards/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Genetic Engineering Raises Risk Of Weaponised Viruses, Warns WHO Expert With Covid-19 Reminder,” News18. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://www.news18.com/india/genetic-engineering-raises-risk-of-weaponised-viruses-warns-who-expert-with-covid-19-reminder-9103907.html">https://www.news18.com/india/genetic-engineering-raises-risk-of-weaponised-viruses-warns-who-expert-with-covid-19-reminder-9103907.html</a></li>
+<li>Paco, “Anthony Suau | The Making Of Organic Rising,” Organic Consumers. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://organicconsumers.org/anthony-suau-the-making-of-organic-rising/">https://organicconsumers.org/anthony-suau-the-making-of-organic-rising/</a></li>
+<li>H. Tyohemba, “CEFSAR Calls For Critical, Inclusive Dialogue On GMOs.” Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://leadership.ng/cefsar-calls-for-critical-inclusive-dialogue-on-gmos/">https://leadership.ng/cefsar-calls-for-critical-inclusive-dialogue-on-gmos/</a></li>
+
+<li>Paco, “Industry Scandal: The Loss of Nutrients,” Organic Consumers. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://organicconsumers.org/industry-scandal-the-loss-of-nutrients/">https://organicconsumers.org/industry-scandal-the-loss-of-nutrients/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“The GMO High-Risk List: Corn - The Non-GMO Project.” Accessed: Nov. 15, 2024. [Online]. Available: <a href="https://www.nongmoproject.org/blog/the-gmo-high-risk-list-corn/">https://www.nongmoproject.org/blog/the-gmo-high-risk-list-corn/</a></li>
+<li>“Genetic Engineering Raises Risk Of Weaponised Viruses, Warns WHO Expert With Covid-19 Reminder,” News18. Accessed: Nov. 15, 2024. [Online]. Available: <a href="https://www.news18.com/india/genetic-engineering-raises-risk-of-weaponised-viruses-warns-who-expert-with-covid-19-reminder-9103907.html">https://www.news18.com/india/genetic-engineering-raises-risk-of-weaponised-viruses-warns-who-expert-with-covid-19-reminder-9103907.html</a></li>
+<li>“Genetic Engineering Raises Risk Of Weaponised Viruses, Warns WHO Expert With Covid-19 Reminder,” News18. Accessed: Nov. 15, 2024. [Online]. Available: <a href="https://www.news18.com/india/genetic-engineering-raises-risk-of-weaponised-viruses-warns-who-expert-with-covid-19-reminder-9103907.html">https://www.news18.com/india/genetic-engineering-raises-risk-of-weaponised-viruses-warns-who-expert-with-covid-19-reminder-9103907.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Paco, “5 Books About Forests, Trees and the People Who See Both of Them,” Organic Consumers. Accessed: Nov. 15, 2024. [Online]. Available: <a href="https://organicconsumers.org/5-books-about-forests-trees-and-the-people-who-see-both-of-them/">https://organicconsumers.org/5-books-about-forests-trees-and-the-people-who-see-both-of-them/</a></li>
+
+<li>“6 Benefits of Going Non-GMO - The Non-GMO Project.” Accessed: Oct. 18, 2024. [Online]. Available: <a href="https://www.nongmoproject.org/blog/6-benefits-to-going-non-gmo/">https://www.nongmoproject.org/blog/6-benefits-to-going-non-gmo/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Everything You Need To Know about GMOs in Plant-Based Foods - The Non-GMO Project.” Accessed: Oct. 06, 2024. [Online]. Available: <a href="https://www.nongmoproject.org/blog/everything-you-need-to-know-about-gmos-in-plant-based-foods/">https://www.nongmoproject.org/blog/everything-you-need-to-know-about-gmos-in-plant-based-foods/</a></li>
+
+<li>Editor2, “Cutting the crap on gene technology.” Accessed: Sep. 07, 2024. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20451-cutting-the-crap-on-gene-technology">https://gmwatch.org/en/106-news/latest-news/20451-cutting-the-crap-on-gene-technology</a></li>
+<li>Editor2, “George Monbiot’s ally RePlanet accused of smelling ‘like astroturf.’” Accessed: Sep. 07, 2024. [Online]. Available: <a href="https://gmwatch.org/en/news-mobile/mobile-archive/2023-articles2/20297-george-monbiot-s-ally-replanet-accused-of-smelling-like-astroturf">https://gmwatch.org/en/news-mobile/mobile-archive/2023-articles2/20297-george-monbiot-s-ally-replanet-accused-of-smelling-like-astroturf</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>H. A.-S. Oraby, N. A.-F. Aboul-Maaty, H. A. Al-Sharawi, and N. M. Osman, “Horizontal transfer of antibiotic resistance genes into microflora and blood cells in rats fed on GM-diet,” Bulletin of the National Research Centre, vol. 46, no. 1, p. 268, Nov. 2022, doi: 10.1186/s42269-022-00956-0.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Editor1, “Review 567 - Techno-Food Part 2.” Accessed: Aug. 17, 2024. [Online]. Available: <a href="https://gmwatch.org/en/main-menu/news-menu-title/news-reviews/20406-review-567-techno-food-part-2">https://gmwatch.org/en/main-menu/news-menu-title/news-reviews/20406-review-567-techno-food-part-2</a></li>
+<li>Editor1, “Review 566 - Techno-Food Part 1.” Accessed: Aug. 17, 2024. [Online]. Available: <a href="https://gmwatch.org/en/main-menu/news-menu-title/news-reviews/20395-review-566-techno-food-part-1">https://gmwatch.org/en/main-menu/news-menu-title/news-reviews/20395-review-566-techno-food-part-1</a></li>
+<li>“New GMOs in Virtually Every Grocery Aisle - The Non-GMO Project.” Accessed: Aug. 17, 2024. [Online]. Available: <a href="https://www.nongmoproject.org/blog/new-gmos-in-virtually-every-grocery-aisle/">https://www.nongmoproject.org/blog/new-gmos-in-virtually-every-grocery-aisle/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>“The GMO High-Risk List: Papaya - The Non-GMO Project.” Accessed: Jul. 25, 2024. [Online]. Available: <a href="https://www.nongmoproject.org/blog/the-high-risk-list-papaya/">https://www.nongmoproject.org/blog/the-high-risk-list-papaya/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“NOTHING NEW IN NEW GMOS: A new report by Navdanya International exposes the corporate interest behind the gene editing business,” Navdanya international. Accessed: Jun. 22, 2024. [Online]. Available: <a href="https://navdanyainternational.org/a-new-report-by-navdanya-international-exposes-the-corporate-interest-behind-the-gene-editing-business/">https://navdanyainternational.org/a-new-report-by-navdanya-international-exposes-the-corporate-interest-behind-the-gene-editing-business/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“GM Myth Makers.” Accessed: Jun. 22, 2024. [Online]. Available: <a href="https://gmwatch.org/en/articles/gm-myth-makers">https://gmwatch.org/en/articles/gm-myth-makers</a></li>
+
+<li>“Takeaways from Mexico’s final rebuttal on the USMCA GM corn case.” Accessed: Jun. 22, 2024. [Online]. Available: <a href="https://www.iatp.org/takeaways-mexicos-final-rebuttal-usmca-gm-corn-case">https://www.iatp.org/takeaways-mexicos-final-rebuttal-usmca-gm-corn-case</a></li>
+<li>“What’s wrong with GMOs? A lot. - The Non-GMO Project.” Accessed: Jun. 22, 2024. [Online]. Available: <a href="https://www.nongmoproject.org/blog/whats-wrong-with-gmos-a-lot/">https://www.nongmoproject.org/blog/whats-wrong-with-gmos-a-lot/</a></li>
+
+<li>“The Mutant Project,” Macmillan Publishers. Accessed: Jun. 22, 2024. [Online]. Available: <a href="https://us.macmillan.com/books/9781250265357/themutantproject">https://us.macmillan.com/books/9781250265357/themutantproject</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>T. N. S. Reporter, “Commercialisation of genetically modified sugar cane crops strongly opposed,” DAWN.COM. Accessed: Jun. 18, 2024. [Online]. Available: <a href="https://www.dawn.com/news/1840317">https://www.dawn.com/news/1840317</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Voters: Tell Would-be MPs to Take PBO Regulation Seriously,” Beyond GM. Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://beyond-gm.org/voters-tell-would-be-mps-to-take-gmo-regulation-seriously/">https://beyond-gm.org/voters-tell-would-be-mps-to-take-gmo-regulation-seriously/</a></li>
+<li>“Write to your candidate. Genetically engineered PBOs must be labelled and traceable.,” Beyond GM. Accessed: Jun. 15, 2024. [Online]. Available: <a href="https://beyondgm.eaction.online/candidates-pbo-labelling">https://beyondgm.eaction.online/candidates-pbo-labelling</a></li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>Editor2, “Gene editing is not ‘precision breeding’ – international scientists and policy experts.” Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/main-menu/news-menu-title/archive/109-2022/20092-gene-editing-is-not-precision-breeding-international-scientists-and-policy-experts">https://www.gmwatch.org/en/main-menu/news-menu-title/archive/109-2022/20092-gene-editing-is-not-precision-breeding-international-scientists-and-policy-experts</a></li>
+<li>Editor2, “Journalist commissioned by agency to ghostwrite articles defending glyphosate and attacking IARC.” Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/main-menu/news-menu-title/archive/109-2022/20068-journalist-commissioned-by-agency-to-ghostwrite-articles-defending-glyphosate-and-attacking-iarc">https://www.gmwatch.org/en/main-menu/news-menu-title/archive/109-2022/20068-journalist-commissioned-by-agency-to-ghostwrite-articles-defending-glyphosate-and-attacking-iarc</a></li>
+<li>“Voters: Tell Would-be MPs to Take PBO Regulation Seriously,” Beyond GM. Accessed: Jun. 14, 2024. [Online]. Available: <a href="https://beyond-gm.org/voters-tell-would-be-mps-to-take-gmo-regulation-seriously/">https://beyond-gm.org/voters-tell-would-be-mps-to-take-gmo-regulation-seriously/</a></li>
+</ul>
+
+
+
+
+
+<ul class="org-ul">
+<li>“Watch Organic Rising,” <a href="https://www.organicrisingfilm.com/">https://www.organicrisingfilm.com/</a>. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://www.organicrisingfilm.com/host-a-screening/">https://www.organicrisingfilm.com/host-a-screening/</a></li>
+<li>“What’s wrong with GMOs? A lot. - The Non-GMO Project.” Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://www.nongmoproject.org/blog/whats-wrong-with-gmos-a-lot/">https://www.nongmoproject.org/blog/whats-wrong-with-gmos-a-lot/</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>“Watch Organic Rising,” <a href="https://www.organicrisingfilm.com/">https://www.organicrisingfilm.com/</a>. Accessed: Jun. 11, 2024. [Online]. Available: <a href="https://www.organicrisingfilm.com/host-a-screening/">https://www.organicrisingfilm.com/host-a-screening/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Genetic Technologies in Food and Farming - A Manifesto for the Next Government,” Beyond GM. Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://beyond-gm.org/genetic-technologies-in-food-and-farming-a-manifesto/">https://beyond-gm.org/genetic-technologies-in-food-and-farming-a-manifesto/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Field, “Why a misleading ‘red team’ study of the gene synthesis industry wrongly casts doubt on industry safety,” Bulletin of the Atomic Scientists. Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/06/why-a-misleading-red-team-study-of-the-gene-synthesis-industry-wrongly-casts-doubt-on-industry-safety/">https://thebulletin.org/2024/06/why-a-misleading-red-team-study-of-the-gene-synthesis-industry-wrongly-casts-doubt-on-industry-safety/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Colon cancer rates skyrocket among children, teens - UPI.com,” UPI. Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://www.upi.com/Health_News/2024/05/09/colon-cancer-cases-rising/3131715275822/">https://www.upi.com/Health_News/2024/05/09/colon-cancer-cases-rising/3131715275822/</a></li>
+<li>J. Oba, “ActionAid opposes GMOs amid health, IPR, rights’ concerns,” Blueprint Newspapers Limited. Accessed: Jun. 03, 2024. [Online]. Available: <a href="https://blueprint.ng/actionaid-opposes-gmos-amid-health-ipr-rights-concerns/">https://blueprint.ng/actionaid-opposes-gmos-amid-health-ipr-rights-concerns/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>A. A. Wit Maywa Montenegro de, “How Biotech Crops Can Crash&#x2013;and Still Never Fail,” Scientific American. Accessed: Jun. 01, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/how-biotech-crops-can-crash-and-still-never-fail/">https://www.scientificamerican.com/article/how-biotech-crops-can-crash-and-still-never-fail/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>S. Malkan, “The Misleading and Deceitful Ways of Dr. Kevin Folta,” U.S. Right to Know. Accessed: May 31, 2024. [Online]. Available: <a href="https://usrtk.org/industry-pr/kevin-folta/">https://usrtk.org/industry-pr/kevin-folta/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>Poisoned Ground: The Tragedy at Love Canal | Full Documentary | AMERICAN EXPERIENCE | PBS, (Apr. 23, 2024). Accessed: May 26, 2024. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=gR4YBDzPzd0">https://www.youtube.com/watch?v=gR4YBDzPzd0</a></li>
+
+<li>“GMO/Toxin Free USA Connecting the Dots Newsletter May 25, 2024.” Accessed: May 26, 2024. [Online]. Available: <a href="https://gmofreeusa.salsalabs.org/connectthedots20240525_0/index.html">https://gmofreeusa.salsalabs.org/connectthedots20240525_0/index.html</a></li>
+</ul>
+
+
+
+
+<ul class="org-ul">
+<li>S. E. Travers, D. B. Bishop, and C. L. Sagers, “Persistence of genetically engineered canola populations in the U.S. and the adventitious presence of transgenes in the environment,” PLOS ONE, vol. 19, no. 5, p. e0295489, May 2024, doi: 10.1371/journal.pone.0295489.</li>
+<li>P. L. of Science, “Escaped GMO canola plants persist long-term, but may be losing their engineered resistance to pesticides.” Accessed: May 24, 2024. [Online]. Available: <a href="https://phys.org/news/2024-05-gmo-canola-persist-term-resistance.html">https://phys.org/news/2024-05-gmo-canola-persist-term-resistance.html</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>Editor2, “UK’s Food Standards Agency wants to fast-track and greenlight lab-grown meat.” Accessed: May 24, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/106-news/latest-news/20405-uk-s-food-standards-agency-wants-to-fast-track-and-greenlight-lab-grown-meat">https://www.gmwatch.org/en/106-news/latest-news/20405-uk-s-food-standards-agency-wants-to-fast-track-and-greenlight-lab-grown-meat</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Editor2, “Don’t Worry, It’s Safe to Eat – GM foods and the Pusztai affair, part II.” Accessed: May 09, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/main-menu/news-menu-title/archive/109-2022/19986-don-t-worry-it-s-safe-to-eat-gm-foods-and-the-pusztai-affair-part-ii">https://www.gmwatch.org/en/main-menu/news-menu-title/archive/109-2022/19986-don-t-worry-it-s-safe-to-eat-gm-foods-and-the-pusztai-affair-part-ii</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“GMO Bio-Imperialism,” Navdanya international. Accessed: May 06, 2024. [Online]. Available: <a href="https://navdanyainternational.org/gmo-bio-imperialism/">https://navdanyainternational.org/gmo-bio-imperialism/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“How Useful Are GMOs on a Warming Planet? - The Non-GMO Project.” Accessed: Apr. 30, 2024. [Online]. Available: <a href="https://www.nongmoproject.org/blog/how-useful-are-gmos-on-a-warming-planet-middling/">https://www.nongmoproject.org/blog/how-useful-are-gmos-on-a-warming-planet-middling/</a></li>
+
+<li>“The demon seed of Vidarbha: Pests and low yield hit farmers.” Accessed: Apr. 30, 2024. [Online]. Available: <a href="https://www.telegraphindia.com/india/the-demon-seed-of-vidarbha-pests-and-low-yield-hit-farmers/cid/2016399">https://www.telegraphindia.com/india/the-demon-seed-of-vidarbha-pests-and-low-yield-hit-farmers/cid/2016399</a></li>
+
+<li>“Resisting GMO Imperialism – Events in Mexico – March 2024,” Navdanya international. Accessed: Apr. 19, 2024. [Online]. Available: <a href="https://navdanyainternational.org/resisting-gmo-imperialism-events-in-mexico-march-2024/">https://navdanyainternational.org/resisting-gmo-imperialism-events-in-mexico-march-2024/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Editor2, “Leading molecular geneticist warns about the impact of GM (including gene editing) and glyphosate.” Accessed: Apr. 07, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/106-news/latest-news/20055-leading-molecular-geneticist-warns-about-the-impact-of-gm-including-gene-editing-and-glyphosate">https://www.gmwatch.org/en/106-news/latest-news/20055-leading-molecular-geneticist-warns-about-the-impact-of-gm-including-gene-editing-and-glyphosate</a></li>
+
+<li>“U.S. Tries to Force Potentially Hazardous GM Corn on Mexico,” Center for Food Safety. Accessed: Mar. 27, 2024. [Online]. Available: <a href="https://www.centerforfoodsafety.org/press-releases/6894/us-tries-to-force-potentially-hazardous-gm-corn-on-mexico">https://www.centerforfoodsafety.org/press-releases/6894/us-tries-to-force-potentially-hazardous-gm-corn-on-mexico</a></li>
+
+<li>“How Surveillance Keeps the Butterfly Flying High - The Non-GMO Project.” Accessed: Mar. 27, 2024. [Online]. Available: <a href="https://www.nongmoproject.org/blog/how-surveillance-keeps-the-butterfly-flying-high/">https://www.nongmoproject.org/blog/how-surveillance-keeps-the-butterfly-flying-high/</a></li>
+
+<li>“Experts Warn of Toxins in GM Corn Amid US-Mexico Trade Dispute.” Accessed: Mar. 27, 2024. [Online]. Available: <a href="https://www.commondreams.org/news/genetically-modified-corn">https://www.commondreams.org/news/genetically-modified-corn</a></li>
+
+<li>C. C. Kromm Michelle, “CRISPR Will Likely Not Solve Bird Flu,” Scientific American. Accessed: Mar. 25, 2024. [Online]. Available: <a href="https://www.scientificamerican.com/article/crispr-will-likely-not-solve-bird-flu/">https://www.scientificamerican.com/article/crispr-will-likely-not-solve-bird-flu/</a></li>
+
+<li>“Mexico defends GM corn restrictions with science.” Accessed: Mar. 25, 2024. [Online]. Available: <a href="https://www.iatp.org/mexicos-science-based-defense-gm-corn-restrictions">https://www.iatp.org/mexicos-science-based-defense-gm-corn-restrictions</a></li>
+
+<li>“Raising Toxin-Free Children Part 1, PreConception and Prenatal Health - GMO / Toxin Free USA.” Accessed: Mar. 25, 2024. [Online]. Available: <a href="https://toxinfreeusa.org/raising-toxin-free-children-part-1-preconception-and-prenatal-health/">https://toxinfreeusa.org/raising-toxin-free-children-part-1-preconception-and-prenatal-health/</a></li>
+
+<li>OCA, “Real Organic Project signs Groundbreaking Partnership with Germany’s Naturland,” Organic Consumers. Accessed: Mar. 25, 2024. [Online]. Available: <a href="https://organicconsumers.org/real-organic-project-signs-groundbreaking-partnership-with-germanys-naturland/">https://organicconsumers.org/real-organic-project-signs-groundbreaking-partnership-with-germanys-naturland/</a></li>
+<li>OCA, “When Starvation Is a Weapon, the Harvest Is Shame,” Organic Consumers. Accessed: Mar. 25, 2024. [Online]. Available: <a href="https://organicconsumers.org/when-starvation-is-a-weapon-the-harvest-is-shame/">https://organicconsumers.org/when-starvation-is-a-weapon-the-harvest-is-shame/</a></li>
+<li>J. H. Gillam Carey, “‘We are defending your products:’ Emails reveal coordination between US government, industry in foreign trade disputes,” The New Lede. Accessed: Mar. 25, 2024. [Online]. Available: <a href="https://www.thenewlede.org/2024/03/we-are-defending-your-products-emails-reveal-coordination-between-us-government-industry-in-foreign-trade-disputes/">https://www.thenewlede.org/2024/03/we-are-defending-your-products-emails-reveal-coordination-between-us-government-industry-in-foreign-trade-disputes/</a></li>
+
+<li>“100 Studies Find GMOs Are Harmful. Who Says GMOs Are Safe? - GMO / Toxin Free USA.” Accessed: Mar. 19, 2024. [Online]. Available: <a href="https://toxinfreeusa.org/100-studies-find-gmos-are-harmful-who-says-gmos-are-safe/">https://toxinfreeusa.org/100-studies-find-gmos-are-harmful-who-says-gmos-are-safe/</a></li>
+
+<li>“A GMO That’s Made for Social Media - The Non-GMO Project.” Accessed: Mar. 12, 2024. [Online]. Available: <a href="https://www.nongmoproject.org/blog/this-genetically-modified-pink-pineapple-can-be-yours-for-49/">https://www.nongmoproject.org/blog/this-genetically-modified-pink-pineapple-can-be-yours-for-49/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“ANSES report on new genomic techniques (inofficial translation),” testbiotech. Accessed: Mar. 10, 2024. [Online]. Available: <a href="https://www.testbiotech.org/node/3218">https://www.testbiotech.org/node/3218</a></li>
+<li>Editor2, “Risks of new GMOs: French food safety agency ANSES recommends case-by-case assessment.” Accessed: Mar. 10, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/106-news/latest-news/20391-risks-of-new-gmos-french-food-safety-agency-anses-recommends-case-by-case-assessment">https://www.gmwatch.org/en/106-news/latest-news/20391-risks-of-new-gmos-french-food-safety-agency-anses-recommends-case-by-case-assessment</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Editor2, “On-target effects of genome editing techniques: (Un)repaired DNA damage, a hindrance to safety and development?” Accessed: Feb. 26, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/106-news/latest-news/19901-on-target-effects-of-genome-editing-techniques-un-repaired-dna-damage-a-hindrance-to-safety-and-development">https://www.gmwatch.org/en/106-news/latest-news/19901-on-target-effects-of-genome-editing-techniques-un-repaired-dna-damage-a-hindrance-to-safety-and-development</a></li>
+
+<li>Editor2, “Gene editing: Unexpected outcomes and risks.” Accessed: Feb. 26, 2024. [Online]. Available: <a href="https://gmwatch.org/en/news/archive/67-uncategorised/19499-gene-editing-unexpected-outcomes-and-risks">https://gmwatch.org/en/news/archive/67-uncategorised/19499-gene-editing-unexpected-outcomes-and-risks</a></li>
+
+<li>Editor2, “Science supports need to subject gene-edited plants and animals to strict safety assessments.” Accessed: Feb. 26, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/main-menu/news-menu-title/archive/99-2019/19223-peer-reviewed-papers-with-results-that-support-the-need-to-subject-gene-edited-plants-to-strict-safety-assessments">https://www.gmwatch.org/en/main-menu/news-menu-title/archive/99-2019/19223-peer-reviewed-papers-with-results-that-support-the-need-to-subject-gene-edited-plants-to-strict-safety-assessments</a></li>
+
+<li>M. N. Antoniou, C. Robinson, I. Castro, and A. Hilbeck, “Agricultural GMOs and their associated pesticides: misinformation, science, and evidence,” Environmental Sciences Europe, vol. 35, no. 1, p. 76, Sep. 2023, doi: 10.1186/s12302-023-00787-4.</li>
+
+<li>Editor2, “Peer-reviewed critique published of Mark Lynas’s article in which he accused GMO critics of spreading ‘misinformation.’” Accessed: Feb. 24, 2024. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20290-peer-reviewed-critique-published-of-mark-lynas-s-article-accusing-gmo-critics-of-spreading-misinformation">https://gmwatch.org/en/106-news/latest-news/20290-peer-reviewed-critique-published-of-mark-lynas-s-article-accusing-gmo-critics-of-spreading-misinformation</a></li>
+
+<li>“The two women behind a world-changing scientific discovery | Aeon Videos,” Aeon. Accessed: Feb. 23, 2024. [Online]. Available: <a href="https://aeon.co/videos/the-two-women-behind-a-world-changing-scientific-discovery">https://aeon.co/videos/the-two-women-behind-a-world-changing-scientific-discovery</a></li>
+
+<li>Editor2, “CRISPR causes serious DNA damage with high frequency – but it’s often overlooked.” Accessed: Feb. 22, 2024. [Online]. Available: <a href="https://gmwatch.org/en/106-news/latest-news/20275-crispr-gene-editing-causes-serious-unintended-dna-damage-at-high-frequencies">https://gmwatch.org/en/106-news/latest-news/20275-crispr-gene-editing-causes-serious-unintended-dna-damage-at-high-frequencies</a></li>
+
+<li>Editor2, “France’s agriculture ministry blocking publication of ANSES report on food safety of new GM plants.” Accessed: Feb. 21, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/106-news/latest-news/20382-france-s-agriculture-ministry-blocking-publication-of-anses-report-on-food-safety-of-new-gm-plants">https://www.gmwatch.org/en/106-news/latest-news/20382-france-s-agriculture-ministry-blocking-publication-of-anses-report-on-food-safety-of-new-gm-plants</a></li>
+
+<li>Editor2, “GMWatch publishes the full definitive account of the Pusztai affair.” Accessed: Feb. 17, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/106-news/latest-news/19987-gmwatch-publishes-the-full-definitive-account-of-the-pusztai-affair">https://www.gmwatch.org/en/106-news/latest-news/19987-gmwatch-publishes-the-full-definitive-account-of-the-pusztai-affair</a></li>
+
+<li>Editor2, “EU Parliament disregards science by endorsing deregulation of new GM plants.” Accessed: Feb. 15, 2024. [Online]. Available: <a href="https://www.gmwatch.org/en/106-news/latest-news/20380-eu-parliament-disregards-science-by-endorsing-deregulation-of-new-gm-plants">https://www.gmwatch.org/en/106-news/latest-news/20380-eu-parliament-disregards-science-by-endorsing-deregulation-of-new-gm-plants</a></li>
+
+<li>J. Hettinger, “US court bans three weedkillers and finds EPA broke law in approval process,” The Guardian, Feb. 07, 2024. Accessed: Feb. 08, 2024. [Online]. Available: <a href="https://www.theguardian.com/environment/2024/feb/07/us-weedkiller-ban-dicamba-epa">https://www.theguardian.com/environment/2024/feb/07/us-weedkiller-ban-dicamba-epa</a></li>
+
+<li>“Black Land Loss in the United States,” FoodPrint. Accessed: Feb. 08, 2024. [Online]. Available: <a href="https://foodprint.org/issues/black-land-loss-in-the-united-states/">https://foodprint.org/issues/black-land-loss-in-the-united-states/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Corporate-Government ‘Tiger Team’ Gutted GMO Regulations,” Watershed Sentinel. Accessed: Feb. 04, 2024. [Online]. Available: <a href="https://watershedsentinel.ca/articles/corporate-government-tiger-team-gutted-gmo-regulations/">https://watershedsentinel.ca/articles/corporate-government-tiger-team-gutted-gmo-regulations/</a></li>
+
+<li>“Gene editing of crops to end global hunger is propaganda.” Accessed: Feb. 04, 2024. [Online]. Available: <a href="https://www.newindianexpress.com/xplore/2024/Feb/03/gene-editing-of-crops-to-end-global-hunger-is-propaganda">https://www.newindianexpress.com/xplore/2024/Feb/03/gene-editing-of-crops-to-end-global-hunger-is-propaganda</a></li>
+
+<li>O. Correspondents, “Food Security: Experts Knock FG On Genetically Modified Seedlings, Say It’s No Solution To Starvation,” Independent Newspaper Nigeria. Accessed: Feb. 04, 2024. [Online]. Available: <a href="https://independent.ng/food-security-experts-knock-fg-on-genetically-modified-seedlings-say-its-no-solution-to-starvation/">https://independent.ng/food-security-experts-knock-fg-on-genetically-modified-seedlings-say-its-no-solution-to-starvation/</a></li>
+
+<li>“Adani Group complained against farm law. Gov’t diluted it to allow hoarding by corporates.” <a href="https://www.reporters-collective.in/trc/adani-group-complained-against-farm-law-govt-diluted-it-to-allow-hoarding-by-corporates">https://www.reporters-collective.in/trc/adani-group-complained-against-farm-law-govt-diluted-it-to-allow-hoarding-by-corporates</a> (accessed Aug. 18, 2023).</li>
+
+<li>“CRISPR Gene Editing: New Evidence of ‘Potentially Irreversible Safety Risks,’” Children’s Health Defense. <a href="https://childrenshealthdefense.org/defender/crispr-gene-editing-safety-risk/">https://childrenshealthdefense.org/defender/crispr-gene-editing-safety-risk/</a> (accessed Aug. 17, 2023).</li>
+
+<li>“European proposal to deregulate new GMO techniques ‘would be the end of organic farming,’” The Organic &amp; Non-GMO Report. <a href="https://non-gmoreport.com/articles/european-proposal-to-deregulate-new-gmo-techniques-would-be-the-end-of-organic-farming/">https://non-gmoreport.com/articles/european-proposal-to-deregulate-new-gmo-techniques-would-be-the-end-of-organic-farming/</a> (accessed Aug. 10, 2023).</li>
+
+<li>“‘GEAC bypassing States’ right to take a call on GMO trials’: Activists,” Jul. 14, 2023. <a href="https://www.thehindubusinessline.com/economy/agri-business/geac-bypassing-states-right-to-take-a-call-on-gmo-trials/article67079020.ece">https://www.thehindubusinessline.com/economy/agri-business/geac-bypassing-states-right-to-take-a-call-on-gmo-trials/article67079020.ece</a> (accessed Jul. 17, 2023).</li>
+
+<li>“Repealed Farm Laws: ‘Pro-BJP NRI Businessman’s Proposal Paved Way for Agri Corporatisation,’” NewsClick, Aug. 17, 2023. <a href="https://www.newsclick.in/repealed-farm-laws-pro-bjp-nri-businessmans-proposal-paved-way-agri-corporatisation">https://www.newsclick.in/repealed-farm-laws-pro-bjp-nri-businessmans-proposal-paved-way-agri-corporatisation</a> (accessed Aug. 18, 2023).</li>
+
+<li>“Seeds of Death: Unveiling The Lies of GMO’s - Nurdunya Videos,” Nurdunya. <a href="https://nurdunya.org/videos/seeds-of-death-unveiling-the-lies-of-gmos/">https://nurdunya.org/videos/seeds-of-death-unveiling-the-lies-of-gmos/</a> (accessed Jul. 29, 2023).</li>
+
+<li>T. Burkart, “Ban Factory Farms | GMO / Toxin Free USA,” Aug. 08, 2020. <a href="https://toxinfreeusa.org/take-action/ban-factory-farms/">https://toxinfreeusa.org/take-action/ban-factory-farms/</a> (accessed Feb. 16, 2023).</li>
+
+<li>OCA, “Organic Bytes Newsletter #874: 5 GMOs the New FDA Should Take Off the Market,” Organic Consumers. Accessed: Dec. 06, 2024. [Online]. Available: <a href="https://organicconsumers.org/organic-bytes-newsletter-874-5-gmos-the-new-fda-should-take-off-the-market/">https://organicconsumers.org/organic-bytes-newsletter-874-5-gmos-the-new-fda-should-take-off-the-market/</a></li>
+<li>“The GMO High-Risk List: Apples - The Non-GMO Project.” Accessed: Dec. 30, 2024. [Online]. Available: <a href="https://www.nongmoproject.org/blog/the-gmo-high-risk-list-apples/">https://www.nongmoproject.org/blog/the-gmo-high-risk-list-apples/</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>B. R. Evans et al., “Transgenic Aedes aegypti Mosquitoes Transfer Genes into a Natural Population,” Sci Rep, vol. 9, no. 1, p. 13047, Sep. 2019, doi: 10.1038/s41598-019-49660-6.</li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:56</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

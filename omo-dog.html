@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dog</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Dog</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org550d363">1. General</a></li>
+<li><a href="#org432ee63">2. STEMM</a>
+<ul>
+<li><a href="#org79e46bf">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org18e212e">3. World</a>
+<ul>
+<li><a href="#org4916993">3.1. Special Topics</a></li>
+<li><a href="#org7815fa2">3.2. Nation States</a>
+<ul>
+<li><a href="#org4f13ade">3.2.1. India</a></li>
+</ul>
+</li>
+<li><a href="#orge97feb1">3.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org91671d9">4. Arts</a>
+<ul>
+<li><a href="#org75ab87d">4.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgfa18ee2">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org550d363" class="outline-2">
+<h2 id="org550d363"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org432ee63" class="outline-2">
+<h2 id="org432ee63"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org79e46bf" class="outline-3">
+<h3 id="org79e46bf"><span class="section-number-3">2.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org18e212e" class="outline-2">
+<h2 id="org18e212e"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org4916993" class="outline-3">
+<h3 id="org4916993"><span class="section-number-3">3.1.</span> Special Topics</h3>
+</div>
+<div id="outline-container-org7815fa2" class="outline-3">
+<h3 id="org7815fa2"><span class="section-number-3">3.2.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org4f13ade" class="outline-4">
+<h4 id="org4f13ade"><span class="section-number-4">3.2.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org1c227b8"></a>General<br /></li>
+<li><a id="orgddeb0be"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="orgc4af1f4"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="orgcb3e365"></a>Worldly Matters<br />
+<ol class="org-ol">
+<li><a id="org4dd9223"></a>Misc<br />
+<div class="outline-text-6" id="text-3-2-1-3-1">
+<ul class="org-ul">
+<li>“Dogs become the latest target of India’s mob mentality.” Accessed: Nov. 12, 2025. [Online]. Available: <a href="https://caravanmagazine.in/politics/dogs-latest-target-india-mob-mentality">https://caravanmagazine.in/politics/dogs-latest-target-india-mob-mentality</a></li>
+
+<li>“Dogs become the latest target of India’s mob mentality.” Accessed: Oct. 01, 2025. [Online]. Available: <a href="https://caravanmagazine.in/politics/dogs-latest-target-india-mob-mentality">https://caravanmagazine.in/politics/dogs-latest-target-india-mob-mentality</a></li>
+
+<li>D. T. E. Staff, “The stray dog debate in India,” Down To Earth. Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/governance/the-stray-dog-debate-in-india">https://www.downtoearth.org.in/governance/the-stray-dog-debate-in-india</a></li>
+
+<li>S. Manocha, “NEW: PETA India’s Statement on the Supreme Court Verdict on Delhi-NCR Community Dogs - Blog,” PETA India. Accessed: Aug. 26, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/new-peta-indias-statement-on-the-supreme-court-verdict-on-delhi-ncr-community-dogs/">https://www.petaindia.com/blog/new-peta-indias-statement-on-the-supreme-court-verdict-on-delhi-ncr-community-dogs/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orgd1e36e5"></a>Arts<br />
+<ol class="org-ol">
+<li><a id="org0dfc765"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org57d2198"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="orgfab3468"></a>Articles, Essays<br />
+<ul class="org-ul">
+<li><a id="org07b513e"></a>Down To Earth<br />
+<div class="outline-text-7" id="text-org07b513e">
+<ul class="org-ul">
+<li>R. G. Nitnaware Himanshu, “Vultures vs dogs fallout: ‘Availability of food waste in urban areas needs to be stressed too,’” Down To Earth. Accessed: Aug. 21, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/wildlife-biodiversity/vultures-vs-dogs-fallout-availability-of-food-waste-in-urban-areas-needs-to-be-stressed-too">https://www.downtoearth.org.in/wildlife-biodiversity/vultures-vs-dogs-fallout-availability-of-food-waste-in-urban-areas-needs-to-be-stressed-too</a></li>
+<li>R. G. Nitnaware Himanshu, “Vultures vs dogs fallout: ‘Direct link between vulture decline and the sharp rise of free-ranging dogs,’” Down To Earth. Accessed: Aug. 21, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/wildlife-biodiversity/vultures-vs-dogs-fallout-direct-link-between-vulture-decline-and-the-sharp-rise-of-free-ranging-dogs">https://www.downtoearth.org.in/wildlife-biodiversity/vultures-vs-dogs-fallout-direct-link-between-vulture-decline-and-the-sharp-rise-of-free-ranging-dogs</a></li>
+<li>“Urban Menace: Free-ranging dogs are a dogged problem in Indian cities; here is why.” <a href="https://www.downtoearth.org.in/news/governance/urban-menace-free-ranging-dogs-are-a-dogged-problem-in-indian-cities-here-is-why-90143">https://www.downtoearth.org.in/news/governance/urban-menace-free-ranging-dogs-are-a-dogged-problem-in-indian-cities-here-is-why-90143</a> (accessed Jun. 27, 2023).</li>
+<li>“Urban Menace: We should lower our intolerance towards stray dogs.” <a href="https://www.downtoearth.org.in/news/governance/urban-menace-we-should-lower-our-intolerance-towards-stray-dogs-90150">https://www.downtoearth.org.in/news/governance/urban-menace-we-should-lower-our-intolerance-towards-stray-dogs-90150</a> (accessed Jun. 25, 2023).</li>
+<li>“Urban Menace: India’s policies on free-ranging dogs risk public health.” <a href="https://www.downtoearth.org.in/news/governance/urban-menace-india-s-policies-on-free-ranging-dogs-risk-public-health-90149">https://www.downtoearth.org.in/news/governance/urban-menace-india-s-policies-on-free-ranging-dogs-risk-public-health-90149</a> (accessed Jun. 25, 2023).</li>
+<li>H. Nitnaware, “Remove free-ranging dogs from Delhi-NCR localities, never to be released in public spaces: SC,” Down To Earth. Accessed: Aug. 12, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/governance/remove-free-ranging-dogs-from-delhi-ncr-localities-never-to-be-released-in-public-spaces-sc">https://www.downtoearth.org.in/governance/remove-free-ranging-dogs-from-delhi-ncr-localities-never-to-be-released-in-public-spaces-sc</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgdf10185"></a>PETA<br />
+<div class="outline-text-7" id="text-orgdf10185">
+<ul class="org-ul">
+<li>S. Manocha, “FIR Registered For Attempted Killing of a Dog in Mumbai, Following PETA India Intervention - Blog,” PETA India. Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/fir-registered-for-attempted-killing-of-a-dog-in-mumbai-following-peta-india-intervention/">https://www.petaindia.com/blog/fir-registered-for-attempted-killing-of-a-dog-in-mumbai-following-peta-india-intervention/</a></li>
+<li>S. Manocha, “FIR Registered For Attempted Killing of a Dog in Mumbai, Following PETA India Intervention - Blog,” PETA India. Accessed: Aug. 15, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/fir-registered-for-attempted-killing-of-a-dog-in-mumbai-following-peta-india-intervention/">https://www.petaindia.com/blog/fir-registered-for-attempted-killing-of-a-dog-in-mumbai-following-peta-india-intervention/</a></li>
+<li>“Join John Abraham and PETA India in Saving Delhi Dogs.” Accessed: Aug. 13, 2025. [Online]. Available: <a href="https://secure.petaindia.com/page/176011/action/1?locale=en-GB">https://secure.petaindia.com/page/176011/action/1?locale=en-GB</a></li>
+<li>S. Manocha, “FIR Registered After Dog Beaten to Death in Bulandshahr in Viral Video, Following PETA India Complaint - Blog,” PETA India. Accessed: Aug. 05, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/fir-registered-after-dog-beaten-to-death-in-bulandshahr-in-viral-video-following-peta-india-complaint/">https://www.petaindia.com/blog/fir-registered-after-dog-beaten-to-death-in-bulandshahr-in-viral-video-following-peta-india-complaint/</a></li>
+<li>S. Manocha, “Central Government Body Animal Welfare Board of India Urges Action on 10 Dogs Allegedly Killed by Police Inspector in Chhattisgarh - Blog,” PETA India. Accessed: Jul. 25, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/central-government-body-animal-welfare-board-of-india-urges-action-on-10-dogs-allegedly-killed-by-police-inspector-in-chhattisgarh/">https://www.petaindia.com/blog/central-government-body-animal-welfare-board-of-india-urges-action-on-10-dogs-allegedly-killed-by-police-inspector-in-chhattisgarh/</a></li>
+<li>S. Manocha, “After Pit Bull is Encouraged to Attack Mumbai Boy, PETA India Renews Call for Maharashtra to Ban Foreign Dog Breeds Bred for Attack - Blog,” PETA India. Accessed: Jul. 23, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/after-pit-bull-is-encouraged-to-attack-mumbai-boy-peta-india-renews-call-for-maharashtra-to-ban-foreign-dog-breeds-bred-for-attack/">https://www.petaindia.com/blog/after-pit-bull-is-encouraged-to-attack-mumbai-boy-peta-india-renews-call-for-maharashtra-to-ban-foreign-dog-breeds-bred-for-attack/</a></li>
+<li>S. Manocha, “Rachakonda: FIR Registered for Poisoning Five Dogs, Four Die and One Survives - Blog,” PETA India. Accessed: Jun. 28, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/rachakonda-fir-registered-for-poisoning-five-dogs-four-die-and-one-survives/">https://www.petaindia.com/blog/rachakonda-fir-registered-for-poisoning-five-dogs-four-die-and-one-survives/</a></li>
+<li>K. Brown, “Seismic Shift as PETA Prompts First-Ever Police Probe of Indian Dog Laboratory,” PETA. Accessed: Jun. 24, 2025. [Online]. Available: <a href="https://www.peta.org/news/peta-prompts-first-police-probe-of-indian-dog-laboratory/">https://www.peta.org/news/peta-prompts-first-police-probe-of-indian-dog-laboratory/</a></li>
+<li>K. Brown, “Seismic Shift as PETA Prompts First-Ever Police Probe of Indian Dog Laboratory,” PETA. Accessed: Jun. 19, 2025. [Online]. Available: <a href="https://www.peta.org/news/peta-prompts-first-police-probe-of-indian-dog-laboratory/">https://www.peta.org/news/peta-prompts-first-police-probe-of-indian-dog-laboratory/</a></li>
+<li>S. Manocha, “Udupi: FIR Registered for Killing a Dog, PETA India Offers Reward of Up to Rs. 50,000 for Information Leading to Arrest - Blog,” PETA India. Accessed: Jun. 10, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/udupi-fir-registered-for-killing-a-dog-peta-india-offers-reward-of-up-to-rs-50000-for-information-leading-to-arrest/">https://www.petaindia.com/blog/udupi-fir-registered-for-killing-a-dog-peta-india-offers-reward-of-up-to-rs-50000-for-information-leading-to-arrest/</a></li>
+<li>S. Manocha, “Delhi: FIR Registered for Beating Dog to Death, Following PETA India Intervention - Blog,” PETA India. Accessed: May 27, 2025. [Online]. Available: <a href="https://www.petaindia.com/blog/delhi-fir-registered-for-beating-dog-to-death-following-peta-india-intervention/">https://www.petaindia.com/blog/delhi-fir-registered-for-beating-dog-to-death-following-peta-india-intervention/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org72771b0"></a>Misc<br />
+<div class="outline-text-7" id="text-org72771b0">
+<ul class="org-ul">
+<li>“And Justice for All,” The Wire. Accessed: Aug. 05, 2025. [Online]. Available: <a href="https://thewire.in/society/and-justice-for-all-street-dog-protection">https://thewire.in/society/and-justice-for-all-street-dog-protection</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="orgc650659"></a>Misc<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge97feb1" class="outline-3">
+<h3 id="orge97feb1"><span class="section-number-3">3.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>E. Callaway, “How ancient humans bred and traded the first domestic dogs,” Nature, Nov. 2025, doi: 10.1038/d41586-025-03755-5.</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>R. Ghai, “International Dog Day 2025: Here is why St Christopher, one of Christianity’s most revered saints, is depicted in the Eastern Orthodox tradition with a canine head,” Down To Earth. Accessed: Aug. 26, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/wildlife-biodiversity/international-dog-day-2025-here-is-why-st-christopher-one-of-christianitys-most-revered-saints-is-depicted-in-the-eastern-orthodox-tradition-with-a-canine-head">https://www.downtoearth.org.in/wildlife-biodiversity/international-dog-day-2025-here-is-why-st-christopher-one-of-christianitys-most-revered-saints-is-depicted-in-the-eastern-orthodox-tradition-with-a-canine-head</a></li>
+
+<li>L. Gershon, “The Sacred and Profane Dogs of Mongolia,” JSTOR Daily. Accessed: Aug. 03, 2025. [Online]. Available: <a href="https://daily.jstor.org/the-sacred-and-profane-dogs-of-mongolia/">https://daily.jstor.org/the-sacred-and-profane-dogs-of-mongolia/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org91671d9" class="outline-2">
+<h2 id="org91671d9"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org75ab87d" class="outline-3">
+<h3 id="org75ab87d"><span class="section-number-3">4.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgfa18ee2" class="outline-2">
+<h2 id="orgfa18ee2"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>“Getting a dog turned our lives upside down but saved our family | Psyche Stories of Change.” Accessed: Aug. 26, 2025. [Online]. Available: <a href="https://psyche.co/stories-of-change/getting-a-dog-turned-our-lives-upside-down-but-saved-our-family">https://psyche.co/stories-of-change/getting-a-dog-turned-our-lives-upside-down-but-saved-our-family</a></li>
+
+<li>“Getting a dog turned our lives upside down but saved our family | Psyche Stories of Change.” Accessed: Aug. 23, 2025. [Online]. Available: <a href="https://psyche.co/stories-of-change/getting-a-dog-turned-our-lives-upside-down-but-saved-our-family">https://psyche.co/stories-of-change/getting-a-dog-turned-our-lives-upside-down-but-saved-our-family</a></li>
+
+<li>“Urban Canine Guardian: Blackie’s Role at Guwahati Intersection.” Accessed: Jun. 25, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/wildlife-biodiversity/blackie-how-a-stray-dog-internalised-his-role-as-guardian-of-a-road-intersection-in-guwahati">https://www.downtoearth.org.in/wildlife-biodiversity/blackie-how-a-stray-dog-internalised-his-role-as-guardian-of-a-road-intersection-in-guwahati</a></li>
+
+<li>“A philosopher of animals gets mauled by a dog | Psyche Stories of Change.” Accessed: Jun. 24, 2025. [Online]. Available: <a href="https://psyche.co/stories-of-change/a-philosopher-of-animals-gets-mauled-by-a-dog">https://psyche.co/stories-of-change/a-philosopher-of-animals-gets-mauled-by-a-dog</a></li>
+
+<li>“Heatstroke in Dogs: Symptoms, Photos, Facts, What to Do,” PETA. Accessed: Jun. 24, 2025. [Online]. Available: <a href="https://www.peta.org/features/how-do-dogs-die-heatstroke/">https://www.peta.org/features/how-do-dogs-die-heatstroke/</a></li>
+
+<li>B. B. Gilson Lauren, “Good boy or bad dog? Our 1 billion pet dogs do real environmental damage,” Down To Earth. Accessed: Apr. 11, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/wildlife-biodiversity/good-boy-or-bad-dog-our-1-billion-pet-dogs-do-real-environmental-damage">https://www.downtoearth.org.in/wildlife-biodiversity/good-boy-or-bad-dog-our-1-billion-pet-dogs-do-real-environmental-damage</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Pink Floyd, Dogs, (Jan. 08, 2016). Accessed: Mar. 27, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=4QA30qkRYy8">https://www.youtube.com/watch?v=4QA30qkRYy8</a></li>
+<li>“Dogs (Pink Floyd song),” Wikipedia. Mar. 20, 2025. Accessed: Mar. 27, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Dogs_(Pink_Floyd_song)&amp;oldid=1281418615">https://en.wikipedia.org/w/index.php?title=Dogs_(Pink_Floyd_song)&amp;oldid=1281418615</a></li>
+</ul>
+
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:56</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

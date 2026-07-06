@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:58 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Coffee</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Coffee</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org52f1770">1. General</a></li>
+<li><a href="#orge257bf6">2. STEMM</a>
+<ul>
+<li><a href="#org548b9e2">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgdacac59">3. Worldly Matters</a>
+<ul>
+<li><a href="#org93b1992">3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgecc6fb0">4. Core</a>
+<ul>
+<li><a href="#org7ea7340">4.1. Products</a>
+<ul>
+<li><a href="#org8c74277">4.1.1. Organic</a></li>
+<li><a href="#org87da6eb">4.1.2. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org6402949">5. Arts</a>
+<ul>
+<li><a href="#org8dee314">5.1. Music</a></li>
+<li><a href="#orgd551a2d">5.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org48f246a">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org52f1770" class="outline-2">
+<h2 id="org52f1770"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orge257bf6" class="outline-2">
+<h2 id="orge257bf6"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org548b9e2" class="outline-3">
+<h3 id="org548b9e2"><span class="section-number-3">2.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>D. Castelvecchi, “Coffee is under threat: how scientists are fighting to save it from extinction,” Nature, Jun. 2026, doi: 10.1038/d41586-026-01965-z.</li>
+
+<li>A. Heidt, “Coffee linked to slower brain ageing in study of 130,000 people,” Nature, Feb. 2026, doi: 10.1038/d41586-026-00409-y.</li>
+
+<li>C. World, “From bean to brew: the chemistry behind the perfect cup of coffee,” Chemistry World. Accessed: Jan. 17, 2026. [Online]. Available: <a href="https://www.chemistryworld.com/webinars/from-bean-to-brew-the-chemistry-behind-the-perfect-cup-of-coffee/4022765.article">https://www.chemistryworld.com/webinars/from-bean-to-brew-the-chemistry-behind-the-perfect-cup-of-coffee/4022765.article</a></li>
+
+<li>“Lab-grown coffee and cocoa: A solution to rising prices and environmental harm?” Accessed: Nov. 06, 2025. [Online]. Available: <a href="https://www.stockholmresilience.org/research/research-stories/2025-01-13-lab-grown-coffee-and-cocoa-a-solution-to-rising-prices-and-environmental-harm.html">https://www.stockholmresilience.org/research/research-stories/2025-01-13-lab-grown-coffee-and-cocoa-a-solution-to-rising-prices-and-environmental-harm.html</a></li>
+
+<li>“New Study Finds Alarming Amount Of Chemicals In Your Favorite Coffee Brands—What To Know,” Delish. Accessed: Sep. 10, 2025. [Online]. Available: <a href="https://www.delish.com/food/a65890338/coffee-contaminants-clean-label-project-study/">https://www.delish.com/food/a65890338/coffee-contaminants-clean-label-project-study/</a></li>
+
+<li>“Why You Should Take a 15-Minute Nap Right After You Drink Coffee, According to Science,” Popular Mechanics. Accessed: Aug. 23, 2025. [Online]. Available: <a href="https://www.popularmechanics.com/science/a65866529/coffee-before-nap-science/">https://www.popularmechanics.com/science/a65866529/coffee-before-nap-science/</a></li>
+
+<li>“Would you like that coffee with iron?,” MIT News | Massachusetts Institute of Technology. Accessed: Aug. 15, 2025. [Online]. Available: <a href="https://news.mit.edu/2025/new-iron-iodine-microparticles-for-fortifying-foods-0813">https://news.mit.edu/2025/new-iron-iodine-microparticles-for-fortifying-foods-0813</a></li>
+
+<li>“How Climate Change is Brewing a Coffee Crisis,” NewsClick. Accessed: Aug. 07, 2025. [Online]. Available: <a href="https://www.newsclick.in/how-climate-change-brewing-coffee-crisis">https://www.newsclick.in/how-climate-change-brewing-coffee-crisis</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdacac59" class="outline-2">
+<h2 id="orgdacac59"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org93b1992" class="outline-3">
+<h3 id="org93b1992"><span class="section-number-3">3.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>L. Gershon, “Coffee for the Resistance,” JSTOR Daily. Accessed: Jun. 28, 2025. [Online]. Available: <a href="https://daily.jstor.org/coffee-for-the-resistance/">https://daily.jstor.org/coffee-for-the-resistance/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgecc6fb0" class="outline-2">
+<h2 id="orgecc6fb0"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org7ea7340" class="outline-3">
+<h3 id="org7ea7340"><span class="section-number-3">4.1.</span> Products</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org8c74277" class="outline-4">
+<h4 id="org8c74277"><span class="section-number-4">4.1.1.</span> Organic</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>“Sorich Organics Arabica Green Coffee Beans 900 Gm | With Chlorogenic : Amazon.in: Health &amp; Personal Care.” Accessed: Mar. 15, 2025. [Online]. Available: <a href="https://www.amazon.in/Sorich-Organics-Arabica-Coffee-Chlorogenic/dp/B0D4TX18P6">https://www.amazon.in/Sorich-Organics-Arabica-Coffee-Chlorogenic/dp/B0D4TX18P6</a></li>
+<li>“Black Baza Coffee, Luna, Dark Roast, Freshly Roasted, Organic, Robusta Cherry (Fine Grind, 250 grams) : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Mar. 15, 2025. [Online]. Available: <a href="https://www.amazon.in/Black-Baza-Coffee-Freshly-Roasted/dp/B09G19R92K">https://www.amazon.in/Black-Baza-Coffee-Freshly-Roasted/dp/B09G19R92K</a></li>
+
+<li>“TWO BROTHERS ORGANIC FARMS Native Araku Valley Filter Coffee (250g) | Wild Cherry Notes | Handpicked &amp; Custom Roasted | Rich Aroma &amp; Citrusy Flavor | No Additives or Preservatives : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Mar. 15, 2025. [Online]. Available: <a href="https://www.amazon.in/TWO-BROTHERS-ORGANIC-FARMS-Filter/dp/B09NQB11GK">https://www.amazon.in/TWO-BROTHERS-ORGANIC-FARMS-Filter/dp/B09NQB11GK</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Pure &amp; Sure Organic Filter Coffee Powder - Bold 200Gm | Traditional South Indian Coffee Powder | Freshly Roasted Beans with Strong Aroma &amp; Flavor (Pack of 2) : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Mar. 15, 2025. [Online]. Available: <a href="https://www.amazon.in/Pure-Sure-Organic-Filter-Coffee/dp/B0DP2G578N">https://www.amazon.in/Pure-Sure-Organic-Filter-Coffee/dp/B0DP2G578N</a></li>
+<li>“Pure &amp; Sure Organic Filter Coffee Powder - Bold 200Gm | Traditional South Indian Coffee Powder | Freshly Roasted Beans with Strong Aroma &amp; Flavor : Amazon.in: Grocery &amp; Gourmet Foods.” Accessed: Mar. 15, 2025. [Online]. Available: <a href="https://www.amazon.in/Pure-Sure-Organic-Coffee-Powder/dp/B00M70Y0QG">https://www.amazon.in/Pure-Sure-Organic-Coffee-Powder/dp/B00M70Y0QG</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org87da6eb" class="outline-4">
+<h4 id="org87da6eb"><span class="section-number-4">4.1.2.</span> Misc</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li>Koinonia</li>
+<li>“Blue Tokai Coffee Roasters,” Blue Tokai Coffee Roasters. <a href="https://bluetokaicoffee.com/">https://bluetokaicoffee.com/</a> (accessed Feb. 13, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org6402949" class="outline-2">
+<h2 id="org6402949"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org8dee314" class="outline-3">
+<h3 id="org8dee314"><span class="section-number-3">5.1.</span> Music</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Bob Dylan, Bob Dylan - One More Cup of Coffee (Official Audio), (Mar. 12, 2019). Accessed: Oct. 08, 2021. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=95cufW4h-gA">https://www.youtube.com/watch?v=95cufW4h-gA</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd551a2d" class="outline-3">
+<h3 id="orgd551a2d"><span class="section-number-3">5.2.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org48f246a" class="outline-2">
+<h2 id="org48f246a"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>A. Ewbank, “4 times drinking coffee was illegal—or even punishable by death,” Popular Science. Accessed: Feb. 09, 2026. [Online]. Available: <a href="https://www.popsci.com/health/coffee-ban-history/">https://www.popsci.com/health/coffee-ban-history/</a></li>
+
+<li>A. Paul, “Scientists figured out the optimal cup of coffee,” Popular Science. Accessed: Dec. 12, 2024. [Online]. Available: <a href="https://www.popsci.com/science/best-coffee-science/">https://www.popsci.com/science/best-coffee-science/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>I. Dumé, “Caffeine boosts perovskite solar cells,” Physics World. Accessed: Nov. 02, 2024. [Online]. Available: <a href="https://physicsworld.com/caffeine-boosts-perovskite-solar-cells/">https://physicsworld.com/caffeine-boosts-perovskite-solar-cells/</a></li>
+<li>M. Banks, “Grounds for celebration as ‘hub of all things coffee’ opens at University of California, Davis,” Physics World. Accessed: Nov. 02, 2024. [Online]. Available: <a href="https://physicsworld.com/grounds-for-celebration-as-hub-of-all-things-coffee-opens-at-university-of-california-davis/">https://physicsworld.com/grounds-for-celebration-as-hub-of-all-things-coffee-opens-at-university-of-california-davis/</a></li>
+<li>R. P. Crease, “Brewing coffee,” Physics World. Accessed: Nov. 02, 2024. [Online]. Available: <a href="https://physicsworld.com/brewing-coffee/">https://physicsworld.com/brewing-coffee/</a></li>
+<li>N. Author, “A PhD in cups of espresso: how logging my coffee consumption helped me write my thesis,” Physics World. Accessed: Nov. 02, 2024. [Online]. Available: <a href="https://physicsworld.com/a-phd-in-cups-of-espresso-how-logging-my-coffee-consumption-helped-me-write-my-thesis/">https://physicsworld.com/a-phd-in-cups-of-espresso-how-logging-my-coffee-consumption-helped-me-write-my-thesis/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><i>“How to enjoy coffee | Psyche Guides,”</i> Psyche. <a href="https://psyche.co/guides/good-coffee-is-like-a-fine-wine-start-with-high-quality-beans">https://psyche.co/guides/good-coffee-is-like-a-fine-wine-start-with-high-quality-beans</a> (accessed Nov. 27, 2020).</li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:58</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cleaning</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Cleaning</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgd8b9533">1. General</a></li>
+<li><a href="#orge729eb3">2. STEMM</a>
+<ul>
+<li><a href="#org4ce55ff">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org03a7d76">3. Core</a>
+<ul>
+<li><a href="#orga153061">3.1. Indoor Cleaning</a>
+<ul>
+<li><a href="#org4f7b622">3.1.1. Products</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org9db2d48">4. Special Topics</a>
+<ul>
+<li><a href="#org4a23274">4.1. Tidying Up</a></li>
+<li><a href="#orgd5e07b9">4.2. Organic Consumers Association</a></li>
+</ul>
+</li>
+<li><a href="#org9a64021">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgd8b9533" class="outline-2">
+<h2 id="orgd8b9533"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-orge729eb3" class="outline-2">
+<h2 id="orge729eb3"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org4ce55ff" class="outline-3">
+<h3 id="org4ce55ff"><span class="section-number-3">2.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>H. H. page, “India is still working on sewer robots,” MIT Technology Review. Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://www.technologyreview.com/2025/08/27/1121423/india-sewer-robots-sanitation/">https://www.technologyreview.com/2025/08/27/1121423/india-sewer-robots-sanitation/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org03a7d76" class="outline-2">
+<h2 id="org03a7d76"><span class="section-number-2">3.</span> Core</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orga153061" class="outline-3">
+<h3 id="orga153061"><span class="section-number-3">3.1.</span> Indoor Cleaning</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org4f7b622" class="outline-4">
+<h4 id="org4f7b622"><span class="section-number-4">3.1.1.</span> Products</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orged2bfa3"></a>Organic<br />
+<div class="outline-text-5" id="text-3-1-1-1">
+<ul class="org-ul">
+<li><b>BubbleNut Wash</b></li>
+</ul>
+</div>
+</li>
+<li><a id="org65291b5"></a>Misc<br />
+<div class="outline-text-5" id="text-3-1-1-2">
+<ul class="org-ul">
+<li>“Dettol All in One Disinfectant Spray - Crisp Linen, 400ml Bottle : Amazon.in: Health &amp; Personal Care.” <a href="https://www.amazon.in/Dettol-All-One-Disinfectant-Spray/dp/B0735JDMPL/ref=rvi_sccl_42/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B0735JDMPL&amp;psc=1">https://www.amazon.in/Dettol-All-One-Disinfectant-Spray/dp/B0735JDMPL/ref=rvi_sccl_42/259-2128365-4891114?pd_rd_w=1ZMRx&amp;content-id=amzn1.sym.59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_p=59eebe5b-59e3-4882-b364-90a7b22774a2&amp;pf_rd_r=JFJ67YHYBK4FY78P6BSW&amp;pd_rd_wg=j9ayQ&amp;pd_rd_r=ff510e40-d402-4923-99cc-87102d61b54b&amp;pd_rd_i=B0735JDMPL&amp;psc=1</a> (accessed Jan. 29, 2023).</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org9db2d48" class="outline-2">
+<h2 id="org9db2d48"><span class="section-number-2">4.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org4a23274" class="outline-3">
+<h3 id="org4a23274"><span class="section-number-3">4.1.</span> Tidying Up</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>M. Kondo, The Life-Changing Manga of Tidying Up: A Magical Story to Spark Joy in Life, Work and Love. Pan Macmillan, 2019.</li>
+<li>M. Kondo, Spark Joy: An Illustrated Guide to the Japanese Art of Tidying. Random House, 2016.</li>
+<li>M. Kondo and S. Sonenshein, Joy at Work: Organizing Your Professional Life. Pan Macmillan, 2020.</li>
+<li>M. Kondo, The Life-changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing. Thorndike Press, a part of Gale, Cengage Learning, 2015.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd5e07b9" class="outline-3">
+<h3 id="orgd5e07b9"><span class="section-number-3">4.2.</span> Organic Consumers Association</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>OCA, “Leading Toxicologist Reveals 4 Key Things To Consider When Choosing Your Cleaning Products – Tackle Dirt Without Harming Your Health or Falling Victim to ‘Green Washing’,” Organic Consumers. Accessed: Mar. 03, 2025. [Online]. Available: <a href="https://organicconsumers.org/leading-toxicologist-reveals-4-key-things-to-consider-when-choosing-your-cleaning-products-tackle-dirt-without-harming-your-health-or-falling-victim-to-green-washing/">https://organicconsumers.org/leading-toxicologist-reveals-4-key-things-to-consider-when-choosing-your-cleaning-products-tackle-dirt-without-harming-your-health-or-falling-victim-to-green-washing/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9a64021" class="outline-2">
+<h2 id="org9a64021"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>J. Thomson, “6 Japanese concepts you need to know, according to Marie Kondo,” Big Think. Accessed: Oct. 23, 2025. [Online]. Available: <a href="https://bigthink.com/mini-philosophy/6-japanese-concepts-you-need-to-know-according-to-marie-kondo/">https://bigthink.com/mini-philosophy/6-japanese-concepts-you-need-to-know-according-to-marie-kondo/</a></li>
+
+<li>“This Homemade Weed Killer Tackles Pesky, Unwanted Plants Without Nasty Chemicals,” Popular Mechanics. Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://www.popularmechanics.com/home/lawn-garden/a65860517/how-to-make-homemade-weed-killer/">https://www.popularmechanics.com/home/lawn-garden/a65860517/how-to-make-homemade-weed-killer/</a></li>
+
+<li>“Swept Aside - RLS Southasia.” Accessed: Jul. 23, 2025. [Online]. Available: <a href="https://www.rosalux.in/details-resources/1225.html">https://www.rosalux.in/details-resources/1225.html</a></li>
+
+<li>Paco, “DIY Non-Toxic All-Purpose Cleaner,” Organic Consumers. Accessed: May 16, 2025. [Online]. Available: <a href="https://organicconsumers.org/diy-non-toxic-all-purpose-cleaner/">https://organicconsumers.org/diy-non-toxic-all-purpose-cleaner/</a></li>
+
+<li>S. Store, “Suma Store: Delivering Ethical Wholefoods, Sustainable Body Care &amp; Household Products.” Accessed: Apr. 30, 2025. [Online]. Available: <a href="https://www.suma-store.coop/">https://www.suma-store.coop/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. Schwartz, “A Supereffective Disinfectant That’s Safe Enough for Your Face? Meet Hypochlorous Acid,” Scientific American. Accessed: Apr. 16, 2025. [Online]. Available: <a href="https://www.scientificamerican.com/article/hypochlorous-acid-is-trending-in-skin-care-and-cleaning-but-does-it-work/">https://www.scientificamerican.com/article/hypochlorous-acid-is-trending-in-skin-care-and-cleaning-but-does-it-work/</a></li>
+
+<li>B. M. Cheng Allen, “Better cleaning of hospital equipment could cut patient infections by one-third — and save money,” Down To Earth. Accessed: Apr. 11, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/health/better-cleaning-of-hospital-equipment-could-cut-patient-infections-by-one-third-and-save-money">https://www.downtoearth.org.in/health/better-cleaning-of-hospital-equipment-could-cut-patient-infections-by-one-third-and-save-money</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. B. Jaarsveld and R. Bragg, “How does resistance to disinfectants happen? We’re on the road to answering the question,” The Conversation. Accessed: Mar. 22, 2025. [Online]. Available: <a href="http://theconversation.com/how-does-resistance-to-disinfectants-happen-were-on-the-road-to-answering-the-question-155752">http://theconversation.com/how-does-resistance-to-disinfectants-happen-were-on-the-road-to-answering-the-question-155752</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>D. Wolfe, “How often should you vacuum? It depends.,” Popular Science. Accessed: Jun. 05, 2024. [Online]. Available: <a href="https://www.popsci.com/diy/how-often-should-you-vacuum/">https://www.popsci.com/diy/how-often-should-you-vacuum/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“How Digital Snooping on Sanitation Workers Is Worsening Their Struggles,” The Wire. <a href="https://thewire.in/labour/how-digital-snooping-on-sanitation-workers-is-worsening-their-struggles">https://thewire.in/labour/how-digital-snooping-on-sanitation-workers-is-worsening-their-struggles</a> (accessed May 05, 2022).</li>
+
+<li>“Tamil Nadu’s DMK government uses police violence to suppress sanitation workers’ anti-privatization protest,” World Socialist Web Site. Accessed: Sep. 09, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/09/09/mkyi-s09.html">https://www.wsws.org/en/articles/2025/09/09/mkyi-s09.html</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:59</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:58 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Drugs, Misc</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Drugs, Misc</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org4f8fc63">1. General</a></li>
+<li><a href="#org7968310">2. STEMM</a>
+<ul>
+<li><a href="#org0b1e42d">2.1. CSE</a></li>
+<li><a href="#orgf15d477">2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgca3d193">3. Worldly Matters</a>
+<ul>
+<li><a href="#org3a0e953">3.1. War On Drugs</a></li>
+<li><a href="#org7c9c23a">3.2. Nation States</a>
+<ul>
+<li><a href="#orgf457c73">3.2.1. India</a></li>
+</ul>
+</li>
+<li><a href="#orgf24470d">3.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgce75419">4. Core</a>
+<ul>
+<li><a href="#org6630b9a">4.1. Intoxicants</a>
+<ul>
+<li><a href="#orgdc9112c">4.1.1. Alcohol</a></li>
+<li><a href="#org77d5397">4.1.2. Mahua</a></li>
+<li><a href="#org8c2324d">4.1.3. Betel</a></li>
+<li><a href="#org79f6ce5">4.1.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org686f2c0">4.2. Stimulants</a>
+<ul>
+<li><a href="#org441bd98">4.2.1. Caffeine</a></li>
+<li><a href="#org7a80015">4.2.2. Nicotine</a></li>
+</ul>
+</li>
+<li><a href="#org5c72529">4.3. Opioids</a></li>
+<li><a href="#org5ddcfcb">4.4. Cannabis</a></li>
+<li><a href="#org15cf8f5">4.5. Cocaine</a></li>
+<li><a href="#org49aa9b9">4.6. LSD</a></li>
+</ul>
+</li>
+<li><a href="#org3f6e04f">5. Arts</a>
+<ul>
+<li><a href="#org81b970d">5.1. Music</a></li>
+<li><a href="#org3231fba">5.2. Literature</a></li>
+<li><a href="#org72bc353">5.3. Films</a></li>
+<li><a href="#orgdaf40a2">5.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org98fb232">6. Special Topics</a>
+<ul>
+<li><a href="#orgfe61f0c">6.1. Transnational Institute</a>
+<ul>
+<li><a href="#org50c5fae">6.1.1. General</a></li>
+<li><a href="#org22ae658">6.1.2. STEMM</a></li>
+<li><a href="#org1092dd8">6.1.3. Worldly Matters</a></li>
+<li><a href="#org83f5d5c">6.1.4. Core</a></li>
+<li><a href="#orgd990080">6.1.5. Arts</a></li>
+<li><a href="#org4ba06d8">6.1.6. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org4f5f324">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org4f8fc63" class="outline-2">
+<h2 id="org4f8fc63"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org7968310" class="outline-2">
+<h2 id="org7968310"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org0b1e42d" class="outline-3">
+<h3 id="org0b1e42d"><span class="section-number-3">2.1.</span> CSE</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>H. Ritchie and M. Roser, “Drug Use,” Our World in Data, Dec. 2019, Accessed: Aug. 12, 2022. [Online]. Available: <a href="https://ourworldindata.org/drug-use">https://ourworldindata.org/drug-use</a></li>
+<li>H. Ritchie and M. Roser, “Opioids, cocaine, cannabis and illicit drugs,” Our World in Data, Mar. 2018, Accessed: Aug. 12, 2022. [Online]. Available: <a href="https://ourworldindata.org/illicit-drug-use">https://ourworldindata.org/illicit-drug-use</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf15d477" class="outline-3">
+<h3 id="orgf15d477"><span class="section-number-3">2.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>“Trippy tobacco? Plants engineered to make five psychedelics at once.” Accessed: Apr. 03, 2026. [Online]. Available: <a href="https://www.science.org/content/article/trippy-tobacco-plants-engineered-make-five-psychedelics-once">https://www.science.org/content/article/trippy-tobacco-plants-engineered-make-five-psychedelics-once</a></li>
+
+<li>“Forecasting U.S. Drug Overdose Mortality By Age | SIAM,” Society for Industrial and Applied Mathematics. Accessed: Apr. 12, 2025. [Online]. Available: <a href="https://www.siam.org/publications/siam-news/articles/forecasting-us-drug-overdose-mortality-by-age/">https://www.siam.org/publications/siam-news/articles/forecasting-us-drug-overdose-mortality-by-age/</a></li>
+
+<li>F. Naudet, “Hallucinogens approved for treating psychiatric disorders: what does the science say?,” The Conversation. Accessed: Dec. 27, 2024. [Online]. Available: <a href="http://theconversation.com/hallucinogens-approved-for-treating-psychiatric-disorders-what-does-the-science-say-245303">http://theconversation.com/hallucinogens-approved-for-treating-psychiatric-disorders-what-does-the-science-say-245303</a></li>
+
+<li>R. B. August 2024, “What’s lurking in your drink and drugs?,” Chemistry World. Accessed: Aug. 13, 2024. [Online]. Available: <a href="https://www.chemistryworld.com/opinion/whats-lurking-in-your-drink-and-drugs/4019859.article">https://www.chemistryworld.com/opinion/whats-lurking-in-your-drink-and-drugs/4019859.article</a></li>
+<li>“Mental illness and substance use: genes show a two-way street | Psyche Ideas,” Psyche. Accessed: Jul. 09, 2024. [Online]. Available: <a href="https://psyche.co/ideas/mental-illness-and-substance-use-genes-show-a-two-way-street">https://psyche.co/ideas/mental-illness-and-substance-use-genes-show-a-two-way-street</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgca3d193" class="outline-2">
+<h2 id="orgca3d193"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org3a0e953" class="outline-3">
+<h3 id="org3a0e953"><span class="section-number-3">3.1.</span> War On Drugs</h3>
+</div>
+<div id="outline-container-org7c9c23a" class="outline-3">
+<h3 id="org7c9c23a"><span class="section-number-3">3.2.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orgf457c73" class="outline-4">
+<h4 id="orgf457c73"><span class="section-number-4">3.2.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org1a158e3"></a>General<br /></li>
+<li><a id="orgf0608ff"></a>STEMM<br />
+<ol class="org-ol">
+<li><a id="orgdd01e35"></a>Computer Science and Engineering<br />
+<div class="outline-text-6" id="text-3-2-1-2-1">
+<ul class="org-ul">
+<li>R. Singh, “Punjab-Haryana HC Flags Rising Drug Smuggling via Drones,” MEDIANAMA. Accessed: Mar. 13, 2025. [Online]. Available: <a href="https://www.medianama.com/2025/03/223-punjab-haryana-hc-calls-for-strict-action-against-drug-smuggling-via-drones/">https://www.medianama.com/2025/03/223-punjab-haryana-hc-calls-for-strict-action-against-drug-smuggling-via-drones/</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2765299"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="orgb812da3"></a>Worldly Matters<br />
+<ol class="org-ol">
+<li><a id="org75c0fd2"></a>Law<br />
+<div class="outline-text-6" id="text-3-2-1-3-1">
+<ul class="org-ul">
+<li>“Is India moving towards legalising marijuana?” Accessed: Mar. 25, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/health/is-india-moving-towards-legalising-marijuana--59633">https://www.downtoearth.org.in/news/health/is-india-moving-towards-legalising-marijuana--59633</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga235388"></a>Misc<br />
+<div class="outline-text-6" id="text-3-2-1-3-2">
+<ul class="org-ul">
+<li>“Community Involvement Vital to Humane Policing on Substance Abuse | The India Forum.” Accessed: Oct. 21, 2024. [Online]. Available: <a href="https://www.theindiaforum.in/forum/community-involvement-vital-humane-policing-substance-abuse">https://www.theindiaforum.in/forum/community-involvement-vital-humane-policing-substance-abuse</a></li>
+
+<li>T. H. Bureau, “Drugs entering country through Gujarat port: Kejriwal,” The Hindu, Dec. 04, 2024. Accessed: Dec. 05, 2024. [Online]. Available: <a href="https://www.thehindu.com/news/cities/Delhi/drugs-entering-country-through-gujarat-port-kejriwal/article68948296.ece">https://www.thehindu.com/news/cities/Delhi/drugs-entering-country-through-gujarat-port-kejriwal/article68948296.ece</a></li>
+
+<li>V. Nanjappa, “Corruption to conducive borders: How Kerala became Bharat’s biggest drug hub,” Organiser. Accessed: Dec. 27, 2024. [Online]. Available: <a href="https://organiser.org/2024/12/26/270945/bharat/corruption-to-conducive-borders-how-kerala-became-bharats-biggest-drug-hub/">https://organiser.org/2024/12/26/270945/bharat/corruption-to-conducive-borders-how-kerala-became-bharats-biggest-drug-hub/</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+<li><a id="orge74d4d3"></a>Core<br /></li>
+<li><a id="org3370829"></a>Arts<br />
+<ol class="org-ol">
+<li><a id="org4190e52"></a>Misc<br /></li>
+</ol>
+</li>
+<li><a id="org0b21283"></a>Special Topics<br />
+<ol class="org-ol">
+<li><a id="org71b6a9e"></a>Drug Addiction Punjab<br />
+<ul class="org-ul">
+<li><a id="org6adaa7e"></a>Misc<br /></li>
+<li><a id="org149f67d"></a>Articles, Essays<br />
+<div class="outline-text-7" id="text-org149f67d">
+<ul class="org-ul">
+<li>“Why Punjab’s war on drugs is failing,” The Times of India, Apr. 13, 2019. Accessed: Dec. 11, 2022. [Online]. Available: <a href="https://timesofindia.indiatimes.com/elections/lok-sabha-elections-2019/punjab/news/why-punjabs-war-on-drugs-is-failing/articleshow/68865411.cms">https://timesofindia.indiatimes.com/elections/lok-sabha-elections-2019/punjab/news/why-punjabs-war-on-drugs-is-failing/articleshow/68865411.cms</a></li>
+<li>“Punjab: The invisible drug addicts,” The Indian Express, Jul. 04, 2019. <a href="https://indianexpress.com/article/india/punjab-the-invisible-drug-addicts-5813991/">https://indianexpress.com/article/india/punjab-the-invisible-drug-addicts-5813991/</a> (accessed Dec. 11, 2022).</li>
+
+<li>“Why has India’s Punjab fallen into the grip of drug abuse?,” BBC News, Feb. 02, 2017. Accessed: Dec. 11, 2022. [Online]. Available: <a href="https://www.bbc.com/news/world-asia-india-38824478">https://www.bbc.com/news/world-asia-india-38824478</a></li>
+<li>“Punjab’s drug menace: ‘I wanted my son to die,’” BBC News, Nov. 23, 2018. Accessed: Dec. 11, 2022. [Online]. Available: <a href="https://www.bbc.com/news/world-asia-india-46218646">https://www.bbc.com/news/world-asia-india-46218646</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org0d17d9d"></a>Films<br />
+<div class="outline-text-7" id="text-org0d17d9d">
+<ul class="org-ul">
+<li>“Watch CAT | Netflix Official Site.” <a href="https://www.netflix.com/in/title/81281063">https://www.netflix.com/in/title/81281063</a> (accessed Dec. 11, 2022).</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><a id="orgb7ccedd"></a>Misc<br />
+<div class="outline-text-5" id="text-3-2-1-7">
+<ul class="org-ul">
+<li>“From ‘Joy-Giver’ to Antidote: Cannabis Consumption in India,” The Wire. Accessed: Nov. 02, 2025. [Online]. Available: <a href="https://thewire.in/the-arts/from-joy-giver-to-antidote-cannabis-consumption-in-india">https://thewire.in/the-arts/from-joy-giver-to-antidote-cannabis-consumption-in-india</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgf24470d" class="outline-3">
+<h3 id="orgf24470d"><span class="section-number-3">3.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>“Global: UN drug control bodies must take urgent action towards ending unlawful use of the death penalty for drug-related offences,” Amnesty International. Accessed: Jun. 26, 2026. [Online]. Available: <a href="https://www.amnesty.org/en/latest/news/2026/06/global-un-drug-control-bodies-must-take-urgent-action-towards-ending-unlawful-use-of-the-death-penalty-for-drug-related-offences/">https://www.amnesty.org/en/latest/news/2026/06/global-un-drug-control-bodies-must-take-urgent-action-towards-ending-unlawful-use-of-the-death-penalty-for-drug-related-offences/</a></li>
+
+<li>“War on Drugs or War on the Poor?,” NewsClick. Accessed: Feb. 16, 2026. [Online]. Available: <a href="https://www.newsclick.in/war-drugs-or-war-poor">https://www.newsclick.in/war-drugs-or-war-poor</a></li>
+
+<li>“This Newsletter Will Make You Angry: The Seventh Newsletter (2026),” Tricontinental: Institute for Social Research. Accessed: Feb. 13, 2026. [Online]. Available: <a href="https://thetricontinental.org/newsletterissue/war-on-drugs-poverty/">https://thetricontinental.org/newsletterissue/war-on-drugs-poverty/</a></li>
+
+<li>R. Vaz, “The War on the Poor: Narcotics, Campesinos, and Capitalism,” Tricontinental: Institute for Social Research. Accessed: Feb. 04, 2026. [Online]. Available: <a href="https://thetricontinental.org/dossier-war-on-the-poor/">https://thetricontinental.org/dossier-war-on-the-poor/</a></li>
+
+<li>C. O. and E. Wyloge, “Smoke and Mirrors: How Intoxicating Hemp Seeped Into the First Recreational Marijuana Market in the Country,” ProPublica. Accessed: Jan. 30, 2026. [Online]. Available: <a href="https://www.propublica.org/article/colorado-marijuana-thc-intoxicating-hemp-regulation">https://www.propublica.org/article/colorado-marijuana-thc-intoxicating-hemp-regulation</a></li>
+
+<li>T. M. P. Reader, “How DMT Converted Terence McKenna Into a Psychedelic Edge Runner,” The MIT Press Reader. Accessed: Nov. 21, 2025. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/how-psychedelias-high-priest-turned-dmt-into-a-revelation/">https://thereader.mitpress.mit.edu/how-psychedelias-high-priest-turned-dmt-into-a-revelation/</a></li>
+
+<li>M. Kozlov, “Psychedelics and immortality: Nature went to a health summit starring RFK and JD Vance,” Nature, Nov. 2025, doi: 10.1038/d41586-025-03790-2.</li>
+
+<li>“Pakistan Navy Seizes Nearly $1 Billion in Drugs in Record Arabian Sea Operations,” OCCRP. Accessed: Oct. 25, 2025. [Online]. Available: <a href="https://www.occrp.org/en/news/pakistan-navy-seizes-nearly-1-billion-in-drugs-in-record-arabian-sea-operations">https://www.occrp.org/en/news/pakistan-navy-seizes-nearly-1-billion-in-drugs-in-record-arabian-sea-operations</a></li>
+
+<li>D. M. White et al., “Scientific distinctions between coca and cocaine support policy reform,” Science, vol. 0, no. 0, p. eaeb2948, Oct. 2025, doi: 10.1126/science.aeb2948.</li>
+
+<li>A. I. With, “Toward an Anti-Capitalist Drug Policy.” Accessed: Oct. 11, 2025. [Online]. Available: <a href="https://jacobin.com/2025/10/colombia-petro-drug-war-cocaine-prohibition-imperialism">https://jacobin.com/2025/10/colombia-petro-drug-war-cocaine-prohibition-imperialism</a></li>
+
+<li>A. I. With, “Toward an Anti-Capitalist Drug Policy.” Accessed: Oct. 06, 2025. [Online]. Available: <a href="https://jacobin.com/2025/10/colombia-petro-drug-war-cocaine-prohibition-imperialism">https://jacobin.com/2025/10/colombia-petro-drug-war-cocaine-prohibition-imperialism</a></li>
+
+<li>our partners D. Arij, “Captagon Drug Networks Adapt and Survive in Middle East After Assad’s Fall,” OCCRP. Accessed: Sep. 23, 2025. [Online]. Available: <a href="https://www.occrp.org/en/feature/captagon-drug-networks-adapt-and-survive-in-middle-east-after-assads-fall">https://www.occrp.org/en/feature/captagon-drug-networks-adapt-and-survive-in-middle-east-after-assads-fall</a></li>
+
+<li>“‘Stained With Blood’: New Port Brings Violent Drug Cartels to Ecuador Fishing Town,” OCCRP. Accessed: Sep. 15, 2025. [Online]. Available: <a href="https://www.occrp.org/en/feature/stained-with-blood-new-port-brings-violent-drug-cartels-to-ecuador-fishing-town">https://www.occrp.org/en/feature/stained-with-blood-new-port-brings-violent-drug-cartels-to-ecuador-fishing-town</a></li>
+
+<li>A. I. With, “The Drugs Are Coming From Inside the Military Base.” Accessed: Sep. 13, 2025. [Online]. Available: <a href="https://jacobin.com/2025/09/drug-trafficking-military-power-crime">https://jacobin.com/2025/09/drug-trafficking-military-power-crime</a></li>
+
+<li>“Trump orders Pentagon to use military force against Latin American drug cartels,” World Socialist Web Site. Accessed: Aug. 16, 2025. [Online]. Available: <a href="https://www.wsws.org/en/articles/2025/08/15/paio-a15.html">https://www.wsws.org/en/articles/2025/08/15/paio-a15.html</a></li>
+
+<li>our partner E. Surti, “Searching For a Secret Narcotrafficking Airstrip in Paraguay’s Wild Forests,” OCCRP. Accessed: Jul. 08, 2025. [Online]. Available: <a href="https://www.occrp.org/en/feature/a-search-for-secret-narcotrafficking-airstrips-in-paraguays-wild-forests">https://www.occrp.org/en/feature/a-search-for-secret-narcotrafficking-airstrips-in-paraguays-wild-forests</a></li>
+
+<li>A. Ghosh, “The Blue-Blood Families That Made Fortunes in the Opium Trade,” Jan. 23, 2024. Accessed: Dec. 27, 2024. [Online]. Available: <a href="https://www.thenation.com/article/society/american-old-money-opium-trade-fortunes/">https://www.thenation.com/article/society/american-old-money-opium-trade-fortunes/</a></li>
+
+<li>“Obituary: Dave Bewley-Taylor | Transnational Institute.” Accessed: Dec. 04, 2024. [Online]. Available: <a href="https://www.tni.org/en/article/obituary-dave-bewley-taylor">https://www.tni.org/en/article/obituary-dave-bewley-taylor</a></li>
+
+<li>R. Ghai, “Germanic warriors used narcotic stimulants in their battles with Rome’s legions: Study,” Down To Earth. Accessed: Dec. 04, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/science-technology/germanic-warriors-used-narcotic-stimulants-in-their-battles-with-romes-legions-study">https://www.downtoearth.org.in/science-technology/germanic-warriors-used-narcotic-stimulants-in-their-battles-with-romes-legions-study</a></li>
+
+<li>“Nationalize Psychedelics.” Accessed: Oct. 26, 2024. [Online]. Available: <a href="https://jacobin.com/2024/10/psychedelics-nationalization-psilocybin-mdma-therapy">https://jacobin.com/2024/10/psychedelics-nationalization-psilocybin-mdma-therapy</a></li>
+
+<li>“A prestigious prize is still named for the disgraced Sackler family. Its winners want to change that.” Accessed: Jun. 07, 2024. [Online]. Available: <a href="https://www.science.org/content/article/prestigious-prize-still-named-disgraced-sackler-family-winners-want-to-change-that">https://www.science.org/content/article/prestigious-prize-still-named-disgraced-sackler-family-winners-want-to-change-that</a></li>
+
+<li>“Illicit drug markets expanding, compounding global crises: UN.” <a href="https://www.downtoearth.org.in/news/health/illicit-drug-markets-expanding-compounding-global-crises-un-90243">https://www.downtoearth.org.in/news/health/illicit-drug-markets-expanding-compounding-global-crises-un-90243</a> (accessed Jun. 27, 2023).</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgce75419" class="outline-2">
+<h2 id="orgce75419"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org6630b9a" class="outline-3">
+<h3 id="org6630b9a"><span class="section-number-3">4.1.</span> Intoxicants</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-orgdc9112c" class="outline-4">
+<h4 id="orgdc9112c"><span class="section-number-4">4.1.1.</span> Alcohol</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>Alcohol: <a href="https://tinyurl.com/37avwvvd">https://tinyurl.com/37avwvvd</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org77d5397" class="outline-4">
+<h4 id="org77d5397"><span class="section-number-4">4.1.2.</span> Mahua</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li>Mahua: <a href="https://tinyurl.com/46dv9k48">https://tinyurl.com/46dv9k48</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8c2324d" class="outline-4">
+<h4 id="org8c2324d"><span class="section-number-4">4.1.3.</span> Betel</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<ul class="org-ul">
+<li>Betel: <a href="https://tinyurl.com/58axaz9a">https://tinyurl.com/58axaz9a</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org79f6ce5" class="outline-4">
+<h4 id="org79f6ce5"><span class="section-number-4">4.1.4.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-org686f2c0" class="outline-3">
+<h3 id="org686f2c0"><span class="section-number-3">4.2.</span> Stimulants</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org441bd98" class="outline-4">
+<h4 id="org441bd98"><span class="section-number-4">4.2.1.</span> Caffeine</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>Caffeine: <a href="https://tinyurl.com/29p5vf2z">https://tinyurl.com/29p5vf2z</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7a80015" class="outline-4">
+<h4 id="org7a80015"><span class="section-number-4">4.2.2.</span> Nicotine</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<ul class="org-ul">
+<li>Nicotine: <a href="https://tinyurl.com/uearxt3f">https://tinyurl.com/uearxt3f</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5c72529" class="outline-3">
+<h3 id="org5c72529"><span class="section-number-3">4.3.</span> Opioids</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>Opioids: <a href="https://tinyurl.com/yc7fwupb">https://tinyurl.com/yc7fwupb</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5ddcfcb" class="outline-3">
+<h3 id="org5ddcfcb"><span class="section-number-3">4.4.</span> Cannabis</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li>Cannabis: <a href="https://tinyurl.com/yc6pd5mz">https://tinyurl.com/yc6pd5mz</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org15cf8f5" class="outline-3">
+<h3 id="org15cf8f5"><span class="section-number-3">4.5.</span> Cocaine</h3>
+<div class="outline-text-3" id="text-4-5">
+<ul class="org-ul">
+<li>Cocaine: <a href="https://tinyurl.com/4h6ysnve">https://tinyurl.com/4h6ysnve</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org49aa9b9" class="outline-3">
+<h3 id="org49aa9b9"><span class="section-number-3">4.6.</span> LSD</h3>
+<div class="outline-text-3" id="text-4-6">
+<ul class="org-ul">
+<li>LSD: <a href="https://tinyurl.com/3vvstfw9">https://tinyurl.com/3vvstfw9</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3f6e04f" class="outline-2">
+<h2 id="org3f6e04f"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org81b970d" class="outline-3">
+<h3 id="org81b970d"><span class="section-number-3">5.1.</span> Music</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Ravi Shankar - Nine Decades Volume 5: Ghanashyam: A Broken Branch. 2017. Accessed: Apr. 08, 2025. [Online]. Available: <a href="https://www.discogs.com/release/14476777-Ravi-Shankar-Nine-Decades-Volume-5-Ghanashyam-A-Broken-Branch">https://www.discogs.com/release/14476777-Ravi-Shankar-Nine-Decades-Volume-5-Ghanashyam-A-Broken-Branch</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3231fba" class="outline-3">
+<h3 id="org3231fba"><span class="section-number-3">5.2.</span> Literature</h3>
+</div>
+<div id="outline-container-org72bc353" class="outline-3">
+<h3 id="org72bc353"><span class="section-number-3">5.3.</span> Films</h3>
+</div>
+<div id="outline-container-orgdaf40a2" class="outline-3">
+<h3 id="orgdaf40a2"><span class="section-number-3">5.4.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org98fb232" class="outline-2">
+<h2 id="org98fb232"><span class="section-number-2">6.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgfe61f0c" class="outline-3">
+<h3 id="orgfe61f0c"><span class="section-number-3">6.1.</span> Transnational Institute</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-org50c5fae" class="outline-4">
+<h4 id="org50c5fae"><span class="section-number-4">6.1.1.</span> General</h4>
+</div>
+
+
+<div id="outline-container-org22ae658" class="outline-4">
+<h4 id="org22ae658"><span class="section-number-4">6.1.2.</span> STEMM</h4>
+</div>
+<div id="outline-container-org1092dd8" class="outline-4">
+<h4 id="org1092dd8"><span class="section-number-4">6.1.3.</span> Worldly Matters</h4>
+<div class="outline-text-4" id="text-6-1-3">
+</div>
+<ol class="org-ol">
+<li><a id="org77031ad"></a>Space and Time<br /></li>
+<li><a id="org2a6ae02"></a>Space, Earth, Life Sciences, Environment, Health, Misc<br /></li>
+<li><a id="orga574b4f"></a>Religions, Spirituality, Misc<br /></li>
+<li><a id="orgdf1341d"></a>SocioPolitical Studies, Law, Misc<br />
+<div class="outline-text-5" id="text-6-1-3-4">
+<ul class="org-ul">
+<li>“UN Drug Control | Transnational Institute.” Accessed: Jun. 09, 2025. [Online]. Available: <a href="https://www.tni.org/en/topic/un-drug-control">https://www.tni.org/en/topic/un-drug-control</a>- “UN Drug Control | Transnational Institute.” Accessed: Jun. 09, 2025. [Online]. Available: <a href="https://www.tni.org/en/topic/un-drug-control">https://www.tni.org/en/topic/un-drug-control</a></li>
+<li>“Drug Law Reform | Transnational Institute.” Accessed: Jun. 09, 2025. [Online]. Available: <a href="https://www.tni.org/en/topic/drug-law-reform">https://www.tni.org/en/topic/drug-law-reform</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgde3b431"></a>Business Studies, Misc<br />
+<div class="outline-text-5" id="text-6-1-3-5">
+<ul class="org-ul">
+<li>“Producers of Crops | Transnational Institute.” Accessed: Jun. 09, 2025. [Online]. Available: <a href="https://www.tni.org/en/topic/producers-of-crops">https://www.tni.org/en/topic/producers-of-crops</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgff51e14"></a>Humanities, Misc<br /></li>
+<li><a id="org5b73263"></a>Security Studies, Misc<br />
+<div class="outline-text-5" id="text-6-1-3-7">
+<ul class="org-ul">
+<li>“Drugs and Conflict - Search | Transnational Institute.” Accessed: Jun. 09, 2025. [Online]. Available: <a href="https://www.tni.org/en/topic/drugs-and-conflict/search?size=n_20_n&amp;filters%5B0%5D%5Bfield%5D=langcode&amp;filters%5B0%5D%5Btype%5D=any&amp;filters%5B0%5D%5Bvalues%5D%5B0%5D=en">https://www.tni.org/en/topic/drugs-and-conflict/search?size=n_20_n&amp;filters%5B0%5D%5Bfield%5D=langcode&amp;filters%5B0%5D%5Btype%5D=any&amp;filters%5B0%5D%5Bvalues%5D%5B0%5D=en</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgbfa573c"></a>Communication, Misc<br /></li>
+</ol>
+</div>
+<div id="outline-container-org83f5d5c" class="outline-4">
+<h4 id="org83f5d5c"><span class="section-number-4">6.1.4.</span> Core</h4>
+<div class="outline-text-4" id="text-6-1-4">
+<ul class="org-ul">
+<li>“Coca Leaf | Transnational Institute.” Accessed: Jun. 09, 2025. [Online]. Available: <a href="https://www.tni.org/en/topic/coca-leaf">https://www.tni.org/en/topic/coca-leaf</a></li>
+<li>“Cannabis | Transnational Institute.” Accessed: Jun. 09, 2025. [Online]. Available: <a href="https://www.tni.org/en/topic/cannabis">https://www.tni.org/en/topic/cannabis</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd990080" class="outline-4">
+<h4 id="orgd990080"><span class="section-number-4">6.1.5.</span> Arts</h4>
+</div>
+<div id="outline-container-org4ba06d8" class="outline-4">
+<h4 id="org4ba06d8"><span class="section-number-4">6.1.6.</span> Misc</h4>
+<div class="outline-text-4" id="text-6-1-6">
+<ul class="org-ul">
+<li>“Scientific distinctions between coca and cocaine support policy reform | Transnational Institute.” Accessed: Oct. 17, 2025. [Online]. Available: <a href="https://www.tni.org/en/publication/scientific-distinctions-between-coca-and-cocaine-support-policy-reform">https://www.tni.org/en/publication/scientific-distinctions-between-coca-and-cocaine-support-policy-reform</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org4f5f324" class="outline-2">
+<h2 id="org4f5f324"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>“The many realities of ayahuasca, from rural Peru to urban China | Aeon Essays.” Accessed: Nov. 26, 2025. [Online]. Available: <a href="https://aeon.co/essays/the-many-realities-of-ayahuasca-from-rural-peru-to-urban-china">https://aeon.co/essays/the-many-realities-of-ayahuasca-from-rural-peru-to-urban-china</a></li>
+
+<li>L. Morgan, “Your guide to Psychedelic-Assisted Therapy.” Accessed: Nov. 25, 2025. [Online]. Available: <a href="https://www.cam.ac.uk/stories/your-guide-to-psychedelic-assisted-therapy">https://www.cam.ac.uk/stories/your-guide-to-psychedelic-assisted-therapy</a></li>
+
+<li>R. Dabas, “Gut bacterium amplifies amphetamine’s addictive pull,” Chemistry World. Accessed: Sep. 29, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/gut-bacterium-amplifies-amphetamines-addictive-pull/4022192.article">https://www.chemistryworld.com/news/gut-bacterium-amplifies-amphetamines-addictive-pull/4022192.article</a></li>
+
+<li>“Psilocybin: A breakthrough in mental health treatment or mere ‘magical’ thinking? | Yale News.” Accessed: Sep. 29, 2025. [Online]. Available: <a href="https://news.yale.edu/2025/09/23/psilocybin-breakthrough-mental-health-treatment-or-mere-magical-thinking">https://news.yale.edu/2025/09/23/psilocybin-breakthrough-mental-health-treatment-or-mere-magical-thinking</a></li>
+
+<li>“A Kichwa activist on ayahuasca’s rise – and what it really means to her people | Aeon Videos,” Aeon. Accessed: Sep. 16, 2025. [Online]. Available: <a href="https://aeon.co/videos/a-kichwa-activist-on-ayahuascas-rise-and-what-it-really-means-to-her-people">https://aeon.co/videos/a-kichwa-activist-on-ayahuascas-rise-and-what-it-really-means-to-her-people</a></li>
+
+<li>K. Kaur, “Scientists capture crystal structures of cannabinoid receptor in action,” Chemistry World. Accessed: Sep. 04, 2025. [Online]. Available: <a href="https://www.chemistryworld.com/news/scientists-capture-crystal-structures-of-cannabinoid-receptor-in-action/4022082.article">https://www.chemistryworld.com/news/scientists-capture-crystal-structures-of-cannabinoid-receptor-in-action/4022082.article</a></li>
+
+<li>P. Ferdinand, “Vaping triples the risk of cigarette smoking in young people, a major review shows,” U.S. Right to Know. Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://usrtk.org/healthwire/vaping-triples-the-risk-of-cigarette-smoking-in-young-people/">https://usrtk.org/healthwire/vaping-triples-the-risk-of-cigarette-smoking-in-young-people/</a></li>
+
+<li>R. Ghai, “Ayahuasca: US tourist’s death in Peru highlights how Amazonia’s sacred hallucinogenic ceremony continues to be the poster child of indigenous knowledge’s misappropriation,” Down To Earth. Accessed: Jun. 19, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/wildlife-biodiversity/ayahuasca-us-tourists-death-in-peru-highlights-how-amazonias-sacred-hallucinogenic-ceremony-continues-to-be-the-poster-child-of-indigenous-knowledges-misappropriation">https://www.downtoearth.org.in/wildlife-biodiversity/ayahuasca-us-tourists-death-in-peru-highlights-how-amazonias-sacred-hallucinogenic-ceremony-continues-to-be-the-poster-child-of-indigenous-knowledges-misappropriation</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Psychedelics are philosophical tools for demolishing assumptions | Psyche Ideas,” Psyche. Accessed: Apr. 18, 2025. [Online]. Available: <a href="https://psyche.co/ideas/psychedelics-are-philosophical-tools-for-demolishing-assumptions">https://psyche.co/ideas/psychedelics-are-philosophical-tools-for-demolishing-assumptions</a></li>
+
+<li>C. Hart, High Price: Drugs, Neuroscience, and Discovering Myself. Penguin, 2013.</li>
+
+<li>“A psychedelic high.” Accessed: May 19, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/news/health/a-psychedelic-high-96060">https://www.downtoearth.org.in/news/health/a-psychedelic-high-96060</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:58</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

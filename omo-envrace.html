@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Environment, Race, Caste, Misc</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Environment, Race, Caste, Misc</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orga16afad">1. General</a></li>
+<li><a href="#org3d52dc9">2. STEMM</a>
+<ul>
+<li><a href="#orga8a4cf1">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org61b8a37">3. World</a>
+<ul>
+<li><a href="#orgaa9c724">3.1. Nation States</a>
+<ul>
+<li><a href="#orgb6bde58">3.1.1. USA</a></li>
+</ul>
+</li>
+<li><a href="#org2236d20">3.2. Caste</a>
+<ul>
+<li><a href="#org605a0dc">3.2.1. General</a></li>
+<li><a href="#orgeda9843">3.2.2. Dalits</a></li>
+<li><a href="#org65f00d5">3.2.3. Special Topics</a></li>
+<li><a href="#org8228813">3.2.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgbed66e6">3.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org9b432d1">4. Core</a>
+<ul>
+<li><a href="#org31f1fc3">4.1. Internet Resources</a></li>
+<li><a href="#org7a95502">4.2. Texts</a></li>
+<li><a href="#org5cf59be">4.3. Articles, Essays</a></li>
+</ul>
+</li>
+<li><a href="#orgbe23eec">5. Special Topics</a>
+<ul>
+<li><a href="#org74d4136">5.1. GreenPeace International</a></li>
+</ul>
+</li>
+<li><a href="#org055ae29">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orga16afad" class="outline-2">
+<h2 id="orga16afad"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Environmental racism,” Wikipedia. Jan. 03, 2025. Accessed: Jan. 04, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Environmental_racism&amp;oldid=1266994000">https://en.wikipedia.org/w/index.php?title=Environmental_racism&amp;oldid=1266994000</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3d52dc9" class="outline-2">
+<h2 id="org3d52dc9"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orga8a4cf1" class="outline-3">
+<h3 id="orga8a4cf1"><span class="section-number-3">2.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org61b8a37" class="outline-2">
+<h2 id="org61b8a37"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgaa9c724" class="outline-3">
+<h3 id="orgaa9c724"><span class="section-number-3">3.1.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgb6bde58" class="outline-4">
+<h4 id="orgb6bde58"><span class="section-number-4">3.1.1.</span> USA</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>C. A. Zimring, Clean and White: A History of Environmental Racism in the United States, Reprint edition. New York, NY London: New York University Press, 2017.</li>
+
+<li>B. E. Johansen, Environmental Racism in the United States and Canada: Seeking Justice and Sustainability, 1st edition. Praeger, 2020.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2236d20" class="outline-3">
+<h3 id="org2236d20"><span class="section-number-3">3.2.</span> Caste</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org605a0dc" class="outline-4">
+<h4 id="org605a0dc"><span class="section-number-4">3.2.1.</span> General</h4>
+</div>
+<div id="outline-container-orgeda9843" class="outline-4">
+<h4 id="orgeda9843"><span class="section-number-4">3.2.2.</span> Dalits</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li>M. Sharma, Caste and Nature: Dalits and Indian Environmental Politics. Oxford University Press, 2017.</li>
+<li>M. Sharma, Dalit Ecologies: Caste and Environment Justice. Cambridge, United Kingdom ; New York, NY: Cambridge University Press, 2025.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org65f00d5" class="outline-4">
+<h4 id="org65f00d5"><span class="section-number-4">3.2.3.</span> Special Topics</h4>
+<div class="outline-text-4" id="text-3-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgea6e18a"></a><b>M. Gadgil</b><br />
+<div class="outline-text-5" id="text-3-2-3-1">
+<ul class="org-ul">
+<li>“How has India’s caste system lasted for so many centuries?” <a href="https://www.downtoearth.org.in/coverage/forests/how-has-india-s-caste-system-lasted-for-so-many-centuries--55117">https://www.downtoearth.org.in/coverage/forests/how-has-india-s-caste-system-lasted-for-so-many-centuries--55117</a> (accessed Apr. 12, 2023).
+<ul class="org-ul">
+<li>M. Gadgil and K. C. Malhotra, “Adaptive significance of the Indian caste system: an ecological perspective,” Ann Hum Biol, vol. 10, no. 5, pp. 465–477, 1983, doi: 10.1080/03014468300006671.</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org1450072"></a>Water<br />
+<div class="outline-text-5" id="text-3-2-3-2">
+<ul class="org-ul">
+<li>T. Roy, “‘Annihilation of Caste’ and the Struggle for Water Equality – The Wire Science.” Accessed: Nov. 26, 2022. [Online]. Available: <a href="https://science.thewire.in/environment/annihilation-caste-struggle-water-equality/">https://science.thewire.in/environment/annihilation-caste-struggle-water-equality/</a></li>
+<li>“Caste’s Role in Shaping Water Access Is Missing From Indian Environmental Discourse,” The Wire. Accessed: Mar. 23, 2024. [Online]. Available: <a href="https://thewire.in/caste/caste-water-access-missing-india-environmental-discourse">https://thewire.in/caste/caste-water-access-missing-india-environmental-discourse</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd5fc26e"></a>Toilets<br />
+<div class="outline-text-5" id="text-3-2-3-3">
+<ul class="org-ul">
+<li>D. Coffey and D. Spears, <b>Where India Goes: Abandoned Toilets, Stunted Development and the Costs of Caste.</b> HarperLitmus, 2017.
+<ul class="org-ul">
+<li>Economics and Medicine, “Where India Goes,” Marginal Revolution, Aug. 28, 2017. <a href="https://marginalrevolution.com/marginalrevolution/2017/08/where-india-goes.html">https://marginalrevolution.com/marginalrevolution/2017/08/where-india-goes.html</a> (accessed Jan. 05, 2022).</li>
+<li>“‘Where India Goes’ Gives a First-Hand Analysis of India’s Poor Early-Life Health and Stunting,” The Wire. <a href="https://thewire.in/books/where-india-goes-diane-coffey-dean-spears">https://thewire.in/books/where-india-goes-diane-coffey-dean-spears</a> (accessed Jan. 05, 2022).</li>
+<li>D. Coffey, “‘We Are Hindus, So How Can We Clean It?’: How Caste Prejudices Promote Open Defecation in Rural India,” The Caravan. <a href="https://caravanmagazine.in/vantage/caste-prejudices-open-defecation-rural-india">https://caravanmagazine.in/vantage/caste-prejudices-open-defecation-rural-india</a> (accessed Jan. 24, 2022).</li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org8228813" class="outline-4">
+<h4 id="org8228813"><span class="section-number-4">3.2.4.</span> Misc</h4>
+</div>
+</div>
+<div id="outline-container-orgbed66e6" class="outline-3">
+<h3 id="orgbed66e6"><span class="section-number-3">3.3.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org9b432d1" class="outline-2">
+<h2 id="org9b432d1"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org31f1fc3" class="outline-3">
+<h3 id="org31f1fc3"><span class="section-number-3">4.1.</span> Internet Resources</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>“Environmental Justice / Environmental Racism.” Accessed: Jan. 04, 2025. [Online]. Available: <a href="https://www.ejnet.org/ej/">https://www.ejnet.org/ej/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7a95502" class="outline-3">
+<h3 id="org7a95502"><span class="section-number-3">4.2.</span> Texts</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>M. Boström and D. J. Davidson, Eds., Environment and Society: Concepts and Challenges, Softcover reprint of the original 1st ed. 2018 edition. Cham, Switzerland: Springer Nature Switzerland AG, 2019.</li>
+<li>K. Meehan, Ed., Race, Nature, and the Environment, 1st edition. London New York: Routledge, 2024.</li>
+<li>M. Y. Lee, M. Cheung, M. A. Robinson, M. Rountree, M. Spencer, and M. L. Teasley, Eds., Dual Pandemics: Creating Racially-Just Responses to a Changing Environment through Research, Practice and Education, 1st edition. Routledge, 2023.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5cf59be" class="outline-3">
+<h3 id="org5cf59be"><span class="section-number-3">4.3.</span> Articles, Essays</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>“Unequal Impact: The Deep Links Between Racism and Climate Change,” Yale E360. Accessed: Jan. 04, 2025. [Online]. Available: <a href="https://e360.yale.edu/features/unequal-impact-the-deep-links-between-inequality-and-climate-change">https://e360.yale.edu/features/unequal-impact-the-deep-links-between-inequality-and-climate-change</a></li>
+<li>M. B. Feldman and H. L. Hsu, “Introduction: Race, Environment, and Representation,” Discourse, vol. 29, no. 2/3, pp. 199–214, 2007, Accessed: Jan. 04, 2025. [Online]. Available: <a href="https://www.jstor.org/stable/41389776">https://www.jstor.org/stable/41389776</a></li>
+<li>A. C. Affairs Public, “The intersection of race and the environment,” Berkeley News. Accessed: Jan. 04, 2025. [Online]. Available: <a href="https://news.berkeley.edu/2020/08/10/race-the-environment/">https://news.berkeley.edu/2020/08/10/race-the-environment/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbe23eec" class="outline-2">
+<h2 id="orgbe23eec"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org74d4136" class="outline-3">
+<h3 id="org74d4136"><span class="section-number-3">5.1.</span> GreenPeace International</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>G. Staff, “Why Race Matters When We Talk About the Environment - Greenpeace,” Greenpeace. Accessed: Jan. 04, 2025. [Online]. Available: <a href="https://www.greenpeace.org/usa/why-race-matters-when-we-talk-about-the-environment/">https://www.greenpeace.org/usa/why-race-matters-when-we-talk-about-the-environment/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org055ae29" class="outline-2">
+<h2 id="org055ae29"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:56</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

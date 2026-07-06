@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:57 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Beer</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Beer</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orge399bdf">1. General</a></li>
+<li><a href="#org48428cd">2. STEMM</a>
+<ul>
+<li><a href="#org2779051">2.1. CSE</a>
+<ul>
+<li><a href="#org04d72e4">2.1.1. AI</a></li>
+</ul>
+</li>
+<li><a href="#org4b7e656">2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgabe0586">3. Worldly Matters</a>
+<ul>
+<li><a href="#org4bd37a2">3.1. Nation States</a>
+<ul>
+<li><a href="#orgfc2d783">3.1.1. India</a></li>
+<li><a href="#org45d80da">3.1.2. USA</a></li>
+</ul>
+</li>
+<li><a href="#org0ab0df4">3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgf064298">4. Core</a>
+<ul>
+<li><a href="#org878fc13">4.1. Buying Guides, Misc</a></li>
+<li><a href="#org7ff66e3">4.2. Variants</a>
+<ul>
+<li><a href="#orgbe080b3">4.2.1. Organic Beer</a></li>
+<li><a href="#orga4e03d4">4.2.2. Wheat Beer</a></li>
+<li><a href="#org641eafe">4.2.3. Non Alcoholic Beer</a></li>
+</ul>
+</li>
+<li><a href="#orgdca3eeb">4.3. Products</a></li>
+<li><a href="#org92b3bc4">4.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgae8a9a9">5. Arts</a>
+<ul>
+<li><a href="#org9be0dfa">5.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org3614683">6. Special Topics</a></li>
+<li><a href="#orgc200d7b">7. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orge399bdf" class="outline-2">
+<h2 id="orge399bdf"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Portal:Beer,” Wikipedia. Feb. 28, 2023. Accessed: Apr. 07, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Portal:Beer&amp;oldid=1142158908">https://en.wikipedia.org/w/index.php?title=Portal:Beer&amp;oldid=1142158908</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org48428cd" class="outline-2">
+<h2 id="org48428cd"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org2779051" class="outline-3">
+<h3 id="org2779051"><span class="section-number-3">2.1.</span> CSE</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org04d72e4" class="outline-4">
+<h4 id="org04d72e4"><span class="section-number-4">2.1.1.</span> AI</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>M. Banks, “Researchers use machine learning to improve the taste of Belgian beers,” Physics World. Accessed: Mar. 27, 2024. [Online]. Available: <a href="https://physicsworld.com/researchers-use-machine-learning-to-improve-the-taste-of-belgium-beers/">https://physicsworld.com/researchers-use-machine-learning-to-improve-the-taste-of-belgium-beers/</a></li>
+<li>“AI could make better beer. Here’s how.,” MIT Technology Review. Accessed: Mar. 28, 2024. [Online]. Available: <a href="https://www.technologyreview.com/2024/03/26/1090156/ai-could-make-better-beer-heres-how/">https://www.technologyreview.com/2024/03/26/1090156/ai-could-make-better-beer-heres-how/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org4b7e656" class="outline-3">
+<h3 id="org4b7e656"><span class="section-number-3">2.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>“‘Save Beer!’ – New Campaign Urges Major Brewers to Avoid Pesticides That Harm Agricultural Systems, Product Quality, and Consumers | Green America.” Accessed: Nov. 16, 2025. [Online]. Available: <a href="https://greenamerica.org/press-release/save-beer-campaign-targets-pesticides-brewing-supply-chains">https://greenamerica.org/press-release/save-beer-campaign-targets-pesticides-brewing-supply-chains</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>M. Banks, “Researchers use machine learning to improve the taste of Belgian beers,” Physics World. Accessed: Aug. 23, 2025. [Online]. Available: <a href="https://physicsworld.com/researchers-use-machine-learning-to-improve-the-taste-of-belgium-beers/">https://physicsworld.com/researchers-use-machine-learning-to-improve-the-taste-of-belgium-beers/</a></li>
+
+<li>I. S. Hornsey, History of Beer and Brewing. Cambridge, UK: Royal Society of Chemistry, 2003.</li>
+
+<li>B. Bienkowski, “Is there PFAS in your pint?,” The New Lede. Accessed: Jul. 25, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/05/pfas-in-beer/">https://www.thenewlede.org/2025/05/pfas-in-beer/</a></li>
+
+<li>B. Bienkowski, “Is there PFAS in your pint?,” The New Lede. Accessed: May 09, 2025. [Online]. Available: <a href="https://www.thenewlede.org/2025/05/pfas-in-beer/">https://www.thenewlede.org/2025/05/pfas-in-beer/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgabe0586" class="outline-2">
+<h2 id="orgabe0586"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org4bd37a2" class="outline-3">
+<h3 id="org4bd37a2"><span class="section-number-3">3.1.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgfc2d783" class="outline-4">
+<h4 id="orgfc2d783"><span class="section-number-4">3.1.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>“There’s bajra in my beer!,” Mongabay-India. Accessed: Oct. 14, 2022. [Online]. Available: <a href="https://india.mongabay.com/2019/08/theres-bajra-in-my-beer/">https://india.mongabay.com/2019/08/theres-bajra-in-my-beer/</a></li>
+
+<li>P. M. Borah, “7 United is a canned rice beer from the Northeast,” The Hindu, Sep. 25, 2024. Accessed: Oct. 02, 2024. [Online]. Available: <a href="https://www.thehindu.com/food/features/7-united-is-a-canned-rice-beer-from-the-northeast/article68673383.ece">https://www.thehindu.com/food/features/7-united-is-a-canned-rice-beer-from-the-northeast/article68673383.ece</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org45d80da" class="outline-4">
+<h4 id="org45d80da"><span class="section-number-4">3.1.2.</span> USA</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>“National Beer Day (United States),” Wikipedia. Apr. 07, 2023. Accessed: Apr. 07, 2023. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=National_Beer_Day_(United_States)&amp;oldid=1148588018">https://en.wikipedia.org/w/index.php?title=National_Beer_Day_(United_States)&amp;oldid=1148588018</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org0ab0df4" class="outline-3">
+<h3 id="org0ab0df4"><span class="section-number-3">3.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>I. S. Hornsey, History of Beer and Brewing. Cambridge, UK: Royal Society of Chemistry, 2003.</li>
+
+<li>“International Beer Day: Pair These 9 Yummy Snacks With Your Beer,” NDTV Food. Accessed: Aug. 01, 2025. [Online]. Available: <a href="https://food.ndtv.com/food-drinks/international-beer-day-take-a-look-at-these-9-snacks-to-pair-with-your-beer-3224819">https://food.ndtv.com/food-drinks/international-beer-day-take-a-look-at-these-9-snacks-to-pair-with-your-beer-3224819</a></li>
+
+<li>R. Ghai, “People were brewing rice beer 10,000 years ago in Neolithic China: Study,” Down To Earth. Accessed: Dec. 11, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/agriculture/people-were-brewing-rice-beer-10000-years-ago-in-neolithic-china-study">https://www.downtoearth.org.in/agriculture/people-were-brewing-rice-beer-10000-years-ago-in-neolithic-china-study</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf064298" class="outline-2">
+<h2 id="orgf064298"><span class="section-number-2">4.</span> Core</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org878fc13" class="outline-3">
+<h3 id="org878fc13"><span class="section-number-3">4.1.</span> Buying Guides, Misc</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>“Good Beer Guide,” Wikipedia. Jul. 14, 2024. Accessed: Nov. 24, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Good_Beer_Guide&amp;oldid=1234480374">https://en.wikipedia.org/w/index.php?title=Good_Beer_Guide&amp;oldid=1234480374</a>
+<ul class="org-ul">
+<li>I. MacLeod, The Good Beer Guide 2025: Coronation Street Edition. CAMRA Books, 2024.</li>
+<li>“The Good Beer Guide 2025,” CAMRA shop. Accessed: Nov. 24, 2024. [Online]. Available: <a href="https://shop1.camra.org.uk/product/the-good-beer-guide-2025/">https://shop1.camra.org.uk/product/the-good-beer-guide-2025/</a></li>
+</ul></li>
+
+<li>“Beer Magazines,” CAMRA - The Campaign for Real Ale. Accessed: Nov. 24, 2024. [Online]. Available: <a href="http://camra.org.uk/beer-magazine">http://camra.org.uk/beer-magazine</a></li>
+
+<li>“CAMRA - The Campaign for Real Ale,” CAMRA - The Campaign for Real Ale. Accessed: Nov. 24, 2024. [Online]. Available: <a href="http://camra.org.uk">http://camra.org.uk</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7ff66e3" class="outline-3">
+<h3 id="org7ff66e3"><span class="section-number-3">4.2.</span> Variants</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-orgbe080b3" class="outline-4">
+<h4 id="orgbe080b3"><span class="section-number-4">4.2.1.</span> Organic Beer</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li>Organic Beer: <a href="https://tinyurl.com/59rn5uyr">https://tinyurl.com/59rn5uyr</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga4e03d4" class="outline-4">
+<h4 id="orga4e03d4"><span class="section-number-4">4.2.2.</span> Wheat Beer</h4>
+</div>
+<div id="outline-container-org641eafe" class="outline-4">
+<h4 id="org641eafe"><span class="section-number-4">4.2.3.</span> Non Alcoholic Beer</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<ul class="org-ul">
+<li>Non Alcoholic Beer: <a href="https://tinyurl.com/y484xsw8">https://tinyurl.com/y484xsw8</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdca3eeb" class="outline-3">
+<h3 id="orgdca3eeb"><span class="section-number-3">4.3.</span> Products</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li>“Heineken brands,” Wikipedia. Oct. 28, 2024. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Heineken_brands&amp;oldid=1253959749">https://en.wikipedia.org/w/index.php?title=Heineken_brands&amp;oldid=1253959749</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Erdinger,” Wikipedia. Oct. 06, 2024. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Erdinger&amp;oldid=1249740830">https://en.wikipedia.org/w/index.php?title=Erdinger&amp;oldid=1249740830</a></li>
+<li>“Hoegaarden Brewery,” Wikipedia. Nov. 07, 2024. Accessed: Nov. 23, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Hoegaarden_Brewery&amp;oldid=1255897056">https://en.wikipedia.org/w/index.php?title=Hoegaarden_Brewery&amp;oldid=1255897056</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org92b3bc4" class="outline-3">
+<h3 id="org92b3bc4"><span class="section-number-3">4.4.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li>“Humble Book Bundle: Brew Your Own Beer for Oktoberfest,” Humble Bundle. Accessed: Sep. 22, 2024. [Online]. Available: <a href="https://www.humblebundle.com/books/brew-your-own-beer-for-oktoberfest-books">https://www.humblebundle.com/books/brew-your-own-beer-for-oktoberfest-books</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgae8a9a9" class="outline-2">
+<h2 id="orgae8a9a9"><span class="section-number-2">5.</span> Arts</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org9be0dfa" class="outline-3">
+<h3 id="org9be0dfa"><span class="section-number-3">5.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org3614683" class="outline-2">
+<h2 id="org3614683"><span class="section-number-2">6.</span> Special Topics</h2>
+</div>
+<div id="outline-container-orgc200d7b" class="outline-2">
+<h2 id="orgc200d7b"><span class="section-number-2">7.</span> Misc</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>M. Banks, “Why foamy heads on Belgium beers last so long,” Physics World. Accessed: Aug. 30, 2025. [Online]. Available: <a href="https://physicsworld.com/why-foamy-heads-on-belgium-beers-last-so-long/">https://physicsworld.com/why-foamy-heads-on-belgium-beers-last-so-long/</a></li>
+
+<li>J. Ahart, “Beer lovers fall into two flavour camps — which one are you in?,” Nature, Aug. 2025, doi: 10.1038/d41586-025-02709-1.</li>
+
+<li>A. Paul, “How to brew the best beer foam, according to physics,” Popular Science. Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://www.popsci.com/science/best-beer-foam-physics/">https://www.popsci.com/science/best-beer-foam-physics/</a></li>
+
+<li>“Mesopotamians found beer celebratory, intoxicating and erotic | Aeon Essays,” Aeon. Accessed: Oct. 25, 2024. [Online]. Available: <a href="https://aeon.co/essays/mesopotamians-found-beer-celebratory-intoxicating-and-erotic">https://aeon.co/essays/mesopotamians-found-beer-celebratory-intoxicating-and-erotic</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:57</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
