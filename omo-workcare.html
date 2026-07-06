@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:57 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Care Work</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Care Work</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf2c5025">1. General</a></li>
+<li><a href="#org140b756">2. STEMM</a>
+<ul>
+<li><a href="#orgf364061">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org463fbdf">3. Worldly Matters</a>
+<ul>
+<li><a href="#orgf8b6692">3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgf00fedc">4. Core</a></li>
+<li><a href="#orgea1d93d">5. Special Topics</a>
+<ul>
+<li><a href="#org8143730">5.1. Transdisciplinary Studies, Interdisciplinary Studies, Misc</a>
+<ul>
+<li><a href="#orga0760c1">5.1.1. Feminist Political Ecology</a></li>
+<li><a href="#org14bb4c7">5.1.2. NeuroScience, Economics</a></li>
+</ul>
+</li>
+<li><a href="#orgbbedeee">5.2. Texts</a></li>
+<li><a href="#orgb226384">5.3. Geisha</a></li>
+<li><a href="#orgd030f58">5.4. Brave AI</a>
+<ul>
+<li><a href="#org0c02648">5.4.1. Q</a></li>
+<li><a href="#org9b7e7c5">5.4.2. A</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgd4b42b0">6. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgf2c5025" class="outline-2">
+<h2 id="orgf2c5025"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Care work,” Wikipedia. Oct. 22, 2024. Accessed: Nov. 25, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Care_work&amp;oldid=1252652451">https://en.wikipedia.org/w/index.php?title=Care_work&amp;oldid=1252652451</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org140b756" class="outline-2">
+<h2 id="org140b756"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgf364061" class="outline-3">
+<h3 id="orgf364061"><span class="section-number-3">2.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>“Expert Comment: How concerned should we be about ‘carebots’? | University of Oxford.” Accessed: Nov. 25, 2025. [Online]. Available: <a href="https://www.ox.ac.uk/news/2025-11-18-expert-comment-how-concerned-should-we-be-about-carebots">https://www.ox.ac.uk/news/2025-11-18-expert-comment-how-concerned-should-we-be-about-carebots</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org463fbdf" class="outline-2">
+<h2 id="org463fbdf"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgf8b6692" class="outline-3">
+<h3 id="orgf8b6692"><span class="section-number-3">3.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>V. Held, The Ethics of Care: Personal, Political, and Global. Oxford University Press, 2005. doi: 10.1093/0195180992.001.0001.</li>
+
+<li>T. Jackson, “Prosperity as health: Why we need an economy of care for a liveable future,” BMJ, vol. 392, p. r2573, Jan. 2026, doi: 10.1136/bmj.r2573.</li>
+
+<li>“Caste and Care Work | Economic and Political Weekly.” Accessed: Jan. 10, 2026. [Online]. Available: <a href="https://www.epw.in/journal/2026/2/commentary/caste-and-care-work.html">https://www.epw.in/journal/2026/2/commentary/caste-and-care-work.html</a></li>
+
+<li>“Why care is the foundation of a thriving society | Mindvalley Book Club with Tim Jackson.” Accessed: Nov. 06, 2025. [Online]. Available: <a href="https://cusp.ac.uk/themes/aetw/tj-mindvalley-bookclub/">https://cusp.ac.uk/themes/aetw/tj-mindvalley-bookclub/</a></li>
+
+<li>“The Risks of Caring,” The India Forum. Accessed: Nov. 03, 2025. [Online]. Available: <a href="https://www.theindiaforum.in/tiffin/risks-caring">https://www.theindiaforum.in/tiffin/risks-caring</a></li>
+
+<li>“Paradox of Care | Economic and Political Weekly.” Accessed: Oct. 18, 2025. [Online]. Available: <a href="https://www.epw.in/journal/2025/42/special-articles/paradox-care.html">https://www.epw.in/journal/2025/42/special-articles/paradox-care.html</a></li>
+
+<li>“Would my relationship with dad survive his predatory caregiver? | Psyche Turning points.” Accessed: Oct. 01, 2025. [Online]. Available: <a href="https://psyche.co/turning-points/would-my-relationship-with-dad-survive-his-predatory-caregiver">https://psyche.co/turning-points/would-my-relationship-with-dad-survive-his-predatory-caregiver</a></li>
+
+<li>“Monthly Review | Care is a relative term,” Monthly Review. Accessed: Sep. 08, 2025. [Online]. Available: <a href="https://monthlyreview.org/2023/12/01/care-is-a-relative-term/">https://monthlyreview.org/2023/12/01/care-is-a-relative-term/</a></li>
+
+<li>Council on Urban Initiatives, Council on Urban Initiatives - Bogotá’s Care System, (Sep. 26, 2022). Accessed: Aug. 29, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=AdlNk0adDAk">https://www.youtube.com/watch?v=AdlNk0adDAk</a></li>
+
+<li>“Perils of Care Work | Economic and Political Weekly.” Accessed: Jul. 19, 2025. [Online]. Available: <a href="https://www.epw.in/journal/2025/26-27/book-reviews/perils-care-work.html">https://www.epw.in/journal/2025/26-27/book-reviews/perils-care-work.html</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf00fedc" class="outline-2">
+<h2 id="orgf00fedc"><span class="section-number-2">4.</span> Core</h2>
+</div>
+<div id="outline-container-orgea1d93d" class="outline-2">
+<h2 id="orgea1d93d"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org8143730" class="outline-3">
+<h3 id="org8143730"><span class="section-number-3">5.1.</span> Transdisciplinary Studies, Interdisciplinary Studies, Misc</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orga0760c1" class="outline-4">
+<h4 id="orga0760c1"><span class="section-number-4">5.1.1.</span> Feminist Political Ecology</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ul class="org-ul">
+<li>M. Gómez, A. K. Voss, and E. Farrelly, “Meanings and Practices of Care in Feminist Political Ecology: An Intergenerational Conversation with Khayaat Fakier and Wendy Harcourt,” in Contours of Feminist Political Ecology, W. Harcourt, A. Agostino, R. Elmhirst, M. Gómez, and P. Kotsila, Eds., Cham: Springer International Publishing, 2023, pp. 155–176. doi: 10.1007/978-3-031-20928-4<sub>7</sub>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org14bb4c7" class="outline-4">
+<h4 id="org14bb4c7"><span class="section-number-4">5.1.2.</span> NeuroScience, Economics</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<ul class="org-ul">
+<li>T. Singer and M. Ricard, Caring Economics. New York: St Martin’s Press, 2015.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbbedeee" class="outline-3">
+<h3 id="orgbbedeee"><span class="section-number-3">5.2.</span> Texts</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>T. Jackson, The Care Economy. Cambridge, UK Hoboken, NJ, USA: Polity Pr, 2025.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>H. Lutz, The Backstage of the Care Economy: Transnational Perspectives on the Commercialisation of Care. London Las Vegas, NV: Pluto Pr, 2025.</li>
+<li>S. Barca, Workers of the Earth: Labour, Ecology and Reproduction in the Age of Climate Change. Erscheinungsort nicht ermittelbar: Pluto Pr, 2024.</li>
+<li>N. Folbre, Making Care Work: Why Our Economy Should Put People First. Oakland, California: University of California Press, 2026.</li>
+<li>P. Nadasen, Care: The Highest Stage of Capitalism. Chicago, IL: Haymarket Books, 2023.</li>
+<li>S. Razavi, “The Political and Social Economy of Care in a Development Context: Conceptual Issues, Research Questions and Policy Options”.</li>
+
+<li>M. Daly, Ed., Care Work: The Quest for Security. London: International Labour Office, 2002.</li>
+<li>M. H. Meyer, Ed., Care Work: Gender, Labor, and the Welfare State, 1st edition. Routledge, 2002.</li>
+
+<li>J. Boddy, C. Cameron, and P. Moss, Eds., Care Work: Present and Future, 1st edition. London New York: Routledge, 2005.</li>
+
+<li>C. Benoit and H. Hallgrimsdottir, Valuing Care Work: Comparative Perspectives. University of Toronto Press, 2011.</li>
+
+<li>T. Kröger and S. Yeandle, Eds., Combining Paid Work and Family Care: Policies and Experiences in International Perspective, 1st edition. Policy Press, 2014.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb226384" class="outline-3">
+<h3 id="orgb226384"><span class="section-number-3">5.3.</span> Geisha</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>Geisha: <a href="https://tinyurl.com/258mn5xz">https://tinyurl.com/258mn5xz</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd030f58" class="outline-3">
+<h3 id="orgd030f58"><span class="section-number-3">5.4.</span> Brave AI</h3>
+<div class="outline-text-3" id="text-5-4">
+</div>
+<div id="outline-container-org0c02648" class="outline-4">
+<h4 id="org0c02648"><span class="section-number-4">5.4.1.</span> Q</h4>
+<div class="outline-text-4" id="text-5-4-1">
+<ul class="org-ul">
+<li>Care Work Books Written By Post Modern Economists</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9b7e7c5" class="outline-4">
+<h4 id="org9b7e7c5"><span class="section-number-4">5.4.2.</span> A</h4>
+<div class="outline-text-4" id="text-5-4-2">
+</div>
+<ol class="org-ol">
+<li><a id="org154c30b"></a>Annotated Resources<br />
+<div class="outline-text-5" id="text-5-4-2-1">
+<ul class="org-ul">
+<li>The search results do not explicitly categorize authors of care work
+books as "post-modern economists," but they highlight several
+contemporary economists and scholars who approach the care economy
+through narrative, philosophical, feminist, and critical lenses
+rather than traditional neoclassical models.</li>
+
+<li><b><b>Tim Jackson</b></b> is a prominent economist whose recent work, <b><b><b>The
+Care Economy</b></b></b>, shifts away from standard economic analysis toward
+a narrative-driven, philosophical approach. He argues that
+<b><b>prosperity should be understood in terms of health rather than
+wealth</b></b> and that the economy’s purpose should be care rather than
+growth. His writing blends economics with history, poetry, and
+mythology, reflecting a post-modern or post-growth sensibility that
+critiques capitalist growth paradigms.</li>
+
+<li><b><b>Helma Lutz</b></b>, a sociologist and former professor of Women’s and
+Gender Studies, authored <b><b><b>The Backstage of the Care Economy</b></b></b>
+(published May 2025). This work examines the <b><b>commercialization of
+migrant care work</b></b> and transnational motherhood, grounding its
+analysis in radical social thought and feminist critiques of
+capitalism. While sociological rather than strictly economic, it is
+cited as a key text in reshaping economic thinking on care and
+migration.</li>
+
+<li><b><b>Premilla Nadasen</b></b>, a historian, wrote <b><b><b>Care</b></b></b>, which traces
+the care economy’s roots in <b><b>racial capitalism</b></b> and slavery to the
+modern "care-industrial complex." Her work highlights how the
+exploitation of reproductive labor serves profit motives and
+emphasizes <b><b>collective care and resistance</b></b> by low-wage workers,
+immigrants, and women of color.</li>
+
+<li>Other relevant perspectives include:
+<ul class="org-ul">
+<li><b><b>Feminist Economics</b></b>: Scholars like <b><b>Naila Razavi</b></b> and <b><b>Nancy
+Folbre</b></b> are cited for establishing that unpaid care work is
+crucial to human wellbeing and for developing models like the
+<b><b>care diamond</b></b> to link market accumulation with social
+reproduction.</li>
+<li><b><b>Ecological Economics</b></b>: Researchers like <b><b>Paola Barca</b></b> and
+<b><b>Lang</b></b> discuss <b><b>"Earthcare"</b></b> and indigenous care ethics,
+linking care for the environment and community to social
+reproduction and climate resilience.</li>
+<li><b><b>Health Care Reform</b></b>: Economists <b><b>Liran Einav</b></b> and <b><b>Amy
+Finkelstein</b></b> propose a <b><b>reboot of U.S. health care</b></b> with
+universal basic coverage, focusing on systemic efficiency rather
+than traditional care economy theory.</li>
+</ul></li>
+
+<li>These works collectively represent a shift in economic thought
+toward <b><b>care, sustainability, and social reproduction</b></b>, often
+employing interdisciplinary methods that challenge conventional
+economic assumptions.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd4b42b0" class="outline-2">
+<h2 id="orgd4b42b0"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>“Analysing the Co-constitution of Unpaid Care Labour and Paid Work | Economic and Political Weekly.” Accessed: Jul. 05, 2025. [Online]. Available: <a href="https://www.epw.in/journal/2025/26-27/review-gender-studies/analysing-co-constitution-unpaid-care-labour-and.html">https://www.epw.in/journal/2025/26-27/review-gender-studies/analysing-co-constitution-unpaid-care-labour-and.html</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“How Care Shapes Work | Economic and Political Weekly.” Accessed: Jul. 05, 2025. [Online]. Available: <a href="https://www.epw.in/journal/2025/26-27/review-gender-studies/how-care-shapes-work.html">https://www.epw.in/journal/2025/26-27/review-gender-studies/how-care-shapes-work.html</a></li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>K. Faulke, Every Kind of People: A Journey into the Heart of Care Work. The BBC Radio 4 Book of the Week. Penguin, 2024.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Recognising Care Work(ers) | Economic and Political Weekly.” Accessed: May 31, 2025. [Online]. Available: <a href="https://www.epw.in/journal/2024/26-27/review-womens-studies/recognising-care-workers.html">https://www.epw.in/journal/2024/26-27/review-womens-studies/recognising-care-workers.html</a></li>
+
+<li>“How to get the most out of caregiving | Psyche Guides,” Psyche. Accessed: Jul. 11, 2024. [Online]. Available: <a href="https://psyche.co/guides/how-to-get-the-most-out-of-caregiving">https://psyche.co/guides/how-to-get-the-most-out-of-caregiving</a></li>
+
+<li>B. P. Cumbers Lavinia Steinfort,Jerry van den Berge,Andrew, “Care, public services and the importance of integrated local public ownership | Transnational Institute.” Accessed: Apr. 19, 2025. [Online]. Available: <a href="https://www.tni.org/en/publication/care-public-services-and-the-importance-of-integrated-local-public-ownership">https://www.tni.org/en/publication/care-public-services-and-the-importance-of-integrated-local-public-ownership</a></li>
+
+<li>“No Time for Care Work? - L!NX | was sonst.” Accessed: Mar. 25, 2025. [Online]. Available: <a href="https://linx.rosalux.de/en/no-time-for-care-work">https://linx.rosalux.de/en/no-time-for-care-work</a></li>
+
+<li>“Putting care at the center | inGenere.” Accessed: Oct. 06, 2024. [Online]. Available: <a href="https://www.ingenere.it/en/articles/putting-care-center">https://www.ingenere.it/en/articles/putting-care-center</a></li>
+
+<li>“Humans are uniquely reliant on caregivers. This isn’t a weakness, but a wondrous gift | Psyche Videos.” Accessed: Jul. 02, 2025. [Online]. Available: <a href="https://psyche.co/videos/humans-are-uniquely-reliant-on-caregivers-this-isnt-a-weakness-but-a-wondrous-gift">https://psyche.co/videos/humans-are-uniquely-reliant-on-caregivers-this-isnt-a-weakness-but-a-wondrous-gift</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:57</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

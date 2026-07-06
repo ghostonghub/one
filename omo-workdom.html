@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-07-06 Mon 21:59 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Domestic Work</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Domestic Work</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org7c28b72">1. General</a></li>
+<li><a href="#orgda9642b">2. STEMM</a>
+<ul>
+<li><a href="#orgc4dfefd">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgee20093">3. Worldly Matters</a>
+<ul>
+<li><a href="#orge274f7f">3.1. Space and Time</a></li>
+<li><a href="#orgb4fd27a">3.2. Space, Earth, Life Sciences, Environment, Health, Misc</a></li>
+<li><a href="#orgbdf925d">3.3. Religions, Spirituality, Misc</a>
+<ul>
+<li><a href="#org9580ca0">3.3.1. Christianity</a></li>
+</ul>
+</li>
+<li><a href="#org17ec953">3.4. SocioPolitical Studies, Law, Misc</a>
+<ul>
+<li><a href="#orgcaee587">3.4.1. Nation States</a></li>
+</ul>
+</li>
+<li><a href="#orgc2ace83">3.5. Business Studies, Misc</a></li>
+<li><a href="#orgb46b754">3.6. Humanities, Misc</a></li>
+<li><a href="#orgc289d6c">3.7. Security Studies, Misc</a></li>
+<li><a href="#org8869fa0">3.8. Communication, Misc</a></li>
+<li><a href="#orgc5a0045">3.9. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgb02f2d6">4. Arts</a>
+<ul>
+<li><a href="#org9271977">4.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org00fcd68">5. Special Topics</a>
+<ul>
+<li><a href="#org11638b8">5.1. Migration, Domestic Work</a>
+<ul>
+<li><a href="#org692363a">5.1.1. Book Series</a></li>
+<li><a href="#orgfa37bc2">5.1.2. Globalization</a></li>
+<li><a href="#org86805dd">5.1.3. Europe</a></li>
+<li><a href="#org01e489f">5.1.4. Spain</a></li>
+<li><a href="#org8b55f4b">5.1.5. UK, USA</a></li>
+<li><a href="#orgea4c2d1">5.1.6. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc5b3fd2">5.2. America Latin</a></li>
+<li><a href="#orgf1eef1b">5.3. France</a></li>
+</ul>
+</li>
+<li><a href="#orge957269">6. Misc</a>
+<ul>
+<li><a href="#org145776b">6.1. Computer Science and Engineering</a></li>
+<li><a href="#orgbbddcad">6.2. COVID-19</a></li>
+<li><a href="#org91b0ed8">6.3. Misc</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org7c28b72" class="outline-2">
+<h2 id="org7c28b72"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Domestic worker,” Wikipedia. Jun. 15, 2025. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Domestic_worker&amp;oldid=1295734579">https://en.wikipedia.org/w/index.php?title=Domestic_worker&amp;oldid=1295734579</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgda9642b" class="outline-2">
+<h2 id="orgda9642b"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgc4dfefd" class="outline-3">
+<h3 id="orgc4dfefd"><span class="section-number-3">2.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgee20093" class="outline-2">
+<h2 id="orgee20093"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orge274f7f" class="outline-3">
+<h3 id="orge274f7f"><span class="section-number-3">3.1.</span> Space and Time</h3>
+</div>
+<div id="outline-container-orgb4fd27a" class="outline-3">
+<h3 id="orgb4fd27a"><span class="section-number-3">3.2.</span> Space, Earth, Life Sciences, Environment, Health, Misc</h3>
+</div>
+<div id="outline-container-orgbdf925d" class="outline-3">
+<h3 id="orgbdf925d"><span class="section-number-3">3.3.</span> Religions, Spirituality, Misc</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org9580ca0" class="outline-4">
+<h4 id="org9580ca0"><span class="section-number-4">3.3.1.</span> Christianity</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<ul class="org-ul">
+<li>“Zita,” Wikipedia. Feb. 27, 2025. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Zita&amp;oldid=1277921509">https://en.wikipedia.org/w/index.php?title=Zita&amp;oldid=1277921509</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org17ec953" class="outline-3">
+<h3 id="org17ec953"><span class="section-number-3">3.4.</span> SocioPolitical Studies, Law, Misc</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-orgcaee587" class="outline-4">
+<h4 id="orgcaee587"><span class="section-number-4">3.4.1.</span> Nation States</h4>
+<div class="outline-text-4" id="text-3-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="org5ae9b09"></a>India<br />
+<ol class="org-ol">
+<li><a id="orge95a9cd"></a>General<br /></li>
+<li><a id="orge1f8450"></a>STEMM<br />
+<ul class="org-ul">
+<li><a id="org430b94a"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orge2f52eb"></a>Worldly Matters<br />
+<ul class="org-ul">
+<li><a id="org1c40588"></a>Misc<br />
+<div class="outline-text-7" id="text-org1c40588">
+<ul class="org-ul">
+<li>“Housekeeping Staff at Ashoka University ‘Forced’ to End Strike, Apologise After Salaries Withheld,” The Wire. Accessed: Sep. 10, 2025. [Online]. Available: <a href="https://thewire.in/labour/housekeeping-staff-at-ashoka-university-forced-to-end-strike-apologise-after-salaries-withheld">https://thewire.in/labour/housekeeping-staff-at-ashoka-university-forced-to-end-strike-apologise-after-salaries-withheld</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="orga520b11"></a>Arts<br />
+<ul class="org-ul">
+<li><a id="orgaa08d41"></a>Misc<br /></li>
+</ul>
+</li>
+<li><a id="orgb6e11e2"></a>Special Topics<br />
+<ul class="org-ul">
+<li><a id="orgdf77bd3"></a>Texts<br />
+<div class="outline-text-7" id="text-orgdf77bd3">
+<ul class="org-ul">
+<li>T. Lahiri, Maid in India: Stories of Inequality and Opportunity Inside Our Homes. Aleph Book Company, 2017.</li>
+<li>N. N, Working at Others Homes. New Delhi: Tulika Books, 2019.</li>
+
+<li>U. Mahanta and I. Gupta, Eds., Recognition of the Rights of Domestic Workers in India: Challenges and the Way Forward, 1st ed. 2019 edition. Springer, 2019.</li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+<li><a id="org4fe133b"></a>Misc<br />
+<div class="outline-text-6" id="text-3-4-1-1-6">
+<ul class="org-ul">
+<li>N. Khan, “Long Work Hours, Less Pay, And No Legal Protection: Female Domestic Workers Most Vulnerable To Abuse,” Feminism in India. Accessed: Sep. 16, 2025. [Online]. Available: <a href="https://feminisminindia.com/?p=189578">https://feminisminindia.com/?p=189578</a></li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgc2ace83" class="outline-3">
+<h3 id="orgc2ace83"><span class="section-number-3">3.5.</span> Business Studies, Misc</h3>
+</div>
+<div id="outline-container-orgb46b754" class="outline-3">
+<h3 id="orgb46b754"><span class="section-number-3">3.6.</span> Humanities, Misc</h3>
+</div>
+<div id="outline-container-orgc289d6c" class="outline-3">
+<h3 id="orgc289d6c"><span class="section-number-3">3.7.</span> Security Studies, Misc</h3>
+</div>
+<div id="outline-container-org8869fa0" class="outline-3">
+<h3 id="org8869fa0"><span class="section-number-3">3.8.</span> Communication, Misc</h3>
+</div>
+<div id="outline-container-orgc5a0045" class="outline-3">
+<h3 id="orgc5a0045"><span class="section-number-3">3.9.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-9">
+<ul class="org-ul">
+<li>T. H. Bureau, “International Domestic Workers’ Day observed,” The Hindu, Jun. 16, 2025. Accessed: Jun. 17, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/national/kerala/international-domestic-workers-day-observed/article69702313.ece">https://www.thehindu.com/news/national/kerala/international-domestic-workers-day-observed/article69702313.ece</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb02f2d6" class="outline-2">
+<h2 id="orgb02f2d6"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org9271977" class="outline-3">
+<h3 id="org9271977"><span class="section-number-3">4.1.</span> Misc</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>T. O. Staff, “Hilaria Baldwin Hires Nanny To Waltz For Her On ‘Dancing With The Stars,’” The Onion. Accessed: Sep. 30, 2025. [Online]. Available: <a href="https://theonion.com/hilaria-baldwin-hires-nanny-to-waltz-for-her-on-dancing-with-the-stars/">https://theonion.com/hilaria-baldwin-hires-nanny-to-waltz-for-her-on-dancing-with-the-stars/</a></li>
+
+<li>R. Kukreja, “Netflix TV drama ‘Secrets We Keep’ exposes the dangers of domestic migrant work,” The Conversation. Accessed: Jun. 27, 2025. [Online]. Available: <a href="http://theconversation.com/netflix-tv-drama-secrets-we-keep-exposes-the-dangers-of-domestic-migrant-work-258556">http://theconversation.com/netflix-tv-drama-secrets-we-keep-exposes-the-dangers-of-domestic-migrant-work-258556</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org00fcd68" class="outline-2">
+<h2 id="org00fcd68"><span class="section-number-2">5.</span> Special Topics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org11638b8" class="outline-3">
+<h3 id="org11638b8"><span class="section-number-3">5.1.</span> Migration, Domestic Work</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org692363a" class="outline-4">
+<h4 id="org692363a"><span class="section-number-4">5.1.1.</span> Book Series</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<ul class="org-ul">
+<li>“Studies in Migration and Diaspora.” Accessed: Jun. 18, 2025. [Online]. Available: <a href="http://www.amazon.in/Studies-in-Migration-and-Diaspora-71-book-series/dp/B08MJN53MC?ref=dbs_m_mng_rwt_0000_share">http://www.amazon.in/Studies-in-Migration-and-Diaspora-71-book-series/dp/B08MJN53MC?ref=dbs_m_mng_rwt_0000_share</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfa37bc2" class="outline-4">
+<h4 id="orgfa37bc2"><span class="section-number-4">5.1.2.</span> Globalization</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<ul class="org-ul">
+<li>R. S. Parrenas, Servants of Globalization: Migration and Domestic Work, Reprint edition. Stanford, California: Stanford Univ Pr, 2015.</li>
+<li>M. Romero, V. Preston, and W. Giles, Eds., When Care Work Goes Global: Locating the Social Relations of Domestic Work, 1st edition. Routledge, 2020.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org86805dd" class="outline-4">
+<h4 id="org86805dd"><span class="section-number-4">5.1.3.</span> Europe</h4>
+<div class="outline-text-4" id="text-5-1-3">
+<ul class="org-ul">
+<li>C. Giordano, Ethnicisation and Domesticisation: The Impact of Care, Gender and Migration Regimes on Paid Domestic Work in Europe. Palgrave Macmillan, 2022.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org01e489f" class="outline-4">
+<h4 id="org01e489f"><span class="section-number-4">5.1.4.</span> Spain</h4>
+<div class="outline-text-4" id="text-5-1-4">
+<ul class="org-ul">
+<li>S. Issel-Dombert, Multilingualism, Migration and Domestic Work: On the Sociolinguistic Situation of Filipina Domestic Migrant Workers in Spain. De Gruyter, 2025.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8b55f4b" class="outline-4">
+<h4 id="org8b55f4b"><span class="section-number-4">5.1.5.</span> UK, USA</h4>
+<div class="outline-text-4" id="text-5-1-5">
+<ul class="org-ul">
+<li>D. Perrons, M. Kilkey, and A. Plomien, Gender, Migration and Domestic Work: Masculinities, Male Labour and Fathering in the UK and USA, 2013th edition. Palgrave Macmillan, 2013.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgea4c2d1" class="outline-4">
+<h4 id="orgea4c2d1"><span class="section-number-4">5.1.6.</span> Misc</h4>
+<div class="outline-text-4" id="text-5-1-6">
+<ul class="org-ul">
+<li>H. Lutz, Ed., Migration and Domestic Work: A European Perspective on a Global Theme, 1st edition. Routledge, 2016.</li>
+<li>S. Marchetti, Migration and Domestic Work: IMISCOE Short Reader. Springer, 2022.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>G. Yilmaz and S. Ledwith, Migration and Domestic Work: The Collective Organisation of Women and their Voices from the City, 1st ed. 2017 edition. Palgrave Macmillan, 2017.</li>
+<li>E. Gutiérrez-Rodríguez, Migration, Domestic Work and Affect: A Decolonial Approach on Value and the Feminization of Labor, 1st edition. Routledge, 2010.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc5b3fd2" class="outline-3">
+<h3 id="orgc5b3fd2"><span class="section-number-3">5.2.</span> America Latin</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>M. Blofield, Care Work and Class: Domestic Workers’ Struggle for Equal Rights in Latin America. University Park, Pa: Pennsylvania State University Press, 2013.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf1eef1b" class="outline-3">
+<h3 id="orgf1eef1b"><span class="section-number-3">5.3.</span> France</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>J. Windebank, Domestic and Care Work in Modern France: Gender, Family and the State. Palgrave Macmillan, 2023.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orge957269" class="outline-2">
+<h2 id="orge957269"><span class="section-number-2">6.</span> Misc</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org145776b" class="outline-3">
+<h3 id="org145776b"><span class="section-number-3">6.1.</span> Computer Science and Engineering</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>“Should One Even Consider Making Domestic Work Part of the Gig Economy?,” The India Forum. Accessed: Apr. 21, 2025. [Online]. Available: <a href="https://www.theindiaforum.in/forum/platforming-domestic-work-will-amplify-existing-vulnerabilities-workers">https://www.theindiaforum.in/forum/platforming-domestic-work-will-amplify-existing-vulnerabilities-workers</a></li>
+<li>T. H. Bureau, “Domestic workers oppose new app-based ‘instant’ maid service,” The Hindu, Mar. 21, 2025. Accessed: Mar. 22, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/cities/chennai/domestic-workers-oppose-new-app-based-instant-maid-service/article69357904.ece">https://www.thehindu.com/news/cities/chennai/domestic-workers-oppose-new-app-based-instant-maid-service/article69357904.ece</a></li>
+<li>T. H. Bureau, “‘Maid-in-15-minutes’ offer by Urban Company draws flak from domestic and gig workers,” The Hindu, Mar. 20, 2025. Accessed: Mar. 20, 2025. [Online]. Available: <a href="https://www.thehindu.com/news/cities/bangalore/domestic-and-gig-workers-condemn-maid-in-15-minutes-offer-by-urban-company/article69349627.ece">https://www.thehindu.com/news/cities/bangalore/domestic-and-gig-workers-condemn-maid-in-15-minutes-offer-by-urban-company/article69349627.ece</a></li>
+<li>“The apps were designed for home security. They’re being used to watch and harass domestic workers,” Rest of World. Accessed: Aug. 17, 2023. [Online]. Available: <a href="https://restofworld.org/2023/home-monitoring-mygate-digital-bias/">https://restofworld.org/2023/home-monitoring-mygate-digital-bias/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbbddcad" class="outline-3">
+<h3 id="orgbbddcad"><span class="section-number-3">6.2.</span> COVID-19</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>Impact of Covid-19 lockdown on domestic workers in India, 24th March to 4th May 2020. 2020. Accessed: Mar. 11, 2022. [Online]. Available: <a href="https://ruralindiaonline.org/en/library/resource/impact-of-covid-19-lockdown-on-domestic-workers-in-india-24th-march-to-4th-may-2020/">https://ruralindiaonline.org/en/library/resource/impact-of-covid-19-lockdown-on-domestic-workers-in-india-24th-march-to-4th-may-2020/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org91b0ed8" class="outline-3">
+<h3 id="org91b0ed8"><span class="section-number-3">6.3.</span> Misc</h3>
+<div class="outline-text-3" id="text-6-3">
+<ul class="org-ul">
+<li>‘They respect their animals more’: Voices of child domestic workers. 2008. Accessed: Aug. 31, 2024. [Online]. Available: <a href="https://ruralindiaonline.org/en/library/resource/they-respect-their-animals-more-voices-of-child-domestic-workers/">https://ruralindiaonline.org/en/library/resource/they-respect-their-animals-more-voices-of-child-domestic-workers/</a></li>
+<li>“How Indians Are Endangering The Health of Their Domestic Workers: New Study.” Accessed: Aug. 27, 2023. [Online]. Available: <a href="https://www.article-14.com/post/how-indians-are-endangering-the-health-of-their-domestic-workers-new-study-64e8808c6dcfe">https://www.article-14.com/post/how-indians-are-endangering-the-health-of-their-domestic-workers-new-study-64e8808c6dcfe</a></li>
+<li>“Male Domestic Care Workers Also Face Employer Apathy,” The Wire. Accessed: Mar. 30, 2023. [Online]. Available: <a href="https://thewire.in/labour/male-domestic-care-workers-employer-apathy">https://thewire.in/labour/male-domestic-care-workers-employer-apathy</a></li>
+</ul>
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-07-06 Mon 21:59</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
