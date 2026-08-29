@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-08-29 Sat 11:04 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mountains</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+<script src="https://orgmode.org/org-info.js">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+// @license-end
+</script>
+
+<script>
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+org_html_manager.set("TOC_DEPTH", "5");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "1");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "y");
+org_html_manager.set("VIEW", "info");
+org_html_manager.setup();  // activate after the parameters are set
+// @license-end
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Mountains</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgc79ad09">1. General</a></li>
+<li><a href="#org595de04">2. STEMM</a>
+<ul>
+<li><a href="#orgd78d0db">2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgb3bf282">3. World</a>
+<ul>
+<li><a href="#orgf10d288">3.1. Special Topics</a></li>
+<li><a href="#orgbef3e47">3.2. Nation States</a>
+<ul>
+<li><a href="#org6067ed9">3.2.1. India</a>
+<ul>
+<li><a href="#org72bce3a">3.2.1.1. General</a></li>
+<li><a href="#org366a0c3">3.2.1.2. STEMM</a>
+<ul>
+<li><a href="#org1c7a0f4">3.2.1.2.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#orgcc92770">Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgbbdd278">3.2.1.2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org9296665">3.2.1.3. Worldly Matters</a>
+<ul>
+<li><a href="#org75ef8b0">3.2.1.3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org9aff92a">3.2.1.4. Arts</a>
+<ul>
+<li><a href="#org1f3adea">3.2.1.4.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgc8a9f18">3.2.1.5. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org20f9602">3.3. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org7f136cb">4. Arts</a>
+<ul>
+<li><a href="#orga865287">4.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org166494f">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-orgc79ad09" class="outline-2">
+<h2 id="orgc79ad09"><span class="section-number-2">1.</span> General</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>“Mountain,” Wikipedia. Dec. 16, 2024. Accessed: Dec. 24, 2024. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Mountain&amp;oldid=1263424442">https://en.wikipedia.org/w/index.php?title=Mountain&amp;oldid=1263424442</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org595de04" class="outline-2">
+<h2 id="org595de04"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgd78d0db" class="outline-3">
+<h3 id="orgd78d0db"><span class="section-number-3">2.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-orgb3bf282" class="outline-2">
+<h2 id="orgb3bf282"><span class="section-number-2">3.</span> World</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgf10d288" class="outline-3">
+<h3 id="orgf10d288"><span class="section-number-3">3.1.</span> Special Topics</h3>
+</div>
+<div id="outline-container-orgbef3e47" class="outline-3">
+<h3 id="orgbef3e47"><span class="section-number-3">3.2.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org6067ed9" class="outline-4">
+<h4 id="org6067ed9"><span class="section-number-4">3.2.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-2-1">
+</div>
+<div id="outline-container-org72bce3a" class="outline-5">
+<h5 id="org72bce3a"><span class="section-number-5">3.2.1.1.</span> General</h5>
+</div>
+<div id="outline-container-org366a0c3" class="outline-5">
+<h5 id="org366a0c3"><span class="section-number-5">3.2.1.2.</span> STEMM</h5>
+<div class="outline-text-5" id="text-3-2-1-2">
+</div>
+<div id="outline-container-org1c7a0f4" class="outline-6">
+<h6 id="org1c7a0f4"><span class="section-number-6">3.2.1.2.1.</span> Systems Sciences, Misc</h6>
+<div class="outline-text-6" id="text-3-2-1-2-1">
+</div>
+<div id="outline-container-orgcc92770" class="outline-7">
+<h7 id="orgcc92770">Misc</h7>
+<div class="outline-text-7" id="text-orgcc92770">
+<ul class="org-ul">
+<li>“Shramyog: How a remote Himalayan region, Sult, is empowering itself,” Vikalp Sangam. Accessed: Aug. 29, 2025. [Online]. Available: <a href="https://vikalpsangam.org/article/shramyog-how-a-remote-himalayan-region-sult-is-empowering-itself/">https://vikalpsangam.org/article/shramyog-how-a-remote-himalayan-region-sult-is-empowering-itself/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbbdd278" class="outline-6">
+<h6 id="orgbbdd278"><span class="section-number-6">3.2.1.2.2.</span> Misc</h6>
+<div class="outline-text-6" id="text-3-2-1-2-2">
+<ul class="org-ul">
+<li>R. Palit, “Himalayan wildfires may be predictable long before the first spark,” Nature India, Jul. 2026, doi: 10.1038/d44151-026-00140-7.</li>
+
+<li>M. D. Gergan, “Disastrous hydropower, uneven regional development, and decolonization in India’s Eastern Himalayan borderlands,” Political Geography, vol. 80, p. 102175, Jun. 2020, doi: 10.1016/j.polgeo.2020.102175.</li>
+
+<li>“Traces of ancient seafloor cataclysms turn up in the Himalayas.” Accessed: Feb. 01, 2026. [Online]. Available: <a href="https://www.science.org/content/article/traces-ancient-seafloor-cataclysms-turn-himalayas">https://www.science.org/content/article/traces-ancient-seafloor-cataclysms-turn-himalayas</a></li>
+
+<li>U. I. C. A. T. S. P. E. T. C. AreasResearchJammu and Kashmir, “Study reveals ecological dynamics of Himalayan grasslands,” Mongabay-India. Accessed: Sep. 20, 2025. [Online]. Available: <a href="https://india.mongabay.com/short-article/study-reveals-ecological-dynamics-of-himalayan-grasslands/">https://india.mongabay.com/short-article/study-reveals-ecological-dynamics-of-himalayan-grasslands/</a></li>
+
+<li>“Dams, negligence, and the making of Himalayan floods,” The Tribune. Accessed: Aug. 30, 2025. [Online]. Available: <a href="https://www.tribuneindia.com/news/premium/dams-negligence-and-the-making-of-himalayan-floods/">https://www.tribuneindia.com/news/premium/dams-negligence-and-the-making-of-himalayan-floods/</a></li>
+
+<li>Himalayan Disasters: Natural or Man-Made? | NewsClick, (Aug. 18, 2025). Accessed: Aug. 19, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=gFyG3EpRNmM">https://www.youtube.com/watch?v=gFyG3EpRNmM</a></li>
+
+<li>P. Shankar, “The tectonic journey of the roof of the world [Commentary],” Mongabay-India. Accessed: Aug. 19, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/08/how-the-roof-of-the-world-came-into-being-commentary/">https://india.mongabay.com/2025/08/how-the-roof-of-the-world-came-into-being-commentary/</a></li>
+
+<li>R. Ghai, “‘The government has invited these Himalayan disasters,’” Down To Earth. Accessed: Aug. 18, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/natural-disasters/the-government-has-invited-these-himalayan-disasters">https://www.downtoearth.org.in/natural-disasters/the-government-has-invited-these-himalayan-disasters</a></li>
+<li>R. Ghai, “Blighted beyul: The Himalayas, under attack from the forces of ‘development’, have always been a ‘scared geography’ for Buddhists,” Down To Earth. Accessed: Aug. 18, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/natural-disasters/blighted-beyul-the-himalayas-under-attack-from-the-forces-of-development-have-always-been-a-scared-geography-for-buddhists">https://www.downtoearth.org.in/natural-disasters/blighted-beyul-the-himalayas-under-attack-from-the-forces-of-development-have-always-been-a-scared-geography-for-buddhists</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. Dobriyal, “Are ‘cloudbursts’ causing devastation across the Western Himalayas? After Dharali, what exactly triggered tragedy in Kishtwar?,” Down To Earth. Accessed: Aug. 17, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/natural-disasters/are-cloudbursts-causing-devastation-across-the-western-himalayas-after-dharali-what-exactly-triggered-tragedy-in-kishtwar">https://www.downtoearth.org.in/natural-disasters/are-cloudbursts-causing-devastation-across-the-western-himalayas-after-dharali-what-exactly-triggered-tragedy-in-kishtwar</a></li>
+
+<li>A. Deoras, “The Himalayas are becoming monsoon graveyards,” Down To Earth. Accessed: Aug. 09, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/natural-disasters/the-himalayas-are-becoming-monsoon-graveyards">https://www.downtoearth.org.in/natural-disasters/the-himalayas-are-becoming-monsoon-graveyards</a></li>
+
+<li>P. Sah, “IIT Bombay scientists develop solar heat battery for freezing Himalayan homes,” The Hindu, Jun. 24, 2025. Accessed: Jun. 25, 2025. [Online]. Available: <a href="https://www.thehindu.com/sci-tech/iit-bombay-scientists-develop-solar-heat-battery-for-freezing-himalayan-homes/article69728958.ece">https://www.thehindu.com/sci-tech/iit-bombay-scientists-develop-solar-heat-battery-for-freezing-himalayan-homes/article69728958.ece</a></li>
+
+<li>A. Tandon, “A song of rock and ice,” Mongabay-India. Accessed: Jun. 18, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/06/a-song-of-rock-and-ice/">https://india.mongabay.com/2025/06/a-song-of-rock-and-ice/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>C. Cater, “China’s Everest obsession: following Mallory’s footsteps a century on, I saw how tourism and climate change are transforming the mountain,” Down To Earth. Accessed: Jun. 17, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/climate-change/chinas-everest-obsession-following-mallorys-footsteps-a-century-on-i-saw-how-tourism-and-climate-change-are-transforming-the-mountain">https://www.downtoearth.org.in/climate-change/chinas-everest-obsession-following-mallorys-footsteps-a-century-on-i-saw-how-tourism-and-climate-change-are-transforming-the-mountain</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9296665" class="outline-5">
+<h5 id="org9296665"><span class="section-number-5">3.2.1.3.</span> Worldly Matters</h5>
+<div class="outline-text-5" id="text-3-2-1-3">
+</div>
+<div id="outline-container-org75ef8b0" class="outline-6">
+<h6 id="org75ef8b0"><span class="section-number-6">3.2.1.3.1.</span> Misc</h6>
+<div class="outline-text-6" id="text-3-2-1-3-1">
+<ul class="org-ul">
+<li>“Mass Displacement Looms In Indian Hill State Due To Expressway.” Accessed: Jul. 28, 2026. [Online]. Available: <a href="https://thepolisproject.com/read/mass-displacement-india-himalayan-state-expressway/">https://thepolisproject.com/read/mass-displacement-india-himalayan-state-expressway/</a></li>
+
+<li>R. K. Sinha, “बीत चुका है, हिमालय को सुनने का समय,” Centre for Financial Accountability. Accessed: Sep. 02, 2025. [Online]. Available: <a href="https://www.cenfa.org/the-time-to-listen-to-the-himalaya-has-slipped-into-the-past-like-a-vanishing-echo/">https://www.cenfa.org/the-time-to-listen-to-the-himalaya-has-slipped-into-the-past-like-a-vanishing-echo/</a></li>
+
+<li>H. Joshi, “Crossing rivers, climbing mountains: The story behind the Dharali stories,” Newslaundry. Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://www.newslaundry.com/2025/08/25/crossing-rivers-climbing-mountains-the-story-behind-the-dharali-stories">https://www.newslaundry.com/2025/08/25/crossing-rivers-climbing-mountains-the-story-behind-the-dharali-stories</a></li>
+
+<li>“SUPPORT THE OBJECTIVES OF HIMALAYAN INSTITUTE OF ALTERNATIVE LEARNING (HIAL), RATHER THAN HARASS IT!,” Vikalp Sangam. Accessed: Aug. 26, 2025. [Online]. Available: <a href="https://vikalpsangam.org/article/support-the-objectives-of-himalayan-institute-of-alternative-learning-hial-rather-than-harass-it/">https://vikalpsangam.org/article/support-the-objectives-of-himalayan-institute-of-alternative-learning-hial-rather-than-harass-it/</a></li>
+
+<li>“From Chirgaon to Dharali: Greed, Governance and the Corporate Capture of the Himalayas,” The Wire. Accessed: Aug. 24, 2025. [Online]. Available: <a href="https://thewire.in/environment/from-chirgaon-to-dharali-greed-governance-and-the-corporate-capture-of-the-himalayas">https://thewire.in/environment/from-chirgaon-to-dharali-greed-governance-and-the-corporate-capture-of-the-himalayas</a></li>
+
+<li>“From Chirgaon to Dharali: Greed, Governance and the Corporate Capture of the Himalayas,” The Wire. Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://thewire.in/environment/from-chirgaon-to-dharali-greed-governance-and-the-corporate-capture-of-the-himalayas">https://thewire.in/environment/from-chirgaon-to-dharali-greed-governance-and-the-corporate-capture-of-the-himalayas</a></li>
+
+<li>K. Pandey, “Flash flood in the Himalayas reignites debate on development,” Mongabay-India. Accessed: Aug. 15, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/08/another-flash-flood-in-the-himalayas-reignites-debate-on-development/">https://india.mongabay.com/2025/08/another-flash-flood-in-the-himalayas-reignites-debate-on-development/</a></li>
+
+<li>A. P. Joshi, “Dharali is an indicator of a Himalayan crisis that needs urgent national attention,” Down To Earth. Accessed: Aug. 13, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/natural-disasters/dharali-is-an-indicator-of-a-himalayan-crisis-that-needs-urgent-national-attention">https://www.downtoearth.org.in/natural-disasters/dharali-is-an-indicator-of-a-himalayan-crisis-that-needs-urgent-national-attention</a></li>
+
+<li>“Uttarakhand: Dharali Disaster Exposes Laxity in Monitoring Himalayan Threats,” NewsClick. Accessed: Aug. 08, 2025. [Online]. Available: <a href="https://www.newsclick.in/uttarakhand-dharali-disaster-exposes-laxity-monitoring-himalayan-threats">https://www.newsclick.in/uttarakhand-dharali-disaster-exposes-laxity-monitoring-himalayan-threats</a></li>
+
+<li>CFA India, How Himalayan Communities Offer Lessons in Life in a Crumbling World | Shrishtee Bajpai, (Aug. 04, 2025). Accessed: Aug. 06, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=LHGLLmKnBDQ">https://www.youtube.com/watch?v=LHGLLmKnBDQ</a></li>
+
+<li>CFA, “Himalayan Blunder | Why We Need To Listen To The Mountain Communities | Minket Lepcha,” Centre for Financial Accountability. Accessed: Jul. 11, 2025. [Online]. Available: <a href="https://www.cenfa.org/himalayan-blunder-why-we-need-to-listen-to-the-mountain-communities-minket-lepcha/">https://www.cenfa.org/himalayan-blunder-why-we-need-to-listen-to-the-mountain-communities-minket-lepcha/</a></li>
+
+<li>C. C. Conversation The, “Desolate landscape to tourist hub: How China is transforming Mount Everest,” Scroll.in. Accessed: Jun. 27, 2025. [Online]. Available: <a href="https://scroll.in/article/1083580/desolate-landscape-to-tourist-hub-how-china-is-transforming-mount-everest">https://scroll.in/article/1083580/desolate-landscape-to-tourist-hub-how-china-is-transforming-mount-everest</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9aff92a" class="outline-5">
+<h5 id="org9aff92a"><span class="section-number-5">3.2.1.4.</span> Arts</h5>
+<div class="outline-text-5" id="text-3-2-1-4">
+</div>
+<div id="outline-container-org1f3adea" class="outline-6">
+<h6 id="org1f3adea"><span class="section-number-6">3.2.1.4.1.</span> Misc</h6>
+<div class="outline-text-6" id="text-3-2-1-4-1">
+<ul class="org-ul">
+<li>A. Dutta, “Environmental knowledge beyond policy: What Pahadi hymns tell about Uttarakhand’s ecological crises,” Down To Earth. Accessed: Feb. 06, 2026. [Online]. Available: <a href="https://www.downtoearth.org.in/environment/environmental-knowledge-beyond-policy-what-pahadi-hymns-tell-about-uttarakhands-ecological-crises">https://www.downtoearth.org.in/environment/environmental-knowledge-beyond-policy-what-pahadi-hymns-tell-about-uttarakhands-ecological-crises</a></li>
+
+<li>R. Bond and B. Sharma, Eds., Between Heaven and Earth : Writings on The Indian Hills. Speaking Tiger, 2025.</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li>J. S. &amp; S. Mandal, “From the travelogue: In 1890, Jaladhar Sen embarked on an adventure across the sacred Himalayas,” Scroll.in. Accessed: Aug. 28, 2025. [Online]. Available: <a href="https://scroll.in/article/1085219/from-the-travelogue-in-1890-jaladhar-sen-embarked-on-an-adventure-across-the-sacred-himalayas">https://scroll.in/article/1085219/from-the-travelogue-in-1890-jaladhar-sen-embarked-on-an-adventure-across-the-sacred-himalayas</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc8a9f18" class="outline-5">
+<h5 id="orgc8a9f18"><span class="section-number-5">3.2.1.5.</span> Misc</h5>
+<div class="outline-text-5" id="text-3-2-1-5">
+<ul class="org-ul">
+<li>A. Tandon, “Himalayan pheasants face mounting human pressure,” Mongabay India. Accessed: Aug. 12, 2026. [Online]. Available: <a href="https://india.mongabay.com/2026/08/himalayan-pheasants-face-mounting-human-pressure/">https://india.mongabay.com/2026/08/himalayan-pheasants-face-mounting-human-pressure/</a></li>
+
+<li>“Dharali Floods Reveal Making Of A Himalayan Catastrophe.” Accessed: Jul. 28, 2026. [Online]. Available: <a href="https://thepolisproject.com/read/dharali-flashfloods-reveal-himalayan-catastrophe/">https://thepolisproject.com/read/dharali-flashfloods-reveal-himalayan-catastrophe/</a></li>
+
+<li>“Tourism and infrastructure threaten habitat of India’s Himalayan salamanders,” Conservation news. Accessed: Jul. 21, 2026. [Online]. Available: <a href="https://news.mongabay.com/short-article/tourism-and-infrastructure-threaten-habitat-of-indias-himalayan-salamanders/">https://news.mongabay.com/short-article/tourism-and-infrastructure-threaten-habitat-of-indias-himalayan-salamanders/</a></li>
+
+<li>“Nepal and Himalayan Studies.” Accessed: Jul. 05, 2026. [Online]. Available: <a href="https://www.amazon.in/Nepal-and-Himalayan-Studies/dp/B0F5W1CHP9?ref_=saga_sdp_cseo_dsk_rmt">https://www.amazon.in/Nepal-and-Himalayan-Studies/dp/B0F5W1CHP9?ref_=saga_sdp_cseo_dsk_rmt</a></li>
+
+<li>P. Shankar, “Rising temperatures, not just human activity, drives Himalayan forest fires,” Mongabay India. Accessed: Jul. 01, 2026. [Online]. Available: <a href="https://india.mongabay.com/2026/06/rising-temperatures-not-just-human-activity-drives-himalayan-forest-fires/">https://india.mongabay.com/2026/06/rising-temperatures-not-just-human-activity-drives-himalayan-forest-fires/</a></li>
+
+<li>A. Tandon, “Climate change could shrink habitat of Himalayan marsh orchid, study warns,” Mongabay-India. Accessed: Feb. 09, 2026. [Online]. Available: <a href="https://india.mongabay.com/2026/02/climate-change-could-shrink-habitat-of-himalayan-marsh-orchid-study-warns/">https://india.mongabay.com/2026/02/climate-change-could-shrink-habitat-of-himalayan-marsh-orchid-study-warns/</a></li>
+
+<li>P. Shankar, “Hilly villages trap runoff to tackle water scarcity amid plenty,” Mongabay-India. Accessed: Feb. 06, 2026. [Online]. Available: <a href="https://india.mongabay.com/2026/02/hilly-villages-trap-runoff-to-tackle-water-scarcity-amid-plenty/">https://india.mongabay.com/2026/02/hilly-villages-trap-runoff-to-tackle-water-scarcity-amid-plenty/</a></li>
+
+<li>“श्रमयोग: कैसे एक हिमालयी क्षेत्र, सल्ट, अपना सशक्तिकरण कर रहा है (In Hindi),” Vikalp Sangam. Accessed: Nov. 27, 2025. [Online]. Available: <a href="https://vikalpsangam.org/article/shramyog-kaise-ek-himalyi-kshetra-sult-apna-sashaktikaran-kar-raha-hai-in-hindi/">https://vikalpsangam.org/article/shramyog-kaise-ek-himalyi-kshetra-sult-apna-sashaktikaran-kar-raha-hai-in-hindi/</a></li>
+
+<li>P. Shankar, Himalayan Cities: Settlement Patterns, Public Places and Architecture. New Delhi: Niyogi Books, 2014.</li>
+
+<li>P. Shankar, “Study maps the most unstable slopes along an important Himalayan highway,” Mongabay-India. Accessed: Sep. 23, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/09/study-maps-the-most-unstable-slopes-along-an-important-himalayan-highway/">https://india.mongabay.com/2025/09/study-maps-the-most-unstable-slopes-along-an-important-himalayan-highway/</a></li>
+
+<li>Felis Creations TV, Nilgiris - A Shared Wilderness | In Theatres 18th July 2025, (Jul. 05, 2025). Accessed: Jul. 19, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=aOwcirOtD5c">https://www.youtube.com/watch?v=aOwcirOtD5c</a></li>
+
+<li>“‘Black Kanchenjunga’ Could Spell Danger for Water Security, Livelihoods, Claim Experts,” NewsClick. Accessed: Jun. 17, 2025. [Online]. Available: <a href="https://www.newsclick.in/black-kanchenjunga-could-spell-danger-water-security-livelihoods-claim-experts">https://www.newsclick.in/black-kanchenjunga-could-spell-danger-water-security-livelihoods-claim-experts</a></li>
+
+<li>“Chardhaam to Char-Daam: Desecrating the Himalayas in the Name of ‘Spiritual Tourism.’” Accessed: Jan. 15, 2025. [Online]. Available: <a href="https://thewire.in/environment/chardhaam-spiritual-tourism-himalayas">https://thewire.in/environment/chardhaam-spiritual-tourism-himalayas</a></li>
+
+<li>P. Shankar, “A regional hub in the Himalayas to reduce risks from climate-induced disasters,” Mongabay-India. Accessed: Jan. 15, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/01/a-regional-hub-in-the-himalayas-to-reduce-risks-from-climate-induced-disasters/">https://india.mongabay.com/2025/01/a-regional-hub-in-the-himalayas-to-reduce-risks-from-climate-induced-disasters/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org20f9602" class="outline-3">
+<h3 id="org20f9602"><span class="section-number-3">3.3.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org7f136cb" class="outline-2">
+<h2 id="org7f136cb"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orga865287" class="outline-3">
+<h3 id="orga865287"><span class="section-number-3">4.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org166494f" class="outline-2">
+<h2 id="org166494f"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>“Can monumental ‘ice stupas’ help remote Himalayan villages survive? | Aeon Videos.” Accessed: Aug. 28, 2026. [Online]. Available: <a href="https://aeon.co/videos/can-monumental-ice-stupas-help-remote-himalayan-villages-survive">https://aeon.co/videos/can-monumental-ice-stupas-help-remote-himalayan-villages-survive</a></li>
+</ul>
+
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ghostonghub/zero/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-08-29 Sat 11:04</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

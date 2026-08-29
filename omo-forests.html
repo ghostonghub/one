@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-08-29 Sat 11:04 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Forests</title>
+<meta name="author" content="Staff Member(s), [[https://ourghostorg.github.io/][OurGhostOrg]]" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+<script src="https://orgmode.org/org-info.js">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+// @license-end
+</script>
+
+<script>
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+org_html_manager.set("TOC_DEPTH", "5");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "1");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "y");
+org_html_manager.set("VIEW", "info");
+org_html_manager.setup();  // activate after the parameters are set
+// @license-end
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Forests</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org57b4833">1. General</a></li>
+<li><a href="#org08c38a1">2. STEMM</a>
+<ul>
+<li><a href="#orgcc26379">2.1. Systems Sciences, Misc</a>
+<ul>
+<li><a href="#org4dc8921">2.1.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org032bdf5">2.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgb186163">3. Worldly Matters</a>
+<ul>
+<li><a href="#org797a54f">3.1. Nation States</a>
+<ul>
+<li><a href="#orgf9c9d0d">3.1.1. India</a>
+<ul>
+<li><a href="#orgfacf19a">3.1.1.1. General</a></li>
+<li><a href="#orgacf5b47">3.1.1.2. STEMM</a>
+<ul>
+<li><a href="#orgcf999a5">3.1.1.2.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org6693e48">3.1.1.3. World</a>
+<ul>
+<li><a href="#orge607906">3.1.1.3.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgddd1a49">3.1.1.4. Arts</a>
+<ul>
+<li><a href="#org759812c">3.1.1.4.1. Music</a></li>
+<li><a href="#orgf9d06c0">3.1.1.4.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org48af90a">3.1.1.5. Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org65dfbc8">3.2. Misc</a></li>
+</ul>
+</li>
+<li><a href="#orgf8263d1">4. Arts</a>
+<ul>
+<li><a href="#org571ea90">4.1. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org3e8e980">5. Misc</a></li>
+</ul>
+</div>
+</div>
+<hr />
+<div id="outline-container-org57b4833" class="outline-2">
+<h2 id="org57b4833"><span class="section-number-2">1.</span> General</h2>
+</div>
+<div id="outline-container-org08c38a1" class="outline-2">
+<h2 id="org08c38a1"><span class="section-number-2">2.</span> STEMM</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgcc26379" class="outline-3">
+<h3 id="orgcc26379"><span class="section-number-3">2.1.</span> Systems Sciences, Misc</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org4dc8921" class="outline-4">
+<h4 id="org4dc8921"><span class="section-number-4">2.1.1.</span> Misc</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>“Demand for mined resources in Europe drives deforestation elsewhere.” Accessed: Jul. 28, 2026. [Online]. Available: <a href="https://www.stockholmresilience.org/research/research-stories/2026-07-27-demand-for-mined-resources-in-europe-drives-deforestation-elsewhere.html">https://www.stockholmresilience.org/research/research-stories/2026-07-27-demand-for-mined-resources-in-europe-drives-deforestation-elsewhere.html</a></li>
+
+<li>“Forests endure as carbon sink despite regional pressures,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jul. 18, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news/jul-2024/forests-endure-as-carbon-sink-despite-regional-pressures">https://iiasa.ac.at/news/jul-2024/forests-endure-as-carbon-sink-despite-regional-pressures</a></li>
+<li>“Shaping sustainable forest pathways for 2030 and 2050,” IIASA - International Institute for Applied Systems Analysis. Accessed: Jul. 22, 2025. [Online]. Available: <a href="http://iiasa.ac.at/news/jul-2025/shaping-sustainable-forest-pathways-for-2030-and-2050">http://iiasa.ac.at/news/jul-2025/shaping-sustainable-forest-pathways-for-2030-and-2050</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org032bdf5" class="outline-3">
+<h3 id="org032bdf5"><span class="section-number-3">2.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>CIFOR-ICRAF, “Banking on rainforest destruction.” Accessed: Oct. 23, 2025. [Online]. Available: <a href="https://theecologist.org/2025/oct/23/banking-rainforest-destruction">https://theecologist.org/2025/oct/23/banking-rainforest-destruction</a></li>
+
+<li>“Oxford researchers to build a living digital replica of Wytham Woods.” Accessed: Aug. 26, 2025. [Online]. Available: <a href="https://www.development.ox.ac.uk/news/oxford-researchers-to-build-a-living-digital-replica-of-wytham-woods">https://www.development.ox.ac.uk/news/oxford-researchers-to-build-a-living-digital-replica-of-wytham-woods</a></li>
+
+<li>“Continuous Earth Observation of Forest Dynamics and Biodiversity – Communications of the ACM.” Accessed: Jun. 28, 2025. [Online]. Available: <a href="https://cacm.acm.org/sustainability-and-computing/continuous-earth-observation-of-forest-dynamics-and-biodiversity/">https://cacm.acm.org/sustainability-and-computing/continuous-earth-observation-of-forest-dynamics-and-biodiversity/</a></li>
+
+<li>“Forests take centre stage at UN as countries gather to discuss climate mitigation,” Vikalp Sangam. Accessed: Jun. 14, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/climate-change/forests-take-centre-stage-at-un-as-countries-gather-to-discuss-climate-mitigation">https://www.downtoearth.org.in/climate-change/forests-take-centre-stage-at-un-as-countries-gather-to-discuss-climate-mitigation</a></li>
+
+<li>“Top tools to protect rainforests | Against All Odds,” Mongabay Environmental News. Accessed: Jun. 13, 2025. [Online]. Available: <a href="https://news.mongabay.com/video/2025/06/top-tools-to-protect-rainforests-against-all-odds/">https://news.mongabay.com/video/2025/06/top-tools-to-protect-rainforests-against-all-odds/</a></li>
+
+<li>“The role of forests in addressing climate and biodiversity challenges in a sustainable bioeconomy,” IIASA - International Institute for Applied Systems Analysis. Accessed: May 24, 2025. [Online]. Available: <a href="http://iiasa.ac.at/news/may-2025/role-of-forests-in-addressing-climate-and-biodiversity-challenges-in-sustainable">http://iiasa.ac.at/news/may-2025/role-of-forests-in-addressing-climate-and-biodiversity-challenges-in-sustainable</a></li>
+
+<li>“How to support real forest solutions — and avoid false ones,” Greenpeace International. Accessed: May 24, 2025. [Online]. Available: <a href="https://www.greenpeace.org/international/story/74932/how-support-real-forest-solutions-avoid-false-ones/">https://www.greenpeace.org/international/story/74932/how-support-real-forest-solutions-avoid-false-ones/</a></li>
+<li>“Defining and renovating our forests.” Accessed: May 24, 2025. [Online]. Available: <a href="https://theecologist.org/2025/may/23/defining-and-renovating-our-forests">https://theecologist.org/2025/may/23/defining-and-renovating-our-forests</a></li>
+
+<li>R. a Butler, “The year in tropical rainforests: 2024,” Mongabay Environmental News. Accessed: Dec. 24, 2024. [Online]. Available: <a href="https://news.mongabay.com/2024/12/the-year-in-tropical-rainforests-2024/">https://news.mongabay.com/2024/12/the-year-in-tropical-rainforests-2024/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb186163" class="outline-2">
+<h2 id="orgb186163"><span class="section-number-2">3.</span> Worldly Matters</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org797a54f" class="outline-3">
+<h3 id="org797a54f"><span class="section-number-3">3.1.</span> Nation States</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgf9c9d0d" class="outline-4">
+<h4 id="orgf9c9d0d"><span class="section-number-4">3.1.1.</span> India</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<div id="outline-container-orgfacf19a" class="outline-5">
+<h5 id="orgfacf19a"><span class="section-number-5">3.1.1.1.</span> General</h5>
+</div>
+<div id="outline-container-orgacf5b47" class="outline-5">
+<h5 id="orgacf5b47"><span class="section-number-5">3.1.1.2.</span> STEMM</h5>
+<div class="outline-text-5" id="text-3-1-1-2">
+</div>
+<div id="outline-container-orgcf999a5" class="outline-6">
+<h6 id="orgcf999a5"><span class="section-number-6">3.1.1.2.1.</span> Misc</h6>
+</div>
+</div>
+<div id="outline-container-org6693e48" class="outline-5">
+<h5 id="org6693e48"><span class="section-number-5">3.1.1.3.</span> World</h5>
+<div class="outline-text-5" id="text-3-1-1-3">
+</div>
+<div id="outline-container-orge607906" class="outline-6">
+<h6 id="orge607906"><span class="section-number-6">3.1.1.3.1.</span> Misc</h6>
+<div class="outline-text-6" id="text-3-1-1-3-1">
+<ul class="org-ul">
+<li>N. Gowda, “Uttara Kannada’s evergreen forests remain under relentless assault in the name of clean energy,” Centre for Financial Accountability. Accessed: Jul. 21, 2026. [Online]. Available: <a href="https://www.cenfa.org/uttara-kannadas-evergreen-forests-remain-under-relentless-assault-in-the-name-of-clean-energy/">https://www.cenfa.org/uttara-kannadas-evergreen-forests-remain-under-relentless-assault-in-the-name-of-clean-energy/</a></li>
+
+<li>L. K. here B. image: M. pied hornbillsare important seed dispersers in I. W. G. I. © N. P. via iNaturalist C. N. R. W. R. T. R. R. Asia, “In India, sacred groves serve as vital nurseries for future forests,” Conservation news. Accessed: Aug. 12, 2026. [Online]. Available: <a href="https://news.mongabay.com/short-article/in-india-sacred-groves-serve-as-vital-nurseries-for-future-forests/">https://news.mongabay.com/short-article/in-india-sacred-groves-serve-as-vital-nurseries-for-future-forests/</a></li>
+
+<li>“Making Forest Conservation Work for Forest Communities,” The India Forum. Accessed: Jan. 06, 2026. [Online]. Available: <a href="https://www.theindiaforum.in/environment/making-forest-conservation-work-forest-communities">https://www.theindiaforum.in/environment/making-forest-conservation-work-forest-communities</a></li>
+
+<li>“How Young Filmmakers From the Northeast Are Using Their Cameras To Protect India’s Hidden Forests,” Vikalp Sangam. Accessed: Nov. 18, 2025. [Online]. Available: <a href="https://thebetterindia.com/wildlife/greenhub-fellowship-northeast-india-filmmaking-documentaries-wildlife-conservation-biodiversity-10587187">https://thebetterindia.com/wildlife/greenhub-fellowship-northeast-india-filmmaking-documentaries-wildlife-conservation-biodiversity-10587187</a></li>
+
+<li>“How Young Filmmakers From the Northeast Are Using Their Cameras To Protect India’s Hidden Forests,” Vikalp Sangam. Accessed: Oct. 31, 2025. [Online]. Available: <a href="https://thebetterindia.com/wildlife/greenhub-fellowship-northeast-india-filmmaking-documentaries-wildlife-conservation-biodiversity-10587187">https://thebetterindia.com/wildlife/greenhub-fellowship-northeast-india-filmmaking-documentaries-wildlife-conservation-biodiversity-10587187</a></li>
+
+<li>H. Nitnaware, “High Court order on Adani-operated mine a ‘mockery’ of Forest Rights Act: Hasdeo activists,” Down To Earth. Accessed: Oct. 27, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/forests/high-court-order-on-adani-operated-mine-a-mockery-of-forest-rights-act-hasdeo-activists">https://www.downtoearth.org.in/forests/high-court-order-on-adani-operated-mine-a-mockery-of-forest-rights-act-hasdeo-activists</a></li>
+
+<li>A. Nigam, “Whose Forest is it Anyway? The Forest Rights Act (FRA) and its unintended consequences: Sandeep Menon,” KAFILA - COLLECTIVE EXPLORATIONS SINCE 2006. Accessed: Sep. 18, 2025. [Online]. Available: <a href="https://kafila.online/2025/09/18/whose-forest-is-it-anyway-the-forest-rights-act-fra-and-its-unintended-consequences-sandeep-menon/">https://kafila.online/2025/09/18/whose-forest-is-it-anyway-the-forest-rights-act-fra-and-its-unintended-consequences-sandeep-menon/</a></li>
+
+<li>K. Pandey, “Global REDD+ standards fail local forests [Commentary],” Mongabay-India. Accessed: Aug. 20, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/08/indias-redd-dilemma-as-global-carbon-standards-fail-local-forests-commentary/">https://india.mongabay.com/2025/08/indias-redd-dilemma-as-global-carbon-standards-fail-local-forests-commentary/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>July 9 Strike: ‘Trump’s Terms Will Ruin Farming’ | NewsClick, (Jul. 08, 2025). Accessed: Jul. 08, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=Uks5NWo-H5c">https://www.youtube.com/watch?v=Uks5NWo-H5c</a></li>
+<li>July 9 Strike: TUs to Protest Anti-People Policies | NewsClick, (Jul. 08, 2025). Accessed: Jul. 08, 2025. [Online Video]. Available: <a href="https://www.youtube.com/watch?v=nWa6cK70Eck">https://www.youtube.com/watch?v=nWa6cK70Eck</a></li>
+<li>V. Lakhera, “MoEFCC vs FRA: Adivasi Rights Undermined in Forest Policy Shift,” Frontline. Accessed: Jul. 08, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/news/tribal-land-rights-moefcc-environment-dispute/article69783108.ece">https://frontline.thehindu.com/news/tribal-land-rights-moefcc-environment-dispute/article69783108.ece</a></li>
+
+<li>D. T. E. Staff, “In 2023-24, India cleared 29,000 ha of forestland for diversion. Here’s how forest cover has changed over the years,” Down To Earth. Accessed: Jul. 08, 2025. [Online]. Available: <a href="https://www.downtoearth.org.in/forests/in-2023-24-india-cleared-29000-ha-of-forestland-for-diversion-heres-how-forest-cover-has-changed-over-the-years">https://www.downtoearth.org.in/forests/in-2023-24-india-cleared-29000-ha-of-forestland-for-diversion-heres-how-forest-cover-has-changed-over-the-years</a></li>
+
+<li>“Never-ending injustice: Forest Villages of Madhya Pradesh,” Hindustan Times. Accessed: Jan. 14, 2025. [Online]. Available: <a href="https://www.hindustantimes.com/ht-insight/climate-change/neverending-injustice-forest-villages-of-madhya-pradesh-101684495490903.html">https://www.hindustantimes.com/ht-insight/climate-change/neverending-injustice-forest-villages-of-madhya-pradesh-101684495490903.html</a></li>
+
+<li>“Parks, Plantations &amp; Orchards Passed Off As Forests &amp; Other Untruths From India’s Forest Data.” Accessed: Dec. 27, 2024. [Online]. Available: <a href="https://article-14.com/post/parks-plantations-orchards-passed-off-as-forests-other-untruths-from-india-s-forest-data-66c4e68bae993">https://article-14.com/post/parks-plantations-orchards-passed-off-as-forests-other-untruths-from-india-s-forest-data-66c4e68bae993</a></li>
+
+<li>“Growing New Forests Over Old &amp; Other Ways Modi Govt Defies Supreme Court &amp; Breaks Its Own Rules.” Accessed: Dec. 21, 2024. [Online]. Available: <a href="https://article-14.com/post/growing-new-forests-over-old-other-ways-modi-govt-defies-supreme-court-breaks-its-own-rules-6764e4c30145c">https://article-14.com/post/growing-new-forests-over-old-other-ways-modi-govt-defies-supreme-court-breaks-its-own-rules-6764e4c30145c</a></li>
+
+<li>A. Kodiveri, Governing Forests. Yoda Press, 2024.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>“Tales of Tragedy and Terror from the Indian Sundarbans | Economic and Political Weekly.” Accessed: Nov. 21, 2024. [Online]. Available: <a href="https://www.epw.in/journal/2024/43/book-reviews/tales-tragedy-and-terror-indian-sundarbans.html">https://www.epw.in/journal/2024/43/book-reviews/tales-tragedy-and-terror-indian-sundarbans.html</a></li>
+
+<li>D. T. E. Staff, “Nature’s temples: SC’s order to protect sacred groves soothes believers and conservators,” Down To Earth. Accessed: Dec. 21, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/forests/natures-temples-scs-order-to-protect-sacred-groves-soothes-believers-and-conservators">https://www.downtoearth.org.in/forests/natures-temples-scs-order-to-protect-sacred-groves-soothes-believers-and-conservators</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgddd1a49" class="outline-5">
+<h5 id="orgddd1a49"><span class="section-number-5">3.1.1.4.</span> Arts</h5>
+<div class="outline-text-5" id="text-3-1-1-4">
+</div>
+<div id="outline-container-org759812c" class="outline-6">
+<h6 id="org759812c"><span class="section-number-6">3.1.1.4.1.</span> Music</h6>
+<div class="outline-text-6" id="text-3-1-1-4-1">
+<ul class="org-ul">
+<li>Music Today, Mystic Soundscapes - Forest | Audio Jukebox | Instrumental | World Music | Taufiq Qureshi, (Sep. 03, 2015). Accessed: Feb. 25, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=lznVVTsX8Tk">https://www.youtube.com/watch?v=lznVVTsX8Tk</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf9d06c0" class="outline-6">
+<h6 id="orgf9d06c0"><span class="section-number-6">3.1.1.4.2.</span> Misc</h6>
+<div class="outline-text-6" id="text-3-1-1-4-2">
+<ul class="org-ul">
+<li>Music Today, Mystic Soundscapes - Forest | Audio Jukebox | Instrumental | World Music | Taufiq Qureshi, (Sep. 03, 2015). Accessed: Feb. 25, 2022. [Online]. Available: <a href="https://www.youtube.com/watch?v=lznVVTsX8Tk">https://www.youtube.com/watch?v=lznVVTsX8Tk</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org48af90a" class="outline-5">
+<h5 id="org48af90a"><span class="section-number-5">3.1.1.5.</span> Misc</h5>
+<div class="outline-text-5" id="text-3-1-1-5">
+<ul class="org-ul">
+<li>“Forest, dharma, and the ecological imagination: Lessons from India’s epics | Yale Forum on Religion and Ecology.” Accessed: Aug. 02, 2026. [Online]. Available: <a href="https://fore.yale.edu/news/Forest-dharma-and-the-ecological-imagination-Lessons-from-India%E2%80%99s-epics">https://fore.yale.edu/news/Forest-dharma-and-the-ecological-imagination-Lessons-from-India%E2%80%99s-epics</a></li>
+
+<li>S. L. A. A. MENON, DEMOCRATIZ FOREST GOVERNANCE IN INDIA-PD. New Delhi: Oxford University Press, 2014.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>G. Aredath, “Forest Rights Act at 20: Has India Kept Its Promise?,” Frontline. Accessed: Jul. 29, 2026. [Online]. Available: <a href="https://frontline.thehindu.com/environment/forest-rights-act-india-forest-governance/article71225415.ece">https://frontline.thehindu.com/environment/forest-rights-act-india-forest-governance/article71225415.ece</a></li>
+
+<li>K. Pandey, “Collective action transforms farming and forests,” Mongabay-India. Accessed: Sep. 23, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/09/collective-action-transforms-farming-and-forests/">https://india.mongabay.com/2025/09/collective-action-transforms-farming-and-forests/</a></li>
+
+<li>G. Varma, “In India’s forests, ecologists harness the power of fieldwork,” Nature India, Aug. 2025, doi: 10.1038/d44151-025-00160-9.</li>
+
+<li>A. Tandon, “Studies question effectiveness of forest plantations,” Mongabay-India. Accessed: Jun. 11, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/06/studies-question-effectiveness-of-forest-plantations/">https://india.mongabay.com/2025/06/studies-question-effectiveness-of-forest-plantations/</a></li>
+
+<li>P. Shankar, “When women stand guard for the forest,” Mongabay-India. Accessed: Apr. 11, 2025. [Online]. Available: <a href="https://india.mongabay.com/2025/04/when-women-stand-guard-for-the-forest/">https://india.mongabay.com/2025/04/when-women-stand-guard-for-the-forest/</a></li>
+
+<li>S. Lele, “Investigation Reveals How India’s Forest Reports Hide True Forest Decline,” Frontline. Accessed: Jan. 23, 2025. [Online]. Available: <a href="https://frontline.thehindu.com/environment/forest-plantations-forest-survey-of-india-conservationists-environment-land-cover/article69123710.ece">https://frontline.thehindu.com/environment/forest-plantations-forest-survey-of-india-conservationists-environment-land-cover/article69123710.ece</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>H. Nitnaware, “DTE Coverage: State of Forest Report 2023,” Down To Earth. Accessed: Dec. 26, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/forests/dte-coverage-state-of-forest-report-2023">https://www.downtoearth.org.in/forests/dte-coverage-state-of-forest-report-2023</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. Loivaranta, “Post-human lawscapes of Indigenous community forests in Central India,” The Geographical Journal, vol. 186, no. 3, pp. 288–299, Sep. 2020, doi: 10.1111/geoj.12342.</li>
+<li>N. Gowda, “Uttara Kannada’s evergreen forests remain under relentless assault in the name of clean energy,” Centre for Financial Accountability. Accessed: Jul. 22, 2026. [Online]. Available: <a href="https://www.cenfa.org/uttara-kannadas-evergreen-forests-remain-under-relentless-assault-in-the-name-of-clean-energy/">https://www.cenfa.org/uttara-kannadas-evergreen-forests-remain-under-relentless-assault-in-the-name-of-clean-energy/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>G. A. &amp; R. Goswami, “Arunachal Pradesh: Why the Forest Rights Act Matters,” Frontline. Accessed: Jul. 29, 2026. [Online]. Available: <a href="https://frontline.thehindu.com/social-issues/social-justice/arunachal-pradesh-fra-customary-forest-rights/article71253078.ece">https://frontline.thehindu.com/social-issues/social-justice/arunachal-pradesh-fra-customary-forest-rights/article71253078.ece</a></li>
+<li>S. M. &amp; S. Lele, “Forest Rights Act: Why Community Rights Remain Unfulfilled,” Frontline. Accessed: Jul. 29, 2026. [Online]. Available: <a href="https://frontline.thehindu.com/current-issue/community-forest-rights-india/article71228892.ece">https://frontline.thehindu.com/current-issue/community-forest-rights-india/article71228892.ece</a></li>
+<li>S. Lele, “Forest Rights Act at 20: Can FRA Redefine India’s Forest Governance?,” Frontline. Accessed: Jul. 29, 2026. [Online]. Available: <a href="https://frontline.thehindu.com/environment/conservation/forest-rights-act-community-forest-governance-india/article71221008.ece">https://frontline.thehindu.com/environment/conservation/forest-rights-act-community-forest-governance-india/article71221008.ece</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org65dfbc8" class="outline-3">
+<h3 id="org65dfbc8"><span class="section-number-3">3.2.</span> Misc</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>“Home - Global Forest Coalition.” Accessed: Nov. 19, 2025. [Online]. Available: <a href="https://globalforestcoalition.org/">https://globalforestcoalition.org/</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf8263d1" class="outline-2">
+<h2 id="orgf8263d1"><span class="section-number-2">4.</span> Arts</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org571ea90" class="outline-3">
+<h3 id="org571ea90"><span class="section-number-3">4.1.</span> Misc</h3>
+</div>
+</div>
+<div id="outline-container-org3e8e980" class="outline-2">
+<h2 id="org3e8e980"><span class="section-number-2">5.</span> Misc</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>paco, “Forests Don’t Just Store Carbon. They Keep People Alive, Scientists Say,” Regeneration International. Accessed: Feb. 17, 2026. [Online]. Available: <a href="https://regenerationinternational.org/2026/02/13/forests-dont-just-store-carbon-they-keep-people-alive-scientists-say/">https://regenerationinternational.org/2026/02/13/forests-dont-just-store-carbon-they-keep-people-alive-scientists-say/</a></li>
+
+<li>“How a trip to the rainforest restored hope for me and my son | Psyche Stories of Change.” Accessed: Jul. 04, 2025. [Online]. Available: <a href="https://psyche.co/stories-of-change/how-a-trip-to-the-rainforest-restored-hope-for-me-and-my-son">https://psyche.co/stories-of-change/how-a-trip-to-the-rainforest-restored-hope-for-me-and-my-son</a></li>
+
+<li>R. A. B. C. M. E. E. T. A. States, “Trump administration plans to rescind rule blocking logging on national forest lands,” Mongabay Environmental News. Accessed: Jun. 24, 2025. [Online]. Available: <a href="https://news.mongabay.com/short-article/2025/06/trump-administration-plans-to-rescind-rule-blocking-logging-on-national-forest-lands/">https://news.mongabay.com/short-article/2025/06/trump-administration-plans-to-rescind-rule-blocking-logging-on-national-forest-lands/</a></li>
+
+<li>I. the forests of Vidarbha et al., “Maruti Bhujangrao Chitampalli, sage of the forest, died on June 18th, aged 93,” Mongabay Environmental News. Accessed: Jun. 24, 2025. [Online]. Available: <a href="https://news.mongabay.com/short-article/2025/06/maruti-bhujangrao-chitampalli-sage-of-the-forest-died-on-june-18th-aged-93/">https://news.mongabay.com/short-article/2025/06/maruti-bhujangrao-chitampalli-sage-of-the-forest-died-on-june-18th-aged-93/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>R. A. B. C. B. E. T. R. R. T. PeopleRainforestsAmazon, “On World Rainforest Day, stories of Amazon danger and resistance,” Mongabay Environmental News. Accessed: Jun. 22, 2025. [Online]. Available: <a href="https://news.mongabay.com/short-article/2025/06/on-world-rainforest-day-stories-of-amazon-danger-and-resistance/">https://news.mongabay.com/short-article/2025/06/on-world-rainforest-day-stories-of-amazon-danger-and-resistance/</a></li>
+<li>Amazon et al., “World Rainforest Day and the state of Earth’s most vital rainforests,” Mongabay Environmental News. Accessed: Jun. 22, 2025. [Online]. Available: <a href="https://news.mongabay.com/short-article/2025/06/world-rainforest-day-and-the-state-of-earths-most-vital-rainforests/">https://news.mongabay.com/short-article/2025/06/world-rainforest-day-and-the-state-of-earths-most-vital-rainforests/</a></li>
+<li>“On World Rainforest Day, the world confronts an unprecedented wave of tropical forest loss,” Mongabay Environmental News. Accessed: Jun. 22, 2025. [Online]. Available: <a href="https://news.mongabay.com/2025/06/on-world-rainforest-day-the-world-confronts-an-unprecedented-wave-of-tropical-forest-loss/">https://news.mongabay.com/2025/06/on-world-rainforest-day-the-world-confronts-an-unprecedented-wave-of-tropical-forest-loss/</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>T. N. Y. B. Garden, “Reforestation stands out among plant-based climate-mitigation strategies as most beneficial for wildlife biodiversity.” Accessed: Jan. 27, 2025. [Online]. Available: <a href="https://phys.org/news/2025-01-reforestation-based-climate-mitigation-strategies.html">https://phys.org/news/2025-01-reforestation-based-climate-mitigation-strategies.html</a></li>
+
+<li>A. Hector, C. Marsh, and E. Turner, “Nature benefits when logged tropical forests are left to recover – here’s how,” The Conversation. Accessed: Jan. 10, 2025. [Online]. Available: <a href="http://theconversation.com/nature-benefits-when-logged-tropical-forests-are-left-to-recover-heres-how-246718">http://theconversation.com/nature-benefits-when-logged-tropical-forests-are-left-to-recover-heres-how-246718</a></li>
+
+<li>“How Mounting Demand for Rubber Is Driving Tropical Forest Loss,” Yale E360. Accessed: Jan. 06, 2025. [Online]. Available: <a href="https://e360.yale.edu/features/rubber-plantations-deforestation-tires-electric-vehicles">https://e360.yale.edu/features/rubber-plantations-deforestation-tires-electric-vehicles</a></li>
+
+<li>R. a Butler, “Rainforest Outlook 2025: Storylines to watch as the year unfolds,” Mongabay Environmental News. Accessed: Dec. 30, 2024. [Online]. Available: <a href="https://news.mongabay.com/2024/12/rainforest-outlook-2025-storylines-to-watch-as-the-year-unfolds/">https://news.mongabay.com/2024/12/rainforest-outlook-2025-storylines-to-watch-as-the-year-unfolds/</a></li>
+
+<li>R. Ghai, “Explained: What are ‘Sacred Groves’?,” Down To Earth. Accessed: Dec. 20, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/forests/explained-what-are-sacred-groves">https://www.downtoearth.org.in/forests/explained-what-are-sacred-groves</a></li>
+
+<li>“Moose Browsing Damage in Swedish Forests,” IIASA - International Institute for Applied Systems Analysis. Accessed: Dec. 13, 2024. [Online]. Available: <a href="https://iiasa.ac.at/news/dec-2024/moose-browsing-damage-in-swedish-forests">https://iiasa.ac.at/news/dec-2024/moose-browsing-damage-in-swedish-forests</a></li>
+
+<li>“Rainforest Action Network - Fighting for People and Planet,” Rainforest Action Network. Accessed: Oct. 27, 2024. [Online]. Available: <a href="https://www.ran.org/">https://www.ran.org/</a></li>
+
+<li>U. N. Environment, “Why do forests matter? | UNEP - UN Environment Programme.” Accessed: Aug. 19, 2024. [Online]. Available: <a href="https://www.unep.org/topics/forests/why-do-forests-matter">https://www.unep.org/topics/forests/why-do-forests-matter</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>H. N. Sajwan Shimali Chauhan,Raju, “DTE Coverage: State of the World’s Forests 2024,” Down To Earth. Accessed: Aug. 08, 2024. [Online]. Available: <a href="https://www.downtoearth.org.in/forests/dte-coverage-state-of-the-worlds-forests-2024">https://www.downtoearth.org.in/forests/dte-coverage-state-of-the-worlds-forests-2024</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>J. McKenzie, “Missing the forest for the trees: The role of forests in Earth’s climate goes far beyond carbon storage,” Bulletin of the Atomic Scientists. Accessed: May 20, 2024. [Online]. Available: <a href="https://thebulletin.org/2024/05/missing-the-forest-for-the-trees-the-role-of-forests-in-earths-climate-goes-far-beyond-carbon-storage/">https://thebulletin.org/2024/05/missing-the-forest-for-the-trees-the-role-of-forests-in-earths-climate-goes-far-beyond-carbon-storage/</a></li>
+</ul>
+
+
+<hr />
+
+<p>
+<a href="https://htmlpreview.github.io/?https://github.com/ghostonghub/zero/blob/main/omo-bigpic.html">Big Picture</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-media.html">Media</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-miscurls.html">Misc</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-today.html">Today</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/omo-aajkal.html">Current Affairs</a> <b>|</b>
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/contact-info.html">Contact Info</a>,
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/license.html">License</a>, 
+<a href="https://htmlpreview.github.io/?https://github.com/ourghostorg/ourghostorg.github.io/blob/main/disclaimer.html">Disclaimer</a>.
+</p>
+
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
+<p class="date">Created: 2026-08-29 Sat 11:04</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
