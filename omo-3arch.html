@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-08-29 Sat 11:07 -->
+<!-- 2026-09-30 Wed 20:26 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Architecture</title>
@@ -221,151 +221,151 @@ org_html_manager.setup();  // activate after the parameters are set
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org10049ec">1. General</a></li>
-<li><a href="#org4e23e09">2. Philosophy</a>
+<li><a href="#orgfddadfd">1. General</a></li>
+<li><a href="#org5a294d0">2. Philosophy</a>
 <ul>
-<li><a href="#org51d239a">2.1. Ethics</a></li>
-<li><a href="#org3955624">2.2. Misc</a></li>
+<li><a href="#org844c000">2.1. Ethics</a></li>
+<li><a href="#orgacfbafc">2.2. Misc</a></li>
 </ul>
 </li>
-<li><a href="#org16bf42b">3. STEMM</a>
+<li><a href="#org1b1a4f4">3. STEMM</a>
 <ul>
-<li><a href="#orgf360b60">3.1. Systems Sciences</a>
+<li><a href="#org95e2032">3.1. Systems Sciences</a>
 <ul>
-<li><a href="#org6edaac2">3.1.1. Complexity Science</a></li>
-<li><a href="#orga9598ca">3.1.2. Network Science</a></li>
-<li><a href="#org8e08454">3.1.3. Misc</a></li>
+<li><a href="#orga0e3c4f">3.1.1. Complexity Science</a></li>
+<li><a href="#orgf1dfa89">3.1.2. Network Science</a></li>
+<li><a href="#org96dcba7">3.1.3. Misc</a></li>
 </ul>
 </li>
-<li><a href="#org0300dd6">3.2. Environment</a></li>
-<li><a href="#orgbc2d029">3.3. CSE</a>
+<li><a href="#orgb4c8c5a">3.2. Environment</a></li>
+<li><a href="#org67db03d">3.3. CSE</a>
 <ul>
-<li><a href="#org6254778">3.3.1. Data Science</a></li>
-<li><a href="#orge156ce5">3.3.2. AI</a></li>
-<li><a href="#org98398fb">3.3.3. Misc</a></li>
+<li><a href="#org36d8082">3.3.1. Data Science</a></li>
+<li><a href="#org58a670f">3.3.2. AI</a></li>
+<li><a href="#org1683589">3.3.3. Misc</a></li>
 </ul>
 </li>
-<li><a href="#orgfc0d8ab">3.4. Misc</a></li>
+<li><a href="#orgb6bf929">3.4. Misc</a></li>
 </ul>
 </li>
-<li><a href="#org5534fbf">4. Worldly Matters</a>
+<li><a href="#org4175bfc">4. Worldly Matters</a>
 <ul>
-<li><a href="#org922699b">4.1. Space and Time</a>
+<li><a href="#orgdc401ef">4.1. Space and Time</a>
 <ul>
-<li><a href="#org15a9679">4.1.1. History</a></li>
+<li><a href="#org2ec559d">4.1.1. History</a></li>
 </ul>
 </li>
-<li><a href="#orgd4f9601">4.2. Space, Earth, Life Sciences, Environment, Health, Misc</a></li>
-<li><a href="#org4511f8a">4.3. Religions, Spirituality, Misc</a></li>
-<li><a href="#org0a86d72">4.4. Humanities, Misc</a>
+<li><a href="#org32c08a6">4.2. Space, Earth, Life Sciences, Environment, Health, Misc</a></li>
+<li><a href="#orgedd0243">4.3. Religions, Spirituality, Misc</a></li>
+<li><a href="#org296fbc5">4.4. Humanities, Misc</a>
 <ul>
-<li><a href="#org3e74330">4.4.1. Psychology</a></li>
+<li><a href="#org2161e1c">4.4.1. Psychology</a></li>
 </ul>
 </li>
-<li><a href="#org3b0fb3a">4.5. SocioPolitical Studies, Law, Misc</a>
+<li><a href="#orgb740fb6">4.5. SocioPolitical Studies, Law, Misc</a>
 <ul>
-<li><a href="#org82f8e2d">4.5.1. Orgs</a></li>
-<li><a href="#orgca2e4a6">4.5.2. Nation States</a>
+<li><a href="#orgf58f570">4.5.1. Orgs</a></li>
+<li><a href="#org4a5259d">4.5.2. Nation States</a>
 <ul>
-<li><a href="#orgfb220ea">4.5.2.1. India</a>
+<li><a href="#org0f4e849">4.5.2.1. India</a>
 <ul>
-<li><a href="#orgaf75c85">4.5.2.1.1. General</a></li>
-<li><a href="#orgd28b566">4.5.2.1.2. STEMM</a>
+<li><a href="#org70f4ade">4.5.2.1.1. General</a></li>
+<li><a href="#org9c594d7">4.5.2.1.2. STEMM</a>
 <ul>
-<li><a href="#org0851738">Environment</a></li>
-<li><a href="#org7a8bf61">Misc</a></li>
+<li><a href="#org3140841">Environment</a></li>
+<li><a href="#org1b52d73">Misc</a></li>
 </ul>
 </li>
-<li><a href="#org594f7fc">4.5.2.1.3. World</a>
+<li><a href="#org0013c0b">4.5.2.1.3. World</a>
 <ul>
-<li><a href="#orgf8bf9e9">Misc</a></li>
+<li><a href="#orge7a4a5f">Misc</a></li>
 </ul>
 </li>
-<li><a href="#orged64a45">4.5.2.1.4. Special Topics</a>
+<li><a href="#org28bda5b">4.5.2.1.4. Special Topics</a>
 <ul>
-<li><a href="#org1d92090">Possibly MisInfo/DisInfo</a>
+<li><a href="#org11c6074">Possibly MisInfo/DisInfo</a>
 <ul>
-<li><a href="#orgbd6a2da">Vaastu</a>
+<li><a href="#org6d22131">Vaastu</a>
 <ul>
-<li><a href="#orga013ed7">General</a></li>
-<li><a href="#org7c1e36f">Core</a></li>
-<li><a href="#orgd86493a">Misc</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org726f043">4.5.2.1.5. Misc</a></li>
+<li><a href="#org533d697">General</a></li>
+<li><a href="#org680c93a">Core</a></li>
+<li><a href="#org5cbda66">Misc</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgf77451e">4.5.3. Feminism</a></li>
-<li><a href="#orgfab3716">4.5.4. Misc</a></li>
 </ul>
 </li>
-<li><a href="#orge419b9e">4.6. Business Studies, Misc</a></li>
-<li><a href="#orgeef86f4">4.7. Security Studies, Misc</a></li>
-<li><a href="#orge02ede8">4.8. Communication, Misc</a></li>
-<li><a href="#orga94d52c">4.9. Misc</a></li>
+<li><a href="#org458c54a">4.5.2.1.5. Misc</a></li>
 </ul>
 </li>
-<li><a href="#orgb2060d0">5. Arts</a>
+</ul>
+</li>
+<li><a href="#org8fedcbe">4.5.3. Feminism</a></li>
+<li><a href="#org6dea26a">4.5.4. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org36accbf">4.6. Business Studies, Misc</a></li>
+<li><a href="#orgdfe9fbc">4.7. Security Studies, Misc</a></li>
+<li><a href="#org9ab28be">4.8. Communication, Misc</a></li>
+<li><a href="#org9e0003d">4.9. Misc</a></li>
+</ul>
+</li>
+<li><a href="#org48cebec">5. Arts</a>
 <ul>
-<li><a href="#org36264b3">5.1. Misc</a></li>
+<li><a href="#org1502281">5.1. Misc</a></li>
 </ul>
 </li>
-<li><a href="#org9c195b7">6. Special Topics</a>
+<li><a href="#org1b7a88d">6. Special Topics</a>
 <ul>
-<li><a href="#org4953bc1">6.1. Texts</a>
+<li><a href="#orgb40a85c">6.1. Texts</a>
 <ul>
-<li><a href="#org7682d11">6.1.1. Humble Book Bundles</a></li>
+<li><a href="#orgcb25d01">6.1.1. Humble Book Bundles</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org0e4d6a7">7. Misc</a>
+<li><a href="#orgeaa9a89">7. Misc</a>
 <ul>
-<li><a href="#org2b65af8">7.1. 9</a></li>
-<li><a href="#org7660a12">7.2. Texts</a></li>
-<li><a href="#org5424f12">7.3. Articles, Essays</a></li>
+<li><a href="#org7b17bc3">7.1. 9</a></li>
+<li><a href="#org13dd611">7.2. Texts</a></li>
+<li><a href="#orgba11a5d">7.3. Articles, Essays</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <hr />
-<div id="outline-container-org10049ec" class="outline-2">
-<h2 id="org10049ec"><span class="section-number-2">1.</span> General</h2>
+<div id="outline-container-orgfddadfd" class="outline-2">
+<h2 id="orgfddadfd"><span class="section-number-2">1.</span> General</h2>
 </div>
-<div id="outline-container-org4e23e09" class="outline-2">
-<h2 id="org4e23e09"><span class="section-number-2">2.</span> Philosophy</h2>
+<div id="outline-container-org5a294d0" class="outline-2">
+<h2 id="org5a294d0"><span class="section-number-2">2.</span> Philosophy</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org51d239a" class="outline-3">
-<h3 id="org51d239a"><span class="section-number-3">2.1.</span> Ethics</h3>
+<div id="outline-container-org844c000" class="outline-3">
+<h3 id="org844c000"><span class="section-number-3">2.1.</span> Ethics</h3>
 </div>
-<div id="outline-container-org3955624" class="outline-3">
-<h3 id="org3955624"><span class="section-number-3">2.2.</span> Misc</h3>
+<div id="outline-container-orgacfbafc" class="outline-3">
+<h3 id="orgacfbafc"><span class="section-number-3">2.2.</span> Misc</h3>
 </div>
 </div>
-<div id="outline-container-org16bf42b" class="outline-2">
-<h2 id="org16bf42b"><span class="section-number-2">3.</span> STEMM</h2>
+<div id="outline-container-org1b1a4f4" class="outline-2">
+<h2 id="org1b1a4f4"><span class="section-number-2">3.</span> STEMM</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgf360b60" class="outline-3">
-<h3 id="orgf360b60"><span class="section-number-3">3.1.</span> Systems Sciences</h3>
+<div id="outline-container-org95e2032" class="outline-3">
+<h3 id="org95e2032"><span class="section-number-3">3.1.</span> Systems Sciences</h3>
 <div class="outline-text-3" id="text-3-1">
 </div>
-<div id="outline-container-org6edaac2" class="outline-4">
-<h4 id="org6edaac2"><span class="section-number-4">3.1.1.</span> Complexity Science</h4>
+<div id="outline-container-orga0e3c4f" class="outline-4">
+<h4 id="orga0e3c4f"><span class="section-number-4">3.1.1.</span> Complexity Science</h4>
 </div>
-<div id="outline-container-orga9598ca" class="outline-4">
-<h4 id="orga9598ca"><span class="section-number-4">3.1.2.</span> Network Science</h4>
+<div id="outline-container-orgf1dfa89" class="outline-4">
+<h4 id="orgf1dfa89"><span class="section-number-4">3.1.2.</span> Network Science</h4>
 </div>
-<div id="outline-container-org8e08454" class="outline-4">
-<h4 id="org8e08454"><span class="section-number-4">3.1.3.</span> Misc</h4>
+<div id="outline-container-org96dcba7" class="outline-4">
+<h4 id="org96dcba7"><span class="section-number-4">3.1.3.</span> Misc</h4>
 <div class="outline-text-4" id="text-3-1-3">
 <ul class="org-ul">
 <li>J. Harris, <b>Fractal Architecture: Organic Design Philosophy in Theory and Practice.</b> UNM Press, 2012.</li>
@@ -373,31 +373,31 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 </div>
 </div>
-<div id="outline-container-org0300dd6" class="outline-3">
-<h3 id="org0300dd6"><span class="section-number-3">3.2.</span> Environment</h3>
+<div id="outline-container-orgb4c8c5a" class="outline-3">
+<h3 id="orgb4c8c5a"><span class="section-number-3">3.2.</span> Environment</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>A. Nelson and F. Schneider, Eds., Housing for Degrowth: Principles, Models, Challenges and Opportunities, 1st edition. Abingdon, Oxon ; New York, NY: Routledge, 2018.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbc2d029" class="outline-3">
-<h3 id="orgbc2d029"><span class="section-number-3">3.3.</span> CSE</h3>
+<div id="outline-container-org67db03d" class="outline-3">
+<h3 id="org67db03d"><span class="section-number-3">3.3.</span> CSE</h3>
 <div class="outline-text-3" id="text-3-3">
 </div>
-<div id="outline-container-org6254778" class="outline-4">
-<h4 id="org6254778"><span class="section-number-4">3.3.1.</span> Data Science</h4>
+<div id="outline-container-org36d8082" class="outline-4">
+<h4 id="org36d8082"><span class="section-number-4">3.3.1.</span> Data Science</h4>
 </div>
-<div id="outline-container-orge156ce5" class="outline-4">
-<h4 id="orge156ce5"><span class="section-number-4">3.3.2.</span> AI</h4>
+<div id="outline-container-org58a670f" class="outline-4">
+<h4 id="org58a670f"><span class="section-number-4">3.3.2.</span> AI</h4>
 <div class="outline-text-4" id="text-3-3-2">
 <ul class="org-ul">
 <li>I. As and P. Basu, Eds., The Routledge Companion to Artificial Intelligence in Architecture, 1st edition. Abington, Oxon ; New York: Routledge, 2021.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org98398fb" class="outline-4">
-<h4 id="org98398fb"><span class="section-number-4">3.3.3.</span> Misc</h4>
+<div id="outline-container-org1683589" class="outline-4">
+<h4 id="org1683589"><span class="section-number-4">3.3.3.</span> Misc</h4>
 <div class="outline-text-4" id="text-3-3-3">
 <ul class="org-ul">
 <li>“Brazilian Interiors That Use Organic Shapes to Challenge Straight Lines | ArchDaily.” <a href="https://www.archdaily.com/991921/brazilian-interiors-that-use-organic-shapes-to-challenge-straight-lines">https://www.archdaily.com/991921/brazilian-interiors-that-use-organic-shapes-to-challenge-straight-lines</a> (accessed Nov. 19, 2022).</li>
@@ -410,8 +410,8 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 </div>
 </div>
-<div id="outline-container-orgfc0d8ab" class="outline-3">
-<h3 id="orgfc0d8ab"><span class="section-number-3">3.4.</span> Misc</h3>
+<div id="outline-container-orgb6bf929" class="outline-3">
+<h3 id="orgb6bf929"><span class="section-number-3">3.4.</span> Misc</h3>
 <div class="outline-text-3" id="text-3-4">
 <ul class="org-ul">
 <li>D. S. Team and M. J. Ostwald, “The Science of Beautiful Buildings,” The Conversation. Accessed: Sep. 12, 2025. [Online]. Available: <a href="http://theconversation.com/the-science-of-beautiful-buildings-257453">http://theconversation.com/the-science-of-beautiful-buildings-257453</a></li>
@@ -425,16 +425,16 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 </div>
 </div>
-<div id="outline-container-org5534fbf" class="outline-2">
-<h2 id="org5534fbf"><span class="section-number-2">4.</span> Worldly Matters</h2>
+<div id="outline-container-org4175bfc" class="outline-2">
+<h2 id="org4175bfc"><span class="section-number-2">4.</span> Worldly Matters</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org922699b" class="outline-3">
-<h3 id="org922699b"><span class="section-number-3">4.1.</span> Space and Time</h3>
+<div id="outline-container-orgdc401ef" class="outline-3">
+<h3 id="orgdc401ef"><span class="section-number-3">4.1.</span> Space and Time</h3>
 <div class="outline-text-3" id="text-4-1">
 </div>
-<div id="outline-container-org15a9679" class="outline-4">
-<h4 id="org15a9679"><span class="section-number-4">4.1.1.</span> History</h4>
+<div id="outline-container-org2ec559d" class="outline-4">
+<h4 id="org2ec559d"><span class="section-number-4">4.1.1.</span> History</h4>
 <div class="outline-text-4" id="text-4-1-1">
 <ul class="org-ul">
 <li>B. Calder, Architecture: From Prehistory to Climate Emergency. Penguin UK, 2021.</li>
@@ -442,18 +442,18 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 </div>
 </div>
-<div id="outline-container-orgd4f9601" class="outline-3">
-<h3 id="orgd4f9601"><span class="section-number-3">4.2.</span> Space, Earth, Life Sciences, Environment, Health, Misc</h3>
+<div id="outline-container-org32c08a6" class="outline-3">
+<h3 id="org32c08a6"><span class="section-number-3">4.2.</span> Space, Earth, Life Sciences, Environment, Health, Misc</h3>
 </div>
-<div id="outline-container-org4511f8a" class="outline-3">
-<h3 id="org4511f8a"><span class="section-number-3">4.3.</span> Religions, Spirituality, Misc</h3>
+<div id="outline-container-orgedd0243" class="outline-3">
+<h3 id="orgedd0243"><span class="section-number-3">4.3.</span> Religions, Spirituality, Misc</h3>
 </div>
-<div id="outline-container-org0a86d72" class="outline-3">
-<h3 id="org0a86d72"><span class="section-number-3">4.4.</span> Humanities, Misc</h3>
+<div id="outline-container-org296fbc5" class="outline-3">
+<h3 id="org296fbc5"><span class="section-number-3">4.4.</span> Humanities, Misc</h3>
 <div class="outline-text-3" id="text-4-4">
 </div>
-<div id="outline-container-org3e74330" class="outline-4">
-<h4 id="org3e74330"><span class="section-number-4">4.4.1.</span> Psychology</h4>
+<div id="outline-container-org2161e1c" class="outline-4">
+<h4 id="org2161e1c"><span class="section-number-4">4.4.1.</span> Psychology</h4>
 <div class="outline-text-4" id="text-4-4-1">
 <ul class="org-ul">
 <li>A. de Botton, The Architecture of Happiness. Penguin UK, 2007.</li>
@@ -461,31 +461,31 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 </div>
 </div>
-<div id="outline-container-org3b0fb3a" class="outline-3">
-<h3 id="org3b0fb3a"><span class="section-number-3">4.5.</span> SocioPolitical Studies, Law, Misc</h3>
+<div id="outline-container-orgb740fb6" class="outline-3">
+<h3 id="orgb740fb6"><span class="section-number-3">4.5.</span> SocioPolitical Studies, Law, Misc</h3>
 <div class="outline-text-3" id="text-4-5">
 </div>
-<div id="outline-container-org82f8e2d" class="outline-4">
-<h4 id="org82f8e2d"><span class="section-number-4">4.5.1.</span> Orgs</h4>
+<div id="outline-container-orgf58f570" class="outline-4">
+<h4 id="orgf58f570"><span class="section-number-4">4.5.1.</span> Orgs</h4>
 </div>
-<div id="outline-container-orgca2e4a6" class="outline-4">
-<h4 id="orgca2e4a6"><span class="section-number-4">4.5.2.</span> Nation States</h4>
+<div id="outline-container-org4a5259d" class="outline-4">
+<h4 id="org4a5259d"><span class="section-number-4">4.5.2.</span> Nation States</h4>
 <div class="outline-text-4" id="text-4-5-2">
 </div>
-<div id="outline-container-orgfb220ea" class="outline-5">
-<h5 id="orgfb220ea"><span class="section-number-5">4.5.2.1.</span> India</h5>
+<div id="outline-container-org0f4e849" class="outline-5">
+<h5 id="org0f4e849"><span class="section-number-5">4.5.2.1.</span> India</h5>
 <div class="outline-text-5" id="text-4-5-2-1">
 </div>
-<div id="outline-container-orgaf75c85" class="outline-6">
-<h6 id="orgaf75c85"><span class="section-number-6">4.5.2.1.1.</span> General</h6>
+<div id="outline-container-org70f4ade" class="outline-6">
+<h6 id="org70f4ade"><span class="section-number-6">4.5.2.1.1.</span> General</h6>
 </div>
-<div id="outline-container-orgd28b566" class="outline-6">
-<h6 id="orgd28b566"><span class="section-number-6">4.5.2.1.2.</span> STEMM</h6>
+<div id="outline-container-org9c594d7" class="outline-6">
+<h6 id="org9c594d7"><span class="section-number-6">4.5.2.1.2.</span> STEMM</h6>
 <div class="outline-text-6" id="text-4-5-2-1-2">
 </div>
-<div id="outline-container-org0851738" class="outline-7">
-<h7 id="org0851738">Environment</h7>
-<div class="outline-text-7" id="text-org0851738">
+<div id="outline-container-org3140841" class="outline-7">
+<h7 id="org3140841">Environment</h7>
+<div class="outline-text-7" id="text-org3140841">
 <ul class="org-ul">
 <li>A. Roychowdhury and A. Somvanshi, <i>Building Sense : Beyond The Green Façade Of Sustainable Habitat, First Edition.</i> New Delhi: Centre for Science &amp; Environment, 2014.</li>
 
@@ -500,46 +500,46 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </div>
-<div id="outline-container-org7a8bf61" class="outline-7">
-<h7 id="org7a8bf61">Misc</h7>
-<div class="outline-text-7" id="text-org7a8bf61">
+<div id="outline-container-org1b52d73" class="outline-7">
+<h7 id="org1b52d73">Misc</h7>
+<div class="outline-text-7" id="text-org1b52d73">
 <ul class="org-ul">
 <li><a href="https://iisc.ac.in/events/formal-release-of-the-whitepaper-transforming-indias-built-environment-a-2050-vision-for-wellness-and-resilience-via-webex/">Formal release of the whitepaper “Transforming India’s Built Environment: A 2050 vision for wellness and resilience” via WebEx</a>, Indian Institute of Science. (accessed Nov. 25, 2021).</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-org594f7fc" class="outline-6">
-<h6 id="org594f7fc"><span class="section-number-6">4.5.2.1.3.</span> World</h6>
+<div id="outline-container-org0013c0b" class="outline-6">
+<h6 id="org0013c0b"><span class="section-number-6">4.5.2.1.3.</span> World</h6>
 <div class="outline-text-6" id="text-4-5-2-1-3">
 </div>
-<div id="outline-container-orgf8bf9e9" class="outline-7">
-<h7 id="orgf8bf9e9">Misc</h7>
+<div id="outline-container-orge7a4a5f" class="outline-7">
+<h7 id="orge7a4a5f">Misc</h7>
 </div>
 </div>
-<div id="outline-container-orged64a45" class="outline-6">
-<h6 id="orged64a45"><span class="section-number-6">4.5.2.1.4.</span> Special Topics</h6>
+<div id="outline-container-org28bda5b" class="outline-6">
+<h6 id="org28bda5b"><span class="section-number-6">4.5.2.1.4.</span> Special Topics</h6>
 <div class="outline-text-6" id="text-4-5-2-1-4">
 </div>
-<div id="outline-container-org1d92090" class="outline-7">
-<h7 id="org1d92090">Possibly MisInfo/DisInfo</h7>
-<div class="outline-text-7" id="text-org1d92090">
+<div id="outline-container-org11c6074" class="outline-7">
+<h7 id="org11c6074">Possibly MisInfo/DisInfo</h7>
+<div class="outline-text-7" id="text-org11c6074">
 </div>
-<div id="outline-container-orgbd6a2da" class="outline-8">
-<h8 id="orgbd6a2da">Vaastu</h8>
-<div class="outline-text-8" id="text-orgbd6a2da">
+<div id="outline-container-org6d22131" class="outline-8">
+<h8 id="org6d22131">Vaastu</h8>
+<div class="outline-text-8" id="text-org6d22131">
 </div>
-<div id="outline-container-orga013ed7" class="outline-9">
-<h9 id="orga013ed7">General</h9>
-<div class="outline-text-9" id="text-orga013ed7">
+<div id="outline-container-org533d697" class="outline-9">
+<h9 id="org533d697">General</h9>
+<div class="outline-text-9" id="text-org533d697">
 <ul class="org-ul">
 <li>“Vastu shastra,” Wikipedia. Jun. 27, 2022. Accessed: Jul. 28, 2022. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=Vastu_shastra&amp;oldid=1095235646">https://en.wikipedia.org/w/index.php?title=Vastu_shastra&amp;oldid=1095235646</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7c1e36f" class="outline-9">
-<h9 id="org7c1e36f">Core</h9>
-<div class="outline-text-9" id="text-org7c1e36f">
+<div id="outline-container-org680c93a" class="outline-9">
+<h9 id="org680c93a">Core</h9>
+<div class="outline-text-9" id="text-org680c93a">
 <ul class="org-ul">
 <li>A. Sashikala, Guide To Vaastu. New Delhi: PENGUIN INDIA, 2000.</li>
 <li>P. Chawla, Vaastu: Secrets for a Better Life. The Times Group Books, 2008.</li>
@@ -549,14 +549,14 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd86493a" class="outline-9">
-<h9 id="orgd86493a">Misc</h9>
+<div id="outline-container-org5cbda66" class="outline-9">
+<h9 id="org5cbda66">Misc</h9>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org726f043" class="outline-6">
-<h6 id="org726f043"><span class="section-number-6">4.5.2.1.5.</span> Misc</h6>
+<div id="outline-container-org458c54a" class="outline-6">
+<h6 id="org458c54a"><span class="section-number-6">4.5.2.1.5.</span> Misc</h6>
 <div class="outline-text-6" id="text-4-5-2-1-5">
 <ul class="org-ul">
 <li>“Mahadeva Gramam: Kannur village that keeps Gandhi’s quiet architect alive,” Mahadeva Gramam: Kannur village that keeps Gandhi’s quiet architect alive. Accessed: Aug. 16, 2025. [Online]. Available: <a href="https://www.onmanorama.com/news/kerala/2025/08/15/mahadev-desai-payyannur.html">https://www.onmanorama.com/news/kerala/2025/08/15/mahadev-desai-payyannur.html</a></li>
@@ -569,16 +569,16 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 </div>
 </div>
-<div id="outline-container-orgf77451e" class="outline-4">
-<h4 id="orgf77451e"><span class="section-number-4">4.5.3.</span> Feminism</h4>
+<div id="outline-container-org8fedcbe" class="outline-4">
+<h4 id="org8fedcbe"><span class="section-number-4">4.5.3.</span> Feminism</h4>
 <div class="outline-text-4" id="text-4-5-3">
 <ul class="org-ul">
 <li>D. Hayden, The Grand Domestic Revolution: A History of Feminist Designs For American Homes, Neighborhoods, and Cities. MIT Press, 1982.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfab3716" class="outline-4">
-<h4 id="orgfab3716"><span class="section-number-4">4.5.4.</span> Misc</h4>
+<div id="outline-container-org6dea26a" class="outline-4">
+<h4 id="org6dea26a"><span class="section-number-4">4.5.4.</span> Misc</h4>
 <div class="outline-text-4" id="text-4-5-4">
 <ul class="org-ul">
 <li>BY, “Brutalism Is Back.” Accessed: Aug. 17, 2025. [Online]. Available: <a href="https://jacobin.com/2025/08/architecture-brutalism-neobrutalism-aesthetics-ecology">https://jacobin.com/2025/08/architecture-brutalism-neobrutalism-aesthetics-ecology</a></li>
@@ -586,17 +586,17 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 </div>
 </div>
-<div id="outline-container-orge419b9e" class="outline-3">
-<h3 id="orge419b9e"><span class="section-number-3">4.6.</span> Business Studies, Misc</h3>
+<div id="outline-container-org36accbf" class="outline-3">
+<h3 id="org36accbf"><span class="section-number-3">4.6.</span> Business Studies, Misc</h3>
 </div>
-<div id="outline-container-orgeef86f4" class="outline-3">
-<h3 id="orgeef86f4"><span class="section-number-3">4.7.</span> Security Studies, Misc</h3>
+<div id="outline-container-orgdfe9fbc" class="outline-3">
+<h3 id="orgdfe9fbc"><span class="section-number-3">4.7.</span> Security Studies, Misc</h3>
 </div>
-<div id="outline-container-orge02ede8" class="outline-3">
-<h3 id="orge02ede8"><span class="section-number-3">4.8.</span> Communication, Misc</h3>
+<div id="outline-container-org9ab28be" class="outline-3">
+<h3 id="org9ab28be"><span class="section-number-3">4.8.</span> Communication, Misc</h3>
 </div>
-<div id="outline-container-orga94d52c" class="outline-3">
-<h3 id="orga94d52c"><span class="section-number-3">4.9.</span> Misc</h3>
+<div id="outline-container-org9e0003d" class="outline-3">
+<h3 id="org9e0003d"><span class="section-number-3">4.9.</span> Misc</h3>
 <div class="outline-text-3" id="text-4-9">
 <ul class="org-ul">
 <li>M. Wills, “Why the Washington Monument Looks the Way It Does,” JSTOR Daily. Accessed: Jul. 28, 2026. [Online]. Available: <a href="https://daily.jstor.org/why-the-washington-monument-looks-the-way-it-does/">https://daily.jstor.org/why-the-washington-monument-looks-the-way-it-does/</a></li>
@@ -604,12 +604,12 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 </div>
 </div>
-<div id="outline-container-orgb2060d0" class="outline-2">
-<h2 id="orgb2060d0"><span class="section-number-2">5.</span> Arts</h2>
+<div id="outline-container-org48cebec" class="outline-2">
+<h2 id="org48cebec"><span class="section-number-2">5.</span> Arts</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org36264b3" class="outline-3">
-<h3 id="org36264b3"><span class="section-number-3">5.1.</span> Misc</h3>
+<div id="outline-container-org1502281" class="outline-3">
+<h3 id="org1502281"><span class="section-number-3">5.1.</span> Misc</h3>
 <div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li>“The Brutalist,” Wikipedia. Oct. 17, 2025. Accessed: Oct. 23, 2025. [Online]. Available: <a href="https://en.wikipedia.org/w/index.php?title=The_Brutalist&amp;oldid=1317403971">https://en.wikipedia.org/w/index.php?title=The_Brutalist&amp;oldid=1317403971</a></li>
@@ -617,16 +617,16 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 </div>
 </div>
-<div id="outline-container-org9c195b7" class="outline-2">
-<h2 id="org9c195b7"><span class="section-number-2">6.</span> Special Topics</h2>
+<div id="outline-container-org1b7a88d" class="outline-2">
+<h2 id="org1b7a88d"><span class="section-number-2">6.</span> Special Topics</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-org4953bc1" class="outline-3">
-<h3 id="org4953bc1"><span class="section-number-3">6.1.</span> Texts</h3>
+<div id="outline-container-orgb40a85c" class="outline-3">
+<h3 id="orgb40a85c"><span class="section-number-3">6.1.</span> Texts</h3>
 <div class="outline-text-3" id="text-6-1">
 </div>
-<div id="outline-container-org7682d11" class="outline-4">
-<h4 id="org7682d11"><span class="section-number-4">6.1.1.</span> Humble Book Bundles</h4>
+<div id="outline-container-orgcb25d01" class="outline-4">
+<h4 id="orgcb25d01"><span class="section-number-4">6.1.1.</span> Humble Book Bundles</h4>
 <div class="outline-text-4" id="text-6-1-1">
 <ul class="org-ul">
 <li>“Humble DIY Book Bundle: Framing, Carpentry, and Fine Woodworking by Taunton Press,” Humble Bundle. Accessed: Jul. 23, 2026. [Online]. Available: <a href="https://www.humblebundle.com/books/framing-carpentry-and-fine-woodworking-taunton-press-books">https://www.humblebundle.com/books/framing-carpentry-and-fine-woodworking-taunton-press-books</a></li>
@@ -635,12 +635,12 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 </div>
 </div>
-<div id="outline-container-org0e4d6a7" class="outline-2">
-<h2 id="org0e4d6a7"><span class="section-number-2">7.</span> Misc</h2>
+<div id="outline-container-orgeaa9a89" class="outline-2">
+<h2 id="orgeaa9a89"><span class="section-number-2">7.</span> Misc</h2>
 <div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-org2b65af8" class="outline-3">
-<h3 id="org2b65af8"><span class="section-number-3">7.1.</span> 9</h3>
+<div id="outline-container-org7b17bc3" class="outline-3">
+<h3 id="org7b17bc3"><span class="section-number-3">7.1.</span> 9</h3>
 <div class="outline-text-3" id="text-7-1">
 <ul class="org-ul">
 <li>T. M. P. Reader, “Frank Gehry and the Art of Drawing,” The MIT Press Reader. Accessed: Dec. 08, 2025. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/frank-gehry-and-the-art-of-drawing/">https://thereader.mitpress.mit.edu/frank-gehry-and-the-art-of-drawing/</a></li>
@@ -664,8 +664,8 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </div>
-<div id="outline-container-org7660a12" class="outline-3">
-<h3 id="org7660a12"><span class="section-number-3">7.2.</span> Texts</h3>
+<div id="outline-container-org13dd611" class="outline-3">
+<h3 id="org13dd611"><span class="section-number-3">7.2.</span> Texts</h3>
 <div class="outline-text-3" id="text-7-2">
 <ul class="org-ul">
 <li>H. Lefebvre, The Production of Space, 1st edition. Malden: Wiley-Blackwell, 1991.</li>
@@ -679,8 +679,8 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </div>
-<div id="outline-container-org5424f12" class="outline-3">
-<h3 id="org5424f12"><span class="section-number-3">7.3.</span> Articles, Essays</h3>
+<div id="outline-container-orgba11a5d" class="outline-3">
+<h3 id="orgba11a5d"><span class="section-number-3">7.3.</span> Articles, Essays</h3>
 <div class="outline-text-3" id="text-7-3">
 <ul class="org-ul">
 <li>T. M. P. Reader, “The Man Who Invented Times Square: O.J. Gude and the Birth of the Spectacular,” The MIT Press Reader. Accessed: Jul. 09, 2024. [Online]. Available: <a href="https://thereader.mitpress.mit.edu/the-man-who-invented-times-square-o-j-gude-and-the-birth-of-the-spectacular/">https://thereader.mitpress.mit.edu/the-man-who-invented-times-square-o-j-gude-and-the-birth-of-the-spectacular/</a></li>
@@ -710,7 +710,7 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Staff Member(s), <a href="https://ourghostorg.github.io/">OurGhostOrg</a></p>
-<p class="date">Created: 2026-08-29 Sat 11:07</p>
+<p class="date">Created: 2026-09-30 Wed 20:26</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
